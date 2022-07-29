@@ -46,7 +46,7 @@ export default function ProfCard({ prof }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <Box>
-      <AccordionItem>
+      <AccordionItem border="none">
         <Text as="h2">
           <AccordionButton
             _hover={{ bg: "rgb(20, 88, 148)" }}
