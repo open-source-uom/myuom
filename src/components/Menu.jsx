@@ -12,7 +12,7 @@ import {
 function Menu({data}) {
   return ( 
   <Box>
-        <AccordionItem>
+        <AccordionItem border='none'>
           
             <AccordionButton _hover={{ bg: "rgb(20, 88, 148)" }}
                 margin="0 auto"
@@ -34,11 +34,11 @@ function Menu({data}) {
               <AccordionIcon />
             </AccordionButton>
           
-          <AccordionPanel pb={4}>
+          <AccordionPanel pb={5}>
 
             <Accordion allowToggle>
               {/*Accordion gia geuma*/}
-              <AccordionItem>
+              <AccordionItem border="none">
                 <Text>
                   <AccordionButton _hover={{ bg: "rgb(20, 88, 148)" }}
                      margin="0 auto"
@@ -71,7 +71,7 @@ function Menu({data}) {
                 </AccordionPanel>
             </AccordionItem>
               {/*Accordion gia deipno*/}
-            <AccordionItem>
+            <AccordionItem border="none">
                 <Text>
                   <AccordionButton _hover={{ bg: "rgb(20, 88, 148)" }}
                      margin="0 auto"
