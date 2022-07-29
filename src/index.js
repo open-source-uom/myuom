@@ -2,17 +2,21 @@ import React from "react";
 import { ChakraProvider } from "@chakra-ui/react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
+import theme from './theme/theme'
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
+import { DepartmentProvider } from "./contexts/departmentContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <ChakraProvider>
-        <App />
-      </ChakraProvider>
+      <DepartmentProvider>
+        <ChakraProvider theme={theme}>
+          <App />
+        </ChakraProvider>
+      </DepartmentProvider>
     </BrowserRouter>
   </React.StrictMode>
 );
