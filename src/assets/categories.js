@@ -6,4 +6,10 @@ export const Categories = [
     imgUrl: imgUrl,
     route: "/professors",
   },
+  {
+    title: "Εστιατόριο",
+    imgUrl: imgUrl,
+    route: "/restaurant",
+  },
+
 ];
