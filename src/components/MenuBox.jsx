@@ -7,12 +7,15 @@ import {
     Stack,
     Image,
 } from '@chakra-ui/react';
+import { useNavigate } from "react-router-dom";
 
 export default function MenuBox({ category }) {
     const { title, imgUrl, route } = category
 
+    const navigate = useNavigate()
+
     const handleNavigation = () => {
-        //useNavigate(route)
+        navigate(route)
     };
 
     return (

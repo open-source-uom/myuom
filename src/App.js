@@ -1,9 +1,15 @@
+import HomePage from './pages/HomePage'
+import Header from './components/Header'
+
+import { Routes, Route } from 'react-router-dom'
 
 function App() {
   return (
-    <div>
-      <h1>MyUoM App</h1>
-    </div>
+    <Routes>
+      <Route path='/' element={<Header />}>
+        <Route index element={<HomePage />} />
+      </Route>
+    </Routes>
   );
 }
 
