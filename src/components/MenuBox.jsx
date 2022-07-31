@@ -6,7 +6,9 @@ import {
     Heading,
     Stack,
     Image,
+    Text
 } from '@chakra-ui/react';
+import { ExternalLinkIcon } from '@chakra-ui/icons'
 import { useNavigate } from "react-router-dom";
 
 export default function MenuBox({ category }) {
@@ -50,7 +52,7 @@ export default function MenuBox({ category }) {
                 </Box>
                 <Stack pt={10} align={'center'}>
                     <Heading fontSize={'2xl'} fontFamily={'body'} fontWeight={500}>
-                        {title}
+                        {title} {category.isExternal && <ExternalLinkIcon />}
                     </Heading>
                 </Stack>
             </Box>
