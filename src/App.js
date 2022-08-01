@@ -4,10 +4,10 @@ import ProfInfoPage from "./pages/ProfInfoPage";
 import RestaurantPage from "./pages/RestaurantPage";
 import { Routes, Route } from "react-router-dom";
 import MerimnaPage from "./pages/MerimnaPage.jsx";
-import OpenEclass from "./pages/OpenEclassPage"
 import StudentWebPage from "./pages/StudentsWebPage"
 import EudoxusPage from "./pages/EudoxusPage"
 import ServicesPage from "./pages/ServicesPage"
+import OpenEclassPage from "./pages/OpenEclassPage";
 
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
         <Route path="/professors" element={<ProfInfoPage />} />
         <Route path="/restaurant" element={<RestaurantPage />} />
         <Route path="/merimna" element={<MerimnaPage />} />
-        <Route path="/openeclass" element={<OpenEclass />} />
+        <Route path="/openeclass" element={<OpenEclassPage />} />
         <Route path="/studentsweb" element={<StudentWebPage />} />
         <Route path="/eudoxus" element={<EudoxusPage />} />
         <Route path="/services" element={<ServicesPage />} />
