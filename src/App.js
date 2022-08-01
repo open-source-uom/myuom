@@ -8,6 +8,7 @@ import StudentWebPage from "./pages/StudentsWebPage"
 import EudoxusPage from "./pages/EudoxusPage"
 import ServicesPage from "./pages/ServicesPage"
 import OpenEclassPage from "./pages/OpenEclassPage";
+import GraduationPage from "./pages/GraduationPage";
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route path="/studentsweb" element={<StudentWebPage />} />
         <Route path="/eudoxus" element={<EudoxusPage />} />
         <Route path="/services" element={<ServicesPage />} />
+        <Route path="/graduationpage" element={<GraduationPage />}  />
       </Route>
     </Routes>
   );

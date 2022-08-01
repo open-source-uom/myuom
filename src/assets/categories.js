@@ -43,4 +43,10 @@ export const Categories = [
     route: "/services",
     isExternal:false
   },
+  {
+    title: "Ορκομωσίες",
+    imgUrl: imgUrl,
+    route: "/graduationpage",
+    isExternal: true
+  }
 ];
