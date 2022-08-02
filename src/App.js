@@ -4,12 +4,11 @@ import ProfInfoPage from "./pages/ProfInfoPage";
 import RestaurantPage from "./pages/RestaurantPage";
 import { Routes, Route } from "react-router-dom";
 import MerimnaPage from "./pages/MerimnaPage.jsx";
-import StudentWebPage from "./pages/StudentsWebPage"
-import EudoxusPage from "./pages/EudoxusPage"
-import ServicesPage from "./pages/ServicesPage"
+import StudentWebPage from "./pages/StudentsWebPage";
+import EudoxusPage from "./pages/EudoxusPage";
+import ServicesPage from "./pages/ServicesPage";
 import OpenEclassPage from "./pages/OpenEclassPage";
 import GraduationPage from "./pages/GraduationPage";
-
 
 function App() {
   return (
@@ -23,7 +22,7 @@ function App() {
         <Route path="/studentsweb" element={<StudentWebPage />} />
         <Route path="/eudoxus" element={<EudoxusPage />} />
         <Route path="/services" element={<ServicesPage />} />
-        <Route path="/graduationpage" element={<GraduationPage />}  />
+        <Route path="/graduationpage" element={<GraduationPage />} />
       </Route>
     </Routes>
   );
