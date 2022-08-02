@@ -5,42 +5,42 @@ export const Categories = [
     title: "Ακαδημαικό Προσωπικό",
     imgUrl: imgUrl,
     route: "/professors",
-    isExternal:false
+    isExternal: false,
   },
   {
     title: "Εστιατόριο",
     imgUrl: imgUrl,
     route: "/restaurant",
-    isExternal:false
+    isExternal: false,
   },
   {
     title: "Φοιτητική Μέριμνα",
     imgUrl: imgUrl,
-    route: "/merimna",
-    isExternal:true
+    route: "https://www.uom.gr/student-care",
+    isExternal: true,
   },
   {
     title: "Student's Web",
     imgUrl: imgUrl,
-    route: "/studentsweb",
-    isExternal:true
+    route: "https://services.uom.gr/unistudent/login.asp",
+    isExternal: true,
   },
   {
     title: "Open Eclass",
     imgUrl: imgUrl,
-    route: "/openeclass",
-    isExternal:true
+    route: "https://openeclass.uom.gr/",
+    isExternal: true,
   },
   {
     title: "Εύδοξος",
     imgUrl: imgUrl,
-    route: "/eudoxus",
-    isExternal:true
+    route: "https://eudoxus.gr/",
+    isExternal: true,
   },
   {
     title: "Υπόλοιπες Υπηρεσίες",
     imgUrl: imgUrl,
     route: "/services",
-    isExternal:false
+    isExternal: false,
   },
 ];
