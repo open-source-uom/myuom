@@ -4,6 +4,7 @@ import ProfInfoPage from "./pages/ProfInfoPage";
 import RestaurantPage from "./pages/RestaurantPage";
 import { Routes, Route } from "react-router-dom";
 import ServicesPage from "./pages/ServicesPage";
+import GraduationPage from "./pages/GraduationPage"
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/professors" element={<ProfInfoPage />} />
         <Route path="/restaurant" element={<RestaurantPage />} />
         <Route path="/services" element={<ServicesPage />} />
+        <Route path="/graduationpage" element={<GraduationPage />} />
       </Route>
     </Routes>
   );
