@@ -1,9 +1,5 @@
 import { createContext, useState } from "react";
-
-
-export const DEPARTMENTS = ["Οικονομικών Επιστημών", "Βαλκανικών, Σλαβικών & Ανατολικών Σπουδών",
-  "Εφαρμοσμένης Πληροφορικής", "Οργάνωσης & Διοίκησης Επιχειρήσεων", "Λογιστικής και Χρηματοοικονομικής", "Διεθνών & Ευρωπαϊκών Σπουδών",
-  "Εκπαιδευτικής & Κοινωνικής Πολιτικής", "Μουσικής Επιστήμης & Τέχνης"].sort()
+import {DEPARTMENTS} from '../assets/DepNames';
 
 export const DepartmentContext = createContext({
   depName: "",
