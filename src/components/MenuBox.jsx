@@ -6,7 +6,6 @@ import {
   Heading,
   Stack,
   Image,
-  Text,
 } from "@chakra-ui/react";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 import { useNavigate } from "react-router-dom";
