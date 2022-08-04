@@ -7,16 +7,19 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import { DepartmentProvider } from "./contexts/departmentContext";
+import { SettingsProvider } from "./contexts/SettingsContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <DepartmentProvider>
-        <ChakraProvider theme={theme}>
-          <App />
-        </ChakraProvider>
-      </DepartmentProvider>
+      <SettingsProvider>
+        <DepartmentProvider>
+          <ChakraProvider theme={theme}>
+            <App />
+          </ChakraProvider>
+        </DepartmentProvider>
+      </SettingsProvider>
     </BrowserRouter>
   </React.StrictMode>
 );
