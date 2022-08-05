@@ -1,25 +1,21 @@
 import React from "react";
-import { Box, Center } from '@chakra-ui/react';
-import { Text } from "@chakra-ui/react";
-import { Button } from "@chakra-ui/react";
-import { Image } from "@chakra-ui/react";
-import library from "../assets/library-logo.jpg";
-import clock from "../assets/clock.png";
-import contact from "../assets/contact.png";
+import { Flex, Box, Center, Text, Button, Image } from '@chakra-ui/react';
+import { TimeIcon, PhoneIcon } from "@chakra-ui/icons";
 
 
 export default function LibraryPage() {
     return (
-        <div>
+        
+        <Flex flexDirection="column">
             
             <Center>
-                <Image src={library} alt='library-logo' width="700px" height="220px" align='center'/>
+                <Image src="https://www.uom.gr/assets/site/public/nodes/4021/2038-LibraryLogo_4slider-2.jpg" alt='library-logo' width="700px" height="220px" align='center'/>
             </Center>
 
             <Box bg='white' textAlign='center' display='flex' alignItems='center' justifyContent='center'>
                 <Box align='center' border='2px' borderRadius='1rem' borderColor='grey.200' margin='3rem' padding='3rem' boxSize='md'>
                     <Text fontSize='25px' fontWeight='bold' fontFamily='cursive's>
-                        <Image src={clock} alt='schedule-logo' width='50px' height='50px' borderRadius='full'/>
+                        <TimeIcon w={39} h={39} />
                         <Text> 04-29/07/2022 & 22-26/08/2022 </Text>
                         <br></br>
                         <Text> Δευτέρα & Τετάρτη: 08:00-17:00 </Text>
@@ -30,11 +26,15 @@ export default function LibraryPage() {
 
                 <Box align='center' border='2px' borderRadius='1rem' borderColor='grey.200' margin='3rem' padding='3rem' boxSize='md'>
                     <Text fontSize='25px' fontWeight='bold' fontFamily='cursive'>
-                        <Image src={contact} alt='contact-logo' width='50px' height='50px' borderRadius='full'/>
+                        <PhoneIcon w={39} h={39} />
                         <Text> Ημιώροφος </Text>
                         <Text> Εγνατίας 156 </Text>
                         <Text> ΤΚ: 54636 </Text>
-                        <Text> Τηλ: (2310) 891751, 752, 118, 137 </Text>
+                        <Text> Τηλέφωνα Επικοινωνίας: </Text>
+                        <Text> (2310) 891751</Text> 
+                        <Text> (2310) 891752 </Text>
+                        <Text> (2310) 891118 </Text>
+                        <Text> (2310) 891137</Text>
                         <Button
                             textAlign='center'
                             colorScheme='green'
@@ -52,6 +52,6 @@ export default function LibraryPage() {
                 </Box>
             </Box>
 
-        </div>
+        </Flex>
     );
 };
