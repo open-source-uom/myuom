@@ -6,7 +6,7 @@ export const DepartmentContext = createContext({
 });
 
 export const DepartmentProvider = ({ children }) => {
-  const [depName, setDepName] = useState(null);
+  const [depName, setDepName] = useState(undefined);
 
   function changeDepartmentName(departmentToBeSet) {
     setDepName(departmentToBeSet);

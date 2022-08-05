@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { Outlet, useNavigate } from "react-router-dom";
 import {
   Drawer,
@@ -8,6 +8,7 @@ import {
   DrawerContent,
   DrawerCloseButton,
   DrawerFooter,
+  useEditable,
 } from "@chakra-ui/react";
 import {
   Flex,
@@ -30,10 +31,15 @@ import { SettingsContext } from "../contexts/SettingsContext";
 
 export default function Header() {
   const navigate = useNavigate();
-  const { changeDepartmentName } = useContext(DepartmentContext);
+  const { depName, changeDepartmentName } = useContext(DepartmentContext);
   const { toggleDarkMode, isDarkModeSelected } = useContext(SettingsContext);
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { colorMode, toggleColorMode } = useColorMode();
+
+  //Made dark mode option persist after refresh.
+  useEffect(() => {
+    if (colorMode === "dark" && !isDarkModeSelected) toggleDarkMode();
+  }, [colorMode, isDarkModeSelected]);
 
   const goToHomePage = () => {
     navigate("/");
@@ -41,8 +47,7 @@ export default function Header() {
 
   const handleChange = (e) => {
     e.preventDefault();
-    let selectedDepartment = e.target.selectedOptions[0].label;
-    changeDepartmentName(selectedDepartment);
+    changeDepartmentName(e.target.selectedOptions[0].label);
   };
 
   const switchColorMode = () => {
@@ -105,6 +110,7 @@ export default function Header() {
                       placeholder="Select Department"
                       size={["sm", "md", "lg"]}
                       onChange={handleChange}
+                      value={depName}
                     >
                       {DEPARTMENTS.map((department) => (
                         <option value={`${department}`} key={department}>
