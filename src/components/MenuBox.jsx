@@ -21,7 +21,7 @@ export default function MenuBox({ category }) {
   let condition = requireSelection && !DEPARTMENTS.includes(depName);
 
   const lightModeColour = condition ? "red" : "white";
-  const darkModeColour = condition ? "gray.600" : "red";
+  const darkModeColour = condition ? "red" : "gray.600";
 
   const navigate = useNavigate();
 
