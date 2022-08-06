@@ -6,12 +6,17 @@ import {
   Heading,
   Stack,
   Image,
+  useToast,
+  color,
 } from "@chakra-ui/react";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 import { useNavigate } from "react-router-dom";
+import { DepartmentContext } from "../contexts/departmentContext";
 
 export default function MenuBox({ category }) {
-  const { title, imgUrl, route, isExternal } = category;
+  const { title, imgUrl, route, isExternal, requireSelection } = category;
+  const { depName } = React.useContext(DepartmentContext);
+  const toast = useToast();
 
   const navigate = useNavigate();
 
@@ -19,8 +24,27 @@ export default function MenuBox({ category }) {
     isExternal ? window.open(route) : navigate(route);
   };
 
+  const handleSelection = () => {
+    if (requireSelection && !depName) {
+      if (!depName) {
+        toast({
+          title: "Department Not Selected",
+          description: "Please Select a Department From The Settings",
+          status: "error",
+          duration: 5000,
+          isClosable: true,
+          position: "bottom",
+        });
+      } else {
+        handleNavigation();
+      }
+    } else {
+      handleNavigation();
+    }
+  };
+
   return (
-    <Center py={12} m={3} onClick={handleNavigation}>
+    <Center py={12} m={3} onClick={handleSelection}>
       <Box
         role={"group"}
         p={6}
