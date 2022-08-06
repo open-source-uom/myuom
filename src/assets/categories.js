@@ -48,5 +48,11 @@ export const Categories = [
     imgUrl: imgUrl,
     route: "/graduationpage",
     isExternal: false,
-  }
+  },
+  {
+    title: "Βιβλιοθήκη",
+    imgUrl: imgUrl,
+    route: "/librarypage",
+    isExternal: false,
+  },
 ];
