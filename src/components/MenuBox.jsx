@@ -7,22 +7,32 @@ import {
   Stack,
   Image,
   useToast,
-  color,
 } from "@chakra-ui/react";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 import { useNavigate } from "react-router-dom";
 import { DepartmentContext } from "../contexts/departmentContext";
+import { DEPARTMENTS } from '../assets/DepNames'
+
 
 export default function MenuBox({ category }) {
   const { title, imgUrl, route, isExternal, requireSelection } = category;
   const { depName } = React.useContext(DepartmentContext);
   const toast = useToast();
+  let condition = requireSelection && !DEPARTMENTS.includes(depName);
+
+  const lightModeColour = condition ? "red" : "white";
+  const darkModeColour = condition ? "gray.600" : "red";
 
   const navigate = useNavigate();
 
   const handleNavigation = () => {
     isExternal ? window.open(route) : navigate(route);
   };
+
+  React.useEffect(() => {
+    if (requireSelection)
+      console.log(title);
+  }, [])
 
   const handleSelection = () => {
     if (requireSelection && !depName) {
@@ -50,7 +60,7 @@ export default function MenuBox({ category }) {
         p={6}
         maxW={"480px"}
         w={"full"}
-        bg={useColorModeValue("white", "gray.800")}
+        bg={useColorModeValue(lightModeColour, darkModeColour)}
         boxShadow={"2xl"}
         rounded={"lg"}
         pos={"relative"}
