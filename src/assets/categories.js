@@ -55,4 +55,10 @@ export const Categories = [
     route: "/librarypage",
     isExternal: false,
   },
+  {
+    title: "Πληροφορίες για πρωτοετής",
+    imgUrl: imgUrl,
+    route: "/firstyearinfo",
+    isExternal: false,
+  },
 ];
