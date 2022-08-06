@@ -1,26 +1,51 @@
-import { useEffect, useState, useContext } from "react";
-import { Heading } from "@chakra-ui/react";
-import GradData from "../assets/Graduation.js";
-import { DepartmentContext } from "../contexts/departmentContext";
+import React, { useContext, useEffect } from 'react'
+import { DepartmentContext } from '../contexts/departmentContext'
+import { GradData } from '../assets/Graduation'
+import { Heading, Box, useToast } from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
 
-function GraduationPage() {
-  const { depName } = useContext(DepartmentContext);
-  const [Gdata, setGdata] = useState("");
+export default function GraduationPage() {
+
+  const { depName } = useContext(DepartmentContext)
+  const toast = useToast()
+  const navigate = useNavigate()
 
   useEffect(() => {
-    const GradData = getdataByDepartment(depName);
-    setGdata(GradData);
+    if (!depName) {
+      toast({
+        title: "Department Not Selected",
+        description: "Please Select a Department From The Settings",
+        status: "error",
+        duration: 5000,
+        isClosable: true,
+        position: "bottom",
+      });
+    }
+    if (GradData.get(depName)) {
+      window.open(GradData.get(depName));
+      navigate("/")
+    }
+    
   }, [depName]);
 
-  const getdataByDepartment = (depName) =>
-    GradData.find((Gdata) => Gdata.department === depName);
 
+  //<Text align={'center'}> SELECT DEPARTMENT</Text>
   return (
-    <Heading textAlign="center" marginTop="50px">
-      Redirecting to {Gdata.departmentURL}...
-      {window.location.replace(Gdata.departmentURL)}
-    </Heading>
+    <Box>
+      {GradData.get(depName) ? (
+        <Heading textAlign="center" marginTop="50px">
+          Redirecting to
+          <a href={GradData.get(depName)} target="_blank" rel="noreferrer">
+            {GradData.get(depName)}
+          </a>
+        </Heading>
+      ) : (
+        <Heading textAlign="center" marginTop="50px">
+          Please select a department from settings.
+        </Heading>
+      )}
+    </Box>
   );
+
 }
 
-export default GraduationPage;

@@ -1,44 +1,12 @@
-const GradData = 
-[
- {
-   "school": "Σχολή Επιστημών Πληροφορίας",
-   "department": "Εφαρμοσμένης Πληροφορικής",
-   "departmentURL": "https://www.uom.gr/dai/apofoithsh"
- },
- {
-   "school": "Σχολή Οικονομικών και Περιφερειακών Σπουδών",
-   "department": "Τμήμα Οικονομικών Επιστημών",
-   "departmentURL": "https://www.uom.gr/eco/dieksagogh-neas-orkomosias" 
- },
-{
-   "school": "Σχολή Οικονομικών και Περιφερειακών Σπουδών",
-   "department": "Τμήμα Βαλκανικών, Σλαβικών & Ανατολικών Σπουδών",
-   "departmentURL": "https://www.uom.gr/11587-anakoinosh-gia-dia-zoshs-orkomosia-toy-tmhmatos" 
-},
- {
-   "school": "Σχολή Επιστημών Διοίκησης Επιχειρήσεων",
-   "department": "Τμήμα Οργάνωσης & Διοίκησης Επιχειρήσεων",
-   "departmentURL": "https://www.uom.gr/ba/anakoinosh-ypobolhs-aithseon-orkomosias-noembrioy-2019"
- },
-{
-   "school": "Σχολή Επιστημών Διοίκησης Επιχειρήσεων",
-   "department": "Τμήμα Λογιστικής και Χρηματοοικονομικής",
-   "departmentURL": "https://www.uom.gr/fin/enhmerosh?tagid=7435"
- },
-  {
-   "school": "Σχολή Κοινωνικών, Ανθρωπιστικών Επιστημών και Τεχνών",
-   "department": "Τμήμα Διεθνών & Ευρωπαϊκών Σπουδών",
-   "departmentURL": "https://www.uom.gr/ies/orkomosies-apofoitoi" },
-  {
-   "school": "Σχολή Κοινωνικών, Ανθρωπιστικών Επιστημών και Τεχνών",
-   "department": "Τμήμα Εκπαιδευτικής & Κοινωνικής Πολιτικής",
-   "departmentURL": "https://www.uom.gr/esp/orkomosies"
- },
-  {
-   "school": "Σχολή Κοινωνικών, Ανθρωπιστικών Επιστημών και Τεχνών",
-   "department": "Τμήμα Μουσικής Επιστήμης & Τέχνης",
-   "departmentURL": "https://www.uom.gr/msa/orkomosia-tmhmatos"
- }
-]
+import { DEPARTMENTS } from "../assets/DepNames";
 
-export default GradData;
+export const GradData = new Map();
+
+GradData.set(DEPARTMENTS[0], "https://www.uom.gr/11587-anakoinosh-gia-dia-zoshs-orkomosia-toy-tmhmatos")
+GradData.set(DEPARTMENTS[1], "https://www.uom.gr/ies/orkomosies-apofoitoi")
+GradData.set(DEPARTMENTS[2], "https://www.uom.gr/esp/orkomosies")
+GradData.set(DEPARTMENTS[3], "https://www.uom.gr/dai/apofoithsh")
+GradData.set(DEPARTMENTS[4], "https://www.uom.gr/fin/enhmerosh?tagid=7435")
+GradData.set(DEPARTMENTS[5], "https://www.uom.gr/msa/orkomosia-tmhmatos")
+GradData.set(DEPARTMENTS[6], "https://www.uom.gr/eco/dieksagogh-neas-orkomosias")
+GradData.set(DEPARTMENTS[7], "https://www.uom.gr/ba/anakoinosh-ypobolhs-aithseon-orkomosias-noembrioy-2019")
