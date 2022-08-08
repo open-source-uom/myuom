@@ -36,7 +36,6 @@ export default function MenuBox({ category }) {
 
   const handleSelection = () => {
     if (requireSelection && !depName) {
-      if (!depName) {
         toast({
           title: "Department Not Selected",
           description: "Please Select a Department From The Settings",
@@ -48,9 +47,6 @@ export default function MenuBox({ category }) {
       } else {
         handleNavigation();
       }
-    } else {
-      handleNavigation();
-    }
   };
 
   return (
