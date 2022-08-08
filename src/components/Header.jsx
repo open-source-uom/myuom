@@ -26,12 +26,10 @@ import { HamburgerIcon } from "@chakra-ui/icons";
 import { IconButton } from "@chakra-ui/react";
 import { DepartmentContext } from "../contexts/departmentContext";
 import { DEPARTMENTS } from "../assets/DepNames";
-import { SettingsContext } from "../contexts/SettingsContext";
 
 export default function Header() {
   const navigate = useNavigate();
   const { changeDepartmentName } = useContext(DepartmentContext);
-  const { toggleDarkMode, isDarkModeSelected } = useContext(SettingsContext);
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { colorMode, toggleColorMode } = useColorMode();
 
@@ -43,11 +41,6 @@ export default function Header() {
     e.preventDefault();
     let selectedDepartment = e.target.selectedOptions[0].label;
     changeDepartmentName(selectedDepartment);
-  };
-
-  const switchColorMode = () => {
-    toggleColorMode();
-    toggleDarkMode();
   };
 
   return (
@@ -95,8 +88,8 @@ export default function Header() {
                     </FormLabel>
                     <Switch
                       id="switch-color-mode"
-                      onChange={switchColorMode}
-                      isChecked={isDarkModeSelected}
+                      onChange={toggleColorMode}
+                      isChecked={colorMode === 'dark'}
                     />
                   </FormControl>
 
