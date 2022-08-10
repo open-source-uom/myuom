@@ -11,7 +11,7 @@ import { Box,
 function Schedule(){
     return (
         <>
-            <AccordionItem>
+            <AccordionItem border="none">
                 <Text>
                 <AccordionButton _hover={{ bg: "rgb(20, 88, 148)" }}
                     margin="0 auto"
