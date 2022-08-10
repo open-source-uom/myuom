@@ -1,12 +1,12 @@
-import { createContext, useState } from "react";
-import { DEPARTMENTS } from "../assets/DepNames";
+import { createContext } from "react";
+import { useLocalStorage } from "../hooks/useLocalStorage";
 
 export const DepartmentContext = createContext({
   depName: "",
 });
 
 export const DepartmentProvider = ({ children }) => {
-  const [depName, setDepName] = useState(null);
+  const [depName, setDepName] = useLocalStorage('depName', null);
 
   function changeDepartmentName(departmentToBeSet) {
     setDepName(departmentToBeSet);
