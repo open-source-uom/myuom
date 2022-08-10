@@ -7,6 +7,7 @@ import ServicesPage from "./pages/ServicesPage";
 import GraduationPage from "./pages/GraduationPage";
 import LibraryPage from "./pages/LibraryPage";
 import FirstYearInfoPage from "./pages/FirstYearInfoPage";
+import SchedulePage from "./pages/SchedulePage";
 
 function App() {
   return (
@@ -19,6 +20,9 @@ function App() {
         <Route path="/graduationpage" element={<GraduationPage />} />
         <Route path="/librarypage" element={<LibraryPage />} />
         <Route path="/firstyearinfo" element={<FirstYearInfoPage />} />
+        <Route path="/examschedule" element={<SchedulePage examsProp />} />
+        <Route path="/semesterschedule" element={<SchedulePage semesterProp />}
+        />
       </Route>
     </Routes>
   );

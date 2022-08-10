@@ -30,7 +30,7 @@ export default function SchedulePage({ examsProp, semesterProp }) {
     <Box>
       {schedulesData.get(depName) ? (
         <Heading textAlign="center" marginTop="50px">
-          Redirecting to
+          Redirecting to site...
         </Heading>
       ) : (
         <Heading textAlign="center" marginTop="50px">

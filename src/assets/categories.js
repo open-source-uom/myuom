@@ -71,4 +71,18 @@ export const Categories = [
     isExternal: false,
     requireSelection: false,
   },
+  {
+    title: "Πρόγραμμα Εξετάσεων",
+    imgUrl: imgUrl,
+    route: "/examschedule",
+    isExternal: false,
+    requireSelection: true,
+  },
+  {
+    title: "Πρόγραμμα Μαθημάτων",
+    imgUrl: imgUrl,
+    route: "/semesterschedule",
+    isExternal: false,
+    requireSelection: true,
+  },
 ];
