@@ -29,7 +29,7 @@ import { DEPARTMENTS } from "../assets/DepNames";
 
 export default function Header() {
   const navigate = useNavigate();
-  const { changeDepartmentName } = useContext(DepartmentContext);
+  const { depName, changeDepartmentName } = useContext(DepartmentContext);
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { colorMode, toggleColorMode } = useColorMode();
 
@@ -95,11 +95,11 @@ export default function Header() {
 
                   <Flex direction="column">
                     <Select
-                      placeholder="Select Department"
+                      placeholder={depName ? depName : "Select Department"}
                       size={["sm", "md", "lg"]}
                       onChange={handleChange}
                     >
-                      {DEPARTMENTS.map((department) => (
+                      {DEPARTMENTS.filter((department => department !== depName)).map((department) => (
                         <option value={`${department}`} key={department}>
                           {department}
                         </option>
