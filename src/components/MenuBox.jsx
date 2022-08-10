@@ -6,12 +6,22 @@ import {
   Heading,
   Stack,
   Image,
+  useToast,
 } from "@chakra-ui/react";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 import { useNavigate } from "react-router-dom";
+import { DepartmentContext } from "../contexts/departmentContext";
+import { DEPARTMENTS } from '../assets/DepNames'
+
 
 export default function MenuBox({ category }) {
-  const { title, imgUrl, route, isExternal } = category;
+  const { title, imgUrl, route, isExternal, requireSelection } = category;
+  const { depName } = React.useContext(DepartmentContext);
+  const toast = useToast();
+  let condition = requireSelection && !DEPARTMENTS.includes(depName);
+
+  const lightModeColour = condition ? "red" : "white";
+  const darkModeColour = condition ? "red" : "gray.600";
 
   const navigate = useNavigate();
 
@@ -19,14 +29,34 @@ export default function MenuBox({ category }) {
     isExternal ? window.open(route) : navigate(route);
   };
 
+  React.useEffect(() => {
+    if (requireSelection)
+      console.log(title);
+  }, [])
+
+  const handleSelection = () => {
+    if (requireSelection && !depName) {
+        toast({
+          title: "Department Not Selected",
+          description: "Please Select a Department From The Settings",
+          status: "error",
+          duration: 5000,
+          isClosable: true,
+          position: "bottom",
+        });
+      } else {
+        handleNavigation();
+      }
+  };
+
   return (
-    <Center py={12} m={3} onClick={handleNavigation}>
+    <Center py={12} m={3} onClick={handleSelection}>
       <Box
         role={"group"}
         p={6}
         maxW={"480px"}
         w={"full"}
-        bg={useColorModeValue("white", "gray.800")}
+        bg={useColorModeValue(lightModeColour, darkModeColour)}
         boxShadow={"2xl"}
         rounded={"lg"}
         pos={"relative"}
