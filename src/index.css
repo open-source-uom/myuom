@@ -1,13 +1,71 @@
+/* @font-face {
+  font-family: "Syne";
+  font-weight: 400;
+  src: local("Syne"), url(./assets/fonts/Syne-Regular.woff2) format("woff2");
+}
+@font-face {
+  font-family: "Syne";
+  font-weight: 500;
+  src: local("Syne"), url(./assets/fonts/Syne-Medium.woff2) format("woff2");
+}
+@font-face {
+  font-family: "Syne";
+  font-weight: 600;
+  src: local("Syne"), url(./assets/fonts/Syne-SemiBold.woff2) format("woff2");
+}
+@font-face {
+  font-family: "Syne";
+  font-weight: 700;
+  src: local("Syne"), url(./assets/fonts/Syne-Bold.woff2) format("woff2");
+} */
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+body.chakra-ui-dark {
+  background-color: black;
+}
+
+body.chakra-ui-light {
+  background-color: #f3f3f3;
+}
+
+.home-page-box {
+  aspect-ratio: 2/1;
+  height: auto;
+}
+
+.home-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.menu-box.span-1 {
+  aspect-ratio: 1/1;
+}
+
+.light-mode-svg > .fill-svg > path {
+  fill: black;
+}
+.light-mode-svg > .stroke-svg > path {
+  fill: none;
+  stroke: black;
+}
+
+.dark-mode-svg > .fill-svg > path {
+  fill: #f3f3f3;
+}
+.dark-mode-svg > .stroke-svg > path {
+  fill: none;
+  stroke: #f3f3f3;
 }
