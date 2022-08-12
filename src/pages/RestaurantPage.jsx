@@ -7,7 +7,7 @@ import dinner from "../assets/dinner.png";
 
 export default function RestauranPage() {
   return (
-    <Box bg="white" textAlign={"center"}>
+    <Box textAlign={"center"}>
       <Box align="center">
         <Text fontSize="30px" fontWeight="bold" fontFamily="cursive">
           Menu Εστιατορίου
