@@ -12,6 +12,7 @@ import {
 import { ArrowUpIcon } from "@chakra-ui/icons";
 
 export default function FirstYearInfoPage() {
+  document.body.height = 0;
   const articleComponents = [
     EudoxusInfo,
     StudentIdInfo,
@@ -260,7 +261,7 @@ function StudentIdInfo({ id }) {
         mail ότι το λάβανε.
       </ListItem>
       <br></br>
-      <Text noOfLines={[1, 2, 3]} fontSize="md">
+      <Text fontSize="md">
         Μπορούμε να ζητήσουμε την ακαδημαϊκή ταυτότητα που χρησιμεύει και ως
         πάσο για το λεωφορείο. Επίσης να πάτε να αλλάξετε το τηλέφωνό σας σε
         φοιτητικό.
@@ -272,7 +273,7 @@ function StudentIdInfo({ id }) {
           href="https://services.uom.gr/unistudent/login.asp"
           color="teal.500"
         >
-          Υπηρεσία StudentsWeb
+          Υπηρεσία StudentsWeb.
         </Link>
       </Text>
     </UnorderedList>
