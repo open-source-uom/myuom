@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import {
   Flex,
   Text,
@@ -12,7 +12,11 @@ import {
 import { ArrowUpIcon } from "@chakra-ui/icons";
 
 export default function FirstYearInfoPage() {
-  document.body.height = 0;
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+    });
+  }, []);
   const articleComponents = [
     EudoxusInfo,
     StudentIdInfo,
@@ -23,7 +27,7 @@ export default function FirstYearInfoPage() {
     ContactUomInfo,
   ];
   return (
-    <Flex direction={"column"} position="relative">
+    <Flex direction={"column"} position="relative" maxW="100%">
       <Text
         as="h3"
         fontSize="2rem"
@@ -138,7 +142,7 @@ function ScrollToTopArrow() {
       bottom="1rem"
       right="1rem"
       backgroundColor={"transparent"}
-      onClick={(e) => {
+      onClick={() => {
         window.scrollTo({
           top: 0,
           behavior: "smooth",
