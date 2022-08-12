@@ -99,3 +99,9 @@ body.chakra-ui-light {
 .dark-mode-svg .back-btn-svg > path {
   stroke: #f3f3f3;
 }
+
+.search-active {
+  aspect-ratio: 1/1 !important;
+  grid-column-start: span 1 !important;
+  grid-column-end: span 1 !important;
+}
