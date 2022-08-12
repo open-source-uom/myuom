@@ -917,7 +917,7 @@ const profData = [
   },
   {
     imgUrl:
-      "https://www.uom.gr/assets/site/public/nodes/10789/11801-Giannoutakhs_Kwstas_340x340-2.png",
+      "https://www.uom.gr/assets/site/public/nodes/6477/4728-abatzoglou-2.jpg",
     fname: "Απόστολος",
     lname: "Αμπατζόγλου",
     department: "Εφαρμοσμένης Πληροφορικής",
