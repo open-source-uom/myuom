@@ -42,7 +42,7 @@ export default function MenuBox({ category }) {
   };
 
   React.useEffect(() => {
-    if (requireSelection) console.log(title);
+    // if (requireSelection) console.log(title);
   }, []);
 
   const handleSelection = () => {
