@@ -11,6 +11,22 @@ import { ExternalLinkIcon } from "@chakra-ui/icons";
 import { useNavigate } from "react-router-dom";
 import { DepartmentContext } from "../contexts/departmentContext";
 import { DEPARTMENTS } from "../assets/DepNames";
+import { motion } from "framer-motion";
+
+const rotateIn = {
+  initial: {
+    rotateX: "180deg",
+    opacity: 0,
+  },
+  inView: {
+    rotateX: "0deg",
+    opacity: 1,
+    transition: {
+      duration: 0.45,
+      ease: "easeIn",
+    },
+  },
+};
 
 export default function MenuBox({ category }) {
   const { title, iconSVG, route, span, isExternal, requireSelection } =
@@ -18,9 +34,6 @@ export default function MenuBox({ category }) {
   const { depName } = React.useContext(DepartmentContext);
   const toast = useToast();
   let condition = requireSelection && !DEPARTMENTS.includes(depName);
-
-  const lightModeColour = condition ? "red" : "white";
-  const darkModeColour = condition ? "red" : "gray.600";
 
   const navigate = useNavigate();
 
@@ -49,6 +62,9 @@ export default function MenuBox({ category }) {
 
   return (
     <GridItem
+      as={motion.div}
+      variants={rotateIn}
+      viewport={{ once: true }}
       cursor="pointer"
       onClick={handleSelection}
       colSpan={span}
@@ -59,7 +75,8 @@ export default function MenuBox({ category }) {
       alignItems="center"
       justifyContent="space-between"
       borderColor={useColorModeValue("#0050e0", "#f3f3f3")}
-      className={`menu-box span-${span}`}
+      backgroundColor={useColorModeValue("#0050e0", "transparent")}
+      className={`menu-box span-${span} ${condition ? "disabled" : ""}`}
       rounded="0.75rem"
       p={{ sm: 2, md: 4, lg: 6 }}
     >
@@ -70,8 +87,8 @@ export default function MenuBox({ category }) {
         justifyContent="space-between"
       >
         <Box
-          minW={{ sm: "32px", md: "48px", lg: "64px" }}
-          maxW={{ sm: "32px", md: "48px", lg: "64px" }}
+          minW={{ sm: "24px", md: "48px", lg: "52px" }}
+          maxW={{ sm: "24px", md: "48px", lg: "52px" }}
           className={`svg-container ${useColorModeValue(
             "light-mode-svg",
             "dark-mode-svg"
@@ -80,8 +97,8 @@ export default function MenuBox({ category }) {
           {iconSVG}
         </Box>
         <Box
-          minW={{ sm: "18px", md: "24px", lg: "30px" }}
-          maxW={{ sm: "18px", md: "24px", lg: "30px" }}
+          minW={{ sm: "12px", md: "24px", lg: "28px" }}
+          maxW={{ sm: "12px", md: "24px", lg: "28px" }}
           className={`svg-container ${useColorModeValue(
             "light-mode-svg",
             "dark-mode-svg"
@@ -129,10 +146,10 @@ export default function MenuBox({ category }) {
         </Box>
       </Flex>
       <Heading
-        fontSize={{ sm: 13, md: 16, lg: 26, xl: 38 }}
-        color={useColorModeValue("black", "#f3f3f3")}
+        fontSize={{ sm: 11.95, md: 16, lg: 26, xl: 32 }}
+        color="#f3f3f3"
         w="100%"
-        fontWeight={{ sm: 600, lg: 500 }}
+        fontWeight={500}
         fontFamily="Syne"
       >
         {title}

@@ -1,4 +1,4 @@
-/* @font-face {
+@font-face {
   font-family: "Syne";
   font-weight: 400;
   src: local("Syne"), url(./assets/fonts/Syne-Regular.woff2) format("woff2");
@@ -17,7 +17,7 @@
   font-family: "Syne";
   font-weight: 700;
   src: local("Syne"), url(./assets/fonts/Syne-Bold.woff2) format("woff2");
-} */
+}
 
 body {
   margin: 0;
@@ -55,11 +55,11 @@ body.chakra-ui-light {
 }
 
 .light-mode-svg > .fill-svg > path {
-  fill: black;
+  fill: #f3f3f3;
 }
 .light-mode-svg > .stroke-svg > path {
   fill: none;
-  stroke: black;
+  stroke: #f3f3f3;
 }
 
 .dark-mode-svg > .fill-svg > path {
@@ -68,4 +68,8 @@ body.chakra-ui-light {
 .dark-mode-svg > .stroke-svg > path {
   fill: none;
   stroke: #f3f3f3;
+}
+
+.disabled {
+  opacity: 0.6 !important;
 }

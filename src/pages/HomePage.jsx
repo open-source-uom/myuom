@@ -3,6 +3,15 @@ import { Categories } from "../assets/categories";
 import MenuBox from "../components/MenuBox";
 import { Flex, Box, Grid } from "@chakra-ui/react";
 import { useColorModeValue } from "@chakra-ui/react";
+import { motion } from "framer-motion";
+
+const stagger = {
+  inView: {
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
 
 export default function HomePage() {
   return (
@@ -23,6 +32,10 @@ export default function HomePage() {
         rounded="0.75rem"
       ></Box>
       <Grid
+        as={motion.section}
+        initial="initial"
+        whileInView="inView"
+        variants={stagger}
         className="home-grid"
         w={{ sm: "100%", md: "90%", lg: "80%", "2xl": "60%", "3xl": "50%" }}
         gap={{ sm: 4, md: 6, lg: 8 }}

@@ -28,7 +28,7 @@ export const Categories = [
       </svg>
     ),
     route: "/professors",
-    span: 1,
+    span: 2,
     isExternal: false,
     requireSelection: true,
   },
@@ -53,7 +53,7 @@ export const Categories = [
       </svg>
     ),
     route: "/restaurant",
-    span: 2,
+    span: 1,
     isExternal: false,
     requireSelection: false,
   },
@@ -199,7 +199,7 @@ export const Categories = [
       </svg>
     ),
     route: "/services",
-    span: 2,
+    span: 1,
     isExternal: false,
     requireSelection: false,
   },
@@ -288,7 +288,7 @@ export const Categories = [
     ),
 
     route: "/firstyearinfo",
-    span: 1,
+    span: 2,
     isExternal: false,
     requireSelection: false,
   },
