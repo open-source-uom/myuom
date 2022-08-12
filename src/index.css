@@ -75,8 +75,27 @@ body.chakra-ui-light {
   opacity: 0.6 !important;
 }
 
-.search-active {
-  aspect-ratio: 1/1 !important;
-  grid-column-start: span 1 !important;
-  grid-column-end: span 1 !important;
+#myUOMLogo .b {
+  fill: #5e5f5f;
+}
+#myUOMLogo .c {
+  fill: #fafcfe;
+}
+#myUOMLogo .d {
+  fill: #0050e0;
+}
+#myUOMLogo .e {
+  fill: #eaae4e;
+}
+
+.back-btn-svg {
+  transform: rotate(180deg);
+}
+
+.light-mode-svg .back-btn-svg > path {
+  stroke: black;
+}
+
+.dark-mode-svg .back-btn-svg > path {
+  stroke: #f3f3f3;
 }
