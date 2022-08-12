@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Categories } from "../assets/categories";
 import MenuBox from "../components/MenuBox";
-import { Flex, Box, Grid } from "@chakra-ui/react";
+import { Flex, Box, Grid, Heading } from "@chakra-ui/react";
 import { useColorModeValue } from "@chakra-ui/react";
 
 import { motion } from "framer-motion";
@@ -48,6 +48,18 @@ export default function HomePage() {
         w={{ sm: "100%", md: "90%", lg: "80%", "2xl": "60%", "3xl": "50%" }}
         gap={{ sm: 4, md: 6, lg: 8 }}
       >
+        {categoriesListForSearch.length === 0 ? (
+          <Heading
+            gridColumnStart={1}
+            gridColumnEnd={3}
+            fontSize={{ sm: 11.95, md: 16, lg: 26, xl: 32 }}
+            w="100%"
+            fontWeight={500}
+            fontFamily="Syne"
+          >
+            Η αναζήτηση δεν επέστρεψε αποτελέσματα.
+          </Heading>
+        ) : null}
         {categoriesListForSearch.map((category) => (
           <MenuBox category={category} key={category.title} />
         ))}

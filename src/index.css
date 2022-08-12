@@ -48,6 +48,7 @@ body.chakra-ui-light {
 
 .home-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-auto-rows: minmax(min-content, max-content);
 }
 
 .menu-box.span-1 {
@@ -72,4 +73,10 @@ body.chakra-ui-light {
 
 .disabled {
   opacity: 0.6 !important;
+}
+
+.search-active {
+  aspect-ratio: 1/1 !important;
+  grid-column-start: span 1 !important;
+  grid-column-end: span 1 !important;
 }

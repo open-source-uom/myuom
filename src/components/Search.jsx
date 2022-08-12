@@ -19,6 +19,28 @@ export default function Search({ setCategoriesList, categoriesList }) {
     });
     setCategoriesList(categoriesBySearchTerm);
   }, [searchField]);
+
+  useEffect(() => {
+    console.log(searchField);
+    setTimeout(() => {
+      if (searchField.length !== 0) {
+        document.querySelectorAll(".menu-box").forEach((box) => {
+          box.classList.add("search-active");
+        });
+      } else if (searchField.length === 0) {
+        document.querySelectorAll(".menu-box").forEach((box) => {
+          box.classList.remove("search-active");
+        });
+      }
+    }, 10);
+  }, [searchField]);
+
+  function handleFocus() {
+    let homeGrid = document.querySelector(".home-grid");
+    let height = homeGrid.offsetHeight;
+    homeGrid.style.minHeight = height + "px";
+  }
+
   return (
     <InputGroup
       w={{ sm: "100%", md: "90%", lg: "80%", "2xl": "60%", "3xl": "50%" }}
@@ -28,6 +50,7 @@ export default function Search({ setCategoriesList, categoriesList }) {
         children={<SearchIcon color="black" />}
       />
       <Input
+        onFocus={handleFocus}
         color="black"
         type="text"
         placeholder=""
