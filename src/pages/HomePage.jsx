@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { Categories } from "../assets/categories";
 import MenuBox from "../components/MenuBox";
 import { Flex, Box, Grid } from "@chakra-ui/react";
 import { useColorModeValue } from "@chakra-ui/react";
+
 import { motion } from "framer-motion";
+import Search from "../components/Search";
 
 const stagger = {
   inView: {
@@ -14,6 +16,8 @@ const stagger = {
 };
 
 export default function HomePage() {
+  const [categoriesListForSearch, setCategoriesListForSearch] =
+    useState(Categories);
   return (
     <Flex
       direction="column"
@@ -31,16 +35,20 @@ export default function HomePage() {
         className="home-page-box"
         rounded="0.75rem"
       ></Box>
+      <Search
+        categoriesList={Categories}
+        setCategoriesList={setCategoriesListForSearch}
+      />
       <Grid
         as={motion.section}
         initial="initial"
-        whileInView="inView"
+        animate="inView"
         variants={stagger}
         className="home-grid"
         w={{ sm: "100%", md: "90%", lg: "80%", "2xl": "60%", "3xl": "50%" }}
         gap={{ sm: 4, md: 6, lg: 8 }}
       >
-        {Categories.map((category) => (
+        {categoriesListForSearch.map((category) => (
           <MenuBox category={category} key={category.title} />
         ))}
       </Grid>
