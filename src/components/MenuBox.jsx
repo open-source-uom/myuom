@@ -46,15 +46,19 @@ export default function MenuBox({ category }) {
   }, []);
 
   const handleSelection = () => {
+    const id = '1';
     if (requireSelection && !depName) {
-      toast({
-        title: "Department Not Selected",
-        description: "Please Select a Department From The Settings",
-        status: "error",
-        duration: 5000,
-        isClosable: true,
-        position: "bottom",
-      });
+        if (!toast.isActive(id)) {
+        toast({
+          id,
+          title: "Department Not Selected",
+          description: "Please Select a Department From The Settings",
+          status: "error",
+          duration: 5000,
+          isClosable: true,
+          position: "bottom",
+        });
+      }
     } else {
       handleNavigation();
     }
