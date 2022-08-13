@@ -1,4 +1,4 @@
-const mapData = [
+export const mapData = [
   {
     floor: 1,
     title: "Αίθουσα 1",
@@ -163,13 +163,6 @@ const mapData = [
   {
     floor: 1,
     title: "Αίθουσα Τηλεδιάσκεψης",
-    building: "Βασικό Κτήριο",
-    x: 0,
-    y: 0,
-  },
-  {
-    floor: 1,
-    title: "Αμφιθέατρο 4",
     building: "Βασικό Κτήριο",
     x: 0,
     y: 0,

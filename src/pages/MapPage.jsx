@@ -1,11 +1,56 @@
-import { Box } from "@chakra-ui/react";
-import { Option } from "react";
+import { Box, Select, Stack } from "@chakra-ui/react";
+import { useState } from 'react';
+import { mapData } from '../assets/mapData.js'
 
+/* Insert all buildings into an array and convert set to remove duplicates */
+// Possibly just add them to a set? Not sure about complexity
+const Buildings = () => {
+    const arr = mapData.map((info) => info.building)
+    const options = [...new Set(arr)]
+    return options.map((building) => <option value={building} key={building}>{building}</option>)
+}
+
+/* If the dropdown choice is unknown building, add every office there is,
+    otherwise filter by what building is chosen */
+const Offices = (prop) => { 
+    
+   const options = mapData.reduce((filtered, option) => {
+    if(prop.building === "unknown")
+        filtered.push(option.title)
+
+    if (option.building === prop.building) 
+        filtered.push(option.title);
+
+    return filtered
+    }, [])
+    
+    return options.map((info) => <option value={info} key={info}>{info}</option>) 
+    }
 
 function MapPage() {
+
+    const [value, setValue] = useState("");
+
+    const handleChange = (e) => {
+      setValue(e.target.value);
+    };
+
     return (
         <Box align="center" marginTop="1em">
-            <Option />
+            <Stack spacing={3}>
+                <Select onChange={handleChange} defaultValue={"default"}>
+                <option hidden disabled value="default">Επιλέξτε ένα κτήριο</option>
+                <option value="unknown">Άγνωστο κτήριο</option>
+                    <Buildings/>
+                </Select >
+                <Select isDisabled={!value} defaultValue={"default"}>
+                <option hidden disabled value="default">Επιλέξτε ένα γραφείο</option>
+                    <Offices building={value}/> 
+                    {/* Get {value} & do whatever you want with it */}
+                    {/* Another option is to set the value to the object
+                        and not have to traverse the json again */}
+                </Select>   
+            </Stack>
         </Box>
     );
 }
