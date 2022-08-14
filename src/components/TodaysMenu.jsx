@@ -16,6 +16,7 @@ const CURRENTLY_NEXT_LUNCH = "gevma epomenhs";
 export default function TodaysMenu() {
   const [isLunch, setIsLunch] = useState(true);
   const [foodMenu, setFoodMenu] = useState(null);
+  const [isTomorrow, setIsTomorrow] = useState(false);
   const lettersColor = useColorModeValue("white", "black");
 
   function getNextMeal(curr_date) {
@@ -29,22 +30,28 @@ export default function TodaysMenu() {
     ];
     const [endingDinnerHour, endingDinnerMinutes] = [20, 0];
 
-    const [hours, minutes] = [now.getHours(), now.getMinutes()];
-    if (
-      hours < endingLunchHour ||
-      (hours === endingLunchHour && minutes <= endingLunchMinutes)
-    ) {
+    const lunchTime = new Date(
+      now.getFullYear(),
+      now.getMonth(),
+      now.getDate(),
+      endingLunchHour,
+      endingLunchMinutes
+    );
+
+    const dinnerTime = new Date(
+      now.getFullYear(),
+      now.getMonth(),
+      now.getDate(),
+      endingDinnerHour,
+      endingDinnerMinutes
+    );
+    if (curr_date.getTime() <= lunchTime.getTime()) {
       return CURRENTLY_LUNCH;
     }
 
-    if (
-      hours < endingDinnerHour ||
-      (hours == endingDinnerHour && minutes <= endingDinnerMinutes) ||
-      (hours == endingLunchHour && minutes > endingLunchMinutes)
-    ) {
+    if (curr_date.getTime() <= dinnerTime.getTime()) {
       return CURRENTLY_DINNER;
     }
-
     return CURRENTLY_NEXT_LUNCH;
   }
   function checkTimeSetNextMeal() {
@@ -59,6 +66,7 @@ export default function TodaysMenu() {
       setIsLunch(true);
       todayOrNextDay = 1;
     }
+    setIsTomorrow(!!todayOrNextDay);
     setFoodMenu(getTodaysRestaurantMenu(todayOrNextDay));
   }
   useEffect(() => {
@@ -78,9 +86,9 @@ export default function TodaysMenu() {
       "ΠΑΡΑΣΚΕΥΗ",
       "ΣΑΒΒΑΤΟ",
     ];
-    //2022, 7, 14
     const dayNum = new Date().getDay();
-    const dayName = days[dayNum + (offsetDays % 7)];
+    //prettier-ignore
+    const dayName = days[dayNum + offsetDays % 7];
     const todaysTotalMenu = data
       .filter((dayMenu) => {
         return dayMenu.day === dayName;
@@ -107,11 +115,11 @@ export default function TodaysMenu() {
     <Flex
       flexDirection={"column"}
       color={lettersColor}
-      marginTop={"1rem"}
+      marginTop={"7rem"}
       marginLeft={"1rem"}
     >
       <Text fontWeight={"bold"} marginBottom="1rem">
-        Σημερινό Μενού:
+        {isTomorrow ? "Αυριανό" : "Σημερινό"} Μενού:
       </Text>
 
       <Text as="span">{isLunch ? "Γεύμα" : "Δείπνο"}:</Text>
