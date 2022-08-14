@@ -9,6 +9,8 @@ import {
 } from "@chakra-ui/react";
 import data from "../assets/DailyMenu.json";
 import { useEffect } from "react";
+import FoodMenuList from "../components/FoodMenuList";
+
 const CURRENTLY_LUNCH = "gevma";
 const CURRENTLY_DINNER = "deipno";
 const CURRENTLY_NEXT_LUNCH = "gevma epomenhs";
@@ -28,6 +30,7 @@ export default function TodaysMenu() {
       isWeekDay ? 16 : 15,
       isWeekDay ? 0 : 30,
     ];
+
     const [endingDinnerHour, endingDinnerMinutes] = [20, 0];
 
     const lunchTime = new Date(
@@ -45,6 +48,7 @@ export default function TodaysMenu() {
       endingDinnerHour,
       endingDinnerMinutes
     );
+
     if (curr_date.getTime() <= lunchTime.getTime()) {
       return CURRENTLY_LUNCH;
     }
@@ -54,6 +58,7 @@ export default function TodaysMenu() {
     }
     return CURRENTLY_NEXT_LUNCH;
   }
+
   function checkTimeSetNextMeal() {
     const menuToDisplay = getNextMeal(new Date());
     let todayOrNextDay = 0;
@@ -66,9 +71,10 @@ export default function TodaysMenu() {
       setIsLunch(true);
       todayOrNextDay = 1;
     }
-    setIsTomorrow(!!todayOrNextDay);
+    setIsTomorrow(todayOrNextDay);
     setFoodMenu(getTodaysRestaurantMenu(todayOrNextDay));
   }
+
   useEffect(() => {
     checkTimeSetNextMeal();
     const interval = setInterval(checkTimeSetNextMeal, 30 * 1000);
@@ -111,6 +117,7 @@ export default function TodaysMenu() {
       dessert: todaysTotalMenu.deipnoEpidorpio,
     };
   }
+
   return (
     <Flex
       flexDirection={"column"}
@@ -121,42 +128,8 @@ export default function TodaysMenu() {
       <Text fontWeight={"bold"} marginBottom="1rem">
         {isTomorrow ? "Αυριανό" : "Σημερινό"} Μενού:
       </Text>
-
       <Text as="span">{isLunch ? "Γεύμα" : "Δείπνο"}:</Text>
-
-      {foodMenu ? <FoodMenuList {...foodMenu} /> : <div>Loading...</div>}
+      {<FoodMenuList {...foodMenu} />}{" "}
     </Flex>
-  );
-}
-
-function FoodMenuList({ mainDish, specialDish, salad, dessert }) {
-  console.log(mainDish, specialDish, salad, dessert);
-  return (
-    <UnorderedList>
-      <ListItem>
-        <Text as="span" noOfLines={[]}>
-          <chakra.u marginRight={"1rem"}>Κυρίως:</chakra.u>
-          {mainDish}
-        </Text>
-      </ListItem>
-      <ListItem>
-        <Text as="span">
-          <chakra.u marginRight={"1rem"}>Χορτοφαγικό:</chakra.u>
-          {specialDish}
-        </Text>
-      </ListItem>
-      <ListItem>
-        <Text as="span">
-          <chakra.u marginRight={"1rem"}>Σαλάτα:</chakra.u>
-          {salad}
-        </Text>
-      </ListItem>
-      <ListItem>
-        <Text as="span">
-          <chakra.u marginRight={"1rem"}>Γλυκό:</chakra.u>
-          {dessert}
-        </Text>
-      </ListItem>
-    </UnorderedList>
   );
 }
