@@ -18,11 +18,12 @@ import {
   Text,
   Flex,
   Box,
-  useColorModeValue,
+  useColorModeValue
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import { DepartmentContext } from "../contexts/departmentContext";
 import { DEPARTMENTS } from "../assets/DepNames";
+import { Link } from "react-router-dom";
 
 export default function MenuButton() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -114,6 +115,11 @@ export default function MenuButton() {
                   ))}
                 </Select>
               </Flex>
+
+
+              <Link to='/FAQ'><Text fontSize={'4xl'}>FAQ</Text></Link>
+              <Link to='/ABOUT'><Text fontSize={'4xl'}>About</Text></Link>
+
             </VStack>
           </DrawerBody>
 
