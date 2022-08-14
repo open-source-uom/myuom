@@ -1,8 +1,6 @@
 import { Box, Button, HStack, Icon, Image, Stack, Text, VStack } from "@chakra-ui/react";
-import { AiOutlineGitlab } from 'react-icons/ai';
 import { React, useNavigate } from "react";
-import UoMLogo from "../assets/logo.png"
-import { Link } from "react-router-dom";
+import UoMLogo from "../assets/myUOMLogo.png"
 import { SocialIcon } from 'react-social-icons';
 
 
@@ -26,7 +24,7 @@ function AboutSettingsPage() {
                 <SocialIcon url="https://gitlab.com/opensourceuom" />
                 <SocialIcon url="https://discord.com/invite/XtxtM3ZHUm" />
             </Box>
-          
+
 
         </Box>
     );
