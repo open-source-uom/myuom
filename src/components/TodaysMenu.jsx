@@ -115,7 +115,7 @@ export default function TodaysMenu() {
     <Flex
       flexDirection={"column"}
       color={lettersColor}
-      marginTop={"7rem"}
+      marginTop={"1rem"}
       marginLeft={"1rem"}
     >
       <Text fontWeight={"bold"} marginBottom="1rem">
