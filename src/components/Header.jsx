@@ -32,13 +32,14 @@ export default function Header() {
     <>
       <Flex
         bgColor={useColorModeValue("#f3f3f3", "black")}
-        position={{ sm: "relative", lg: "fixed" }}
+        position={{ sm: "relative", lg: "sticky" }}
         direction="row"
         w="100%"
         alignItems="center"
         zIndex={99}
         justifyContent="space-between"
         padding="1rem"
+        top="0"
       >
         <Flex
           w={{ sm: "100%", lg: "fit-content" }}
@@ -151,7 +152,7 @@ export default function Header() {
         )}
         display={{ sm: "flex", lg: "none" }}
         position="fixed"
-        bottom={0}
+        bottom="0"
       >
         <Box onClick={goToHomePage}>
           <svg
