@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useEffect } from "react";
 import {
   Flex,
   Text,
@@ -17,6 +17,16 @@ export default function FirstYearInfoPage() {
       top: 0,
     });
   }, []);
+
+  const articlesTitles = [
+    "Βιβλία από Εύδοξο",
+    "Ακαδημαϊκή Ταυτότητα",
+    "Εγγραφή στην Βιβλιοθήκη",
+    "Εγγραφή στο Open eClass",
+    "Πληροφορίες σίτισης",
+    "Πληροφορίες στέγασης",
+    "Επικοινωνία",
+  ];
   const articleComponents = [
     EudoxusInfo,
     StudentIdInfo,
@@ -42,10 +52,13 @@ export default function FirstYearInfoPage() {
       <Flex flexDirection={"column"} rowGap={"3rem"} marginRight={"1rem"}>
         {articleComponents.map((ArticleComponent, index) => {
           return (
-            <ArticleComponent
+            <ArticleWrap
               key={`firstyear-articles-${index}`}
               id={`firstyear-articles-${index}`}
-            />
+              title={articlesTitles[index]}
+            >
+              <ArticleComponent />
+            </ArticleWrap>
           );
         })}
       </Flex>
@@ -60,25 +73,20 @@ function TableOfContents() {
     "Ακαδημαϊκή Ταυτότητα",
     "Εγγραφή στην Βιβλιοθήκη",
     "Εγγραφή στο Open eClass",
-    // "Εγγραφή στο Piazza",
     "Πληροφορίες σίτισης",
     "Πληροφορίες στέγασης",
-    // "Πληροφορίες υγειονομικής περίθαλψης",
     "Επικοινωνία",
   ];
 
   function ContentLink({ title, indexToAnchor }) {
-    const ref = useRef(null);
-
     return (
       <chakra.a
         marginBottom={"1rem"}
         //gia to scroll sto article
         href={`#firstyear-articles-${indexToAnchor}`}
         border={"solid 2px"}
-        ref={ref}
-        // xreiazotan kati ligotero apo 1/5
-        flex={"0 0 19%"}
+        // xreiazotan kati ligotero apo 1/n
+        flex={{ base: "0 0 45%", md: "0 0 31%", lg: "0 0 23%", xl: "0 0 19%" }}
         borderRadius={"0.5rem"}
         padding={"0.5rem"}
         width={"max-content"}
@@ -93,7 +101,7 @@ function TableOfContents() {
   return (
     <Flex
       flexDirection={{ base: "column" }}
-      marginTop={"1rem"}
+      marginTop={"3rem"}
       mx={"1rem"}
       alignItems="center"
     >
@@ -108,8 +116,8 @@ function TableOfContents() {
         Περιεχόμενα
       </Text>
       <Flex
-        flexDirection={{ base: "column", lg: "row" }}
-        columnGap={{ base: "0", lg: "0.5rem" }}
+        flexDirection={"row"}
+        gap={"0.75rem"}
         flexWrap={"wrap"}
         alignItems={"flex-start"}
       >
@@ -134,12 +142,12 @@ function ScrollToTopArrow() {
   return (
     <ButtonGroup
       border={"solid 0.125rem green"}
-      borderRadius={"0.25rem"}
+      borderRadius={"2rem"}
       size="lg"
       isAttached
       variant="outline"
       position={"fixed"}
-      bottom="1rem"
+      bottom={{ base: "4rem", lg: "1rem" }}
       right="1rem"
       backgroundColor={"transparent"}
       onClick={() => {
@@ -149,18 +157,24 @@ function ScrollToTopArrow() {
         });
       }}
     >
-      <IconButton aria-label="Scroll to top" icon={<ArrowUpIcon />} />
+      <IconButton
+        aria-label="Scroll to top"
+        icon={<ArrowUpIcon />}
+        borderRadius={"2rem"}
+        _focus={{ bg: "transparent" }}
+        _active={{ bg: "initial" }}
+      />
     </ButtonGroup>
   );
 }
 
-function EudoxusInfo({ id }) {
+function ArticleWrap({ id, title, children }) {
   return (
     <UnorderedList
       id={id}
       spacing={"0.75rem"}
       listStyleType="none"
-      wordBreak={"break-all"}
+      wordBreak={"break-word"}
     >
       <Text
         fontSize="2xl"
@@ -168,21 +182,24 @@ function EudoxusInfo({ id }) {
         borderBottom={"solid 0.125rem"}
         paddingBottom={"0.5rem"}
       >
-        Βιβλία από Εύδοξο
+        {title}
       </Text>
-
       <br></br>
-      <ListItem wordBreak={"break-all"}>
+      {children}
+    </UnorderedList>
+  );
+}
+
+function EudoxusInfo() {
+  return (
+    <>
+      <ListItem>
         Μεταβείτε στην σελίδα{" "}
-        {/* <Link
-          href="https://service.eudoxus.gr/student/"
-          color="teal.500"
-          wordBreak={"break-word"}
-        > */}
-        Δήλωσης συγγραμάτων Εύδοξος
-        {/* </Link> */}
+        <Link href="https://service.eudoxus.gr/student/" color="teal.500">
+          Δήλωσης συγγραμάτων Εύδοξος
+        </Link>
       </ListItem>
-      <ListItem wordBreak={"break-word"}>
+      <ListItem>
         Επιλέξτε <b>'Πανεπιστήμιο Μακεδονίας'</b> & πατήστε επιβεβαίωση
       </ListItem>
       <ListItem>Συνδεθείτε με τον ιδρυματικό σας λογαριασμό.</ListItem>
@@ -198,34 +215,23 @@ function EudoxusInfo({ id }) {
       <ListItem>
         Τέλος πατήστε <b>'Τελική Υποβολή'.</b>
       </ListItem>
-      <br></br>
-      <Text noOfLines={[1, 2, 3]} as="ins" fontSize="md">
+      <ListItem>
         Για περαιτέρω πληροφορίες μεταβείτε{" "}
         <Link
           href="https://eudoxus.gr/files/User_Manual_Students.pdf"
           color="teal.500"
         >
-          εδώ
+          εδώ.
         </Link>
-        .
-      </Text>
-    </UnorderedList>
+      </ListItem>
+    </>
+    // </UnorderedList>
   );
 }
 
-function StudentIdInfo({ id }) {
+function StudentIdInfo() {
   return (
-    <UnorderedList id={id} spacing={"0.75rem"} listStyleType="none">
-      <Text
-        noOfLines={[1, 2, 3]}
-        fontSize="2xl"
-        fontWeight="bold"
-        borderBottom={"solid 0.125rem"}
-        paddingBottom={"0.5rem"}
-      >
-        Ακαδημαϊκή ταυτότητα
-      </Text>
-      <br></br>
+    <>
       <Text fontSize="md">
         Μπορείτε να ζητήσετε ακαδημαϊκή ταυτότητα από την διεύθυνση{" "}
         <Link href="https://academicid.minedu.gov.gr/" color="teal.500">
@@ -280,75 +286,39 @@ function StudentIdInfo({ id }) {
           Υπηρεσία StudentsWeb.
         </Link>
       </Text>
-    </UnorderedList>
+    </>
   );
 }
 
-function LibrarySignUpInfo({ id }) {
-  // noOfLines={[1, 2, 3]}
-  //       fontSize="2xl"
-  //       fontWeight="bold"
-  //       borderBottom={"solid 0.125rem"}
-  //       paddingBottom={"0.5rem"}
+function LibrarySignUpInfo() {
   return (
-    <UnorderedList id={id} spacing={"0.75rem"} listStyleType="none">
-      <Text
-        noOfLines={[1, 2, 3]}
-        fontSize="2xl"
-        fontWeight="bold"
-        borderBottom={"solid 0.125rem"}
-        paddingBottom={"0.5rem"}
-      >
-        Εγγραφή στη βιβλιοθήκη
-      </Text>
-
-      <br></br>
-
+    <>
       <ListItem>
         Μεταβείτε στον σύδεσμο{" "}
         <Link color="teal.500" href="https://www.lib.uom.gr/index.php/el/forms">
-          https://www.lib.uom.gr/index.php/el/forms
+          της Βιβλιοθήκης του Παμακ
         </Link>
         .
       </ListItem>
       <ListItem>
-        Επιλέξετε το{" "}
-        <Link
-          color="teal.500"
-          href="https://www.lib.uom.gr/index.php/el/new-user?view=form"
-        >
-          Αίτηση Εγγραφής στη Βιβλιοθήκη για Μέλη του Πανεπιστημίου
-        </Link>
-        .
+        Επιλέξετε το "Αίτηση Εγγραφής στη Βιβλιοθήκη για Μέλη του
+        Πανεπιστημίου".
       </ListItem>
-      <ListItem>
-        <Text>Συμπληρώστε εκεί τα στοιχεία σας. </Text>
-      </ListItem>
+      <ListItem>Συμπληρώστε εκεί τα στοιχεία σας.</ListItem>
       <br></br>
-      <Text as="ins" fontSize="md">
+      <ListItem>
         Για την ολοκλήρωση της εγγραφής σας, θα πρέπει να προσέλθετε στη
         Βιβλιοθήκη από την επόμενη εργάσιμη μέρα και μέσα σε ένα μήνα με την
         ακαδημαϊκή και την αστυνομική σας ταυτότητα, μετά από επικοινωνία για
-        ραντεβού.{" "}
-      </Text>
-    </UnorderedList>
+        ραντεβού.
+      </ListItem>
+    </>
   );
 }
 
-function OpenEclassSignUpInfo({ id }) {
+function OpenEclassSignUpInfo() {
   return (
-    <UnorderedList id={id} spacing={"0.75rem"} listStyleType="none">
-      <Text
-        noOfLines={[1, 2, 3]}
-        fontSize="2xl"
-        fontWeight="bold"
-        borderBottom={"solid 0.125rem"}
-        paddingBottom={"0.5rem"}
-      >
-        Εγγραφή στο openeclass
-      </Text>
-
-      <br></br>
+    <>
       <Text>
         Μεταβείτε στην ιστοσελίδα{" "}
         <Link href="https://openeclass.uom.gr/" color="teal.500">
@@ -372,7 +342,7 @@ function OpenEclassSignUpInfo({ id }) {
         Θα σας στείλει ένα mail που θα σας λέει ότι γραφτήκατε.
       </ListItem>
       <br></br>
-      <Text fontSize="md">
+      <Text>
         Στα Μαθήματα (αριστερή στήλη), θα πετακινηθείτε στο{" "}
         <b>
           Προπτυχιακά (Undergraduate) » Τμήμα Εφαρμοσμένης Πληροφορικής
@@ -381,33 +351,22 @@ function OpenEclassSignUpInfo({ id }) {
         . Εκεί θα επιλέξετε τα μαθήματα του εξαμήνου. Καλό θα ήταν να περιμένετε
         να κάνουμε το μάθημα, μήπως μας εξηγήσουν τίποτα οι καθηγητές μας.
       </Text>
-    </UnorderedList>
+    </>
   );
 }
 
-function RestaurantSignUpInfo({ id }) {
+function RestaurantSignUpInfo() {
   return (
-    <UnorderedList id={id} spacing={"0.75rem"} listStyleType="none">
-      <Text
-        noOfLines={[1, 2, 3]}
-        fontSize="2xl"
-        fontWeight="bold"
-        borderBottom={"solid 0.125rem"}
-        paddingBottom={"0.5rem"}
-      >
-        Πληροφορίες για σίτιση 2020-2021
-      </Text>
-
-      <br></br>
-      <Text fontSize="md">
+    <>
+      <ListItem>
         Για όσους θα είναι Θεσσαλονίκη, θα χρειαστείτε και την κάρτα σίτισης.
         Αρχικά θα βρείτε όλα στην σελίδα του πανεπιστημίου{" "}
         <Link href="https://www.uom.gr/student-care/sitish" color="teal.500">
           εδώ
         </Link>
         .
-      </Text>
-      <Text fontSize="md">
+      </ListItem>
+      <ListItem>
         Έχει βγει{" "}
         <Link
           href="https://www.uom.gr/8883-anakoinosh-sitish-protoeton-foithton-akad-etoys-2020-2021"
@@ -423,37 +382,34 @@ function RestaurantSignUpInfo({ id }) {
           παλιά ανακοίνωση
         </Link>
         ).
-      </Text>
-      <br></br>
-      <Text fontSize="md">
+      </ListItem>
+
+      <ListItem>
         Μεταβείτε στην διεύθυνση{" "}
         <Link color="teal.500" href="https://piazza.com/uom.gr/fall2020/inf302">
           https://piazza.com/uom.gr/fall2020/inf302
         </Link>
-      </Text>
-      <br></br>
-      <Text fontSize="md">
-        Αυτό που μας ενδιαφέρει για τώρα είναι η πρόταση:
-      </Text>
-      <Text noOfLines={[1, 2, 3]} backgroundColor="gray.300">
-        {" "}
+      </ListItem>
+
+      <ListItem>Αυτό που μας ενδιαφέρει για τώρα είναι η πρόταση:</ListItem>
+      <ListItem backgroundColor="gray.300">
         Oι πρωτοετείς φοιτητές ακαδ. έτους 2020-2021, θα υποβάλλουν ηλεκτρονικά
         την αίτηση, για χορήγηση κάρτας δωρεάν σίτισης μετά την ολοκλήρωση της
         εγγραφής – ταυτοποίησης στις Γραμματείες των Τμημάτων και την απόκτηση
         των στοιχείων του λογαριασμού τους.
-      </Text>
-      <Text fontSize="md">
+      </ListItem>
+      <ListItem>
         Οπότε πρέπει να μας κάνουνε ταυτοποίηση και στη συνέχεια να κάνουμε
         αίτηση για κάρτα σίτισης.
-      </Text>
-      <br></br>
-      <Text fontSize="md">
+      </ListItem>
+
+      <ListItem>
         Η ανακοίνωση αναφέρει ότι θα είναι ανοικτή η φόρμα υποβολής δήλωσης από{" "}
         <b>
           Δευτέρα 19 Οκτωβρίου 2020 9:00 π.μ. έως και την Τρίτη 10 Νοεμβρίου
           2020 και ώρα 9:00 π.μ.
-        </b>{" "}
-        και η δήλωση γίνεται ηλεκτρονικά στην{" "}
+        </b>
+        και η δήλωση γίνεται ηλεκτρονικά στην
         <Link
           href="https://docs.google.com/forms/d/e/1FAIpQLSfi1f6KH_Tm1aICa8amWDYnCKBKfvSQwUoZWAjeIFKnMhzAwQ/formrestricted"
           color="teal.500"
@@ -461,11 +417,11 @@ function RestaurantSignUpInfo({ id }) {
           φόρμα
         </Link>{" "}
         χρησιμοποιόντας τον ιδρυματικό σας λογαριασμό.
-      </Text>
-      <br></br>
-      <Text fontSize="lg">
+      </ListItem>
+
+      <ListItem fontSize="lg">
         <b>Διαβάστε και συμπληρώστε τα παρακάτω έγγραφα:</b>
-      </Text>
+      </ListItem>
       <ListItem>
         <Link
           href="https://www.uom.gr/assets/site/public/nodes/8576/7726-4618-dikaiologitika-sitisi-new-2020-21.docx"
@@ -501,25 +457,14 @@ function RestaurantSignUpInfo({ id }) {
           ΟΡΙΑ ΕΙΣΟΔΗΜΑΤΟΣ ΔΩΡΕΑΝ ΣΙΤΙΣΗΣ ΑΚΑΔΗΜΑΪΚΟΥ ΕΤΟΥΣ 2020-2021
         </Link>
       </ListItem>
-    </UnorderedList>
+    </>
   );
 }
 
-function HousingRequestInfo({ id }) {
+function HousingRequestInfo() {
   return (
-    <UnorderedList id={id} spacing={"0.75rem"} listStyleType="none">
-      <Text
-        noOfLines={[1, 2, 3]}
-        fontSize="2xl"
-        fontWeight="bold"
-        borderBottom={"solid 0.125rem"}
-        paddingBottom={"0.5rem"}
-      >
-        Πληροφορίες για στέγαση 2020-2021
-      </Text>
-
-      <br></br>
-      <Text fontSize="md">
+    <>
+      <ListItem>
         Υπάρχει ανακοίνωση{" "}
         <Link
           href="https://www.uom.gr/8577-anakoinosh-stegash-foithton-akad-etoys-2020-2021"
@@ -528,21 +473,20 @@ function HousingRequestInfo({ id }) {
           διαθέσιμη εδώ
         </Link>
         .
-      </Text>
-      <br></br>
-      <Text fontSize="md">Και εδώ ισχύει το εξής:</Text>
-      <Text noOfLines={[1, 2, 3]} backgroundColor="gray.300">
-        {" "}
+      </ListItem>
+      <ListItem>Και εδώ ισχύει το εξής:</ListItem>
+      <ListItem backgroundColor="gray.300">
         Oι πρωτοετείς φοιτητές ακαδ. έτους 2020-2021, θα υποβάλλουν ηλεκτρονικά
         την αίτηση, για την στέγαση μετά την ολοκλήρωση της εγγραφής –
         ταυτοποίησης στις Γραμματείες των Τμημάτων και την απόκτηση των
         στοιχείων του λογαριασμού τους. Οι ημερομηνίες για την υποβολή αίτησης
         θα ανακοινωθούν σύντομα.
-      </Text>
-      <br></br>
-      <Text fontSize="lg">
+      </ListItem>
+
+      <ListItem>
         <b>Διαβάστε τα παρακάτω έγγραφα:</b>
-      </Text>
+      </ListItem>
+
       <ListItem>
         <Link
           href="https://www.uom.gr/assets/site/public/nodes/8577/7691-2414-kanonismos-estias-2012-fek.pdf"
@@ -569,7 +513,7 @@ function HousingRequestInfo({ id }) {
         </Link>
       </ListItem>
       <br></br>
-      <Text as="ins" fontSize="md">
+      <ListItem as="ins">
         {" "}
         Η αίτηση θα γίνει{" "}
         <Link
@@ -579,33 +523,22 @@ function HousingRequestInfo({ id }) {
           ηλεκτρονικά εδώ
         </Link>
         .
-      </Text>
-    </UnorderedList>
+      </ListItem>
+    </>
   );
 }
 
-function ContactUomInfo({ id }) {
+function ContactUomInfo() {
   return (
-    <UnorderedList id={id} spacing={"0.75rem"} listStyleType="none">
+    <>
       <Text
-        noOfLines={[1, 2, 3]}
-        fontSize="2xl"
-        fontWeight="bold"
-        borderBottom={"solid 0.125rem"}
-        paddingBottom={"0.5rem"}
-      >
-        Επικοινωνία
-      </Text>
-      <br></br>
-      <Text
-        fontSize="lg"
         fontWeight="bold"
         width="max-content"
         borderBottom={"solid 0.125rem"}
       >
         Επικοινωνία με γραμματεία σχολής
       </Text>
-      <Text>Εάν θέλετε να επικοινωνήσετε με την γραμματεία:</Text>
+      <ListItem>Εάν θέλετε να επικοινωνήσετε με την γραμματεία:</ListItem>
       <ListItem>
         Με email στο{" "}
         <Link color="teal.500" href="mailto:daisecr@uom.edu.gr">
@@ -614,21 +547,15 @@ function ContactUomInfo({ id }) {
         .
       </ListItem>
       <ListItem>Τηλεφωνικά στα τηλέφωνα 2310.891217 και 2310.891323</ListItem>
-      <br></br>
-      <Text fontSize="md">
+      <ListItem>
         Ιστοσελίδα:{" "}
         <Link color="teal.500" href="https://www.uom.gr/dai">
           https://www.uom.gr/dai
         </Link>
-      </Text>
+      </ListItem>
       <br></br>
-      <Text
-        fontSize="lg"
-        fontWeight="bold"
-        // width={"max-content"}
-        borderBottom={"solid 0.125rem"}
-      >
-        Επικοινωνία με μέριμνα (θέματα σίτισης, στέγασης)
+      <Text borderBottom={"solid 0.125rem"}>
+        <b>Επικοινωνία με μέριμνα (θέματα σίτισης, στέγασης)</b>
       </Text>
       <ListItem>
         Δείτε στην{" "}
@@ -647,10 +574,8 @@ function ContactUomInfo({ id }) {
           merimna@uom.gr
         </Link>
       </ListItem>
-      <br></br>
-      <Text fontSize="md" as="ins">
-        Καλή επιτυχία!
-      </Text>
-    </UnorderedList>
+
+      <ListItem>Καλή επιτυχία!</ListItem>
+    </>
   );
 }
