@@ -1,114 +1,199 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import {
-    Box,
-    AccordionItem,
-    AccordionButton,
-    AccordionPanel,
-    AccordionIcon,
-    Accordion,
-    Text
-  } from '@chakra-ui/react';
+  Box,
+  AccordionItem,
+  AccordionButton,
+  AccordionPanel,
+  AccordionIcon,
+  Accordion,
+  Text,
+  Flex,
+  useColorModeValue,
+} from "@chakra-ui/react";
 
-function Menu({data}) {
-  return ( 
-  <Box>
-        <AccordionItem border='none'>
-          
-            <AccordionButton _hover={{ bg: "rgb(20, 88, 148)" }}
-                margin="0 auto"
-                padding="8px"
-                width="80vw"
-                textAlign="center"
-                marginBottom="0.3em"
-                bgColor="rgb(20, 88, 148)"
-                color="rgb(252, 180, 12)"
-                borderRadius="20"
-                border="none"
-                alt="profPic"
-                overflow="hidden"
-              _expanded={{ bg: "rgb(24, 107, 180)", color: "rgb(227, 160, 2)"}}
+function Menu({ data }) {
+  return (
+    <Box
+      w={{ sm: "95%", md: "98%", lg: "99%" }}
+      marginBottom="1rem"
+      ml={"0.5rem"}
+      borderRadius="20"
+      overflow="hidden"
+      border="2px"
+      borderColor={useColorModeValue("#0050e0", "#f3f3f3")}
+    >
+      <AccordionItem border="none" w="100%">
+        <AccordionButton
+          display="flex"
+          direction="row"
+          alignItems="center"
+          justifyContent="start"
+          _hover={{ bg: "transparent" }}
+          w="100%"
+          h="100%"
+          outline="none"
+          textAlign="center"
+          bgColor="transparent"
+          color={useColorModeValue("black", "white")}
+          fontFamily="Syne"
+          border="none"
+          alt="profPic"
+          overflow="hidden"
+          gap={3}
+        >
+          <Text
+            w="100%"
+            display="flex"
+            direction="row"
+            alignItems="center"
+            justifyContent="start"
+            fontWeight="bold"
+            fontSize={{ sm: 14, md: 16, lg: 18 }}
+          >
+            {data.day}
+          </Text>
+          <AccordionIcon />
+        </AccordionButton>
+
+        <AccordionPanel pb={5}>
+          <Accordion allowToggle>
+            {/*Accordion gia geuma*/}
+            <Box
+              w="100%"
+              marginBottom="5"
+              borderRadius="20"
+              overflow="hidden"
+              border="2px"
+              borderColor={useColorModeValue("#0050e0", "#f3f3f3")}
             >
-              <Box flex='1' textAlign='center' fontSize='25px'>
-                {data.day}
-              </Box>
-              <AccordionIcon />
-            </AccordionButton>
-          
-          <AccordionPanel pb={5}>
-
-            <Accordion allowToggle>
-              {/*Accordion gia geuma*/}
-              <AccordionItem border="none">
-                <Text>
-                  <AccordionButton _hover={{ bg: "rgb(20, 88, 148)" }}
-                     margin="0 auto"
-                     padding="3px"
-                     width="60vw"
-                     textAlign="center"
-                     marginBottom="0.3em"
-                     bgColor="rgb(20, 88, 148)"
-                     color="rgb(252, 180, 12)"
-                     borderRadius="20"
-                     border="none"
-                     alt="profPic"
-                     overflow="hidden"
-                    _expanded={{ bg: "rgb(24, 107, 180)", color: "rgb(227, 160, 2)"}}
+              <AccordionItem>
+                <AccordionButton
+                  display="flex"
+                  direction="row"
+                  alignItems="center"
+                  justifyContent="start"
+                  _hover={{ bg: "transparent" }}
+                  w="100%"
+                  h="100%"
+                  outline="none"
+                  textAlign="center"
+                  bgColor="transparent"
+                  color={useColorModeValue("black", "white")}
+                  fontFamily="Syne"
+                  border="none"
+                  alt="profPic"
+                  overflow="hidden"
+                  gap={3}
+                >
+                  <Text
+                    w="100%"
+                    display="flex"
+                    direction="row"
+                    alignItems="center"
+                    justifyContent="start"
+                    fontWeight="bold"
+                    fontFamily="Syne"
+                    fontSize={{ sm: 14, md: 16, lg: 18 }}
                   >
-                    <Box flex='1' textAlign='center' fontSize='20px'>
                     Γεύμα
-                    </Box>
+                  </Text>
                   <AccordionIcon />
-                  </AccordionButton>
-                </Text>
+                </AccordionButton>
                 <AccordionPanel pb={4}>
-                  <div>
-                    {data.gevmaKirios}<br></br>
-                    {data.gevmaEidiko}<br></br>
-                    {data.gevmaGarnitoura}<br></br>
-                    {data.gevmaSalata}<br></br>
-                    {data.gevmaEpidorpio} 
-                  </div>
-                </AccordionPanel>
-            </AccordionItem>
-              {/*Accordion gia deipno*/}
-            <AccordionItem border="none">
-                <Text>
-                  <AccordionButton _hover={{ bg: "rgb(20, 88, 148)" }}
-                     margin="0 auto"
-                     padding="3px"
-                     width="60vw"
-                     textAlign="center"
-                     marginBottom="0.3em"
-                     bgColor="rgb(20, 88, 148)"
-                     color="rgb(252, 180, 12)"
-                     borderRadius="20"
-                     border="none"
-                     alt="profPic"
-                     overflow="hidden"
-                    _expanded={{ bg: "rgb(24, 107, 180)", color: "rgb(227, 160, 2)"}}
+                  <Text
+                    w="100%"
+                    display="flex"
+                    direction="row"
+                    alignItems="center"
+                    justifyContent="start"
+                    fontWeight="bold"
+                    fontFamily="Syne"
+                    fontSize={{ sm: 14, md: 16, lg: 18 }}
                   >
-                    <Box flex='1' textAlign='center' fontSize='20px'>
-                    Δείπνο
-                    </Box>
-                  <AccordionIcon />
-                  </AccordionButton>
-                </Text>
-                <AccordionPanel pb={4}>
-                  <div>
-                    {data.deipnoKirios}<br></br>
-                    {data.deipnoEidiko}<br></br>
-                    {data.deipnoGarnitoura}<br></br>
-                    {data.deipnoSalata}<br></br>
-                    {data.deipnoEpidorpio} 
-                  </div>
+                    {data.gevmaKirios}
+                    <br></br>
+                    {data.gevmaEidiko}
+                    <br></br>
+                    {data.gevmaGarnitoura}
+                    <br></br>
+                    {data.gevmaSalata}
+                    <br></br>
+                    {data.gevmaEpidorpio}
+                  </Text>
                 </AccordionPanel>
-            </AccordionItem>
-            </Accordion>
-            
-          </AccordionPanel>
-        </AccordionItem>
-</Box>
-   );
+              </AccordionItem>
+            </Box>
+            {/*Accordion gia deipno*/}
+            <Box
+              w="100%"
+              marginBottom="5"
+              borderRadius="20"
+              overflow="hidden"
+              border="2px"
+              borderColor={useColorModeValue("#0050e0", "#f3f3f3")}
+            >
+              <AccordionItem>
+                <AccordionButton
+                  display="flex"
+                  direction="row"
+                  alignItems="center"
+                  justifyContent="100start"
+                  _hover={{ bg: "transparent" }}
+                  w="100%"
+                  h="100%"
+                  outline="none"
+                  textAlign="center"
+                  bgColor="transparent"
+                  color={useColorModeValue("black", "white")}
+                  fontFamily="Syne"
+                  border="none"
+                  alt="profPic"
+                  overflow="hidden"
+                  gap={3}
+                >
+                  <Text
+                    w="100%"
+                    display="flex"
+                    direction="row"
+                    alignItems="center"
+                    justifyContent="start"
+                    fontWeight="bold"
+                    fontFamily="Syne"
+                    fontSize={{ sm: 14, md: 16, lg: 18 }}
+                  >
+                    Δείπνο
+                  </Text>
+                  <AccordionIcon />
+                </AccordionButton>
+                <AccordionPanel pb={4}>
+                  <Text
+                    w="100%"
+                    display="flex"
+                    direction="row"
+                    alignItems="flex-start"
+                    justifyContent="center"
+                    fontWeight="bold"
+                    fontFamily="Syne"
+                    fontSize={{ sm: 14, md: 16, lg: 18 }}
+                  >
+                    {data.deipnoKirios}
+                    <br></br>
+                    {data.deipnoEidiko}
+                    <br></br>
+                    {data.deipnoGarnitoura}
+                    <br></br>
+                    {data.deipnoSalata}
+                    <br></br>
+                    {data.deipnoEpidorpio}
+                  </Text>
+                </AccordionPanel>
+              </AccordionItem>
+            </Box>
+          </Accordion>
+        </AccordionPanel>
+      </AccordionItem>
+    </Box>
+  );
 }
 
 export default Menu;
