@@ -43,7 +43,7 @@ export default function Search({ setCategoriesList, categoriesList }) {
 
   return (
     <InputGroup
-      w={{ sm: "100%", md: "90%", lg: "80%", "2xl": "60%", "3xl": "50%" }}
+      w={{ sm: "100%", md: "80%", lg: "60%", "2xl": "60%", "3xl": "50%" }}
     >
       <InputLeftElement
         pointerEvents="none"
