@@ -49,6 +49,7 @@ export default function LibraryPage() {
             flexDirection={"row"}
             alignItems="center"
             fontFamily="Syne"
+            fontSize={{ base: "md", lg: "xl" }}
             color={useColorModeValue("#f3f3f3", "black")}
           >
             <TimeIcon w={39} h={39} />
@@ -100,6 +101,7 @@ export default function LibraryPage() {
             columnGap={"1rem"}
             color={useColorModeValue("#f3f3f3", "black")}
             fontFamily="Syne"
+            fontSize={{ base: "md", lg: "2xl" }}
           >
             <PhoneIcon w={39} h={39} />
 
@@ -120,7 +122,7 @@ export default function LibraryPage() {
         variant="ghost"
         fontWeight="bold"
         fontFamily="Syne"
-        fontSize={{ sm: 16, md: 18, lg: 20 }}
+        fontSize={{ base: "lg", lg: "2xl" }}
         rightIcon={<ArrowForwardIcon w={6} h={6} />}
         onClick={(e) => {
           window.open("https://www.lib.uom.gr/index.php/el/");
