@@ -27,7 +27,7 @@ export default function LibraryPage() {
         alignItems="center"
         justifyContent={"center"}
         width="100%"
-        height={{ lg: "100vh" }}
+        height={{ lg: "75vh" }}
       >
         {/* Ωράριο */}
         <Box
@@ -103,36 +103,32 @@ export default function LibraryPage() {
           >
             <PhoneIcon w={39} h={39} />
 
-            <Text fontWeight="bold">
-              {" "}
-              (2310) <br />
-            </Text>
             <Text>
-              891751 <br />
-              891752
+              2310891751 <br />
+              2310891752
             </Text>
             <Text>
               {" "}
-              891118 <br /> 891137{" "}
+              2310891118 <br /> 2310891137{" "}
             </Text>
-            <Text fontWeight="bold"> Ημιώροφος </Text>
+            <Text fontWeight="bold"> Ημιόροφος </Text>
           </Flex>
         </Box>
-        <Button
-          color={useColorModeValue("#0050e0", "#f3f3f3")}
-          variant="ghost"
-          fontWeight="bold"
-          fontFamily="Syne"
-          fontSize={{ sm: 16, md: 18, lg: 20 }}
-          rightIcon={<ArrowForwardIcon w={6} h={6} />}
-          onClick={(e) => {
-            window.open("https://www.lib.uom.gr/index.php/el/");
-          }}
-          justifyContent="center"
-        >
-          Ιστοσελίδα Βιβλιοθήκης
-        </Button>
       </Flex>
+      <Button
+        color={useColorModeValue("#0050e0", "#f3f3f3")}
+        variant="ghost"
+        fontWeight="bold"
+        fontFamily="Syne"
+        fontSize={{ sm: 16, md: 18, lg: 20 }}
+        rightIcon={<ArrowForwardIcon w={6} h={6} />}
+        onClick={(e) => {
+          window.open("https://www.lib.uom.gr/index.php/el/");
+        }}
+        justifyContent="center"
+      >
+        Ιστοσελίδα Βιβλιοθήκης
+      </Button>
     </Flex>
   );
 }
