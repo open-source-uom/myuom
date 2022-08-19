@@ -37,12 +37,9 @@ export default function InfoCard({ data }) {
 
   return (
     <Tabs
-      // orientation="vertical"
-      isFitted
-      // display="grid"
-      gridTemplateColumns="auto 1fr"
+      align="center"
+      // gridTemplateColumns="auto 1fr"
       fontFamily="Syne"
-      variant="enclosed"
       colorScheme={useColorModeValue("#0050e0", "#f3f3f3")}
     >
       <TabList>
