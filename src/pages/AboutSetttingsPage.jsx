@@ -39,13 +39,34 @@ function AboutSettingsPage() {
         Βρες μας στα Social Media
       </Text>
       <Box paddingTop="10px">
-        <SocialIcon url="https://www.facebook.com/OpenSourceUoM/" />
-        <SocialIcon url="https://www.instagram.com/opensourceuom/" />
-        <SocialIcon url="https://www.youtube.com/channel/UC98Ggzq6dl_nn5Y0BHb6SLA?sub_confirmation=1" />
-        <SocialIcon url="https://twitter.com/opensource_uom" />
-        <SocialIcon url="https://www.linkedin.com/company/80766091/" />
-        <SocialIcon url="https://gitlab.com/opensourceuom" />
-        <SocialIcon url="https://discord.com/invite/XtxtM3ZHUm" />
+        <SocialIcon
+          url="https://www.facebook.com/OpenSourceUoM/"
+          style={{ marginRight: "0.5rem" }}
+        />
+        <SocialIcon
+          url="https://www.instagram.com/opensourceuom/"
+          style={{ marginRight: "0.5rem" }}
+        />
+        <SocialIcon
+          url="https://www.youtube.com/channel/UC98Ggzq6dl_nn5Y0BHb6SLA?sub_confirmation=1"
+          style={{ marginRight: "0.5rem" }}
+        />
+        <SocialIcon
+          url="https://twitter.com/opensource_uom"
+          style={{ marginRight: "0.5rem" }}
+        />
+        <SocialIcon
+          url="https://www.linkedin.com/company/80766091/"
+          style={{ marginRight: "0.5rem" }}
+        />
+        <SocialIcon
+          url="https://gitlab.com/opensourceuom"
+          style={{ marginRight: "0.5rem" }}
+        />
+        <SocialIcon
+          url="https://discord.com/invite/XtxtM3ZHUm"
+          style={{ marginRight: "0.5rem" }}
+        />
       </Box>
     </Box>
   );
