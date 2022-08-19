@@ -1,7 +1,5 @@
-import React from "react";
 import data from "../assets/FirstYearInfo.js";
-import { Accordion, Box, Text, Tabs } from "@chakra-ui/react";
-import Schedule from "../components/Schedule";
+import { Box } from "@chakra-ui/react";
 import InfoCard from "../components/InfoCard";
 
 export default function FirstYearInfoPage() {
@@ -10,7 +8,7 @@ export default function FirstYearInfoPage() {
   const thirdCardArray = data.slice(4, 7);
 
   return (
-    <Box>
+    <Box align="center">
       <InfoCard data={firstCardArray} key={firstCardArray.title} />
       <InfoCard data={secondCardArray} key={secondCardArray.title} />
       <InfoCard data={thirdCardArray} key={thirdCardArray.title} />

@@ -37,14 +37,26 @@ export default function InfoCard({ data }) {
 
   return (
     <Tabs
-      align="center"
-      // gridTemplateColumns="auto 1fr"
+      w={{ base: "initial", lg: "100vh" }}
       fontFamily="Syne"
-      colorScheme={useColorModeValue("#0050e0", "#f3f3f3")}
+      color={useColorModeValue("black", "#f3f3f3")}
+      border="none"
+      align="center"
+      mx="0.5rem"
     >
       <TabList>
         {data.map((info) => (
-          <CustomTab key={info.title} icon={info.icon}>
+          <CustomTab
+            key={info.title}
+            icon={info.icon}
+            variant="enclosed"
+            color={{ color: "#0050e0", bg: "#f3f3f3" }}
+            fontSize={{ base: "0.85rem", lg: "1rem" }}
+            _selected={{
+              color: "#f3f3f3",
+              bg: "#0050e0",
+            }}
+          >
             {/* 1. pass icon as prop */}
             {info.title}
           </CustomTab>
@@ -64,7 +76,7 @@ export default function InfoCard({ data }) {
               </UnorderedList>
 
               {info.links.map((link) => (
-                <Box>
+                <Box color="#0050e0">
                   <a href={link}>{link}</a>
                 </Box>
               ))}
