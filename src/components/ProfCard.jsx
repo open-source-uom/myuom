@@ -10,6 +10,8 @@ import {
   Image,
   Text,
   VStack,
+  useColorModeValue,
+  Flex,
 } from "@chakra-ui/react";
 import {
   Modal,
@@ -21,63 +23,58 @@ import {
 } from "@chakra-ui/react";
 // import { EmailIcon } from "@chakra-ui/icons";
 
-const contactButtonStyle = {
-  margin: "10px",
-  padding: "15px 30px",
-  textAlign: "center",
-  transition: "0.5s",
-  backgroundSize: "200% auto",
-  borderRadius: "10px",
-  border: "0px",
-  fontWeight: "700",
-  boxShadow: "0px 0px 14px -7px #f09819",
-  backgroundImage:
-    "linear-gradient(45deg, #FF512F 0%, rgb(24, 107, 180)  51%, rgb(227, 160, 2) 100%)",
-  cursor: "pointer",
-  userSelect: "none",
-  WebkitUserSelect: "none",
-  touchAction: "manipulation",
-  _active: {
-    transform: "scale(0.95)",
-  },
-};
-
 export default function ProfCard({ prof }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
-    <Box>
-      <AccordionItem border="none">
-        <Text as="h2">
+    <Box
+      w="100%"
+      borderRadius="20"
+      overflow="hidden"
+      border="2px"
+      borderColor={useColorModeValue("#0050e0", "#f3f3f3")}
+    >
+      <AccordionItem border="none" w="100%">
+        <Flex>
           <AccordionButton
-            _hover={{ bg: "rgb(20, 88, 148)" }}
-            margin="0 auto"
-            width="80vw"
+            display="flex"
+            direction="row"
+            alignItems="center"
+            justifyContent="start"
+            _hover={{ bg: "transparent" }}
+            w="100%"
+            h="100%"
+            outline="none"
             textAlign="center"
-            marginBottom="0.3em"
-            bgColor="rgb(20, 88, 148)"
-            color="rgb(252, 180, 12)"
-            borderRadius="20"
+            bgColor="transparent"
+            color={useColorModeValue("black", "white")}
+            fontFamily="Syne"
             border="none"
             alt="profPic"
             overflow="hidden"
-            _expanded={{ bg: "rgb(24, 107, 180)", color: "rgb(227, 160, 2)" }}
+            gap={3}
           >
             <Image
               src={prof.imgUrl}
-              width="80px"
-              height="80px"
+              width="60px"
+              height="60px"
               borderRadius="full"
             />
-            <Box flex="1">
-              <Text fontWeight="bold" fontSize="18">
-                {prof.fname} {prof.lname}
-              </Text>
-            </Box>
+            <Text
+              w="100%"
+              display="flex"
+              direction="row"
+              alignItems="center"
+              justifyContent="start"
+              fontWeight="bold"
+              fontSize={{ sm: 14, md: 16, lg: 18 }}
+            >
+              {prof.fname} {prof.lname}
+            </Text>
             <AccordionIcon />
           </AccordionButton>
-        </Text>
-        <AccordionPanel pb={5} textAlign="center">
-          <VStack>
+        </Flex>
+        <AccordionPanel bgColor="transparent" pb={5} textAlign="center">
+          <Flex direction="column" alignItems="start" fontFamily="Syne">
             <Text as="span" fontWeight="bold">
               Τίτλος:&nbsp;
               <Text fontWeight="normal" as="span">
@@ -113,6 +110,7 @@ export default function ProfCard({ prof }) {
             <Modal isOpen={isOpen} onClose={onClose} size={"xl"}>
               <ModalOverlay backdropFilter="blur(10px)" />
               <ModalContent
+                bgColor={useColorModeValue("#f3f3f3", "black")}
                 width={{ md: "500px", base: "300px" }}
                 height={{ md: "500px", base: "300px" }}
               >
@@ -129,23 +127,48 @@ export default function ProfCard({ prof }) {
                 {prof.office}
               </Text>
             </Text>
-          </VStack>
-          <Button
-            // leftIcon={<EmailIcon />}
-            textAlign="center"
-            colorScheme="teal"
-            variant="solid"
-            onClick={(e) => {
-              window.open(
-                `https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=${prof.email}`
-              );
-            }}
-            justifyContent="center"
-            style={contactButtonStyle}
-          >
-            Επικοινωνήστε με <br />
-            τον/την καθηγητή/τρια
-          </Button>
+            <Flex
+              direction="row"
+              alignItems="center"
+              gap={4}
+              marginTop="2rem"
+              fontWeight="bold"
+              textAlign="left"
+              fontFamily="Syne"
+              fontSize={{ sm: 16, md: 18, lg: 20 }}
+              onClick={(e) => {
+                window.open(
+                  `https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=${prof.email}`
+                );
+              }}
+            >
+              <span>
+                Επικοινωνήστε με <br /> τον/την καθηγητή/τρια
+              </span>
+              <Box w={{ sm: "16px", lg: "18px" }}>
+                <svg
+                  className="stroke-svg home-svg"
+                  width="100%"
+                  viewBox="0 0 11 11"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 5.66666H10.0575"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    stroke={useColorModeValue("black", "#f3f3f3")}
+                  />
+                  <path
+                    d="M5.52881 0.999985L10.0575 5.66665L5.52881 10.3333"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    stroke={useColorModeValue("black", "#f3f3f3")}
+                  />
+                </svg>
+              </Box>
+            </Flex>
+          </Flex>
         </AccordionPanel>
       </AccordionItem>
     </Box>

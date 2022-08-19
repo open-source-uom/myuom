@@ -4,9 +4,9 @@ import data from "../assets/DailyMenu.json";
 import {
   Accordion,
   Box,
-  Flex,
   Image,
   Text,
+  Flex,
   useColorModeValue,
 } from "@chakra-ui/react";
 import Schedule from "../components/Schedule";
@@ -29,10 +29,20 @@ export default function RestauranPage() {
       </Box>
       <Box textAlign={"center"}>
         <Box align="center">
-          <Text fontSize="30px" fontWeight="bold" fontFamily="cursive">
-            Menu Εστιατορίου
+          <Text
+            mr={"2rem"}
+            mb="1rem"
+            // w="100%"
+            w={"90%"}
+            display="flex"
+            direction="row"
+            justifyContent="end"
+            fontWeight="bold"
+            fontFamily="Syne"
+            fontSize={{ sm: 20, md: 24, lg: 26 }}
+          >
+            Όλες οι μέρες
           </Text>
-          <Image src={dinner} width="70px" height="70px" borderRadius="full" />
         </Box>
         <Accordion allowToggle>
           {data.map((data) => {

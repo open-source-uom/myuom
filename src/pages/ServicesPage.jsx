@@ -1,6 +1,13 @@
 import { Box } from "@chakra-ui/react";
 import { useState, useEffect } from "react";
-import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/react";
+import {
+  Tabs,
+  TabList,
+  TabPanels,
+  Tab,
+  TabPanel,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import { servicesData } from "../assets/services";
 import ServicesCard from "../components/ServicesCard";
 
@@ -35,7 +42,11 @@ export default function ServicesPage() {
 
   return (
     <Box>
-      <Tabs variant="soft-rounded" colorScheme="green">
+      <Tabs
+        fontFamily="Syne"
+        variant="enclosed"
+        colorScheme={useColorModeValue("#0050e0", "#f3f3f3")}
+      >
         <TabList flex="1">
           <Tab>Γραφεία</Tab>
           <Tab>Φοιτητικοί σύλλογοι</Tab>

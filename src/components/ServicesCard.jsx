@@ -1,43 +1,48 @@
-import { Flex, Button, Link, Image, Text } from "@chakra-ui/react";
+import { Flex, Link, Image, Text, useColorModeValue } from "@chakra-ui/react";
 
 export default function ServicesCard({ srv }) {
   return (
-    <Flex
-      gap="10"
-      margin="0 auto"
-      marginBottom="25px"
-      width="80vw"
-      textAlign="center"
-      bgColor="rgb(20, 88, 148)"
-      color="rgb(252, 180, 12)"
-      borderRadius="20"
-      border="none"
-      alt="servCard"
-      overflow="hidden"
-    >
-      <Image
-        src={srv.imgUrl}
-        width="60px"
-        height="60px"
-        borderRadius="full"
-        marginLeft="25px"
-        marginTop="10px"
-        marginBottom="10px"
-      />
-      <Text flex="2" marginTop="30px" fontWeight="bold">
-        {srv.title}
-      </Text>
-      <Link href={srv.url} isExternal>
-        <Button
-          size="xs"
-          marginTop="30px"
-          marginRight="25px"
-          bgColor="rgb(252, 180, 12)"
-          color="rgb(20, 88, 148)"
+    <Link href={srv.url} isExternal>
+      <Flex
+        display="flex"
+        direction="row"
+        alignItems="center"
+        justifyContent="start"
+        _hover={{ bg: "transparent" }}
+        w="100%"
+        h="100%"
+        outline="none"
+        textAlign="center"
+        fontFamily="Syne"
+        alt="profPic"
+        overflow="hidden"
+        gap={3}
+        borderRadius="20"
+        border="2px"
+        mb="1rem"
+        borderColor={useColorModeValue("#0050e0", "#f3f3f3")}
+      >
+        <Image
+          src={srv.imgUrl}
+          width="60px"
+          height="60px"
+          borderRadius="full"
+          marginLeft="25px"
+          marginTop="10px"
+          marginBottom="10px"
+        />
+        <Text
+          w="100%"
+          display="flex"
+          direction="row"
+          alignItems="center"
+          justifyContent="center"
+          fontWeight="bold"
+          fontSize={{ sm: 14, md: 16, lg: 18 }}
         >
-          Μεταβείτε στην ιστοσελίδα
-        </Button>
-      </Link>
-    </Flex>
+          {srv.title}
+        </Text>
+      </Flex>
+    </Link>
   );
 }
