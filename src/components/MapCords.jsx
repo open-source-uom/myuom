@@ -1,8 +1,21 @@
 import React, { useState, useCallback, useEffect } from "react";
 import ImageMapper from "react-image-mapper";
+import {
+  Accordion,
+  AccordionButton,
+  AccordionItem,
+  AccordionPanel,
+  AccordionIcon,
+  Box,
+  useDisclosure,
+  Collapse,
+  Button,
+  Text
+} from '@chakra-ui/react'
 
 export default function App({sampleObject}) {
   //const [query, setQuery] = useState(1);
+  const [showMessage, setShowMessage] = useState(true);
 
   const [mapAreas, setMapAreas] = useState({
     name: "my-map",
@@ -31,18 +44,29 @@ export default function App({sampleObject}) {
     });
   };
 
-  return (
-    <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
+  useEffect(() => {
+    setTimeout(function () {
+      setShowMessage(false);
+    }, 10000);
+  }, []);
 
-      <ImageMapper
+  return (
+    <Box>
+      {showMessage && <Button onClick={() => setShowMessage(!showMessage) } colorScheme='teal' variant='outline' margin="1rem">Δεν ξέρεις που είναι το κτήριο;</Button>}
+      {!showMessage && <Button onClick={() => setShowMessage(!showMessage) } colorScheme='teal' variant='outline' margin="1rem">Πισω</Button>}
+      {showMessage && <ImageMapper
         src={sampleObject.imageURL}
         onLoad={handleUpdateMapArea}
         map={mapAreas}
         width={500}
-      />
-      <pre>On each click, circle should be position of the clicked</pre>
-    </div>
+      />}
+      {!showMessage && <ImageMapper
+        src={sampleObject.blackImage}
+        onLoad={handleUpdateMapArea}
+        map={mapAreas}
+        width={500}
+      />}
+      
+    </Box>
   );
 }

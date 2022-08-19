@@ -18,7 +18,7 @@ const Offices = (prop) => {
     
    const options = mapData.reduce((filtered, option) => {
     if(prop.building === "unknown")
-        filtered.push(option.title)
+        filtered.push(option.title + " " +option.dep)
 
     if (option.building === prop.building) 
         filtered.push(option.title);
@@ -48,7 +48,8 @@ function MapPage() {
     },[value,title]);
     
     const getSampleObjectByBuilding = (value) => 
-        mapData.filter((e) => e.building === value && e.title === title)
+        mapData.filter((e) => e.title === title && e.building === value || e.title+ " " +e.dep === title)
+    
     
     return (
         <Box align="center" marginTop="1em">
