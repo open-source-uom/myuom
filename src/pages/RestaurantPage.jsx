@@ -11,7 +11,7 @@ import {
 } from "@chakra-ui/react";
 import Schedule from "../components/Schedule";
 import dinner from "../assets/dinner.png";
-import TodaysMeny from "./components/TodaysMenu";
+import TodaysMenu from "../components/TodaysMenu";
 
 export default function RestauranPage() {
   return (

@@ -989,7 +989,7 @@ const profData = [
   },
   {
     imgUrl: "https://www.uom.gr/site/images/personphoto-2.jpg",
-    fname: "Στάύρος",
+    fname: "Σταύρος",
     lname: "Σουραβλάς",
     department: "Εφαρμοσμένης Πληροφορικής",
     title: "Επίκουρος Καθηγητής",

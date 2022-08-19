@@ -8,6 +8,8 @@ import GraduationPage from "./pages/GraduationPage";
 import LibraryPage from "./pages/LibraryPage";
 import FirstYearInfoPage from "./pages/FirstYearInfoPage";
 import SchedulePage from "./pages/SchedulePage";
+import FAQSettingsPage from './pages/FAQSettingsPage';
+import AboutSettingsPage from './pages/AboutSetttingsPage';
 
 function App() {
   return (
@@ -21,8 +23,9 @@ function App() {
         <Route path="/librarypage" element={<LibraryPage />} />
         <Route path="/firstyearinfo" element={<FirstYearInfoPage />} />
         <Route path="/examschedule" element={<SchedulePage examsProp />} />
-        <Route path="/semesterschedule" element={<SchedulePage semesterProp />}
-        />
+        <Route path="/semesterschedule" element={<SchedulePage semesterProp />} />
+        <Route path="/faq" element={<FAQSettingsPage />} />
+        <Route path="/about" element={<AboutSettingsPage />} />
       </Route>
     </Routes>
   );
