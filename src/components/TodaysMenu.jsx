@@ -1,14 +1,7 @@
-import React, { useState } from "react";
-import {
-  Flex,
-  ListItem,
-  Text,
-  UnorderedList,
-  useColorModeValue,
-  chakra,
-} from "@chakra-ui/react";
+import React, { useEffect, useReducer } from "react";
+import { Flex, Text, useColorModeValue } from "@chakra-ui/react";
 import data from "../assets/DailyMenu.json";
-import { useEffect } from "react";
+
 import FoodMenuList from "../components/FoodMenuList";
 
 const CURRENTLY_LUNCH = "gevma";
@@ -16,19 +9,33 @@ const CURRENTLY_DINNER = "deipno";
 const CURRENTLY_NEXT_LUNCH = "gevma epomenhs";
 
 export default function TodaysMenu() {
-  const [isLunch, setIsLunch] = useState(true);
-  const [foodMenu, setFoodMenu] = useState(null);
-  const [isTomorrow, setIsTomorrow] = useState(false);
-  const lettersColor = useColorModeValue("white", "black");
+  const [state, dispatch] = useReducer(reducer, {});
+  function reducer(state, action) {
+    switch (action.type) {
+      case CURRENTLY_LUNCH: {
+        const temp = getTodaysRestaurantMenu(0, true);
+        return { isLunch: true, isTomorrow: false, foodMenu: temp };
+      }
+      case CURRENTLY_DINNER: {
+        const temp = getTodaysRestaurantMenu(0, false);
+        return { isLunch: false, isTomorrow: false, foodMenu: temp };
+      }
+      case CURRENTLY_NEXT_LUNCH: {
+        const temp = getTodaysRestaurantMenu(1, true);
+        return { isLunch: true, isTomorrow: true, foodMenu: temp };
+      }
+    }
+  }
 
   function getNextMeal(curr_date) {
+    console.log(curr_date);
     const now = curr_date;
     const dayNum = now.getDay();
     const isWeekDay = !(dayNum === 6 || dayNum === 0);
 
     const [endingLunchHour, endingLunchMinutes] = [
-      isWeekDay ? 16 : 15,
-      isWeekDay ? 0 : 30,
+      isWeekDay ? 15 : 15,
+      isWeekDay ? 30 : 30,
     ];
 
     const [endingDinnerHour, endingDinnerMinutes] = [20, 0];
@@ -61,28 +68,14 @@ export default function TodaysMenu() {
 
   function checkTimeSetNextMeal() {
     const menuToDisplay = getNextMeal(new Date());
-    let todayOrNextDay = 0;
-    if (menuToDisplay === CURRENTLY_LUNCH) {
-      setIsLunch(true);
-    } else if (menuToDisplay === CURRENTLY_DINNER) {
-      setIsLunch(false);
-    } else if (menuToDisplay === CURRENTLY_NEXT_LUNCH) {
-      //next day's lunch
-      setIsLunch(true);
-      todayOrNextDay = 1;
-    }
-    setIsTomorrow(todayOrNextDay);
-    setFoodMenu(getTodaysRestaurantMenu(todayOrNextDay));
+    dispatch({ type: menuToDisplay });
   }
 
   useEffect(() => {
     checkTimeSetNextMeal();
-    const interval = setInterval(checkTimeSetNextMeal, 30 * 1000);
-    console.log(interval);
-    return () => clearInterval(interval);
   }, []);
 
-  function getTodaysRestaurantMenu(offsetDays) {
+  function getTodaysRestaurantMenu(offsetDays, forLunch) {
     const days = [
       "ΚΥΡΙΑΚΗ",
       "ΔΕΥΤΕΡΑ",
@@ -93,15 +86,16 @@ export default function TodaysMenu() {
       "ΣΑΒΒΑΤΟ",
     ];
     const dayNum = new Date().getDay();
+
     //prettier-ignore
-    const dayName = days[dayNum + offsetDays % 7];
+    const dayName = days[(dayNum + offsetDays) % 7];
+    console.log(dayName);
     const todaysTotalMenu = data
       .filter((dayMenu) => {
         return dayMenu.day === dayName;
       })
       .pop();
-
-    if (isLunch) {
+    if (forLunch) {
       return {
         mainDish: todaysTotalMenu.gevmaKirios,
         specialDish: todaysTotalMenu.gevmaEidiko,
@@ -121,15 +115,15 @@ export default function TodaysMenu() {
   return (
     <Flex
       flexDirection={"column"}
-      color={lettersColor}
+      color={useColorModeValue("white", "black")}
       marginTop={"1rem"}
       marginLeft={"1rem"}
     >
       <Text fontWeight={"bold"} marginBottom="1rem">
-        {isTomorrow ? "Αυριανό" : "Σημερινό"} Μενού:
+        {state.isTomorrow ? "Αυριανό" : "Σημερινό"} Μενού:
       </Text>
-      <Text as="span">{isLunch ? "Γεύμα" : "Δείπνο"}:</Text>
-      {<FoodMenuList {...foodMenu} />}{" "}
+      <Text as="span">{state.isLunch ? "Γεύμα" : "Δείπνο"}:</Text>
+      {<FoodMenuList {...state.foodMenu} />}{" "}
     </Flex>
   );
 }
