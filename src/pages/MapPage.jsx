@@ -46,9 +46,10 @@ function MapPage() {
         const sampleObject = getSampleObjectByBuilding(value);
         setSampleObject(sampleObject)
     },[value,title]);
-    
+
     const getSampleObjectByBuilding = (value) => 
-        mapData.filter((e) => e.title === title && e.building === value || e.title+ " " +e.dep === title)
+        mapData.filter((e) => (e.title === title && e.building === value) || (e.title+ " " +e.dep === title && value === "unknown"))
+    
     
     
     return (
@@ -60,7 +61,7 @@ function MapPage() {
                     <Buildings/>
                 </Select >
                 <Select isDisabled={!value} onChange={handleTitle} defaultValue={"default"}>
-                <option hidden disabled value="default">Επιλέξτε ένα γραφείο</option>
+                <option hidden value="default">Επιλέξτε ένα γραφείο</option>
                     <Offices building={value}/> 
                     {/* Get {value} & do whatever you want with it */}
                     {/* Another option is to set the value to the object

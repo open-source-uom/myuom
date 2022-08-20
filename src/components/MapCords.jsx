@@ -1,21 +1,13 @@
 import React, { useState, useCallback, useEffect } from "react";
 import ImageMapper from "react-image-mapper";
 import {
-  Accordion,
-  AccordionButton,
-  AccordionItem,
-  AccordionPanel,
-  AccordionIcon,
   Box,
-  useDisclosure,
-  Collapse,
   Button,
   Text
 } from '@chakra-ui/react'
 
 export default function App({sampleObject}) {
-  //const [query, setQuery] = useState(1);
-  const [showMessage, setShowMessage] = useState(true);
+  const [showGroundFloorImg, setShowGroundFloorImg] = useState(true);
 
   const [mapAreas, setMapAreas] = useState({
     name: "my-map",
@@ -26,13 +18,15 @@ export default function App({sampleObject}) {
 
   const handleUpdateMapArea = useCallback(
     evt =>
-      updateMapArea(5, [sampleObject.x, sampleObject.y, 10]),
+      updateMapArea(5, [sampleObject.x, sampleObject.y, 5]),
     []
   );
 
-  /*useEffect(() => {
-    setQuery(Math.random());
-  }, [mapAreas]);*/
+  const handleUpdateElevatorMapArea = useCallback(
+    evt =>
+      updateMapArea(5, [sampleObject.elevatorx, sampleObject.elevatory,5]),
+    []
+  )
 
   const updateMapArea = (id, coords) => {
     const areas = mapAreas.areas.map(item =>
@@ -44,29 +38,36 @@ export default function App({sampleObject}) {
     });
   };
 
-  useEffect(() => {
-    setTimeout(function () {
-      setShowMessage(false);
-    }, 10000);
+  useEffect(() => {   
+      setShowGroundFloorImg(false);
   }, []);
 
   return (
     <Box>
-      {showMessage && <Button onClick={() => setShowMessage(!showMessage) } colorScheme='teal' variant='outline' margin="1rem">Δεν ξέρεις που είναι το κτήριο;</Button>}
-      {!showMessage && <Button onClick={() => setShowMessage(!showMessage) } colorScheme='teal' variant='outline' margin="1rem">Πισω</Button>}
-      {showMessage && <ImageMapper
-        src={sampleObject.imageURL}
-        onLoad={handleUpdateMapArea}
-        map={mapAreas}
-        width={500}
-      />}
-      {!showMessage && <ImageMapper
-        src={sampleObject.blackImage}
-        onLoad={handleUpdateMapArea}
-        map={mapAreas}
-        width={500}
-      />}
-      
+      {!showGroundFloorImg && <Box>
+                                <Button onClick={() => setShowGroundFloorImg(!showGroundFloorImg) } colorScheme='teal' variant='outline' margin="1rem">Δεν ξέρεις που είναι το κτήριο;</Button>
+                                <ImageMapper
+                                    src={sampleObject.imageURL}
+                                    onLoad={handleUpdateMapArea}
+                                    map={mapAreas}
+                                    width={350}
+                                    hight={350}
+                                />
+                              </Box>
+      }
+      {showGroundFloorImg && <Box>
+                                <Button onClick={() => setShowGroundFloorImg(!showGroundFloorImg) } colorScheme='teal' variant='outline' margin="1rem">Ξαναδές που είναι η αίθουσα</Button>
+                                <Text>Το κοντινότερο ασανσέρ σε σχέση με την αίθουσα είναι αυτό: </Text>
+                                <ImageMapper
+                                    src={sampleObject.groundFloor}
+                                    onLoad={handleUpdateElevatorMapArea}
+                                    map={mapAreas}
+                                    width={350}
+                                    hight={350}
+                                  /> 
+                                  <Text>Μπείτε σε αυτο το ασανσέρ και πηγαίνετε στον {sampleObject.floor}ο όροφο</Text>
+                              </Box>
+        }     
     </Box>
   );
 }
