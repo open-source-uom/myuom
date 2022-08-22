@@ -18,9 +18,15 @@ import {
   Text,
   Flex,
   Box,
-  useColorModeValue
+  useColorModeValue,
 } from "@chakra-ui/react";
-import { HamburgerIcon } from "@chakra-ui/icons";
+import {
+  FaQuestionCircle,
+  FaInfoCircle,
+  FaFileAlt,
+  FaShareAlt,
+  FaGitlab,
+} from "react-icons/fa";
 import { DepartmentContext } from "../contexts/departmentContext";
 import { DEPARTMENTS } from "../assets/DepNames";
 import { Link } from "react-router-dom";
@@ -34,6 +40,15 @@ export default function MenuButton() {
     e.preventDefault();
     let selectedDepartment = e.target.selectedOptions[0].label;
     changeDepartmentName(selectedDepartment);
+    onClose();
+  };
+
+  const handleShare = (e) => {
+    const shareOpts = {
+      title: "myUoM",
+      url: "https://gitlab.com/opensourceuom/myUoM/",
+    };
+    navigator.share(shareOpts);
   };
 
   return (
@@ -43,6 +58,7 @@ export default function MenuButton() {
         cursor="pointer"
         aria-label="Open Menu"
         onClick={onOpen}
+        fontFamily="Syne"
       >
         <svg
           width="100%"
@@ -66,6 +82,7 @@ export default function MenuButton() {
       </Box>
 
       <Drawer
+        fontFamily="Syne"
         placement={"right"}
         onClose={onClose}
         isOpen={isOpen}
@@ -76,17 +93,47 @@ export default function MenuButton() {
           <DrawerCloseButton />
 
           <DrawerHeader
+            color={useColorModeValue("#0050e0", "#f3f3f3")}
             backgroundColor={useColorModeValue("#f3f3f3", "black")}
             borderBottomWidth="1px"
+            fontFamily="Syne"
           >
             Settings
           </DrawerHeader>
-          <DrawerBody backgroundColor={useColorModeValue("#f3f3f3", "black")}>
-            <VStack spacing={10}>
+          <DrawerBody
+            backgroundColor={useColorModeValue("#f3f3f3", "black")}
+            fontFamily="Syne"
+          >
+            <Flex
+              direction="column"
+              fontFamily="Syne"
+              justifyItems={"center"}
+              color={useColorModeValue("#0050e0", "#f3f3f3")}
+              borderRadius="0.5rem"
+              my={"2rem"}
+            >
+              <Select
+                fontWeight={"bold"}
+                placeholder={depName ? depName : "Select Department"}
+                onChange={handleChange}
+              >
+                {DEPARTMENTS.filter((department) => department !== depName).map(
+                  (department) => (
+                    <option value={`${department}`} key={department}>
+                      {department}
+                    </option>
+                  )
+                )}
+              </Select>
+            </Flex>
+
+            <Box>
               <FormControl
                 display="flex"
                 alignItems="flex-start"
                 justifyContent={"space-between"}
+                color={useColorModeValue("#0050e0", "#f3f3f3")}
+                my={"2rem"}
               >
                 <FormLabel htmlFor="switch-color-mode" mb="0">
                   <Text as="span" fontWeight={"bold"}>
@@ -100,30 +147,92 @@ export default function MenuButton() {
                 />
               </FormControl>
 
-              <Flex direction="column">
-                <Select
-                  placeholder={depName ? depName : "Select Department"}
-                  size={["sm", "md", "lg"]}
-                  onChange={handleChange}
+              <Box
+                color={useColorModeValue("#0050e0", "#f3f3f3")}
+                alignItems="flex-start"
+                justifyContent={"space-between"}
+              >
+                <Link to="/faq">
+                  <Box display="flex" my={"1.5rem"}>
+                    <FaQuestionCircle size="1.5rem" />
+                    <Text
+                      as="span"
+                      fontWeight={"bold"}
+                      fontSize="xl"
+                      ml="0.5rem"
+                      onClick={onClose}
+                    >
+                      FAQ
+                    </Text>
+                  </Box>
+                </Link>
+                <Link to="/about">
+                  <Box display="flex" justifyContent={"start"} my={"1.5rem"}>
+                    <FaInfoCircle size="1.5rem" />
+                    <Text
+                      as="span"
+                      fontWeight={"bold"}
+                      fontSize="xl"
+                      ml="0.5rem"
+                      onClick={onClose}
+                    >
+                      About
+                    </Text>
+                  </Box>
+                </Link>
+                <a
+                  href="https://gitlab.com/opensourceuom/myUoM/-/issues/12"
+                  target="_blank"
                 >
-                  {DEPARTMENTS.filter(
-                    (department) => department !== depName
-                  ).map((department) => (
-                    <option value={`${department}`} key={department}>
-                      {department}
-                    </option>
-                  ))}
-                </Select>
-              </Flex>
-
-
-              <Link to='/FAQ'><Text fontSize={'4xl'}>FAQ</Text></Link>
-              <Link to='/ABOUT'><Text fontSize={'4xl'}>About</Text></Link>
-
-            </VStack>
+                  <Box display="flex" justifyContent={"start"} my={"1.5rem"}>
+                    <FaFileAlt size="1.5rem" />
+                    <Text
+                      as="span"
+                      fontWeight={"bold"}
+                      fontSize="xl"
+                      ml="0.5rem"
+                    >
+                      Licence
+                    </Text>
+                  </Box>
+                </a>
+                <Box display="flex" justifyContent={"start"} my={"1.5rem"}>
+                  <FaShareAlt size="1.5rem" />
+                  <Text
+                    as="span"
+                    className="share"
+                    onClick={handleShare}
+                    fontWeight={"bold"}
+                    fontSize="xl"
+                    ml="0.5rem"
+                  >
+                    Share the app
+                  </Text>
+                </Box>
+                <a
+                  href="https://gitlab.com/opensourceuom/myUoM"
+                  target="_blank"
+                >
+                  <Box display="flex" justifyContent={"start"} my={"1.5rem"}>
+                    <FaGitlab size="1.5rem" />
+                    <Text
+                      as="span"
+                      fontWeight={"bold"}
+                      fontSize="xl"
+                      ml="0.5rem"
+                    >
+                      Contribute to the project
+                    </Text>
+                  </Box>
+                </a>
+              </Box>
+            </Box>
           </DrawerBody>
 
-          <DrawerFooter backgroundColor={useColorModeValue("#f3f3f3", "black")}>
+          <DrawerFooter
+            backgroundColor={useColorModeValue("#f3f3f3", "black")}
+            color={useColorModeValue("#0050e0", "#f3f3f3")}
+          >
             <Text as={"sub"}> Made By &nbsp;</Text>
             <Text as={"i"} text={"bold"}>
               OpenSource UoM
