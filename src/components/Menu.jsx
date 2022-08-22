@@ -24,7 +24,7 @@ function Menu({ data }) {
     >
       <AccordionItem border="none" w="100%">
         <AccordionButton
-          display="flex"
+          // display="flex"
           direction="row"
           alignItems="center"
           justifyContent="start"
@@ -104,8 +104,8 @@ function Menu({ data }) {
                     w="100%"
                     display="flex"
                     direction="row"
-                    alignItems="center"
-                    justifyContent="start"
+                    alignItems="flex-start"
+                    justifyContent="center"
                     fontWeight="bold"
                     fontFamily="Syne"
                     fontSize={{ sm: 14, md: 16, lg: 18 }}

@@ -27,13 +27,15 @@ export default function RestauranPage() {
       >
         <TodaysMenu />
       </Box>
-      <Box textAlign={"center"}>
+      <Box
+        textAlign={"center"}
+        w={{ sm: "90%", md: "90%", lg: "80%", "2xl": "60%", "3xl": "50%" }}
+      >
         <Box align="center">
           <Text
             mr={"2rem"}
             mb="1rem"
-            // w="100%"
-            w={"90%"}
+            w="100%"
             display="flex"
             direction="row"
             justifyContent="end"
