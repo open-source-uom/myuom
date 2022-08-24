@@ -8,6 +8,7 @@ import {
 
 export default function App({sampleObject}) {
   const [showGroundFloorImg, setShowGroundFloorImg] = useState(true);
+  const [ButtonActivity, setButtonActivity] = useState(false);
 
   const [mapAreas, setMapAreas] = useState({
     name: "my-map",
@@ -40,12 +41,15 @@ export default function App({sampleObject}) {
 
   useEffect(() => {   
       setShowGroundFloorImg(false);
-  }, []);
+      if(sampleObject.floor === 0){
+        setButtonActivity(true);
+      }
+  }, []);  
 
   return (
     <Box>
       {!showGroundFloorImg && <Box>
-                                <Button onClick={() => setShowGroundFloorImg(!showGroundFloorImg) } colorScheme='teal' variant='outline' margin="1rem">Δεν ξέρεις που είναι το κτήριο;</Button>
+                                <Button onClick={() => setShowGroundFloorImg(!showGroundFloorImg) } disabled={ButtonActivity} colorScheme='teal' variant='outline' margin="1rem">Δεν ξέρεις που είναι το κτήριο;</Button>
                                 <ImageMapper
                                     src={sampleObject.imageURL}
                                     onLoad={handleUpdateMapArea}
@@ -65,7 +69,7 @@ export default function App({sampleObject}) {
                                     width={350}
                                     hight={350}
                                   /> 
-                                  <Text>Μπείτε σε αυτο το ασανσέρ και πηγαίνετε στον {sampleObject.floor}ο όροφο</Text>
+                                  <Text>Μπείτε σε αυτο το ασανσέρ και πηγαίνετε στον {sampleObject.floor} όροφο</Text>
                               </Box>
         }     
     </Box>
