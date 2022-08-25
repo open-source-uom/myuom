@@ -7,7 +7,7 @@ import { useEffect } from "react";
 /* Insert all buildings into an array and convert set to remove duplicates */
 // Possibly just add them to a set? Not sure about complexity
 const Buildings = () => {
-    const arr = mapData.map((info) => info.building)
+    const arr = mapData.map((info) => info.building+" "+info.dep)
     const options = [...new Set(arr)]
     return options.map((building) => <option value={building} key={building}>{building}</option>)
 }
@@ -17,10 +17,8 @@ const Buildings = () => {
 const Offices = (prop) => { 
     
    const options = mapData.reduce((filtered, option) => {
-    if(prop.building === "unknown")
-        filtered.push(option.title+" "+option.dep)
 
-    if (option.building === prop.building) 
+    if (option.building+" "+option.dep === prop.building) 
         filtered.push(option.title);
 
     return filtered
@@ -48,7 +46,7 @@ function MapPage() {
     },[value,title]);
 
     const getSampleObjectByBuilding = (value) => 
-        mapData.filter((data) => (data.title === title && data.building === value) || (data.title+ " " + data.dep === title && value === "unknown"))
+        mapData.filter((data) => (data.title === title && data.building+" "+data.dep === value))
     
     
     
@@ -57,7 +55,6 @@ function MapPage() {
             <Stack spacing={3}>
                 <Select onChange={handleChange} defaultValue={"default"}>
                 <option hidden disabled value="default">Επιλέξτε ένα κτήριο</option>
-                <option value="unknown">Άγνωστο κτήριο</option>
                     <Buildings/>
                 </Select >
                 <Select isDisabled={!value} onChange={handleTitle} defaultValue={"default"}>

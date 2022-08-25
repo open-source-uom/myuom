@@ -41,7 +41,7 @@ export default function App({sampleObject}) {
 
   useEffect(() => {   
       setShowGroundFloorImg(false);
-      if(sampleObject.floor === 0){
+      if(sampleObject.floor === "Ισόγειο"){
         setButtonActivity(true);
       }
   }, []);  
