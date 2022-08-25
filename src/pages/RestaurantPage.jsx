@@ -31,6 +31,9 @@ export default function RestauranPage() {
         textAlign={"center"}
         w={{ sm: "90%", md: "90%", lg: "80%", "2xl": "60%", "3xl": "50%" }}
       >
+        <Accordion allowToggle mt="1rem">
+          <Schedule />
+        </Accordion>
         <Box align="center">
           <Text
             mr={"2rem"}
