@@ -119,6 +119,20 @@ export const servicesData = [
     url: "https://www.uom.gr/student-support",
     category: "Υπόλοιπες",
     imgUrl:
-      "https://scontent-vie1-1.xx.fbcdn.net/v/t39.30808-6/243911191_4332951503469182_7675468211503498530_n.png?_nc_cat=105&ccb=1-7&_nc_sid=730e14&_nc_ohc=kfEkq6pU_AkAX-4YOh3&_nc_ht=scontent-vie1-1.xx&oh=00_AT9OXcwJcH6ifjKyBxP7yVzSMOD548bygy9J12ChMIRx5A&oe=62EB03CF",
+      "https://scontent.fskg1-2.fna.fbcdn.net/v/t39.30808-6/243911191_4332951503469182_7675468211503498530_n.png?_nc_cat=105&ccb=1-7&_nc_sid=730e14&_nc_ohc=uqUGCxFBDZYAX9KMLRU&_nc_ht=scontent.fskg1-2.fna&oh=00_AT-zDwUVJz8zuYvHH5g-Jrm1ModCtxGJOXbz7hNTKh_Agw&oe=630CA20F",
+  },
+  {
+    title: "Μονάδα Προσβασιμότητας ΠΑΜΑΚ",
+    url: "https://www.uom.gr/accessibility",
+    category: "Υπόλοιπες",
+    imgUrl:
+      "https://scontent.fskg1-2.fna.fbcdn.net/v/t1.6435-9/162199791_193459489248515_2795892316391728468_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=IluJohFv1-8AX9OpJ8G&_nc_ht=scontent.fskg1-2.fna&oh=00_AT8_DZhdnm_-2p642TAReo8lDCKoUQupcujQ0FhiBmKgRg&oe=632D228D",
+  },
+  {
+    title: "Εκδόσεις Πανεπιστημίου Μακεδονίας",
+    url: "https://www.uompress.gr/index.php/el/#",
+    category: "Υπόλοιπες",
+    imgUrl:
+      "https://www.uompress.gr/images/stories/logo_uom_v.png",
   },
 ];
