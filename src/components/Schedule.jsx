@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import {
   Box,
-  Accordion,
+  Grid,
   AccordionItem,
   AccordionButton,
   AccordionPanel,
   AccordionIcon,
   Text,
+  Flex,
   useColorModeValue,
 } from "@chakra-ui/react";
 
@@ -28,7 +29,7 @@ function Schedule() {
           <AccordionButton
             display="flex"
             direction="row"
-            alignItems="start"
+            alignItems="center"
             justifyContent="start"
             _hover={{ bg: "transparent" }}
             w="100%"
@@ -49,7 +50,7 @@ function Schedule() {
               justifyContent="start"
               fontWeight="bold"
               fontFamily="Syne"
-              fontSize={{ sm: 14, md: 16, lg: 18 }}
+              fontSize={{ sm: 16, md: 18, lg: 20 }}
               color={useColorModeValue("#f3f3f3", "black")}
             >
               Ωράριο
@@ -63,13 +64,27 @@ function Schedule() {
           justifyContent="start"
           fontFamily="Syne"
         >
-          <Text fontWeight="bold">Πρωινό:</Text>
-          <Text> 08:00-09:30</Text>
-          <Text fontWeight="bold">Μεσημεριανό</Text>
-          12:30-15:30<br></br>
-          13:00-15:30 (Σ/Κ και ΑΡΓΙΕΣ)
-          <Text fontWeight="bold">Βραδινό:</Text>
-          <Text> 18:00-20:00</Text>
+          <Grid
+            templateColumns="repeat(3, 1fr)"
+            justifyContent="start"
+            alignItems="start"
+          >
+            <Flex direction="column">
+              <Text fontWeight="bold">Πρωινό:</Text>
+              <Text> 08:00-09:30</Text>
+            </Flex>
+            <Flex direction="column">
+              <Text fontWeight="bold">Μεσημεριανό</Text>
+              <Text align="center">
+                12:30-15:30<br></br>
+                13:00-15:30 (Σ/Κ και ΑΡΓΙΕΣ)
+              </Text>
+            </Flex>
+            <Flex direction="column">
+              <Text fontWeight="bold">Βραδινό:</Text>
+              <Text> 18:00-20:00</Text>
+            </Flex>
+          </Grid>
         </AccordionPanel>
       </AccordionItem>
     </Box>
