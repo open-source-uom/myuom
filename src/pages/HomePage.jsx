@@ -28,10 +28,6 @@ export default function HomePage() {
       gap="3rem"
       px={{ sm: "1rem", md: "0px" }}
     >
-      <Search
-        categoriesList={Categories}
-        setCategoriesList={setCategoriesListForSearch}
-      />
       <Grid
         as={motion.section}
         initial="initial"
