@@ -53,7 +53,6 @@ export default function RestauranPage() {
           {data.map((data) => {
             return <Menu data={data} key={data.day} />;
           })}
-          <Schedule />
         </Accordion>
       </Box>
     </Flex>
