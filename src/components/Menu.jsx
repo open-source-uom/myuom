@@ -14,9 +14,7 @@ import {
 function Menu({ data }) {
   return (
     <Box
-      w={{ sm: "95%", md: "98%", lg: "99%" }}
       marginBottom="1rem"
-      ml={"0.5rem"}
       borderRadius="20"
       overflow="hidden"
       border="2px"

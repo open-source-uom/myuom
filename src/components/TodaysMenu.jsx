@@ -116,13 +116,19 @@ export default function TodaysMenu() {
     <Flex
       flexDirection={"column"}
       color={useColorModeValue("white", "black")}
-      marginTop={"1rem"}
-      marginLeft={"1rem"}
+      height="fit-content"
+      fontFamily="Syne"
     >
-      <Text fontWeight={"bold"} marginBottom="1rem">
+      <Text
+        fontWeight={"bold"}
+        marginBottom="1rem"
+        fontSize={{ sm: 18, md: 20, lg: 22 }}
+      >
         {state.isTomorrow ? "Αυριανό" : "Σημερινό"} Μενού:
       </Text>
-      <Text as="span">{state.isLunch ? "Γεύμα" : "Δείπνο"}:</Text>
+      <Text fontWeight="bold" fontSize={{ sm: 18, md: 20, lg: 22 }} as="span">
+        {state.isLunch ? "Γεύμα" : "Δείπνο"}:
+      </Text>
       {<FoodMenuList {...state.foodMenu} />}{" "}
     </Flex>
   );
