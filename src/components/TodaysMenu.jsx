@@ -122,7 +122,7 @@ export default function TodaysMenu() {
       <Text
         fontWeight={"bold"}
         marginBottom="1rem"
-        fontSize={{ sm: 18, md: 20, lg: 22 }}
+        fontSize={{ sm: 22, md: 24, lg: 26 }}
       >
         {state.isTomorrow ? "Αυριανό" : "Σημερινό"} Μενού:
       </Text>
