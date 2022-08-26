@@ -1,4 +1,5 @@
-import { VStack, Input } from "@chakra-ui/react";
+import { VStack, Input, InputLeftElement, InputGroup } from "@chakra-ui/react";
+import { SearchIcon } from "@chakra-ui/icons";
 import React, { useContext, useEffect, useState } from "react";
 import ProfComponent from "./ProfCard.jsx";
 import profData from "../assets/professors.js";
@@ -61,12 +62,21 @@ export default function ProfList() {
   return (
     <VStack>
       {/* <input type="text" onChange={onTextChangeHandler} /> */}
-      <Input
-        placeholder="Enter First Name, last Name or email"
-        size={"lg"}
-        variant="filled"
-        onChange={onTextChangeHandler}
-      />
+      <InputGroup w="100%" mb="1rem">
+        <InputLeftElement
+          pointerEvents="none"
+          children={<SearchIcon color="black" />}
+        />
+        <Input
+          color="black"
+          type="text"
+          placeholder="Εισάγετε Όνομα, Επίθετο η Email"
+          onChange={onTextChangeHandler}
+          borderRadius={"2rem"}
+          focusBorderColor="initial"
+          bg="white"
+        />
+      </InputGroup>
 
       {filteredProfArray.length ? (
         filteredProfArray.map((prof) => (
