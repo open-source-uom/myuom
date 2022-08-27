@@ -34,6 +34,8 @@ function MapPage() {
 
     const handleChange = (e) => {
       setValue(e.target.value);
+      setTitle("");
+      document.getElementById("title").value = "default"
     };
 
     const handleTitle = (e) => {
@@ -57,8 +59,8 @@ function MapPage() {
                 <option hidden disabled value="default">Επιλέξτε ένα κτήριο</option>
                     <Buildings/>
                 </Select >
-                <Select isDisabled={!value} onChange={handleTitle} defaultValue={"default"}>
-                <option hidden value="default">Επιλέξτε ένα γραφείο</option>
+                <Select isDisabled={!value} onChange={handleTitle} defaultValue={"default"} id="title">
+                <option hidden value="default" >Επιλέξτε ένα γραφείο</option>
                     <Offices building={value}/> 
                     {/* Get {value} & do whatever you want with it */}
                     {/* Another option is to set the value to the object
