@@ -98,7 +98,7 @@ export default function MenuButton() {
             borderBottomWidth="1px"
             fontFamily="Syne"
           >
-            Settings
+            Ρυθμίσεις
           </DrawerHeader>
           <DrawerBody
             backgroundColor={useColorModeValue("#f3f3f3", "black")}
@@ -114,7 +114,7 @@ export default function MenuButton() {
             >
               <Select
                 fontWeight={"bold"}
-                placeholder={depName ? depName : "Select Department"}
+                placeholder={depName ? depName : "Επιλέξτε τμήμα"}
                 onChange={handleChange}
               >
                 {DEPARTMENTS.filter((department) => department !== depName).map(
@@ -137,7 +137,7 @@ export default function MenuButton() {
               >
                 <FormLabel htmlFor="switch-color-mode" mb="0">
                   <Text as="span" fontWeight={"bold"}>
-                    Dark Mode
+                    Σκούρο θέμα
                   </Text>
                 </FormLabel>
                 <Switch
@@ -176,7 +176,7 @@ export default function MenuButton() {
                       ml="0.5rem"
                       onClick={onClose}
                     >
-                      About
+                      Σχετικά
                     </Text>
                   </Box>
                 </Link>
@@ -192,7 +192,7 @@ export default function MenuButton() {
                       fontSize="xl"
                       ml="0.5rem"
                     >
-                      Licence
+                      Άδεια χρήσης
                     </Text>
                   </Box>
                 </a>
@@ -206,7 +206,7 @@ export default function MenuButton() {
                     fontSize="xl"
                     ml="0.5rem"
                   >
-                    Share the app
+                    Κοινοποιήστε την εφαρμογή
                   </Text>
                 </Box>
                 <a
@@ -221,7 +221,7 @@ export default function MenuButton() {
                       fontSize="xl"
                       ml="0.5rem"
                     >
-                      Contribute to the project
+                      Συνεισφέρετε στο έργο μας
                     </Text>
                   </Box>
                 </a>
@@ -233,7 +233,7 @@ export default function MenuButton() {
             backgroundColor={useColorModeValue("#f3f3f3", "black")}
             color={useColorModeValue("#0050e0", "#f3f3f3")}
           >
-            <Text as={"sub"}> Made By &nbsp;</Text>
+            <Text as={"sub"}> Δημιουργήθηκε από την &nbsp;</Text>
             <Text as={"i"} text={"bold"}>
               OpenSource UoM
             </Text>
