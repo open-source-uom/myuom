@@ -18,25 +18,25 @@ export default function FoodMenuList({
     <UnorderedList mb="1rem">
       <ListItem>
         <Text as="span" noOfLines={[]}>
-          <chakra.u marginRight={"1rem"}>Κυρίως:</chakra.u>
+          <chakra.b marginRight={"1rem"}>Κυρίως:</chakra.b>
           {mainDish}
         </Text>
       </ListItem>
       <ListItem>
         <Text as="span">
-          <chakra.u marginRight={"1rem"}>Χορτοφαγικό:</chakra.u>
+          <chakra.b marginRight={"1rem"}>Χορτοφαγικό:</chakra.b>
           {specialDish}
         </Text>
       </ListItem>
       <ListItem>
         <Text as="span">
-          <chakra.u marginRight={"1rem"}>Σαλάτα:</chakra.u>
+          <chakra.b marginRight={"1rem"}>Σαλάτα:</chakra.b>
           {salad}
         </Text>
       </ListItem>
       <ListItem>
         <Text as="span">
-          <chakra.u marginRight={"1rem"}>Γλυκό:</chakra.u>
+          <chakra.b marginRight={"1rem"}>Γλυκό:</chakra.b>
           {dessert}
         </Text>
       </ListItem>

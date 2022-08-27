@@ -19,11 +19,9 @@ export default function RestauranPage() {
       <Box
         bg={useColorModeValue("#0050e0", "#f3f3f3")}
         w={{ sm: "90%", md: "90%", lg: "80%", "2xl": "60%", "3xl": "50%" }}
-        className="home-page-box"
         rounded="0.75rem"
-        h={"18rem"}
-        mx={"1rem"}
-        py={"0.5rem"}
+        px={"1rem"}
+        py={"1rem"}
       >
         <TodaysMenu />
       </Box>
@@ -36,12 +34,12 @@ export default function RestauranPage() {
         </Accordion>
         <Box align="center">
           <Text
-            mr={"2rem"}
+            mt="2rem"
             mb="1rem"
             w="100%"
             display="flex"
             direction="row"
-            justifyContent="end"
+            justifyContent="start"
             fontWeight="bold"
             fontFamily="Syne"
             fontSize={{ sm: 20, md: 24, lg: 26 }}

@@ -14,9 +14,7 @@ import {
 function Schedule() {
   return (
     <Box
-      w={{ sm: "95%", md: "98%", lg: "99%" }}
       marginBottom="1rem"
-      ml={"0.5rem"}
       borderRadius="20"
       overflow="hidden"
       border="2px"
@@ -65,7 +63,7 @@ function Schedule() {
           fontFamily="Syne"
         >
           <Grid
-            templateColumns="repeat(3, 1fr)"
+            templateColumns={{ sm: "repeat(1, 1fr)", lg: "repeat(3, 1fr)" }}
             justifyContent="start"
             alignItems="start"
           >
