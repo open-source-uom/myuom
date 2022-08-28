@@ -46,13 +46,13 @@ export default function MenuBox({ category }) {
   }, []);
 
   const handleSelection = () => {
-    const id = '1';
+    const id = "1";
     if (requireSelection && !depName) {
-        if (!toast.isActive(id)) {
+      if (!toast.isActive(id)) {
         toast({
           id,
-          title: "Department Not Selected",
-          description: "Please Select a Department From The Settings",
+          title: "Δεν έχει επιλεγεί τμήμα",
+          description: "Παρακαλώ επιλέξτε τμήμα από τις ρυθμίσεις",
           status: "error",
           duration: 5000,
           isClosable: true,
