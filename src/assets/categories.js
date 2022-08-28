@@ -199,7 +199,7 @@ export const Categories = [
     requireSelection: true,
   },
   {
-    title: "Ακαδημαικό Προσωπικό",
+    title: "Ακαδημαϊκό Προσωπικό",
     iconSVG: (
       <svg
         className="fill-svg"
