@@ -1,4 +1,4 @@
-import { Box, Select, Stack } from "@chakra-ui/react";
+import { Box, Button, Select, Stack } from "@chakra-ui/react";
 import { useState } from 'react';
 import { mapData } from '../assets/mapData.js'
 import MapCords from '../components/MapCords'
@@ -70,7 +70,16 @@ function MapPage() {
             {sampleObject.map((sampleObject) => (
                 <MapCords sampleObject={sampleObject} key={sampleObject.title} />
              ))}
-            
+            <Button
+              colorScheme='teal' 
+              variant='outline' 
+              margin="1rem"
+              onClick={(e) => {
+                window.open("https://www.uom.gr/about/eikonikh-perihghsh-360-sup-o-sup-sto-panepisthmio-makedonias");
+              }}
+            >
+              Εικονική Περιήγηση 360ο
+            </Button>
             
             
         </Box>

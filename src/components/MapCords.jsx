@@ -55,7 +55,6 @@ export default function App({sampleObject}) {
                                     onLoad={handleUpdateMapArea}
                                     map={mapAreas}
                                     width={350}
-                                    hight={350}
                                 />
                               </Box>
       }
@@ -67,11 +66,11 @@ export default function App({sampleObject}) {
                                     onLoad={handleUpdateElevatorMapArea}
                                     map={mapAreas}
                                     width={350}
-                                    hight={350}
                                   /> 
                                   <Text>Μπείτε σε αυτο το ασανσέρ και πηγαίνετε στον {sampleObject.floor} όροφο</Text>
                               </Box>
-        }     
+        } 
+        <Text color="red" fontSize="md">Σε περίπτωση που δεν βλέπεται την αίθουσα μπορείτε να κάνετε zoom</Text>    
     </Box>
   );
 }
