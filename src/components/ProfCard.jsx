@@ -44,7 +44,7 @@ export default function ProfCard({ prof }) {
             w="100%"
             h="100%"
             outline="none"
-            textAlign="center"
+            textAlign="left"
             bgColor="transparent"
             color={useColorModeValue("black", "white")}
             fontFamily="Syne"
