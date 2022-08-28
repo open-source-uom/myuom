@@ -68,9 +68,10 @@ export default function ProfList() {
           children={<SearchIcon color="black" />}
         />
         <Input
+          fontFamily="Syne"
           color="black"
           type="text"
-          placeholder="Εισάγετε Όνομα, Επίθετο η Email"
+          placeholder="Εισάγετε όνομα, επίθετο ή email"
           onChange={onTextChangeHandler}
           borderRadius={"2rem"}
           focusBorderColor="initial"
