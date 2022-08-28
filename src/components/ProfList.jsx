@@ -2,7 +2,9 @@ import { VStack, Input, InputLeftElement, InputGroup } from "@chakra-ui/react";
 import { SearchIcon } from "@chakra-ui/icons";
 import React, { useContext, useEffect, useState } from "react";
 import ProfComponent from "./ProfCard.jsx";
+import SecrCard from "./SecrCard.jsx";
 import profData from "../assets/professors.js";
+import secrData from "../assets/secretaries.js";
 import { DepartmentContext } from "../contexts/departmentContext";
 
 export default function ProfList() {
@@ -10,6 +12,7 @@ export default function ProfList() {
   const [profArray, setProfArray] = useState([]);
   const [filteredProfArray, setFilteredProfArray] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
+  const [secretary, setSecretary] = useState([]);
 
   useEffect(() => {
     const professorList = getProfessorsByDepartment(depName);
@@ -21,6 +24,11 @@ export default function ProfList() {
     setProfArray(professorList);
     setFilteredProfArray(professorList);
   }, []);
+
+  useEffect(() => {
+    const specificSecretary = getSecretaryFromDepartment(depName);
+    setSecretary(specificSecretary);
+  }, [depName]);
 
   useEffect(() => {
     if (searchTerm) {
@@ -59,9 +67,13 @@ export default function ProfList() {
     setSearchTerm(e.target.value);
   };
 
+  const getSecretaryFromDepartment = (depName) =>
+    secrData.find((data) => data.name === depName);
+
   return (
     <VStack>
       {/* <input type="text" onChange={onTextChangeHandler} /> */}
+      <SecrCard data={secretary} key={secretary.tel} />
       <InputGroup w="100%" mb="1rem">
         <InputLeftElement
           pointerEvents="none"
