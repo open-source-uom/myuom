@@ -175,14 +175,14 @@ export default function LibraryPage() {
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth={1.5}
-                stroke="#f3f3f3"
+                stroke={useColorModeValue("#0050e0", "#f3f3f3")}
               />
               <path
                 d="M0.873535 1H8.91951V9"
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth={1.5}
-                stroke="#f3f3f3"
+                stroke={useColorModeValue("#0050e0", "#f3f3f3")}
               />
             </svg>
           </Box>
