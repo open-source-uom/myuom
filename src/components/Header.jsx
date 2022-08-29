@@ -66,7 +66,7 @@ export default function Header() {
               {loc.pathname !== "/" ? (
                 <Box
                   cursor="pointer"
-                  onClick={() => navigate(-1)}
+                  onClick={goToHomePage}
                   w={{ sm: "20px", lg: "20px", xl: "24px" }}
                 >
                   <svg
@@ -109,7 +109,7 @@ export default function Header() {
             {loc.pathname !== "/" ? (
               <Box
                 cursor="pointer"
-                onClick={() => navigate(-1)}
+                onClick={goToHomePage}
                 w={{ sm: "20px", lg: "20px", xl: "24px" }}
                 display={{ sm: "none", lg: "block" }}
               >

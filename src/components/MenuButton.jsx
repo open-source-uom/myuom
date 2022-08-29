@@ -96,6 +96,7 @@ export default function MenuButton() {
             color={useColorModeValue("#0050e0", "#f3f3f3")}
             backgroundColor={useColorModeValue("#f3f3f3", "black")}
             borderBottomWidth="1px"
+            my="-0.5rem"
             fontFamily="Syne"
           >
             Ρυθμίσεις
@@ -153,35 +154,38 @@ export default function MenuButton() {
                 justifyContent={"space-between"}
               >
                 <Link to="/faq">
-                  <Box display="flex" my={"1.5rem"}>
+                  <Box display="flex" my={"1.5rem"} onClick={onClose}>
                     <FaQuestionCircle size="1.5rem" />
                     <Text
                       as="span"
                       fontWeight={"bold"}
                       fontSize="xl"
                       ml="0.5rem"
-                      onClick={onClose}
                     >
                       FAQ
                     </Text>
                   </Box>
                 </Link>
                 <Link to="/about">
-                  <Box display="flex" justifyContent={"start"} my={"1.5rem"}>
+                  <Box
+                    display="flex"
+                    justifyContent={"start"}
+                    my={"1.5rem"}
+                    onClick={onClose}
+                  >
                     <FaInfoCircle size="1.5rem" />
                     <Text
                       as="span"
                       fontWeight={"bold"}
                       fontSize="xl"
                       ml="0.5rem"
-                      onClick={onClose}
                     >
                       Σχετικά
                     </Text>
                   </Box>
                 </Link>
                 <a
-                  href="https://gitlab.com/opensourceuom/myUoM/-/issues/12"
+                  href="https://gitlab.com/opensourceuom/myUoM/-/blob/main/LICENSE"
                   target="_blank"
                 >
                   <Box display="flex" justifyContent={"start"} my={"1.5rem"}>
@@ -196,12 +200,17 @@ export default function MenuButton() {
                     </Text>
                   </Box>
                 </a>
-                <Box display="flex" justifyContent={"start"} my={"1.5rem"}>
+                <Box
+                  display="flex"
+                  justifyContent={"start"}
+                  my={"1.5rem"}
+                  cursor="pointer"
+                  onClick={handleShare}
+                >
                   <FaShareAlt size="1.5rem" />
                   <Text
                     as="span"
                     className="share"
-                    onClick={handleShare}
                     fontWeight={"bold"}
                     fontSize="xl"
                     ml="0.5rem"
