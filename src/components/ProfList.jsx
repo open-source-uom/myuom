@@ -1,4 +1,10 @@
-import { VStack, Input, InputLeftElement, InputGroup } from "@chakra-ui/react";
+import {
+  VStack,
+  Input,
+  InputLeftElement,
+  InputGroup,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import { SearchIcon } from "@chakra-ui/icons";
 import React, { useContext, useEffect, useState } from "react";
 import ProfComponent from "./ProfCard.jsx";
@@ -77,17 +83,18 @@ export default function ProfList() {
       <InputGroup w="100%" mb="1rem">
         <InputLeftElement
           pointerEvents="none"
-          children={<SearchIcon color="black" />}
+          children={
+            <SearchIcon color={useColorModeValue("black", "#f3f3f3")} />
+          }
         />
         <Input
           fontFamily="Syne"
-          color="black"
           type="text"
           placeholder="Εισάγετε όνομα, επίθετο ή email"
           onChange={onTextChangeHandler}
           borderRadius={"2rem"}
           focusBorderColor="initial"
-          bg="white"
+          color={useColorModeValue("black", "#f3f3f3")}
         />
       </InputGroup>
 
