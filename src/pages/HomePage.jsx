@@ -24,7 +24,7 @@ export default function HomePage() {
       justify="start"
       w="100%"
       h="100%"
-      pt="3rem"
+      pt="1rem"
       gap="3rem"
       px={{ sm: "1rem", md: "0px" }}
     >
