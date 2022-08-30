@@ -22,7 +22,7 @@ export const Categories = [
     requireSelection: true,
   },
   {
-    title: "Open Eclass",
+    title: "Open eClass",
     iconSVG: (
       <svg
         width="150%"
