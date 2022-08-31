@@ -1,4 +1,4 @@
-import React from "react";
+import { StrictMode } from "react";
 import { ChakraProvider } from "@chakra-ui/react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
@@ -10,7 +10,7 @@ import { DepartmentProvider } from "./contexts/departmentContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
+  <StrictMode>
     <BrowserRouter>
       <DepartmentProvider>
         <ChakraProvider theme={theme}>
@@ -18,7 +18,7 @@ root.render(
         </ChakraProvider>
       </DepartmentProvider>
     </BrowserRouter>
-  </React.StrictMode>
+  </StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Categories } from "../assets/categories";
 import MenuBox from "../components/MenuBox";
 import { Flex, Grid, Heading } from "@chakra-ui/react";

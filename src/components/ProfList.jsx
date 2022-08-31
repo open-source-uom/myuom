@@ -6,7 +6,7 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import { SearchIcon } from "@chakra-ui/icons";
-import React, { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import ProfComponent from "./ProfCard.jsx";
 import SecrCard from "./SecrCard.jsx";
 import profData from "../assets/professors.js";

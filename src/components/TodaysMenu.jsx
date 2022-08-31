@@ -1,4 +1,4 @@
-import React, { useEffect, useReducer } from "react";
+import { useEffect, useReducer } from "react";
 import { Flex, Text, useColorModeValue } from "@chakra-ui/react";
 import data from "../assets/DailyMenu.json";
 

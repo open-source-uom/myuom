@@ -1,4 +1,3 @@
-import { React } from "react";
 import { Accordion, Flex } from "@chakra-ui/react";
 import ProfList from "../components/ProfList";
 
