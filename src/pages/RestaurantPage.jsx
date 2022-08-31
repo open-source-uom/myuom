@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Menu from "../components/Menu";
 import data from "../assets/DailyMenu.json";
 import {
