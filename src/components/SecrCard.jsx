@@ -22,7 +22,7 @@ import {
 } from "@chakra-ui/react";
 // import { EmailIcon } from "@chakra-ui/icons";
 
-export default function ProfCard({ prof }) {
+export default function SecrCard({ data }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <Box
@@ -31,6 +31,7 @@ export default function ProfCard({ prof }) {
       overflow="hidden"
       border="2px"
       borderColor={useColorModeValue("#0050e0", "#f3f3f3")}
+      mb="1rem"
     >
       <AccordionItem border="none" w="100%">
         <Flex>
@@ -52,12 +53,6 @@ export default function ProfCard({ prof }) {
             overflow="hidden"
             gap={3}
           >
-            <Image
-              src={prof.imgUrl}
-              width="60px"
-              height="60px"
-              borderRadius="full"
-            />
             <Text
               w="100%"
               display="flex"
@@ -67,7 +62,7 @@ export default function ProfCard({ prof }) {
               fontWeight="bold"
               fontSize={{ sm: 14, md: 16, lg: 18 }}
             >
-              {prof.fname} {prof.lname}
+              Γραμματεία: {data.name}
             </Text>
             <AccordionIcon />
           </AccordionButton>
@@ -75,55 +70,16 @@ export default function ProfCard({ prof }) {
         <AccordionPanel bgColor="transparent" pb={5} textAlign="center">
           <Flex direction="column" alignItems="start" fontFamily="Syne">
             <Text as="span" fontWeight="bold">
-              Τίτλος:&nbsp;
-              <Text fontWeight="normal" as="span">
-                {prof.title}
-              </Text>
-            </Text>
-
-            <Text as="span" fontWeight="bold">
               Τηλέφωνο:&nbsp;
               <Text fontWeight="normal" as="span">
-                {prof.tel}
+                {data.tel}
               </Text>
             </Text>
 
             <Text as="span" fontWeight="bold">
               Email:&nbsp;
               <Text fontWeight="normal" as="span">
-                {prof.email}
-              </Text>
-            </Text>
-
-            <Text
-              onClick={onOpen}
-              fontWeight="bold"
-              _hover={{ cursor: "pointer" }}
-              as="span"
-            >
-              <u>Κτήριο</u>:&nbsp;
-              <Text fontWeight="normal" as="span">
-                {prof.building}
-              </Text>
-            </Text>
-            <Modal isOpen={isOpen} onClose={onClose} size={"xl"}>
-              <ModalOverlay backdropFilter="blur(10px)" />
-              <ModalContent
-                bgColor={useColorModeValue("#f3f3f3", "black")}
-                width={{ md: "500px", base: "300px" }}
-                height={{ md: "500px", base: "300px" }}
-              >
-                <ModalHeader>Μπροστινή όψη Πανεπιστημίου</ModalHeader>
-                <ModalCloseButton />
-                <ModalBody>
-                  <Image src="https://www.uom.gr/site/images/katopseis/exot_mprostini.jpg" />
-                </ModalBody>
-              </ModalContent>
-            </Modal>
-            <Text as="span" fontWeight="bold">
-              Γραφείο:&nbsp;
-              <Text fontWeight="normal" as="span">
-                {prof.office}
+                {data.email}
               </Text>
             </Text>
             <Flex
@@ -136,14 +92,10 @@ export default function ProfCard({ prof }) {
               fontFamily="Syne"
               fontSize={{ sm: 16, md: 18, lg: 20 }}
               onClick={(e) => {
-                window.open(
-                  `https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=${prof.email}`
-                );
+                window.open(data.link);
               }}
             >
-              <span>
-                Επικοινωνήστε με <br /> τον/την καθηγητή/τρια
-              </span>
+              <span>Επισκεφτείτε την ιστοσελίδα της γραμματείας</span>
               <Box w={{ sm: "16px", lg: "18px" }}>
                 <svg
                   className="stroke-svg home-svg"

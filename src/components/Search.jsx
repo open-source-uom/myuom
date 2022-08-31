@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { SearchIcon } from "@chakra-ui/icons";
 import { Input, InputGroup, InputLeftElement } from "@chakra-ui/react";
 import { useEffect } from "react";
@@ -21,7 +21,6 @@ export default function Search({ setCategoriesList, categoriesList }) {
   }, [searchField]);
 
   useEffect(() => {
-    console.log(searchField);
     setTimeout(() => {
       if (searchField.length !== 0) {
         document.querySelectorAll(".menu-box").forEach((box) => {

@@ -8,7 +8,6 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
-import { React, useNavigate } from "react";
 import UoMLogo from "../assets/myUOMLogo.png";
 import { SocialIcon } from "react-social-icons";
 
@@ -20,7 +19,7 @@ function AboutSettingsPage() {
       fontFamily="Syne"
       fontSize={{ sm: 11.95, md: 16, lg: 26, xl: 32 }}
     >
-      <Image src={UoMLogo} width="200px" height="200px" borderRadius="full" />
+      <Image src={UoMLogo} width="200px" height="200px" />
       <Text marginTop="1em" fontSize={{ sm: 26, md: 30, lg: 34, xl: 38 }}>
         myUoM για κινητά
         <br />

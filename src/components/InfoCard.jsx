@@ -1,5 +1,4 @@
-import React from "react";
-
+import { forwardRef } from "react";
 import {
   Tabs,
   ListItem,
@@ -17,7 +16,7 @@ import {
 } from "@chakra-ui/react";
 
 export default function InfoCard({ data }) {
-  const CustomTab = React.forwardRef((props, ref) => {
+  const CustomTab = forwardRef((props, ref) => {
     const tabProps = useTab({ ...props, ref });
     const isSelected = !!tabProps["aria-selected"]; // Use if you need styling on the selected tab - eg. Make the background red if the tab is selected
     const icon = tabProps["icon"]; // 2. Access icon prop from the tab prop

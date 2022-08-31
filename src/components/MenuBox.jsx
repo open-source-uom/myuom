@@ -1,4 +1,4 @@
-import React from "react";
+import { useContext, useEffect } from "react";
 import {
   Box,
   useColorModeValue,
@@ -31,7 +31,7 @@ const rotateIn = {
 export default function MenuBox({ category }) {
   const { title, iconSVG, route, span, isExternal, requireSelection } =
     category;
-  const { depName } = React.useContext(DepartmentContext);
+  const { depName } = useContext(DepartmentContext);
   const toast = useToast();
   let condition = requireSelection && !DEPARTMENTS.includes(depName);
 
@@ -41,7 +41,7 @@ export default function MenuBox({ category }) {
     isExternal ? window.open(route) : navigate(route);
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
     // if (requireSelection) console.log(title);
   }, []);
 

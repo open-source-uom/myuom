@@ -20,8 +20,6 @@ export default function Header() {
   const [currentName, setCurrentName] = useState(RouteDictionary(loc.pathname));
   useEffect(() => {
     setCurrentName(RouteDictionary(`${loc.pathname}`));
-    console.log(loc.pathname);
-    console.log(RouteDictionary(`${loc.pathname}`));
   }, [loc]);
 
   const goToHomePage = () => {
@@ -66,7 +64,7 @@ export default function Header() {
               {loc.pathname !== "/" ? (
                 <Box
                   cursor="pointer"
-                  onClick={() => navigate(-1)}
+                  onClick={goToHomePage}
                   w={{ sm: "20px", lg: "20px", xl: "24px" }}
                 >
                   <svg
@@ -109,7 +107,7 @@ export default function Header() {
             {loc.pathname !== "/" ? (
               <Box
                 cursor="pointer"
-                onClick={() => navigate(-1)}
+                onClick={goToHomePage}
                 w={{ sm: "20px", lg: "20px", xl: "24px" }}
                 display={{ sm: "none", lg: "block" }}
               >

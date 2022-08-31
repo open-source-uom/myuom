@@ -1,4 +1,4 @@
-import React, { useEffect, useReducer } from "react";
+import { useEffect, useReducer } from "react";
 import { Flex, Text, useColorModeValue } from "@chakra-ui/react";
 import data from "../assets/DailyMenu.json";
 
@@ -28,7 +28,6 @@ export default function TodaysMenu() {
   }
 
   function getNextMeal(curr_date) {
-    console.log(curr_date);
     const now = curr_date;
     const dayNum = now.getDay();
     const isWeekDay = !(dayNum === 6 || dayNum === 0);
@@ -89,7 +88,6 @@ export default function TodaysMenu() {
 
     //prettier-ignore
     const dayName = days[(dayNum + offsetDays) % 7];
-    console.log(dayName);
     const todaysTotalMenu = data
       .filter((dayMenu) => {
         return dayMenu.day === dayName;
