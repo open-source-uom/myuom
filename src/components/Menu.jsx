@@ -63,7 +63,9 @@ function Menu({ data }) {
               border="2px"
               borderColor={useColorModeValue("#0050e0", "#f3f3f3")}
             >
-              <AccordionItem>
+              <AccordionItem
+                border="none"
+              >
                 <AccordionButton
                   display="flex"
                   direction="row"
@@ -129,7 +131,9 @@ function Menu({ data }) {
               border="2px"
               borderColor={useColorModeValue("#0050e0", "#f3f3f3")}
             >
-              <AccordionItem>
+              <AccordionItem
+                border="none"
+              >
                 <AccordionButton
                   display="flex"
                   direction="row"
