@@ -20,8 +20,6 @@ export default function Header() {
   const [currentName, setCurrentName] = useState(RouteDictionary(loc.pathname));
   useEffect(() => {
     setCurrentName(RouteDictionary(`${loc.pathname}`));
-    console.log(loc.pathname);
-    console.log(RouteDictionary(`${loc.pathname}`));
   }, [loc]);
 
   const goToHomePage = () => {
