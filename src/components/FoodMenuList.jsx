@@ -13,7 +13,6 @@ export default function FoodMenuList({
   salad,
   dessert,
 }) {
-  console.log(mainDish, specialDish, salad, dessert);
   return (
     <UnorderedList mb="1rem">
       <ListItem>

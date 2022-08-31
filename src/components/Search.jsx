@@ -21,7 +21,6 @@ export default function Search({ setCategoriesList, categoriesList }) {
   }, [searchField]);
 
   useEffect(() => {
-    console.log(searchField);
     setTimeout(() => {
       if (searchField.length !== 0) {
         document.querySelectorAll(".menu-box").forEach((box) => {
