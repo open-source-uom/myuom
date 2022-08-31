@@ -162,7 +162,7 @@ export default function MenuButton() {
                       fontSize="xl"
                       ml="0.5rem"
                     >
-                      FAQ
+                      Συχνές ερωτήσεις
                     </Text>
                   </Box>
                 </Link>
