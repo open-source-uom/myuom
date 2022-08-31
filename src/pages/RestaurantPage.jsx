@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Menu from "../components/Menu";
 import data from "../assets/DailyMenu.json";
 import {
@@ -13,6 +14,9 @@ import dinner from "../assets/dinner.png";
 import TodaysMenu from "../components/TodaysMenu";
 
 export default function RestauranPage() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <Flex direction="column" align="center">
       <Box
