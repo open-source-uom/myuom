@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react'
+import { useContext, useEffect } from 'react'
 import { DepartmentContext } from '../contexts/departmentContext'
 import { GradData } from '../assets/Graduation'
 import { Heading, Box, useToast } from "@chakra-ui/react";
