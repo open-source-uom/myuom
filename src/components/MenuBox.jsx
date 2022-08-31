@@ -38,7 +38,11 @@ export default function MenuBox({ category }) {
   const navigate = useNavigate();
 
   const handleNavigation = () => {
-    isExternal ? window.open(route) : navigate(route);
+    isExternal
+      ? requireSelection
+        ? window.location.replace(route, "_blank")
+        : window.open(route, "_blank")
+      : navigate(route);
   };
 
   useEffect(() => {
