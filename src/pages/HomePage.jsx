@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState, useEffect } from "react";
 import { Categories } from "../assets/categories";
 import MenuBox from "../components/MenuBox";
 import { Flex, Grid, Heading } from "@chakra-ui/react";
@@ -17,6 +17,10 @@ const stagger = {
 export default function HomePage() {
   const [categoriesListForSearch, setCategoriesListForSearch] =
     useState(Categories);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <Flex
       direction="column"

@@ -40,6 +40,10 @@ export default function ServicesPage() {
     setRestServicesArray(restServicesList);
   }, []);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <Box>
       <Tabs
