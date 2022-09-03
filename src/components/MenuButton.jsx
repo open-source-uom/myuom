@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import {
   Drawer,
   DrawerBody,
@@ -42,6 +42,7 @@ export default function MenuButton() {
   const { colorMode, toggleColorMode } = useColorMode();
   const { depName, changeDepartmentName } = useContext(DepartmentContext);
 
+
   const handleChange = (e) => {
     e.preventDefault();
     let selectedDepartment = e.target.selectedOptions[0].label;
@@ -57,13 +58,24 @@ export default function MenuButton() {
     navigator.share(shareOpts);
   };
 
+  useEffect(()=> {
+    window.addEventListener('popstate', () => {
+      onClose();
+    }) 
+  },[])
+
+  const handleClick = () => {
+    window.history.pushState(null,'','/')
+    onOpen();
+  }
+
   return (
     <>
       <Box
         w={{ sm: "30px", lg: "40px" }}
         cursor="pointer"
         aria-label="Open Menu"
-        onClick={onOpen}
+        onClick={handleClick}
         fontFamily="Syne"
       >
         <svg
