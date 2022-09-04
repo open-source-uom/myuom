@@ -136,9 +136,7 @@ export default function ProfCard({ prof }) {
               fontFamily="Syne"
               fontSize={{ sm: 16, md: 18, lg: 20 }}
               onClick={(e) => {
-                window.open(
-                  `https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=${prof.email}`
-                );
+                window.open(`mailto:${prof.email}`);
               }}
             >
               <span>
