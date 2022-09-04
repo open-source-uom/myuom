@@ -25,7 +25,7 @@ const profData = [
   {
     imgUrl: "https://www.uom.gr/site/images/personphoto-2.jpg",
     fname: "Κωνσταντίνος",
-    lname: "Βελέτζας",
+    lname: "Βελέντζας",
     department: "Οικονομικών Επιστημών",
     title: "Καθηγητής",
     tel: "2310 891.783",
@@ -186,7 +186,7 @@ const profData = [
   {
     imgUrl: "https://www.uom.gr/site/images/personphoto-2.jpg",
     fname: "Μαρία",
-    lname: "Αλιμπράντη",
+    lname: "Αλιπράντη",
     department: "Οικονομικών Επιστημών",
     title: "Επίκουρη Καθηγήτρια",
     tel: "2310 891.755",
@@ -196,7 +196,7 @@ const profData = [
   },
   {
     imgUrl: "https://www.uom.gr/assets/site/public/nodes/8623/8100-PHOTO-2.png",
-    fname: "Αναστασια",
+    fname: "Αναστασία",
     lname: "Λίτινα",
     department: "Οικονομικών Επιστημών",
     title: "Επίκουρη Καθηγήτρια",
@@ -300,8 +300,8 @@ const profData = [
   },
   {
     imgUrl: "https://www.uom.gr/site/images/personphoto-2.jpg",
-    fname: "Κυρικάκος",
-    lname: "Κεντρώτης",
+    fname: "Κυριάκος",
+    lname: "Κεντρωτής",
     department: "Βαλκανικών, Σλαβικών & Ανατολικών Σπουδών",
     title: "Καθηγητής",
     tel: "2310 891.797",
@@ -612,7 +612,7 @@ const profData = [
   },
   {
     imgUrl: "https://www.uom.gr/assets/site/public/nodes/1525/1173-achat-2.jpg",
-    fname: "Αλέξανδρος ",
+    fname: "Αλέξανδρος",
     lname: "Χατζηγεωργίου",
     department: "Εφαρμοσμένης Πληροφορικής",
     title: "Κοσμήτορας",
@@ -775,7 +775,7 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1532/4825-Hristou-Varsakelis_ed-2.jpg",
-    fname: "Δημήτρης",
+    fname: "Δημήτριος",
     lname: "Χρήστου-Βαρσακέλης",
     department: "Εφαρμοσμένης Πληροφορικής",
     title: "Καθηγητής",
@@ -810,7 +810,7 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1529/1194-kaskalis-2.jpg",
-    fname: "Θεώδορος",
+    fname: "Θεόδωρος",
     lname: "Κασκάλης",
     department: "Εφαρμοσμένης Πληροφορικής",
     title: "Αναπληρωτής Καθηγητής",
@@ -943,7 +943,7 @@ const profData = [
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1547/1184-gkoloniari-2.jpg",
     fname: "Γεωργία",
-    lname: "Κολωνίαρη",
+    lname: "Κολωνιάρη",
     department: "Εφαρμοσμένης Πληροφορικής",
     title: "Επίκουρη Καθηγήτρια",
     tel: "2310 891.887",
@@ -1095,7 +1095,7 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1625/3994-DimitrisMihail-2.jpg",
-    fname: "Δημήτρης",
+    fname: "Δημήτριος",
     lname: "Μιχαήλ",
     department: "Οργάνωσης & Διοίκησης Επιχειρήσεων",
     title: "Καθηγητής",
@@ -1119,7 +1119,7 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1627/4641-Soumpeniotis_ed-2.jpg",
-    fname: "Δημήτρης",
+    fname: "Δημήτριος",
     lname: "Σουμπενιώτης",
     department: "Οργάνωσης & Διοίκησης Επιχειρήσεων",
     title: "Καθηγητής",
@@ -1202,7 +1202,7 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1639/3908-PapathanasiouJason_ed-2.jpg",
-    fname: "Iάσων",
+    fname: "Ιάσων",
     lname: "Παπαθανασίου",
     department: "Οργάνωσης & Διοίκησης Επιχειρήσεων",
     title: "Αναπληρωτής Καθηγητής",
@@ -1274,7 +1274,7 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/7951/6625-kafetzopoulos-id-2.jpg",
-    fname: "Δημήτρης",
+    fname: "Δημήτριος",
     lname: "Καφετζόπουλος",
     department: "Οργάνωσης & Διοίκησης Επιχειρήσεων",
     title: "Επίκουρος Καθηγητής",
@@ -1334,7 +1334,7 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1682/2079-d-ginoglou-2.jpg",
-    fname: "Δημήτρης",
+    fname: "Δημήτριος",
     lname: "Γκίνογλου",
     department: "Λογιστικής και Χρηματοοικονομικής",
     title: "Καθηγητής",
@@ -1503,7 +1503,7 @@ const profData = [
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/8846/8201-tziogkidis-340x340-2.jpg",
     fname: "Παναγιώτης",
-    lname: "Τζιωγκίδης",
+    lname: "Τζιογκίδης",
     department: "Λογιστικής και Χρηματοοικονομικής",
     title: "Αναπληρωτής Καθηγητής",
     tel: "2310 891.699",
@@ -1550,7 +1550,7 @@ const profData = [
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1724/5702-photo_KARVOUNARAKIS-2.jpg",
     fname: "Θεοδόσιος",
-    lname: "Καραβουναράκης",
+    lname: "Καρβουναράκης",
     department: "Διεθνών & Ευρωπαϊκών Σπουδών",
     title: "Καθηγητής",
     tel: "2310 891.497",
@@ -1585,7 +1585,7 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1738/3055-Skiadas-2.jpg",
-    fname: "Δημήτρης",
+    fname: "Δημήτριος",
     lname: "Σκιαδάς",
     department: "Διεθνών & Ευρωπαϊκών Σπουδών",
     title: "Καθηγητής",
@@ -1728,7 +1728,7 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1739/1201-kmikelis-2.jpg",
-    fname: "Κυρικάκος",
+    fname: "Κυριάκος",
     lname: "Μικέλης",
     department: "Διεθνών & Ευρωπαϊκών Σπουδών",
     title: "Επίκουρος Καθηγητής",
@@ -1740,7 +1740,7 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1730/5692-Bellou_photo-2.png",
-    fname: "Φωτείνη",
+    fname: "Φωτεινή",
     lname: "Μπέλλου",
     department: "Διεθνών & Ευρωπαϊκών Σπουδών",
     title: "Επίκουρη Καθηγήτρια",
@@ -1788,8 +1788,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1737/1175-chainoglou-2.jpg",
-    fname: "Καλλίοπη",
-    lname: "Χαϊνογλου",
+    fname: "Καλλιόπη",
+    lname: "Χαΐνογλου",
     department: "Διεθνών & Ευρωπαϊκών Σπουδών",
     title: "Επίκουρη Καθηγήτρια",
     tel: "2310 891.614",
@@ -1941,7 +1941,7 @@ const profData = [
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1799/1188-hproios-2.jpg",
     fname: "Χαρίκλεια",
-    lname: "Πρωίου",
+    lname: "Πρώιου",
     department: "Εκπαιδευτικής & Κοινωνικής Πολιτικής",
     title: "Αναπληρώτρια Καθηγήτρια",
     tel: "2310 891.630",
@@ -2024,7 +2024,7 @@ const profData = [
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1502/4499-Georgios_Vranos_1-2.png",
     fname: "Γεώργιος",
-    lname: "Βρανός",
+    lname: "Βράνος",
     department: "Μουσικής Επιστήμης & Τέχνης",
     title: "Πρόεδρος Τμήματος",
     tel: "2310 891.490",
@@ -2082,7 +2082,7 @@ const profData = [
   },
   {
     imgUrl: "https://www.uom.gr/assets/site/public/nodes/1481/5141-paris-2.jpg",
-    fname: "Κυρικάκος-Νεκτάριος",
+    fname: "Κυριάκος-Νεκτάριος",
     lname: "Πάρης",
     department: "Μουσικής Επιστήμης & Τέχνης",
     title: "Καθηγητής",
@@ -2320,7 +2320,7 @@ const profData = [
   {
     imgUrl: "https://www.uom.gr/assets/site/public/nodes/1500/4767-sinop-2.jpg",
     fname: "Κωνσταντίνος",
-    lname: "Ραπτής",
+    lname: "Ράπτης",
     department: "Μουσικής Επιστήμης & Τέχνης",
     title: "Επίκουρος Καθηγητής",
     tel: "2310 891.941",

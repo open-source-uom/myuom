@@ -113,7 +113,7 @@ export default function ProfCard({ prof }) {
                 width={{ md: "500px", base: "300px" }}
                 height={{ md: "500px", base: "300px" }}
               >
-                <ModalHeader>Μπροστινή όψη Πανεπιστημίου</ModalHeader>
+                <ModalHeader>Μπροστινή όψη πανεπιστημίου</ModalHeader>
                 <ModalCloseButton />
                 <ModalBody>
                   <Image src="https://www.uom.gr/site/images/katopseis/exot_mprostini.jpg" />

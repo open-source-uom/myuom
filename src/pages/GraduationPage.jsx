@@ -13,8 +13,8 @@ export default function GraduationPage() {
   useEffect(() => {
     if (!depName) {
       toast({
-        title: "Department Not Selected",
-        description: "Please Select a Department From The Settings",
+        title: "Δεν έχει επιλεγεί τμήμα",
+        description: "Παρακαλώ επιλέξτε τμήμα από τις ρυθμίσεις",
         status: "error",
         duration: 5000,
         isClosable: true,
@@ -34,14 +34,14 @@ export default function GraduationPage() {
     <Box>
       {GradData.get(depName) ? (
         <Heading textAlign="center" marginTop="50px">
-          Redirecting to
+          Ανακατεύθυνση στο τμήμα
           <a href={GradData.get(depName)} target="_blank" rel="noreferrer">
             {GradData.get(depName)}
           </a>
         </Heading>
       ) : (
         <Heading textAlign="center" marginTop="50px">
-          Please select a department from settings.
+          Παρακαλώ επιλέξτε τμήμα από τις ρυθμίσεις.
         </Heading>
       )}
     </Box>

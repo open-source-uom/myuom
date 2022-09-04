@@ -87,7 +87,7 @@ export const Categories = [
     requireSelection: false,
   },
   {
-    title: "Student's Web",
+    title: "StudentsWeb",
     iconSVG: (
       <svg
         width="150%"
@@ -293,7 +293,7 @@ export const Categories = [
     requireSelection: false,
   },
   {
-    title: "Ορκομωσίες",
+    title: "Ορκωμοσίες",
     iconSVG: (
       <svg
         width="150%"

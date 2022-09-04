@@ -30,11 +30,11 @@ export default function SchedulePage({ examsProp, semesterProp }) {
     <Box>
       {schedulesData.get(depName) ? (
         <Heading textAlign="center" marginTop="50px">
-          Redirecting to site...
+          Γίνεται ανακατεύθυνση...
         </Heading>
       ) : (
         <Heading textAlign="center" marginTop="50px">
-          Please select a department from settings.
+          Παρακαλώ επιλέξτε τμήμα από τις ρυθμίσεις.
         </Heading>
       )}
     </Box>
