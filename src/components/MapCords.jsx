@@ -70,7 +70,7 @@ export default function App({ sampleObject }) {
             bgColor={HandleBgColor}
             _hover={false}
           >
-            Δεν γνωρίζετε που βρίσκεται το κτήριο;
+            Δε γνωρίζετε πού βρίσκεται το κτήριο;
           </Button>
           <ImageMapper
             src={sampleObject.imageURL}
@@ -91,7 +91,7 @@ export default function App({ sampleObject }) {
             bgColor={HandleBgColor}
             _hover={false}
           >
-            Ξαναδείτε που είναι η αίθουσα
+            Ξαναδείτε πού είναι η αίθουσα
           </Button>
           <Text px="1rem">
             Το κοντινότερο ασανσέρ σε σχέση με την αίθουσα είναι αυτό:{" "}
@@ -103,14 +103,14 @@ export default function App({ sampleObject }) {
             width={350}
           />
           {!showCorrectText && <Text fontFamily="Syne" px="1rem">
-            Μπείτε σε αυτο το ασανσέρ και πηγαίνετε στον{" "}
+            Μπείτε σε αυτό το ασανσέρ και πηγαίνετε στον{" "}
             {sampleObject.floor.toLowerCase()} όροφο
           </Text>}
           {showCorrectText && <Text fontFamily="Syne" px="1rem">Μπείτε σε αυτό το ασανσέρ και πηγαίνετε στον {sampleObject.floor.toLowerCase()}</Text>}
         </Box>
       )}
       <Text color="red" fontSize="md" fontFamily="Syne" px="1rem">
-        Σε περίπτωση που δεν βλέπετε την αίθουσα μπορείτε να κάνετε zoom
+        Σε περίπτωση που δε βλέπετε την αίθουσα μπορείτε να κάνετε zoom
       </Text>
     </Box>
   );
