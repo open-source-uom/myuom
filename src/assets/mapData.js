@@ -217,7 +217,7 @@ export const mapData = [
   },
   {
     imageURL: "https://www.uom.gr/site/images/katopseis/esot_protos.jpg",
-    floor: "Πρώτος",
+    floor: "Πρώτο",
     title: "Αμφιθέατρο 12",
     building: "Βασικό Κτήριο",
     groundFloor: "https://www.uom.gr/site/images/katopseis/esot_isogeio.jpg",
@@ -313,7 +313,7 @@ export const mapData = [
   },
   {
     imageURL: "https://www.uom.gr/site/images/katopseis/esot_imiorofos.jpg",
-    floor: "Ημιόροφος",
+    floor: "Ημιόροφο",
     title: "Αίθουσα 11",
     building: "Βασικό Κτήριο",
     groundFloor: "https://www.uom.gr/site/images/katopseis/esot_isogeio.jpg",
@@ -325,7 +325,7 @@ export const mapData = [
   },
   {
     imageURL: "https://www.uom.gr/site/images/katopseis/esot_imiorofos.jpg",
-    floor: "Ημιόροφος",
+    floor: "Ημιόροφο",
     title: "Αίθουσα 12",
     building: "Βασικό Κτήριο",
     groundFloor: "https://www.uom.gr/site/images/katopseis/esot_isogeio.jpg",
@@ -337,7 +337,7 @@ export const mapData = [
   },
   {
     imageURL: "https://www.uom.gr/site/images/katopseis/esot_imiorofos.jpg",
-    floor: "Ημιόροφος",
+    floor: "Ημιόροφο",
     title: "Αίθουσα 13",
     building: "Βασικό Κτήριο",
     groundFloor: "https://www.uom.gr/site/images/katopseis/esot_isogeio.jpg",
@@ -349,7 +349,7 @@ export const mapData = [
   },
   {
     imageURL: "https://www.uom.gr/site/images/katopseis/esot_imiorofos.jpg",
-    floor: "Ημιόροφος",
+    floor: "Ημιόροφο",
     title: "Αίθουσα 14",
     building: "Βασικό Κτήριο",
     groundFloor: "https://www.uom.gr/site/images/katopseis/esot_isogeio.jpg",
@@ -361,7 +361,7 @@ export const mapData = [
   },
   {
     imageURL: "https://www.uom.gr/site/images/katopseis/esot_imiorofos.jpg",
-    floor: "Ημιόροφος",
+    floor: "Ημιόροφο",
     title: "Αίθουσα 15",
     building: "Βασικό Κτήριο",
     groundFloor: "https://www.uom.gr/site/images/katopseis/esot_isogeio.jpg",
@@ -373,7 +373,7 @@ export const mapData = [
   },
   {
     imageURL: "https://www.uom.gr/site/images/katopseis/esot_imiorofos.jpg",
-    floor: "Ημιόροφος",
+    floor: "Ημιόροφο",
     title: "Αίθουσα 16",
     building: "Βασικό Κτήριο",
     groundFloor: "https://www.uom.gr/site/images/katopseis/esot_isogeio.jpg",
@@ -385,7 +385,7 @@ export const mapData = [
   },
   {
     imageURL: "https://www.uom.gr/site/images/katopseis/esot_imiorofos.jpg",
-    floor: "Ημιόροφος",
+    floor: "Ημιόροφο",
     title: "Γραμματεία Χρηματοοικονομικής και Λογιστικής",
     building: "Βασικό Κτήριο",
     groundFloor: "https://www.uom.gr/site/images/katopseis/esot_isogeio.jpg",
@@ -397,7 +397,7 @@ export const mapData = [
   },
   {
     imageURL: "https://www.uom.gr/site/images/katopseis/esot_imiorofos.jpg",
-    floor: "Ημιόροφος",
+    floor: "Ημιόροφο",
     title: "Γραμματεία Διεθνών και Ευρωπαικών Σπουδών",
     building: "Βασικό Κτήριο",
     groundFloor: "https://www.uom.gr/site/images/katopseis/esot_isogeio.jpg",
@@ -409,7 +409,7 @@ export const mapData = [
   },
   {
     imageURL: "https://www.uom.gr/site/images/katopseis/esot_imiorofos.jpg",
-    floor: "Ημιόροφος",
+    floor: "Ημιόροφο",
     title: "Γραμματεία Μουσικής Επιστήμης και Τέχνης",
     building: "Βασικό Κτήριο",
     groundFloor: "https://www.uom.gr/site/images/katopseis/esot_isogeio.jpg",
@@ -421,7 +421,7 @@ export const mapData = [
   },
   {
     imageURL: "https://www.uom.gr/site/images/katopseis/esot_imiorofos.jpg",
-    floor: "Ημιόροφος",
+    floor: "Ημιόροφο",
     title: "Γραμματεία Βαλκανικών, Σλαβικών και Ανατολικών Σπουδών",
     building: "Βασικό Κτήριο",
     groundFloor: "https://www.uom.gr/site/images/katopseis/esot_isogeio.jpg",
@@ -433,7 +433,7 @@ export const mapData = [
   },
   {
     imageURL: "https://www.uom.gr/site/images/katopseis/esot_imiorofos.jpg",
-    floor: "Ημιόροφος",
+    floor: "Ημιόροφο",
     title: "Γραμματεία Εκπαιδευτικής και Κοινωνικής Πολιτικής",
     building: "Βασικό Κτήριο",
     groundFloor: "https://www.uom.gr/site/images/katopseis/esot_isogeio.jpg",
@@ -445,7 +445,7 @@ export const mapData = [
   },
   {
     imageURL: "https://www.uom.gr/site/images/katopseis/esot_imiorofos.jpg",
-    floor: "Ημιόροφος",
+    floor: "Ημιόροφο",
     title: "Γραφείο Πρακτικής Άσκησης",
     building: "Βασικό Κτήριο",
     groundFloor: "https://www.uom.gr/site/images/katopseis/esot_isogeio.jpg",
@@ -457,7 +457,7 @@ export const mapData = [
   },
   {
     imageURL: "https://www.uom.gr/site/images/katopseis/esot_imiorofos.jpg",
-    floor: "Ημιόροφος",
+    floor: "Ημιόροφο",
     title: "Γραφείο Διασύνδεσης",
     building: "Βασικό Κτήριο",
     groundFloor: "https://www.uom.gr/site/images/katopseis/esot_isogeio.jpg",
@@ -469,7 +469,7 @@ export const mapData = [
   },
   {
     imageURL: "https://www.uom.gr/site/images/katopseis/esot_imiorofos.jpg",
-    floor: "Ημιόροφος",
+    floor: "Ημιόροφο",
     title: "Γραφείο Φοιτητικής Μέριμνας",
     building: "Βασικό Κτήριο",
     groundFloor: "https://www.uom.gr/site/images/katopseis/esot_isogeio.jpg",
@@ -481,7 +481,7 @@ export const mapData = [
   },
   {
     imageURL: "https://www.uom.gr/site/images/katopseis/esot_imiorofos.jpg",
-    floor: "Ημιόροφος",
+    floor: "Ημιόροφο",
     title: "Γραμματεία Εφαρμοσμένης Πληροφορικής",
     building: "Βασικό Κτήριο",
     groundFloor: "https://www.uom.gr/site/images/katopseis/esot_isogeio.jpg",
@@ -493,7 +493,7 @@ export const mapData = [
   },
   {
     imageURL: "https://www.uom.gr/site/images/katopseis/esot_imiorofos.jpg",
-    floor: "Ημιόροφος",
+    floor: "Ημιόροφο",
     title: "Γραμματεία Οργάνωσης και Διοίκησης Επιχειρήσεων",
     building: "Βασικό Κτήριο",
     groundFloor: "https://www.uom.gr/site/images/katopseis/esot_isogeio.jpg",
@@ -505,7 +505,7 @@ export const mapData = [
   },
   {
     imageURL: "https://www.uom.gr/site/images/katopseis/esot_imiorofos.jpg",
-    floor: "Ημιόροφος",
+    floor: "Ημιόροφο",
     title: "Γραμματεία Οικονομικών Σπουδών",
     building: "Βασικό Κτήριο",
     groundFloor: "https://www.uom.gr/site/images/katopseis/esot_isogeio.jpg",
@@ -517,7 +517,7 @@ export const mapData = [
   },
   {
     imageURL: "https://www.uom.gr/site/images/katopseis/esot_imiorofos.jpg",
-    floor: "Ημιόροφος",
+    floor: "Ημιόροφο",
     title: "Βιβλιοθήκη",
     building: "Βασικό Κτήριο",
     groundFloor: "https://www.uom.gr/site/images/katopseis/esot_isogeio.jpg",

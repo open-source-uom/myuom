@@ -5,6 +5,7 @@ import { Box, Button, Text, useColorModeValue } from "@chakra-ui/react";
 export default function App({ sampleObject }) {
   const [showGroundFloorImg, setShowGroundFloorImg] = useState(true);
   const [ButtonActivity, setButtonActivity] = useState(false);
+  const [showCorrectText, setShowCorrectText] = useState(false);
 
   const [mapAreas, setMapAreas] = useState({
     name: "my-map",
@@ -48,6 +49,12 @@ export default function App({ sampleObject }) {
   const HandleBgColor = () => {
     return useColorModeValue("#0050e0", "#f3f3f3");
   };
+
+  useEffect(() => {
+    if(sampleObject.floor === "Ημιόροφο"){
+      setShowCorrectText(true);
+    }
+  },[])
 
   return (
     <Box fontFamily="Syne">
@@ -95,10 +102,11 @@ export default function App({ sampleObject }) {
             map={mapAreas}
             width={350}
           />
-          <Text fontFamily="Syne" px="1rem">
+          {!showCorrectText && <Text fontFamily="Syne" px="1rem">
             Μπείτε σε αυτο το ασανσέρ και πηγαίνετε στον{" "}
             {sampleObject.floor.toLowerCase()} όροφο
-          </Text>
+          </Text>}
+          {showCorrectText && <Text fontFamily="Syne" px="1rem">Μπείτε σε αυτό το ασανσέρ και πηγαίνετε στον {sampleObject.floor.toLowerCase()}</Text>}
         </Box>
       )}
       <Text color="red" fontSize="md" fontFamily="Syne" px="1rem">
