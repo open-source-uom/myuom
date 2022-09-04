@@ -2,7 +2,7 @@ export const mapData = [
   {
     imageURL: "https://www.uom.gr/site/images/katopseis/esot_protos.jpg",
     floor: "Πρώτο",
-    title: "Αίθουσα 1",
+    title: "Αίθουσα 01",
     building: "Βασικό Κτήριο",
     groundFloor: "https://www.uom.gr/site/images/katopseis/esot_isogeio.jpg",
     dep: "",
@@ -14,7 +14,7 @@ export const mapData = [
   {
     imageURL: "https://www.uom.gr/site/images/katopseis/esot_protos.jpg",
     floor: "Πρώτο",
-    title: "Αίθουσα 2",
+    title: "Αίθουσα 02",
     building: "Βασικό Κτήριο",
     groundFloor: "https://www.uom.gr/site/images/katopseis/esot_isogeio.jpg",
     dep: "",
@@ -26,7 +26,7 @@ export const mapData = [
   {
     imageURL: "https://www.uom.gr/site/images/katopseis/esot_protos.jpg",
     floor: "Πρώτο",
-    title: "Αίθουσα 3",
+    title: "Αίθουσα 03",
     building: "Βασικό Κτήριο",
     groundFloor: "https://www.uom.gr/site/images/katopseis/esot_isogeio.jpg",
     dep: "",
@@ -38,7 +38,7 @@ export const mapData = [
   {
     imageURL: "https://www.uom.gr/site/images/katopseis/esot_protos.jpg",
     floor: "Πρώτο",
-    title: "Αίθουσα 4",
+    title: "Αίθουσα 04",
     building: "Βασικό Κτήριο",
     groundFloor: "https://www.uom.gr/site/images/katopseis/esot_isogeio.jpg",
     dep: "",
@@ -50,7 +50,7 @@ export const mapData = [
   {
     imageURL: "https://www.uom.gr/site/images/katopseis/esot_protos.jpg",
     floor: "Πρώτο",
-    title: "Αίθουσα 5",
+    title: "Αίθουσα 05",
     building: "Βασικό Κτήριο",
     groundFloor: "https://www.uom.gr/site/images/katopseis/esot_isogeio.jpg",
     dep: "",
@@ -62,7 +62,7 @@ export const mapData = [
   {
     imageURL: "https://www.uom.gr/site/images/katopseis/esot_protos.jpg",
     floor: "Πρώτο",
-    title: "Αίθουσα 6",
+    title: "Αίθουσα 06",
     building: "Βασικό Κτήριο",
     groundFloor: "https://www.uom.gr/site/images/katopseis/esot_isogeio.jpg",
     dep: "",
@@ -74,7 +74,7 @@ export const mapData = [
   {
     imageURL: "https://www.uom.gr/site/images/katopseis/esot_protos.jpg",
     floor: "Πρώτο",
-    title: "Αίθουσα 7",
+    title: "Αίθουσα 07",
     building: "Βασικό Κτήριο",
     groundFloor: "https://www.uom.gr/site/images/katopseis/esot_isogeio.jpg",
     dep: "",
@@ -86,7 +86,7 @@ export const mapData = [
   {
     imageURL: "https://www.uom.gr/site/images/katopseis/esot_protos.jpg",
     floor: "Πρώτο",
-    title: "Αίθουσα 8",
+    title: "Αίθουσα 08",
     building: "Βασικό Κτήριο",
     groundFloor: "https://www.uom.gr/site/images/katopseis/esot_isogeio.jpg",
     dep: "",
@@ -98,7 +98,7 @@ export const mapData = [
   {
     imageURL: "https://www.uom.gr/site/images/katopseis/esot_protos.jpg",
     floor: "Πρώτο",
-    title: "Αίθουσα 9",
+    title: "Αίθουσα 09",
     building: "Βασικό Κτήριο",
     groundFloor: "https://www.uom.gr/site/images/katopseis/esot_isogeio.jpg",
     dep: "",
@@ -122,7 +122,7 @@ export const mapData = [
   {
     imageURL: "https://www.uom.gr/site/images/katopseis/esot_protos.jpg",
     floor: "Πρώτο",
-    title: "Αμφιθέατρο 4",
+    title: "Αμφιθέατρο 04",
     building: "Βασικό Κτήριο",
     groundFloor: "https://www.uom.gr/site/images/katopseis/esot_isogeio.jpg",
     dep: "",
@@ -134,7 +134,7 @@ export const mapData = [
   {
     imageURL: "https://www.uom.gr/site/images/katopseis/esot_protos.jpg",
     floor: "Πρώτο",
-    title: "Αμφιθέατρο 5",
+    title: "Αμφιθέατρο 05",
     building: "Βασικό Κτήριο",
     groundFloor: "https://www.uom.gr/site/images/katopseis/esot_isogeio.jpg",
     dep: "",
@@ -146,7 +146,7 @@ export const mapData = [
   {
     imageURL: "https://www.uom.gr/site/images/katopseis/esot_protos.jpg",
     floor: "Πρώτο",
-    title: "Αμφιθέατρο 6",
+    title: "Αμφιθέατρο 06",
     building: "Βασικό Κτήριο",
     groundFloor: "https://www.uom.gr/site/images/katopseis/esot_isogeio.jpg",
     dep: "",
@@ -158,7 +158,7 @@ export const mapData = [
   {
     imageURL: "https://www.uom.gr/site/images/katopseis/esot_protos.jpg",
     floor: "Πρώτο",
-    title: "Αμφιθέατρο 7",
+    title: "Αμφιθέατρο 07",
     building: "Βασικό Κτήριο",
     groundFloor: "https://www.uom.gr/site/images/katopseis/esot_isogeio.jpg",
     dep: "",
@@ -170,7 +170,7 @@ export const mapData = [
   {
     imageURL: "https://www.uom.gr/site/images/katopseis/esot_protos.jpg",
     floor: "Πρώτο",
-    title: "Αμφιθέατρο 8",
+    title: "Αμφιθέατρο 08",
     building: "Βασικό Κτήριο",
     groundFloor: "https://www.uom.gr/site/images/katopseis/esot_isogeio.jpg",
     dep: "",
@@ -182,7 +182,7 @@ export const mapData = [
   {
     imageURL: "https://www.uom.gr/site/images/katopseis/esot_protos.jpg",
     floor: "Πρώτο",
-    title: "Αμφιθέατρο 9",
+    title: "Αμφιθέατρο 09",
     building: "Βασικό Κτήριο",
     groundFloor: "https://www.uom.gr/site/images/katopseis/esot_isogeio.jpg",
     dep: "",
@@ -590,7 +590,7 @@ export const mapData = [
   {
     imageURL: "https://www.uom.gr/site/images/katopseis/esot_isogeio.jpg",
     floor: "Ισόγειο",
-    title: "Αφμιθέατρο 1 (Τελετών)",
+    title: "Αμφιθέατρο 01 (Τελετών)",
     building: "Βασικό Κτήριο",
     groundFloor: "https://www.uom.gr/site/images/katopseis/esot_isogeio.jpg",
     dep: "",
@@ -638,7 +638,7 @@ export const mapData = [
   {
     imageURL: "https://www.uom.gr/site/images/katopseis/esot_isogeio.jpg",
     floor: "Ισόγειο",
-    title: "Αμφιθέατρο 3",
+    title: "Αμφιθέατρο 03",
     building: "Βασικό Κτήριο",
     groundFloor: "https://www.uom.gr/site/images/katopseis/esot_isogeio.jpg",
     dep: "",
@@ -650,7 +650,7 @@ export const mapData = [
   {
     imageURL: "https://www.uom.gr/site/images/katopseis/esot_isogeio.jpg",
     floor: "Ισόγειο",
-    title: "Αμφοθέατρο 2",
+    title: "Αμφιθέατρο 02",
     building: "Βασικό Κτήριο",
     groundFloor: "https://www.uom.gr/site/images/katopseis/esot_isogeio.jpg",
     dep: "",

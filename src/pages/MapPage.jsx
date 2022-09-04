@@ -29,7 +29,7 @@ const Offices = (prop) => {
     if (option.building + " " + option.dep === prop.building)
       filtered.push(option.title);
 
-    return filtered;
+    return filtered.sort();
   }, []);
 
   return options.map((info) => (
