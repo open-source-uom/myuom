@@ -1,13 +1,15 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import {
   Drawer,
   DrawerBody,
   DrawerHeader,
   DrawerOverlay,
   DrawerContent,
+  Image,
   DrawerCloseButton,
   DrawerFooter,
   VStack,
+  HStack,
   FormControl,
   FormLabel,
   Switch,
@@ -19,6 +21,10 @@ import {
   Flex,
   Box,
   useColorModeValue,
+  Button,
+  Spacer,
+  Grid,
+  GridItem,
 } from "@chakra-ui/react";
 import {
   FaQuestionCircle,
@@ -36,6 +42,7 @@ export default function MenuButton() {
   const { colorMode, toggleColorMode } = useColorMode();
   const { depName, changeDepartmentName } = useContext(DepartmentContext);
 
+
   const handleChange = (e) => {
     e.preventDefault();
     let selectedDepartment = e.target.selectedOptions[0].label;
@@ -51,13 +58,24 @@ export default function MenuButton() {
     navigator.share(shareOpts);
   };
 
+  useEffect(()=> {
+    window.addEventListener('popstate', () => {
+      onClose();
+    }) 
+  },[])
+
+  const handleClick = () => {
+    window.history.pushState(null,'','/')
+    onOpen();
+  }
+
   return (
     <>
       <Box
         w={{ sm: "30px", lg: "40px" }}
         cursor="pointer"
         aria-label="Open Menu"
-        onClick={onOpen}
+        onClick={handleClick}
         fontFamily="Syne"
       >
         <svg
@@ -90,8 +108,6 @@ export default function MenuButton() {
       >
         <DrawerOverlay />
         <DrawerContent>
-          <DrawerCloseButton />
-
           <DrawerHeader
             color={useColorModeValue("#0050e0", "#f3f3f3")}
             backgroundColor={useColorModeValue("#f3f3f3", "black")}
@@ -241,11 +257,31 @@ export default function MenuButton() {
           <DrawerFooter
             backgroundColor={useColorModeValue("#f3f3f3", "black")}
             color={useColorModeValue("#0050e0", "#f3f3f3")}
+            justifyContent={"center"}
           >
-            <Text as={"sub"}> Δημιουργήθηκε από την &nbsp;</Text>
-            <Text as={"i"} text={"bold"}>
-              OpenSource UoM
-            </Text>
+            <Button
+              onClick={onClose}
+              variant="ghost"
+              fontWeight="bold"
+              fontFamily="Syne"
+              fontSize={{ base: "sm", lg: "lg" }}
+              _hover={false}
+              leftIcon={
+                <Box ml="0.5rem" pt="0.4rem">
+                  <svg
+                    width="30px"
+                    version="1.1"
+                    viewBox="0 0 700 700"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill={useColorModeValue("#0050e0", "#f3f3f3")}
+                  >
+                    <path d="m517.12 422.27c3.3125 3.2891 5.1758 7.7617 5.1758 12.426 0 4.668-1.8633 9.1406-5.1758 12.426-3.3008 3.2773-7.7734 5.1016-12.426 5.0742-4.6523 0.027343-9.1211-1.7969-12.426-5.0742l-142.27-142.45-142.27 142.45c-3.3047 3.2773-7.7734 5.1016-12.426 5.0742-4.6523 0.027343-9.125-1.7969-12.426-5.0742-3.3125-3.2852-5.1758-7.7578-5.1758-12.426 0-4.6641 1.8633-9.1367 5.1758-12.426l142.45-142.27-142.45-142.27c-4.4375-4.4414-6.1719-10.91-4.5469-16.973 1.625-6.0664 6.3594-10.801 12.426-12.426 6.0625-1.625 12.531 0.10938 16.973 4.5469l142.27 142.45 142.27-142.45c4.4414-4.4375 10.91-6.1719 16.973-4.5469 6.0664 1.625 10.801 6.3594 12.426 12.426 1.625 6.0625-0.10938 12.531-4.5469 16.973l-142.45 142.27z" />
+                  </svg>
+                </Box>
+              }
+            >
+              Κλείσιμο
+            </Button>
           </DrawerFooter>
         </DrawerContent>
       </Drawer>
