@@ -1,6 +1,6 @@
 import React, { useState, useCallback, useEffect } from "react";
 import ImageMapper from "react-image-mapper";
-import { Box, Button, Text } from "@chakra-ui/react";
+import { Box, Button, Text, useColorModeValue } from "@chakra-ui/react";
 
 export default function App({ sampleObject }) {
   const [showGroundFloorImg, setShowGroundFloorImg] = useState(true);
@@ -41,6 +41,14 @@ export default function App({ sampleObject }) {
     }
   }, []);
 
+  const HandleColor = () => {
+    return useColorModeValue("#f3f3f3", "black");
+  };
+
+  const HandleBgColor = () => {
+    return useColorModeValue("#0050e0", "#f3f3f3");
+  };
+
   return (
     <Box fontFamily="Syne">
       {!showGroundFloorImg && (
@@ -51,6 +59,9 @@ export default function App({ sampleObject }) {
             variant="outline"
             margin="1rem"
             fontFamily="Syne"
+            color={HandleColor}
+            bgColor={HandleBgColor}
+            _hover={false}
           >
             Δεν γνωρίζετε που βρίσκεται το κτήριο;
           </Button>
@@ -69,6 +80,9 @@ export default function App({ sampleObject }) {
             variant="outline"
             margin="1rem"
             fontFamily="Syne"
+            color={HandleColor}
+            bgColor={HandleBgColor}
+            _hover={false}
           >
             Ξαναδείτε που είναι η αίθουσα
           </Button>
