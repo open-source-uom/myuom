@@ -71,10 +71,10 @@ function Schedule() {
               <Text> 08:00-09:30</Text>
             </Flex>
             <Flex direction="column">
-              <Text fontWeight="bold">Μεσημεριανό</Text>
+              <Text fontWeight="bold">Μεσημεριανό:</Text>
               <Text align="center">
                 12:30-15:30<br></br>
-                13:00-15:30 (Σ/Κ και ΑΡΓΙΕΣ)
+                13:00-15:30 (Σ/Κ και αργίες)
               </Text>
             </Flex>
             <Flex direction="column">
