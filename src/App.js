@@ -9,7 +9,7 @@ import LibraryPage from "./pages/LibraryPage";
 import FirstYearInfoPage from "./pages/FirstYearInfoPage";
 import SchedulePage from "./pages/SchedulePage";
 import FAQSettingsPage from "./pages/FAQSettingsPage";
-import AboutSettingsPage from "./pages/AboutSetttingsPage";
+import AboutSettingsPage from "./pages/AboutSettingsPage";
 import MapPage from "./pages/MapPage";
 
 function App() {
