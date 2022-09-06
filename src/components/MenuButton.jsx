@@ -104,6 +104,7 @@ export default function MenuButton() {
         placement={"right"}
         onClose={onClose}
         isOpen={isOpen}
+        autoFocus={false}
         size={["full", "md", "lg"]}
       >
         <DrawerOverlay />
