@@ -36,22 +36,21 @@ export const servicesData = [
     title: "Σύλλογος Φοιτητών Erasmus",
     url: "http://afroditi.uom.gr/erasmusp",
     category: "Σύλλογος",
-    imgUrl:
-      "https://scontent-vie1-1.xx.fbcdn.net/v/t1.6435-9/68461055_2567378349949617_6059434573815611392_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=Rc84N56gO90AX-Qsxue&_nc_ht=scontent-vie1-1.xx&oh=00_AT-7Rz4PU11rgW0wQdhyCBjA7-bYuIxz20aTaJfTyQEaeg&oe=630D9DF3",
+    imgUrl: "https://opensource.uom.gr/myuom_images/esnuom.png",
   },
   {
     title: "Σύλλογος Φοιτητών ΠΑΜΑΚ",
     url: "https://www.facebook.com/sfpamak/",
     category: "Σύλλογος",
     imgUrl:
-      "https://scontent-vie1-1.xx.fbcdn.net/v/t31.18172-8/332652_231463590242016_1876985924_o.jpg?_nc_cat=106&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=ZSAYZHqKDzQAX85_d3j&_nc_ht=scontent-vie1-1.xx&oh=00_AT9_00nBjF7KJU0lZdH-StNEdXc8rq_XomRdVxwO-pm45Q&oe=630CB29E",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiD8KP64gxKFvyW4kbF-NK5Ao--9oSq9Fziw&usqp=CAU",
   },
   {
     title: "TedxUniversityofMacedonia",
     url: "https://tedxuniversityofmacedonia.com/",
     category: "Σύλλογος",
     imgUrl:
-      "https://scontent-vie1-1.xx.fbcdn.net/v/t1.6435-9/31711024_977566345731979_7560213167716958208_n.png?_nc_cat=111&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=JSONUoVbX9YAX-HgqPz&_nc_ht=scontent-vie1-1.xx&oh=00_AT87jYyp_PMMQkMJPOQm_se1Jl-1DhJPARwFeBofo5I_Gw&oe=630A6717",
+      "https://p77-sign-va.tiktokcdn.com/tos-maliva-avt-0068/b9772e1f6046e2a400bd049d39e2b30f~c5_100x100.jpeg?x-expires=1662890400&x-signature=RL58sc0MrQ%2Frls37bxGYeUbkaGk%3D",
   },
   {
     title: "AIESEC",
@@ -118,8 +117,7 @@ export const servicesData = [
     title: "Κέντρο Συμβουλευτικής και Στήριξης Φοιτητών",
     url: "https://www.uom.gr/student-support",
     category: "Υπόλοιπες",
-    imgUrl:
-      "https://scontent.fskg1-2.fna.fbcdn.net/v/t39.30808-6/243911191_4332951503469182_7675468211503498530_n.png?_nc_cat=105&ccb=1-7&_nc_sid=730e14&_nc_ohc=uqUGCxFBDZYAX9KMLRU&_nc_ht=scontent.fskg1-2.fna&oh=00_AT-zDwUVJz8zuYvHH5g-Jrm1ModCtxGJOXbz7hNTKh_Agw&oe=630CA20F",
+    imgUrl: "https://opensource.uom.gr/myuom_images/kssf.jpeg",
   },
   {
     title: "Μονάδα Προσβασιμότητας ΠΑΜΑΚ",
@@ -132,7 +130,6 @@ export const servicesData = [
     title: "Εκδόσεις Πανεπιστημίου Μακεδονίας",
     url: "https://www.uompress.gr/index.php/el/#",
     category: "Υπόλοιπες",
-    imgUrl:
-      "https://www.uompress.gr/images/stories/logo_uom_v.png",
+    imgUrl: "https://www.uompress.gr/images/stories/logo_uom_v.png",
   },
 ];
