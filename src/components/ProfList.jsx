@@ -4,6 +4,7 @@ import {
   InputLeftElement,
   InputGroup,
   useColorModeValue,
+  Text,
 } from "@chakra-ui/react";
 import { SearchIcon } from "@chakra-ui/icons";
 import { useContext, useEffect, useState } from "react";
@@ -103,7 +104,9 @@ export default function ProfList() {
           <ProfComponent prof={prof} key={prof.tel} />
         ))
       ) : (
-        <h1>Not found.</h1>
+        <Text as="h1" fontFamily="Syne">
+          Δε βρέθηκε αποτέλεσμα.
+        </Text>
       )}
     </VStack>
   );
