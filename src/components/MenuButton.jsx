@@ -113,7 +113,6 @@ export default function MenuButton() {
             color={useColorModeValue("#0050e0", "#f3f3f3")}
             backgroundColor={useColorModeValue("#f3f3f3", "black")}
             borderBottomWidth="1px"
-            my="-0.5rem"
             fontFamily="Syne"
           >
             Ρυθμίσεις
