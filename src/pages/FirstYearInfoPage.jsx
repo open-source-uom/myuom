@@ -10,13 +10,19 @@ export default function FirstYearInfoPage() {
 
   const firstCardArray = data.slice(0, 2);
   const secondCardArray = data.slice(2, 4);
-  const thirdCardArray = data.slice(4, 7);
+  const thirdCardArray = data.slice(4, 6);
+  const fourthCardArray = data.slice(6, 8);
+  const fifthCardArray = data.slice(8, 10);
+  const sixthCardArray = data.slice(10, 13);
 
   return (
     <Box align="center">
       <InfoCard data={firstCardArray} key={firstCardArray.title} />
       <InfoCard data={secondCardArray} key={secondCardArray.title} />
       <InfoCard data={thirdCardArray} key={thirdCardArray.title} />
+      <InfoCard data={fourthCardArray} key={fourthCardArray.title} />
+      <InfoCard data={fifthCardArray} key={fifthCardArray.title} />
+      <InfoCard data={sixthCardArray} key={sixthCardArray.title} />
     </Box>
   );
 }
