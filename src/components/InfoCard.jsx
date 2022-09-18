@@ -77,7 +77,7 @@ export default function InfoCard({ data }) {
       <TabPanels>
         {data.map((info) => {
           return (
-            <TabPanel key={info.title}>
+            <TabPanel key={info.title} textAlign='left'>
               <UnorderedList listStyleType={"none"}>
                 {info.content.map((curContent) => (
                   <ListItem>
@@ -85,12 +85,13 @@ export default function InfoCard({ data }) {
                   </ListItem>
                 ))}
               </UnorderedList>
-
-              {info.links.map((link) => (
-                <Box color={SelectLinkColor()}>
-                  <a href={link}>{link}</a>
-                </Box>
-              ))}
+              <UnorderedList listStyleType={"none"}>
+                {info.links.map((link) => (
+                  <Box color={SelectLinkColor()}>
+                    <a href={link}>{link}</a>
+                  </Box>
+                ))}
+              </UnorderedList>
             </TabPanel>
           );
         })}
