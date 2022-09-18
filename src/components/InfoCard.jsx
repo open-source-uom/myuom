@@ -34,6 +34,18 @@ export default function InfoCard({ data }) {
     );
   });
 
+  const SelectColor = () => {
+    return useColorModeValue("#f3f3f3", "black");
+  };
+
+  const SelectBgColor = () => {
+    return useColorModeValue("#0050e0", "#f3f3f3");
+  };
+
+  const SelectLinkColor = () => {
+    return useColorModeValue("#0050e0", "#F4B042");
+  };
+
   return (
     <Tabs
       w={{ base: "initial", lg: "100vh" }}
@@ -52,8 +64,8 @@ export default function InfoCard({ data }) {
             color={{ color: "#0050e0", bg: "#f3f3f3" }}
             fontSize={{ base: "0.85rem", lg: "1rem" }}
             _selected={{
-              color: "#f3f3f3",
-              bg: "#0050e0",
+              color: SelectColor(),
+              bg: SelectBgColor(),
             }}
           >
             {/* 1. pass icon as prop */}
@@ -75,7 +87,7 @@ export default function InfoCard({ data }) {
               </UnorderedList>
 
               {info.links.map((link) => (
-                <Box color="#0050e0">
+                <Box color={SelectLinkColor()}>
                   <a href={link}>{link}</a>
                 </Box>
               ))}
