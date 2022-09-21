@@ -29,7 +29,7 @@ export const schedulesData = new Map([
     DEPARTMENTS[3],
     {
       semester:
-        "https://docs.google.com/spreadsheets/d/1vAZ8DKac19clvWp5MbReCWchai-hkracDHVnh-p8XnQ/edit#gid=1287646221",
+        "https://docs.google.com/spreadsheets/d/1bUFgxecf6WgQcP3TFnQQwGYRoXDQYATg-WHl9lw1mS0/edit",
       exam: "https://docs.google.com/spreadsheets/u/1/d/1PPcvhvLDDzJW3_SzqK3HAgx7PnJZdaijbRH3lN2O_mY/edit#gid=0",
     },
   ],
@@ -61,7 +61,7 @@ export const schedulesData = new Map([
     DEPARTMENTS[7],
     {
       semester:
-        "https://www.uom.gr/assets/site/public/nodes/11330/12844-ODE_2021-2022_earino_v1.pdf",
+        "https://www.uom.gr/assets/site/public/nodes/12268/14197-ODE_xeimerino_2022-2023.pdf",
       exam: "https://www.uom.gr/assets/site/public/nodes/7471/13678-ODE_September_2022.pdf",
     },
   ],
