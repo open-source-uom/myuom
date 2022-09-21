@@ -685,7 +685,7 @@ export const mapData = [
   },
   //-------------------------------------------------------------------------------------
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/2%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/2gd.jpg",
     floor: "Δεύτερο",
     title: "217",
     building: "Γ",
@@ -697,7 +697,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/2%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/2gd.jpg",
     floor: "Δεύτερο",
     title: "220",
     building: "Γ",
@@ -709,7 +709,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/2%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/2gd.jpg",
     floor: "Δεύτερο",
     title: "221",
     building: "Γ",
@@ -721,7 +721,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/2%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/2gd.jpg",
     floor: "Δεύτερο",
     title: "222",
     building: "Γ",
@@ -733,7 +733,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/2%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/2gd.jpg",
     floor: "Δεύτερο",
     title: "223",
     building: "Γ",
@@ -745,7 +745,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/2%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/2gd.jpg",
     floor: "Δεύτερο",
     title: "225",
     building: "Γ",
@@ -757,7 +757,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/2%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/2gd.jpg",
     floor: "Δεύτερο",
     title: "226",
     building: "Γ",
@@ -769,7 +769,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/2%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/2gd.jpg",
     floor: "Δεύτερο",
     title: "227",
     building: "Γ",
@@ -781,7 +781,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/2%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/2gd.jpg",
     floor: "Δεύτερο",
     title: "228",
     building: "Γ",
@@ -793,7 +793,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/2%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/2gd.jpg",
     floor: "Δεύτερο",
     title: "230",
     building: "Γ",
@@ -805,7 +805,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/2%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/2gd.jpg",
     floor: "Δεύτερο",
     title: "231",
     building: "Γ",
@@ -817,7 +817,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/2%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/2gd.jpg",
     floor: "Δεύτερο",
     title: "232",
     building: "Γ",
@@ -829,7 +829,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/2%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/2gd.jpg",
     floor: "Δεύτερο",
     title: "233",
     building: "Γ",
@@ -841,7 +841,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/2%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/2gd.jpg",
     floor: "Δεύτερο",
     title: "234-235",
     building: "Γ",
@@ -853,7 +853,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/2%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/2gd.jpg",
     floor: "Δεύτερο",
     title: "201α",
     building: "Δ",
@@ -865,7 +865,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/2%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/2gd.jpg",
     floor: "Δεύτερο",
     title: "201β",
     building: "Δ",
@@ -877,7 +877,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/2%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/2gd.jpg",
     floor: "Δεύτερο",
     title: "202",
     building: "Δ",
@@ -889,7 +889,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/2%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/2gd.jpg",
     floor: "Δεύτερο",
     title: "203",
     building: "Δ",
@@ -901,7 +901,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/2%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/2gd.jpg",
     floor: "Δεύτερο",
     title: "205",
     building: "Δ",
@@ -913,7 +913,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/2%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/2gd.jpg",
     floor: "Δεύτερο",
     title: "206",
     building: "Δ",
@@ -925,7 +925,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/2%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/2gd.jpg",
     floor: "Δεύτερο",
     title: "207",
     building: "Δ",
@@ -937,7 +937,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/2%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/2gd.jpg",
     floor: "Δεύτερο",
     title: "208",
     building: "Δ",
@@ -949,7 +949,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/2%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/2gd.jpg",
     floor: "Δεύτερο",
     title: "210",
     building: "Δ",
@@ -961,7 +961,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/2%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/2gd.jpg",
     floor: "Δεύτερο",
     title: "211",
     building: "Δ",
@@ -973,7 +973,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/2%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/2gd.jpg",
     floor: "Δεύτερο",
     title: "212",
     building: "Δ",
@@ -985,7 +985,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/2%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/2gd.jpg",
     floor: "Δεύτερο",
     title: "213-214",
     building: "Δ",
@@ -997,7 +997,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/2%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/2gd.jpg",
     floor: "Δεύτερο",
     title: "216",
     building: "Δ",
@@ -1010,7 +1010,7 @@ export const mapData = [
   },
   //30Σ ΟΡΟΦΟΣ, Δ ΚΤΗΡΙΟ
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/3%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/3gd.jpg",
     floor: "Τρίτο",
     title: "301",
     building: "Δ",
@@ -1022,7 +1022,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/3%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/3gd.jpg",
     floor: "Τρίτο",
     title: "301α",
     building: "Δ",
@@ -1034,7 +1034,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/3%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/3gd.jpg",
     floor: "Τρίτο",
     title: "302",
     building: "Δ",
@@ -1046,7 +1046,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/3%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/3gd.jpg",
     floor: "Τρίτο",
     title: "303",
     building: "Δ",
@@ -1058,7 +1058,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/3%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/3gd.jpg",
     floor: "Τρίτο",
     title: "305",
     building: "Δ",
@@ -1070,7 +1070,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/3%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/3gd.jpg",
     floor: "Τρίτο",
     title: "306",
     building: "Δ",
@@ -1082,7 +1082,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/3%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/3gd.jpg",
     floor: "Τρίτο",
     title: "307",
     building: "Δ",
@@ -1094,7 +1094,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/3%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/3gd.jpg",
     floor: "Τρίτο",
     title: "308",
     building: "Δ",
@@ -1106,7 +1106,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/3%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/3gd.jpg",
     floor: "Τρίτο",
     title: "310",
     building: "Δ",
@@ -1118,7 +1118,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/3%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/3gd.jpg",
     floor: "Τρίτο",
     title: "311",
     building: "Δ",
@@ -1130,7 +1130,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/3%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/3gd.jpg",
     floor: "Τρίτο",
     title: "312",
     building: "Δ",
@@ -1142,7 +1142,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/3%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/3gd.jpg",
     floor: "Τρίτο",
     title: "313",
     building: "Δ",
@@ -1154,7 +1154,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/3%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/3gd.jpg",
     floor: "Τρίτο",
     title: "314",
     building: "Δ",
@@ -1167,7 +1167,7 @@ export const mapData = [
   },
   //3ΟΣ ΟΡΟΦΟΣ, Γ ΚΤΗΡΙΟ
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/3%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/3gd.jpg",
     floor: "Τρίτο",
     title: "321",
     building: "Γ",
@@ -1179,7 +1179,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/3%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/3gd.jpg",
     floor: "Τρίτο",
     title: "322",
     building: "Γ",
@@ -1191,7 +1191,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/3%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/3gd.jpg",
     floor: "Τρίτο",
     title: "323",
     building: "Γ",
@@ -1203,7 +1203,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/3%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/3gd.jpg",
     floor: "Τρίτο",
     title: "325",
     building: "Γ",
@@ -1215,7 +1215,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/3%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/3gd.jpg",
     floor: "Τρίτο",
     title: "326",
     building: "Γ",
@@ -1227,7 +1227,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/3%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/3gd.jpg",
     floor: "Τρίτο",
     title: "327",
     building: "Γ",
@@ -1239,7 +1239,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/3%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/3gd.jpg",
     floor: "Τρίτο",
     title: "328",
     building: "Γ",
@@ -1251,7 +1251,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/3%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/3gd.jpg",
     floor: "Τρίτο",
     title: "330",
     building: "Γ",
@@ -1263,7 +1263,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/3%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/3gd.jpg",
     floor: "Τρίτο",
     title: "331",
     building: "Γ",
@@ -1275,7 +1275,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/3%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/3gd.jpg",
     floor: "Τρίτο",
     title: "332",
     building: "Γ",
@@ -1287,7 +1287,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/3%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/3gd.jpg",
     floor: "Τρίτο",
     title: "333",
     building: "Γ",
@@ -1299,7 +1299,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/3%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/3gd.jpg",
     floor: "Τρίτο",
     title: "334",
     building: "Γ",
@@ -1311,7 +1311,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/3%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/3gd.jpg",
     floor: "Τρίτο",
     title: "335",
     building: "Γ",
@@ -1324,7 +1324,7 @@ export const mapData = [
   },
   //4ΟΣ ΟΡΟΦΟΣ, Δ ΚΤΗΡΙΟ
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/4%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/4gd.jpg",
     floor: "Τέταρτο",
     title: "401",
     building: "Δ",
@@ -1336,7 +1336,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/4%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/4gd.jpg",
     floor: "Τέταρτο",
     title: "401α",
     building: "Δ",
@@ -1348,7 +1348,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/4%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/4gd.jpg",
     floor: "Τέταρτο",
     title: "402",
     building: "Δ",
@@ -1360,7 +1360,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/4%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/4gd.jpg",
     floor: "Τέταρτο",
     title: "403",
     building: "Δ",
@@ -1372,7 +1372,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/4%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/4gd.jpg",
     floor: "Τέταρτο",
     title: "405",
     building: "Δ",
@@ -1384,7 +1384,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/4%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/4gd.jpg",
     floor: "Τέταρτο",
     title: "406",
     building: "Δ",
@@ -1396,7 +1396,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/4%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/4gd.jpg",
     floor: "Τέταρτο",
     title: "407",
     building: "Δ",
@@ -1408,7 +1408,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/4%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/4gd.jpg",
     floor: "Τέταρτο",
     title: "408",
     building: "Δ",
@@ -1420,7 +1420,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/4%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/4gd.jpg",
     floor: "Τέταρτο",
     title: "410",
     building: "Δ",
@@ -1432,7 +1432,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/4%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/4gd.jpg",
     floor: "Τέταρτο",
     title: "411",
     building: "Δ",
@@ -1444,7 +1444,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/4%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/4gd.jpg",
     floor: "Τέταρτο",
     title: "412",
     building: "Δ",
@@ -1456,7 +1456,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/4%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/4gd.jpg",
     floor: "Τέταρτο",
     title: "413",
     building: "Δ",
@@ -1468,7 +1468,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/4%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/4gd.jpg",
     floor: "Τέταρτο",
     title: "414",
     building: "Δ",
@@ -1480,7 +1480,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/4%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/4gd.jpg",
     floor: "Τέταρτο",
     title: "415",
     building: "Δ",
@@ -1493,7 +1493,7 @@ export const mapData = [
   },
   //4ΟΣ ΟΡΟΦΟΣ, Γ ΚΤΗΡΙΟ
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/4%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/4gd.jpg",
     floor: "Τέταρτο",
     title: "421",
     building: "Γ",
@@ -1505,7 +1505,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/4%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/4gd.jpg",
     floor: "Τέταρτο",
     title: "422",
     building: "Γ",
@@ -1517,7 +1517,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/4%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/4gd.jpg",
     floor: "Τέταρτο",
     title: "423",
     building: "Γ",
@@ -1529,7 +1529,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/4%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/4gd.jpg",
     floor: "Τέταρτο",
     title: "425",
     building: "Γ",
@@ -1541,7 +1541,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/4%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/4gd.jpg",
     floor: "Τέταρτο",
     title: "426",
     building: "Γ",
@@ -1553,7 +1553,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/4%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/4gd.jpg",
     floor: "Τέταρτο",
     title: "427",
     building: "Γ",
@@ -1565,7 +1565,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/4%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/4gd.jpg",
     floor: "Τέταρτο",
     title: "428",
     building: "Γ",
@@ -1577,7 +1577,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/4%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/4gd.jpg",
     floor: "Τέταρτο",
     title: "430",
     building: "Γ",
@@ -1589,7 +1589,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/4%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/4gd.jpg",
     floor: "Τέταρτο",
     title: "431",
     building: "Γ",
@@ -1601,7 +1601,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/4%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/4gd.jpg",
     floor: "Τέταρτο",
     title: "432",
     building: "Γ",
@@ -1613,7 +1613,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/4%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/4gd.jpg",
     floor: "Τέταρτο",
     title: "433",
     building: "Γ",
@@ -1625,7 +1625,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/4%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/4gd.jpg",
     floor: "Τέταρτο",
     title: "434",
     building: "Γ",
@@ -1637,7 +1637,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/4%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/4gd.jpg",
     floor: "Τέταρτο",
     title: "435",
     building: "Γ",
@@ -1650,7 +1650,7 @@ export const mapData = [
   },
   //5ΟΣ ΟΡΟΦΟΣ, Δ ΚΤΗΡΙΟ
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/5%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/5gd.jpg",
     floor: "Πέμπτο",
     title: "501",
     building: "Δ",
@@ -1662,7 +1662,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/5%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/5gd.jpg",
     floor: "Πέμπτο",
     title: "502",
     building: "Δ",
@@ -1674,7 +1674,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/5%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/5gd.jpg",
     floor: "Πέμπτο",
     title: "503",
     building: "Δ",
@@ -1686,7 +1686,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/5%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/5gd.jpg",
     floor: "Πέμπτο",
     title: "504",
     building: "Δ",
@@ -1698,7 +1698,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/5%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/5gd.jpg",
     floor: "Πέμπτο",
     title: "506",
     building: "Δ",
@@ -1710,7 +1710,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/5%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/5gd.jpg",
     floor: "Πέμπτο",
     title: "507",
     building: "Δ",
@@ -1722,7 +1722,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/5%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/5gd.jpg",
     floor: "Πέμπτο",
     title: "508",
     building: "Δ",
@@ -1734,7 +1734,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/5%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/5gd.jpg",
     floor: "Πέμπτο",
     title: "510",
     building: "Δ",
@@ -1746,7 +1746,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/5%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/5gd.jpg",
     floor: "Πέμπτο",
     title: "511",
     building: "Δ",
@@ -1758,7 +1758,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/5%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/5gd.jpg",
     floor: "Πέμπτο",
     title: "512α",
     building: "Δ",
@@ -1770,7 +1770,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/5%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/5gd.jpg",
     floor: "Πέμπτο",
     title: "513β",
     building: "Δ",
@@ -1782,7 +1782,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/5%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/5gd.jpg",
     floor: "Πέμπτο",
     title: "514α",
     building: "Δ",
@@ -1794,7 +1794,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/5%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/5gd.jpg",
     floor: "Πέμπτο",
     title: "515",
     building: "Δ",
@@ -1807,7 +1807,7 @@ export const mapData = [
   },
   //5ΟΣ ΟΡΟΦΟΣ, Γ ΚΤΗΡΙΟ
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/5%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/5gd.jpg",
     floor: "Πέμπτο",
     title: "518",
     building: "Γ",
@@ -1819,7 +1819,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/5%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/5gd.jpg",
     floor: "Πέμπτο",
     title: "519",
     building: "Γ",
@@ -1831,7 +1831,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/5%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/5gd.jpg",
     floor: "Πέμπτο",
     title: "520",
     building: "Γ",
@@ -1843,7 +1843,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/5%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/5gd.jpg",
     floor: "Πέμπτο",
     title: "521",
     building: "Γ",
@@ -1855,7 +1855,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/5%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/5gd.jpg",
     floor: "Πέμπτο",
     title: "522",
     building: "Γ",
@@ -1867,7 +1867,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/5%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/5gd.jpg",
     floor: "Πέμπτο",
     title: "524",
     building: "Γ",
@@ -1879,7 +1879,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/5%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/5gd.jpg",
     floor: "Πέμπτο",
     title: "525",
     building: "Γ",
@@ -1891,7 +1891,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/5%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/5gd.jpg",
     floor: "Πέμπτο",
     title: "526",
     building: "Γ",
@@ -1903,7 +1903,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/5%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/5gd.jpg",
     floor: "Πέμπτο",
     title: "527",
     building: "Γ",
@@ -1915,7 +1915,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/5%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/5gd.jpg",
     floor: "Πέμπτο",
     title: "529",
     building: "Γ",
@@ -1927,7 +1927,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/5%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/5gd.jpg",
     floor: "Πέμπτο",
     title: "530",
     building: "Γ",
@@ -1939,7 +1939,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/5%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/5gd.jpg",
     floor: "Πέμπτο",
     title: "531",
     building: "Γ",
@@ -1951,7 +1951,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/5%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/5gd.jpg",
     floor: "Πέμπτο",
     title: "532",
     building: "Γ",
@@ -1963,7 +1963,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/5%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/5gd.jpg",
     floor: "Πέμπτο",
     title: "533",
     building: "Γ",
@@ -1975,7 +1975,7 @@ export const mapData = [
     elevatory: 63,
   },
   {
-    imageURL: "https://opensource.uom.gr/uom_maps/5%CE%B3%CE%B4.jpg",
+    imageURL: "https://opensource.uom.gr/uom_maps/5gd.jpg",
     floor: "Πέμπτο",
     title: "534",
     building: "Γ",
@@ -1988,7 +1988,7 @@ export const mapData = [
   },
     //2ΟΣ ΟΡΟΦΟΣ, Θ ΚΤΗΡΙΟ
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/2%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/2ht.jpg",
       floor: "Δεύτερο",
       title: "201α",
       building: "Θ",
@@ -2000,7 +2000,7 @@ export const mapData = [
       elevatory: 37,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/2%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/2ht.jpg",
       floor: "Δεύτερο",
       title: "201β",
       building: "Θ",
@@ -2012,7 +2012,7 @@ export const mapData = [
       elevatory: 37,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/2%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/2ht.jpg",
       floor: "Δεύτερο",
       title: "202",
       building: "Θ",
@@ -2024,7 +2024,7 @@ export const mapData = [
       elevatory: 37,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/2%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/2ht.jpg",
       floor: "Δεύτερο",
       title: "203",
       building: "Θ",
@@ -2036,7 +2036,7 @@ export const mapData = [
       elevatory: 37,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/2%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/2ht.jpg",
       floor: "Δεύτερο",
       title: "205",
       building: "Θ",
@@ -2048,7 +2048,7 @@ export const mapData = [
       elevatory: 37,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/2%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/2ht.jpg",
       floor: "Δεύτερο",
       title: "206",
       building: "Θ",
@@ -2060,7 +2060,7 @@ export const mapData = [
       elevatory: 37,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/2%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/2ht.jpg",
       floor: "Δεύτερο",
       title: "207",
       building: "Θ",
@@ -2072,7 +2072,7 @@ export const mapData = [
       elevatory: 37,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/2%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/2ht.jpg",
       floor: "Δεύτερο",
       title: "208",
       building: "Θ",
@@ -2084,7 +2084,7 @@ export const mapData = [
       elevatory: 37,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/2%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/2ht.jpg",
       floor: "Δεύτερο",
       title: "210",
       building: "Θ",
@@ -2096,7 +2096,7 @@ export const mapData = [
       elevatory: 37,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/2%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/2ht.jpg",
       floor: "Δεύτερο",
       title: "211",
       building: "Θ",
@@ -2108,7 +2108,7 @@ export const mapData = [
       elevatory: 37,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/2%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/2ht.jpg",
       floor: "Δεύτερο",
       title: "212",
       building: "Θ",
@@ -2120,7 +2120,7 @@ export const mapData = [
       elevatory: 37,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/2%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/2ht.jpg",
       floor: "Δεύτερο",
       title: "Εργαστήριο 212",
       building: "Θ",
@@ -2132,7 +2132,7 @@ export const mapData = [
       elevatory: 37,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/2%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/2ht.jpg",
       floor: "Δεύτερο",
       title: "213-214",
       building: "Θ",
@@ -2145,7 +2145,7 @@ export const mapData = [
     },
     //2ΟΣ ΟΡΟΦΟΣ, ΚΤΗΡΙΟ Η
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/2%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/2ht.jpg",
       floor: "Δεύτερο",
       title: "220",
       building: "Η",
@@ -2157,7 +2157,7 @@ export const mapData = [
       elevatory: 37,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/2%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/2ht.jpg",
       floor: "Δεύτερο",
       title: "221",
       building: "Η",
@@ -2169,7 +2169,7 @@ export const mapData = [
       elevatory: 37,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/2%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/2ht.jpg",
       floor: "Δεύτερο",
       title: "222",
       building: "Η",
@@ -2181,7 +2181,7 @@ export const mapData = [
       elevatory: 37,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/2%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/2ht.jpg",
       floor: "Δεύτερο",
       title: "223",
       building: "Η",
@@ -2193,7 +2193,7 @@ export const mapData = [
       elevatory: 37,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/2%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/2ht.jpg",
       floor: "Δεύτερο",
       title: "225",
       building: "Η",
@@ -2205,7 +2205,7 @@ export const mapData = [
       elevatory: 37,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/2%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/2ht.jpg",
       floor: "Δεύτερο",
       title: "226",
       building: "Η",
@@ -2217,7 +2217,7 @@ export const mapData = [
       elevatory: 37,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/2%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/2ht.jpg",
       floor: "Δεύτερο",
       title: "227          ",
       building: "Η",
@@ -2229,7 +2229,7 @@ export const mapData = [
       elevatory: 37,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/2%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/2ht.jpg",
       floor: "Δεύτερο",
       title: "228",
       building: "Η",
@@ -2241,7 +2241,7 @@ export const mapData = [
       elevatory: 37,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/2%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/2ht.jpg",
       floor: "Δεύτερο",
       title: "230",
       building: "Η",
@@ -2253,7 +2253,7 @@ export const mapData = [
       elevatory: 37,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/2%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/2ht.jpg",
       floor: "Δεύτερο",
       title: "231",
       building: "Η",
@@ -2265,7 +2265,7 @@ export const mapData = [
       elevatory: 37,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/2%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/2ht.jpg",
       floor: "Δεύτερο",
       title: "232",
       building: "Η",
@@ -2277,7 +2277,7 @@ export const mapData = [
       elevatory: 37,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/2%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/2ht.jpg",
       floor: "Δεύτερο",
       title: "234α-234β",
       building: "Η",
@@ -2290,7 +2290,7 @@ export const mapData = [
     },
     //3ΟΣ ΟΡΟΦΟΣ, ΚΤΗΡΙΟ Θ
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/3%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/3ht.jpg",
       floor: "Τρίτο",
       title: "301",
       building: "Θ",
@@ -2302,7 +2302,7 @@ export const mapData = [
       elevatory: 37,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/3%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/3ht.jpg",
       floor: "Τρίτο",
       title: "301α",
       building: "Θ",
@@ -2314,7 +2314,7 @@ export const mapData = [
       elevatory: 37,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/3%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/3ht.jpg",
       floor: "Τρίτο",
       title: "302",
       building: "Θ",
@@ -2326,7 +2326,7 @@ export const mapData = [
       elevatory: 37,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/3%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/3ht.jpg",
       floor: "Τρίτο",
       title: "303",
       building: "Θ",
@@ -2338,7 +2338,7 @@ export const mapData = [
       elevatory: 37,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/3%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/3ht.jpg",
       floor: "Τρίτο",
       title: "305",
       building: "Θ",
@@ -2350,7 +2350,7 @@ export const mapData = [
       elevatory: 37,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/3%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/3ht.jpg",
       floor: "Τρίτο",
       title: "306",
       building: "Θ",
@@ -2362,7 +2362,7 @@ export const mapData = [
       elevatory: 37,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/3%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/3ht.jpg",
       floor: "Τρίτο",
       title: "307",
       building: "Θ",
@@ -2374,7 +2374,7 @@ export const mapData = [
       elevatory: 37,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/3%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/3ht.jpg",
       floor: "Τρίτο",
       title: "308",
       building: "Θ",
@@ -2386,7 +2386,7 @@ export const mapData = [
       elevatory: 37,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/3%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/3ht.jpg",
       floor: "Τρίτο",
       title: "310",
       building: "Θ",
@@ -2398,7 +2398,7 @@ export const mapData = [
       elevatory: 37,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/3%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/3ht.jpg",
       floor: "Τρίτο",
       title: "311",
       building: "Θ",
@@ -2410,7 +2410,7 @@ export const mapData = [
       elevatory: 37,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/3%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/3ht.jpg",
       floor: "Τρίτο",
       title: "312",
       building: "Θ",
@@ -2422,7 +2422,7 @@ export const mapData = [
       elevatory: 37,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/3%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/3ht.jpg",
       floor: "Τρίτο",
       title: "313",
       building: "Θ",
@@ -2434,7 +2434,7 @@ export const mapData = [
       elevatory: 37,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/3%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/3ht.jpg",
       floor: "Τρίτο",
       title: "314",
       building: "Θ",
@@ -2447,7 +2447,7 @@ export const mapData = [
     },
     //3ΟΣ ΟΡΟΦΟΣ, ΚΤΗΡΙΟ Η
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/3%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/3ht.jpg",
       floor: "Τρίτο",
       title: "320",
       building: "Η",
@@ -2459,7 +2459,7 @@ export const mapData = [
       elevatory: 37,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/3%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/3ht.jpg",
       floor: "Τρίτο",
       title: "321",
       building: "Η",
@@ -2471,7 +2471,7 @@ export const mapData = [
       elevatory: 37,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/3%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/3ht.jpg",
       floor: "Τρίτο",
       title: "322",
       building: "Η",
@@ -2483,7 +2483,7 @@ export const mapData = [
       elevatory: 37,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/3%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/3ht.jpg",
       floor: "Τρίτο",
       title: "323",
       building: "Η",
@@ -2495,7 +2495,7 @@ export const mapData = [
       elevatory: 37,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/3%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/3ht.jpg",
       floor: "Τρίτο",
       title: "325",
       building: "Η",
@@ -2507,7 +2507,7 @@ export const mapData = [
       elevatory: 37,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/3%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/3ht.jpg",
       floor: "Τρίτο",
       title: "326",
       building: "Η",
@@ -2519,7 +2519,7 @@ export const mapData = [
       elevatory: 37,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/3%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/3ht.jpg",
       floor: "Τρίτο",
       title: "327",
       building: "Η",
@@ -2531,7 +2531,7 @@ export const mapData = [
       elevatory: 37,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/3%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/3ht.jpg",
       floor: "Τρίτο",
       title: "328",
       building: "Η",
@@ -2543,7 +2543,7 @@ export const mapData = [
       elevatory: 37,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/3%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/3ht.jpg",
       floor: "Τρίτο",
       title: "330",
       building: "Η",
@@ -2555,7 +2555,7 @@ export const mapData = [
       elevatory: 37,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/3%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/3ht.jpg",
       floor: "Τρίτο",
       title: "331-332",
       building: "Η",
@@ -2567,7 +2567,7 @@ export const mapData = [
       elevatory: 37,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/3%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/3ht.jpg",
       floor: "Τρίτο",
       title: "333",
       building: "Η",
@@ -2579,7 +2579,7 @@ export const mapData = [
       elevatory: 37,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/3%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/3ht.jpg",
       floor: "Τρίτο",
       title: "334-335",
       building: "Η",
@@ -2592,7 +2592,7 @@ export const mapData = [
     },
     //4ΟΣ ΟΡΟΦΟΣ, ΚΤΗΡΙΟ Θ
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/4%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/4ht.jpg",
       floor: "Τέταρτο",
       title: "401",
       building: "Θ",
@@ -2604,7 +2604,7 @@ export const mapData = [
       elevatory: 37,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/4%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/4ht.jpg",
       floor: "Τέταρτο",
       title: "402",
       building: "Θ",
@@ -2616,7 +2616,7 @@ export const mapData = [
       elevatory: 37,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/4%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/4ht.jpg",
       floor: "Τέταρτο",
       title: "403",
       building: "Θ",
@@ -2628,7 +2628,7 @@ export const mapData = [
       elevatory: 37,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/4%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/4ht.jpg",
       floor: "Τέταρτο",
       title: "405",
       building: "Θ",
@@ -2640,7 +2640,7 @@ export const mapData = [
       elevatory: 37,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/4%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/4ht.jpg",
       floor: "Τέταρτο",
       title: "406",
       building: "Θ",
@@ -2652,7 +2652,7 @@ export const mapData = [
       elevatory: 37,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/4%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/4ht.jpg",
       floor: "Τέταρτο",
       title: "407",
       building: "Θ",
@@ -2664,7 +2664,7 @@ export const mapData = [
       elevatory: 37,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/4%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/4ht.jpg",
       floor: "Τέταρτο",
       title: "408",
       building: "Θ",
@@ -2676,7 +2676,7 @@ export const mapData = [
       elevatory: 37,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/4%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/4ht.jpg",
       floor: "Τέταρτο",
       title: "410",
       building: "Θ",
@@ -2688,7 +2688,7 @@ export const mapData = [
       elevatory: 37,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/4%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/4ht.jpg",
       floor: "Τέταρτο",
       title: "411",
       building: "Θ",
@@ -2700,7 +2700,7 @@ export const mapData = [
       elevatory: 37,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/4%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/4ht.jpg",
       floor: "Τέταρτο",
       title: "412",
       building: "Θ",
@@ -2712,7 +2712,7 @@ export const mapData = [
       elevatory: 37,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/4%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/4ht.jpg",
       floor: "Τέταρτο",
       title: "413",
       building: "Θ",
@@ -2724,7 +2724,7 @@ export const mapData = [
       elevatory: 37,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/4%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/4ht.jpg",
       floor: "Τέταρτο",
       title: "414",
       building: "Θ",
@@ -2736,7 +2736,7 @@ export const mapData = [
       elevatory: 37,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/4%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/4ht.jpg",
       floor: "Τέταρτο",
       title: "415",
       building: "Θ",
@@ -2748,7 +2748,7 @@ export const mapData = [
       elevatory: 37,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/4%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/4ht.jpg",
       floor: "Τέταρτο",
       title: "424",
       building: "Θ",
@@ -2760,7 +2760,7 @@ export const mapData = [
       elevatory: 37,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/4%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/4ht.jpg",
       floor: "Τέταρτο",
       title: "423",
       building: "Θ",
@@ -2773,7 +2773,7 @@ export const mapData = [
     },
     //4ΟΣ ΟΡΟΦΟΣ, ΚΤΗΡΙΟ Η
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/4%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/4ht.jpg",
       floor: "Τέταρτο",
       title: "421",
       building: "Η",
@@ -2785,7 +2785,7 @@ export const mapData = [
       elevatory: 37,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/4%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/4ht.jpg",
       floor: "Τέταρτο",
       title: "422",
       building: "Η",
@@ -2797,7 +2797,7 @@ export const mapData = [
       elevatory: 37,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/4%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/4ht.jpg",
       floor: "Τέταρτο",
       title: "423",
       building: "Η",
@@ -2809,7 +2809,7 @@ export const mapData = [
       elevatory: 37,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/4%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/4ht.jpg",
       floor: "Τέταρτο",
       title: "425",
       building: "Η",
@@ -2821,7 +2821,7 @@ export const mapData = [
       elevatory: 37,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/4%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/4ht.jpg",
       floor: "Τέταρτο",
       title: "426",
       building: "Η",
@@ -2833,7 +2833,7 @@ export const mapData = [
       elevatory: 37,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/4%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/4ht.jpg",
       floor: "Τέταρτο",
       title: "427",
       building: "Η",
@@ -2845,7 +2845,7 @@ export const mapData = [
       elevatory: 37,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/4%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/4ht.jpg",
       floor: "Τέταρτο",
       title: "428",
       building: "Η",
@@ -2857,7 +2857,7 @@ export const mapData = [
       elevatory: 37,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/4%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/4ht.jpg",
       floor: "Τέταρτο",
       title: "430",
       building: "Η",
@@ -2869,7 +2869,7 @@ export const mapData = [
       elevatory: 37,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/4%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/4ht.jpg",
       floor: "Τέταρτο",
       title: "431",
       building: "Η",
@@ -2881,7 +2881,7 @@ export const mapData = [
       elevatory: 37,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/4%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/4ht.jpg",
       floor: "Τέταρτο",
       title: "432",
       building: "Η",
@@ -2893,7 +2893,7 @@ export const mapData = [
       elevatory: 37,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/4%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/4ht.jpg",
       floor: "Τέταρτο",
       title: "433",
       building: "Η",
@@ -2905,7 +2905,7 @@ export const mapData = [
       elevatory: 37,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/4%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/4ht.jpg",
       floor: "Τέταρτο",
       title: "434",
       building: "Η",
@@ -2917,7 +2917,7 @@ export const mapData = [
       elevatory: 37,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/4%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/4ht.jpg",
       floor: "Τέταρτο",
       title: "435",
       building: "Η",
@@ -2929,7 +2929,7 @@ export const mapData = [
       elevatory: 37,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/4%CE%B7%CE%B8.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/4ht.jpg",
       floor: "Τέταρτο",
       title: "436",
       building: "Η",
@@ -2942,7 +2942,7 @@ export const mapData = [
     },
     //2ΟΣ ΟΡΟΦΟΣ, ΚΤΗΡΙΟ Κ
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/2%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/2kz.jpg",
       floor: "Δεύτερο",
       title: "200",
       building: "Κ",
@@ -2954,7 +2954,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/2%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/2kz.jpg",
       floor: "Δεύτερο",
       title: "201",
       building: "Κ",
@@ -2966,7 +2966,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/2%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/2kz.jpg",
       floor: "Δεύτερο",
       title: "202",
       building: "Κ",
@@ -2978,7 +2978,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/2%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/2kz.jpg",
       floor: "Δεύτερο",
       title: "203",
       building: "Κ",
@@ -2990,7 +2990,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/2%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/2kz.jpg",
       floor: "Δεύτερο",
       title: "205",
       building: "Κ",
@@ -3002,7 +3002,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/2%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/2kz.jpg",
       floor: "Δεύτερο",
       title: "206",
       building: "Κ",
@@ -3014,7 +3014,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/2%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/2kz.jpg",
       floor: "Δεύτερο",
       title: "207",
       building: "Κ",
@@ -3026,7 +3026,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/2%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/2kz.jpg",
       floor: "Δεύτερο",
       title: "208",
       building: "Κ",
@@ -3038,7 +3038,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/2%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/2kz.jpg",
       floor: "Δεύτερο",
       title: "210",
       building: "Κ",
@@ -3050,7 +3050,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/2%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/2kz.jpg",
       floor: "Δεύτερο",
       title: "211",
       building: "Κ",
@@ -3062,7 +3062,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/2%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/2kz.jpg",
       floor: "Δεύτερο",
       title: "212",
       building: "Κ",
@@ -3073,7 +3073,7 @@ export const mapData = [
       elevatorx: 93,
       elevatory: 87,
     },    {
-      imageURL: "https://opensource.uom.gr/uom_maps/2%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/2kz.jpg",
       floor: "Δεύτερο",
       title: "213",
       building: "Κ",
@@ -3085,7 +3085,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/2%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/2kz.jpg",
       floor: "Δεύτερο",
       title: "214α",
       building: "Κ",
@@ -3097,7 +3097,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/2%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/2kz.jpg",
       floor: "Δεύτερο",
       title: "214",
       building: "Κ",
@@ -3109,7 +3109,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/2%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/2kz.jpg",
       floor: "Δεύτερο",
       title: "215",
       building: "Κ",
@@ -3122,7 +3122,7 @@ export const mapData = [
     },
     //2ΟΣ ΟΡΟΦΟΣ, ΚΤΗΡΙΟ Ζ
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/2%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/2kz.jpg",
       floor: "Δεύτερο",
       title: "220",
       building: "Ζ",
@@ -3134,7 +3134,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/2%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/2kz.jpg",
       floor: "Δεύτερο",
       title: "221α",
       building: "Ζ",
@@ -3146,7 +3146,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/2%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/2kz.jpg",
       floor: "Δεύτερο",
       title: "221β",
       building: "Ζ",
@@ -3158,7 +3158,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/2%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/2kz.jpg",
       floor: "Δεύτερο",
       title: "222",
       building: "Ζ",
@@ -3170,7 +3170,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/2%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/2kz.jpg",
       floor: "Δεύτερο",
       title: "223",
       building: "Ζ",
@@ -3182,7 +3182,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/2%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/2kz.jpg",
       floor: "Δεύτερο",
       title: "225",
       building: "Ζ",
@@ -3194,7 +3194,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/2%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/2kz.jpg",
       floor: "Δεύτερο",
       title: "226",
       building: "Ζ",
@@ -3206,7 +3206,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/2%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/2kz.jpg",
       floor: "Δεύτερο",
       title: "227",
       building: "Ζ",
@@ -3218,7 +3218,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/2%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/2kz.jpg",
       floor: "Δεύτερο",
       title: "228",
       building: "Ζ",
@@ -3230,7 +3230,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/2%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/2kz.jpg",
       floor: "Δεύτερο",
       title: "230",
       building: "Ζ",
@@ -3242,7 +3242,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/2%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/2kz.jpg",
       floor: "Δεύτερο",
       title: "231",
       building: "Ζ",
@@ -3254,7 +3254,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/2%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/2kz.jpg",
       floor: "Δεύτερο",
       title: "232α",
       building: "Ζ",
@@ -3266,7 +3266,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/2%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/2kz.jpg",
       floor: "Δεύτερο",
       title: "232β",
       building: "Ζ",
@@ -3278,7 +3278,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/2%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/2kz.jpg",
       floor: "Δεύτερο",
       title: "233",
       building: "Ζ",
@@ -3290,7 +3290,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/2%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/2kz.jpg",
       floor: "Δεύτερο",
       title: "234α",
       building: "Ζ",
@@ -3302,7 +3302,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/2%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/2kz.jpg",
       floor: "Δεύτερο",
       title: "234β",
       building: "Ζ",
@@ -3314,7 +3314,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/2%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/2kz.jpg",
       floor: "Δεύτερο",
       title: "234γ",
       building: "Ζ",
@@ -3326,7 +3326,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/2%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/2kz.jpg",
       floor: "Δεύτερο",
       title: "234δ",
       building: "Ζ",
@@ -3338,7 +3338,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/2%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/2kz.jpg",
       floor: "Δεύτερο",
       title: "235",
       building: "Ζ",
@@ -3351,7 +3351,7 @@ export const mapData = [
     },
     //3ΟΣ ΟΡΟΦΟΣ, ΚΤΗΡΙΟ Κ
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/3%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/3kz.jpg",
       floor: "Τρίτο",
       title: "301",
       building: "Κ",
@@ -3363,7 +3363,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/3%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/3kz.jpg",
       floor: "Τρίτο",
       title: "301α",
       building: "Κ",
@@ -3375,7 +3375,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/3%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/3kz.jpg",
       floor: "Τρίτο",
       title: "302",
       building: "Κ",
@@ -3387,7 +3387,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/3%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/3kz.jpg",
       floor: "Τρίτο",
       title: "303",
       building: "Κ",
@@ -3399,7 +3399,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/3%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/3kz.jpg",
       floor: "Τρίτο",
       title: "305",
       building: "Κ",
@@ -3411,7 +3411,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/3%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/3kz.jpg",
       floor: "Τρίτο",
       title: "306",
       building: "Κ",
@@ -3423,7 +3423,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/3%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/3kz.jpg",
       floor: "Τρίτο",
       title: "307",
       building: "Κ",
@@ -3435,7 +3435,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/3%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/3kz.jpg",
       floor: "Τρίτο",
       title: "308",
       building: "Κ",
@@ -3447,7 +3447,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/3%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/3kz.jpg",
       floor: "Τρίτο",
       title: "310",
       building: "Κ",
@@ -3459,7 +3459,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/3%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/3kz.jpg",
       floor: "Τρίτο",
       title: "311",
       building: "Κ",
@@ -3471,7 +3471,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/3%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/3kz.jpg",
       floor: "Τρίτο",
       title: "312α",
       building: "Κ",
@@ -3483,7 +3483,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/3%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/3kz.jpg",
       floor: "Τρίτο",
       title: "312β",
       building: "Κ",
@@ -3495,7 +3495,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/3%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/3kz.jpg",
       floor: "Τρίτο",
       title: "313",
       building: "Κ",
@@ -3507,7 +3507,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/3%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/3kz.jpg",
       floor: "Τρίτο",
       title: "314",
       building: "Κ",
@@ -3519,7 +3519,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/3%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/3kz.jpg",
       floor: "Τρίτο",
       title: "315",
       building: "Κ",
@@ -3531,7 +3531,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/3%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/3kz.jpg",
       floor: "Τρίτο",
       title: "316",
       building: "Κ",
@@ -3544,7 +3544,7 @@ export const mapData = [
     },
     //3ΟΣ ΟΡΟΦΟΣ, ΚΤΗΡΙΟ Ζ
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/3%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/3kz.jpg",
       floor: "Τρίτο",
       title: "321α",
       building: "Ζ",
@@ -3556,7 +3556,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/3%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/3kz.jpg",
       floor: "Τρίτο",
       title: "321",
       building: "Ζ",
@@ -3568,7 +3568,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/3%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/3kz.jpg",
       floor: "Τρίτο",
       title: "322",
       building: "Ζ",
@@ -3580,7 +3580,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/3%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/3kz.jpg",
       floor: "Τρίτο",
       title: "323",
       building: "Ζ",
@@ -3592,7 +3592,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/3%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/3kz.jpg",
       floor: "Τρίτο",
       title: "325",
       building: "Ζ",
@@ -3604,7 +3604,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/3%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/3kz.jpg",
       floor: "Τρίτο",
       title: "326",
       building: "Ζ",
@@ -3616,7 +3616,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/3%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/3kz.jpg",
       floor: "Τρίτο",
       title: "327",
       building: "Ζ",
@@ -3628,7 +3628,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/3%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/3kz.jpg",
       floor: "Τρίτο",
       title: "328",
       building: "Ζ",
@@ -3640,7 +3640,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/3%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/3kz.jpg",
       floor: "Τρίτο",
       title: "329",
       building: "Ζ",
@@ -3652,7 +3652,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/3%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/3kz.jpg",
       floor: "Τρίτο",
       title: "330",
       building: "Ζ",
@@ -3664,7 +3664,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/3%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/3kz.jpg",
       floor: "Τρίτο",
       title: "331",
       building: "Ζ",
@@ -3676,7 +3676,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/3%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/3kz.jpg",
       floor: "Τρίτο",
       title: "332α",
       building: "Ζ",
@@ -3688,7 +3688,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/3%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/3kz.jpg",
       floor: "Τρίτο",
       title: "332β",
       building: "Ζ",
@@ -3700,7 +3700,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/3%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/3kz.jpg",
       floor: "Τρίτο",
       title: "333",
       building: "Ζ",
@@ -3712,7 +3712,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/3%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/3kz.jpg",
       floor: "Τρίτο",
       title: "334-335",
       building: "Ζ",
@@ -3724,7 +3724,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/3%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/3kz.jpg",
       floor: "Τρίτο",
       title: "336",
       building: "Ζ",
@@ -3737,7 +3737,7 @@ export const mapData = [
     },
     //4ΟΣ ΟΡΟΦΟΣ, ΚΤΗΡΙΟ Κ
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/4%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/4kz.jpg",
       floor: "Τέταρτο",
       title: "401",
       building: "Κ",
@@ -3749,7 +3749,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/4%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/4kz.jpg",
       floor: "Τέταρτο",
       title: "402",
       building: "Κ",
@@ -3761,7 +3761,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/4%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/4kz.jpg",
       floor: "Τέταρτο",
       title: "403",
       building: "Κ",
@@ -3773,7 +3773,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/4%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/4kz.jpg",
       floor: "Τέταρτο",
       title: "405",
       building: "Κ",
@@ -3785,7 +3785,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/4%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/4kz.jpg",
       floor: "Τέταρτο",
       title: "406",
       building: "Κ",
@@ -3797,7 +3797,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/4%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/4kz.jpg",
       floor: "Τέταρτο",
       title: "407",
       building: "Κ",
@@ -3809,7 +3809,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/4%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/4kz.jpg",
       floor: "Τέταρτο",
       title: "408",
       building: "Κ",
@@ -3821,7 +3821,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/4%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/4kz.jpg",
       floor: "Τέταρτο",
       title: "409",
       building: "Κ",
@@ -3833,7 +3833,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/4%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/4kz.jpg",
       floor: "Τέταρτο",
       title: "410",
       building: "Κ",
@@ -3845,7 +3845,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/4%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/4kz.jpg",
       floor: "Τέταρτο",
       title: "411",
       building: "Κ",
@@ -3857,7 +3857,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/4%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/4kz.jpg",
       floor: "Τέταρτο",
       title: "412",
       building: "Κ",
@@ -3869,7 +3869,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/4%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/4kz.jpg",
       floor: "Τέταρτο",
       title: "413",
       building: "Κ",
@@ -3881,7 +3881,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/4%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/4kz.jpg",
       floor: "Τέταρτο",
       title: "414",
       building: "Κ",
@@ -3893,7 +3893,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/4%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/4kz.jpg",
       floor: "Τέταρτο",
       title: "415",
       building: "Κ",
@@ -3906,7 +3906,7 @@ export const mapData = [
     },
     //4ΟΣ ΟΡΟΦΟΣ, ΚΤΗΡΙΟ Ζ 
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/4%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/4kz.jpg",
       floor: "Τέταρτο",
       title: "421β",
       building: "Ζ",
@@ -3918,7 +3918,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/4%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/4kz.jpg",
       floor: "Τέταρτο",
       title: "421α",
       building: "Ζ",
@@ -3930,7 +3930,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/4%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/4kz.jpg",
       floor: "Τέταρτο",
       title: "422",
       building: "Ζ",
@@ -3942,7 +3942,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/4%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/4kz.jpg",
       floor: "Τέταρτο",
       title: "423",
       building: "Ζ",
@@ -3954,7 +3954,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/4%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/4kz.jpg",
       floor: "Τέταρτο",
       title: "425",
       building: "Ζ",
@@ -3966,7 +3966,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/4%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/4kz.jpg",
       floor: "Τέταρτο",
       title: "426",
       building: "Ζ",
@@ -3978,7 +3978,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/4%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/4kz.jpg",
       floor: "Τέταρτο",
       title: "427",
       building: "Ζ",
@@ -3990,7 +3990,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/4%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/4kz.jpg",
       floor: "Τέταρτο",
       title: "428",
       building: "Ζ",
@@ -4002,7 +4002,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/4%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/4kz.jpg",
       floor: "Τέταρτο",
       title: "430",
       building: "Ζ",
@@ -4014,7 +4014,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/4%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/4kz.jpg",
       floor: "Τέταρτο",
       title: "431",
       building: "Ζ",
@@ -4026,7 +4026,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/4%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/4kz.jpg",
       floor: "Τέταρτο",
       title: "432α",
       building: "Ζ",
@@ -4038,7 +4038,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/4%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/4kz.jpg",
       floor: "Τέταρτο",
       title: "432β",
       building: "Ζ",
@@ -4050,7 +4050,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/4%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/4kz.jpg",
       floor: "Τέταρτο",
       title: "433",
       building: "Ζ",
@@ -4062,7 +4062,7 @@ export const mapData = [
       elevatory: 87,
     },
     {
-      imageURL: "https://opensource.uom.gr/uom_maps/4%CE%BA%CE%B6.jpg",
+      imageURL: "https://opensource.uom.gr/uom_maps/4kz.jpg",
       floor: "Τέταρτο",
       title: "434-435",
       building: "Ζ",
