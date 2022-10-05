@@ -37,7 +37,7 @@ export const schedulesData = new Map([
     DEPARTMENTS[4],
     {
       semester:
-        "https://www.uom.gr/assets/site/public/nodes/5180/14371-accfin-orologio-programma-xeimerino-2022-2023-20220929.pdf",
+        "https://www.uom.gr/assets/site/public/nodes/5180/14494-accfin-orologio-programma-xeimerino-2022-2023-20221005.pdf",
       exam: "https://www.uom.gr/assets/site/public/nodes/4975/13804-accfin-exetaseis-september-2022-20220722.pdf",
     },
   ],
@@ -53,7 +53,7 @@ export const schedulesData = new Map([
     DEPARTMENTS[6],
     {
       semester:
-        "https://www.uom.gr/assets/site/public/nodes/3653/14433-neoprogrammadidaskalias_xeimerinou.xlsx",
+        "https://www.uom.gr/assets/site/public/nodes/3653/14480-neoprogrammadidaskalias_xeimerinou.xlsx",
       exam: "https://www.uom.gr/assets/site/public/nodes/3654/13750-september_programmeexamslast.xls",
     },
   ],
