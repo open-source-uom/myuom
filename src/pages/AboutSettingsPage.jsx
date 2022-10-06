@@ -23,7 +23,7 @@ function AboutSettingsPage() {
       <Text marginTop="1em" fontSize={{ sm: 26, md: 30, lg: 34, xl: 38 }}>
         myUoM για κινητά
         <br />
-        Έκδοση v0.0.1
+        Έκδοση v1.0.0
         <br />
         <br />
       </Text>
