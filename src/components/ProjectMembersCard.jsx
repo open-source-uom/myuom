@@ -20,6 +20,7 @@ import {
   ModalBody,
   ModalCloseButton,
 } from "@chakra-ui/react";
+import { SocialIcon } from "react-social-icons";
 
 export default function ProjectMembersCard({ data }) {
   const SelectBorderColor = () => {
@@ -32,7 +33,7 @@ export default function ProjectMembersCard({ data }) {
 
   return (
     <Box
-      w="95%"
+      w="50%"
       borderRadius="20"
       overflow="hidden"
       border="2px"
@@ -78,18 +79,16 @@ export default function ProjectMembersCard({ data }) {
             <AccordionIcon />
           </AccordionButton>
         </Flex>
-        <AccordionPanel bgColor="transparent" pb={0} textAlign="center">
-          <Flex direction="column" alignItems="start" fontFamily="Syne">
-            <Text fontWeight="bold" fontSize={{ sm: 12, md: 13, lg: 15 }}>
-              Social Media: {data.socialMedia}
-            </Text>
-            <Text fontWeight="normal" fontSize={{ sm: 12, md: 13, lg: 15 }}>
-              {data.socialMedia}
-            </Text>
-
-            <Text fontWeight="bold" fontSize={{ sm: 12, md: 13, lg: 15 }}>
-              Email: {data.email}
-            </Text>
+        <AccordionPanel bgColor="transparent" pb={0}>
+          <Flex direction="row" alignItems="start" fontFamily="Syne">
+            <SocialIcon
+              url={data.email}
+              style={{ marginRight: "0.5rem", marginBottom: "1rem" }}
+            />
+            <SocialIcon
+              url={data.socialMedia}
+              style={{ marginRight: "0.5rem" }}
+            />
           </Flex>
         </AccordionPanel>
       </AccordionItem>

@@ -72,9 +72,9 @@ function AboutSettingsPage() {
       </Box>
       <Text
         fontSize={{ sm: 15, md: 18, lg: 23, xl: 27 }}
-        textAlign="left"
-        mt="1rem"
-        mx="1rem"
+        textAlign="center"
+        mt="2rem"
+        mx="2rem"
       >
         Τα μέλη της ομάδας Ανάπτυξης
       </Text>
