@@ -31,11 +31,9 @@ export default function ProjectMembersCard({ data }) {
     return useColorModeValue("black", "white");
   };
 
-
-
   return (
     <Box
-      w="50%"
+      w={{ sm: "95%", md: "75%", lg: "50%" }}
       borderRadius="20"
       overflow="hidden"
       border="2px"
