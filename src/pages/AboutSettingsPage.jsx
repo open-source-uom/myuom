@@ -7,7 +7,10 @@ import {
   Stack,
   Text,
   VStack,
+  Accordion,
 } from "@chakra-ui/react";
+import membersData from "../assets/projectMembers";
+import ProjectMembersCard from "../components/ProjectMembersCard";
 import UoMLogo from "../assets/myUOMLogo.png";
 import { SocialIcon } from "react-social-icons";
 
@@ -67,6 +70,19 @@ function AboutSettingsPage() {
           style={{ marginRight: "0.5rem" }}
         />
       </Box>
+      <Text
+        fontSize={{ sm: 15, md: 18, lg: 23, xl: 27 }}
+        textAlign="center"
+        mt="2rem"
+        mx="2rem"
+      >
+        Τα μέλη της ομάδας Ανάπτυξης
+      </Text>
+      <Accordion allowToggle mt="1rem">
+        {membersData.map((data) => (
+          <ProjectMembersCard data={data} key={data.name} />
+        ))}
+      </Accordion>
     </Box>
   );
 }
