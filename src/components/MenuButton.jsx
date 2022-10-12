@@ -32,6 +32,7 @@ import {
   FaFileAlt,
   FaShareAlt,
   FaGitlab,
+  FaBook,
 } from "react-icons/fa";
 import { DepartmentContext } from "../contexts/departmentContext";
 import { DEPARTMENTS } from "../assets/DepNames";
@@ -41,7 +42,6 @@ export default function MenuButton() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { colorMode, toggleColorMode } = useColorMode();
   const { depName, changeDepartmentName } = useContext(DepartmentContext);
-
 
   const handleChange = (e) => {
     e.preventDefault();
@@ -58,16 +58,16 @@ export default function MenuButton() {
     navigator.share(shareOpts);
   };
 
-  useEffect(()=> {
-    window.addEventListener('popstate', () => {
+  useEffect(() => {
+    window.addEventListener("popstate", () => {
       onClose();
-    }) 
-  },[])
+    });
+  }, []);
 
   const handleClick = () => {
-    window.history.pushState(null,'','/')
+    window.history.pushState(null, "", "/");
     onOpen();
-  }
+  };
 
   return (
     <>
@@ -213,6 +213,22 @@ export default function MenuButton() {
                       ml="0.5rem"
                     >
                       Άδεια χρήσης
+                    </Text>
+                  </Box>
+                </a>
+                <a
+                  href="https://gitlab.com/opensourceuom/myUoM"
+                  target="_blank"
+                >
+                  <Box display="flex" justifyContent={"start"} my={"1.5rem"}>
+                    <FaBook size="1.5rem" />
+                    <Text
+                      as="span"
+                      fontWeight={"bold"}
+                      fontSize="xl"
+                      ml="0.5rem"
+                    >
+                      Εγχειρίδιο εφαρμογής
                     </Text>
                   </Box>
                 </a>
