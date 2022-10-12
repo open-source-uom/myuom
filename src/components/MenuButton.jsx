@@ -255,7 +255,7 @@ export default function MenuButton() {
                   </Box>
                 </a>
                 <a
-                  href="https://gitlab.com/opensourceuom/myUoM/-/blobmyUoM%20-%20User%20Documentation.pdf"
+                  href="https://drive.google.com/file/d/1SpkIMa7EXiAo-SpGZzbSDk9i8kn4xtkk/view?usp=sharing"
                   target="_blank"
                 >
                   <Box display="flex" justifyContent={"start"} my={"1.5rem"}>
