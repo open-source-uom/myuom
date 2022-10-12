@@ -43,7 +43,7 @@ export const schedulesData = new Map([
     DEPARTMENTS[0],
     {
       semester:
-        "https://www.uom.gr/assets/site/public/nodes/4635/14405-BSAS_orologio_programma_xeimerino_2022_2023_arxiko1.pdf",
+        "https://www.uom.gr/assets/site/public/nodes/4635/14544-Orologio-Programma-Xeimerinoy-2022-2023.pdf",
       exam: "https://www.uom.gr/assets/site/public/nodes/4636/13840-Eksetastiki_Septembrios_2022.pdfs",
     },
   ],
@@ -51,7 +51,7 @@ export const schedulesData = new Map([
     DEPARTMENTS[1],
     {
       semester:
-        "https://www.uom.gr/assets/site/public/nodes/4549/14344-2022_23_xeimerino1.pdf",
+        "https://www.uom.gr/assets/site/public/nodes/4549/14545-2022_23_xeimerino2.pdf",
       exam: "https://www.uom.gr/assets/site/public/nodes/4550/13808-PROGRAMMA_EXETASEON_SEPTEMVRIOU_2022.pdf",
     },
   ],
@@ -75,7 +75,7 @@ export const schedulesData = new Map([
     DEPARTMENTS[4],
     {
       semester:
-        "https://www.uom.gr/assets/site/public/nodes/5180/14494-accfin-orologio-programma-xeimerino-2022-2023-20221005.pdf",
+        "https://www.uom.gr/assets/site/public/nodes/5180/14507-accfin-orologio-programma-xeimerino-2022-2023-20221006.pdf",
       exam: "https://www.uom.gr/assets/site/public/nodes/4975/13804-accfin-exetaseis-september-2022-20220722.pdf",
     },
   ],
@@ -99,7 +99,7 @@ export const schedulesData = new Map([
     DEPARTMENTS[7],
     {
       semester:
-        "https://www.uom.gr/assets/site/public/nodes/12268/14197-ODE_xeimerino_2022-2023.pdf",
+        "https://www.uom.gr/assets/site/public/nodes/12268/14532-2022-2023_xeimerino_ode_v1.pdf",
       exam: "https://www.uom.gr/assets/site/public/nodes/7471/13678-ODE_September_2022.pdf",
     },
   ],
