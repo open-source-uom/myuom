@@ -657,7 +657,7 @@ const profData = [
     tel: "2310 891.886",
     email: "achat@uom.edu.gr",
     building: "Γ3",
-    office: "236",
+    office: "326",
   },
   {
     imgUrl: "https://www.uom.gr/assets/site/public/nodes/1526/1678-ealex-2.jpg",
