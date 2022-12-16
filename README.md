@@ -19,16 +19,16 @@
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 
-[![Forks][forks-shield]][https://gitlab.com/opensourceuom/myuom/-/forks]
-[![Stargazers][stars-shield]][https://gitlab.com/opensourceuom/myuom/-/starrers]
-[![Issues][issues-shield]][https://gitlab.com/opensourceuom/myuom/-/issues]
-[![MIT License][license-shield]][https://gitlab.com/opensourceuom/myuom/-/blob/main/license]
-[![LinkedIn][linkedin-shield]][https://www.linkedin.com/company/80766091]
+[![Forks][forks-shield]](https://gitlab.com/opensourceuom/myUoM/-/forks)
+[![Stargazers][stars-shield]](https://gitlab.com/opensourceuom/myUoM/-/starrers)
+[![Issues][issues-shield]](https://gitlab.com/opensourceuom/myUoM/-/issues)
+[![MIT License][license-shield]](https://gitlab.com/opensourceuom/myUoM/-/blob/main/LICENSE)
+[![LinkedIn][linkedin-shield]](https://www.linkedin.com/company/80766091)
 
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-    <img src="assets/myUOMLogo.png" alt="Logo" width="80" height="80">
+    <img src="src/assets/myUOMLogo.png" alt="Logo" width="80" height="80">
   <h3 align="center">myUoM</h3>
 
   <p align="center">
@@ -65,7 +65,7 @@
 
 ## About The Project
 
-The myUoM app is a project of the Open Software Team of Applied Informatics, University of Macedonia (http://opensource.uom.gr).
+The myUoM app is a project of the Open Software Team of Applied Informatics, University of Macedonia (https://opensource.uom.gr).
 It was designed to facilitate students' daily interactions with the university.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -97,7 +97,7 @@ Don't forget to give the project a star! Thanks again!
 
 ## License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+Distributed under the MIT License. See [`LICENSE`](https://gitlab.com/opensourceuom/myUoM/-/blob/main/LICENSE) for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -110,3 +110,14 @@ Open Source UoM - [@opensource_uom](https://twitter.com/opensource_uom) - linux-
 Project Link: [https://gitlab.com/opensourceuom/myUoM](https://gitlab.com/opensourceuom/myUoM)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/gitlab/contributors/opensourceuom/myUoM?style=for-the-badge
+[forks-shield]: https://img.shields.io/gitlab/forks/opensourceuom/myUoM?style=for-the-badge
+[stars-shield]: https://img.shields.io/gitlab/stars/opensourceuom/myUoM?style=for-the-badge
+[issues-shield]: https://img.shields.io/gitlab/issues/open/opensourceuom/myUoM?style=for-the-badge
+[license-shield]: https://img.shields.io/gitlab/license/opensourceuom/myUoM?style=for-the-badge
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[react.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[react-url]: https://reactjs.org/
