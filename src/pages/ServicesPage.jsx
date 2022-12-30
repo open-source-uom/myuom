@@ -48,35 +48,10 @@ import {
 } from "@chakra-ui/react";
 import { servicesData } from "../assets/services";
 import ServicesCard from "../components/ServicesCard";
-
+import { servicesData as allServices } from "../assets/constants";
 export default function ServicesPage() {
-  const [officeServicesArray, setOfficeServicesArray] = useState([]);
-  const [societyServicesArray, setSocietyServicesArray] = useState([]);
-  const [restServicesArray, setRestServicesArray] = useState([]);
-
-  const getOfficeServices = () =>
-    servicesData.filter((srv) => srv.category === "Γραφείο");
-
-  const getSocietyServices = () =>
-    servicesData.filter((srv) => srv.category === "Σύλλογος");
-
-  const getRestServices = () =>
-    servicesData.filter((srv) => srv.category === "Υπόλοιπες");
-
-  useEffect(() => {
-    const officeServicesList = getOfficeServices();
-    setOfficeServicesArray(officeServicesList);
-  }, []);
-
-  useEffect(() => {
-    const societyServicesList = getSocietyServices();
-    setSocietyServicesArray(societyServicesList);
-  }, []);
-
-  useEffect(() => {
-    const restServicesList = getRestServices();
-    setRestServicesArray(restServicesList);
-  }, []);
+  const servicesOrdered = allServices.sort((a, b) => a.index - b.index);
+  console.log(servicesOrdered, "hello");
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -90,26 +65,20 @@ export default function ServicesPage() {
         colorScheme={useColorModeValue("#0050e0", "#f3f3f3")}
       >
         <TabList flex="1">
-          <Tab>Γραφεία</Tab>
-          <Tab>Φοιτητικοί σύλλογοι</Tab>
-          <Tab>Υπόλοιπες υπηρεσίες</Tab>
+          {servicesOrdered.map((service) => {
+            return <Tab>{service.tabName}</Tab>;
+          })}
         </TabList>
         <TabPanels>
-          <TabPanel>
-            {officeServicesArray.map((srv) => {
-              return <ServicesCard srv={srv} key={srv.url} />;
-            })}
-          </TabPanel>
-          <TabPanel>
-            {societyServicesArray.map((srv) => {
-              return <ServicesCard srv={srv} key={srv.url} />;
-            })}
-          </TabPanel>
-          <TabPanel>
-            {restServicesArray.map((srv) => {
-              return <ServicesCard srv={srv} key={srv.url} />;
-            })}
-          </TabPanel>
+          {servicesOrdered.map(({ services }) => {
+            return (
+              <TabPanel>
+                {services.map((service) => {
+                  return <ServicesCard srv={service} key={service.url} />;
+                })}
+              </TabPanel>
+            );
+          })}
         </TabPanels>
       </Tabs>
     </Box>

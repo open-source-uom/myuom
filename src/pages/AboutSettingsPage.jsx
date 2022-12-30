@@ -51,7 +51,7 @@ import membersData from "../assets/projectMembers";
 import ProjectMembersCard from "../components/ProjectMembersCard";
 import UoMLogo from "../assets/myUOMLogo.png";
 import { SocialIcon } from "react-social-icons";
-
+import { SOCIAL_MEDIA_URLS } from "../assets/constants";
 function AboutSettingsPage() {
   return (
     <Box
@@ -80,31 +80,31 @@ function AboutSettingsPage() {
       </Text>
       <Box paddingTop="10px">
         <SocialIcon
-          url="https://www.facebook.com/OpenSourceUoM/"
+          url={SOCIAL_MEDIA_URLS.facebook}
           style={{ marginRight: "0.5rem" }}
         />
         <SocialIcon
-          url="https://www.instagram.com/opensourceuom/"
+          url={SOCIAL_MEDIA_URLS.instagram}
           style={{ marginRight: "0.5rem" }}
         />
         <SocialIcon
-          url="https://www.youtube.com/channel/UC98Ggzq6dl_nn5Y0BHb6SLA?sub_confirmation=1"
+          url={SOCIAL_MEDIA_URLS.youtube}
           style={{ marginRight: "0.5rem" }}
         />
         <SocialIcon
-          url="https://twitter.com/opensource_uom"
+          url={SOCIAL_MEDIA_URLS.twitter}
           style={{ marginRight: "0.5rem" }}
         />
         <SocialIcon
-          url="https://www.linkedin.com/company/80766091/"
+          url={SOCIAL_MEDIA_URLS.LinkedIn}
           style={{ marginRight: "0.5rem" }}
         />
         <SocialIcon
-          url="https://gitlab.com/opensourceuom"
+          url={SOCIAL_MEDIA_URLS.gitlab}
           style={{ marginRight: "0.5rem" }}
         />
         <SocialIcon
-          url="https://discord.com/invite/XtxtM3ZHUm"
+          url={SOCIAL_MEDIA_URLS.discord}
           style={{ marginRight: "0.5rem" }}
         />
       </Box>

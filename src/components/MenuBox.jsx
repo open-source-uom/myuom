@@ -83,10 +83,6 @@ export default function MenuBox({ category }) {
       : navigate(route);
   };
 
-  useEffect(() => {
-    // if (requireSelection) console.log(title);
-  }, []);
-
   const handleSelection = () => {
     const id = "1";
     if (requireSelection && !depName) {
