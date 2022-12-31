@@ -36,17 +36,7 @@
 
 */
 
-import {
-  Box,
-  Button,
-  HStack,
-  Icon,
-  Image,
-  Stack,
-  Text,
-  VStack,
-  Accordion,
-} from "@chakra-ui/react";
+import { Box, Image, Text, Accordion } from "@chakra-ui/react";
 import membersData from "../assets/projectMembers";
 import ProjectMembersCard from "../components/ProjectMembersCard";
 import UoMLogo from "../assets/myUOMLogo.png";

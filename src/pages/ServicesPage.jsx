@@ -37,7 +37,7 @@
 */
 
 import { Box } from "@chakra-ui/react";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import {
   Tabs,
   TabList,
@@ -46,7 +46,6 @@ import {
   TabPanel,
   useColorModeValue,
 } from "@chakra-ui/react";
-import { servicesData } from "../assets/services";
 import ServicesCard from "../components/ServicesCard";
 import { servicesData as allServices } from "../assets/constants";
 export default function ServicesPage() {

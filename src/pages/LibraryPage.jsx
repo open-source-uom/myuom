@@ -36,22 +36,9 @@
 
 */
 
-import {
-  Flex,
-  Box,
-  Text,
-  Button,
-  Image,
-  HStack,
-  useColorModeValue,
-} from "@chakra-ui/react";
+import { Flex, Box, Text, Button, useColorModeValue } from "@chakra-ui/react";
 
-import {
-  TimeIcon,
-  PhoneIcon,
-  ExternalLinkIcon,
-  ArrowForwardIcon,
-} from "@chakra-ui/icons";
+import { TimeIcon, PhoneIcon } from "@chakra-ui/icons";
 import { LIBRARY_OPENING_HOURS, LIBRARY_PHONE_LIST } from "../assets/constants";
 export default function LibraryPage() {
   return (

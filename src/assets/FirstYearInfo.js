@@ -38,7 +38,8 @@
 
 const FirstYearInfo = [
   {
-    tab: "1",
+    index: 1,
+    tabOrder: 1,
     title: "Αίτηση εγγραφής επιτυχόντα/ούσας",
     content: [
       "Θα τη λάβετε από την Εφαρμογή Ηλεκτρονικής Εγγραφής στην Τριτοβάθμια Εκπαίδευση μέσω του παρακάτω συνδέσμου.",
@@ -51,8 +52,10 @@ const FirstYearInfo = [
     ],
     links: ["https://eregister.it.minedu.gov.gr/"],
   },
+
   {
-    tab: "2",
+    index: 1,
+    tabOrder: 2,
     title: "Είσοδος στη σελίδα UoM Register (1)",
     content: [
       "Στον παρακάτω σύνδεσμο χρησιμοποιείτε τα στοιχεία Κωδικός Υποψηφίου (θα τον βρείτε στην κάρτα με την οποία δώσατε εξετάσεις αλλά και στην αίτηση στο υπουργείο).",
@@ -65,7 +68,8 @@ const FirstYearInfo = [
     links: ["https://www.uom.gr/register"],
   },
   {
-    tab: "1",
+    index: 2,
+    tabOrder: 1,
     title: "Είσοδος στη σελίδα UoM Register (2)",
     content: [
       "Αρχικά εξασφαλίστε ότι έχετε διαθέσιμα σε ηλεκτρονική μορφή όλα τα δικαιολογητικά που απαιτούνται.",
@@ -82,7 +86,8 @@ const FirstYearInfo = [
     links: ["https://www.uom.gr/register", "https://www.photopea.com/"],
   },
   {
-    tab: "2",
+    index: 2,
+    tabOrder: 2,
     title: "Είσοδος στη σελίδα UoM Register (3)",
     content: [
       "Τη δήλωση αυτή μπορείτε να την εκτυπώσετε από τον παρακάτω σύνδεσμο και να την υπογράψετε σε κάποιο ΚΕΠ.",
@@ -104,7 +109,8 @@ const FirstYearInfo = [
     ],
   },
   {
-    tab: "1",
+    index: 3,
+    tabOrder: 1,
     title: "Ιδρυματικός Λογαριασμός",
     content: [
       "Να θυμάστε ότι έχετε δύο λογαριασμούς (έναν email & έναν για την είσοδό σας σε διαδικτυακές υπηρεσίες).",
@@ -119,7 +125,8 @@ const FirstYearInfo = [
     links: ["https://uregister.uom.gr/", "https://mypassword.uom.gr/"],
   },
   {
-    tab: "2",
+    index: 3,
+    tabOrder: 2,
     title: "Είσοδος-ενεργοποίηση ακαδημαϊκού email",
     content: [
       "Μεταβείτε στην παρακάτω διεύθυνση.",
@@ -129,7 +136,8 @@ const FirstYearInfo = [
     links: ["https://myaccount.google.com/?pli=1&nlr=1"],
   },
   {
-    tab: "1",
+    index: 4,
+    tabOrder: 1,
     title: "Ακαδημαϊκή Ταυτότητα",
     content: [
       "Μπορείτε να ζητήσετε ακαδημαϊκή ταυτότητα από την πρώτη διεύθυνση που θα βρείτε στους σχετικούς συνδέσμους.",
@@ -155,7 +163,8 @@ const FirstYearInfo = [
     ],
   },
   {
-    tab: "2",
+    index: 4,
+    tabOrder: 2,
     title: "Βιβλία από Εύδοξο",
     content: [
       "Μεταβείτε στη σελίδα δήλωσης συγγραμμάτων Εύδοξος που θα βρείτε στον πρώτο σύνδεσμο.",
@@ -174,7 +183,8 @@ const FirstYearInfo = [
     ],
   },
   {
-    tab: "1",
+    index: 5,
+    tabOrder: 1,
     title: "Εγγραφή στη Βιβλιοθήκη",
     content: [
       "Μεταβείτε στον πρώτο σύνδεσμο.",
@@ -189,7 +199,8 @@ const FirstYearInfo = [
     ],
   },
   {
-    tab: "2",
+    index: 5,
+    tabOrder: 2,
     title: "Εγγραφή στο Open eClass",
     content: [
       "Μεταβείτε στην ιστοσελίδα του Open eClass που θα βρείτε στον πρώτο σύνδεσμο.",
@@ -206,7 +217,8 @@ const FirstYearInfo = [
     links: ["https://openeclass.uom.gr/index.php?logout=yes"],
   },
   {
-    tab: "1",
+    index: 6,
+    tabOrder: 1,
     title: "Πληροφορίες για Σίτιση",
     content: [
       "Για όσους θα βρίσκονται Θεσσαλονίκη, θα χρειαστείτε και την κάρτα σίτισης.",
@@ -227,7 +239,8 @@ const FirstYearInfo = [
     ],
   },
   {
-    tab: "2",
+    index: 6,
+    tabOrder: 2,
     title: "Πληροφορίες για Στέγαση",
     content: [
       "Θα βρείτε στον πρώτο σύνδεσμο μία ανακοίνωση του ακαδημαϊκού έτους 2020-2021.",
@@ -243,7 +256,8 @@ const FirstYearInfo = [
     ],
   },
   {
-    tab: "2",
+    index: 6,
+    tabOrder: 3,
     title: "Πληροφορίες για Υγειονομική Περίθαλψη",
     content: [
       "Ως φοιτητές δικαιούστε και υγειονομική περίθαλψη. Θα βρείτε την ιστοσελίδα στον πρώτο σύνδεσμο.",
