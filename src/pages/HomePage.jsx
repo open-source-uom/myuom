@@ -52,10 +52,20 @@ const stagger = {
   },
 };
 
+function sortToPlaceInDefinedOrder(categories) {
+  return categories.sort((a, b) => a.position - b.position);
+}
+
+function filterOutHiddenPages(categories) {
+  return categories.filter(({ hide }) => hide === false);
+}
+
 export default function HomePage() {
   const [categoriesListForSearch, setCategoriesListForSearch] =
     useState(Categories);
-
+  const categoriesSorted = sortToPlaceInDefinedOrder(Categories);
+  const categoriesSortedAndWithoutHiddenPages =
+    filterOutHiddenPages(categoriesSorted);
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -91,7 +101,7 @@ export default function HomePage() {
             Η αναζήτηση δεν επέστρεψε αποτελέσματα.
           </Heading>
         ) : null}
-        {categoriesListForSearch.map((category) => (
+        {categoriesSortedAndWithoutHiddenPages.map((category) => (
           <MenuBox category={category} key={category.title} />
         ))}
       </Grid>

@@ -50,7 +50,7 @@ import { useNavigate } from "react-router-dom";
 import { DepartmentContext } from "../contexts/departmentContext";
 import { DEPARTMENTS } from "../assets/DepNames";
 import { motion } from "framer-motion";
-
+import { DiagonalRightArrowIcon, RightArrowIcon } from "../assets/icons";
 const rotateIn = {
   initial: {
     rotateX: "180deg",
@@ -146,45 +146,7 @@ export default function MenuBox({ category }) {
             "dark-mode-svg"
           )}`}
         >
-          {isExternal ? (
-            <svg
-              className="stroke-svg"
-              width="100%"
-              viewBox="0 0 10 10"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M0.873535 9L8.91951 1"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M0.873535 1H8.91951V9"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          ) : (
-            <svg
-              className="stroke-svg"
-              width="120%"
-              viewBox="0 0 11 11"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M1 5.66666H10.0575"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M5.52881 0.999985L10.0575 5.66665L5.52881 10.3333"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          )}
+          {isExternal ? <DiagonalRightArrowIcon /> : <RightArrowIcon />}
         </Box>
       </Flex>
       <Heading
