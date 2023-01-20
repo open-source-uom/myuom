@@ -36,24 +36,25 @@
 
 */
 
+
 const projectMembers = [
   {
     name: "Γεώργιος Δαυίδ Αποστολίδης",
     socialMedia: "https://www.linkedin.com/in/geoapos/",
     email: "mailto:geoapostolidis999@gmail.com",
-    img: "https://media-exp1.licdn.com/dms/image/C4E03AQF57CzUbeaM7g/profile-displayphoto-shrink_200_200/0/1657542475385?e=1669248000&v=beta&t=SyC0fFEvh71ZSUtl8JFzHxfOEoB-PSVlvFPLUvLuRug",
+    img: "https://opensource.uom.gr/myuom_members_pics/apostolidis.jpg",
   },
   {
     name: "Ευάγγελος Δάβιος",
     socialMedia: "https://www.linkedin.com/in/evaggelos-davios/",
     email: "mailto:evaggelosdavios@gmail.com",
-    img: "https://www.uom.gr/site/images/personphoto-1.jpg",
+    img: "https://opensource.uom.gr/myuom_members_pics/davios.jpg",
   },
   {
     name: "Ευστάθιος Ιωσηφίδης",
     socialMedia: "https://www.linkedin.com/in/eiosifidis/",
     email: "mailto:eiosifidis@gmail.com",
-    img: "https://media-exp1.licdn.com/dms/image/C4D03AQH1L7p-7_FvEA/profile-displayphoto-shrink_200_200/0/1577614383241?e=1669248000&v=beta&t=ktUc2NpwPmDlNohHvzg-jjBSCXDKxA3RhTqW6_I1aPE",
+    img: "https://opensource.uom.gr/myuom_members_pics/iosifidis.jpg",
   },
   {
     name: "Κωνσταντίνος Κωνσταντινίδης",
@@ -67,19 +68,19 @@ const projectMembers = [
     socialMedia:
       "https://www.linkedin.com/in/paraskevas-georgios-bakalis-6785591a9/",
     email: "mailto:parismpakalis@gmail.com",
-    img: "https://media-exp1.licdn.com/dms/image/C4D03AQG25BfGu0bHWw/profile-displayphoto-shrink_200_200/0/1660565078151?e=1670457600&v=beta&t=woze_s7v8yrBcS4Mbp4RYmoZh68wGvglFqzZYWivKNc",
+    img: "https://opensource.uom.gr/myuom_members_pics/bakalis.jpg",
   },
   {
     name: "Πρόδρομος Νάσης",
     socialMedia: "https://www.linkedin.com/in/prodromos-nasis-223ba420b/",
     email: "mailto:prodromos.nasis@gmail.com",
-    img: "https://media-exp1.licdn.com/dms/image/C4D03AQFQD2vsTckqNg/profile-displayphoto-shrink_200_200/0/1619518616023?e=1670457600&v=beta&t=zReEUkKOCrf0i8cCehyU8kotptyNQ77utOgVzX_sdAU",
+    img: "https://opensource.uom.gr/myuom_members_pics/nasis.jpg",
   },
   {
     name: "Σωκράτης Ομιλιάδης",
     socialMedia: "https://www.linkedin.com/in/socratesomiliadis/",
     email: "mailto:socrates@sohub.gr",
-    img: "https://media-exp1.licdn.com/dms/image/C4E03AQG1WgxeYJiCpQ/profile-displayphoto-shrink_200_200/0/1626335476706?e=1670457600&v=beta&t=mpTqKqnhWVJzKc8XdG_KouBvS0p8FMx1CkPPf2LI6tE",
+    img: "https://opensource.uom.gr/myuom_members_pics/omiliades.jpg",
   },
   {
     name: "Χρήστος Φανούριος Πατσούρας",
