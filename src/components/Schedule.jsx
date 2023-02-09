@@ -47,7 +47,7 @@ import {
   Flex,
   useColorModeValue,
 } from "@chakra-ui/react";
-
+import { RESTAURANT_HOURS } from "../assets/constants";
 function Schedule() {
   return (
     <Box
@@ -106,18 +106,82 @@ function Schedule() {
           >
             <Flex direction="column">
               <Text fontWeight="bold">Πρωινό:</Text>
-              <Text> 08:00-09:30</Text>
+              <Text>
+                {" "}
+                {RESTAURANT_HOURS.for_breakfast.on_weekdays.start.hours
+                  .toString()
+                  .padStart(2, "0")}
+                :
+                {RESTAURANT_HOURS.for_breakfast.on_weekdays.start.minutes
+                  .toString()
+                  .padStart(2, "0")}
+                -
+                {RESTAURANT_HOURS.for_breakfast.on_weekdays.end.hours
+                  .toString()
+                  .padStart(2, "0")}
+                :
+                {RESTAURANT_HOURS.for_breakfast.on_weekdays.end.minutes
+                  .toString()
+                  .padStart(2, "0")}
+              </Text>
             </Flex>
             <Flex direction="column">
               <Text fontWeight="bold">Μεσημεριανό:</Text>
               <Text align="center">
-                12:30-15:30<br></br>
-                13:00-15:30 (Σ/Κ και αργίες)
+                {RESTAURANT_HOURS.for_lunch.on_weekdays.start.hours
+                  .toString()
+                  .padStart(2, "0")}
+                :
+                {RESTAURANT_HOURS.for_lunch.on_weekdays.start.minutes
+                  .toString()
+                  .padStart(2, "0")}
+                -{" "}
+                {RESTAURANT_HOURS.for_lunch.on_weekdays.end.hours
+                  .toString()
+                  .padStart(2, "0")}
+                :
+                {RESTAURANT_HOURS.for_lunch.on_weekdays.end.minutes
+                  .toString()
+                  .padStart(2, "0")}
+                <br></br>
+                {RESTAURANT_HOURS.for_lunch.on_weekend.start.hours
+                  .toString()
+                  .padStart(2, "0")}
+                :
+                {RESTAURANT_HOURS.for_lunch.on_weekend.start.minutes
+                  .toString()
+                  .padStart(2, "0")}
+                -{" "}
+                {RESTAURANT_HOURS.for_lunch.on_weekend.end.hours
+                  .toString()
+                  .padStart(2, "0")}
+                :
+                {RESTAURANT_HOURS.for_lunch.on_weekend.end.minutes
+                  .toString()
+                  .padStart(2, "0")}{" "}
+                (Σ/Κ και αργίες)
               </Text>
             </Flex>
             <Flex direction="column">
               <Text fontWeight="bold">Βραδινό:</Text>
-              <Text> 18:00-20:00</Text>
+              <Text>
+                {" "}
+                {RESTAURANT_HOURS.for_dinner.on_weekdays.start.hours
+                  .toString()
+                  .padStart(2, "0")}
+                :
+                {RESTAURANT_HOURS.for_dinner.on_weekdays.start.minutes
+                  .toString()
+                  .padStart(2, "0")}
+                -{" "}
+                {RESTAURANT_HOURS.for_dinner.on_weekdays.end.hours
+                  .toString()
+                  .padStart(2, "0")}
+                :
+                {RESTAURANT_HOURS.for_dinner.on_weekdays.end.minutes
+                  .toString()
+                  .padStart(2, "0")}
+              </Text>
             </Flex>
           </Grid>
         </AccordionPanel>

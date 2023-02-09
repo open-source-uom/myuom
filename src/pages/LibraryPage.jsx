@@ -36,23 +36,10 @@
 
 */
 
-import {
-  Flex,
-  Box,
-  Text,
-  Button,
-  Image,
-  HStack,
-  useColorModeValue,
-} from "@chakra-ui/react";
+import { Flex, Box, Text, Button, useColorModeValue } from "@chakra-ui/react";
 
-import {
-  TimeIcon,
-  PhoneIcon,
-  ExternalLinkIcon,
-  ArrowForwardIcon,
-} from "@chakra-ui/icons";
-
+import { TimeIcon, PhoneIcon } from "@chakra-ui/icons";
+import { LIBRARY_OPENING_HOURS, LIBRARY_PHONE_LIST } from "../assets/constants";
 export default function LibraryPage() {
   return (
     <Flex
@@ -114,21 +101,26 @@ export default function LibraryPage() {
                   Δευ-Παρ
                 </Text>{" "}
                 <br />
-                8:00 - 20:00
+                {LIBRARY_OPENING_HOURS.on_weekdays.start}-
+                {LIBRARY_OPENING_HOURS.on_weekdays.end}
               </Box>
               <Box mx="1rem">
                 <Text as="span" fontWeight={"bold"}>
                   Σάββατο
                 </Text>{" "}
                 <br />
-                9.00-15.00
+                {LIBRARY_OPENING_HOURS.on_saturday.start
+                  ? `${LIBRARY_OPENING_HOURS.on_saturday.start}-${LIBRARY_OPENING_HOURS.on_saturday.end}`
+                  : "Κλειστά"}
               </Box>
               <Box mx="1rem">
                 <Text as="span" fontWeight={"bold"}>
                   Κυριακή
                 </Text>{" "}
                 <br />
-                Κλειστά
+                {LIBRARY_OPENING_HOURS.on_sunday.start
+                  ? `${LIBRARY_OPENING_HOURS.on_sunday.start}-${LIBRARY_OPENING_HOURS.on_sunday.end}`
+                  : "Κλειστά"}
               </Box>
             </Flex>
           </Flex>
@@ -181,12 +173,12 @@ export default function LibraryPage() {
               gap="2rem"
             >
               <Text>
-                2310891751 <br />
-                2310891752
+                {LIBRARY_PHONE_LIST[0]} <br />
+                {LIBRARY_PHONE_LIST[1]}
               </Text>
               <Text>
                 {" "}
-                2310891118 <br /> 2310891137{" "}
+                {LIBRARY_PHONE_LIST[2]} <br /> {LIBRARY_PHONE_LIST[3]}{" "}
               </Text>
               <Text fontWeight="bold"> Ημιόροφος </Text>
             </Flex>

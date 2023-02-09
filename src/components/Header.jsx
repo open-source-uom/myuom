@@ -42,7 +42,8 @@ import myUOMLogo from "../assets/myUOMLogo.png";
 import { Flex, Box, Heading, Image, useColorModeValue } from "@chakra-ui/react";
 import MenuButton from "./MenuButton";
 import { Categories } from "../assets/categories";
-
+import { LeftArrowIcon } from "../assets/icons";
+import HomeIcon from "../assets/icons/HomeIcon";
 function RouteDictionary(route) {
   if (route === "/") return "Αρχική";
   else {
@@ -105,24 +106,7 @@ export default function Header() {
                   onClick={goToHomePage}
                   w={{ sm: "20px", lg: "20px", xl: "24px" }}
                 >
-                  <svg
-                    className="back-btn-svg"
-                    width="100%"
-                    viewBox="0 0 11 11"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M1 5.66666H10.0575"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <path
-                      d="M5.52881 0.999985L10.0575 5.66665L5.52881 10.3333"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
+                  <LeftArrowIcon />
                 </Box>
               ) : null}
             </Box>
@@ -149,24 +133,7 @@ export default function Header() {
                 w={{ sm: "20px", lg: "20px", xl: "24px" }}
                 display={{ sm: "none", lg: "block" }}
               >
-                <svg
-                  className="back-btn-svg"
-                  width="100%"
-                  viewBox="0 0 11 11"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M1 5.66666H10.0575"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                  <path
-                    d="M5.52881 0.999985L10.0575 5.66665L5.52881 10.3333"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
+                <LeftArrowIcon />
               </Box>
             ) : null}
           </Flex>
@@ -191,27 +158,7 @@ export default function Header() {
         bottom="0"
       >
         <Box onClick={goToHomePage}>
-          <svg
-            className="home-svg"
-            width="28"
-            height="30.8"
-            viewBox="0 0 20 22"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M1 8L10 1L19 8V19C19 19.5304 18.7893 20.0391 18.4142 20.4142C18.0391 20.7893 17.5304 21 17 21H3C2.46957 21 1.96086 20.7893 1.58579 20.4142C1.21071 20.0391 1 19.5304 1 19V8Z"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              stroke={useColorModeValue("#000", "#f3f3f3")}
-            />
-            <path
-              d="M7 21V11H13V21"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              stroke={useColorModeValue("#000", "#f3f3f3")}
-            />
-          </svg>
+          <HomeIcon />
         </Box>
         <MenuButton />
       </Flex>

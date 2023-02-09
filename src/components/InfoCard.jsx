@@ -53,25 +53,25 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 
+const CustomTab = forwardRef((props, ref) => {
+  const tabProps = useTab({ ...props, ref });
+  const isSelected = !!tabProps["aria-selected"]; // Use if you need styling on the selected tab - eg. Make the background red if the tab is selected
+  const icon = tabProps["icon"]; // 2. Access icon prop from the tab prop
+
+  const styles = useMultiStyleConfig("Tabs", tabProps);
+
+  return (
+    <Button __css={styles.tab} {...tabProps}>
+      <Box as="span" mr="2">
+        <Icon as={icon}> </Icon>
+        {/* 3. Pass icon as object - 4. Imported from FirstYearInfo.js and passed into the object as an object*/}
+      </Box>
+      {tabProps.children}
+    </Button>
+  );
+});
+
 export default function InfoCard({ data }) {
-  const CustomTab = forwardRef((props, ref) => {
-    const tabProps = useTab({ ...props, ref });
-    const isSelected = !!tabProps["aria-selected"]; // Use if you need styling on the selected tab - eg. Make the background red if the tab is selected
-    const icon = tabProps["icon"]; // 2. Access icon prop from the tab prop
-
-    const styles = useMultiStyleConfig("Tabs", tabProps);
-
-    return (
-      <Button __css={styles.tab} {...tabProps}>
-        <Box as="span" mr="2">
-          <Icon as={icon}> </Icon>
-          {/* 3. Pass icon as object - 4. Imported from FirstYearInfo.js and passed into the object as an object*/}
-        </Box>
-        {tabProps.children}
-      </Button>
-    );
-  });
-
   const SelectColor = () => {
     return useColorModeValue("#f3f3f3", "black");
   };
@@ -115,7 +115,7 @@ export default function InfoCard({ data }) {
       <TabPanels>
         {data.map((info) => {
           return (
-            <TabPanel key={info.title} textAlign='left'>
+            <TabPanel key={info.title} textAlign="left">
               <UnorderedList listStyleType={"none"}>
                 {info.content.map((curContent) => (
                   <ListItem>
