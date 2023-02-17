@@ -832,7 +832,7 @@ const profData = [
     tel: "2310 891.637",
     email: "kvergidis@uom.edu.gr",
     building: "Γ3",
-    office: "332",
+    office: "322",
   },
   {
     imgUrl: "https://www.uom.gr/site/images/personphoto-2.jpg",
