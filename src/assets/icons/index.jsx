@@ -17,6 +17,7 @@ import SettingsIcon from "./SettingsIcon";
 import CloseIcon from "./CloseIcon";
 import RightArrowIcon from "./RightArrowIcon";
 import DiagonalRightArrowIcon from "./DiagonalRightArrowIcon";
+import DepAnnounceIcon from "./DepAnnounceIcon";
 export {
   GraduationIcon,
   ExamsTestIcon,
@@ -37,4 +38,5 @@ export {
   CloseIcon,
   RightArrowIcon,
   DiagonalRightArrowIcon,
+  DepAnnounceIcon,
 };

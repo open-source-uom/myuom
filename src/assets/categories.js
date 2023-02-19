@@ -36,6 +36,7 @@
 
 */
 import {
+    DepAnnounceIcon,
     CalendarTimeIcon,
     ExamsTestIcon,
     GraduationIcon,
@@ -50,6 +51,7 @@ import {
     StackedBooksIcon,
     StudentInPCIcon,
 } from "./icons";
+import AnnouncementsPage from "../pages/AnnouncementPage";
 import ProfInfoPage from "../pages/ProfInfoPage";
 import RestaurantPage from "../pages/RestaurantPage";
 import ServicesPage from "../pages/ServicesPage";
@@ -60,6 +62,7 @@ import SchedulePage from "../pages/SchedulePage";
 import FAQSettingsPage from "../pages/FAQSettingsPage";
 import AboutSettingsPage from "../pages/AboutSettingsPage";
 import MapPage from "../pages/MapPage";
+
 export const Categories = [
     {
         title: "Πρόγραμμα Μαθημάτων",
@@ -177,7 +180,7 @@ export const Categories = [
         title: "Πρωτοετείς",
         iconSVG: <PersonIcon />,
         route: "/firstyearinfo",
-        span: 1,
+        span: 2,
         isExternal: false,
         requireSelection: false,
         position: 11,
@@ -205,5 +208,16 @@ export const Categories = [
         position: 13,
         hide: false,
         pageToDisplay: <ServicesPage />,
+    },
+    {
+        title: "Ανακοινώσεις",
+        iconSVG: <DepAnnounceIcon />,
+        route: "/announcements",
+        span: 2,
+        isExternal: true,
+        requireSelection: true,
+        position: 13,
+        hide: false,
+        pageToDisplay: <AnnouncementsPage />,
     },
 ];
