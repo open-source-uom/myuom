@@ -38,8 +38,8 @@
 
 import { useEffect, useReducer } from "react";
 import { Flex, Text, useColorModeValue } from "@chakra-ui/react";
-import data from "../assets/DailyMenu.json";
-
+import data from "../assets/DailyMenu";
+import i18n from "../../src/i18n";
 import FoodMenuList from "../components/FoodMenuList";
 
 const CURRENTLY_LUNCH = "gevma";
@@ -114,13 +114,13 @@ export default function TodaysMenu() {
 
   function getTodaysRestaurantMenu(offsetDays, forLunch) {
     const days = [
-      "ΚΥΡΙΑΚΗ",
-      "ΔΕΥΤΕΡΑ",
-      "ΤΡΙΤΗ",
-      "ΤΕΤΑΡΤΗ",
-      "ΠΕΜΠΤΗ",
-      "ΠΑΡΑΣΚΕΥΗ",
-      "ΣΑΒΒΑΤΟ",
+      i18n.t("sunday"),
+      i18n.t("monday"),
+      i18n.t("tuesday"),
+      i18n.t("wednesday"),
+      i18n.t("thursday"),
+      i18n.t("friday"),
+      i18n.t("saturday"),
     ];
     const dayNum = new Date().getDay();
 

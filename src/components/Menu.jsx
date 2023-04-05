@@ -49,6 +49,7 @@ import {
 } from "@chakra-ui/react";
 
 function Menu({ data }) {
+  console.log("the data is: ", data);
   return (
     <Box
       marginBottom="1rem"
@@ -101,9 +102,7 @@ function Menu({ data }) {
               border="2px"
               borderColor={useColorModeValue("#0050e0", "#f3f3f3")}
             >
-              <AccordionItem
-                border="none"
-              >
+              <AccordionItem border="none">
                 <AccordionButton
                   display="flex"
                   direction="row"
@@ -169,9 +168,7 @@ function Menu({ data }) {
               border="2px"
               borderColor={useColorModeValue("#0050e0", "#f3f3f3")}
             >
-              <AccordionItem
-                border="none"
-              >
+              <AccordionItem border="none">
                 <AccordionButton
                   display="flex"
                   direction="row"

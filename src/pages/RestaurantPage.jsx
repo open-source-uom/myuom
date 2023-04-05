@@ -38,7 +38,7 @@
 
 import { useEffect } from "react";
 import Menu from "../components/Menu";
-import data from "../assets/DailyMenu.json";
+import data from "../assets/DailyMenu";
 import {
   Accordion,
   Box,
@@ -55,6 +55,7 @@ export default function RestauranPage() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   return (
     <Flex direction="column" align="center">
       <Box
