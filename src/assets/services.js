@@ -36,38 +36,40 @@
 
 */
 
+import i18n from "../i18n";
+
 export const servicesData = [
   {
-    title: "Γραφείο Διασύνδεσης",
+    title: i18n.t("liasion_office"),
     url: "https://www.uom.gr/career-office",
-    category: "Γραφείο",
+    category: i18n.t("offices"),
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/11869/13503-GrafeioDiasyndesis-2.jpg",
   },
   {
     title: "Γραφείο Πρακτικής",
     url: "http://practice.uom.gr/",
-    category: "Γραφείο",
+    category: i18n.t("offices"),
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/8621/7799-praktikiaskisikyriafoto-4.jpg",
   },
   {
     title: "Γραφείο Αποφοίτων",
     url: "https://www.uom.gr/apofitoi",
-    category: "Γραφείο",
+    category: i18n.t("offices"),
     imgUrl: "https://www.uom.gr/assets/site/content/alumni/ALUMNI_LOGO_GR.PNG",
   },
   {
     title: "Γραφείο Erasmus",
     url: "https://www.uom.gr/erasmus-office",
-    category: "Γραφείο",
+    category: i18n.t("offices"),
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/4228/2644-erasmus-header-2.jpg",
   },
   {
     title: "Γραφείο Φυσικής Αγωγής",
     url: "https://www.uom.gr/gym-office",
-    category: "Γραφείο",
+    category: i18n.t("offices"),
     imgUrl: "https://pbs.twimg.com/media/C5WlRPKWcAIJ90T.jpg",
   },
   {
@@ -127,7 +129,7 @@ export const servicesData = [
   {
     title: "Γραφείο Περιβαλλοντικής Διαχείρισης ΠαΜακ ",
     url: "http://www.perivpamak.gr/",
-    category: "Γραφείο",
+    category: i18n.t("offices"),
     imgUrl:
       "https://1.bp.blogspot.com/-t4PMium6v6g/X2x6Sz0aAFI/AAAAAAAAD4A/bJNjlS_kYr4lXGQdQBAD4mMdmrWEJ0qjgCNcBGAsYHQ/s2048/Logo%2B%25CE%25A0%25CE%25B5%25CF%2581%25CE%25B9%25CE%25B2%25CE%25B1%25CE%25BB%25CE%25BB%25CE%25BF%25CE%25BD%25CF%2584%25CE%25B9%25CE%25BA%25CE%25AE%25CF%2582.png",
   },

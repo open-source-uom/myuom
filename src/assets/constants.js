@@ -1,4 +1,5 @@
 //start,end = null -> Κλειστά
+import i18n from "../i18n";
 export const LIBRARY_OPENING_HOURS = {
   on_weekdays: {
     start: "8:00",
@@ -100,46 +101,45 @@ export const RESTAURANT_HOURS = {
     },
   },
 };
-
 export const servicesData = [
   {
-    tabName: "Γραφεία",
+    tabName: i18n.t("offices"),
     index: 1,
     services: [
       {
-        title: "Γραφείο Διασύνδεσης",
+        title: i18n.t("liason_office"),
         url: "https://www.uom.gr/career-office",
         imgUrl:
           "https://www.uom.gr/assets/site/public/nodes/11869/13503-GrafeioDiasyndesis-2.jpg",
       },
       {
-        title: "Γραφείο Πρακτικής",
+        title: i18n.t("internship_office"),
         url: "http://practice.uom.gr/",
 
         imgUrl:
           "https://www.uom.gr/assets/site/public/nodes/8621/7799-praktikiaskisikyriafoto-4.jpg",
       },
       {
-        title: "Γραφείο Αποφοίτων",
+        title: i18n.t("alumni_office"),
         url: "https://www.uom.gr/apofitoi",
 
         imgUrl:
           "https://www.uom.gr/assets/site/content/alumni/ALUMNI_LOGO_GR.PNG",
       },
       {
-        title: "Γραφείο Erasmus",
+        title: i18n.t("erasmus_office"),
         url: "https://www.uom.gr/erasmus-office",
         imgUrl:
           "https://www.uom.gr/assets/site/public/nodes/4228/2644-erasmus-header-2.jpg",
       },
       {
-        title: "Γραφείο Φυσικής Αγωγής",
+        title: i18n.t("physical_education_office"),
         url: "https://www.uom.gr/gym-office",
 
         imgUrl: "https://pbs.twimg.com/media/C5WlRPKWcAIJ90T.jpg",
       },
       {
-        title: "Γραφείο Περιβαλλοντικής Διαχείρισης ΠαΜακ ",
+        title: i18n.t("environmental_management_office"),
         url: "http://www.perivpamak.gr/",
 
         imgUrl:
@@ -148,16 +148,16 @@ export const servicesData = [
     ],
   },
   {
-    tabName: "Φοιτητικοί σύλλογοι",
+    tabName: i18n.t("student_clubs"),
     index: 2,
     services: [
       {
-        title: "Σύλλογος Φοιτητών Erasmus",
+        title: i18n.t("erasmus_student_club"),
         url: "http://afroditi.uom.gr/erasmusp",
         imgUrl: "https://opensource.uom.gr/myuom_images/esnuom.png",
       },
       {
-        title: "Σύλλογος Φοιτητών ΠΑΜΑΚ",
+        title: i18n.t("uom_students_club"),
         url: "https://www.facebook.com/sfpamak/",
         imgUrl:
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiD8KP64gxKFvyW4kbF-NK5Ao--9oSq9Fziw&usqp=CAU",
@@ -193,7 +193,7 @@ export const servicesData = [
         imgUrl: "https://opensourceuom.gitlab.io/assets/img/team/avatar.png",
       },
       {
-        title: "Λέσχη Κυβερνοασφάλειας Πανεπιστημίου Μακεδονίας",
+        title: i18n.t("cybersecurity_student_club"),
         url: "https://csc.uom.gr/",
         imgUrl:
           "https://csc.uom.gr/wp-content/uploads/2021/02/Myrmidones_02.jpg",
@@ -201,40 +201,39 @@ export const servicesData = [
     ],
   },
   {
-    tabName: "Ύπόλοιπες υπηρεσίες",
+    tabName: i18n.t("other_services"),
     index: 3,
     services: [
       {
-        title:
-          "Επιτροπή Ηθικής και Δεοντολογίας της Έρευνας (Ε.Η.Δ.Ε.) του Πανεπιστημίου Μακεδονίας",
+        title: i18n.t("ethics_research_committee"),
         url: "https://www.uom.gr/ethics",
         imgUrl: "https://www.uom.gr/assets/site/public/nodes/4013/10348-7.png",
       },
       {
-        title: "Συνήγορος του Φοιτητή",
+        title: i18n.t("student_advocate"),
         url: "https://www.uom.gr/synhgoros-toy-foithth-2021-2022",
         imgUrl:
           "https://foititisonline.gr/wp-content/uploads/2018/08/sinigoros-tou-foititi-3.jpg",
       },
       {
-        title: "Επιτροπή Ισότητας Φύλων",
+        title: i18n.t("gender_eq_committee"),
         url: "https://www.uom.gr/eif",
         imgUrl:
           "https://www.uom.gr/assets/site/public/nodes/8310/9033-EIFLOGO.jpg",
       },
       {
-        title: "Κέντρο Συμβουλευτικής και Στήριξης Φοιτητών",
+        title: i18n.t("student_consulting_support_center"),
         url: "https://www.uom.gr/student-support",
         imgUrl: "https://opensource.uom.gr/myuom_images/kssf.jpeg",
       },
       {
-        title: "Μονάδα Προσβασιμότητας ΠΑΜΑΚ",
+        title: i18n.t("accessibility_unit"),
         url: "https://www.uom.gr/accessibility",
         imgUrl:
           "https://scontent.fskg1-2.fna.fbcdn.net/v/t1.6435-9/162199791_193459489248515_2795892316391728468_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=IluJohFv1-8AX9OpJ8G&_nc_ht=scontent.fskg1-2.fna&oh=00_AT8_DZhdnm_-2p642TAReo8lDCKoUQupcujQ0FhiBmKgRg&oe=632D228D",
       },
       {
-        title: "Εκδόσεις Πανεπιστημίου Μακεδονίας",
+        title: i18n.t("uni_publications"),
         url: "https://www.uompress.gr/index.php/el/#",
         imgUrl: "https://www.uompress.gr/images/stories/logo_uom_v.png",
       },
