@@ -62,4 +62,5 @@ export default {
   tiriKaiLahanika: "τυρί φέτα & λαχανικά,",
   pitsaMeKima: "Πίτσα με κιμά & γκούντα,",
   pitsaMeKotopoulo: "Πίτσα με κοτόπουλο & γκούντα",
+  atets
 };
