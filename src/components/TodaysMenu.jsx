@@ -160,10 +160,10 @@ export default function TodaysMenu() {
         marginBottom="1rem"
         fontSize={{ sm: 22, md: 24, lg: 26 }}
       >
-        {state.isTomorrow ? "Αυριανό" : "Σημερινό"} Μενού:
+        {state.isTomorrow ? i18n.t("avriano") : i18n.t("simerino")} {i18n.t("menou")}
       </Text>
       <Text fontWeight="bold" fontSize={{ sm: 18, md: 20, lg: 22 }} as="span">
-        {state.isLunch ? "Γεύμα" : "Δείπνο"}:
+        {state.isLunch ? i18n.t("gevma") : i18n.t("deipno")}:
       </Text>
       {<FoodMenuList {...state.foodMenu} />}{" "}
     </Flex>

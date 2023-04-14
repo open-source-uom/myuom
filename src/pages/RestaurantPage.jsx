@@ -50,6 +50,7 @@ import {
 import Schedule from "../components/Schedule";
 import dinner from "../assets/dinner.png";
 import TodaysMenu from "../components/TodaysMenu";
+import i18n from "../../src/i18n";
 
 export default function RestauranPage() {
   useEffect(() => {
@@ -86,7 +87,7 @@ export default function RestauranPage() {
             fontFamily="Syne"
             fontSize={{ sm: 20, md: 24, lg: 26 }}
           >
-            Όλες οι μέρες
+            {i18n.t("olesOiMeres")}
           </Text>
         </Box>
         <Accordion allowToggle>

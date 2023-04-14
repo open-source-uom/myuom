@@ -48,6 +48,7 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import { RESTAURANT_HOURS } from "../assets/constants";
+import i18n from "../../src/i18n";
 function Schedule() {
   return (
     <Box
@@ -88,7 +89,7 @@ function Schedule() {
               fontSize={{ sm: 16, md: 18, lg: 20 }}
               color={useColorModeValue("#f3f3f3", "black")}
             >
-              Ωράριο
+              {i18n.t("orario")}
             </Text>
             <AccordionIcon />
           </AccordionButton>
@@ -105,7 +106,7 @@ function Schedule() {
             alignItems="start"
           >
             <Flex direction="column">
-              <Text fontWeight="bold">Πρωινό:</Text>
+              <Text fontWeight="bold">{i18n.t("proino")}</Text>
               <Text>
                 {" "}
                 {RESTAURANT_HOURS.for_breakfast.on_weekdays.start.hours
@@ -126,7 +127,7 @@ function Schedule() {
               </Text>
             </Flex>
             <Flex direction="column">
-              <Text fontWeight="bold">Μεσημεριανό:</Text>
+              <Text fontWeight="bold">{i18n.t("mesimeriano")}</Text>
               <Text align="center">
                 {RESTAURANT_HOURS.for_lunch.on_weekdays.start.hours
                   .toString()
@@ -159,11 +160,11 @@ function Schedule() {
                 {RESTAURANT_HOURS.for_lunch.on_weekend.end.minutes
                   .toString()
                   .padStart(2, "0")}{" "}
-                (Σ/Κ και αργίες)
+                ({i18n.t("skKaiArgies")})
               </Text>
             </Flex>
             <Flex direction="column">
-              <Text fontWeight="bold">Βραδινό:</Text>
+              <Text fontWeight="bold">{i18n.t("vradino")}</Text>
               <Text>
                 {" "}
                 {RESTAURANT_HOURS.for_dinner.on_weekdays.start.hours

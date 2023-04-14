@@ -45,6 +45,8 @@ import {
   chakra,
 } from "@chakra-ui/react";
 
+import i18n from "../i18n";
+
 export default function FoodMenuList({
   mainDish,
   specialDish,
@@ -55,25 +57,25 @@ export default function FoodMenuList({
     <UnorderedList mb="1rem">
       <ListItem>
         <Text as="span" noOfLines={[]}>
-          <chakra.b marginRight={"1rem"}>Κυρίως:</chakra.b>
+          <chakra.b marginRight={"1rem"}>{i18n.t("kyrios")}</chakra.b>
           {mainDish}
         </Text>
       </ListItem>
       <ListItem>
         <Text as="span">
-          <chakra.b marginRight={"1rem"}>Χορτοφαγικό:</chakra.b>
+          <chakra.b marginRight={"1rem"}>{i18n.t("xortofagiko")}</chakra.b>
           {specialDish}
         </Text>
       </ListItem>
       <ListItem>
         <Text as="span">
-          <chakra.b marginRight={"1rem"}>Σαλάτα:</chakra.b>
+          <chakra.b marginRight={"1rem"}>{i18n.t("salata")}</chakra.b>
           {salad}
         </Text>
       </ListItem>
       <ListItem>
         <Text as="span">
-          <chakra.b marginRight={"1rem"}>Γλυκό:</chakra.b>
+          <chakra.b marginRight={"1rem"}>{i18n.t("dessert")}</chakra.b>
           {dessert}
         </Text>
       </ListItem>
