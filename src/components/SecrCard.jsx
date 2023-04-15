@@ -58,9 +58,11 @@ import {
   ModalBody,
   ModalCloseButton,
 } from "@chakra-ui/react";
+import { useTranslation } from 'react-i18next';
 // import { EmailIcon } from "@chakra-ui/icons";
 
 export default function SecrCard({ data }) {
+  const {t, i18n} = useTranslation();
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <Box
@@ -100,7 +102,7 @@ export default function SecrCard({ data }) {
               fontWeight="bold"
               fontSize={{ sm: 14, md: 16, lg: 18 }}
             >
-              Γραμματεία: {data.name}
+              {t("grammateia")} {data.name}
             </Text>
             <AccordionIcon />
           </AccordionButton>
@@ -108,14 +110,14 @@ export default function SecrCard({ data }) {
         <AccordionPanel bgColor="transparent" pb={5} textAlign="center">
           <Flex direction="column" alignItems="start" fontFamily="Syne">
             <Text as="span" fontWeight="bold">
-              Τηλέφωνο:&nbsp;
+            {t("tilefono")}&nbsp;
               <Text fontWeight="normal" as="span">
                 {data.tel}
               </Text>
             </Text>
 
             <Text as="span" fontWeight="bold">
-              Email:&nbsp;
+            {t("email")}&nbsp;
               <Text fontWeight="normal" as="span">
                 {data.email}
               </Text>
@@ -133,7 +135,7 @@ export default function SecrCard({ data }) {
                 window.open(data.link);
               }}
             >
-              <span>Επισκεφτείτε την ιστοσελίδα της γραμματείας</span>
+              <span>{t("istoselidaGrammateias")}</span>
               <Box w={{ sm: "16px", lg: "18px" }}>
                 <svg
                   className="stroke-svg home-svg"

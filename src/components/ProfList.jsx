@@ -51,8 +51,10 @@ import SecrCard from "./SecrCard.jsx";
 import profData from "../assets/professors.js";
 import secrData from "../assets/secretaries.js";
 import { DepartmentContext } from "../contexts/departmentContext";
+import { useTranslation } from 'react-i18next';
 
 export default function ProfList() {
+  const {t, i18n} = useTranslation();
   const { depName } = useContext(DepartmentContext);
   const [profArray, setProfArray] = useState([]);
   const [filteredProfArray, setFilteredProfArray] = useState([]);
@@ -129,7 +131,7 @@ export default function ProfList() {
         <Input
           fontFamily="Syne"
           type="text"
-          placeholder="Εισάγετε όνομα, επίθετο ή email"
+          placeholder={t("searchProf")}
           onChange={onTextChangeHandler}
           borderRadius={"2rem"}
           focusBorderColor="initial"
@@ -143,7 +145,7 @@ export default function ProfList() {
         ))
       ) : (
         <Text as="h1" fontFamily="Syne">
-          Δε βρέθηκε αποτέλεσμα.
+          {t("noResults")}
         </Text>
       )}
     </VStack>

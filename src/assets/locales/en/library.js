@@ -3,7 +3,7 @@ export default {
     defPar: "Mon-Fri",
     savvato: "Saturday",
     kyriaki: "Sunday",
-    epikoinonia: "Contact",
+    epikoinonia: "Contact Info",
     imiorofos: "Mezzanine",
     istoselidaVivliothikis: "Library's website",
     kleista: "Closed"
