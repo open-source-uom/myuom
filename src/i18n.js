@@ -98,14 +98,6 @@ const resources = {
       // accessibility_unit: "Μονάδα Προσβασιμότητας ΠΑΜΑΚ",
       // uni_publications: "Εκδόσεις Πανεπιστημίου Μακεδονίας",
       //depnames.js
-      ess_deparment: "Διεθνών και Ευρωπαϊκών Σπουδών",
-      bso_department: "Βαλκανικών, Σλαβικών & Ανατολικών Σπουδών",
-      eco_department: "Οικονομικών Επιστημών",
-      dai_department: "Εφαρμοσμένης Πληροφορικής",
-      bas_department: "Οργάνωσης & Διοίκησης Επιχειρήσεων",
-      fin_department: "Λογιστικής και Χρηματοοικονομικής",
-      esp_deparment: "Εκπαιδευτικής & Κοινωνικής Πολιτικής",
-      msa_department: "Μουσικής Επιστήμης & Τέχνης",
       //questionsForFAQ.js
 
       //Μέρες εβδομάδας
