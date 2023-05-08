@@ -6,6 +6,8 @@ import enLibrary from "./assets/locales/en/library.js";
 import enMaps from "./assets/locales/en/maps.js";
 import enServices from "./assets/locales/en/services.js";
 import enAcademicPersonel from "./assets/locales/en/academic_personel.js";
+import enFaq from "./assets/locales/en/faq.js";
+
 
 import elRestaurant from "./assets/locales/el/restaurant.js";
 import elFreshmen from "./assets/locales/el/freshmen.js";
@@ -13,6 +15,7 @@ import elLibrary from "./assets/locales/el/library.js";
 import elMaps from "./assets/locales/el/maps.js";
 import elServices from "./assets/locales/el/services.js";
 import elAcademicPersonel from "./assets/locales/el/academic_personel.js";
+import elFaq from "./assets/locales/el/faq.js";
 
 const resources = {
   en: {
@@ -23,6 +26,7 @@ const resources = {
       ...enMaps,
       ...enServices,
       ...enAcademicPersonel,
+      ...enFaq,
       //categories.js
       initial_page: "Home",
       course_schedule: "Course Schedules",
@@ -64,6 +68,7 @@ const resources = {
       ...elMaps,
       ...elServices,
       ...elAcademicPersonel,
+      ...elFaq,
       //categories.js
 
       initial_page: "Αρχική",
