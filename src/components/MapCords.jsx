@@ -39,12 +39,14 @@
 import React, { useState, useCallback, useEffect } from "react";
 import ImageMapper from "react-image-mapper";
 import { Box, Button, Text, useColorModeValue } from "@chakra-ui/react";
+import {useTranslation} from "react-i18next"
+
 
 export default function App({ sampleObject }) {
   const [showGroundFloorImg, setShowGroundFloorImg] = useState(true);
   const [ButtonActivity, setButtonActivity] = useState(false);
   const [showCorrectText, setShowCorrectText] = useState(false);
-
+  const {t} = useTranslation();
   const [mapAreas, setMapAreas] = useState({
     name: "my-map",
     areas: [
@@ -108,7 +110,7 @@ export default function App({ sampleObject }) {
             bgColor={HandleBgColor}
             _hover={false}
           >
-            Δε γνωρίζετε πού βρίσκεται το κτήριο;
+            {t("cant_find_building_prompt")}
           </Button>
           <ImageMapper
             src={sampleObject.imageURL}
@@ -129,10 +131,10 @@ export default function App({ sampleObject }) {
             bgColor={HandleBgColor}
             _hover={false}
           >
-            Ξαναδείτε πού είναι η αίθουσα
+            {t("see_room_again")}
           </Button>
           <Text px="1rem">
-            Το κοντινότερο ασανσέρ σε σχέση με την αίθουσα είναι αυτό:{" "}
+            {t("closest_elevator_prompt")}{" "}
           </Text>
           <ImageMapper
             src={sampleObject.groundFloor}
@@ -141,14 +143,14 @@ export default function App({ sampleObject }) {
             width={350}
           />
           {!showCorrectText && <Text fontFamily="Syne" px="1rem">
-            Μπείτε σε αυτό το ασανσέρ και πηγαίνετε στον{" "}
-            {sampleObject.floor.toLowerCase()} όροφο
+           {t("enter_elevator_prompt")}{" "}
+            {sampleObject.floor.toLowerCase()} {t("floor")}
           </Text>}
           {showCorrectText && <Text fontFamily="Syne" px="1rem">Μπείτε σε αυτό το ασανσέρ και πηγαίνετε στον {sampleObject.floor.toLowerCase()}</Text>}
         </Box>
       )}
       <Text color="red" fontSize="md" fontFamily="Syne" px="1rem">
-        Σε περίπτωση που δε βλέπετε την αίθουσα μπορείτε να κάνετε zoom
+        {t("cant_see_room_prompt")}
       </Text>
     </Box>
   );

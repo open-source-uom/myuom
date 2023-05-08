@@ -47,7 +47,7 @@ import { useState } from "react";
 import { mapData } from "../assets/mapData.js";
 import MapCords from "../components/MapCords";
 import { useEffect } from "react";
-
+import {useTranslation} from "react-i18next"
 /* Insert all buildings into an array and convert set to remove duplicates */
 // Possibly just add them to a set? Not sure about complexity
 const Buildings = () => {
@@ -81,7 +81,7 @@ function MapPage() {
   const [title, setTitle] = useState("");
   const [value, setValue] = useState("");
   const [sampleObject, setSampleObject] = useState([]);
-
+  const {t,i18n} = useTranslation()
   const handleChange = (e) => {
     setValue(e.target.value);
     setTitle("");
@@ -112,7 +112,7 @@ function MapPage() {
           defaultValue={"default"}
         >
           <option hidden disabled value="default">
-            Επιλέξτε ένα κτήριο
+           {t("select_building")}
           </option>
           <Buildings />
         </Select>
@@ -124,7 +124,7 @@ function MapPage() {
           id="title"
         >
           <option hidden value="default">
-            Επιλέξτε ένα γραφείο
+            {t("select_office")}
           </option>
           <Offices building={value} />
           {/* Get {value} & do whatever you want with it */}
@@ -147,7 +147,7 @@ function MapPage() {
           );
         }}
       >
-        Εικονική Περιήγηση 360°
+        {t("virtual_tour")} 360°
       </Button>
     </Box>
   );
