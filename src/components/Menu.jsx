@@ -48,6 +48,8 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 
+import i18n from "../i18n";
+
 function Menu({ data }) {
   console.log("the data is: ", data);
   return (
@@ -131,7 +133,7 @@ function Menu({ data }) {
                     fontFamily="Syne"
                     fontSize={{ sm: 14, md: 16, lg: 18 }}
                   >
-                    Γεύμα
+                    {i18n.t("gevma")}
                   </Text>
                   <AccordionIcon />
                 </AccordionButton>
@@ -197,7 +199,7 @@ function Menu({ data }) {
                     fontFamily="Syne"
                     fontSize={{ sm: 14, md: 16, lg: 18 }}
                   >
-                    Δείπνο
+                    {i18n.t("deipno")}
                   </Text>
                   <AccordionIcon />
                 </AccordionButton>

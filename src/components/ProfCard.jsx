@@ -58,9 +58,11 @@ import {
   ModalBody,
   ModalCloseButton,
 } from "@chakra-ui/react";
+import { useTranslation } from 'react-i18next';
 // import { EmailIcon } from "@chakra-ui/icons";
 
 export default function ProfCard({ prof }) {
+  const {t, i18n} = useTranslation();
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <Box
@@ -113,21 +115,21 @@ export default function ProfCard({ prof }) {
         <AccordionPanel bgColor="transparent" pb={5} textAlign="center">
           <Flex direction="column" alignItems="start" fontFamily="Syne">
             <Text as="span" fontWeight="bold">
-              Τίτλος:&nbsp;
+              {t("title")}&nbsp;
               <Text fontWeight="normal" as="span">
                 {prof.title}
               </Text>
             </Text>
 
             <Text as="span" fontWeight="bold">
-              Τηλέφωνο:&nbsp;
+            {i18n.t("tilefono")}&nbsp;
               <Text fontWeight="normal" as="span">
                 {prof.tel}
               </Text>
             </Text>
 
             <Text as="span" fontWeight="bold">
-              Email:&nbsp;
+            {i18n.t("email")}&nbsp;
               <Text fontWeight="normal" as="span">
                 {prof.email}
               </Text>
@@ -139,7 +141,7 @@ export default function ProfCard({ prof }) {
               _hover={{ cursor: "pointer" }}
               as="span"
             >
-              <u>Κτήριο</u>:&nbsp;
+              <u>{t("ktirio")}</u>:&nbsp;
               <Text fontWeight="normal" as="span">
                 {prof.building}
               </Text>
@@ -151,7 +153,7 @@ export default function ProfCard({ prof }) {
                 width={{ md: "500px", base: "300px" }}
                 height={{ md: "500px", base: "300px" }}
               >
-                <ModalHeader>Μπροστινή όψη πανεπιστημίου</ModalHeader>
+                <ModalHeader>{i18n.t("mprostiniOpsi")}</ModalHeader>
                 <ModalCloseButton />
                 <ModalBody>
                   <Image src="https://www.uom.gr/site/images/katopseis/exot_mprostini.jpg" />
@@ -159,7 +161,7 @@ export default function ProfCard({ prof }) {
               </ModalContent>
             </Modal>
             <Text as="span" fontWeight="bold">
-              Γραφείο:&nbsp;
+            {t("grafeio")}&nbsp;
               <Text fontWeight="normal" as="span">
                 {prof.office}
               </Text>
@@ -178,7 +180,7 @@ export default function ProfCard({ prof }) {
               }}
             >
               <span>
-                Επικοινωνήστε με <br /> τον/την καθηγητή/τρια
+              {t("epikoinonisteMe")} <br /> {t("tonTinKathigiti")}
               </span>
               <Box w={{ sm: "16px", lg: "18px" }}>
                 <svg
