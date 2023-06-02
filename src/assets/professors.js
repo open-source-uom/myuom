@@ -39,8 +39,8 @@ import i18n from "../i18n"
 const profData = [
   {
     imgUrl: "https://www.uom.gr/site/images/personphoto-2.jpg",
-    fname: "Κατερίνα",
-    lname: "Κύρτσου",
+    fname: i18n.t("katerina"),
+    lname: i18n.t("kyrtsou"),
     department: i18n.t("eco_department"),
     title: i18n.t("proedrosTmimatos"),
     tel: "2310 891.764",
@@ -51,8 +51,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1827/1228-varelas-2.jpg",
-    fname: "Ερωτόκριτος",
-    lname: "Βαρελάς",
+    fname: i18n.t("erotokritos"),
+    lname: i18n.t("varelas"),
     department: i18n.t("eco_department"),
     title: i18n.t("kathigitis"),
     tel: "2310 891.761",
@@ -62,8 +62,8 @@ const profData = [
   },
   {
     imgUrl: "https://www.uom.gr/site/images/personphoto-2.jpg",
-    fname: "Κωνσταντίνος",
-    lname: "Βελέντζας",
+    fname: i18n.t("konstantinos"),
+    lname: i18n.t("velentzas"),
     department: i18n.t("eco_department"),
     title: i18n.t("kathigitis"),
     tel: "2310 891.783",
@@ -74,8 +74,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1830/4311-Ioannidis-2.png",
-    fname: "Δημήτρης",
-    lname: "Ιωαννίδης",
+    fname: i18n.t("dimitrios"),
+    lname: i18n.t("ioannidis"),
     department: i18n.t("eco_department"),
     title: i18n.t("kathigitis"),
     tel: "2310 891.785",
@@ -86,8 +86,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1844/11999-KaragiannisGiannis-2.jpg",
-    fname: "Γιάννης",
-    lname: "Καραγιάννης",
+    fname: i18n.t("giannis"),
+    lname: i18n.t("karagiannis"),
     department: i18n.t("eco_department"),
     title: i18n.t("kathigitis"),
     tel: "2310 891.759",
@@ -97,8 +97,8 @@ const profData = [
   },
   {
     imgUrl: "https://www.uom.gr/site/images/personphoto-2.jpg",
-    fname: "Κωνσταντίνος",
-    lname: "Καρφάκης",
+    fname: i18n.t("konstantinos"),
+    lname: i18n.t("karfakis"),
     department: i18n.t("eco_department"),
     title: i18n.t("kathigitis"),
     tel: "2310 891.710",
@@ -108,8 +108,8 @@ const profData = [
   },
   {
     imgUrl: "https://www.uom.gr/site/images/personphoto-2.jpg",
-    fname: "Χρήστος",
-    lname: "Κωνσταντάτος",
+    fname: i18n.t("christos"),
+    lname: i18n.t("constantatos"),
     department: i18n.t("eco_department"),
     title: i18n.t("kathigitis"),
     tel: "2310 891.725",
@@ -120,8 +120,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1831/1679-katranid-2.jpg",
-    fname: "Στυλιανός",
-    lname: "Κατρανίδης",
+    fname: i18n.t("stelios"),
+    lname: i18n.t("katranidis"),
     department: i18n.t("eco_department"),
     title: i18n.t("kathigitis"),
     tel: "2310 891.772",
@@ -131,8 +131,8 @@ const profData = [
   },
   {
     imgUrl: "https://www.uom.gr/site/images/personphoto-2.jpg",
-    fname: "Ιωάννης",
-    lname: "Μουρμούρας",
+    fname: i18n.t("ioannis"),
+    lname: i18n.t("mourmouras"),
     department: i18n.t("eco_department"),
     title: i18n.t("kathigitis"),
     tel: "2310 891.777",
@@ -142,8 +142,8 @@ const profData = [
   },
   {
     imgUrl: "https://www.uom.gr/site/images/personphoto-2.jpg",
-    fname: "Αγγελική",
-    lname: "Νικολάου",
+    fname: i18n.t("agelike"),
+    lname: i18n.t("nikolaou"),
     department: i18n.t("eco_department"),
     title: i18n.t("kathigitria"),
     tel: "2310 891.776",
@@ -154,8 +154,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1836/6866-teconomides-2.jpg",
-    fname: "Αναστάσιος",
-    lname: "Οικονομίδης",
+    fname: i18n.t("anastasios"),
+    lname: i18n.t("economides"),
     department: i18n.t("eco_department"),
     title: i18n.t("kathigitis"),
     tel: "2310 891.799",
@@ -166,8 +166,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1849/1560-ThPanagiotidis_ed-2.jpg",
-    fname: "Θεόδωρος",
-    lname: "Παναγιωτίδης",
+    fname: i18n.t("theodore"),
+    lname: i18n.t("panagiotidis"),
     department: i18n.t("eco_department"),
     title: i18n.t("kathigitis"),
     tel: "2310 891.736",
@@ -178,8 +178,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1840/1977-Sartzetakis_edited-2.jpg",
-    fname: "Ευτύχιος",
-    lname: "Σαρτζετάκης",
+    fname: i18n.t("eftihios"),
+    lname: i18n.t("sartzetakis"),
     department: i18n.t("eco_department"),
     title: i18n.t("kathigitis"),
     tel: "2310 891.680",
@@ -189,8 +189,8 @@ const profData = [
   },
   {
     imgUrl: "https://www.uom.gr/site/images/personphoto-2.jpg",
-    fname: "Ελευθέριος",
-    lname: "Τσουλφίδης",
+    fname: i18n.t("lefteris"),
+    lname: i18n.t("tsoulfidis"),
     department: i18n.t("eco_department"),
     title: i18n.t("kathigitis"),
     tel: "2310 891.788",
@@ -201,8 +201,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1843/1212-sfountas-2.jpg",
-    fname: "Στυλιανός",
-    lname: "Φουντάς",
+    fname: i18n.t("stylianos"),
+    lname: i18n.t("fountas"),
     department: i18n.t("eco_department"),
     title: i18n.t("kathigitis"),
     tel: "2310 891.774",
@@ -212,8 +212,8 @@ const profData = [
   },
   {
     imgUrl: "https://www.uom.gr/site/images/personphoto-2.jpg",
-    fname: "Θεολόγος",
-    lname: "Παντελίδης",
+    fname: i18n.t("theologos"),
+    lname: i18n.t("pantelidis"),
     department: i18n.t("eco_department"),
     title: i18n.t("anaplirotisKathigitis"),
     tel: "2310 891.726",
@@ -223,8 +223,8 @@ const profData = [
   },
   {
     imgUrl: "https://www.uom.gr/site/images/personphoto-2.jpg",
-    fname: "Μαρία",
-    lname: "Αλιπράντη",
+    fname: i18n.t("maria"),
+    lname: i18n.t("alipranti"),
     department: i18n.t("eco_department"),
     title: i18n.t("epikouriKathigitria"),
     tel: "2310 891.755",
@@ -234,8 +234,8 @@ const profData = [
   },
   {
     imgUrl: "https://www.uom.gr/assets/site/public/nodes/8623/8100-PHOTO-2.png",
-    fname: "Αναστασία",
-    lname: "Λίτινα",
+    fname: i18n.t("katerina"),
+    lname: i18n.t("litina"),
     department: i18n.t("eco_department"),
     title: i18n.t("epikouriKathigitria"),
     tel: "2310 891.663",
@@ -246,8 +246,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/4319/1578-boikosSpiridon-2.jpg",
-    fname: "Σπυρίδων",
-    lname: "Μπόϊκος",
+    fname: i18n.t("spyridon"),
+    lname: i18n.t("boikos"),
     department: i18n.t("eco_department"),
     title: i18n.t("epikourosKathigitis"),
     tel: "2310 891.779",
@@ -258,8 +258,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/3667/4448-Filippiadis-2.jpg",
-    fname: "Ελευθέριος",
-    lname: "Φιλιππιάδης",
+    fname: i18n.t("eleftherios"),
+    lname: i18n.t("filippiadis"),
     department: i18n.t("eco_department"),
     title: i18n.t("epikourosKathigitis"),
     tel: "2310 891.770",
@@ -269,8 +269,8 @@ const profData = [
   },
   {
     imgUrl: "https://www.uom.gr/site/images/personphoto-2.jpg",
-    fname: "Ρεβέκκα",
-    lname: "Χριστοπούλου",
+    fname: i18n.t("revekka"),
+    lname: i18n.t("christopoulou"),
     department: i18n.t("eco_department"),
     title: i18n.t("epikouriKathigitria"),
     tel: "2310 891.825",
@@ -281,8 +281,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1871/2218-Tsimpiridou_ed-2.jpg",
-    fname: "Φωτεινή",
-    lname: "Τσιμπιρίδου",
+    fname: i18n.t("fotini"),
+    lname: i18n.t("tsibiridou"),
     department: i18n.t("bso_department"),
     title: i18n.t("proedrosTmimatos"),
     tel: "2310 891.426",
@@ -293,8 +293,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1877/4104-Kostis_fin-2.jpg",
-    fname: "Κωνσταντίνος",
-    lname: "Τσιτσελίκης",
+    fname: i18n.t("konstantinos"),
+    lname: i18n.t("tsitselikis"),
     department: i18n.t("bso_department"),
     title: "Κοσμήτορας",
     tel: "2310 891.540",
@@ -304,8 +304,8 @@ const profData = [
   },
   {
     imgUrl: "https://www.uom.gr/site/images/personphoto-2.jpg",
-    fname: "Ελένη",
-    lname: "Γαβρά",
+    fname: i18n.t("eleni"),
+    lname: i18n.t("gavra"),
     department: i18n.t("bso_department"),
     title: i18n.t("kathigitria"),
     tel: "2310 891.458",
@@ -315,8 +315,8 @@ const profData = [
   },
   {
     imgUrl: "https://www.uom.gr/assets/site/public/nodes/1874/1211-sd-2.jpg",
-    fname: "Σοφία",
-    lname: "Δεληπάλλα",
+    fname: i18n.t("sofia"),
+    lname: i18n.t("delipalla"),
     department: i18n.t("bso_department"),
     title: i18n.t("kathigitria"),
     tel: "2310 891.468",
@@ -327,8 +327,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/6143/5641-aleka_s-2.jpg",
-    fname: "Αλεξάνδρα",
-    lname: "Ιωαννίδου",
+    fname: i18n.t("alexandra"),
+    lname: i18n.t("ioannidou"),
     department: i18n.t("bso_department"),
     title: i18n.t("kathigitria"),
     tel: "2310 891.733",
@@ -338,8 +338,8 @@ const profData = [
   },
   {
     imgUrl: "https://www.uom.gr/site/images/personphoto-2.jpg",
-    fname: "Κυριάκος",
-    lname: "Κεντρωτής",
+    fname: i18n.t("kiriakos"),
+    lname: i18n.t("kentrotis"),
     department: i18n.t("bso_department"),
     title: i18n.t("kathigitis"),
     tel: "2310 891.797",
@@ -349,8 +349,8 @@ const profData = [
   },
   {
     imgUrl: "https://www.uom.gr/site/images/personphoto-2.jpg",
-    fname: "Αθανάσιος",
-    lname: "Κουλακιώτης",
+    fname: i18n.t("thanasis"),
+    lname: i18n.t("koulakiotis"),
     department: i18n.t("bso_department"),
     title: i18n.t("kathigitis"),
     tel: "2310 891.457",
@@ -361,8 +361,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1872/1680-kyrkilis-2.jpg",
-    fname: "Δημήτριος",
-    lname: "Κυρκιλής",
+    fname: i18n.t("dimitrios"),
+    lname: i18n.t("kirkilis"),
     department: i18n.t("bso_department"),
     title: i18n.t("kathigitis"),
     tel: "2310 891.429",
@@ -373,8 +373,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1906/4888-Marangos_2-2.jpg",
-    fname: "Ιωάννης",
-    lname: "Μαραγκός",
+    fname: i18n.t("john"),
+    lname: i18n.t("marangos"),
     department: i18n.t("bso_department"),
     title: i18n.t("kathigitis"),
     tel: "2310 891.712",
@@ -385,8 +385,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1867/4866-Marantzidis_2-2.jpg",
-    fname: "Νίκος",
-    lname: "Μαραντζίδης",
+    fname: i18n.t("nikolaos"),
+    lname: i18n.t("marantzidis"),
     department: i18n.t("bso_department"),
     title: i18n.t("kathigitis"),
     tel: "2310 891.467",
@@ -397,8 +397,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1892/1202-knichoritis-2.jpg",
-    fname: "Κωνσταντίνος",
-    lname: "Νιχωρίτης",
+    fname: i18n.t("konstantinos"),
+    lname: i18n.t("nihoritis"),
     department: i18n.t("bso_department"),
     title: i18n.t("kathigitis"),
     tel: "2310 891.762",
@@ -409,8 +409,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1870/4831-Papapanagos-ed-2.jpg",
-    fname: "Χάρρυ",
-    lname: "Παπαπανάγος",
+    fname: i18n.t("harry"),
+    lname: i18n.t("papapanagos"),
     department: i18n.t("bso_department"),
     title: i18n.t("kathigitis"),
     tel: "2310 891.471",
@@ -420,8 +420,8 @@ const profData = [
   },
   {
     imgUrl: "https://www.uom.gr/site/images/personphoto-2.jpg",
-    fname: "Χρήστος",
-    lname: "Παρασκευόπουλος",
+    fname: i18n.t("christos"),
+    lname: i18n.t("paraskevopoulos"),
     department: i18n.t("bso_department"),
     title: i18n.t("kathigitis"),
     tel: "2310 891.419",
@@ -432,8 +432,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1893/3049-Sarri2-2.jpg",
-    fname: "Αικατερίνη",
-    lname: "Σαρρή",
+    fname: i18n.t("aikaterini"),
+    lname: i18n.t("sarri"),
     department: i18n.t("bso_department"),
     title: i18n.t("kathigitria"),
     tel: "2310 891.349",
@@ -443,8 +443,8 @@ const profData = [
   },
   {
     imgUrl: "https://www.uom.gr/site/images/personphoto-2.jpg",
-    fname: "Φώτιος",
-    lname: "Σιώκης",
+    fname: i18n.t("fotios"),
+    lname: i18n.t("siokis"),
     department: i18n.t("bso_department"),
     title: i18n.t("kathigitis"),
     tel: "2310 891.459",
@@ -454,8 +454,8 @@ const profData = [
   },
   {
     imgUrl: "https://www.uom.gr/site/images/personphoto-2.jpg",
-    fname: "Δημήτριος",
-    lname: "Σταματόπουλος",
+    fname: i18n.t("dimitrios"),
+    lname: i18n.t("stamatopoulos"),
     department: i18n.t("bso_department"),
     title: i18n.t("kathigitis"),
     tel: "2310 891.472",
@@ -466,8 +466,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1868/1768-tzionasN-2.jpg",
-    fname: "Ιωάννης",
-    lname: "Τζιώνας",
+    fname: i18n.t("ioannis"),
+    lname: i18n.t("tzionas"),
     department: i18n.t("bso_department"),
     title: i18n.t("kathigitis"),
     tel: "2310 891.470",
@@ -478,8 +478,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1894/12625-12556-AKRIVOULIS2-2-2.jpg",
-    fname: "Δημήτριος",
-    lname: "Ακριβούλης",
+    fname: i18n.t("dimitrios"),
+    lname: i18n.t("akrivoulis"),
     department: i18n.t("bso_department"),
     title: i18n.t("anaplirotisKathigitis"),
     tel: "2310 891.775",
@@ -490,8 +490,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1895/4900-VVlasidis-2.jpg",
-    fname: "Βλάσιος",
-    lname: "Βλασίδης",
+    fname: i18n.t("vlasios"),
+    lname: i18n.t("vlasidis"),
     department: i18n.t("bso_department"),
     title: i18n.t("anaplirotisKathigitis"),
     tel: "2310 891.318",
@@ -501,8 +501,8 @@ const profData = [
   },
   {
     imgUrl: "https://www.uom.gr/site/images/personphoto-2.jpg",
-    fname: "Νικόλαος",
-    lname: "Ζάικος",
+    fname: i18n.t("nikolaos"),
+    lname: i18n.t("zaikos"),
     department: i18n.t("bso_department"),
     title: i18n.t("anaplirotisKathigitis"),
     tel: "2310 891.713",
@@ -512,8 +512,8 @@ const profData = [
   },
   {
     imgUrl: "https://www.uom.gr/site/images/personphoto-2.jpg",
-    fname: "Εμμανουήλ",
-    lname: "Καραγιάννης",
+    fname: i18n.t("emmanouil"),
+    lname: i18n.t("karagiannis"),
     department: i18n.t("bso_department"),
     title: i18n.t("anaplirotisKathigitis"),
     tel: "2310 891.425",
@@ -524,8 +524,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1889/4881-Karpetis-2.jpg",
-    fname: "Χρήστος",
-    lname: "Καρπέτης",
+    fname: i18n.t("christos"),
+    lname: i18n.t("karpetis"),
     department: i18n.t("bso_department"),
     title: i18n.t("anaplirotisKathigitis"),
     tel: "2310 891.482",
@@ -536,8 +536,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1898/5835-s340manos-2.jpg",
-    fname: "Ιωάννης",
-    lname: "Μάνος",
+    fname: i18n.t("ioannis"),
+    lname: i18n.t("manos"),
     department: i18n.t("bso_department"),
     title: i18n.t("anaplirotisKathigitis"),
     tel: "2310 891.626",
@@ -548,8 +548,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1902/4511-Mavrogeni_fotoprofil_071019-2.jpg",
-    fname: "Σταυρούλα",
-    lname: "Μαυρογένη",
+    fname: i18n.t("stavroula"),
+    lname: i18n.t("mavrogeni"),
     department: i18n.t("bso_department"),
     title: "Αναπληρώτρια Καθηγήτρια",
     tel: "2310 891.450",
@@ -559,8 +559,8 @@ const profData = [
   },
   {
     imgUrl: "https://www.uom.gr/site/images/personphoto-2.jpg",
-    fname: "Παναγιώτης",
-    lname: "Μιχαηλίδης",
+    fname: i18n.t("panagiotis"),
+    lname: i18n.t("michailidis"),
     department: i18n.t("bso_department"),
     title: i18n.t("anaplirotisKathigitis"),
     tel: "2310 891.436",
@@ -570,8 +570,8 @@ const profData = [
   },
   {
     imgUrl: "https://www.uom.gr/site/images/personphoto-2.jpg",
-    fname: "Αναστάσιος",
-    lname: "Πανόπουλος",
+    fname: i18n.t("anastasios"),
+    lname: i18n.t("panopoulos"),
     department: i18n.t("bso_department"),
     title: i18n.t("anaplirotisKathigitis"),
     tel: "2310 891.157",
@@ -582,8 +582,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1905/5019-Soutsiou-2.jpg",
-    fname: "Τσιπριάν - Λουκρέτσιους",
-    lname: "Σούτσιου",
+    fname: i18n.t("tsiprian"),
+    lname: i18n.t("soutsiou"),
     department: i18n.t("bso_department"),
     title: i18n.t("anaplirotisKathigitis"),
     tel: "2310 891.475",
@@ -593,8 +593,8 @@ const profData = [
   },
   {
     imgUrl: "https://www.uom.gr/site/images/personphoto-2.jpg",
-    fname: "Γεώργιος",
-    lname: "Χρηστίδης",
+    fname: i18n.t("georgios"),
+    lname: i18n.t("christidis"),
     department: i18n.t("bso_department"),
     title: i18n.t("anaplirotisKathigitis"),
     tel: "2310 891.460",
@@ -604,8 +604,8 @@ const profData = [
   },
   {
     imgUrl: "https://www.uom.gr/site/images/personphoto-2.jpg",
-    fname: "Στράτος",
-    lname: "Δορδανάς",
+    fname: i18n.t("stratos"),
+    lname: i18n.t("dordanas"),
     department: i18n.t("bso_department"),
     title: i18n.t("epikourosKathigitis"),
     tel: "2310 891.638",
@@ -616,8 +616,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/10607/11290-Karak_photo-2.jpg",
-    fname: "Λεωνίδας",
-    lname: "Καρακατσάνης",
+    fname: i18n.t("leonidas"),
+    lname: i18n.t("karakatsanis"),
     department: i18n.t("bso_department"),
     title: i18n.t("epikourosKathigitis"),
     tel: "2310 891.888",
@@ -627,8 +627,8 @@ const profData = [
   },
   {
     imgUrl: "https://www.uom.gr/site/images/personphoto-2.jpg",
-    fname: "Νικόλαος",
-    lname: "Λιάζος",
+    fname: i18n.t("nikolaos"),
+    lname: i18n.t("liazos"),
     department: i18n.t("bso_department"),
     title: i18n.t("epikourosKathigitis"),
     tel: "2310 891.481",
@@ -639,8 +639,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/6786/12557-sideri22222-2.jpg",
-    fname: "Ελένη",
-    lname: "Σιδέρη",
+    fname: i18n.t("eleni"),
+    lname: i18n.t("sideri"),
     department: i18n.t("bso_department"),
     title: i18n.t("epikouriKathigitria"),
     tel: "2310 891.439",
@@ -650,8 +650,8 @@ const profData = [
   },
   {
     imgUrl: "https://www.uom.gr/assets/site/public/nodes/1525/1173-achat-2.jpg",
-    fname: "Αλέξανδρος",
-    lname: "Χατζηγεωργίου",
+    fname: i18n.t("alexandros"),
+    lname: i18n.t("chatzigeorgiou"),
     department: i18n.t("dai_department"),
     title: "Κοσμήτορας",
     tel: "2310 891.886",
@@ -661,8 +661,8 @@ const profData = [
   },
   {
     imgUrl: "https://www.uom.gr/assets/site/public/nodes/1526/1678-ealex-2.jpg",
-    fname: "Ευγενία",
-    lname: "Αλεξανδροπούλου",
+    fname: i18n.t("evgenia"),
+    lname: i18n.t("alexandropoulou"),
     department: i18n.t("dai_department"),
     title: i18n.t("kathigitria"),
     tel: "2310 891.896",
@@ -673,8 +673,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1553/1694-mavla_new-2.jpg",
-    fname: "Μάρω",
-    lname: "Βλαχοπούλου",
+    fname: i18n.t("maro"),
+    lname: i18n.t("vlachopoulou"),
     department: i18n.t("dai_department"),
     title: i18n.t("kathigitria"),
     tel: "2310 891.867",
@@ -684,8 +684,8 @@ const profData = [
   },
   {
     imgUrl: "https://www.uom.gr/assets/site/public/nodes/1531/3460-geor-1.png",
-    fname: "Χρήστος",
-    lname: "Γεωργιάδης",
+    fname: i18n.t("christos"),
+    lname: i18n.t("georgiadis"),
     department: i18n.t("dai_department"),
     title: i18n.t("kathigitis"),
     tel: "2310 891.869",
@@ -695,8 +695,8 @@ const profData = [
   },
   {
     imgUrl: "https://www.uom.gr/assets/site/public/nodes/1522/1183-gevan-2.jpg",
-    fname: "Γεώργιος",
-    lname: "Ευαγγελίδης",
+    fname: i18n.t("georgios"),
+    lname: i18n.t("evaggelidis"),
     department: i18n.t("dai_department"),
     title: i18n.t("kathigitis"),
     tel: "2310 891.844",
@@ -706,8 +706,8 @@ const profData = [
   },
   {
     imgUrl: "https://www.uom.gr/assets/site/public/nodes/1510/1200-kmarg-2.jpg",
-    fname: "Κωνσταντίνος",
-    lname: "Μαργαρίτης",
+    fname: i18n.t("konstantinos"),
+    lname: i18n.t("margaritis"),
     department: i18n.t("dai_department"),
     title: i18n.t("kathigitis"),
     tel: "2310 891.891",
@@ -718,8 +718,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1527/1847-Mavridis-2.jpg",
-    fname: "Ιωάννης",
-    lname: "Μαυρίδης",
+    fname: i18n.t("ioannis"),
+    lname: i18n.t("mavridis"),
     department: i18n.t("dai_department"),
     title: i18n.t("kathigitis"),
     tel: "2310 891.868",
@@ -730,8 +730,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1539/3091-nikolai-2.png",
-    fname: "Ιωάννης",
-    lname: "Νικολαΐδης",
+    fname: i18n.t("ioannis"),
+    lname: i18n.t("nikolaidis"),
     department: i18n.t("dai_department"),
     title: i18n.t("kathigitis"),
     tel: "2310 891.878",
@@ -742,8 +742,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1528/5191-Refanidis-2.png",
-    fname: "Ιωάννης",
-    lname: "Ρεφανίδης",
+    fname: i18n.t("ioannis"),
+    lname: i18n.t("refanidis"),
     department: i18n.t("dai_department"),
     title: i18n.t("kathigitis"),
     tel: "2310 891.859",
@@ -753,8 +753,8 @@ const profData = [
   },
   {
     imgUrl: "https://www.uom.gr/assets/site/public/nodes/1513/1113-manos-2.jpg",
-    fname: "Μάνος",
-    lname: "Ρουμελιώτης",
+    fname: i18n.t("manos"),
+    lname: i18n.t("roumeliotis"),
     department: i18n.t("dai_department"),
     title: i18n.t("kathigitis"),
     tel: "2310 891.894",
@@ -765,8 +765,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1530/1210-samaras-2.jpg",
-    fname: "Νικόλαος",
-    lname: "Σαμαράς",
+    fname: i18n.t("nikolaos"),
+    lname: i18n.t("samaras"),
     department: i18n.t("dai_department"),
     title: i18n.t("kathigitis"),
     tel: "2310 891.866",
@@ -777,8 +777,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1519/1567-MayaSatratzemi-2.jpg",
-    fname: "Μαρία",
-    lname: "Σατρατζέμη",
+    fname: i18n.t("maria"),
+    lname: i18n.t("satratzemi"),
     department: i18n.t("dai_department"),
     title: i18n.t("kathigitria"),
     tel: "2310 891.897",
@@ -789,8 +789,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1536/1219-stiakakis-2.jpg",
-    fname: "Εμμανουήλ",
-    lname: "Στειακάκης",
+    fname: i18n.t("emmanouil"),
+    lname: i18n.t("steiakakis"),
     department: i18n.t("dai_department"),
     title: i18n.t("kathigitis"),
     tel: "2310 891.643",
@@ -801,8 +801,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1538/1220-tambouris-2.jpg",
-    fname: "Ευθύμιος",
-    lname: "Ταμπούρης",
+    fname: i18n.t("euthimios"),
+    lname: i18n.t("tampouris"),
     department: i18n.t("dai_department"),
     title: i18n.t("kathigitis"),
     tel: "2310 891.889",
@@ -813,8 +813,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1532/4825-Hristou-Varsakelis_ed-2.jpg",
-    fname: "Δημήτριος",
-    lname: "Χρήστου-Βαρσακέλης",
+    fname: i18n.t("dimitrios"),
+    lname: i18n.t("hristou_varsakelis"),
     department: i18n.t("dai_department"),
     title: i18n.t("kathigitis"),
     tel: "2310 891.721",
@@ -825,8 +825,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1546/3134-kvergidis-2.png",
-    fname: "Κωνσταντίνος",
-    lname: "Βεργίδης",
+    fname: i18n.t("konstantinos"),
+    lname: i18n.t("vergidis"),
     department: i18n.t("dai_department"),
     title: i18n.t("anaplirotisKathigitis"),
     tel: "2310 891.637",
@@ -836,8 +836,8 @@ const profData = [
   },
   {
     imgUrl: "https://www.uom.gr/site/images/personphoto-2.jpg",
-    fname: "Απόστολος",
-    lname: "Δασίλας",
+    fname: i18n.t("apostolos"),
+    lname: i18n.t("dasilas"),
     department: i18n.t("dai_department"),
     title: i18n.t("anaplirotisKathigitis"),
     tel: "2310 891.883",
@@ -848,8 +848,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1529/1194-kaskalis-2.jpg",
-    fname: "Θεόδωρος",
-    lname: "Κασκάλης",
+    fname: i18n.t("theodoros"),
+    lname: i18n.t("kaskalis"),
     department: i18n.t("dai_department"),
     title: i18n.t("anaplirotisKathigitis"),
     tel: "2310 891.885",
@@ -860,8 +860,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1543/2972-Kitsios-2.png",
-    fname: "Φώτιος",
-    lname: "Κίτσιος",
+    fname: i18n.t("fotios"),
+    lname: i18n.t("kitsios"),
     department: i18n.t("dai_department"),
     title: i18n.t("anaplirotisKathigitis"),
     tel: "2310 891.718",
@@ -872,8 +872,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1545/5382-5364-mamatas-better-2.png",
-    fname: "Ελευθέριος",
-    lname: "Μαμάτας",
+    fname: i18n.t("eleftherios"),
+    lname: i18n.t("mamatas"),
     department: i18n.t("dai_department"),
     title: i18n.t("anaplirotisKathigitis"),
     tel: "2310 891.709",
@@ -884,8 +884,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1535/4778-stelios-2.png",
-    fname: "Στυλιανός",
-    lname: "Ξυνόγαλος",
+    fname: i18n.t("stylianos"),
+    lname: i18n.t("xinogalos"),
     department: i18n.t("dai_department"),
     title: i18n.t("anaplirotisKathigitis"),
     tel: "2310 891.895",
@@ -896,8 +896,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1550/10399-papadimitriou5-2.jpg",
-    fname: "Παναγιώτης",
-    lname: "Παπαδημητρίου",
+    fname: i18n.t("panagiotis"),
+    lname: i18n.t("papadimitriou"),
     department: i18n.t("dai_department"),
     title: i18n.t("anaplirotisKathigitis"),
     tel: "2310 891.727",
@@ -908,8 +908,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1524/12809-sifaleras-2.jpg",
-    fname: "Άγγελος",
-    lname: "Σιφαλέρας",
+    fname: i18n.t("aggelos"),
+    lname: i18n.t("sifaleras"),
     department: i18n.t("dai_department"),
     title: i18n.t("anaplirotisKathigitis"),
     tel: "2310 891.884",
@@ -920,8 +920,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1533/1218-stavrop-2.jpg",
-    fname: "Αντώνιος",
-    lname: "Σταυρόπουλος",
+    fname: i18n.t("antonios"),
+    lname: i18n.t("stauropoulos"),
     department: i18n.t("dai_department"),
     title: i18n.t("anaplirotisKathigitis"),
     tel: "2310 891.862",
@@ -932,8 +932,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1544/1197-kfouskas-2.jpg",
-    fname: "Κωνσταντίνος",
-    lname: "Φούσκας",
+    fname: i18n.t("konstantinos"),
+    lname: i18n.t("fouskas"),
     department: i18n.t("dai_department"),
     title: i18n.t("anaplirotisKathigitis"),
     tel: "2310 891.845",
@@ -944,8 +944,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1542/5331-Psannis-2.jpg",
-    fname: "Κωνσταντίνος",
-    lname: "Ψάννης",
+    fname: i18n.t("konstantinos"),
+    lname: i18n.t("psannis"),
     department: i18n.t("dai_department"),
     title: i18n.t("anaplirotisKathigitis"),
     tel: "2310 891.737",
@@ -956,8 +956,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/6477/4728-abatzoglou-2.jpg",
-    fname: "Απόστολος",
-    lname: "Αμπατζόγλου",
+    fname: i18n.t("apostolos"),
+    lname: i18n.t("ampatzoglou"),
     department: i18n.t("dai_department"),
     title: i18n.t("epikourosKathigitis"),
     tel: "2310 891.809",
@@ -968,8 +968,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/10789/11801-Giannoutakhs_Kwstas_340x340-2.png",
-    fname: "Κωνσταντίνος",
-    lname: "Γιαννουτάκης",
+    fname: i18n.t("konstantinos"),
+    lname: i18n.t("giannoutakis"),
     department: i18n.t("dai_department"),
     title: i18n.t("epikourosKathigitis"),
     tel: "2310 891.810",
@@ -980,8 +980,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1547/1184-gkoloniari-2.jpg",
-    fname: "Γεωργία",
-    lname: "Κολωνιάρη",
+    fname: i18n.t("georgia"),
+    lname: i18n.t("koloniari"),
     department: i18n.t("dai_department"),
     title: i18n.t("epikouriKathigitria"),
     tel: "2310 891.887",
@@ -992,8 +992,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1549/1208-mmadas-2.jpg",
-    fname: "Μιχαήλ",
-    lname: "Μαντάς",
+    fname: i18n.t("michail"),
+    lname: i18n.t("mantas"),
     department: i18n.t("dai_department"),
     title: i18n.t("epikourosKathigitis"),
     tel: "2310 891.773",
@@ -1004,8 +1004,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1540/1217-spetrido-2.jpg",
-    fname: "Σοφία",
-    lname: "Πετρίδου",
+    fname: i18n.t("sofia"),
+    lname: i18n.t("petridou"),
     department: i18n.t("dai_department"),
     title: i18n.t("epikouriKathigitria"),
     tel: "2310 891.639",
@@ -1016,8 +1016,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1537/1191-iliass-2.jpg",
-    fname: "Ηλίας",
-    lname: "Σακελλαρίου",
+    fname: i18n.t("ilias"),
+    lname: i18n.t("sakellariou"),
     department: i18n.t("dai_department"),
     title: i18n.t("epikourosKathigitis"),
     tel: "2310 891.858",
@@ -1027,8 +1027,8 @@ const profData = [
   },
   {
     imgUrl: "https://www.uom.gr/site/images/personphoto-2.jpg",
-    fname: "Σταύρος",
-    lname: "Σουραβλάς",
+    fname: i18n.t("stavros"),
+    lname: i18n.t("souravlas"),
     department: i18n.t("dai_department"),
     title: i18n.t("epikourosKathigitis"),
     tel: "2310 891.872",
@@ -1039,8 +1039,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1534/8867-pfoul_2021-2.jpg",
-    fname: "Παναγιώτης",
-    lname: "Φουληράς",
+    fname: i18n.t("panagiotis"),
+    lname: i18n.t("fouliras"),
     department: i18n.t("dai_department"),
     title: i18n.t("epikourosKathigitis"),
     tel: "2310 891.843",
@@ -1051,8 +1051,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1636/1227-valetras-2.jpg",
-    fname: "Βασίλειος",
-    lname: "Αλετράς",
+    fname: i18n.t("vasileios"),
+    lname: i18n.t("aletras"),
     department: i18n.t("bas_department"),
     title: i18n.t("proedrosTmimatos"),
     tel: "2310 891.505",
@@ -1062,8 +1062,8 @@ const profData = [
   },
   {
     imgUrl: "https://www.uom.gr/site/images/personphoto-2.jpg",
-    fname: "Ανδρέας",
-    lname: "Ανδρονικίδης",
+    fname: i18n.t("andreas"),
+    lname: i18n.t("andronikidis"),
     department: i18n.t("bas_department"),
     title: i18n.t("kathigitis"),
     tel: "2310 891.584",
@@ -1074,8 +1074,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1620/3909-vassiliadisCh_ed-2.jpg",
-    fname: "Χρήστος",
-    lname: "Βασιλειάδης",
+    fname: i18n.t("christos"),
+    lname: i18n.t("vasileiadis"),
     department: i18n.t("bas_department"),
     title: i18n.t("kathigitis"),
     tel: "2310 891.581",
@@ -1086,8 +1086,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1633/2020-Vouzas_ed-2.jpg",
-    fname: "Φώτης",
-    lname: "Βούζας",
+    fname: i18n.t("fotios"),
+    lname: i18n.t("vouzas"),
     department: i18n.t("bas_department"),
     title: i18n.t("kathigitis"),
     tel: "2310 891.583",
@@ -1097,8 +1097,8 @@ const profData = [
   },
   {
     imgUrl: "https://www.uom.gr/assets/site/public/nodes/1624/1596-acg-2.jpg",
-    fname: "Ανδρέας",
-    lname: "Γεωργίου",
+    fname: i18n.t("andreas"),
+    lname: i18n.t("georgiou"),
     department: i18n.t("bas_department"),
     title: i18n.t("kathigitis"),
     tel: "2310 891.569",
@@ -1109,8 +1109,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1632/1198-kgotza-2.jpg",
-    fname: "Αικατερίνη",
-    lname: "Γκοτζαμάνη",
+    fname: i18n.t("aikaterini"),
+    lname: i18n.t("gkotzamani"),
     department: i18n.t("bas_department"),
     title: i18n.t("kathigitria"),
     tel: "2310 891.568",
@@ -1121,8 +1121,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1630/1582-eleytheriadis-2.jpg",
-    fname: "Ιορδάνης",
-    lname: "Ελευθεριάδης",
+    fname: i18n.t("iordanis"),
+    lname: i18n.t("eleftheriadis"),
     department: i18n.t("bas_department"),
     title: i18n.t("kathigitis"),
     tel: "2310 891.591",
@@ -1133,8 +1133,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1625/3994-DimitrisMihail-2.jpg",
-    fname: "Δημήτριος",
-    lname: "Μιχαήλ",
+    fname: i18n.t("dimitrios"),
+    lname: i18n.t("michail"),
     department: i18n.t("bas_department"),
     title: i18n.t("kathigitis"),
     tel: "2310 891.594",
@@ -1145,8 +1145,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1638/3587-moschidis-2.png",
-    fname: "Οδυσσέας",
-    lname: "Μοσχίδης",
+    fname: i18n.t("odysseas"),
+    lname: i18n.t("moschidis"),
     department: i18n.t("bas_department"),
     title: i18n.t("kathigitis"),
     tel: "2310 891.592",
@@ -1157,8 +1157,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1627/4641-Soumpeniotis_ed-2.jpg",
-    fname: "Δημήτριος",
-    lname: "Σουμπενιώτης",
+    fname: i18n.t("dimitrios"),
+    lname: i18n.t("soumpeniotis"),
     department: i18n.t("bas_department"),
     title: i18n.t("kathigitis"),
     tel: "2310 891.580",
@@ -1169,8 +1169,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1622/6051-Tarabanis_ed-2.jpg",
-    fname: "Κωνσταντίνος",
-    lname: "Ταραμπάνης",
+    fname: i18n.t("konstantinos"),
+    lname: i18n.t("tarampanis"),
     department: i18n.t("bas_department"),
     title: i18n.t("kathigitis"),
     tel: "2310 891.578",
@@ -1181,8 +1181,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1621/1223-tsiotras-2.jpg",
-    fname: "Γεώργιος",
-    lname: "Τσίοτρας",
+    fname: i18n.t("georgios"),
+    lname: i18n.t("tsiotras"),
     department: i18n.t("bas_department"),
     title: i18n.t("kathigitis"),
     tel: "2310 891.575",
@@ -1193,8 +1193,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1641/2002-TsiotsiouREd-2.jpg",
-    fname: "Ροδούλα",
-    lname: "Τσιότσου",
+    fname: i18n.t("rodoula"),
+    lname: i18n.t("tsiotsou"),
     department: i18n.t("bas_department"),
     title: i18n.t("kathigitria"),
     tel: "2310 891.576",
@@ -1205,8 +1205,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1650/1682-hajidim-2.jpg",
-    fname: "Ιωάννης",
-    lname: "Χατζηδημητρίου",
+    fname: i18n.t("ioannis"),
+    lname: i18n.t("chatzidimitriou"),
     department: i18n.t("bas_department"),
     title: i18n.t("kathigitis"),
     tel: "2310 891.585",
@@ -1216,8 +1216,8 @@ const profData = [
   },
   {
     imgUrl: "https://www.uom.gr/site/images/personphoto-2.jpg",
-    fname: "Κωνσταντίνος",
-    lname: "Αγοραστός",
+    fname: i18n.t("konstantinos"),
+    lname: i18n.t("agorastos"),
     department: i18n.t("bas_department"),
     title: i18n.t("anaplirotisKathigitis"),
     tel: "2310 891.572",
@@ -1228,8 +1228,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1640/4007-KatouA-2.jpg",
-    fname: "Αναστασία",
-    lname: "Κάτου",
+    fname: i18n.t("anastasia"),
+    lname: i18n.t("katou"),
     department: i18n.t("bas_department"),
     title: "Αναπληρώτρια Καθηγήτρια",
     tel: "2310 891.587",
@@ -1240,8 +1240,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1639/3908-PapathanasiouJason_ed-2.jpg",
-    fname: "Ιάσων",
-    lname: "Παπαθανασίου",
+    fname: i18n.t("iason"),
+    lname: i18n.t("papathanasiou"),
     department: i18n.t("bas_department"),
     title: i18n.t("anaplirotisKathigitis"),
     tel: "2310 891.571",
@@ -1252,8 +1252,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1643/1565-tsironis-2.jpg",
-    fname: "Λουκάς",
-    lname: "Τσιρώνης",
+    fname: i18n.t("loukas"),
+    lname: i18n.t("tsironis"),
     department: i18n.t("bas_department"),
     title: i18n.t("anaplirotisKathigitis"),
     tel: "2310 891.597",
@@ -1264,8 +1264,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1646/1226-v-grougiou-2.jpg",
-    fname: "Βασιλική",
-    lname: "Γρούγιου",
+    fname: i18n.t("vasiliki"),
+    lname: i18n.t("grougiou"),
     department: i18n.t("bas_department"),
     title: i18n.t("epikouriKathigitria"),
     tel: "2310 891.557",
@@ -1276,8 +1276,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1645/1179-drogalas-2.jpg",
-    fname: "Γεώργιος",
-    lname: "Δρογαλάς",
+    fname: i18n.t("georgios"),
+    lname: i18n.t("drogalas"),
     department: i18n.t("bas_department"),
     title: i18n.t("epikourosKathigitis"),
     tel: "2310 891.537",
@@ -1288,8 +1288,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/11228/13759-ekal1-2.jpg",
-    fname: "Ευάγγελος",
-    lname: "Καλαμπόκης",
+    fname: i18n.t("euaggelos"),
+    lname: i18n.t("kalampokis"),
     department: i18n.t("bas_department"),
     title: i18n.t("epikourosKathigitis"),
     tel: "2310 891.588",
@@ -1300,8 +1300,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1648/3910-KaparisK-2.jpg",
-    fname: "Κωνσταντίνος",
-    lname: "Καπάρης",
+    fname: i18n.t("konstantinos"),
+    lname: i18n.t("kaparis"),
     department: i18n.t("bas_department"),
     title: i18n.t("epikourosKathigitis"),
     tel: "2310 891.573",
@@ -1312,8 +1312,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/7951/6625-kafetzopoulos-id-2.jpg",
-    fname: "Δημήτριος",
-    lname: "Καφετζόπουλος",
+    fname: i18n.t("dimitrios"),
+    lname: i18n.t("kafetzopoulos"),
     department: i18n.t("bas_department"),
     title: i18n.t("epikourosKathigitis"),
     tel: "2310 891.567",
@@ -1324,8 +1324,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1644/3524-IoannisKonstantaras-2.jpg",
-    fname: "Ιωάννης",
-    lname: "Κωνσταντάρας",
+    fname: i18n.t("ioannis"),
+    lname: i18n.t("konstantaras"),
     department: i18n.t("bas_department"),
     title: i18n.t("epikourosKathigitis"),
     tel: "2310 891.695",
@@ -1336,8 +1336,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1642/1221-tampakoudis-2.jpg",
-    fname: "Ιωάννης",
-    lname: "Ταμπακούδης",
+    fname: i18n.t("ioannis"),
+    lname: i18n.t("tampakoudis"),
     department: i18n.t("bas_department"),
     title: i18n.t("epikourosKathigitis"),
     tel: "2310 891.595",
@@ -1348,8 +1348,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1647/2773-LeonidasHatzithomas-2.jpg",
-    fname: "Λεωνίδας",
-    lname: "Χατζηθωμάς",
+    fname: i18n.t("leonidas"),
+    lname: i18n.t("chatzithomas"),
     department: i18n.t("bas_department"),
     title: i18n.t("epikourosKathigitis"),
     tel: "2310 891.684",
@@ -1360,8 +1360,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1635/13677-kourdoumpalou070722-2.jpg",
-    fname: "Σταυρούλα",
-    lname: "Κουρδούμπαλου",
+    fname: i18n.t("stavroula"),
+    lname: i18n.t("kourdoumpalou"),
     department: i18n.t("bas_department"),
     title: "Λέκτορας",
     tel: "2310 891.599",
@@ -1372,8 +1372,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1682/2079-d-ginoglou-2.jpg",
-    fname: "Δημήτριος",
-    lname: "Γκίνογλου",
+    fname: i18n.t("dimitrios"),
+    lname: i18n.t("gkinoglou"),
     department: i18n.t("fin_department"),
     title: i18n.t("kathigitis"),
     tel: "2310 891.688",
@@ -1384,8 +1384,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1685/6161-a-zapranis-new-340x340-2.jpg",
-    fname: "Αχιλλέας",
-    lname: "Ζαπράνης",
+    fname: i18n.t("achilleas"),
+    lname: i18n.t("zapranis"),
     department: i18n.t("fin_department"),
     title: i18n.t("kathigitis"),
     tel: "2310 891.690",
@@ -1396,8 +1396,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1691/9925-negakis-front-2.jpg",
-    fname: "Χρήστος",
-    lname: "Νεγκάκης",
+    fname: i18n.t("christos"),
+    lname: i18n.t("negkakis"),
     department: i18n.t("fin_department"),
     title: i18n.t("kathigitis"),
     tel: "2310 891.632",
@@ -1408,8 +1408,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1684/2083-a-noulas-2.jpg",
-    fname: "Αθανάσιος",
-    lname: "Νούλας",
+    fname: i18n.t("thanasis"),
+    lname: i18n.t("noulas"),
     department: i18n.t("fin_department"),
     title: i18n.t("kathigitis"),
     tel: "2310 891.677",
@@ -1420,8 +1420,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1686/2084-i-papanastasiou-2.jpg",
-    fname: "Ιωάννης",
-    lname: "Παπαναστασίου",
+    fname: i18n.t("ioannis"),
+    lname: i18n.t("papanastasiou"),
     department: i18n.t("fin_department"),
     title: i18n.t("kathigitis"),
     tel: "2310 891.696",
@@ -1432,8 +1432,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1690/5464-protogeros_id-2.jpg",
-    fname: "Νικόλαος",
-    lname: "Πρωτόγερος",
+    fname: i18n.t("nikolaos"),
+    lname: i18n.t("protogeros"),
     department: i18n.t("fin_department"),
     title: i18n.t("kathigitis"),
     tel: "2310 891.681",
@@ -1444,8 +1444,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1697/2062-p-tachinakis-2.jpg",
-    fname: "Παναγιώτης",
-    lname: "Ταχυνάκης",
+    fname: i18n.t("panagiotis"),
+    lname: i18n.t("tachynakis"),
     department: i18n.t("fin_department"),
     title: i18n.t("kathigitis"),
     tel: "2310 891.564",
@@ -1456,8 +1456,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/8016/7103-alexandridis-2.jpg",
-    fname: "Αντώνιος",
-    lname: "Αλεξανδρίδης",
+    fname: i18n.t("antonios"),
+    lname: i18n.t("alexandridis"),
     department: i18n.t("fin_department"),
     title: i18n.t("anaplirotisKathigitis"),
     tel: "2310 891.611",
@@ -1468,8 +1468,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1694/2060-livanis-2.jpg",
-    fname: "Ευστράτιος",
-    lname: "Λιβάνης",
+    fname: i18n.t("efstratios"),
+    lname: i18n.t("livanis"),
     department: i18n.t("fin_department"),
     title: i18n.t("anaplirotisKathigitis"),
     tel: "2310 891.685",
@@ -1480,8 +1480,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/6712/10099-7178-mavrag-2-2.jpg",
-    fname: "Ελένη",
-    lname: "Μαυραγάνη",
+    fname: i18n.t("eleni"),
+    lname: i18n.t("mavragani"),
     department: i18n.t("fin_department"),
     title: "Αναπληρώτρια Καθηγήτρια",
     tel: "2310 891.625",
@@ -1492,8 +1492,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1707/10098-pmessis-2.jpg",
-    fname: "Πέτρος",
-    lname: "Μεσσής",
+    fname: i18n.t("petros"),
+    lname: i18n.t("messis"),
     department: i18n.t("fin_department"),
     title: i18n.t("anaplirotisKathigitis"),
     tel: "2310 891.619",
@@ -1504,8 +1504,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1692/2061-s-papadopoulos-2.jpg",
-    fname: "Συμεών",
-    lname: "Παπαδόπουλος",
+    fname: i18n.t("simeon"),
+    lname: i18n.t("papadopoulos"),
     department: i18n.t("fin_department"),
     title: i18n.t("anaplirotisKathigitis"),
     tel: "2310 891.665",
@@ -1516,8 +1516,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/4981/1961-PavlatosOd-2.jpg",
-    fname: "Οδυσσέας",
-    lname: "Παυλάτος",
+    fname: i18n.t("odysseas"),
+    lname: i18n.t("pavlatos"),
     department: i18n.t("fin_department"),
     title: i18n.t("anaplirotisKathigitis"),
     tel: "2310 891.659",
@@ -1528,8 +1528,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1696/2493-asamara-2.jpg",
-    fname: "Αγγελική",
-    lname: "Σαμαρά",
+    fname: i18n.t("aggeliki"),
+    lname: i18n.t("samara"),
     department: i18n.t("fin_department"),
     title: "Αναπληρώτρια Καθηγήτρια",
     tel: "2310 891.523",
@@ -1540,8 +1540,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/8846/8201-tziogkidis-340x340-2.jpg",
-    fname: "Παναγιώτης",
-    lname: "Τζιογκίδης",
+    fname: i18n.t("panagiotis"),
+    lname: i18n.t("tziogkidis"),
     department: i18n.t("fin_department"),
     title: i18n.t("anaplirotisKathigitis"),
     tel: "2310 891.699",
@@ -1552,8 +1552,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/11507/13754-trachanas-340x340-2.jpg",
-    fname: "Εμμανουήλ",
-    lname: "Τραχανάς",
+    fname: i18n.t("emmanouil"),
+    lname: i18n.t("trachanas"),
     department: i18n.t("fin_department"),
     title: i18n.t("anaplirotisKathigitis"),
     tel: "2310 891.672",
@@ -1564,8 +1564,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1743/5917-Nikas_photo-2.jpg",
-    fname: "Χρήστος",
-    lname: "Νίκας",
+    fname: i18n.t("christos"),
+    lname: i18n.t("nikas"),
     department: i18n.t("ess_department"),
     title: i18n.t("proedrosTmimatos"),
     tel: "2310 891.499",
@@ -1575,8 +1575,8 @@ const profData = [
   },
   {
     imgUrl: "https://www.uom.gr/assets/site/public/nodes/1748/1205-kz-2.jpg",
-    fname: "Κωνσταντίνος",
-    lname: "Ζαφειρόπουλος",
+    fname: i18n.t("konstantinos"),
+    lname: i18n.t("zafeiropoulos"),
     department: i18n.t("ess_department"),
     title: i18n.t("kathigitis"),
     tel: "2310 891.487",
@@ -1587,8 +1587,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1724/5702-photo_KARVOUNARAKIS-2.jpg",
-    fname: "Θεοδόσιος",
-    lname: "Καρβουναράκης",
+    fname: i18n.t("theodosios"),
+    lname: i18n.t("karvounarakis"),
     department: i18n.t("ess_department"),
     title: i18n.t("kathigitis"),
     tel: "2310 891.497",
@@ -1599,8 +1599,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1734/5586-litsas-2.jpg",
-    fname: "Σπυρίδων",
-    lname: "Λίτσας",
+    fname: i18n.t("spyridon"),
+    lname: i18n.t("litsas"),
     department: i18n.t("ess_department"),
     title: i18n.t("kathigitis"),
     tel: "2310 891.496",
@@ -1611,8 +1611,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1732/6072-Bitzenis0120_ed-2.jpg",
-    fname: "Αριστείδης",
-    lname: "Μπιτζένης",
+    fname: i18n.t("aristeidis"),
+    lname: i18n.t("mpitzenis"),
     department: i18n.t("ess_department"),
     title: i18n.t("kathigitis"),
     tel: "2310 891.498",
@@ -1623,8 +1623,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1738/3055-Skiadas-2.jpg",
-    fname: "Δημήτριος",
-    lname: "Σκιαδάς",
+    fname: i18n.t("dimitrios"),
+    lname: i18n.t("skiadas"),
     department: i18n.t("ess_department"),
     title: i18n.t("kathigitis"),
     tel: "2310 891.354",
@@ -1635,8 +1635,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1725/5858-photo_spiropoulos-2.jpg",
-    fname: "Γεώργιος",
-    lname: "Σπυρόπουλος",
+    fname: i18n.t("georgios"),
+    lname: i18n.t("spiropoulos"),
     department: i18n.t("ess_department"),
     title: i18n.t("kathigitis"),
     tel: "2310 891.480",
@@ -1647,8 +1647,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1729/5857-Anagnostopoulou_photo-2.jpg",
-    fname: "Δέσποινα",
-    lname: "Αναγνωστοπούλου",
+    fname: i18n.t("despina"),
+    lname: i18n.t("anagnostopoulou"),
     department: i18n.t("ess_department"),
     title: "Αναπληρώτρια Καθηγήτρια",
     tel: "2310 891.442",
@@ -1659,8 +1659,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1733/5713-photo_Voskopoulos-2.jpg",
-    fname: "Γεώργιος",
-    lname: "Βοσκόπουλος",
+    fname: i18n.t("georgios"),
+    lname: i18n.t("voskopoulos"),
     department: i18n.t("ess_department"),
     title: i18n.t("anaplirotisKathigitis"),
     tel: "2310 891.445",
@@ -1671,8 +1671,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1741/5916-kiohos_photo-2.jpg",
-    fname: "Απόστολος",
-    lname: "Κιόχος",
+    fname: i18n.t("apostolos"),
+    lname: i18n.t("kiohos"),
     department: i18n.t("ess_department"),
     title: i18n.t("anaplirotisKathigitis"),
     tel: "2310 891.556",
@@ -1683,8 +1683,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1742/5730-NK-UOM3-2.png",
-    fname: "Νικόλαος",
-    lname: "Κουτσουπιάς",
+    fname: i18n.t("nikolaos"),
+    lname: i18n.t("koutsoupias"),
     department: i18n.t("ess_department"),
     title: i18n.t("anaplirotisKathigitis"),
     tel: "2310 891.747",
@@ -1694,8 +1694,8 @@ const profData = [
   },
   {
     imgUrl: "https://www.uom.gr/assets/site/public/nodes/1731/1190-icons-2.jpg",
-    fname: "Ιωάννης",
-    lname: "Κωνσταντινίδης",
+    fname: i18n.t("ioannis"),
+    lname: i18n.t("konstantinidis"),
     department: i18n.t("ess_department"),
     title: i18n.t("anaplirotisKathigitis"),
     tel: "2310 891.495",
@@ -1706,8 +1706,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1744/1214-smakris-2.jpg",
-    fname: "Σπυρίδων",
-    lname: "Μακρής",
+    fname: i18n.t("spyridon"),
+    lname: i18n.t("makris"),
     department: i18n.t("ess_department"),
     title: i18n.t("anaplirotisKathigitis"),
     tel: "2310 891.156",
@@ -1718,8 +1718,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/5393/5731-revecca_pedi_1-2.jpg",
-    fname: "Ρεβέκκα",
-    lname: "Παιδή",
+    fname: i18n.t("revekka"),
+    lname: i18n.t("pedi"),
     department: i18n.t("ess_department"),
     title: "Αναπληρώτρια Καθηγήτρια",
     tel: "2310 891.413",
@@ -1730,8 +1730,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1735/5708-photo_Papadopoulos-2.jpg",
-    fname: "Ιωάννης",
-    lname: "Παπαδόπουλος",
+    fname: i18n.t("ioannis"),
+    lname: i18n.t("papadopoulos"),
     department: i18n.t("ess_department"),
     title: i18n.t("anaplirotisKathigitis"),
     tel: "2310 891.486",
@@ -1742,8 +1742,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1740/1230-vasnik-2.jpg",
-    fname: "Νικόλαος",
-    lname: "Βασιλειάδης",
+    fname: i18n.t("nikolaos"),
+    lname: i18n.t("vasileiadis"),
     department: i18n.t("ess_department"),
     title: i18n.t("epikourosKathigitis"),
     tel: "2310 891.494",
@@ -1754,8 +1754,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1746/5703-Photo_Dergiades-2.jpg",
-    fname: "Θεολόγος",
-    lname: "Δεργιαδές",
+    fname: i18n.t("theologos"),
+    lname: i18n.t("dergiades"),
     department: i18n.t("ess_department"),
     title: i18n.t("epikourosKathigitis"),
     tel: "2310 891.738",
@@ -1766,8 +1766,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1739/1201-kmikelis-2.jpg",
-    fname: "Κυριάκος",
-    lname: "Μικέλης",
+    fname: i18n.t("kiriakos"),
+    lname: i18n.t("mikelis"),
     department: i18n.t("ess_department"),
     title: i18n.t("epikourosKathigitis"),
     tel: "2310 891.492",
@@ -1778,8 +1778,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1730/5692-Bellou_photo-2.png",
-    fname: "Φωτεινή",
-    lname: "Μπέλλου",
+    fname: i18n.t("fotini"),
+    lname: i18n.t("mpellou"),
     department: i18n.t("ess_department"),
     title: i18n.t("epikouriKathigitria"),
     tel: "2310 891.479",
@@ -1790,8 +1790,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1736/2233-Bozinis_ed-2.jpg",
-    fname: "Αθανάσιος",
-    lname: "Μποζίνης",
+    fname: i18n.t("thanasis"),
+    lname: i18n.t("mpozinis"),
     department: i18n.t("ess_department"),
     title: i18n.t("epikourosKathigitis"),
     tel: "2310 891.658",
@@ -1802,8 +1802,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1745/5699-Boutsiouki_photo-2.jpg",
-    fname: "Σοφία",
-    lname: "Μπουτσιούκη",
+    fname: i18n.t("sofia"),
+    lname: i18n.t("mpoutsiouki"),
     department: i18n.t("ess_department"),
     title: i18n.t("epikouriKathigitria"),
     tel: "2310 891.402",
@@ -1814,8 +1814,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/10139/12134-Skevas_photo-2.jpg",
-    fname: "Ιωάννης",
-    lname: "Σκεύας",
+    fname: i18n.t("ioannis"),
+    lname: i18n.t("skeuas"),
     department: i18n.t("ess_department"),
     title: i18n.t("epikourosKathigitis"),
     tel: "",
@@ -1826,8 +1826,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1737/1175-chainoglou-2.jpg",
-    fname: "Καλλιόπη",
-    lname: "Χαΐνογλου",
+    fname: i18n.t("kalliopi"),
+    lname: i18n.t("hainoglou"),
     department: i18n.t("ess_department"),
     title: i18n.t("epikouriKathigitria"),
     tel: "2310 891.614",
@@ -1838,9 +1838,9 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1792/9478-grayscale-300x300xc-2.jpg",
-    fname: "Κωνσταντίνος",
-    lname: "Παπαδόπουλος",
-    department: i18n.t("msa_department"),
+    fname: i18n.t("konstantinos"),
+    lname: i18n.t("papadopoulos"),
+    department: i18n.t("esp_department"),
     title: i18n.t("proedrosTmimatos"),
     tel: "2310 891.389",
     email: "kpapado@uom.edu.gr",
@@ -1851,7 +1851,7 @@ const profData = [
     imgUrl: "https://www.uom.gr/site/images/personphoto-2.jpg",
     fname: "Anthony Jude",
     lname: "Montgomery",
-    department: i18n.t("msa_department"),
+    department: i18n.t("esp_department"),
     title: i18n.t("kathigitis"),
     tel: "2310 891.308",
     email: "antmont@uom.edu.gr",
@@ -1860,9 +1860,9 @@ const profData = [
   },
   {
     imgUrl: "https://www.uom.gr/site/images/personphoto-2.jpg",
-    fname: "Ιωάννης",
-    lname: "Αγαλιώτης",
-    department: i18n.t("msa_department"),
+    fname: i18n.t("ioannis"),
+    lname: i18n.t("agaliotis"),
+    department: i18n.t("esp_department"),
     title: i18n.t("kathigitis"),
     tel: "2310 891.383",
     email: "iagal@uom.edu.gr",
@@ -1872,9 +1872,9 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1791/2000-valkanosE-2.jpg",
-    fname: "Ευθύμιος",
-    lname: "Βαλκάνος",
-    department: i18n.t("msa_department"),
+    fname: i18n.t("euthimios"),
+    lname: i18n.t("valkanos"),
+    department: i18n.t("esp_department"),
     title: i18n.t("kathigitis"),
     tel: "2310 891.385",
     email: "evalkan@uom.edu.gr",
@@ -1884,9 +1884,9 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1785/9481-Okalidou1-2.jpg",
-    fname: "Αρετή",
-    lname: "Οκαλίδου",
-    department: i18n.t("msa_department"),
+    fname: i18n.t("areti"),
+    lname: i18n.t("okalidou"),
+    department: i18n.t("esp_department"),
     title: i18n.t("kathigitria"),
     tel: "2310 891.358",
     email: "okalidou@uom.edu.gr",
@@ -1896,9 +1896,9 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1779/1209-platsidu-2.jpg",
-    fname: "Μαρία",
-    lname: "Πλατσίδου",
-    department: i18n.t("msa_department"),
+    fname: i18n.t("maria"),
+    lname: i18n.t("platsidou"),
+    department: i18n.t("esp_department"),
     title: i18n.t("kathigitria"),
     tel: "2310 891.384",
     email: "platsidou@uom.edu.gr",
@@ -1907,9 +1907,9 @@ const profData = [
   },
   {
     imgUrl: "https://www.uom.gr/site/images/personphoto-2.jpg",
-    fname: "Αναστασία",
-    lname: "Ψάλτη",
-    department: i18n.t("msa_department"),
+    fname: i18n.t("anastasia"),
+    lname: i18n.t("psalti"),
+    department: i18n.t("esp_department"),
     title: i18n.t("kathigitria"),
     tel: "2310 891.863",
     email: "psalti.an@uom.edu.gr",
@@ -1919,9 +1919,9 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1802/10488-Eirini_Gouleta-2.jpg",
-    fname: "Ειρήνη",
-    lname: "Γουλετά",
-    department: i18n.t("msa_department"),
+    fname: i18n.t("eirini"),
+    lname: i18n.t("gouleta"),
+    department: i18n.t("esp_department"),
     title: "Αναπληρώτρια Καθηγήτρια",
     tel: "2310 891.848",
     email: "egouleta@uom.edu.gr",
@@ -1931,9 +1931,9 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1787/2096-KartasidouL-2.jpg",
-    fname: "Λευκοθέα",
-    lname: "Καρτασίδου",
-    department: i18n.t("msa_department"),
+    fname: i18n.t("leukothea"),
+    lname: i18n.t("kartasidou"),
+    department: i18n.t("esp_department"),
     title: "Αναπληρώτρια Καθηγήτρια",
     tel: "2310 891.350",
     email: "lefka@uom.edu.gr",
@@ -1942,9 +1942,9 @@ const profData = [
   },
   {
     imgUrl: "https://www.uom.gr/site/images/personphoto-2.jpg",
-    fname: "Ελένη",
-    lname: "Κουστριάβα",
-    department: i18n.t("msa_department"),
+    fname: i18n.t("eleni"),
+    lname: i18n.t("koustriava"),
+    department: i18n.t("esp_department"),
     title: "Αναπληρώτρια Καθηγήτρια",
     tel: "2310 891.333",
     email: "elkous@uom.edu.gr",
@@ -1954,9 +1954,9 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1790/1192-ipapav-2.jpg",
-    fname: "Ιωάννα",
-    lname: "Παπαβασιλείου",
-    department: i18n.t("msa_department"),
+    fname: i18n.t("ioanna"),
+    lname: i18n.t("papavasileiou"),
+    department: i18n.t("esp_department"),
     title: "Αναπληρώτρια Καθηγήτρια",
     tel: "2310 891.524",
     email: "ipapav@uom.edu.gr",
@@ -1966,9 +1966,9 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1801/9468-photo_PAPAKONSTANTINOU_small-2.jpg",
-    fname: "Δόξα",
-    lname: "Παπακωνσταντίνου",
-    department: i18n.t("msa_department"),
+    fname: i18n.t("doxa"),
+    lname: i18n.t("papakonstantinou"),
+    department: i18n.t("esp_department"),
     title: "Αναπληρώτρια Καθηγήτρια",
     tel: "2310 891.403",
     email: "klerip@uom.edu.gr",
@@ -1978,9 +1978,9 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1799/1188-hproios-2.jpg",
-    fname: "Χαρίκλεια",
-    lname: "Πρώιου",
-    department: i18n.t("msa_department"),
+    fname: i18n.t("harikleia"),
+    lname: i18n.t("proiou"),
+    department: i18n.t("esp_department"),
     title: "Αναπληρώτρια Καθηγήτρια",
     tel: "2310 891.630",
     email: "hproios@uom.edu.gr",
@@ -1990,9 +1990,9 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1789/4597-staboulis-2.png",
-    fname: "Μιλτιάδης",
-    lname: "Σταμπουλής",
-    department: i18n.t("msa_department"),
+    fname: i18n.t("miltiadis"),
+    lname: i18n.t("stampoulis"),
+    department: i18n.t("esp_department"),
     title: i18n.t("anaplirotisKathigitis"),
     tel: "2310 891.621",
     email: "staboulis@uom.edu.gr",
@@ -2002,9 +2002,9 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1796/3042-Syriopoulou_ed-2.jpg",
-    fname: "Χριστίνα",
-    lname: "Συριοπούλου-Δελλή",
-    department: i18n.t("msa_department"),
+    fname: i18n.t("christina"),
+    lname: i18n.t("syriopoulou_delli"),
+    department: i18n.t("esp_department"),
     title: "Αναπληρώτρια Καθηγήτρια",
     tel: "2310 891.381",
     email: "csyriop@uom.edu.gr",
@@ -2014,9 +2014,9 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1797/10256-Fachantidis_340X340_-2.jpg",
-    fname: "Νικόλαος",
-    lname: "Φαχαντίδης",
-    department: i18n.t("msa_department"),
+    fname: i18n.t("nikolaos"),
+    lname: i18n.t("fahantidis"),
+    department: i18n.t("esp_department"),
     title: i18n.t("anaplirotisKathigitis"),
     tel: "2310 891.483",
     email: "nfachantidis@uom.edu.gr",
@@ -2026,9 +2026,9 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1809/1698-varsamis-2.jpg",
-    fname: "Παναγιώτης",
-    lname: "Βαρσάμης",
-    department: i18n.t("msa_department"),
+    fname: i18n.t("panagiotis"),
+    lname: i18n.t("varsamis"),
+    department: i18n.t("esp_department"),
     title: i18n.t("epikourosKathigitis"),
     tel: "2310 891.360",
     email: "varsamis@uom.edu.gr",
@@ -2038,9 +2038,9 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1798/9538-IMG_20210311_100705-2.jpg",
-    fname: "Βασιλική",
-    lname: "Γιαννούλη",
-    department: i18n.t("msa_department"),
+    fname: i18n.t("vasiliki"),
+    lname: i18n.t("giannouli"),
+    department: i18n.t("esp_department"),
     title: i18n.t("epikouriKathigitria"),
     tel: "2310 891.335",
     email: "giannouli@uom.edu.gr",
@@ -2049,9 +2049,9 @@ const profData = [
   },
   {
     imgUrl: "https://www.uom.gr/site/images/personphoto-2.jpg",
-    fname: "Μαρία",
-    lname: "Συτζιούκη",
-    department: i18n.t("msa_department"),
+    fname: i18n.t("maria"),
+    lname: i18n.t("sitziouki"),
+    department: i18n.t("esp_department"),
     title: i18n.t("epikouriKathigitria"),
     tel: "2310 891.771",
     email: "sitziouki@uom.edu.gr",
@@ -2061,8 +2061,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1502/4499-Georgios_Vranos_1-2.png",
-    fname: "Γεώργιος",
-    lname: "Βράνος",
+    fname: i18n.t("georgios"),
+    lname: i18n.t("vranos"),
     department: i18n.t("msa_department"),
     title: i18n.t("proedrosTmimatos"),
     tel: "2310 891.490",
@@ -2073,8 +2073,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1498/4898-vasiliadis-2.jpg",
-    fname: "Αναστάσιος",
-    lname: "Βασιλειάδης",
+    fname: i18n.t("anastasios"),
+    lname: i18n.t("vasileiadis"),
     department: i18n.t("msa_department"),
     title: i18n.t("kathigitis"),
     tel: "2310 891.528",
@@ -2085,8 +2085,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1485/7309-zervasnew-2.jpg",
-    fname: "Αθανάσιος",
-    lname: "Ζέρβας",
+    fname: i18n.t("thanasis"),
+    lname: i18n.t("zervas"),
     department: i18n.t("msa_department"),
     title: i18n.t("kathigitis"),
     tel: "2310 891.329",
@@ -2097,8 +2097,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1491/2219-kyriakakis_1-2.jpg",
-    fname: "Γεώργιος",
-    lname: "Κυριακάκης",
+    fname: i18n.t("georgios"),
+    lname: i18n.t("kiriakakis"),
     department: i18n.t("msa_department"),
     title: i18n.t("kathigitis"),
     tel: "2310 891.346",
@@ -2109,8 +2109,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1482/3195-Matske-2.jpg",
-    fname: "Χανς-Ούβε",
-    lname: "Παπαματθαίου-Μάτσκε",
+    fname: i18n.t("hans_ouve"),
+    lname: i18n.t("papamatthaiou_matske"),
     department: i18n.t("msa_department"),
     title: i18n.t("kathigitis"),
     tel: "2310 891.396",
@@ -2120,8 +2120,8 @@ const profData = [
   },
   {
     imgUrl: "https://www.uom.gr/assets/site/public/nodes/1481/5141-paris-2.jpg",
-    fname: "Κυριάκος-Νεκτάριος",
-    lname: "Πάρης",
+    fname: i18n.t("kiriakos_nektarios"),
+    lname: i18n.t("paris"),
     department: i18n.t("msa_department"),
     title: i18n.t("kathigitis"),
     tel: "2310 891.345",
@@ -2132,8 +2132,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1486/5972-PatrasPhoto-2.jpg",
-    fname: "Δημήτριος",
-    lname: "Πάτρας",
+    fname: i18n.t("dimitrios"),
+    lname: i18n.t("patras"),
     department: i18n.t("msa_department"),
     title: i18n.t("kathigitis"),
     tel: "2310 891.395",
@@ -2144,8 +2144,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1506/1839-politis340-2.jpg",
-    fname: "Ευγένιος",
-    lname: "Πολίτης    ",
+    fname: i18n.t("eugenios"),
+    lname: i18n.t("politis"),
     department: i18n.t("msa_department"),
     title: i18n.t("kathigitis"),
     tel: "2310 891.400",
@@ -2156,8 +2156,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1484/3526-stamoufoto-2.png",
-    fname: "Λελούδα",
-    lname: "Στάμου",
+    fname: i18n.t("lelouda"),
+    lname: i18n.t("stamou"),
     department: i18n.t("msa_department"),
     title: i18n.t("kathigitria"),
     tel: "2310 891.391",
@@ -2168,8 +2168,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1489/2245-ZenzPhoto-2.jpg",
-    fname: "Κατρίν-Αννέττε",
-    lname: "Τσέντς",
+    fname: i18n.t("katrin_annete"),
+    lname: i18n.t("tsents"),
     department: i18n.t("msa_department"),
     title: i18n.t("kathigitria"),
     tel: "2310 891.125",
@@ -2180,8 +2180,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1488/1681-dchand-2.jpg",
-    fname: "Δημήτριος",
-    lname: "Χανδράκης",
+    fname: i18n.t("dimitrios"),
+    lname: i18n.t("handrakis"),
     department: i18n.t("msa_department"),
     title: i18n.t("kathigitis"),
     tel: "2310 891.394",
@@ -2191,8 +2191,8 @@ const profData = [
   },
   {
     imgUrl: "https://www.uom.gr/assets/site/public/nodes/1483/1737-khass-2.jpg",
-    fname: "Κωνσταντίνος",
-    lname: "Χασιώτης",
+    fname: i18n.t("konstantinos"),
+    lname: i18n.t("hasiotis"),
     department: i18n.t("msa_department"),
     title: i18n.t("kathigitis"),
     tel: "2310 891.392",
@@ -2203,8 +2203,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1493/2513-AtzakasThEd-2.jpg",
-    fname: "Ευθύμιος",
-    lname: "Ατζακάς",
+    fname: i18n.t("euthimios"),
+    lname: i18n.t("atzakas"),
     department: i18n.t("msa_department"),
     title: i18n.t("anaplirotisKathigitis"),
     tel: "2310 891.328",
@@ -2215,8 +2215,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1499/5261-AchalinPhoto-2.jpg",
-    fname: "Γερμανός",
-    lname: "Αχαλινοτόπουλος",
+    fname: i18n.t("germanos"),
+    lname: i18n.t("ahalinotopoulos"),
     department: i18n.t("msa_department"),
     title: i18n.t("anaplirotisKathigitis"),
     tel: "2310 891.324",
@@ -2227,8 +2227,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1497/2467-PV_portrait-2.png",
-    fname: "Πέτρος",
-    lname: "Βούβαρης",
+    fname: i18n.t("petros"),
+    lname: i18n.t("vouvaris"),
     department: i18n.t("msa_department"),
     title: i18n.t("anaplirotisKathigitis"),
     tel: "2310 891.729",
@@ -2239,8 +2239,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1504/2482-Angelica_Cathariou_photo_1-2.jpg",
-    fname: "Αγγελική",
-    lname: "Καθαρίου",
+    fname: i18n.t("aggeliki"),
+    lname: i18n.t("kathariou"),
     department: i18n.t("msa_department"),
     title: "Αναπληρώτρια Καθηγήτρια",
     tel: "2310 891.330",
@@ -2251,8 +2251,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1494/9903-Mumulides-2.jpg",
-    fname: "Μιλτιάδης",
-    lname: "Μουμουλίδης",
+    fname: i18n.t("miltiadis"),
+    lname: i18n.t("moumoulidis"),
     department: i18n.t("msa_department"),
     title: i18n.t("anaplirotisKathigitis"),
     tel: "2310 891.940",
@@ -2263,8 +2263,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1495/1602-papandreouE-2.jpg",
-    fname: "Έλενα",
-    lname: "Παπανδρέου",
+    fname: i18n.t("elena"),
+    lname: i18n.t("papandreou"),
     department: i18n.t("msa_department"),
     title: "Αναπληρώτρια Καθηγήτρια",
     tel: "2310 891.401",
@@ -2275,8 +2275,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1492/5885-PetrinPhoto-2.jpg",
-    fname: "Ιγκόρ",
-    lname: "Πέτριν",
+    fname: i18n.t("igor"),
+    lname: i18n.t("petrin"),
     department: i18n.t("msa_department"),
     title: i18n.t("anaplirotisKathigitis"),
     tel: "2310 891.532",
@@ -2287,8 +2287,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1490/1174-arentzep-2.jpg",
-    fname: "Άννα-Μαρία",
-    lname: "Ρεντζεπέρη",
+    fname: i18n.t("anna_maria"),
+    lname: i18n.t("rentzeperi"),
     department: i18n.t("msa_department"),
     title: "Αναπληρώτρια Καθηγήτρια",
     tel: "2310 891.522",
@@ -2298,8 +2298,8 @@ const profData = [
   },
   {
     imgUrl: "https://www.uom.gr/assets/site/public/nodes/1500/4767-sinop-2.jpg",
-    fname: "Σωκράτης",
-    lname: "Σινόπουλος",
+    fname: i18n.t("sokratis"),
+    lname: i18n.t("sinopoulos"),
     department: i18n.t("msa_department"),
     title: i18n.t("anaplirotisKathigitis"),
     tel: "2310 891.397",
@@ -2310,8 +2310,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1582/3124-zarias-2.jpg",
-    fname: "Ιωάννης",
-    lname: "Ζαρίας",
+    fname: i18n.t("ioannis"),
+    lname: i18n.t("zarias"),
     department: i18n.t("msa_department"),
     title: i18n.t("epikourosKathigitis"),
     tel: "2310 891.397",
@@ -2322,8 +2322,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1505/7182-sgouras-2.jpg",
-    fname: "Ιωάννης",
-    lname: "Ζγούρας",
+    fname: i18n.t("ioannis"),
+    lname: i18n.t("zgouras"),
     department: i18n.t("msa_department"),
     title: i18n.t("epikourosKathigitis"),
     tel: "2310 891.397",
@@ -2334,8 +2334,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1501/5235-kallimopoulou-2.jpg",
-    fname: "Ελένη",
-    lname: "Καλλιμοπούλου",
+    fname: i18n.t("eleni"),
+    lname: i18n.t("kallimopoulou"),
     department: i18n.t("msa_department"),
     title: i18n.t("epikouriKathigitria"),
     tel: "2310 891.769",
@@ -2346,8 +2346,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1579/3005-MELIGOPOULOU_1-2.jpg",
-    fname: "Μαρία-Έμμα",
-    lname: "Μελιγκοπούλου",
+    fname: i18n.t("maria_emma"),
+    lname: i18n.t("meligkopoulou"),
     department: i18n.t("msa_department"),
     title: i18n.t("epikouriKathigitria"),
     tel: "2310 891.410",
@@ -2357,8 +2357,8 @@ const profData = [
   },
   {
     imgUrl: "https://www.uom.gr/assets/site/public/nodes/1500/4767-sinop-2.jpg",
-    fname: "Κωνσταντίνος",
-    lname: "Ράπτης",
+    fname: i18n.t("konstantinos"),
+    lname: i18n.t("raptis"),
     department: i18n.t("msa_department"),
     title: i18n.t("epikourosKathigitis"),
     tel: "2310 891.941",
@@ -2369,8 +2369,8 @@ const profData = [
   {
     imgUrl:
       "https://www.uom.gr/assets/site/public/nodes/1503/5518-tsikPhotocrop-2.jpg",
-    fname: "Ελευθέριος",
-    lname: "Τσικουρίδης",
+    fname: i18n.t("eleftherios"),
+    lname: i18n.t("tsikouridis"),
     department: i18n.t("msa_department"),
     title: i18n.t("epikourosKathigitis"),
     tel: "2310 891.850",

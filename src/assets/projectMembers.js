@@ -36,61 +36,61 @@
 
 */
 
-
+import i18n from "../i18n"
 const projectMembers = [
   {
-    name: "Γεώργιος Δαυίδ Αποστολίδης",
+    name: i18n.t("apostolidis"),
     socialMedia: "https://www.linkedin.com/in/geoapos/",
     email: "mailto:geoapostolidis999@gmail.com",
     img: "https://opensource.uom.gr/myuom_members_pics/apostolidis.jpg",
   },
   {
-    name: "Ευάγγελος Δάβιος",
+    name: i18n.t("davios"),
     socialMedia: "https://www.linkedin.com/in/evaggelos-davios/",
     email: "mailto:evaggelosdavios@gmail.com",
     img: "https://opensource.uom.gr/myuom_members_pics/davios.jpg",
   },
   {
-    name: "Ευστάθιος Ιωσηφίδης",
+    name: i18n.t("iosifidis"),
     socialMedia: "https://www.linkedin.com/in/eiosifidis/",
     email: "mailto:eiosifidis@gmail.com",
     img: "https://opensource.uom.gr/myuom_members_pics/iosifidis.jpg",
   },
   {
-    name: "Κωνσταντίνος Κωνσταντινίδης",
+    name: i18n.t("konstantinidis"),
     socialMedia:
       "https://www.linkedin.com/in/konstantinos-konstantinidis-0b27a618a/",
     email: "mailto:it14228@uom.edu.gr",
     img: "https://www.uom.gr/site/images/personphoto-1.jpg",
   },
   {
-    name: "Πάρης Μπακάλης",
+    name: i18n.t("bakalis"),
     socialMedia:
       "https://www.linkedin.com/in/paraskevas-georgios-bakalis-6785591a9/",
     email: "mailto:parismpakalis@gmail.com",
     img: "https://opensource.uom.gr/myuom_members_pics/bakalis.jpg",
   },
   {
-    name: "Πρόδρομος Νάσης",
+    name: i18n.t("nasis"),
     socialMedia: "https://www.linkedin.com/in/prodromos-nasis-223ba420b/",
     email: "mailto:prodromos.nasis@gmail.com",
     img: "https://opensource.uom.gr/myuom_members_pics/nasis.jpg",
   },
   {
-    name: "Σωκράτης Ομιλιάδης",
+    name: i18n.t("omiliadis"),
     socialMedia: "https://www.linkedin.com/in/socratesomiliadis/",
     email: "mailto:socrates@sohub.gr",
     img: "https://opensource.uom.gr/myuom_members_pics/omiliades.jpg",
   },
   {
-    name: "Χρήστος Φανούριος Πατσούρας",
+    name: i18n.t("patsoyras"),
     socialMedia:
       "https://www.linkedin.com/in/%CF%87%CF%81%CE%AE%CF%83%CF%84%CE%BF%CF%82-%CF%86%CE%B1%CE%BD%CE%BF%CF%8D%CF%81%CE%B9%CE%BF%CF%82-%CF%80%CE%B1%CF%84%CF%83%CE%BF%CF%8D%CF%81%CE%B1%CF%82-3abb11250/",
     email: "mailto:xristos.patsoyras@gmail.com",
     img: "https://www.uom.gr/site/images/personphoto-1.jpg",
   },
   {
-    name: "Γεώργιος Φακίδης",
+    name: i18n.t("fakidis"),
     socialMedia: "https://www.linkedin.com/in/fakidis-georgios-4a344a224/",
     email: "mailto:fakidis.george1@gmail.com",
     img: "https://www.uom.gr/site/images/personphoto-1.jpg",
