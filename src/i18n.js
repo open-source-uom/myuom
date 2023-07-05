@@ -9,6 +9,7 @@ import enAcademicPersonel from "./assets/locales/en/academic_personel.js";
 import enFaq from "./assets/locales/en/faq.js";
 import enProjectMembers from "./assets/locales/en/project_members.js";
 import enSettingsPage from "./assets/locales/en/settings_page.js";
+import enAboutPage from "./assets/locales/en/about_page.js";
 
 import elRestaurant from "./assets/locales/el/restaurant.js";
 import elFreshmen from "./assets/locales/el/freshmen.js";
@@ -19,6 +20,7 @@ import elAcademicPersonel from "./assets/locales/el/academic_personel.js";
 import elFaq from "./assets/locales/el/faq.js";
 import elProjectMembers from "./assets/locales/el/project_members.js";
 import elSettingsPage from "./assets/locales/el/settings_page.js";
+import elAboutPage from "./assets/locales/el/about_page.js";
 
 const resources = {
   en: {
@@ -32,6 +34,7 @@ const resources = {
       ...enFaq,
       ...enProjectMembers,
       ...enSettingsPage,
+      ...enAboutPage,
       //categories.js
       eudoxus: "Eudoxus",
       initial_page: "Home",
@@ -78,6 +81,8 @@ const resources = {
       ...elFaq,
       ...elProjectMembers,
       ...elSettingsPage,
+      ...elAboutPage,
+
       //categories.js
       eudoxus: "Εύδοξος",
       initial_page: "Αρχική",
