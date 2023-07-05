@@ -39,6 +39,7 @@
 import { Accordion, Box, Text, VStack } from "@chakra-ui/react";
 import FAQCard from "../components/FAQCard";
 import data from "../assets/questionsForFAQ";
+import i18n from "../i18n";
 
 export default function FAQSettingsPage() {
   return (
@@ -52,11 +53,10 @@ export default function FAQSettingsPage() {
           paddingTop="10px"
           fontFamily="Syne"
         >
-          Συχνές Ερωτήσεις
+          {i18n.t("faq_title")}
         </Text>
         <Text padding="15px" fontFamily="Syne">
-          Εδώ θα βρείτε απαντήσεις σε ερωτήσεις που ενδέχεται να σας
-          ενδιαφέρουν.
+          {i18n.t("faq_subtitle")}
         </Text>
       </Box>
       <Accordion allowToggle>

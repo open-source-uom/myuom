@@ -48,7 +48,9 @@ const resources = {
       announcements: "Announcements",
       orkomosies: "Inauguration",
       foititiki_merimna: "Student Care",
-      freshmen_guides: "Freshmen"
+      freshmen_guides: "Freshmen",
+      faq_title: "Frequently Asked",
+      faq_subtitle: "You will find answers that might be of interest to you."
       // //constants.js --> offices
       // // offices: "Offices",
       // // liason_office: "Liason Office",
@@ -96,7 +98,9 @@ const resources = {
       announcements: "Ανακοινώσεις",
       orkomosies: "Ορκομωσίες",
       foititiki_merimna: "Φοιτητική Μέριμνα",
-      freshmen_guides: "Πρωτοετείς"
+      freshmen_guides: "Πρωτοετείς",
+      faq_title: "Συχνές Ερωτήσεις",
+      faq_subtitle: "Εδώ θα βρείτε απαντήσεις σε ερωτήσεις που ενδέχεται να σας ενδιαφέρουν."
       //constants.js
       // offices: "Γραφεία",
       // liason_office: "Γραφείο Διασύνδεσης",
