@@ -121,7 +121,7 @@ export const Categories = [
   },
 
   {
-    title: "Εύδοξος",
+    title: i18n.t("eudoxus"),
     iconSVG: <StackedBooksIcon />,
     route: "https://eudoxus.gr/",
     span: 1,
@@ -177,7 +177,7 @@ export const Categories = [
     pageToDisplay: null,
   },
   {
-    title: "Πρωτοετείς",
+    title: i18n.t("freshmen_guides"),
     iconSVG: <PersonIcon />,
     route: "/firstyearinfo",
     span: 2,

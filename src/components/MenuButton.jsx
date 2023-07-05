@@ -68,6 +68,7 @@ import { DepartmentContext } from "../contexts/departmentContext";
 import { DEPARTMENTS } from "../assets/DepNames";
 import { Link } from "react-router-dom";
 import { SettingsIcon, CloseIcon } from "../assets/icons";
+import i18n from "../i18n";
 export default function MenuButton() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { colorMode, toggleColorMode } = useColorMode();
@@ -127,7 +128,7 @@ export default function MenuButton() {
             borderBottomWidth="1px"
             fontFamily="Syne"
           >
-            Ρυθμίσεις
+            {i18n.t("settings_title")}
           </DrawerHeader>
           <DrawerBody
             backgroundColor={useColorModeValue("#f3f3f3", "black")}
@@ -166,7 +167,7 @@ export default function MenuButton() {
               >
                 <FormLabel htmlFor="switch-color-mode" mb="0">
                   <Text as="span" fontWeight={"bold"}>
-                    Σκούρο θέμα
+                    {i18n.t("toggle_dark_theme")}
                   </Text>
                 </FormLabel>
                 <Switch
@@ -190,7 +191,7 @@ export default function MenuButton() {
                       fontSize="xl"
                       ml="0.5rem"
                     >
-                      Συχνές ερωτήσεις
+                      {i18n.t("frequent_questions")}
                     </Text>
                   </Box>
                 </Link>
@@ -208,7 +209,7 @@ export default function MenuButton() {
                       fontSize="xl"
                       ml="0.5rem"
                     >
-                      Σχετικά
+                      {i18n.t("about_us")}
                     </Text>
                   </Box>
                 </Link>
@@ -225,7 +226,7 @@ export default function MenuButton() {
                       fontSize="xl"
                       ml="0.5rem"
                     >
-                      Άδεια χρήσης
+                      {i18n.t("license")}
                     </Text>
                   </Box>
                 </a>
@@ -242,7 +243,7 @@ export default function MenuButton() {
                       fontSize="xl"
                       ml="0.5rem"
                     >
-                      Εγχειρίδιο εφαρμογής
+                      {i18n.t("app_manual")}
                     </Text>
                   </Box>
                 </a>
@@ -261,7 +262,7 @@ export default function MenuButton() {
                     fontSize="xl"
                     ml="0.5rem"
                   >
-                    Κοινοποιήστε την εφαρμογή
+                    {i18n.t("share_app")}
                   </Text>
                 </Box>
                 <a
@@ -277,7 +278,7 @@ export default function MenuButton() {
                       fontSize="xl"
                       ml="0.5rem"
                     >
-                      Συνεισφέρετε στο έργο μας
+                      {i18n.t("gitlab_contribute")}
                     </Text>
                   </Box>
                 </a>
@@ -303,7 +304,7 @@ export default function MenuButton() {
                 </Box>
               }
             >
-              Κλείσιμο
+              {i18n.t("Close")}
             </Button>
           </DrawerFooter>
         </DrawerContent>

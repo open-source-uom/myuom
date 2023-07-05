@@ -44,8 +44,9 @@ import MenuButton from "./MenuButton";
 import { Categories } from "../assets/categories";
 import { LeftArrowIcon } from "../assets/icons";
 import HomeIcon from "../assets/icons/HomeIcon";
+import i18n from "../i18n";
 function RouteDictionary(route) {
-  if (route === "/") return "Αρχική";
+  if (route === "/") return i18n.t("initial_page");
   else {
     for (let i = 0; i < Categories.length; i++) {
       if (Categories[i].route === route) return Categories[i].title;

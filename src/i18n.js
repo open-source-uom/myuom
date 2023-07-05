@@ -8,7 +8,7 @@ import enServices from "./assets/locales/en/services.js";
 import enAcademicPersonel from "./assets/locales/en/academic_personel.js";
 import enFaq from "./assets/locales/en/faq.js";
 import enProjectMembers from "./assets/locales/en/project_members.js";
-
+import enSettingsPage from "./assets/locales/en/settings_page.js";
 
 import elRestaurant from "./assets/locales/el/restaurant.js";
 import elFreshmen from "./assets/locales/el/freshmen.js";
@@ -18,6 +18,7 @@ import elServices from "./assets/locales/el/services.js";
 import elAcademicPersonel from "./assets/locales/el/academic_personel.js";
 import elFaq from "./assets/locales/el/faq.js";
 import elProjectMembers from "./assets/locales/el/project_members.js";
+import elSettingsPage from "./assets/locales/el/settings_page.js";
 
 const resources = {
   en: {
@@ -30,7 +31,9 @@ const resources = {
       ...enAcademicPersonel,
       ...enFaq,
       ...enProjectMembers,
+      ...enSettingsPage,
       //categories.js
+      eudoxus: "Eudoxus",
       initial_page: "Home",
       course_schedule: "Course Schedules",
       restaurant: "Restaurant",
@@ -42,6 +45,7 @@ const resources = {
       announcements: "Announcements",
       orkomosies: "Inauguration",
       foititiki_merimna: "Student Care",
+      freshmen_guides: "Freshmen"
       // //constants.js --> offices
       // // offices: "Offices",
       // // liason_office: "Liason Office",
@@ -73,8 +77,9 @@ const resources = {
       ...elAcademicPersonel,
       ...elFaq,
       ...elProjectMembers,
+      ...elSettingsPage,
       //categories.js
-
+      eudoxus: "Εύδοξος",
       initial_page: "Αρχική",
       course_schedule: "Πρόγραμμα Μαθημάτων",
       restaurant: "Εστιατόριο",
@@ -86,6 +91,7 @@ const resources = {
       announcements: "Ανακοινώσεις",
       orkomosies: "Ορκομωσίες",
       foititiki_merimna: "Φοιτητική Μέριμνα",
+      freshmen_guides: "Πρωτοετείς"
       //constants.js
       // offices: "Γραφεία",
       // liason_office: "Γραφείο Διασύνδεσης",
