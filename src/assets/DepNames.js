@@ -45,4 +45,4 @@ export const DEPARTMENTS = [
   i18n.t("msa_department"),
   i18n.t("eco_department"),
   i18n.t("bas_department")
-];
+]

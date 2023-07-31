@@ -7,5 +7,7 @@ export default {
     app_manual: "Εγχειρίδιο Εφαρμογής",
     share_app: "Κοινοποιήστε την εφαρμογή",
     gitlab_contribute: "Συνεισφέρετε στο έργο μας",
-    settings_close: "Κλείσιμο"
+    settings_close: "Κλείσιμο",
+    change_language: "Αλλαγή Γλώσσας",
+    choose_department: "Επιλέξτε Τμήμα",
 }

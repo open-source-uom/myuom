@@ -37,19 +37,17 @@
 */
 
 import { useEffect } from "react";
-import Menu from "../components/Menu";
+import Menu from "../components/restaurant/RestaurantMenu";
 import data from "../assets/DailyMenu";
 import {
   Accordion,
   Box,
-  Image,
   Text,
   Flex,
   useColorModeValue,
 } from "@chakra-ui/react";
-import Schedule from "../components/Schedule";
-import dinner from "../assets/dinner.png";
-import TodaysMenu from "../components/TodaysMenu";
+import Schedule from "../components/restaurant/Schedule";
+import TodaysMenu from "../components/restaurant/TodaysRestaurantMenu";
 import i18n from "../../src/i18n";
 
 export default function RestauranPage() {

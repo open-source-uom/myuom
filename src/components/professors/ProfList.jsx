@@ -47,14 +47,14 @@ import {
 import { SearchIcon } from "@chakra-ui/icons";
 import { useContext, useEffect, useState } from "react";
 import ProfComponent from "./ProfCard.jsx";
-import SecrCard from "./SecrCard.jsx";
-import profData from "../assets/professors.js";
-import secrData from "../assets/secretaries.js";
-import { DepartmentContext } from "../contexts/departmentContext";
+import SecrCard from "../SecrCard.jsx";
+import profData from "../../assets/professors.js";
+import secrData from "../../assets/secretaries.js";
+import { DepartmentContext } from "../../contexts/departmentContext.jsx";
 import { useTranslation } from 'react-i18next';
 
 export default function ProfList() {
-  const {t, i18n} = useTranslation();
+  const { t, i18n } = useTranslation();
   const { depName } = useContext(DepartmentContext);
   const [profArray, setProfArray] = useState([]);
   const [filteredProfArray, setFilteredProfArray] = useState([]);

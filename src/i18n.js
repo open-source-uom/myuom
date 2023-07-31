@@ -36,6 +36,8 @@ const resources = {
       ...enSettingsPage,
       ...enAboutPage,
       //categories.js
+      current_department: "Current Department: ",
+      close: "Close",
       eudoxus: "Eudoxus",
       initial_page: "Home",
       course_schedule: "Course Schedules",
@@ -86,6 +88,8 @@ const resources = {
       ...elAboutPage,
 
       //categories.js
+      current_department: "Έχεις επιλέξει: ",
+      close: "Κλείσιμο",
       eudoxus: "Εύδοξος",
       initial_page: "Αρχική",
       course_schedule: "Πρόγραμμα Μαθημάτων",
@@ -203,12 +207,13 @@ const resources = {
     },
   },
 };
-
+const defaultLang = localStorage.getItem("preferred_language")
 i18n.use(initReactI18next).init({
   // debug: true,
   resources,
-  lng: "en",
-  // fallbackLng: "en",
+  whitelist: ["en", "el"],
+  lng: defaultLang,
+  fallbackLng: "en",
   interpolation: {
     escapeValue: false,
   },

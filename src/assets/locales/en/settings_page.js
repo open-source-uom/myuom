@@ -7,5 +7,7 @@ export default {
     app_manual: "App Manual",
     share_app: "Share this App",
     gitlab_contribute: "Contribute to our Projects",
-    settings_close: "Close"
+    settings_close: "Close",
+    change_language: "Change Language",
+    choose_department: "Choose Department",
 }

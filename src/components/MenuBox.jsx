@@ -36,7 +36,7 @@
 
 */
 
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import {
   Box,
   useColorModeValue,
@@ -45,7 +45,6 @@ import {
   Flex,
   useToast,
 } from "@chakra-ui/react";
-import { ExternalLinkIcon } from "@chakra-ui/icons";
 import { useNavigate } from "react-router-dom";
 import { DepartmentContext } from "../contexts/departmentContext";
 import { DEPARTMENTS } from "../assets/DepNames";

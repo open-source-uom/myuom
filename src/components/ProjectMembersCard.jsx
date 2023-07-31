@@ -42,21 +42,10 @@ import {
   AccordionIcon,
   AccordionPanel,
   Box,
-  Button,
-  useDisclosure,
   Image,
   Text,
-  VStack,
   useColorModeValue,
   Flex,
-} from "@chakra-ui/react";
-import {
-  Modal,
-  ModalOverlay,
-  ModalContent,
-  ModalHeader,
-  ModalBody,
-  ModalCloseButton,
 } from "@chakra-ui/react";
 import { SocialIcon } from "react-social-icons";
 

@@ -38,10 +38,9 @@
 
 import { useEffect, useReducer } from "react";
 import { Flex, Text, useColorModeValue } from "@chakra-ui/react";
-import data from "../assets/DailyMenu";
-import i18n from "../../src/i18n";
-import FoodMenuList from "../components/FoodMenuList";
-
+import data from "../../assets/DailyMenu";
+import i18n from "../../i18n";
+import FoodMenuList from "./FoodMenuList";
 const CURRENTLY_LUNCH = "gevma";
 const CURRENTLY_DINNER = "deipno";
 const CURRENTLY_NEXT_LUNCH = "gevma epomenhs";
@@ -61,6 +60,9 @@ export default function TodaysMenu() {
       case CURRENTLY_NEXT_LUNCH: {
         const temp = getTodaysRestaurantMenu(1, true);
         return { isLunch: true, isTomorrow: true, foodMenu: temp };
+      }
+      default: {
+        return state;
       }
     }
   }
@@ -128,7 +130,8 @@ export default function TodaysMenu() {
     const dayName = days[(dayNum + offsetDays) % 7];
     const todaysTotalMenu = data
       .filter((dayMenu) => {
-        return dayMenu.day === dayName;
+        console.log(dayMenu, dayName)
+        return dayMenu.day.toLowerCase() === dayName.toLowerCase();
       })
       .pop();
     if (forLunch) {

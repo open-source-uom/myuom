@@ -36,22 +36,41 @@
 
 */
 
-import { Accordion, Flex } from "@chakra-ui/react";
-import ProfList from "../components/professors/ProfList";
+import { useEffect } from "react";
+import {
+  useDisclosure,
+  Box,
+} from "@chakra-ui/react";
+import { SettingsIcon } from "../../assets/icons";
+import { SettingsDrawer } from "./SettingsDrawer";
+export default function MenuButton() {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  useEffect(() => {
+    window.addEventListener("popstate", () => {
+      onClose();
+    });
+  }, []);
 
-function ProfInfoPage() {
+  const handleClick = () => {
+    window.history.pushState(null, "", "/");
+    onOpen();
+  };
+
   return (
-    <Flex
-      paddingX={{ sm: "1rem", lg: 0 }}
-      direction="row"
-      alignItems="start"
-      justifyContent="center"
-    >
-      <Accordion w={{ sm: "100%", lg: "65%", xl: "60%" }} allowToggle>
-        <ProfList />
-      </Accordion>
-    </Flex>
+    <>
+      <Box
+        w={{ sm: "30px", lg: "40px" }}
+        cursor="pointer"
+        aria-label="Open Menu"
+        onClick={handleClick}
+        fontFamily="Syne"
+      >
+        <SettingsIcon />
+      </Box>
+      {/* Settings Page */}
+      <SettingsDrawer isOpen={isOpen} onClose={onClose} />
+    </>
   );
 }
 
-export default ProfInfoPage;
+

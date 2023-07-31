@@ -40,7 +40,7 @@ import { useEffect, useState } from "react";
 import { Outlet, useNavigate, useLocation } from "react-router-dom";
 import myUOMLogo from "../assets/myUOMLogo.png";
 import { Flex, Box, Heading, Image, useColorModeValue } from "@chakra-ui/react";
-import MenuButton from "./MenuButton";
+import SettingsButton from "./settings/SettingsButton";
 import { Categories } from "../assets/categories";
 import { LeftArrowIcon } from "../assets/icons";
 import HomeIcon from "../assets/icons/HomeIcon";
@@ -140,7 +140,7 @@ export default function Header() {
           </Flex>
         </Flex>
         <Box display={{ sm: "none", lg: "block" }}>
-          <MenuButton />
+          <SettingsButton />
         </Box>
       </Flex>
       <Flex
@@ -161,7 +161,7 @@ export default function Header() {
         <Box onClick={goToHomePage}>
           <HomeIcon />
         </Box>
-        <MenuButton />
+        <SettingsButton />
       </Flex>
       <Outlet />
     </>

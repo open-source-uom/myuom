@@ -38,19 +38,20 @@
 import { Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import Header from "./components/Header";
-import ProfInfoPage from "./pages/ProfInfoPage";
-import RestaurantPage from "./pages/RestaurantPage";
-import ServicesPage from "./pages/ServicesPage";
-import GraduationPage from "./pages/GraduationPage";
-import LibraryPage from "./pages/LibraryPage";
-import FirstYearInfoPage from "./pages/FirstYearInfoPage";
-import SchedulePage from "./pages/SchedulePage";
+import { useEffect } from "react";
 import FAQSettingsPage from "./pages/FAQSettingsPage";
 import AboutSettingsPage from "./pages/AboutSettingsPage";
-import MapPage from "./pages/MapPage";
 import { Categories } from "./assets/categories";
+import i18n from "./i18n";
 function App() {
   console.log("hello", Categories);
+  // Load the preferred language from local storage and set it initially
+  useEffect(() => {
+    const storedLanguage = localStorage.getItem('preferred_language');
+    if (storedLanguage && i18n.options.whitelist.includes(storedLanguage)) {
+      i18n.changeLanguage(storedLanguage);
+    }
+  }, []);
   const categoriesToDisplay = Categories.filter(
     ({ hide }) => hide === false
   ).filter(({ isExternal }) => isExternal === false);

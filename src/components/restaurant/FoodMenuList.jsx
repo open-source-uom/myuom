@@ -45,7 +45,7 @@ import {
   chakra,
 } from "@chakra-ui/react";
 
-import i18n from "../i18n";
+import i18n from "../../i18n";
 
 export default function FoodMenuList({
   mainDish,
