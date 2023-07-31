@@ -44,10 +44,10 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import { useState } from "react";
-import { mapData } from "../assets/data/mapData.js";
+import { mapData } from "../assets/data/MapData.js";
 import MapCords from "../components/MapCords";
 import { useEffect } from "react";
-import {useTranslation} from "react-i18next"
+import i18n from "../i18n";
 /* Insert all buildings into an array and convert set to remove duplicates */
 // Possibly just add them to a set? Not sure about complexity
 const Buildings = () => {
@@ -81,7 +81,6 @@ function MapPage() {
   const [title, setTitle] = useState("");
   const [value, setValue] = useState("");
   const [sampleObject, setSampleObject] = useState([]);
-  const {t,i18n} = useTranslation()
   const handleChange = (e) => {
     setValue(e.target.value);
     setTitle("");
@@ -112,7 +111,7 @@ function MapPage() {
           defaultValue={"default"}
         >
           <option hidden disabled value="default">
-           {t("select_building")}
+            {i18n.t("select_building")}
           </option>
           <Buildings />
         </Select>
@@ -124,7 +123,7 @@ function MapPage() {
           id="title"
         >
           <option hidden value="default">
-            {t("select_office")}
+            {i18n.t("select_office")}
           </option>
           <Offices building={value} />
           {/* Get {value} & do whatever you want with it */}
@@ -147,7 +146,7 @@ function MapPage() {
           );
         }}
       >
-        {t("virtual_tour")} 360°
+        {i18n.t("virtual_tour")} 360°
       </Button>
     </Box>
   );

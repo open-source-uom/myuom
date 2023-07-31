@@ -48,13 +48,12 @@ import { SearchIcon } from "@chakra-ui/icons";
 import { useContext, useEffect, useState } from "react";
 import ProfComponent from "./ProfCard.jsx";
 import SecrCard from "../SecrCard.jsx";
-import profData from "../../assets/data/professors.js";
-import secrData from "../../assets/data/secretaries.js";
+import profData from "../../assets/data/Professors.js";
+import secrData from "../../assets/data/Secretaries.js";
 import { DepartmentContext } from "../../contexts/departmentContext.jsx";
-import { useTranslation } from 'react-i18next';
-
+import i18n from '../../i18n.js';
 export default function ProfList() {
-  const { t, i18n } = useTranslation();
+
   const { depName } = useContext(DepartmentContext);
   const [profArray, setProfArray] = useState([]);
   const [filteredProfArray, setFilteredProfArray] = useState([]);
@@ -117,6 +116,7 @@ export default function ProfList() {
   const getSecretaryFromDepartment = (depName) =>
     secrData.find((data) => data.name === depName);
 
+
   return (
     <VStack>
       {/* <input type="text" onChange={onTextChangeHandler} /> */}
@@ -131,7 +131,7 @@ export default function ProfList() {
         <Input
           fontFamily="Syne"
           type="text"
-          placeholder={t("searchProf")}
+          placeholder={i18n.t("searchProf")}
           onChange={onTextChangeHandler}
           borderRadius={"2rem"}
           focusBorderColor="initial"
@@ -145,7 +145,7 @@ export default function ProfList() {
         ))
       ) : (
         <Text as="h1" fontFamily="Syne">
-          {t("noResults")}
+          {i18n.t("noResults")}
         </Text>
       )}
     </VStack>

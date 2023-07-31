@@ -37,7 +37,7 @@
 */
 
 import { Box, Image, Text, Accordion } from "@chakra-ui/react";
-import membersData from "../assets/data/projectMembers";
+import membersData from "../assets/data/ProjectMembers";
 import ProjectMembersCard from "../components/ProjectMembersCard";
 import UoMLogo from "../assets/myUOMLogo.png";
 import { SocialIcon } from "react-social-icons";

@@ -59,8 +59,6 @@ import GraduationPage from "../pages/GraduationPage";
 import LibraryPage from "../pages/LibraryPage";
 import FirstYearInfoPage from "../pages/FirstYearInfoPage";
 import SchedulePage from "../pages/SchedulePage";
-import FAQSettingsPage from "../pages/FAQSettingsPage";
-import AboutSettingsPage from "../pages/AboutSettingsPage";
 import MapPage from "../pages/MapPage";
 import i18n from "../i18n";
 export const Categories = [
