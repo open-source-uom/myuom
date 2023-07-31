@@ -37,11 +37,11 @@
 */
 
 import { Box, Image, Text, Accordion } from "@chakra-ui/react";
-import membersData from "../assets/projectMembers";
+import membersData from "../assets/data/projectMembers";
 import ProjectMembersCard from "../components/ProjectMembersCard";
 import UoMLogo from "../assets/myUOMLogo.png";
 import { SocialIcon } from "react-social-icons";
-import { SOCIAL_MEDIA_URLS } from "../assets/constants";
+import { SOCIAL_MEDIA_URLS } from "../assets/data/SocialMediaUrls";
 import i18n from "../i18n";
 function AboutSettingsPage() {
   return (

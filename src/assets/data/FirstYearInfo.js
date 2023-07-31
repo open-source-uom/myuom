@@ -35,7 +35,7 @@
     -Fakidis
 
 */
-import i18n from "../i18n"
+import i18n from "../../i18n"
 const FirstYearInfo = [
   {
     index: 1,
@@ -82,9 +82,9 @@ const FirstYearInfo = [
       i18n.t("art3_sent8_"),
       i18n.t("art3_sent9_"),
       i18n.t("art3_sent10_"),
-      
+
     ],
-    
+
     links: ["https://www.uom.gr/register", "https://www.photopea.com/"],
   },
   {

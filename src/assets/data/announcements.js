@@ -36,7 +36,7 @@
 
 */
 
-import { DEPARTMENTS } from "../assets/DepNames";
+import { DEPARTMENTS } from "./DepNames";
 
 export const AnnouncementsData = new Map();
 

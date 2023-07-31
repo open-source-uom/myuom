@@ -1,7 +1,7 @@
 import { Select } from '@chakra-ui/react'
 import React, { useContext } from 'react'
 import { DepartmentContext } from '../../contexts/departmentContext'
-import { DEPARTMENTS } from '../../assets/DepNames'
+import { DEPARTMENTS } from '../../assets/data/DepNames'
 import i18n from '../../i18n'
 function DepartmentPicker({ onClose }) {
     const { depName, changeDepartmentName } = useContext(DepartmentContext);

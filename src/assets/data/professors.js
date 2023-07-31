@@ -35,7 +35,7 @@
     -Fakidis
 
 */
-import i18n from "../i18n"
+import i18n from "../../i18n"
 const profData = [
   {
     imgUrl: "https://www.uom.gr/site/images/personphoto-2.jpg",

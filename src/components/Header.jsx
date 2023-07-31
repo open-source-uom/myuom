@@ -41,7 +41,7 @@ import { Outlet, useNavigate, useLocation } from "react-router-dom";
 import myUOMLogo from "../assets/myUOMLogo.png";
 import { Flex, Box, Heading, Image, useColorModeValue } from "@chakra-ui/react";
 import SettingsButton from "./settings/SettingsButton";
-import { Categories } from "../assets/categories";
+import { Categories } from "../assets/ConfigRoutes";
 import { LeftArrowIcon } from "../assets/icons";
 import HomeIcon from "../assets/icons/HomeIcon";
 import i18n from "../i18n";

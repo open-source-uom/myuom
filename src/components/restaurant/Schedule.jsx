@@ -47,7 +47,7 @@ import {
   Flex,
   useColorModeValue,
 } from "@chakra-ui/react";
-import { RESTAURANT_HOURS } from "../../assets/constants";
+import { RESTAURANT_HOURS } from "../../assets/data/RestaurantSchedule";
 import i18n from "../../i18n";
 function Schedule() {
   return (

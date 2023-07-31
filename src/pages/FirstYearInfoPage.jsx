@@ -36,7 +36,7 @@
 
 */
 
-import data from "../assets/FirstYearInfo.js";
+import data from "../assets/data/FirstYearInfo.js";
 import { Box } from "@chakra-ui/react";
 import InfoCard from "../components/InfoCard";
 import { useEffect, memo } from "react";

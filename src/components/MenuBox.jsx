@@ -47,7 +47,7 @@ import {
 } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 import { DepartmentContext } from "../contexts/departmentContext";
-import { DEPARTMENTS } from "../assets/DepNames";
+import { DEPARTMENTS } from "../assets/data/DepNames";
 import { motion } from "framer-motion";
 import { DiagonalRightArrowIcon, RightArrowIcon } from "../assets/icons";
 const rotateIn = {

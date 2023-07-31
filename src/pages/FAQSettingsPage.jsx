@@ -38,7 +38,7 @@
 
 import { Accordion, Box, Text, VStack } from "@chakra-ui/react";
 import FAQCard from "../components/FAQCard";
-import data from "../assets/questionsForFAQ";
+import data from "../assets/data/questionsForFAQ";
 import i18n from "../i18n";
 
 export default function FAQSettingsPage() {

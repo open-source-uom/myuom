@@ -40,6 +40,7 @@ import { DEPARTMENTS } from "./DepNames";
 
 export const schedulesData = new Map([
   [
+    // Τμήμα Βαλκανικών, Σλαβικών & Ανατολικών Σπουδών
     DEPARTMENTS[0],
     {
       semester:
@@ -48,6 +49,8 @@ export const schedulesData = new Map([
     },
   ],
   [
+
+    // Τμήμα Διεθνών & Ευρωπαϊκών Σπουδών
     DEPARTMENTS[1],
     {
       semester:
@@ -56,6 +59,7 @@ export const schedulesData = new Map([
     },
   ],
   [
+    // Τμήμα Εκπαιδευτικής & Κοινωνικής Πολιτικής
     DEPARTMENTS[2],
     {
       semester:
@@ -64,6 +68,7 @@ export const schedulesData = new Map([
     },
   ],
   [
+    // Τμήμα Εφαρμοσμένης πληροφορικής
     DEPARTMENTS[3],
     {
       semester:
@@ -72,6 +77,7 @@ export const schedulesData = new Map([
     },
   ],
   [
+    // Τμήμα Λογιστικής και Χρηματοοικονομικής
     DEPARTMENTS[4],
     {
       semester:
@@ -80,6 +86,7 @@ export const schedulesData = new Map([
     },
   ],
   [
+    // Τμήμα Μουσικής Επιστήμης & Τέχνης
     DEPARTMENTS[5],
     {
       semester:
@@ -88,6 +95,7 @@ export const schedulesData = new Map([
     },
   ],
   [
+    // Τμήμα Οικονομικών Επιστημών
     DEPARTMENTS[6],
     {
       semester:
@@ -96,11 +104,12 @@ export const schedulesData = new Map([
     },
   ],
   [
+    // Τμήμα Οργάνωσης & Διοίκησης Επιχειρήσεων
     DEPARTMENTS[7],
     {
       semester:
         "https://www.uom.gr/assets/site/public/nodes/12268/14532-2022-2023_xeimerino_ode_v1.pdf",
-      exam: " https://www.uom.gr/ba/programma-eksetaseon-ianoyarioy-febroyarioy-akad-etoys-2022-2023",
+      exam: "https://www.uom.gr/ba/programma-eksetaseon-septembrioy-akad-etoys-2022-2023",
     },
   ],
 ]);

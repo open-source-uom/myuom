@@ -41,7 +41,7 @@ import Header from "./components/Header";
 import { useEffect } from "react";
 import FAQSettingsPage from "./pages/FAQSettingsPage";
 import AboutSettingsPage from "./pages/AboutSettingsPage";
-import { Categories } from "./assets/categories";
+import { Categories } from "./assets/ConfigRoutes";
 import i18n from "./i18n";
 function App() {
   console.log("hello", Categories);
@@ -54,7 +54,7 @@ function App() {
   }, []);
   const categoriesToDisplay = Categories.filter(
     ({ hide }) => hide === false
-  ).filter(({ isExternal }) => isExternal === false);
+  )
   return (
     <Routes>
       <Route path="/" element={<Header />}>

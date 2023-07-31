@@ -36,7 +36,7 @@
 
 */
 
-import i18n from "../i18n"
+import i18n from "../../i18n"
 //prettier-ignore
 export const mapData = [
   {

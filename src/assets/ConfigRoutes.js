@@ -134,14 +134,13 @@ export const Categories = [
   {
     title: i18n.t("exams_schedule"),
     iconSVG: <ExamsTestIcon />,
-
     route: "/examschedule",
     isExternal: true,
     span: 2,
     requireSelection: true,
     position: 7,
     hide: false,
-    pageToDisplay: null,
+    pageToDisplay: <SchedulePage examsProp />,
   },
   {
     title: i18n.t("academic_personnel"),
@@ -196,7 +195,7 @@ export const Categories = [
     requireSelection: true,
     position: 12,
     hide: false,
-    pageToDisplay: null,
+    pageToDisplay: <GraduationPage />,
   },
   {
     title: i18n.t("other_services"),

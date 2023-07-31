@@ -38,7 +38,7 @@
 
 import { useContext, useEffect } from 'react'
 import { DepartmentContext } from '../contexts/departmentContext'
-import { GradData } from '../assets/Graduation'
+import { GradData } from '../assets/data/Graduation'
 import { Heading, Box, useToast } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 
@@ -63,7 +63,7 @@ export default function GraduationPage() {
       window.open(GradData.get(depName));
       navigate("/")
     }
-    
+
   }, [depName]);
 
 

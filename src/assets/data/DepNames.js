@@ -35,7 +35,7 @@
     -Fakidis
 
 */
-import i18n from "../i18n";
+import i18n from "../../i18n";
 export const DEPARTMENTS = [
   i18n.t("bso_department"),
   i18n.t("ess_department"),

@@ -42,14 +42,14 @@ import { useLocalStorage } from "../../hooks/useLocalStorage";
 function GreekFlag({ onClick }) {
   const widthOfSvg = useBreakpointValue({ base: "32px", md: "54px" });
   return <Box onClick={onClick} overflow={"hidden"} width={widthOfSvg} height="auto" cursor={"pointer"}>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 18"><path fill="#0D5EAF" d="M0 0h27v18H0z" /><path fill="none" stroke-width="2" stroke="#FFF" d="M5 0v11M0 5h10m0-2h17M10 7h17M0 11h27M0 15h27" /></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 18"><path fill="#0D5EAF" d="M0 0h27v18H0z" /><path fill="none" strokeWidth="2" stroke="#FFF" d="M5 0v11M0 5h10m0-2h17M10 7h17M0 11h27M0 15h27" /></svg>
   </Box>
 }
 
 function UKFlag({ onClick }) {
   const widthOfSvg = useBreakpointValue({ base: "42px", md: "64px" });
   return <Box onClick={onClick} overflow={"hidden"} width={widthOfSvg} height="auto" cursor={"pointer"}>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30"><clipPath id="a"><path d="M0 0v30h60V0z" /></clipPath><clipPath id="b"><path d="M30 15h30v15zv15H0zH0V0zV0h30z" /></clipPath><g clip-path="url(#a)"><path d="M0 0v30h60V0z" fill="#012169" /><path d="M0 0l60 30m0-30L0 30" stroke="#fff" stroke-width="6" /><path d="M0 0l60 30m0-30L0 30" clip-path="url(#b)" stroke="#C8102E" stroke-width="4" /><path d="M30 0v30M0 15h60" stroke="#fff" stroke-width="10" /><path d="M30 0v30M0 15h60" stroke="#C8102E" stroke-width="6" /></g></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30"><clipPath id="a"><path d="M0 0v30h60V0z" /></clipPath><clipPath id="b"><path d="M30 15h30v15zv15H0zH0V0zV0h30z" /></clipPath><g clipPath="url(#a)"><path d="M0 0v30h60V0z" fill="#012169" /><path d="M0 0l60 30m0-30L0 30" stroke="#fff" strokeWidth="6" /><path d="M0 0l60 30m0-30L0 30" clipPath="url(#b)" stroke="#C8102E" strokeWidth="4" /><path d="M30 0v30M0 15h60" stroke="#fff" strokeWidth="10" /><path d="M30 0v30M0 15h60" stroke="#C8102E" strokeWidth="6" /></g></svg>
   </Box>
 }
 

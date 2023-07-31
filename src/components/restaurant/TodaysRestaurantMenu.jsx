@@ -38,7 +38,7 @@
 
 import { useEffect, useReducer } from "react";
 import { Flex, Text, useColorModeValue } from "@chakra-ui/react";
-import data from "../../assets/DailyMenu";
+import data from "../../assets/data/DailyMenu";
 import i18n from "../../i18n";
 import FoodMenuList from "./FoodMenuList";
 const CURRENTLY_LUNCH = "gevma";

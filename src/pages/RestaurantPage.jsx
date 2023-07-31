@@ -38,7 +38,7 @@
 
 import { useEffect } from "react";
 import Menu from "../components/restaurant/RestaurantMenu";
-import data from "../assets/DailyMenu";
+import data from "../assets/data/DailyMenu";
 import {
   Accordion,
   Box,
