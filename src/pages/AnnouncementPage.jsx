@@ -38,7 +38,7 @@
 
 import { useContext, useEffect } from "react";
 import { DepartmentContext } from "../contexts/departmentContext";
-import { AnnouncementsData } from "../assets/data/Announcements";
+import { AnnouncementsData } from "../assets/data/announcements";
 import { Heading, Box, useToast } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 

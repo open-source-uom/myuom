@@ -40,6 +40,7 @@ import { DEPARTMENTS } from "./DepNames";
 
 export const AnnouncementsData = new Map();
 
+
 AnnouncementsData.set(DEPARTMENTS[0], "https://www.uom.gr/bso/ta-nea-mas")
 AnnouncementsData.set(DEPARTMENTS[1], "https://www.uom.gr/ies#undefined1")
 AnnouncementsData.set(DEPARTMENTS[2], "https://www.uom.gr/esp")

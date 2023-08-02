@@ -37,6 +37,7 @@
 */
 
 import i18n from "../../i18n"
+
 const projectMembers = [
   {
     name: i18n.t("apostolidis"),

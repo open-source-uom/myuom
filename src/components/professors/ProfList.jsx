@@ -48,8 +48,8 @@ import { SearchIcon } from "@chakra-ui/icons";
 import { useContext, useEffect, useState } from "react";
 import ProfComponent from "./ProfCard.jsx";
 import SecrCard from "../SecrCard.jsx";
-import profData from "../../assets/data/Professors.js";
-import secrData from "../../assets/data/Secretaries.js";
+import profData from "../../assets/data/professors.js";
+import secrData from "../../assets/data/secretaries.js";
 import { DepartmentContext } from "../../contexts/departmentContext.jsx";
 import i18n from '../../i18n.js';
 export default function ProfList() {

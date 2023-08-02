@@ -61,6 +61,7 @@ const data = [
       i18n.t("ans5"),
   },
   {
+    
     question: i18n.t("qu6"),
     panel:
       i18n.t("ans6"),

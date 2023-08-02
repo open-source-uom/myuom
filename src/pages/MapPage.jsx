@@ -44,7 +44,7 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import { useState } from "react";
-import { mapData } from "../assets/data/MapData.js";
+import { mapData } from "../assets/data/mapData.js";
 import MapCords from "../components/MapCords";
 import { useEffect } from "react";
 import i18n from "../i18n";
