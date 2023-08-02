@@ -16,7 +16,7 @@
     "react-dom": "^18.2.0",
     "react-i18next": "^12.2.0",
     "react-icons": "^4.4.0",
-    "react-image-mapper": "^0.0.15",
+    "react-img-mapper": "^1.5.1",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "react-social-icons": "^5.14.0",

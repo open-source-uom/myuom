@@ -37,7 +37,7 @@
 */
 
 import React, { useState, useCallback, useEffect } from "react";
-import ImageMapper from "react-image-mapper";
+import ImageMapper from "react-img-mapper";
 import { Box, Button, Text, useColorModeValue } from "@chakra-ui/react";
 import {useTranslation} from "react-i18next"
 
