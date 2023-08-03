@@ -38,7 +38,7 @@
 
 import data from "../assets/data/FirstYearInfo.js";
 import { Box } from "@chakra-ui/react";
-import InfoCard from "../components/InfoCard";
+import FreshmenInfoPage from "../components/FreshmenInfoPage";
 import { useEffect, memo } from "react";
 
 export default memo(function FirstYearInfoPage() {
@@ -71,7 +71,7 @@ export default memo(function FirstYearInfoPage() {
   return (
     <Box align="center">
       {result.map((arrayWithTabs, index) => {
-        return <InfoCard data={arrayWithTabs} key={`guide-${index}`} />;
+        return <FreshmenInfoPage data={arrayWithTabs} key={`guide-${index}`} />;
       })}
     </Box>
   );

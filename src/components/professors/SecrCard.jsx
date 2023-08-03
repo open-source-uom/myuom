@@ -46,23 +46,14 @@ import {
   useDisclosure,
   Image,
   Text,
-  VStack,
   useColorModeValue,
   Flex,
 } from "@chakra-ui/react";
-import {
-  Modal,
-  ModalOverlay,
-  ModalContent,
-  ModalHeader,
-  ModalBody,
-  ModalCloseButton,
-} from "@chakra-ui/react";
 import { useTranslation } from 'react-i18next';
 // import { EmailIcon } from "@chakra-ui/icons";
-
+import i18n from "../../i18n";
 export default function SecrCard({ data }) {
-  const {t, i18n} = useTranslation();
+
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <Box
@@ -102,7 +93,7 @@ export default function SecrCard({ data }) {
               fontWeight="bold"
               fontSize={{ sm: 14, md: 16, lg: 18 }}
             >
-              {t("grammateia")} {data.name}
+              {i18n.t("grammateia")} {data.name}
             </Text>
             <AccordionIcon />
           </AccordionButton>
@@ -110,14 +101,14 @@ export default function SecrCard({ data }) {
         <AccordionPanel bgColor="transparent" pb={5} textAlign="center">
           <Flex direction="column" alignItems="start" fontFamily="Syne">
             <Text as="span" fontWeight="bold">
-            {t("tilefono")}&nbsp;
+              {i18n.t("tilefono")}&nbsp;
               <Text fontWeight="normal" as="span">
                 {data.tel}
               </Text>
             </Text>
 
             <Text as="span" fontWeight="bold">
-            {t("email")}&nbsp;
+              {i18n.t("email")}&nbsp;
               <Text fontWeight="normal" as="span">
                 {data.email}
               </Text>
@@ -135,7 +126,7 @@ export default function SecrCard({ data }) {
                 window.open(data.link);
               }}
             >
-              <span>{t("istoselidaGrammateias")}</span>
+              <span>{i18n.t("istoselidaGrammateias")}</span>
               <Box w={{ sm: "16px", lg: "18px" }}>
                 <svg
                   className="stroke-svg home-svg"
