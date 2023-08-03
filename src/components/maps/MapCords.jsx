@@ -36,17 +36,14 @@
 
 */
 
-import React, { useState, useCallback, useEffect } from "react";
+import React, { useState } from "react";
 import ImageMapper from "react-img-mapper";
 import { Box, Button, Text, useColorModeValue } from "@chakra-ui/react";
-import {useTranslation} from "react-i18next"
-
+import i18n from "../../i18n";
 
 export default function App({ sampleObject }) {
-  const [showGroundFloorImg, setShowGroundFloorImg] = useState(true);
-  const [ButtonActivity, setButtonActivity] = useState(false);
-  const [showCorrectText, setShowCorrectText] = useState(false);
-  const {t} = useTranslation();
+  //ground floor image is needed to show the user which elevator he will get in
+  const [showGroundFloorImg, setShowGroundFloorImg] = useState(false);
   const [mapAreas, setMapAreas] = useState({
     name: "my-map",
     areas: [
@@ -54,16 +51,13 @@ export default function App({ sampleObject }) {
     ],
   });
 
-  const handleUpdateMapArea = useCallback(
-    (evt) => updateMapArea(5, [sampleObject.x, sampleObject.y, 5]),
-    []
-  );
+  //use Callbacks here are not necessary,might be performance wise
+  const handleUpdateMapArea =
+    (evt) => updateMapArea(5, [sampleObject.x, sampleObject.y, 5])
 
-  const handleUpdateElevatorMapArea = useCallback(
+  const handleUpdateElevatorMapArea =
     (evt) =>
-      updateMapArea(5, [sampleObject.elevatorx, sampleObject.elevatory, 5]),
-    []
-  );
+      updateMapArea(5, [sampleObject.elevatorx, sampleObject.elevatory, 5])
 
   const updateMapArea = (id, coords) => {
     const areas = mapAreas.areas.map((item) =>
@@ -75,83 +69,47 @@ export default function App({ sampleObject }) {
     });
   };
 
-  useEffect(() => {
-    setShowGroundFloorImg(false);
-    if (sampleObject.floor === "Ισόγειο") {
-      setButtonActivity(true);
-    }
-  }, []);
-
-  const HandleColor = () => {
-    return useColorModeValue("#f3f3f3", "black");
-  };
-
-  const HandleBgColor = () => {
-    return useColorModeValue("#0050e0", "#f3f3f3");
-  };
-
-  useEffect(() => {
-    if(sampleObject.floor === "Ημιόροφο"){
-      setShowCorrectText(true);
-    }
-  },[])
-
+  const shouldOmitFloor = sampleObject.floor === i18n.t("semi_floor");
+  const shouldDisableFindBuildingBtn = sampleObject.floor === i18n.t("ground_floor");
+  //it might be sensible to separate those two into different components
+  //one for the actual floor and one for the groundfloor with the elevator
   return (
-    <Box fontFamily="Syne">
-      {!showGroundFloorImg && (
-        <Box>
-          <Button
-            onClick={() => setShowGroundFloorImg(!showGroundFloorImg)}
-            disabled={ButtonActivity}
-            variant="outline"
-            margin="1rem"
-            fontFamily="Syne"
-            color={HandleColor}
-            bgColor={HandleBgColor}
-            _hover={false}
-          >
-            {t("cant_find_building_prompt")}
-          </Button>
-          <ImageMapper
-            src={sampleObject.imageURL}
-            onLoad={handleUpdateMapArea}
-            map={mapAreas}
-            width={350}
-          />
-        </Box>
-      )}
-      {showGroundFloorImg && (
-        <Box>
-          <Button
-            onClick={() => setShowGroundFloorImg(!showGroundFloorImg)}
-            variant="outline"
-            margin="1rem"
-            fontFamily="Syne"
-            color={HandleColor}
-            bgColor={HandleBgColor}
-            _hover={false}
-          >
-            {t("see_room_again")}
-          </Button>
-          <Text px="1rem">
-            {t("closest_elevator_prompt")}{" "}
+    <Box>
+      <Box>
+        <Button
+          onClick={() => setShowGroundFloorImg(prev => !prev)}
+          variant="outline"
+          disabled={shouldDisableFindBuildingBtn}
+          margin="1rem"
+          color={useColorModeValue("#f3f3f3", "black")}
+          bgColor={useColorModeValue("#0050e0", "#f3f3f3")}
+          _hover={false}
+        >
+
+          {!showGroundFloorImg ? i18n.t("cant_find_building_prompt") : i18n.t("see_room_again")}
+        </Button>
+        {
+          showGroundFloorImg && <Text px="1rem">
+            {i18n.t("closest_elevator_prompt")}{" "}
           </Text>
-          <ImageMapper
-            src={sampleObject.groundFloor}
-            onLoad={handleUpdateElevatorMapArea}
-            map={mapAreas}
-            width={350}
-          />
-          {!showCorrectText && <Text fontFamily="Syne" px="1rem">
-           {t("enter_elevator_prompt")}{" "}
-            {sampleObject.floor.toLowerCase()} {t("floor")}
-          </Text>}
-          {showCorrectText && <Text fontFamily="Syne" px="1rem">Μπείτε σε αυτό το ασανσέρ και πηγαίνετε στον {sampleObject.floor.toLowerCase()}</Text>}
-        </Box>
-      )}
-      <Text color="red" fontSize="md" fontFamily="Syne" px="1rem">
-        {t("cant_see_room_prompt")}
-      </Text>
+        }
+
+        <ImageMapper
+          src={showGroundFloorImg ? sampleObject.groundFloor : sampleObject.imageURL}
+          onLoad={showGroundFloorImg ? handleUpdateElevatorMapArea : handleUpdateMapArea}
+          map={mapAreas}
+          width={350}
+        />
+        {
+          showGroundFloorImg && <Text pt={"0.125rem"} px="1rem">{i18n.t("enter_elevator_prompt")}{" "}
+            {sampleObject.floor.toLowerCase()} {!shouldOmitFloor && i18n.t("floor")}
+          </Text>
+        }
+        <Text color="red" fontSize="md" fontFamily="Syne" px="1rem">
+          {i18n.t("cant_see_room_prompt")}
+        </Text>
+      </Box>
     </Box>
+
   );
 }

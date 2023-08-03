@@ -1,12 +1,12 @@
 export default {
-  floor:"floor",
+  floor: "floor",
   first_floor: "First",
   //!
-  semi_floor: "Semi",
+  semi_floor: "mezzanine",
   second_floor: "Second",
   third_floor: "Third",
   fourth_floor: "Fourth",
-  fifth_floor: "Πέμπτο",
+  fifth_floor: "Fifth",
 
   ground_floor: "Ground",
   //!
@@ -30,7 +30,7 @@ export default {
   music_and_art_studies_secretary: "Music and Art Studies Secretary",
   balkan_studies_secretary: "Balkan, Slavic and Eastern Studies Secretary",
   ekp_secretary: "Educational and Social Policy Secretary",
-  econ_secretary:"Secretary of Economics Studies",
+  econ_secretary: "Secretary of Economics Studies",
   internship_office_2: "Internship Office",
   //liaison_office:"Liaison Office"
   student_care_office: "Student Care Office",
@@ -48,21 +48,21 @@ export default {
     "Secretary of Interdepartmental Postgraduate Programmes",
   photocopy_space: "Photocopier",
   lab: "Lab",
-  depname_bso:"Balkan, Slavic & Oriental Studies",
-  depname_ies:"International and European Studies",
-  depname_esp:"Educational & Social Policy",
-  depname_dai:"Applied Informatics",
-  depname_fin:"Accounting and Finance",
-  depname_msa:"Music Science & Art",
-  depname_eco:"Economics",
-  depname_ba:"Business Administration",
-  select_building:"Select a building",
+  depname_bso: "Balkan, Slavic & Oriental Studies",
+  depname_ies: "International and European Studies",
+  depname_esp: "Educational & Social Policy",
+  depname_dai: "Applied Informatics",
+  depname_fin: "Accounting and Finance",
+  depname_msa: "Music Science & Art",
+  depname_eco: "Economics",
+  depname_ba: "Business Administration",
+  select_building: "Select a building",
   //dont like this
-  select_office:"Select an office",
-  virtual_tour:"Virtual Tour",
-  cant_find_building_prompt:"Don't know where the building is?",
-  cant_see_room_prompt:"In case you can't see the room you can zoom in on the image",
-  closest_elevator_prompt:"The closest elevator relative to that room is:",
-  enter_elevator_prompt:"Get in the elevator and go to the",
-  see_room_again:"See again where the room is"
+  select_office: "Select an office",
+  virtual_tour: "Virtual Tour",
+  cant_find_building_prompt: "Don't know where the building is?",
+  cant_see_room_prompt: "In case you can't see the room you can zoom in on the image",
+  closest_elevator_prompt: "The closest elevator relative to that room is:",
+  enter_elevator_prompt: "Get in the elevator and go to the",
+  see_room_again: "See again where the room is"
 };
