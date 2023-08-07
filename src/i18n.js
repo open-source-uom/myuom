@@ -48,7 +48,7 @@ const resources = {
       map: "Maps",
       other_services: "Other Services",
       announcements: "Announcements",
-      orkomosies: "Inauguration",
+      orkomosies: "Graduation",
       foititiki_merimna: "Student Care",
       freshmen_guides: "Freshmen",
       faq_title: "Frequently Asked",
