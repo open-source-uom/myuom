@@ -38,14 +38,14 @@
 
 import { useContext, useEffect } from "react";
 import { DepartmentContext } from "../contexts/departmentContext";
-import { schedulesData } from "../assets/ScheduleLink";
+import { schedulesData } from "../assets/data/ScheduleLink";
 import { Heading, Box } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 
 export default function SchedulePage({ examsProp, semesterProp }) {
   const { depName } = useContext(DepartmentContext);
   const navigate = useNavigate();
-
+  console.log("The depname is: " + depName)
   const redirectTo = (link) => {
     window.open(link);
     navigate("/");

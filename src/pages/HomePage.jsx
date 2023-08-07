@@ -37,12 +37,11 @@
 */
 
 import { useState, useEffect } from "react";
-import { Categories } from "../assets/categories";
+import { Categories } from "../assets/ConfigRoutes";
 import MenuBox from "../components/MenuBox";
 import { Flex, Grid, Heading } from "@chakra-ui/react";
 
 import { motion } from "framer-motion";
-import Search from "../components/Search";
 
 const stagger = {
   inView: {

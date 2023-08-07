@@ -37,9 +37,9 @@
 */
 
 import { Flex, Box, Text, Button, useColorModeValue } from "@chakra-ui/react";
-
+import i18n from "../i18n";
 import { TimeIcon, PhoneIcon } from "@chakra-ui/icons";
-import { LIBRARY_OPENING_HOURS, LIBRARY_PHONE_LIST } from "../assets/constants";
+import { LIBRARY_OPENING_HOURS, LIBRARY_PHONE_LIST } from "../assets/data/Library";
 export default function LibraryPage() {
   return (
     <Flex
@@ -92,13 +92,13 @@ export default function LibraryPage() {
                 as="span"
                 fontWeight={"bold"}
               >
-                Ωράριο
+                {i18n.t("orario")}
               </Text>
             </Flex>
             <Flex mt="1rem" flexDirection={"row"} alignItems="center">
               <Box mx="0.5rem">
                 <Text as="span" fontWeight={"bold"}>
-                  Δευ-Παρ
+                  {i18n.t("defPar")}
                 </Text>{" "}
                 <br />
                 {LIBRARY_OPENING_HOURS.on_weekdays.start}-
@@ -106,21 +106,21 @@ export default function LibraryPage() {
               </Box>
               <Box mx="1rem">
                 <Text as="span" fontWeight={"bold"}>
-                  Σάββατο
+                  {i18n.t("savvato")}
                 </Text>{" "}
                 <br />
                 {LIBRARY_OPENING_HOURS.on_saturday.start
                   ? `${LIBRARY_OPENING_HOURS.on_saturday.start}-${LIBRARY_OPENING_HOURS.on_saturday.end}`
-                  : "Κλειστά"}
+                  : i18n.t("kleista")}
               </Box>
               <Box mx="1rem">
                 <Text as="span" fontWeight={"bold"}>
-                  Κυριακή
+                  {i18n.t("kyriaki")}
                 </Text>{" "}
                 <br />
                 {LIBRARY_OPENING_HOURS.on_sunday.start
                   ? `${LIBRARY_OPENING_HOURS.on_sunday.start}-${LIBRARY_OPENING_HOURS.on_sunday.end}`
-                  : "Κλειστά"}
+                  : i18n.t("kleista")}
               </Box>
             </Flex>
           </Flex>
@@ -161,7 +161,7 @@ export default function LibraryPage() {
                 as="span"
                 fontWeight={"bold"}
               >
-                Επικοινωνία
+                {i18n.t("epikoinonia")}
               </Text>
             </Flex>
 
@@ -180,7 +180,7 @@ export default function LibraryPage() {
                 {" "}
                 {LIBRARY_PHONE_LIST[2]} <br /> {LIBRARY_PHONE_LIST[3]}{" "}
               </Text>
-              <Text fontWeight="bold"> Ημιόροφος </Text>
+              <Text fontWeight="bold"> {i18n.t("imiorofos")} </Text>
             </Flex>
           </Flex>
         </Box>
@@ -221,7 +221,7 @@ export default function LibraryPage() {
         }}
         justifyContent="center"
       >
-        Ιστοσελίδα Βιβλιοθήκης
+        {i18n.t("istoselidaVivliothikis")}
       </Button>
     </Flex>
   );

@@ -40,12 +40,13 @@ import { useEffect, useState } from "react";
 import { Outlet, useNavigate, useLocation } from "react-router-dom";
 import myUOMLogo from "../assets/myUOMLogo.png";
 import { Flex, Box, Heading, Image, useColorModeValue } from "@chakra-ui/react";
-import MenuButton from "./MenuButton";
-import { Categories } from "../assets/categories";
+import SettingsButton from "./settings/SettingsButton";
+import { Categories } from "../assets/ConfigRoutes";
 import { LeftArrowIcon } from "../assets/icons";
 import HomeIcon from "../assets/icons/HomeIcon";
+import i18n from "../i18n";
 function RouteDictionary(route) {
-  if (route === "/") return "Αρχική";
+  if (route === "/") return i18n.t("initial_page");
   else {
     for (let i = 0; i < Categories.length; i++) {
       if (Categories[i].route === route) return Categories[i].title;
@@ -139,7 +140,7 @@ export default function Header() {
           </Flex>
         </Flex>
         <Box display={{ sm: "none", lg: "block" }}>
-          <MenuButton />
+          <SettingsButton />
         </Box>
       </Flex>
       <Flex
@@ -160,7 +161,7 @@ export default function Header() {
         <Box onClick={goToHomePage}>
           <HomeIcon />
         </Box>
-        <MenuButton />
+        <SettingsButton />
       </Flex>
       <Outlet />
     </>

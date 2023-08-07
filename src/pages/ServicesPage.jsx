@@ -47,7 +47,7 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import ServicesCard from "../components/ServicesCard";
-import { servicesData as allServices } from "../assets/constants";
+import { servicesData as allServices } from "../assets/data/Services";
 export default function ServicesPage() {
   const servicesOrdered = allServices.sort((a, b) => a.index - b.index);
   console.log(servicesOrdered, "hello");

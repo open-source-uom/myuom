@@ -37,11 +37,12 @@
 */
 
 import { Box, Image, Text, Accordion } from "@chakra-ui/react";
-import membersData from "../assets/projectMembers";
+import membersData from "../assets/data/projectMembers";
 import ProjectMembersCard from "../components/ProjectMembersCard";
 import UoMLogo from "../assets/myUOMLogo.png";
 import { SocialIcon } from "react-social-icons";
-import { SOCIAL_MEDIA_URLS } from "../assets/constants";
+import { SOCIAL_MEDIA_URLS } from "../assets/data/SocialMediaUrls";
+import i18n from "../i18n";
 function AboutSettingsPage() {
   return (
     <Box
@@ -52,9 +53,9 @@ function AboutSettingsPage() {
     >
       <Image src={UoMLogo} width="200px" height="200px" />
       <Text marginTop="1em" fontSize={{ sm: 26, md: 30, lg: 34, xl: 38 }}>
-        myUoM για κινητά
+        {i18n.t("about_title")}
         <br />
-        Έκδοση v1.0.0
+        {i18n.t("about_version")}
         <br />
         <br />
       </Text>
@@ -66,7 +67,7 @@ function AboutSettingsPage() {
         <br />
       </Text>
       <Text fontSize={{ sm: 17, md: 21, lg: 26, xl: 30 }}>
-        Βρες μας στα Social Media
+        {i18n.t("about_find_us_on_socials")}
       </Text>
       <Box paddingTop="10px">
         <SocialIcon
@@ -104,7 +105,7 @@ function AboutSettingsPage() {
         mt="2rem"
         mx="2rem"
       >
-        Τα μέλη της ομάδας Ανάπτυξης
+        {i18n.t("about_project_members_title")}
       </Text>
       <Accordion allowToggle mt="1rem">
         {membersData.map((data) => (

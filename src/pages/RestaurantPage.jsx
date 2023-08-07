@@ -37,24 +37,24 @@
 */
 
 import { useEffect } from "react";
-import Menu from "../components/Menu";
-import data from "../assets/DailyMenu.json";
+import Menu from "../components/restaurant/RestaurantMenu";
+import data from "../assets/data/DailyMenu";
 import {
   Accordion,
   Box,
-  Image,
   Text,
   Flex,
   useColorModeValue,
 } from "@chakra-ui/react";
-import Schedule from "../components/Schedule";
-import dinner from "../assets/dinner.png";
-import TodaysMenu from "../components/TodaysMenu";
+import Schedule from "../components/restaurant/Schedule";
+import TodaysMenu from "../components/restaurant/TodaysRestaurantMenu";
+import i18n from "../../src/i18n";
 
 export default function RestauranPage() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   return (
     <Flex direction="column" align="center">
       <Box
@@ -85,7 +85,7 @@ export default function RestauranPage() {
             fontFamily="Syne"
             fontSize={{ sm: 20, md: 24, lg: 26 }}
           >
-            Όλες οι μέρες
+            {i18n.t("olesOiMeres")}
           </Text>
         </Box>
         <Accordion allowToggle>
