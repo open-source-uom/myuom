@@ -44,7 +44,7 @@ export const schedulesData = new Map([
     DEPARTMENTS[0],
     {
       semester:
-        "https://www.uom.gr/assets/site/public/nodes/4635/14544-Orologio-Programma-Xeimerinoy-2022-2023.pdf",
+        "https://www.uom.gr/bso/orologio-programma",
       exam: "https://www.uom.gr/bso/programma-eksetaseon",
     },
   ],
@@ -54,7 +54,7 @@ export const schedulesData = new Map([
     DEPARTMENTS[1],
     {
       semester:
-        "https://www.uom.gr/assets/site/public/nodes/4549/14545-2022_23_xeimerino2.pdf",
+        "https://www.uom.gr/ies/orologio-programma",
       exam: " https://www.uom.gr/ies/programma-eksetaseon",
     },
   ],
@@ -63,7 +63,7 @@ export const schedulesData = new Map([
     DEPARTMENTS[2],
     {
       semester:
-        "https://www.uom.gr/assets/site/public/nodes/5233/14233-orologioxeimerino20222023.pdf",
+        "https://www.uom.gr/esp/orologio-programma-didaskalias",
       exam: " https://www.uom.gr/esp/programma-eksetastikhs",
     },
   ],
@@ -72,7 +72,7 @@ export const schedulesData = new Map([
     DEPARTMENTS[3],
     {
       semester:
-        "https://docs.google.com/spreadsheets/d/1bUFgxecf6WgQcP3TFnQQwGYRoXDQYATg-WHl9lw1mS0/edit#gid=830689206",
+        "https://www.uom.gr/dai/programmata-didaskalias",
       exam: " https://www.uom.gr/dai/programma-eksetaseon",
     },
   ],
@@ -81,7 +81,7 @@ export const schedulesData = new Map([
     DEPARTMENTS[4],
     {
       semester:
-        "https://www.uom.gr/assets/site/public/nodes/5180/14507-accfin-orologio-programma-xeimerino-2022-2023-20221006.pdf",
+        "https://www.uom.gr/fin/orologio-programma",
       exam: " https://www.uom.gr/fin/eksetaseis",
     },
   ],
@@ -90,7 +90,7 @@ export const schedulesData = new Map([
     DEPARTMENTS[5],
     {
       semester:
-        "https://www.uom.gr/assets/site/public/nodes/1381/14383-OROLOGIO_2022-23.pdf",
+        "https://www.uom.gr/msa/orologio-programma",
       exam: " https://www.uom.gr/msa/programma-eksetaseon",
     },
   ],
@@ -99,16 +99,17 @@ export const schedulesData = new Map([
     DEPARTMENTS[6],
     {
       semester:
-        "https://www.uom.gr/assets/site/public/nodes/3653/14480-neoprogrammadidaskalias_xeimerinou.xlsx",
+        "https://www.uom.gr/eco/orologia-programmata-mathhmaton",
       exam: " https://www.uom.gr/eco/programmata-eksetaseon",
     },
   ],
   [
     // Τμήμα Οργάνωσης & Διοίκησης Επιχειρήσεων
+      //Αυτό χρειάζεται αλλαγή σε κάθε εξάμηνο λόγω γραμματείας
     DEPARTMENTS[7],
     {
       semester:
-        "https://www.uom.gr/assets/site/public/nodes/12268/14532-2022-2023_xeimerino_ode_v1.pdf",
+        "https://www.uom.gr/ba/orologio-programma-didaskalias-earinoy-eksamhnoy-akad-etoys-2022-2023",
       exam: "https://www.uom.gr/ba/programma-eksetaseon-septembrioy-akad-etoys-2022-2023",
     },
   ],
