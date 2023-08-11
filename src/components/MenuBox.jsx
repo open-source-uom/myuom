@@ -50,20 +50,6 @@ import { DepartmentContext } from "../contexts/departmentContext";
 import { DEPARTMENTS } from "../assets/data/DepNames";
 import { motion } from "framer-motion";
 import { DiagonalRightArrowIcon, RightArrowIcon } from "../assets/icons";
-const rotateIn = {
-  initial: {
-    rotateX: "180deg",
-    opacity: 0,
-  },
-  inView: {
-    rotateX: "0deg",
-    opacity: 1,
-    transition: {
-      duration: 0.45,
-      ease: "easeIn",
-    },
-  },
-};
 
 export default function MenuBox({ category }) {
   const { title, iconSVG, route, span, isExternal, requireSelection } =
@@ -71,6 +57,21 @@ export default function MenuBox({ category }) {
   const { depName } = useContext(DepartmentContext);
   const toast = useToast();
   let condition = requireSelection && !DEPARTMENTS.includes(depName);
+
+  const rotateIn = {
+    initial: {
+      rotateX: "180deg",
+      opacity: 0,
+    },
+    inView: {
+      rotateX: "0deg",
+      opacity: condition ? 0.6 : 1,
+      transition: {
+        duration: 0.45,
+        ease: "easeIn",
+      },
+    },
+  };
 
   const navigate = useNavigate();
 
