@@ -64,10 +64,10 @@ function App() {
             <Route
               path={`/${category.route}`}
               element={category.pageToDisplay}
+              key={category.route}
             />
           );
         })}
-
         <Route path="/faq" element={<FAQSettingsPage />} />
         <Route path="/about" element={<AboutSettingsPage />} />
       </Route>

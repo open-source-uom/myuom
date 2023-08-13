@@ -45,77 +45,57 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { SearchIcon } from "@chakra-ui/icons";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import ProfComponent from "./ProfCard.jsx";
 import SecrCard from "./SecrCard.jsx";
-import profData from "../../assets/data/professors.js";
+import profDataPerDepartment from "../../assets/data/professors/index";
 import secrData from "../../assets/data/secretaries.js";
 import { DepartmentContext } from "../../contexts/departmentContext.jsx";
 import i18n from '../../i18n.js';
-export default function ProfList() {
 
-  const { depName } = useContext(DepartmentContext);
-  const [profArray, setProfArray] = useState([]);
-  const [filteredProfArray, setFilteredProfArray] = useState([]);
-  const [searchTerm, setSearchTerm] = useState("");
-  const [secretary, setSecretary] = useState([]);
 
-  useEffect(() => {
-    const professorList = getProfessorsByDepartment(depName);
-    setProfArray(professorList);
-  }, [depName]);
 
-  useEffect(() => {
-    const professorList = getProfessorsByDepartment(depName);
-    setProfArray(professorList);
-    setFilteredProfArray(professorList);
-  }, []);
-
-  useEffect(() => {
-    const specificSecretary = getSecretaryFromDepartment(depName);
-    setSecretary(specificSecretary);
-  }, [depName]);
-
-  useEffect(() => {
-    if (searchTerm) {
-      let temp_filtered = profArray.filter((prof) => {
-        const formattedFirstName = formatString(prof.fname);
-        const formattedLastName = formatString(prof.lname);
-        const formattedSearchTerm = formatString(searchTerm);
-        const searchTermExists =
-          formattedFirstName
-            .concat(formattedLastName)
-            .includes(formattedSearchTerm) ||
-          formattedLastName
-            .concat(formattedFirstName)
-            .includes(formattedSearchTerm);
-
-        if (searchTermExists) return prof;
-
-        if (prof.email.includes(searchTerm)) return prof;
-
-        return null;
-      });
-      setFilteredProfArray(temp_filtered);
-    } else setFilteredProfArray(profArray);
-  }, [searchTerm, profArray]);
-
-  const formatString = (string) =>
-    string
-      .toLowerCase()
-      .normalize("NFD")
-      .replace(/\p{Diacritic}| /gu, "");
-
-  const getProfessorsByDepartment = (depName) =>
-    profData.filter((prof) => prof.department === depName);
-
-  const onTextChangeHandler = (e) => {
-    setSearchTerm(e.target.value);
-  };
-
+const formatString = (string) =>
+  string
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/\p{Diacritic}| /gu, "");
+const getProfessorsByDepartment = (depName) =>
+    profDataPerDepartment.filter((profsOfDepartment) => profsOfDepartment.department === depName).map((departmentData) => departmentData.professors).flat();
   const getSecretaryFromDepartment = (depName) =>
     secrData.find((data) => data.name === depName);
 
+
+
+export default function ProfList() {
+  const { depName } = useContext(DepartmentContext);
+  const [searchTerm, setSearchTerm] = useState("");
+  
+  const profArray = getProfessorsByDepartment(depName);
+  const secretary = getSecretaryFromDepartment(depName);
+
+  let filteredArray = [];
+  if (searchTerm) {
+    let temp_filtered = profArray.filter((prof) => {
+      const formattedFirstName = formatString(prof.fname);
+      const formattedLastName = formatString(prof.lname);
+      const formattedSearchTerm = formatString(searchTerm);
+      const searchTermExists =
+        formattedFirstName
+          .concat(formattedLastName)
+          .includes(formattedSearchTerm) ||
+        formattedLastName
+          .concat(formattedFirstName)
+          .includes(formattedSearchTerm);
+
+      if (searchTermExists) return prof;
+
+      if (prof.email.includes(searchTerm)) return prof;
+
+      return null;
+    });
+    filteredArray = temp_filtered;
+  } else filteredArray = profArray;
 
   return (
     <VStack>
@@ -132,15 +112,15 @@ export default function ProfList() {
           fontFamily="Syne"
           type="text"
           placeholder={i18n.t("searchProf")}
-          onChange={onTextChangeHandler}
+          onChange={(e) => setSearchTerm(e.target.value)}
           borderRadius={"2rem"}
           focusBorderColor="initial"
           color={useColorModeValue("black", "#f3f3f3")}
         />
       </InputGroup>
 
-      {filteredProfArray.length ? (
-        filteredProfArray.map((prof) => (
+      {filteredArray.length ? (
+        filteredArray.map((prof) => (
           <ProfComponent prof={prof} key={prof.tel} />
         ))
       ) : (
