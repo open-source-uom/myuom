@@ -106,3 +106,38 @@ body.chakra-ui-light {
   grid-column-start: span 1 !important;
   grid-column-end: span 1 !important;
 }
+
+.markdown-body a {
+  color: #0050e0;
+  text-decoration: underline;
+}
+
+.markdown-body h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  color: #0050e0;
+}
+
+.markdown-body p {
+  margin: 1rem 0;
+}
+
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body li {
+  margin-left: 0.75rem;
+}
+
+.markdown-body blockquote {
+  border-left: 6px solid #0050e0;
+  background-color: #e0ebff;
+  padding: 15px;
+  margin: 15px 0;
+  font-style: italic;
+  color: #0044bf;
+}
+
+.markdown-body blockquote p {
+  margin: 0;
+}

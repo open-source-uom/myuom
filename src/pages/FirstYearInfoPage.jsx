@@ -36,43 +36,69 @@
 
 */
 
-import data from "../assets/data/FirstYearInfo.js";
-import { Box } from "@chakra-ui/react";
-import FreshmenInfoPage from "../components/FreshmenInfoPage";
-import { useEffect, memo } from "react";
+import React, { useState, useEffect } from "react";
+import { Divider, Flex } from "@chakra-ui/react";
+import GuideButton from "../components/freshmen/GuideButton.jsx";
+import Guide from "../components/freshmen/Guide.jsx";
+import FirstYearInfo from "../assets/data/FirstYearInfo.js";
 
-export default memo(function FirstYearInfoPage() {
+const ButtonListPage = () => {
+  const [showGuidesList, setShowGuidesList] = useState(true);
+  const [showGuideWindow, setShowGuideWindow] = useState(false);
+  const [guide, setGuide] = React.useState({ md: "" });
+
+  const toggleVisibility = () => {
+    setShowGuidesList(!showGuidesList);
+    setShowGuideWindow(!showGuideWindow);
+  };
+
+  const handleButtonClick = (guidePath) => {
+    fetch(guidePath)
+      .then((res) => res.text())
+      .then((md) => {
+        setGuide({ md });
+        toggleVisibility();
+      });
+  };
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  const sortedData = data.sort((a, b) => {
-    return a.index - b.index;
-  });
-  const minIndex = Math.min(
-    ...sortedData.map(({ index }) => {
-      return index;
-    })
-  );
-  const maxIndex = Math.max(
-    ...sortedData.map(({ index }) => {
-      return index;
-    })
-  );
-  let result = [];
-  for (let i = minIndex; i <= maxIndex; i++) {
-    const tabsWithSameIndexSortedByTabOrder = sortedData
-      .filter(({ index }) => index === i)
-      .sort((a, b) => a.tabOrder - b.tabOrder);
-
-    result.push(tabsWithSameIndexSortedByTabOrder);
-  }
-
   return (
-    <Box align="center">
-      {result.map((arrayWithTabs, index) => {
-        return <FreshmenInfoPage data={arrayWithTabs} key={`guide-${index}`} />;
-      })}
-    </Box>
+    <>
+      {showGuidesList && (
+        <Flex direction="column" paddingX={4} align="center">
+          <Flex
+            direction="column"
+            w={{ sm: "100%", md: "90%", lg: "80%", "2xl": "60%", "3xl": "50%" }}
+          >
+            {FirstYearInfo.map((item, index) => (
+              <React.Fragment key={`guide-${index}`}>
+                <GuideButton
+                  text={item.text}
+                  guidePath={item.guidePath}
+                  onClick={handleButtonClick}
+                />
+                {index !== FirstYearInfo.length - 1 && (
+                  <Divider
+                    borderColor="#0050e0"
+                    _dark={{ borderColor: "#f3f3f3" }}
+                    w="100%"
+                    borderBottomWidth={2}
+                    opacity={1}
+                  />
+                )}
+              </React.Fragment>
+            ))}
+          </Flex>
+        </Flex>
+      )}
+      {showGuideWindow && (
+        <Guide onClick={toggleVisibility} guideContent={guide.md}></Guide>
+      )}
+    </>
   );
-});
+};
+
+export default ButtonListPage;
