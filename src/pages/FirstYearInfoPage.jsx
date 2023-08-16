@@ -36,34 +36,30 @@
 
 */
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Divider, Flex } from "@chakra-ui/react";
 import GuideButton from "../components/freshmen/GuideButton.jsx";
 import Guide from "../components/freshmen/Guide.jsx";
-import FirstYearInfo from "../assets/data/FirstYearInfo.js";
+import firstYearGuides from "../assets/data/FirstYearInfo";
+import { useScrollToTopOnLoad } from "../hooks/useScrollToTopOnLoad";
+import { useTranslation } from "react-i18next";
 
-const ButtonListPage = () => {
+function ButtonListPage() {
+  useScrollToTopOnLoad();
+  const { i18n } = useTranslation();
+  console.log("The language is: ", i18n.language);
   const [showGuidesList, setShowGuidesList] = useState(true);
-  const [showGuideWindow, setShowGuideWindow] = useState(false);
-  const [guide, setGuide] = React.useState({ md: "" });
-
-  const toggleVisibility = () => {
-    setShowGuidesList(!showGuidesList);
-    setShowGuideWindow(!showGuideWindow);
-  };
-
+  const [guideMd, setGuideMd] = React.useState("");
+  const FirstYearInfo = firstYearGuides[i18n.language];
   const handleButtonClick = (guidePath) => {
+    console.log(guidePath)
     fetch(guidePath)
       .then((res) => res.text())
       .then((md) => {
-        setGuide({ md });
-        toggleVisibility();
+        setGuideMd(md);
+        setShowGuidesList(prevVal => !prevVal);
       });
   };
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
 
   return (
     <>
@@ -80,6 +76,7 @@ const ButtonListPage = () => {
                   guidePath={item.guidePath}
                   onClick={handleButtonClick}
                 />
+                {/* Last item should not have a divider on the bottom */}
                 {index !== FirstYearInfo.length - 1 && (
                   <Divider
                     borderColor="#0050e0"
@@ -94,8 +91,8 @@ const ButtonListPage = () => {
           </Flex>
         </Flex>
       )}
-      {showGuideWindow && (
-        <Guide onClick={toggleVisibility} guideContent={guide.md}></Guide>
+      {!showGuidesList && (
+        <Guide onClick={(e) => setShowGuidesList(prevVal => !prevVal)} guideContent={guideMd}></Guide>
       )}
     </>
   );

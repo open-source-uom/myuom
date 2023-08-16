@@ -2,8 +2,10 @@ import ReactMarkdown from "react-markdown";
 import { LeftArrowIcon } from "../../assets/icons";
 import { Flex, Divider, Heading, useColorModeValue } from "@chakra-ui/react";
 import i18n from "../../i18n";
+import { useScrollToTopOnLoad } from "../../hooks/useScrollToTopOnLoad";
 
 const Guide = ({ guideContent, onClick }) => {
+  useScrollToTopOnLoad();
   return (
     <Flex direction="column" paddingX={4} align="center">
       <Divider
