@@ -36,12 +36,12 @@
 
 */
 
-import React, { useCallback, useState } from "react";
+import React, { useState } from "react";
 import ImageMapper from "react-img-mapper";
 import { Box, Button, Text, useColorModeValue } from "@chakra-ui/react";
 import i18n from "../../i18n";
-
-export default function App({ floor, floorImgUrl, marked_x, marked_y, ground_img_url, ground_floor_elevator_x, ground_floor_elevator_y, }) {
+import { GROUND_FLOOR_IMG_URL } from "../../assets/data/map_data/floor_images";
+export default function App({ floor, imageURL, marked_position_x, marked_position_y, elevatorx, elevatory, }) {
   const [showGroundFloorImg, setShowGroundFloorImg] = useState(false);
   const [mapAreas, setMapAreas] = useState({
     name: "my-map",
@@ -52,11 +52,11 @@ export default function App({ floor, floorImgUrl, marked_x, marked_y, ground_img
 
   //use Callbacks here are not necessary,might be performance wise
   const handleUpdateMapArea =
-    (evt) => updateMapArea(5, [marked_x, marked_y, 5])
+    (evt) => updateMapArea(5, [marked_position_x, marked_position_y, 5])
 
   const handleUpdateElevatorMapArea =
     (evt) =>
-      updateMapArea(5, [ground_floor_elevator_x, ground_floor_elevator_y, 5])
+      updateMapArea(5, [elevatorx, elevatory, 5])
 
   const updateMapArea = (id, coords) => {
     const areas = mapAreas.areas.map((item) =>
@@ -94,8 +94,8 @@ export default function App({ floor, floorImgUrl, marked_x, marked_y, ground_img
 
         <ImageMapper
           //this is needed to make sure it rerenders when the office selected in the floor changes
-          key={marked_x + " " + marked_y}
-          src={showGroundFloorImg ? ground_img_url : floorImgUrl}
+          key={marked_position_x + " " + marked_position_y}
+          src={showGroundFloorImg ? GROUND_FLOOR_IMG_URL : imageURL}
           onLoad={showGroundFloorImg ? handleUpdateElevatorMapArea : handleUpdateMapArea}
           map={mapAreas}
           width={350}

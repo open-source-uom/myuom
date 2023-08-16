@@ -6,6 +6,7 @@ import i18n from "../../../i18n"
 let locations;
 export default locations = [
     {
+        floor: i18n.t("ground_floor"),
         imageURL: GROUND_FLOOR_IMG_URL,
         title: i18n.t("aiesec"),
         marked_position_x: 95,

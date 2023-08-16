@@ -43,38 +43,14 @@ import {
   Stack,
   useColorModeValue,
 } from "@chakra-ui/react";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import MapCords from "../components/maps/MapCords";
 import i18n from "../i18n";
 import SelectBuildingDropdown from "../components/maps/SelectBuildingDropdown.jsx";
 import SelectOfficeDropdown from "../components/maps/SelectOfficeDropdown.jsx";
-import { merged_map_data } from "../assets/data/map_data/merged_map_data.js";
+import { new_merged_map_data, department_specific_map_data } from "../assets/data/map_data/merged_map_data.js";
+import { DepartmentContext } from "../contexts/departmentContext";
 
-const getRequiredDataForMapWithOfficeAndDepartment = (department, office) => {
-  console.log("Params: ", department, office,)
-  if (!department || !office) return;
-  console.log(department, office)
-  let myLocationObject = merged_map_data.find(
-    (buildingObj) =>
-      buildingObj.building === department
-  )
-
-  console.log("The data: ", office.floor, office.office_label)
-  let locObject = myLocationObject?.map_data[Number(office.floor)];
-  let officeData = locObject.offices.find(
-    (officeObj) => officeObj.title === office.office_label
-  );
-  //extra case for primary building
-  let ground_floor_elevator_x = myLocationObject.ground_floor_elevator_x;
-  let ground_floor_elevator_y = myLocationObject.ground_floor_elevator_y;
-
-  if (myLocationObject.depname == "") {
-    // case for semi-floor,ground-floor,first-floor
-    ground_floor_elevator_x = locObject.ground_floor_elevator_x;
-    ground_floor_elevator_y = locObject.ground_floor_elevator_y;
-  }
-  return { floor: locObject.floor, floorImgUrl: locObject.imageURL, marked_x: officeData.marked_position_x, marked_y: officeData.marked_position_y, ground_img_url: "https://www.uom.gr/site/images/katopseis/esot_isogeio.jpg", ground_floor_elevator_x, ground_floor_elevator_y }
-}
 
 console.log(i18n.t("primary_building"))
 
@@ -82,30 +58,47 @@ console.log(i18n.t("primary_building"))
 
 
 function MapPage() {
-  const [office, setOffice] = useState();
-  const [building, setBuilding] = useState("");
-  const handleChange = (e) => {
-    setBuilding(e.target.value);
-    setOffice("");
-    document.getElementById("title").value = "default";
-  };
-  const handleOfficeChange = (e) => {
-    console.log("Changing value to: ", e.target.value)
-    const [floor, office_label] = e.target.value.split(" ");
-    setOffice({ floor: Number(floor), office_label: office_label });
+  const { depName } = useContext(DepartmentContext);
+  console.log("Department is: ", depName)
+  const [selectedLocationCategory, setSelectedLocationCategory] = useState("");
+  const [selectedLocation, setSelectedLocation] = useState("");
+
+
+  const generalCategoryOptions = new_merged_map_data.map((info) =>
+    info.categoryName);
+  const departmentSpecificCategoryOptions = department_specific_map_data.map((info) =>
+
+    info.categoryName);
+  const categoryOptions = generalCategoryOptions.concat(departmentSpecificCategoryOptions);
+  let locations = [];
+  if (selectedLocationCategory) {
+    // check if location is general or specific
+    if (generalCategoryOptions.includes(selectedLocationCategory)) {
+      locations = new_merged_map_data.find(data => data.categoryName === selectedLocationCategory).locations
+    } else {
+      if (depName) {
+        const locationsOfCategoryFromAllDepartments = department_specific_map_data.find(data => data.categoryName === selectedLocationCategory);
+        const locationsOfSelectedDepartment = locationsOfCategoryFromAllDepartments.locationsPerDepartment.find(data => data.department === depName);
+        locations = locationsOfSelectedDepartment.locations;
+      }
+    }
+
+
+  }
+  let locationData = {};
+  if (selectedLocation) {
+    locationData = locations.find(loc => loc.title === selectedLocation);
   }
 
-  const result = getRequiredDataForMapWithOfficeAndDepartment(building, office);
-  console.log("rerender")
   return (
     <Box align="center" marginTop="1em" fontFamily="Syne">
       <Stack align="center">
-        <SelectBuildingDropdown handleChange={handleChange} />
-        <SelectOfficeDropdown building={building} handleTitle={handleOfficeChange} />
+        <SelectBuildingDropdown handleChange={(e) => setSelectedLocationCategory(e.target.value)} newOptions={categoryOptions} />
+        <SelectOfficeDropdown locations={locations} handleChange={(e) => setSelectedLocation(e.target.value)} />
 
       </Stack>
       {
-        result && <MapCords {...result} />
+        selectedLocation && <MapCords {...locationData} />
       }
       {/* <MapCords sampleObject={locObject} /> */}
       <Button

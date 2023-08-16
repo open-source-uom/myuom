@@ -1,8 +1,10 @@
-import { MEZZANINE_FLOOR_IMG_URL } from "../floor_images"
+import { MEZZANINE_FLOOR_IMG_URL } from "./floor_images"
+import i18n from "../../../i18n";
 let locations;
 
 export default locations = [
     {
+        floor: i18n.t("mezzanine_floor"),
         imageURL: MEZZANINE_FLOOR_IMG_URL,
         title: 'european_studies_secretary',
         marked_position_x: 89,
@@ -12,6 +14,7 @@ export default locations = [
 
     },
     {
+        floor: i18n.t("mezzanine_floor"),
         imageURL: MEZZANINE_FLOOR_IMG_URL,
         title: 'music_and_art_studies_secretary',
         marked_position_x: 95,
@@ -21,6 +24,7 @@ export default locations = [
 
     },
     {
+        floor: i18n.t("mezzanine_floor"),
         imageURL: MEZZANINE_FLOOR_IMG_URL,
         title: 'balkan_studies_secretary',
         marked_position_x: 106,
@@ -29,6 +33,8 @@ export default locations = [
         elevatory: 90,
     },
     {
+        floor: i18n.t("mezzanine_floor"),
+        imageURL: MEZZANINE_FLOOR_IMG_URL,
         title: 'ekp_secretary',
         marked_position_x: 120,
         marked_position_y: 102,
@@ -36,6 +42,7 @@ export default locations = [
         elevatory: 90,
     },
     {
+        floor: i18n.t("mezzanine_floor"),
         imageURL: MEZZANINE_FLOOR_IMG_URL,
         title: 'finance_secretary',
         marked_position_x: 95,
@@ -44,6 +51,7 @@ export default locations = [
         elevatory: 39,
 
     }, {
+        floor: i18n.t("mezzanine_floor"),
         imageURL: MEZZANINE_FLOOR_IMG_URL,
         title: 'dai_secretary',
         marked_position_x: 182,
@@ -53,6 +61,7 @@ export default locations = [
 
     },
     {
+        floor: i18n.t("mezzanine_floor"),
         imageURL: MEZZANINE_FLOOR_IMG_URL,
         title: 'ba_secretary',
         marked_position_x: 203,
@@ -62,6 +71,7 @@ export default locations = [
 
     },
     {
+        floor: i18n.t("mezzanine_floor"),
         imageURL: MEZZANINE_FLOOR_IMG_URL,
         title: 'econ_secretary',
         marked_position_x: 248,
@@ -69,6 +79,7 @@ export default locations = [
         elevatorx: 241,
         elevatory: 95,
     }, {
+        floor: i18n.t("mezzanine_floor"),
         imageURL: MEZZANINE_FLOOR_IMG_URL,
         title: i18n.t("diatmimatika_metaptixiaka_secretary"),
         marked_position_x: 150,

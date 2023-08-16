@@ -35,6 +35,11 @@ import first_floor_1 from "./first_floor/elev_116_37"
 import first_floor_2 from "./first_floor/elev_277_63"
 import first_floor_3 from "./first_floor/elev_93_87"
 
+import roomsData from "./rooms"
+import secretaryData from "./secretaries"
+import auditoriumData from "./auditoriums"
+import studentClubsData from "./student_clubs"
+import informaticsOffices from "./professor_offices/Informatics"
 export const merged_map_data = [
     {
         depname: "",
@@ -132,32 +137,38 @@ export const merged_map_data = [
 // επειδή οι κατηγορίες θα είναι mumbo jumbo κάθε τοποθεσία θα έχει
 // imgUrl x,y και ασανσέρ x,y
 
+//department specific categories will be added at runtime
 export const new_merged_map_data = [
     {
         categoryName: "Γραμματείες",
-        locations: [
-
-        ]
+        locations: secretaryData
     },
     {
         categoryName: "Αίθουσες",
-        locations: [
-        ]
-    },
-    {
-        categoryName: "Εργαστήρια",
-        locations: []
+        locations: roomsData
     }
+    // {
+    //     categoryName: "Εργαστήρια",
+    //     locations: []
+    // }
     , {
         categoryName: "Αμφιθέατρα",
-        locations: []
+        locations: auditoriumData
     },
     {
         categoryName: "Φοιτητικές ομάδες",
-        locations: []
+        locations: studentClubsData
     },
+    // {
+    //     categoryName: "Γραφεία Καθηγητών",
+    //     locations: []
+    // }
+]
+
+export const department_specific_map_data = [
     {
         categoryName: "Γραφεία Καθηγητών",
-        locations: []
-    }
+        locationsPerDepartment: [informaticsOffices]
+    },
+
 ]
