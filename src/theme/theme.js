@@ -39,8 +39,23 @@
 import { extendTheme } from "@chakra-ui/react";
 
 export const customTheme = extendTheme({
-  colors: {},
-  fonts: {},
+  colors: {
+    brand: {
+      light: {
+        text: "black",
+        primary: "#0050e0",
+        secondary: "#f3f3f3"
+      },
+      dark: {
+        text: "white",
+        primary: "black",
+        secondary: "#F4B042"
+      }
+    }
+  },
+  fonts: {
+
+  },
   fontSizes: {},
   breakpoints: {
     sm: "320px",

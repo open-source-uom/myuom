@@ -1,12 +1,10 @@
 import { Select } from "@chakra-ui/react";
-import { mapData } from "../../assets/data/mapData";
 import i18n from "../../i18n";
+import { merged_map_data } from "../../assets/data/map_data/merged_map_data";
 export default function SelectBuildingDropdown({ handleChange }) {
-    // might have performance issues
-    /* Insert all buildings into an array and convert set to remove duplicates */
-    // Possibly just add them to a set? Not sure about complexity
-    const arr = mapData.map((info) => info.building + " " + info.dep);
-    const options = [...new Set(arr)];
+
+    const options = merged_map_data.sort((a, b) => a.building.localeCompare(b.building)).map((info) => { return { depname: info.depname, building: info.building } });
+
     return (<Select
         w={{ base: "75%", lg: "50%" }}
         justifyContent={"center"}
@@ -16,9 +14,9 @@ export default function SelectBuildingDropdown({ handleChange }) {
         <option hidden disabled value="default">
             {i18n.t("select_building")}
         </option>
-        {options.map((building) => (
-            <option value={building} key={building}>
-                {building}
+        {options.map((option, index) => (
+            <option value={option.building} key={index}>
+                {option.building} {option.depname}
             </option>
         ))}
     </Select>);

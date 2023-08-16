@@ -44,42 +44,70 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import { useState } from "react";
-import { mapData } from "../assets/data/mapData.js";
 import MapCords from "../components/maps/MapCords";
-import { useEffect } from "react";
 import i18n from "../i18n";
 import SelectBuildingDropdown from "../components/maps/SelectBuildingDropdown.jsx";
 import SelectOfficeDropdown from "../components/maps/SelectOfficeDropdown.jsx";
+import { merged_map_data } from "../assets/data/map_data/merged_map_data.js";
+
+const getRequiredDataForMapWithOfficeAndDepartment = (department, office) => {
+  console.log("Params: ", department, office,)
+  if (!department || !office) return;
+  console.log(department, office)
+  let myLocationObject = merged_map_data.find(
+    (buildingObj) =>
+      buildingObj.building === department
+  )
+
+  console.log("The data: ", office.floor, office.office_label)
+  let locObject = myLocationObject?.map_data[Number(office.floor)];
+  let officeData = locObject.offices.find(
+    (officeObj) => officeObj.title === office.office_label
+  );
+  //extra case for primary building
+  let ground_floor_elevator_x = myLocationObject.ground_floor_elevator_x;
+  let ground_floor_elevator_y = myLocationObject.ground_floor_elevator_y;
+
+  if (myLocationObject.depname == "") {
+    // case for semi-floor,ground-floor,first-floor
+    ground_floor_elevator_x = locObject.ground_floor_elevator_x;
+    ground_floor_elevator_y = locObject.ground_floor_elevator_y;
+  }
+  return { floor: locObject.floor, floorImgUrl: locObject.imageURL, marked_x: officeData.marked_position_x, marked_y: officeData.marked_position_y, ground_img_url: "https://www.uom.gr/site/images/katopseis/esot_isogeio.jpg", ground_floor_elevator_x, ground_floor_elevator_y }
+}
+
+console.log(i18n.t("primary_building"))
+
+
+
 
 function MapPage() {
-  const [office, setOffice] = useState("");
+  const [office, setOffice] = useState();
   const [building, setBuilding] = useState("");
-  const [locationObject, setLocationObject] = useState([]);
   const handleChange = (e) => {
     setBuilding(e.target.value);
     setOffice("");
     document.getElementById("title").value = "default";
   };
+  const handleOfficeChange = (e) => {
+    console.log("Changing value to: ", e.target.value)
+    const [floor, office_label] = e.target.value.split(" ");
+    setOffice({ floor: Number(floor), office_label: office_label });
+  }
 
-  useEffect(() => {
-    const sampleObject = getSampleObjectByBuilding(building);
-    setLocationObject(sampleObject);
-  }, [building, office]);
-
-  const getSampleObjectByBuilding = (value) =>
-    mapData.filter(
-      (data) => data.title === office && data.building + " " + data.dep === value
-    );
+  const result = getRequiredDataForMapWithOfficeAndDepartment(building, office);
+  console.log("rerender")
   return (
     <Box align="center" marginTop="1em" fontFamily="Syne">
       <Stack align="center">
         <SelectBuildingDropdown handleChange={handleChange} />
-        <SelectOfficeDropdown building={building} handleTitle={(e) => setOffice(e.target.value)} />
+        <SelectOfficeDropdown building={building} handleTitle={handleOfficeChange} />
 
       </Stack>
-      {locationObject.map((locObject) => (
-        <MapCords sampleObject={locObject} key={locObject.title} />
-      ))}
+      {
+        result && <MapCords {...result} />
+      }
+      {/* <MapCords sampleObject={locObject} /> */}
       <Button
         _hover={false}
         bgColor={useColorModeValue("#0050e0", "#f3f3f3")}

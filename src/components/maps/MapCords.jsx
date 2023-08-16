@@ -36,13 +36,12 @@
 
 */
 
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import ImageMapper from "react-img-mapper";
 import { Box, Button, Text, useColorModeValue } from "@chakra-ui/react";
 import i18n from "../../i18n";
 
-export default function App({ sampleObject }) {
-  //ground floor image is needed to show the user which elevator he will get in
+export default function App({ floor, floorImgUrl, marked_x, marked_y, ground_img_url, ground_floor_elevator_x, ground_floor_elevator_y, }) {
   const [showGroundFloorImg, setShowGroundFloorImg] = useState(false);
   const [mapAreas, setMapAreas] = useState({
     name: "my-map",
@@ -53,26 +52,25 @@ export default function App({ sampleObject }) {
 
   //use Callbacks here are not necessary,might be performance wise
   const handleUpdateMapArea =
-    (evt) => updateMapArea(5, [sampleObject.x, sampleObject.y, 5])
+    (evt) => updateMapArea(5, [marked_x, marked_y, 5])
 
   const handleUpdateElevatorMapArea =
     (evt) =>
-      updateMapArea(5, [sampleObject.elevatorx, sampleObject.elevatory, 5])
+      updateMapArea(5, [ground_floor_elevator_x, ground_floor_elevator_y, 5])
 
   const updateMapArea = (id, coords) => {
     const areas = mapAreas.areas.map((item) =>
       item.id === id ? { ...item, coords } : item
     );
+    console.log("Areas: ", areas)
     setMapAreas({
       name: mapAreas.name,
       areas,
     });
   };
 
-  const shouldOmitFloor = sampleObject.floor === i18n.t("semi_floor");
-  const shouldDisableFindBuildingBtn = sampleObject.floor === i18n.t("ground_floor");
-  //it might be sensible to separate those two into different components
-  //one for the actual floor and one for the groundfloor with the elevator
+  const shouldOmitFloor = floor === i18n.t("semi_floor");
+  const shouldDisableFindBuildingBtn = floor === i18n.t("ground_floor");
   return (
     <Box>
       <Box>
@@ -95,14 +93,16 @@ export default function App({ sampleObject }) {
         }
 
         <ImageMapper
-          src={showGroundFloorImg ? sampleObject.groundFloor : sampleObject.imageURL}
+          //this is needed to make sure it rerenders when the office selected in the floor changes
+          key={marked_x + " " + marked_y}
+          src={showGroundFloorImg ? ground_img_url : floorImgUrl}
           onLoad={showGroundFloorImg ? handleUpdateElevatorMapArea : handleUpdateMapArea}
           map={mapAreas}
           width={350}
         />
         {
           showGroundFloorImg && <Text pt={"0.125rem"} px="1rem">{i18n.t("enter_elevator_prompt")}{" "}
-            {sampleObject.floor.toLowerCase()} {!shouldOmitFloor && i18n.t("floor")}
+            {floor.toLowerCase()} {!shouldOmitFloor && i18n.t("floor")}
           </Text>
         }
         <Text color="red" fontSize="md" fontFamily="Syne" px="1rem">

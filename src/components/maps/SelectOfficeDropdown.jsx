@@ -1,14 +1,13 @@
 import { Select } from "@chakra-ui/react";
-import { mapData } from "../../assets/data/mapData";
 import i18n from "../../i18n";
-
+import { merged_map_data } from "../../assets/data/map_data/merged_map_data";
 export default function SelectOfficeDropdown({ building, handleTitle }) {
-    const options = mapData.reduce((filtered, option) => {
-        if (option.building + " " + option.dep === building)
-            filtered.push(option.title);
+    console.log("Building: ", building)
+    const options_object_of_building_selected = merged_map_data.filter((info) => info.building == building)
+    console.log("New options:", options_object_of_building_selected)
 
-        return filtered.sort();
-    }, []);
+    const floors_of_building_selected = options_object_of_building_selected.map((info) => info.map_data)
+    console.log("Floors of building selected: ", floors_of_building_selected)
     return (<Select
         w={{ base: "75%", lg: "50%" }}
         isDisabled={!building}
@@ -19,11 +18,17 @@ export default function SelectOfficeDropdown({ building, handleTitle }) {
         <option hidden value="default">
             {i18n.t("select_office")}
         </option>
-        {options.map((info) => (
-            <option value={info} key={info}>
-                {info}
-            </option>
-        ))}
-
+        {
+            floors_of_building_selected.map((floor_data, idx) => (
+                floor_data.map((floor, index) => (
+                    <optgroup label={floor.floor + " " + i18n.t("floor")}>
+                        {floor.offices.map((office) => (
+                            <option value={index + " " + office.title} key={office.title}>
+                                {office.title}
+                            </option>
+                        ))}
+                    </optgroup>
+                ))))
+        }
     </Select>);
 }
