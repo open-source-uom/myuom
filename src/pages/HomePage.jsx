@@ -36,12 +36,13 @@
 
 */
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Categories } from "../assets/ConfigRoutes";
 import MenuBox from "../components/MenuBox";
 import { Flex, Grid, Heading } from "@chakra-ui/react";
 
 import { motion } from "framer-motion";
+import { useScrollToTopOnLoad } from "../hooks/useScrollToTopOnLoad";
 
 const stagger = {
   inView: {
@@ -65,9 +66,7 @@ export default function HomePage() {
   const categoriesSorted = sortToPlaceInDefinedOrder(Categories);
   const categoriesSortedAndWithoutHiddenPages =
     filterOutHiddenPages(categoriesSorted);
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  useScrollToTopOnLoad();
   return (
     <Flex
       direction="column"

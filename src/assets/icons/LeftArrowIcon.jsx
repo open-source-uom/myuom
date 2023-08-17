@@ -1,11 +1,12 @@
 import React from "react";
 
-function LeftArrowIcon() {
+function LeftArrowIcon({ stroke, width }) {
   return (
     <svg
       className="back-btn-svg"
-      width="100%"
+      width={width || "100%"}
       viewBox="0 0 11 11"
+      stroke={stroke || "#000"}
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
