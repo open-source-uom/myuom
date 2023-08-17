@@ -39,16 +39,17 @@
 import {
   Box,
   Button,
-  Select,
   Stack,
+  Text,
+  useBreakpointValue,
   useColorModeValue,
 } from "@chakra-ui/react";
-import { useContext, useState } from "react";
 import MapCords from "../components/maps/MapCords";
 import i18n from "../i18n";
 import SelectBuildingDropdown from "../components/maps/SelectBuildingDropdown.jsx";
 import SelectOfficeDropdown from "../components/maps/SelectOfficeDropdown.jsx";
-import { new_merged_map_data, department_specific_map_data } from "../assets/data/map_data/merged_map_data.js";
+import { useMapData } from "../hooks/useMapData";
+import { useContext } from "react";
 import { DepartmentContext } from "../contexts/departmentContext";
 
 
@@ -59,48 +60,19 @@ console.log(i18n.t("primary_building"))
 
 function MapPage() {
   const { depName } = useContext(DepartmentContext);
-  console.log("Department is: ", depName)
-  const [selectedLocationCategory, setSelectedLocationCategory] = useState("");
-  const [selectedLocation, setSelectedLocation] = useState("");
-
-
-  const generalCategoryOptions = new_merged_map_data.map((info) =>
-    info.categoryName);
-  const departmentSpecificCategoryOptions = department_specific_map_data.map((info) =>
-
-    info.categoryName);
-  const categoryOptions = generalCategoryOptions.concat(departmentSpecificCategoryOptions);
-  let locations = [];
-  if (selectedLocationCategory) {
-    // check if location is general or specific
-    if (generalCategoryOptions.includes(selectedLocationCategory)) {
-      locations = new_merged_map_data.find(data => data.categoryName === selectedLocationCategory).locations
-    } else {
-      if (depName) {
-        const locationsOfCategoryFromAllDepartments = department_specific_map_data.find(data => data.categoryName === selectedLocationCategory);
-        const locationsOfSelectedDepartment = locationsOfCategoryFromAllDepartments.locationsPerDepartment.find(data => data.department === depName);
-        locations = locationsOfSelectedDepartment.locations;
-      }
-    }
-
-
-  }
-  let locationData = {};
-  if (selectedLocation) {
-    locationData = locations.find(loc => loc.title === selectedLocation);
-  }
-
+  const { isSpecificForDepartment, categoryOptions, locations, setSelectedLocation, setSelectedLocationCategory, locationData, selectedLocation, selectedLocationCategory } = useMapData();
+  const departmentHint = useBreakpointValue({ base: i18n.t(depName), md: i18n.t("current_department") + i18n.t(depName) })
   return (
     <Box align="center" marginTop="1em" fontFamily="Syne">
       <Stack align="center">
         <SelectBuildingDropdown handleChange={(e) => setSelectedLocationCategory(e.target.value)} newOptions={categoryOptions} />
+        {isSpecificForDepartment && depName && <Text color={"#bcb6c4"} fontSize={"sm"}>{departmentHint}</Text>}
         <SelectOfficeDropdown locations={locations} handleChange={(e) => setSelectedLocation(e.target.value)} />
 
       </Stack>
       {
         selectedLocation && <MapCords {...locationData} />
       }
-      {/* <MapCords sampleObject={locObject} /> */}
       <Button
         _hover={false}
         bgColor={useColorModeValue("#0050e0", "#f3f3f3")}
