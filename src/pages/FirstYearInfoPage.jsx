@@ -44,25 +44,28 @@ import { useGuidesMdData } from "../hooks/useGuidesMdData.js";
 
 function ButtonListPage() {
   useScrollToTopOnLoad();
-  const { guideMd, FirstYearInfo, handleButtonClick, setGuideMd } = useGuidesMdData();
+  const { guideMd, firstYearGuidesTranslated, fetchGuideByPath, setGuideMd } = useGuidesMdData();
 
   return (
     <>
+      {guideMd && (
+        <Guide onClick={(e) => setGuideMd("")} guideContent={guideMd} />
+      )}
       {!guideMd && (
         <Flex direction="column" paddingX={4} align="center">
           <Flex
             direction="column"
             w={{ sm: "100%", md: "90%", lg: "80%", "2xl": "60%", "3xl": "50%" }}
           >
-            {FirstYearInfo.map((item, index) => (
+            {firstYearGuidesTranslated.map((item, index) => (
               <React.Fragment key={`guide-${index}`}>
                 <GuideButton
                   text={item.text}
                   guidePath={item.guidePath}
-                  onClick={handleButtonClick}
+                  onClick={fetchGuideByPath}
                 />
                 {/* Last item should not have a divider on the bottom */}
-                {index !== FirstYearInfo.length - 1 && (
+                {index !== firstYearGuidesTranslated.length - 1 && (
                   <Divider
                     borderColor="#0050e0"
                     _dark={{ borderColor: "#f3f3f3" }}
@@ -76,9 +79,7 @@ function ButtonListPage() {
           </Flex>
         </Flex>
       )}
-      {guideMd && (
-        <Guide onClick={(e) => setGuideMd("")} guideContent={guideMd}></Guide>
-      )}
+
     </>
   );
 };
