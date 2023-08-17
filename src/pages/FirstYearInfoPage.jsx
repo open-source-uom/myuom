@@ -35,35 +35,20 @@
     -Fakidis
 
 */
-
-import React, { useState } from "react";
+import React from "react";
 import { Divider, Flex } from "@chakra-ui/react";
 import GuideButton from "../components/freshmen/GuideButton.jsx";
 import Guide from "../components/freshmen/Guide.jsx";
-import firstYearGuides from "../assets/data/FirstYearInfo";
 import { useScrollToTopOnLoad } from "../hooks/useScrollToTopOnLoad";
-import { useTranslation } from "react-i18next";
+import { useGuidesMdData } from "../hooks/useGuidesMdData.js";
 
 function ButtonListPage() {
   useScrollToTopOnLoad();
-  const { i18n } = useTranslation();
-  console.log("The language is: ", i18n.language);
-  const [showGuidesList, setShowGuidesList] = useState(true);
-  const [guideMd, setGuideMd] = React.useState("");
-  const FirstYearInfo = firstYearGuides[i18n.language];
-  const handleButtonClick = (guidePath) => {
-    console.log(guidePath)
-    fetch(guidePath)
-      .then((res) => res.text())
-      .then((md) => {
-        setGuideMd(md);
-        setShowGuidesList(prevVal => !prevVal);
-      });
-  };
+  const { guideMd, FirstYearInfo, handleButtonClick, setGuideMd } = useGuidesMdData();
 
   return (
     <>
-      {showGuidesList && (
+      {!guideMd && (
         <Flex direction="column" paddingX={4} align="center">
           <Flex
             direction="column"
@@ -91,8 +76,8 @@ function ButtonListPage() {
           </Flex>
         </Flex>
       )}
-      {!showGuidesList && (
-        <Guide onClick={(e) => setShowGuidesList(prevVal => !prevVal)} guideContent={guideMd}></Guide>
+      {guideMd && (
+        <Guide onClick={(e) => setGuideMd("")} guideContent={guideMd}></Guide>
       )}
     </>
   );
