@@ -36,20 +36,19 @@
 
 */
 
-import { useContext, useEffect } from 'react'
-import { DepartmentContext } from '../contexts/departmentContext'
-import { GradData } from '../assets/data/Graduation'
+import { useEffect } from 'react'
 import { Heading, Box, useToast } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
+import { useDepName, useGraduationLink } from '../hooks';
 
 export default function GraduationPage() {
 
-  const { depName } = useContext(DepartmentContext)
-  const toast = useToast()
-  const navigate = useNavigate()
-
+  const [, depCode] = useDepName();
+  const toast = useToast();
+  const navigate = useNavigate();
+  const gradLink = useGraduationLink(depCode);
   useEffect(() => {
-    if (!depName) {
+    if (!depCode) {
       toast({
         title: "Δεν έχει επιλεγεί τμήμα",
         description: "Παρακαλώ επιλέξτε τμήμα από τις ρυθμίσεις",
@@ -59,22 +58,20 @@ export default function GraduationPage() {
         position: "bottom",
       });
     }
-    if (GradData.get(depName)) {
-      window.open(GradData.get(depName));
+    if (gradLink) {
+      window.open(gradLink.link);
       navigate("/")
     }
 
-  }, [depName]);
+  }, [depCode]);
 
-
-  //<Text align={'center'}> SELECT DEPARTMENT</Text>
   return (
     <Box>
-      {GradData.get(depName) ? (
+      {gradLink ? (
         <Heading textAlign="center" marginTop="50px">
           Ανακατεύθυνση στο τμήμα
-          <a href={GradData.get(depName)} target="_blank" rel="noreferrer">
-            {GradData.get(depName)}
+          <a href={gradLink} target="_blank" rel="noreferrer">
+            {gradLink}
           </a>
         </Heading>
       ) : (

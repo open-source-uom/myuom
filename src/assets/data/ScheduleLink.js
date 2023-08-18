@@ -36,12 +36,12 @@
 
 */
 
-import { DEPARTMENTS } from "./DepNames";
+import { DEPARTMENT_CODES } from "./DepNames";
 
 export const schedulesData = new Map([
   [
     // Τμήμα Βαλκανικών, Σλαβικών & Ανατολικών Σπουδών
-    DEPARTMENTS[0],
+    DEPARTMENT_CODES.BALKAN_STUDIES,
     {
       semester:
         "https://www.uom.gr/bso/orologio-programma",
@@ -51,7 +51,7 @@ export const schedulesData = new Map([
   [
 
     // Τμήμα Διεθνών & Ευρωπαϊκών Σπουδών
-    DEPARTMENTS[1],
+    DEPARTMENT_CODES.EUROPEAN_STUDIES,
     {
       semester:
         "https://www.uom.gr/ies/orologio-programma",
@@ -60,7 +60,7 @@ export const schedulesData = new Map([
   ],
   [
     // Τμήμα Εκπαιδευτικής & Κοινωνικής Πολιτικής
-    DEPARTMENTS[2],
+    DEPARTMENT_CODES.EDUCATIONAL_POLICIES,
     {
       semester:
         "https://www.uom.gr/esp/orologio-programma-didaskalias",
@@ -69,7 +69,7 @@ export const schedulesData = new Map([
   ],
   [
     // Τμήμα Εφαρμοσμένης πληροφορικής
-    DEPARTMENTS[3],
+    DEPARTMENT_CODES.INFORMATICS,
     {
       semester:
         "https://www.uom.gr/dai/programmata-didaskalias",
@@ -78,7 +78,7 @@ export const schedulesData = new Map([
   ],
   [
     // Τμήμα Λογιστικής και Χρηματοοικονομικής
-    DEPARTMENTS[4],
+    DEPARTMENT_CODES.ACCOUNTING_FINANCE,
     {
       semester:
         "https://www.uom.gr/fin/orologio-programma",
@@ -87,7 +87,7 @@ export const schedulesData = new Map([
   ],
   [
     // Τμήμα Μουσικής Επιστήμης & Τέχνης
-    DEPARTMENTS[5],
+    DEPARTMENT_CODES.MUSIC,
     {
       semester:
         "https://www.uom.gr/msa/orologio-programma",
@@ -96,7 +96,7 @@ export const schedulesData = new Map([
   ],
   [
     // Τμήμα Οικονομικών Επιστημών
-    DEPARTMENTS[6],
+    DEPARTMENT_CODES.ECONOMICS,
     {
       semester:
         "https://www.uom.gr/eco/orologia-programmata-mathhmaton",
@@ -105,12 +105,12 @@ export const schedulesData = new Map([
   ],
   [
     // Τμήμα Οργάνωσης & Διοίκησης Επιχειρήσεων
-      //Αυτό χρειάζεται αλλαγή σε κάθε εξάμηνο λόγω γραμματείας
-    DEPARTMENTS[7],
+    //Αυτό χρειάζεται αλλαγή σε κάθε εξάμηνο λόγω γραμματείας
+    DEPARTMENT_CODES.BUSINESS_ADMINISTRATION,
     {
       semester:
         "https://www.uom.gr/ba/orologio-programma-didaskalias-earinoy-eksamhnoy-akad-etoys-2022-2023",
       exam: "https://www.uom.gr/ba/programma-eksetaseon-septembrioy-akad-etoys-2022-2023",
     },
-  ],
+  ]
 ]);

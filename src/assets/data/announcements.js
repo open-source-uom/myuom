@@ -36,16 +36,48 @@
 
 */
 
-import { DEPARTMENTS } from "./DepNames";
-
-export const AnnouncementsData = new Map();
+import { DEPARTMENT_CODES } from "./DepNames";
 
 
-AnnouncementsData.set(DEPARTMENTS[0], "https://www.uom.gr/bso/ta-nea-mas")
-AnnouncementsData.set(DEPARTMENTS[1], "https://www.uom.gr/ies#undefined1")
-AnnouncementsData.set(DEPARTMENTS[2], "https://www.uom.gr/esp")
-AnnouncementsData.set(DEPARTMENTS[3], "https://www.uom.gr/dai/ta-nea-toy-tmhmatos")
-AnnouncementsData.set(DEPARTMENTS[4], "https://www.uom.gr/fin")
-AnnouncementsData.set(DEPARTMENTS[5], "https://www.uom.gr/msa")
-AnnouncementsData.set(DEPARTMENTS[6], "https://www.uom.gr/eco#undefined1")
-AnnouncementsData.set(DEPARTMENTS[7], "https://www.uom.gr/ba")
+
+export const AnnouncementsData = [
+  {
+    code: DEPARTMENT_CODES.BALKAN_STUDIES,
+    link: "https://www.uom.gr/bso/ta-nea-mas",
+
+  },
+  {
+    code: DEPARTMENT_CODES.EUROPEAN_STUDIES,
+    link: "https://www.uom.gr/ies#undefined1",
+  },
+  {
+    code: DEPARTMENT_CODES.EDUCATION,
+    link: "https://www.uom.gr/esp",
+  }, {
+    code: DEPARTMENT_CODES.INFORMATICS,
+    link: "https://www.uom.gr/dai/ta-nea-toy-tmhmatos",
+  }, {
+    code: DEPARTMENT_CODES.BUSINESS_ADMINISTRATION,
+    link: "https://www.uom.gr/ba",
+  }, {
+    code: DEPARTMENT_CODES.ECONOMICS,
+    link: "https://www.uom.gr/eco#undefined1",
+  }, {
+    code: DEPARTMENT_CODES.FINANCE,
+    link: "https://www.uom.gr/fin",
+  }, {
+    code: DEPARTMENT_CODES.MUSIC,
+    link: "https://www.uom.gr/msa",
+  }
+
+]
+
+
+// AnnouncementsData.set(DEPARTMENTS[0], "https://www.uom.gr/bso/ta-nea-mas")
+// AnnouncementsData.set(DEPARTMENTS[1], "https://www.uom.gr/ies#undefined1")
+// AnnouncementsData.set(DEPARTMENTS[2], "https://www.uom.gr/esp")
+// AnnouncementsData.set(DEPARTMENTS[3], "https://www.uom.gr/dai/ta-nea-toy-tmhmatos")
+// AnnouncementsData.set(DEPARTMENTS[4], "https://www.uom.gr/fin")
+// AnnouncementsData.set(DEPARTMENTS[5], "https://www.uom.gr/msa")
+// AnnouncementsData.set(DEPARTMENTS[6], "https://www.uom.gr/eco#undefined1")
+// AnnouncementsData.set(DEPARTMENTS[7], "https://www.uom.gr/ba")

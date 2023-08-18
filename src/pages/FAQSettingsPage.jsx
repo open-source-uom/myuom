@@ -38,10 +38,11 @@
 
 import { Accordion, Box, Text } from "@chakra-ui/react";
 import FAQCard from "../components/FAQCard";
-import data from "../assets/data/questionsForFAQ";
+import { useFAQData } from "../hooks";
 import i18n from "../i18n";
 
 export default function FAQSettingsPage() {
+  const questionsAndAnswers = useFAQData();
   return (
     <Box textAlign={"center"}>
       <Box textAlign="center" marginBottom="1em">
@@ -60,8 +61,8 @@ export default function FAQSettingsPage() {
         </Text>
       </Box>
       <Accordion allowToggle>
-        {data.map((data) => {
-          return <FAQCard data={data} key={data.question} />;
+        {questionsAndAnswers.map((questionsAndAnswers) => {
+          return <FAQCard data={questionsAndAnswers} key={questionsAndAnswers.question} />;
         })}
       </Accordion>
     </Box>

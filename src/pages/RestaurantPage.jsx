@@ -49,11 +49,10 @@ import {
 import Schedule from "../components/restaurant/Schedule";
 import TodaysMenu from "../components/restaurant/TodaysRestaurantMenu";
 import i18n from "../../src/i18n";
-
+import { useWeeklyRestaurantMenu, useScrollToTopOnLoad } from "../hooks"
 export default function RestauranPage() {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  const weeklyRestaurantMenu = useWeeklyRestaurantMenu();
+  useScrollToTopOnLoad();
 
   return (
     <Flex direction="column" align="center">
@@ -89,8 +88,8 @@ export default function RestauranPage() {
           </Text>
         </Box>
         <Accordion allowToggle>
-          {data.map((data) => {
-            return <Menu data={data} key={data.day} />;
+          {weeklyRestaurantMenu.map((dailyFoodMenu) => {
+            return <Menu dailyFoodMenu={dailyFoodMenu} key={dailyFoodMenu.day} />;
           })}
         </Accordion>
       </Box>

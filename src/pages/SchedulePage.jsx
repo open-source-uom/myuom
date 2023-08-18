@@ -36,23 +36,23 @@
 
 */
 
-import { useContext, useEffect } from "react";
-import { DepartmentContext } from "../contexts/departmentContext";
-import { schedulesData } from "../assets/data/ScheduleLink";
+import { useEffect } from "react";
 import { Heading, Box } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
+import { useDepName, useScheduleData } from "../hooks";
 
 export default function SchedulePage({ examsProp, semesterProp }) {
-  const { depName } = useContext(DepartmentContext);
+  const [, depCode] = useDepName();
   const navigate = useNavigate();
-  console.log("The depname is: " + depName)
+  const scheduleData = useScheduleData(depCode)
+  console.log("scheduleData", scheduleData, "depName: ", depCode)
   const redirectTo = (link) => {
     window.open(link);
     navigate("/");
   };
 
   useEffect(() => {
-    let scheduleData = schedulesData.get(depName);
+
 
     if (examsProp) {
       redirectTo(scheduleData.exam);
@@ -61,12 +61,11 @@ export default function SchedulePage({ examsProp, semesterProp }) {
     if (semesterProp) {
       redirectTo(scheduleData.semester);
     }
-  }, [depName]);
+  }, [depCode]);
 
-  //<Text align={'center'}> SELECT DEPARTMENT</Text>
   return (
     <Box>
-      {schedulesData.get(depName) ? (
+      {scheduleData ? (
         <Heading textAlign="center" marginTop="50px">
           Γίνεται ανακατεύθυνση...
         </Heading>

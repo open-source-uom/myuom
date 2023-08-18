@@ -46,17 +46,17 @@ import {
   useToast,
 } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
-import { DepartmentContext } from "../contexts/departmentContext";
-import { DEPARTMENTS } from "../assets/data/DepNames";
 import { motion } from "framer-motion";
 import { DiagonalRightArrowIcon, RightArrowIcon } from "../assets/icons";
+import { useDepartments, useDepName } from "../hooks";
 
 export default function MenuBox({ category }) {
   const { title, iconSVG, route, span, isExternal, requireSelection } =
     category;
-  const { depName } = useContext(DepartmentContext);
+  const [depName, depCode] = useDepName();
+  const departments = useDepartments();
   const toast = useToast();
-  let condition = requireSelection && !DEPARTMENTS.includes(depName);
+  let condition = requireSelection && !departments.map(dep => dep.code).includes(depCode);
 
   const rotateIn = {
     initial: {

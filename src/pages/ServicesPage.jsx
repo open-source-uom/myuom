@@ -37,7 +37,6 @@
 */
 
 import { Box } from "@chakra-ui/react";
-import { useEffect } from "react";
 import {
   Tabs,
   TabList,
@@ -47,14 +46,10 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import ServicesCard from "../components/ServicesCard";
-import { servicesData as allServices } from "../assets/data/Services";
+import { useScrollToTopOnLoad, useServices } from "../hooks"
 export default function ServicesPage() {
-  const servicesOrdered = allServices.sort((a, b) => a.index - b.index);
-  console.log(servicesOrdered, "hello");
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  const services = useServices();
+  useScrollToTopOnLoad();
 
   return (
     <Box>
@@ -64,12 +59,12 @@ export default function ServicesPage() {
         colorScheme={useColorModeValue("#0050e0", "#f3f3f3")}
       >
         <TabList flex="1">
-          {servicesOrdered.map((service) => {
+          {services.map((service) => {
             return <Tab>{service.tabName}</Tab>;
           })}
         </TabList>
         <TabPanels>
-          {servicesOrdered.map(({ services }) => {
+          {services.map(({ services }) => {
             return (
               <TabPanel>
                 {services.map((service) => {
