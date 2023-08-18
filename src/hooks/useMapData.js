@@ -1,10 +1,10 @@
-import { useContext, useState } from "react";
+import { useState } from "react";
 import { department_specific_map_data, new_merged_map_data } from "../assets/data/map_data/merged_map_data";
-import { DepartmentContext } from "../contexts/departmentContext";
+import { useDepName } from "./useDepName";
 
 export const useMapData = () => {
-    const { depName } = useContext(DepartmentContext);
-    console.log("Department is: ", depName)
+    const [, depCode] = useDepName();
+    console.log("Department is: ", depCode)
     const [selectedLocationCategory, setSelectedLocationCategory] = useState("");
     const [selectedLocation, setSelectedLocation] = useState("");
 
@@ -22,9 +22,9 @@ export const useMapData = () => {
         if (generalCategoryOptions.includes(selectedLocationCategory)) {
             locations = new_merged_map_data.find(data => data.categoryName === selectedLocationCategory).locations
         } else {
-            if (depName) {
+            if (depCode) {
                 const locationsOfCategoryFromAllDepartments = department_specific_map_data.find(data => data.categoryName === selectedLocationCategory);
-                const locationsOfSelectedDepartment = locationsOfCategoryFromAllDepartments.locationsPerDepartment.find(data => data.department === depName);
+                const locationsOfSelectedDepartment = locationsOfCategoryFromAllDepartments.locationsPerDepartment.find(data => data.department === depCode);
                 locations = locationsOfSelectedDepartment.locations;
                 isSpecificForDepartment = true;
             }

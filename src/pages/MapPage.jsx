@@ -48,18 +48,10 @@ import MapCords from "../components/maps/MapCords";
 import i18n from "../i18n";
 import SelectBuildingDropdown from "../components/maps/SelectBuildingDropdown.jsx";
 import SelectOfficeDropdown from "../components/maps/SelectOfficeDropdown.jsx";
-import { useMapData } from "../hooks/useMapData";
-import { useContext } from "react";
-import { DepartmentContext } from "../contexts/departmentContext";
-
-
-console.log(i18n.t("primary_building"))
-
-
-
+import { useDepName, useMapData } from "../hooks";
 
 function MapPage() {
-  const { depName } = useContext(DepartmentContext);
+  const [depName,] = useDepName();
   const { isSpecificForDepartment, categoryOptions, locations, setSelectedLocation, setSelectedLocationCategory, locationData, selectedLocation, selectedLocationCategory } = useMapData();
   const departmentHint = useBreakpointValue({ base: i18n.t(depName), md: i18n.t("current_department") + i18n.t(depName) })
   return (
