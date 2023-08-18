@@ -50,8 +50,7 @@ import {
 
 import i18n from "../../i18n";
 
-function Menu({ data }) {
-  console.log("the data is: ", data);
+function Menu({ dailyFoodMenu }) {
   return (
     <Box
       marginBottom="1rem"
@@ -88,7 +87,7 @@ function Menu({ data }) {
             fontWeight="bold"
             fontSize={{ sm: 14, md: 16, lg: 18 }}
           >
-            {data.day}
+            {dailyFoodMenu.day}
           </Text>
           <AccordionIcon />
         </AccordionButton>
@@ -148,15 +147,15 @@ function Menu({ data }) {
                     fontFamily="Syne"
                     fontSize={{ sm: 14, md: 16, lg: 18 }}
                   >
-                    {data.gevmaKirios}
+                    {dailyFoodMenu.gevmaKirios}
                     <br></br>
-                    {data.gevmaEidiko}
+                    {dailyFoodMenu.gevmaEidiko}
                     <br></br>
-                    {data.gevmaGarnitoura}
+                    {dailyFoodMenu.gevmaGarnitoura}
                     <br></br>
-                    {data.gevmaSalata}
+                    {dailyFoodMenu.gevmaSalata}
                     <br></br>
-                    {data.gevmaEpidorpio}
+                    {dailyFoodMenu.gevmaEpidorpio}
                   </Text>
                 </AccordionPanel>
               </AccordionItem>
@@ -214,15 +213,15 @@ function Menu({ data }) {
                     fontFamily="Syne"
                     fontSize={{ sm: 14, md: 16, lg: 18 }}
                   >
-                    {data.deipnoKirios}
+                    {dailyFoodMenu.deipnoKirios}
                     <br></br>
-                    {data.deipnoEidiko}
+                    {dailyFoodMenu.deipnoEidiko}
                     <br></br>
-                    {data.deipnoGarnitoura}
+                    {dailyFoodMenu.deipnoGarnitoura}
                     <br></br>
-                    {data.deipnoSalata}
+                    {dailyFoodMenu.deipnoSalata}
                     <br></br>
-                    {data.deipnoEpidorpio}
+                    {dailyFoodMenu.deipnoEpidorpio}
                   </Text>
                 </AccordionPanel>
               </AccordionItem>

@@ -38,15 +38,44 @@
 
 
 
-import { DEPARTMENTS } from "./DepNames";
+import { DEPARTMENT_CODES } from "./DepNames";
 
-export const GradData = new Map();
+const Balkan_Studies_Link = "https://www.uom.gr/11587-anakoinosh-gia-dia-zoshs-orkomosia-toy-tmhmatos"
+const European_Studies_Link = "https://www.uom.gr/ies/orkomosies-apofoitoi"
+const Education_Link = "https://www.uom.gr/esp/orkomosies"
+const Informatics_Link = "https://www.uom.gr/dai/apofoithsh"
+const Finance_Link = "https://www.uom.gr/fin/enhmerosh?tagid=7435"
+const Business_Link = "https://www.uom.gr/ba/anakoinosh-ypobolhs-aithseon-orkomosias-noembrioy-2019"
+const Economics_Link = "https://www.uom.gr/eco/dieksagogh-neas-orkomosias"
+const Music = "https://www.uom.gr/msa/orkomosia-tmhmatos"
 
-GradData.set(DEPARTMENTS[0], "https://www.uom.gr/11587-anakoinosh-gia-dia-zoshs-orkomosia-toy-tmhmatos")
-GradData.set(DEPARTMENTS[1], "https://www.uom.gr/ies/orkomosies-apofoitoi")
-GradData.set(DEPARTMENTS[2], "https://www.uom.gr/esp/orkomosies")
-GradData.set(DEPARTMENTS[3], "https://www.uom.gr/dai/apofoithsh")
-GradData.set(DEPARTMENTS[4], "https://www.uom.gr/fin/enhmerosh?tagid=7435")
-GradData.set(DEPARTMENTS[5], "https://www.uom.gr/msa/orkomosia-tmhmatos")
-GradData.set(DEPARTMENTS[6], "https://www.uom.gr/eco/dieksagogh-neas-orkomosias")
-GradData.set(DEPARTMENTS[7], "https://www.uom.gr/ba/anakoinosh-ypobolhs-aithseon-orkomosias-noembrioy-2019")
+
+
+export const GradData = [{
+  code: DEPARTMENT_CODES.BALKAN_STUDIES,
+  link: Balkan_Studies_Link
+}, {
+  code: DEPARTMENT_CODES.EUROPEAN_STUDIES,
+  link: European_Studies_Link
+}, {
+  code: DEPARTMENT_CODES.EDUCATION,
+  link: Education_Link
+}, {
+  code: DEPARTMENT_CODES.INFORMATICS,
+  link: Informatics_Link
+}, {
+  code: DEPARTMENT_CODES.FINANCE,
+  link: Finance_Link
+}, {
+  code: DEPARTMENT_CODES.BUSINESS,
+  link: Business_Link
+}, {
+  code: DEPARTMENT_CODES.ECONOMICS,
+  link: Economics_Link
+}, {
+  code: DEPARTMENT_CODES.MUSIC,
+  link: Music
+}
+
+]
+

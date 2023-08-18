@@ -1,15 +1,16 @@
 import { Select } from '@chakra-ui/react'
-import React, { useContext } from 'react'
-import { DepartmentContext } from '../../contexts/departmentContext'
-import { DEPARTMENTS } from '../../assets/data/DepNames'
+import React from 'react'
+import { useDepName, useDepartments } from '../../hooks'
 import i18n from '../../i18n'
 function DepartmentPicker({ onClose }) {
-    const { depName, changeDepartmentName } = useContext(DepartmentContext);
+    const departments = useDepartments();
+    const [depName, depCode, setDepCode] = useDepName();
     console.log("Current Department: " + depName);
     const handleChange = (e) => {
         e.preventDefault();
-        let selectedDepartment = e.target.selectedOptions[0].label;
-        changeDepartmentName(selectedDepartment);
+        let selectedDepartment = e.target.selectedOptions[0].value;
+        console.log("Selecting: " + selectedDepartment)
+        setDepCode(selectedDepartment);
         onClose();
     };
     return (
@@ -19,10 +20,10 @@ function DepartmentPicker({ onClose }) {
                 placeholder={i18n.t("choose_department")}
                 onChange={handleChange}
             >
-                {DEPARTMENTS.filter((department) => department !== depName).map(
-                    (department) => (
-                        <option value={department} key={department}>
-                            {department}
+                {departments.map(
+                    ({ code, name }) => (
+                        <option value={code} key={name}>
+                            {name}
                         </option>
                     )
                 )}
