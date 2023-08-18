@@ -41,9 +41,10 @@ import membersData from "../assets/data/projectMembers";
 import ProjectMembersCard from "../components/ProjectMembersCard";
 import UoMLogo from "../assets/myUOMLogo.png";
 import { SocialIcon } from "react-social-icons";
-import { SOCIAL_MEDIA_URLS } from "../assets/data/SocialMediaUrls";
 import i18n from "../i18n";
+import { useSocialMediaURLs } from "../hooks";
 function AboutSettingsPage() {
+  const SOCIAL_MEDIA_URLS = useSocialMediaURLs();
   return (
     <Box
       align="center"

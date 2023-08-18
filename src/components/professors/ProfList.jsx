@@ -45,12 +45,10 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { SearchIcon } from "@chakra-ui/icons";
-import { useContext, useState } from "react";
+import { useState } from "react";
 import ProfComponent from "./ProfCard.jsx";
 import SecrCard from "./SecrCard.jsx";
-import profDataPerDepartment from "../../assets/data/professors/index";
-import secrData from "../../assets/data/secretaries.js";
-import { DepartmentContext } from "../../contexts/departmentContext.jsx";
+import { useDepName, useProfessors, useScrollToTopOnLoad, useSecretary } from "../../hooks"
 import i18n from '../../i18n.js';
 
 
@@ -60,43 +58,35 @@ const formatString = (string) =>
     .toLowerCase()
     .normalize("NFD")
     .replace(/\p{Diacritic}| /gu, "");
-const getProfessorsByDepartment = (depName) =>
-    profDataPerDepartment.filter((profsOfDepartment) => profsOfDepartment.department === depName).map((departmentData) => departmentData.professors).flat();
-  const getSecretaryFromDepartment = (depName) =>
-    secrData.find((data) => data.name === depName);
 
 
+function profsFilter(prof, searchTerm) {
+  const formattedFirstName = formatString(prof.fname);
+  const formattedLastName = formatString(prof.lname);
+  const formattedSearchTerm = formatString(searchTerm);
+  const searchTermCorrespondsToProfName =
+    formattedFirstName
+      .concat(formattedLastName)
+      .includes(formattedSearchTerm) ||
+    formattedLastName
+      .concat(formattedFirstName)
+      .includes(formattedSearchTerm);
+  if (searchTermCorrespondsToProfName) return true;
+  if (prof.email.includes(searchTerm)) return true;
+}
 
+function searchProfessorsOfDepartment(searchTerm, profArray) {
+  if (!searchTerm) return profArray;
+  return profArray.filter((prof) => profsFilter(prof, searchTerm));
+
+}
 export default function ProfList() {
-  const { depName } = useContext(DepartmentContext);
+  useScrollToTopOnLoad();
+  const [depName,] = useDepName();
   const [searchTerm, setSearchTerm] = useState("");
-  
-  const profArray = getProfessorsByDepartment(depName);
-  const secretary = getSecretaryFromDepartment(depName);
-
-  let filteredArray = [];
-  if (searchTerm) {
-    let temp_filtered = profArray.filter((prof) => {
-      const formattedFirstName = formatString(prof.fname);
-      const formattedLastName = formatString(prof.lname);
-      const formattedSearchTerm = formatString(searchTerm);
-      const searchTermExists =
-        formattedFirstName
-          .concat(formattedLastName)
-          .includes(formattedSearchTerm) ||
-        formattedLastName
-          .concat(formattedFirstName)
-          .includes(formattedSearchTerm);
-
-      if (searchTermExists) return prof;
-
-      if (prof.email.includes(searchTerm)) return prof;
-
-      return null;
-    });
-    filteredArray = temp_filtered;
-  } else filteredArray = profArray;
-
+  const secretary = useSecretary(depName);
+  const profArray = useProfessors(depName);
+  const filteredArray = searchProfessorsOfDepartment(searchTerm, profArray);
   return (
     <VStack>
       {/* <input type="text" onChange={onTextChangeHandler} /> */}

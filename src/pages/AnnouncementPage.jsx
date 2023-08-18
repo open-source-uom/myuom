@@ -36,19 +36,19 @@
 
 */
 
-import { useContext, useEffect } from "react";
-import { DepartmentContext } from "../contexts/departmentContext";
-import { AnnouncementsData } from "../assets/data/announcements";
+import { useEffect } from "react";
 import { Heading, Box, useToast } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
+import { useDepName, useAnnouncementLink } from "../hooks";
 
 export default function AnnouncementsPage() {
-  const { depName } = useContext(DepartmentContext);
+  const [, depCode] = useDepName();
   const toast = useToast();
   const navigate = useNavigate();
+  const announcementLink = useAnnouncementLink(depCode);
 
   useEffect(() => {
-    if (!depName) {
+    if (!depCode) {
       toast({
         title: "Δεν έχει επιλεγεί τμήμα",
         description: "Παρακαλώ επιλέξτε τμήμα από τις ρυθμίσεις",
@@ -58,24 +58,22 @@ export default function AnnouncementsPage() {
         position: "bottom",
       });
     }
-    if (AnnouncementsData.get(depName)) {
-      window.open(AnnouncementsData.get(depName));
+    if (announcementLink) {
+      window.open(announcementLink.link);
       navigate("/");
     }
-  }, [depName]);
-
-  //<Text align={'center'}> SELECT DEPARTMENT</Text>
+  }, [depCode]);
   return (
     <Box>
-      {AnnouncementsData.get(depName) ? (
+      {announcementLink ? (
         <Heading textAlign="center" marginTop="50px">
           Ανακατεύθυνση στο τμήμα
           <a
-            href={AnnouncementsData.get(depName)}
+            href={announcementLink.link}
             target="_blank"
             rel="noreferrer"
           >
-            {AnnouncementsData.get(depName)}
+            {announcementLink.code}
           </a>
         </Heading>
       ) : (

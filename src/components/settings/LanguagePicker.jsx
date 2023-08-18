@@ -37,7 +37,6 @@
 */
 import { Flex, Box, useBreakpointValue } from "@chakra-ui/react";
 import i18n from "../../i18n";
-import { useLocalStorage } from "../../hooks/useLocalStorage";
 
 function GreekFlag({ onClick }) {
   const widthOfSvg = useBreakpointValue({ base: "32px", md: "54px" });
@@ -55,19 +54,17 @@ function UKFlag({ onClick }) {
 
 
 function LanguagePicker() {
-  const [, setDepName] = useLocalStorage('depName', null);
-
   const changeLanguage = (lng) => {
     console.log("Changing language to: ", lng)
+    if (i18n.language === lng) {
+      //can react somehow to this, user mistakenly clicked the same language
+      return;
+    };
     i18n.changeLanguage(lng);
     //in order to keep the language after refresh
     localStorage.setItem("preferred_language", lng);
-    //in order to reset the department name to not have issues in other components
-    //user has to input it again, this could be a pain point 
-    //but needs to happen only once
-    setDepName(null);
     // It is needed to fetch the translated assets
-    document.location.reload(true);
+    document.location.reload();
   }
   return (<Flex mb={"0.5rem"} justifyContent={"center"} alignItems={"center"} columnGap={"2rem"}>
     {i18n.t("change_language")}

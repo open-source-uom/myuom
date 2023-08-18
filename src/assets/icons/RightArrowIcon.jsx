@@ -1,11 +1,12 @@
 import React from "react";
 
-function RightArrowIcon() {
+function RightArrowIcon({ stroke, width }) {
   return (
     <svg
       className="stroke-svg"
-      width="120%"
+      width={width || "120%"}
       viewBox="0 0 11 11"
+      stroke={stroke || "#000"}
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >

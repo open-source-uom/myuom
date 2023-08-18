@@ -40,17 +40,18 @@ import { createContext } from "react";
 import { useLocalStorage } from "../hooks/useLocalStorage";
 
 export const DepartmentContext = createContext({
-  depName: "",
+  departmentCode: "",
+  changeDepartmentCode: () => { },
 });
 
 export const DepartmentProvider = ({ children }) => {
   const [depName, setDepName] = useLocalStorage('depName', null);
 
-  function changeDepartmentName(departmentToBeSet) {
+  function changeDepartmentCode(departmentToBeSet) {
     setDepName(departmentToBeSet);
   }
 
-  const value = { depName, changeDepartmentName };
+  const value = { departmentCode: depName, changeDepartmentCode };
   return (
     <DepartmentContext.Provider value={value}>
       {children}

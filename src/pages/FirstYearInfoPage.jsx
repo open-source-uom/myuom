@@ -35,44 +35,53 @@
     -Fakidis
 
 */
+import React from "react";
+import { Divider, Flex } from "@chakra-ui/react";
+import GuideButton from "../components/freshmen/GuideButton.jsx";
+import Guide from "../components/freshmen/Guide.jsx";
+import { useScrollToTopOnLoad } from "../hooks/useScrollToTopOnLoad";
+import { useGuidesMdData } from "../hooks/useGuidesMdData.js";
 
-import data from "../assets/data/FirstYearInfo.js";
-import { Box } from "@chakra-ui/react";
-import FreshmenInfoPage from "../components/FreshmenInfoPage";
-import { useEffect, memo } from "react";
-
-export default memo(function FirstYearInfoPage() {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
-  const sortedData = data.sort((a, b) => {
-    return a.index - b.index;
-  });
-  const minIndex = Math.min(
-    ...sortedData.map(({ index }) => {
-      return index;
-    })
-  );
-  const maxIndex = Math.max(
-    ...sortedData.map(({ index }) => {
-      return index;
-    })
-  );
-  let result = [];
-  for (let i = minIndex; i <= maxIndex; i++) {
-    const tabsWithSameIndexSortedByTabOrder = sortedData
-      .filter(({ index }) => index === i)
-      .sort((a, b) => a.tabOrder - b.tabOrder);
-
-    result.push(tabsWithSameIndexSortedByTabOrder);
-  }
+function ButtonListPage() {
+  useScrollToTopOnLoad();
+  const { guideMd, firstYearGuidesTranslated, fetchGuideByPath, setGuideMd } = useGuidesMdData();
 
   return (
-    <Box align="center">
-      {result.map((arrayWithTabs, index) => {
-        return <FreshmenInfoPage data={arrayWithTabs} key={`guide-${index}`} />;
-      })}
-    </Box>
+    <>
+      {guideMd && (
+        <Guide onClick={(e) => setGuideMd("")} guideContent={guideMd} />
+      )}
+      {!guideMd && (
+        <Flex direction="column" paddingX={4} align="center">
+          <Flex
+            direction="column"
+            w={{ sm: "100%", md: "90%", lg: "80%", "2xl": "60%", "3xl": "50%" }}
+          >
+            {firstYearGuidesTranslated.map((item, index) => (
+              <React.Fragment key={`guide-${index}`}>
+                <GuideButton
+                  text={item.text}
+                  guidePath={item.guidePath}
+                  onClick={fetchGuideByPath}
+                />
+                {/* Last item should not have a divider on the bottom */}
+                {index !== firstYearGuidesTranslated.length - 1 && (
+                  <Divider
+                    borderColor="#0050e0"
+                    _dark={{ borderColor: "#f3f3f3" }}
+                    w="100%"
+                    borderBottomWidth={2}
+                    opacity={1}
+                  />
+                )}
+              </React.Fragment>
+            ))}
+          </Flex>
+        </Flex>
+      )}
+
+    </>
   );
-});
+};
+
+export default ButtonListPage;
