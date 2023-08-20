@@ -1,0 +1,118 @@
+import i18n from "../../../../../i18n";
+import { THIRD_FLOOR_KZ_IMG } from "../../floor_images";
+
+let third_floor_locations;
+export default third_floor_locations = [
+  {
+    floor: i18n.t("third_floor"),
+    imageURL: THIRD_FLOOR_KZ_IMG,
+    title: "321α",
+    marked_position_x: 202,
+    marked_position_y: 56,
+  },
+  {
+    floor: i18n.t("third_floor"),
+    imageURL: THIRD_FLOOR_KZ_IMG,
+    title: "321",
+    marked_position_x: 220,
+    marked_position_y: 60,
+  },
+  {
+    floor: i18n.t("third_floor"),
+    imageURL: THIRD_FLOOR_KZ_IMG,
+    title: "322",
+    marked_position_x: 235,
+    marked_position_y: 59,
+  },
+  {
+    floor: i18n.t("third_floor"),
+    imageURL: THIRD_FLOOR_KZ_IMG,
+    title: "323",
+    marked_position_x: 253,
+    marked_position_y: 59,
+  },
+  {
+    floor: i18n.t("third_floor"),
+    imageURL: THIRD_FLOOR_KZ_IMG,
+    title: "325",
+    marked_position_x: 270,
+    marked_position_y: 53,
+  },
+  {
+    floor: i18n.t("third_floor"),
+    imageURL: THIRD_FLOOR_KZ_IMG,
+    title: "326",
+    marked_position_x: 291,
+    marked_position_y: 60,
+  },
+  {
+    floor: i18n.t("third_floor"),
+    imageURL: THIRD_FLOOR_KZ_IMG,
+    title: "327",
+    marked_position_x: 314,
+    marked_position_y: 62,
+  },
+  {
+    floor: i18n.t("third_floor"),
+    imageURL: THIRD_FLOOR_KZ_IMG,
+    title: "328",
+    marked_position_x: 304,
+    marked_position_y: 88,
+  },
+  {
+    floor: i18n.t("third_floor"),
+    imageURL: THIRD_FLOOR_KZ_IMG,
+    title: "329",
+    marked_position_x: 306,
+    marked_position_y: 106,
+  },
+  {
+    floor: i18n.t("third_floor"),
+    imageURL: THIRD_FLOOR_KZ_IMG,
+    title: "330",
+    marked_position_x: 305,
+    marked_position_y: 106,
+  },
+  {
+    floor: i18n.t("third_floor"),
+    imageURL: THIRD_FLOOR_KZ_IMG,
+    title: "331",
+    marked_position_x: 309,
+    marked_position_y: 124,
+  },
+  {
+    floor: i18n.t("third_floor"),
+    imageURL: THIRD_FLOOR_KZ_IMG,
+    title: "332α",
+    marked_position_x: 309,
+    marked_position_y: 142,
+  },
+  {
+    floor: i18n.t("third_floor"),
+    imageURL: THIRD_FLOOR_KZ_IMG,
+    title: "332β",
+    marked_position_x: 315,
+    marked_position_y: 160,
+  },
+  {
+    floor: i18n.t("third_floor"),
+    imageURL: THIRD_FLOOR_KZ_IMG,
+    title: "333",
+    marked_position_x: 270,
+    marked_position_y: 139,
+  },
+  {
+    floor: i18n.t("third_floor"),
+    imageURL: THIRD_FLOOR_KZ_IMG,
+    title: "334-335",
+    marked_position_x: 221,
+    marked_position_y: 140,
+  },
+  {
+    floor: i18n.t("third_floor"),
+    imageURL: THIRD_FLOOR_KZ_IMG,
+    title: "336",
+    marked_position_x: 189,
+    marked_position_y: 97,
+  },
+];

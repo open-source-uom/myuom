@@ -1,0 +1,111 @@
+import i18n from "../../../../../i18n";
+import { FOURTH_FLOOR_HT_IMG } from "../../floor_images"; // Assuming that you have a similar constant for the fourth floor as you did for the second
+
+let fourth_floor_locations;
+export default fourth_floor_locations = [
+  {
+    floor: i18n.t("fourth_floor"),
+    imageURL: FOURTH_FLOOR_HT_IMG,
+    title: "401",
+    marked_position_x: 41,
+    marked_position_y: 197,
+  },
+  {
+    floor: i18n.t("fourth_floor"),
+    imageURL: FOURTH_FLOOR_HT_IMG,
+    title: "402",
+    marked_position_x: 21,
+    marked_position_y: 165,
+  },
+  {
+    floor: i18n.t("fourth_floor"),
+    imageURL: FOURTH_FLOOR_HT_IMG,
+    title: "403",
+    marked_position_x: 26,
+    marked_position_y: 146,
+  },
+  {
+    floor: i18n.t("fourth_floor"),
+    imageURL: FOURTH_FLOOR_HT_IMG,
+    title: "405",
+    marked_position_x: 37,
+    marked_position_y: 130,
+  },
+  {
+    floor: i18n.t("fourth_floor"),
+    imageURL: FOURTH_FLOOR_HT_IMG,
+    title: "406",
+    marked_position_x: 27,
+    marked_position_y: 102,
+  },
+  {
+    floor: i18n.t("fourth_floor"),
+    imageURL: FOURTH_FLOOR_HT_IMG,
+    title: "407",
+    marked_position_x: 52,
+    marked_position_y: 99,
+  },
+  {
+    floor: i18n.t("fourth_floor"),
+    imageURL: FOURTH_FLOOR_HT_IMG,
+    title: "408",
+    marked_position_x: 72,
+    marked_position_y: 98,
+  },
+  {
+    floor: i18n.t("fourth_floor"),
+    imageURL: FOURTH_FLOOR_HT_IMG,
+    title: "410",
+    marked_position_x: 90,
+    marked_position_y: 96,
+  },
+  {
+    floor: i18n.t("fourth_floor"),
+    imageURL: FOURTH_FLOOR_HT_IMG,
+    title: "411",
+    marked_position_x: 107,
+    marked_position_y: 102,
+  },
+  {
+    floor: i18n.t("fourth_floor"),
+    imageURL: FOURTH_FLOOR_HT_IMG,
+    title: "412",
+    marked_position_x: 141,
+    marked_position_y: 104,
+  },
+  {
+    floor: i18n.t("fourth_floor"),
+    imageURL: FOURTH_FLOOR_HT_IMG,
+    title: "413",
+    marked_position_x: 72,
+    marked_position_y: 192,
+  },
+  {
+    floor: i18n.t("fourth_floor"),
+    imageURL: FOURTH_FLOOR_HT_IMG,
+    title: "414",
+    marked_position_x: 110,
+    marked_position_y: 181,
+  },
+  {
+    floor: i18n.t("fourth_floor"),
+    imageURL: FOURTH_FLOOR_HT_IMG,
+    title: "415",
+    marked_position_x: 155,
+    marked_position_y: 133,
+  },
+  {
+    floor: i18n.t("fourth_floor"),
+    imageURL: FOURTH_FLOOR_HT_IMG,
+    title: "424",
+    marked_position_x: 147,
+    marked_position_y: 173,
+  },
+  {
+    floor: i18n.t("fourth_floor"),
+    imageURL: FOURTH_FLOOR_HT_IMG,
+    title: "423",
+    marked_position_x: 147,
+    marked_position_y: 173,
+  },
+];
