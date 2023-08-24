@@ -1,5 +1,6 @@
 import i18n from "../../../../../i18n";
-import { FOURTH_FLOOR_CD_IMG, FOURTH_FLOOR_KZ_IMG } from "../../floor_images";
+import { FOURTH_FLOOR_CD_IMG } from "../../floor_images";
+import elevator from "../../elevator_positions";
 
 let fourth_floor_locations;
 export default fourth_floor_locations = [
@@ -27,6 +28,7 @@ export default fourth_floor_locations = [
   {
     floor: i18n.t("fourth_floor"),
     imageURL: FOURTH_FLOOR_CD_IMG,
+    ...elevator.library,
     title: "415",
     marked_position_x: 68,
     marked_position_y: 185,

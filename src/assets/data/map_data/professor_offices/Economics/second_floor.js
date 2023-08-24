@@ -1,5 +1,6 @@
 import i18n from "../../../../../i18n";
 import { SECOND_FLOOR_CD_IMG } from "../../floor_images";
+import elevator from "../../elevator_positions";
 
 let econ_second_floor_locations;
 export default econ_second_floor_locations = [
@@ -34,6 +35,7 @@ export default econ_second_floor_locations = [
   {
     floor: i18n.t("second_floor"),
     imageURL: SECOND_FLOOR_CD_IMG,
+    ...elevator.library,
     title: "206",
     marked_position_x: 29,
     marked_position_y: 88,
@@ -41,6 +43,7 @@ export default econ_second_floor_locations = [
   {
     floor: i18n.t("second_floor"),
     imageURL: SECOND_FLOOR_CD_IMG,
+    ...elevator.library,
     title: "207",
     marked_position_x: 55,
     marked_position_y: 88,
@@ -48,6 +51,7 @@ export default econ_second_floor_locations = [
   {
     floor: i18n.t("second_floor"),
     imageURL: SECOND_FLOOR_CD_IMG,
+    ...elevator.library,
     title: "208",
     marked_position_x: 76,
     marked_position_y: 88,
@@ -62,6 +66,7 @@ export default econ_second_floor_locations = [
   {
     floor: i18n.t("second_floor"),
     imageURL: SECOND_FLOOR_CD_IMG,
+    ...elevator.library,
     title: "212",
     marked_position_x: 150,
     marked_position_y: 88,

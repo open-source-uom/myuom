@@ -1,5 +1,6 @@
 import i18n from "../../../../../i18n";
 import { SECOND_FLOOR_CD_IMG } from "../../floor_images";
+import elevator from "../../elevator_positions";
 
 let second_floor_locations;
 export default second_floor_locations = [
@@ -20,6 +21,7 @@ export default second_floor_locations = [
   {
     floor: i18n.t("second_floor"),
     imageURL: SECOND_FLOOR_CD_IMG,
+    ...elevator.library,
     title: "221",
     marked_position_x: 212,
     marked_position_y: 95,
@@ -27,6 +29,7 @@ export default second_floor_locations = [
   {
     floor: i18n.t("second_floor"),
     imageURL: SECOND_FLOOR_CD_IMG,
+    ...elevator.library,
     title: "222",
     marked_position_x: 245,
     marked_position_y: 80,
@@ -34,6 +37,7 @@ export default second_floor_locations = [
   {
     floor: i18n.t("second_floor"),
     imageURL: SECOND_FLOOR_CD_IMG,
+    ...elevator.library,
     title: "223",
     marked_position_x: 265,
     marked_position_y: 83,
@@ -41,6 +45,7 @@ export default second_floor_locations = [
   {
     floor: i18n.t("second_floor"),
     imageURL: SECOND_FLOOR_CD_IMG,
+    ...elevator.library,
     title: "225",
     marked_position_x: 285,
     marked_position_y: 83,
@@ -48,6 +53,7 @@ export default second_floor_locations = [
   {
     floor: i18n.t("second_floor"),
     imageURL: SECOND_FLOOR_CD_IMG,
+    ...elevator.library,
     title: "226",
     marked_position_x: 305,
     marked_position_y: 83,
@@ -55,6 +61,7 @@ export default second_floor_locations = [
   {
     floor: i18n.t("second_floor"),
     imageURL: SECOND_FLOOR_CD_IMG,
+    ...elevator.library,
     title: "227",
     marked_position_x: 328,
     marked_position_y: 83,
@@ -62,6 +69,7 @@ export default second_floor_locations = [
   {
     floor: i18n.t("second_floor"),
     imageURL: SECOND_FLOOR_CD_IMG,
+    ...elevator.library,
     title: "228",
     marked_position_x: 320,
     marked_position_y: 117,
@@ -69,6 +77,7 @@ export default second_floor_locations = [
   {
     floor: i18n.t("second_floor"),
     imageURL: SECOND_FLOOR_CD_IMG,
+    ...elevator.library,
     title: "230",
     marked_position_x: 320,
     marked_position_y: 137,
@@ -76,6 +85,7 @@ export default second_floor_locations = [
   {
     floor: i18n.t("second_floor"),
     imageURL: SECOND_FLOOR_CD_IMG,
+    ...elevator.library,
     title: "231",
     marked_position_x: 320,
     marked_position_y: 157,
@@ -83,6 +93,7 @@ export default second_floor_locations = [
   {
     floor: i18n.t("second_floor"),
     imageURL: SECOND_FLOOR_CD_IMG,
+    ...elevator.library,
     title: "232",
     marked_position_x: 315,
     marked_position_y: 192,

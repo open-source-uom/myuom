@@ -1,5 +1,7 @@
 import i18n from "../../../../../i18n";
 import { FIFTH_FLOOR_CD_IMG } from "../../floor_images";
+import elevator from "../../elevator_positions";
+
 let locations;
 export default locations = [
   // {
@@ -18,6 +20,7 @@ export default locations = [
   // },
   {
     imageURL: FIFTH_FLOOR_CD_IMG,
+    ...elevator.library,
     floor: i18n.t("fifth_floor"),
     title: "520",
     marked_position_x: 210,
@@ -25,6 +28,7 @@ export default locations = [
   },
   {
     imageURL: FIFTH_FLOOR_CD_IMG,
+    ...elevator.library,
     floor: i18n.t("fifth_floor"),
     title: "521",
     marked_position_x: 231,
@@ -32,6 +36,7 @@ export default locations = [
   },
   {
     imageURL: FIFTH_FLOOR_CD_IMG,
+    ...elevator.library,
     floor: i18n.t("fifth_floor"),
     title: "522",
     marked_position_x: 256,
@@ -39,6 +44,7 @@ export default locations = [
   },
   {
     imageURL: FIFTH_FLOOR_CD_IMG,
+    ...elevator.library,
     floor: i18n.t("fifth_floor"),
     title: "524",
     marked_position_x: 275,
@@ -46,6 +52,7 @@ export default locations = [
   },
   {
     imageURL: FIFTH_FLOOR_CD_IMG,
+    ...elevator.library,
     floor: i18n.t("fifth_floor"),
     title: "525",
     marked_position_x: 294,
@@ -53,6 +60,7 @@ export default locations = [
   },
   {
     imageURL: FIFTH_FLOOR_CD_IMG,
+    ...elevator.library,
     floor: i18n.t("fifth_floor"),
     title: "526",
     marked_position_x: 317,
@@ -60,6 +68,7 @@ export default locations = [
   },
   {
     imageURL: FIFTH_FLOOR_CD_IMG,
+    ...elevator.library,
     floor: i18n.t("fifth_floor"),
     title: "527",
     marked_position_x: 310,
@@ -67,6 +76,7 @@ export default locations = [
   },
   {
     imageURL: FIFTH_FLOOR_CD_IMG,
+    ...elevator.library,
     floor: i18n.t("fifth_floor"),
     title: "529",
     marked_position_x: 316,
@@ -74,6 +84,7 @@ export default locations = [
   },
   {
     imageURL: FIFTH_FLOOR_CD_IMG,
+    ...elevator.library,
     floor: i18n.t("fifth_floor"),
     title: "530",
     marked_position_x: 307,
@@ -81,6 +92,7 @@ export default locations = [
   },
   {
     imageURL: FIFTH_FLOOR_CD_IMG,
+    ...elevator.library,
     floor: i18n.t("fifth_floor"),
     title: "531",
     marked_position_x: 297,
@@ -102,6 +114,7 @@ export default locations = [
   // },
   {
     imageURL: FIFTH_FLOOR_CD_IMG,
+    ...elevator.library,
     floor: i18n.t("fifth_floor"),
     title: "534",
     marked_position_x: 193,

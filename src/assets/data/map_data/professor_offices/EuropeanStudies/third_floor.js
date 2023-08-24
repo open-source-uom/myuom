@@ -1,11 +1,13 @@
 import i18n from "../../../../../i18n";
 import { THIRD_FLOOR_KZ_IMG } from "../../floor_images";
+import elevator from "../../elevator_positions";
 
 let third_floor_locations;
 export default third_floor_locations = [
   {
     floor: i18n.t("third_floor"),
     imageURL: THIRD_FLOOR_KZ_IMG,
+    ...elevator.restaurant,
     title: "321Α",
     marked_position_x: 202,
     marked_position_y: 56,
@@ -20,6 +22,7 @@ export default third_floor_locations = [
   {
     floor: i18n.t("third_floor"),
     imageURL: THIRD_FLOOR_KZ_IMG,
+    ...elevator.restaurant,
     title: "322",
     marked_position_x: 235,
     marked_position_y: 59,
@@ -27,6 +30,7 @@ export default third_floor_locations = [
   {
     floor: i18n.t("third_floor"),
     imageURL: THIRD_FLOOR_KZ_IMG,
+    ...elevator.restaurant,
     title: "323",
     marked_position_x: 253,
     marked_position_y: 59,
@@ -34,6 +38,7 @@ export default third_floor_locations = [
   {
     floor: i18n.t("third_floor"),
     imageURL: THIRD_FLOOR_KZ_IMG,
+    ...elevator.restaurant,
     title: "325",
     marked_position_x: 270,
     marked_position_y: 53,
@@ -41,6 +46,7 @@ export default third_floor_locations = [
   {
     floor: i18n.t("third_floor"),
     imageURL: THIRD_FLOOR_KZ_IMG,
+    ...elevator.restaurant,
     title: "326",
     marked_position_x: 291,
     marked_position_y: 60,
@@ -48,6 +54,7 @@ export default third_floor_locations = [
   {
     floor: i18n.t("third_floor"),
     imageURL: THIRD_FLOOR_KZ_IMG,
+    ...elevator.restaurant,
     title: "327",
     marked_position_x: 314,
     marked_position_y: 62,
@@ -55,6 +62,7 @@ export default third_floor_locations = [
   {
     floor: i18n.t("third_floor"),
     imageURL: THIRD_FLOOR_KZ_IMG,
+    ...elevator.restaurant,
     title: "328",
     marked_position_x: 304,
     marked_position_y: 88,
@@ -69,6 +77,7 @@ export default third_floor_locations = [
   {
     floor: i18n.t("third_floor"),
     imageURL: THIRD_FLOOR_KZ_IMG,
+    ...elevator.restaurant,
     title: "330",
     marked_position_x: 305,
     marked_position_y: 106,
@@ -76,6 +85,7 @@ export default third_floor_locations = [
   {
     floor: i18n.t("third_floor"),
     imageURL: THIRD_FLOOR_KZ_IMG,
+    ...elevator.restaurant,
     title: "331",
     marked_position_x: 309,
     marked_position_y: 124,
@@ -83,6 +93,7 @@ export default third_floor_locations = [
   {
     floor: i18n.t("third_floor"),
     imageURL: THIRD_FLOOR_KZ_IMG,
+    ...elevator.restaurant,
     title: "332Α",
     marked_position_x: 309,
     marked_position_y: 142,
@@ -90,6 +101,7 @@ export default third_floor_locations = [
   {
     floor: i18n.t("third_floor"),
     imageURL: THIRD_FLOOR_KZ_IMG,
+    ...elevator.restaurant,
     title: "332Β",
     marked_position_x: 315,
     marked_position_y: 160,
@@ -97,6 +109,7 @@ export default third_floor_locations = [
   {
     floor: i18n.t("third_floor"),
     imageURL: THIRD_FLOOR_KZ_IMG,
+    ...elevator.restaurant,
     title: "333",
     marked_position_x: 270,
     marked_position_y: 139,
@@ -111,6 +124,7 @@ export default third_floor_locations = [
   {
     floor: i18n.t("third_floor"),
     imageURL: THIRD_FLOOR_KZ_IMG,
+    ...elevator.restaurant,
     title: "336",
     marked_position_x: 189,
     marked_position_y: 97,

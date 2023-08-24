@@ -1,10 +1,12 @@
 import i18n from "../../../../../i18n";
 import { THIRD_FLOOR_CD_IMG } from "../../floor_images";
+import elevator from "../../elevator_positions";
 
 let locations;
 export default locations = [
   {
     imageURL: THIRD_FLOOR_CD_IMG,
+    ...elevator.library,
     floor: i18n.t("third_floor"),
     title: "321",
     marked_position_x: 203,
@@ -12,6 +14,7 @@ export default locations = [
   },
   {
     imageURL: THIRD_FLOOR_CD_IMG,
+    ...elevator.library,
     floor: i18n.t("third_floor"),
     title: "322",
     marked_position_x: 239,
@@ -19,6 +22,7 @@ export default locations = [
   },
   {
     imageURL: THIRD_FLOOR_CD_IMG,
+    ...elevator.library,
     floor: i18n.t("third_floor"),
     title: "323",
     marked_position_x: 255,
@@ -26,6 +30,7 @@ export default locations = [
   },
   {
     imageURL: THIRD_FLOOR_CD_IMG,
+    ...elevator.library,
     floor: i18n.t("third_floor"),
     title: "325",
     marked_position_x: 274,
@@ -33,6 +38,7 @@ export default locations = [
   },
   {
     imageURL: THIRD_FLOOR_CD_IMG,
+    ...elevator.library,
     floor: i18n.t("third_floor"),
     title: "326",
     marked_position_x: 295,
@@ -47,6 +53,7 @@ export default locations = [
   // },
   {
     imageURL: THIRD_FLOOR_CD_IMG,
+    ...elevator.library,
     floor: i18n.t("third_floor"),
     title: "328",
     marked_position_x: 312,
@@ -54,6 +61,7 @@ export default locations = [
   },
   {
     imageURL: THIRD_FLOOR_CD_IMG,
+    ...elevator.library,
     floor: i18n.t("third_floor"),
     title: "330",
     marked_position_x: 314,
@@ -61,6 +69,7 @@ export default locations = [
   },
   {
     imageURL: THIRD_FLOOR_CD_IMG,
+    ...elevator.library,
     floor: i18n.t("third_floor"),
     title: "331",
     marked_position_x: 312,
@@ -68,6 +77,7 @@ export default locations = [
   },
   {
     imageURL: THIRD_FLOOR_CD_IMG,
+    ...elevator.library,
     floor: i18n.t("third_floor"),
     title: "332",
     marked_position_x: 294,

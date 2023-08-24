@@ -1,11 +1,13 @@
 import i18n from "../../../../../i18n";
 import { FOURTH_FLOOR_HT_IMG } from "../../floor_images";
+import elevator from "../../elevator_positions";
 
 let fourth_floor_locations;
 export default fourth_floor_locations = [
   {
     floor: i18n.t("fourth_floor"),
     imageURL: FOURTH_FLOOR_HT_IMG,
+    ...elevator.gym,
     title: "402",
     marked_position_x: 21,
     marked_position_y: 165,
@@ -13,6 +15,7 @@ export default fourth_floor_locations = [
   {
     floor: i18n.t("fourth_floor"),
     imageURL: FOURTH_FLOOR_HT_IMG,
+    ...elevator.gym,
     title: "403",
     marked_position_x: 26,
     marked_position_y: 146,
@@ -20,6 +23,7 @@ export default fourth_floor_locations = [
   {
     floor: i18n.t("fourth_floor"),
     imageURL: FOURTH_FLOOR_HT_IMG,
+    ...elevator.gym,
     title: "405",
     marked_position_x: 37,
     marked_position_y: 130,
@@ -27,6 +31,7 @@ export default fourth_floor_locations = [
   {
     floor: i18n.t("fourth_floor"),
     imageURL: FOURTH_FLOOR_HT_IMG,
+    ...elevator.gym,
     title: "406",
     marked_position_x: 27,
     marked_position_y: 102,
@@ -34,6 +39,7 @@ export default fourth_floor_locations = [
   {
     floor: i18n.t("fourth_floor"),
     imageURL: FOURTH_FLOOR_HT_IMG,
+    ...elevator.gym,
     title: "407",
     marked_position_x: 52,
     marked_position_y: 99,
@@ -41,6 +47,7 @@ export default fourth_floor_locations = [
   {
     floor: i18n.t("fourth_floor"),
     imageURL: FOURTH_FLOOR_HT_IMG,
+    ...elevator.gym,
     title: "408",
     marked_position_x: 72,
     marked_position_y: 98,
@@ -48,6 +55,7 @@ export default fourth_floor_locations = [
   {
     floor: i18n.t("fourth_floor"),
     imageURL: FOURTH_FLOOR_HT_IMG,
+    ...elevator.gym,
     title: "410",
     marked_position_x: 90,
     marked_position_y: 96,
@@ -55,6 +63,7 @@ export default fourth_floor_locations = [
   {
     floor: i18n.t("fourth_floor"),
     imageURL: FOURTH_FLOOR_HT_IMG,
+    ...elevator.gym,
     title: "411",
     marked_position_x: 107,
     marked_position_y: 102,
@@ -62,6 +71,7 @@ export default fourth_floor_locations = [
   {
     floor: i18n.t("fourth_floor"),
     imageURL: FOURTH_FLOOR_HT_IMG,
+    ...elevator.gym,
     title: "412",
     marked_position_x: 141,
     marked_position_y: 104,

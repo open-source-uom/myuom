@@ -1,11 +1,13 @@
 import i18n from "../../../../../i18n";
 import { SECOND_FLOOR_HT_IMG } from "../../floor_images";
+import elevator from "../../elevator_positions";
 
 let ba_second_floor_locations;
 export default ba_second_floor_locations = [
   {
     floor: i18n.t("second_floor"),
     imageURL: SECOND_FLOOR_HT_IMG,
+    ...elevator.gym,
     title: "202",
     marked_position_x: 40,
     marked_position_y: 163,
@@ -13,6 +15,7 @@ export default ba_second_floor_locations = [
   {
     floor: i18n.t("second_floor"),
     imageURL: SECOND_FLOOR_HT_IMG,
+    ...elevator.gym,
     title: "203",
     marked_position_x: 36,
     marked_position_y: 145,
@@ -20,6 +23,7 @@ export default ba_second_floor_locations = [
   {
     floor: i18n.t("second_floor"),
     imageURL: SECOND_FLOOR_HT_IMG,
+    ...elevator.gym,
     title: "205",
     marked_position_x: 37,
     marked_position_y: 128,
@@ -27,6 +31,7 @@ export default ba_second_floor_locations = [
   {
     floor: i18n.t("second_floor"),
     imageURL: SECOND_FLOOR_HT_IMG,
+    ...elevator.gym,
     title: "206",
     marked_position_x: 27,
     marked_position_y: 102,
@@ -34,6 +39,7 @@ export default ba_second_floor_locations = [
   {
     floor: i18n.t("second_floor"),
     imageURL: SECOND_FLOOR_HT_IMG,
+    ...elevator.gym,
     title: "207",
     marked_position_x: 52,
     marked_position_y: 102,
@@ -41,6 +47,7 @@ export default ba_second_floor_locations = [
   {
     floor: i18n.t("second_floor"),
     imageURL: SECOND_FLOOR_HT_IMG,
+    ...elevator.gym,
     title: "208",
     marked_position_x: 71,
     marked_position_y: 97,
@@ -48,6 +55,7 @@ export default ba_second_floor_locations = [
   {
     floor: i18n.t("second_floor"),
     imageURL: SECOND_FLOOR_HT_IMG,
+    ...elevator.gym,
     title: "210",
     marked_position_x: 89,
     marked_position_y: 96,
@@ -55,6 +63,7 @@ export default ba_second_floor_locations = [
   {
     floor: i18n.t("second_floor"),
     imageURL: SECOND_FLOOR_HT_IMG,
+    ...elevator.gym,
     title: "211",
     marked_position_x: 108,
     marked_position_y: 99,
@@ -62,6 +71,7 @@ export default ba_second_floor_locations = [
   {
     floor: i18n.t("second_floor"),
     imageURL: SECOND_FLOOR_HT_IMG,
+    ...elevator.gym,
     title: "212",
     marked_position_x: 139,
     marked_position_y: 114,
@@ -69,6 +79,7 @@ export default ba_second_floor_locations = [
   {
     floor: i18n.t("second_floor"),
     imageURL: SECOND_FLOOR_HT_IMG,
+    ...elevator.gym,
     title: "213-214",
     marked_position_x: 119,
     marked_position_y: 176,

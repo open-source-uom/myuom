@@ -1,11 +1,13 @@
 import i18n from "../../../../../i18n";
 import { SECOND_FLOOR_CD_IMG, SECOND_FLOOR_KZ_IMG } from "../../floor_images"; // Updated constant name to make it unique
+import elevator from "../../elevator_positions";
 
 let bso_second_floor_locations;
 export default bso_second_floor_locations = [
   {
     floor: i18n.t("second_floor"),
     imageURL: SECOND_FLOOR_KZ_IMG,
+    ...elevator.restaurant,
     title: "200",
     marked_position_x: 80,
     marked_position_y: 162,
@@ -27,6 +29,7 @@ export default bso_second_floor_locations = [
   {
     floor: i18n.t("second_floor"),
     imageURL: SECOND_FLOOR_CD_IMG,
+    ...elevator.library,
     title: "203",
     marked_position_x: 30,
     marked_position_y: 138,
@@ -55,6 +58,7 @@ export default bso_second_floor_locations = [
   {
     floor: i18n.t("second_floor"),
     imageURL: SECOND_FLOOR_CD_IMG,
+    ...elevator.library,
     title: "210",
     marked_position_x: 95,
     marked_position_y: 88,
@@ -62,6 +66,7 @@ export default bso_second_floor_locations = [
   {
     floor: i18n.t("second_floor"),
     imageURL: SECOND_FLOOR_KZ_IMG,
+    ...elevator.restaurant,
     title: "211",
     marked_position_x: 113,
     marked_position_y: 68,
@@ -69,6 +74,7 @@ export default bso_second_floor_locations = [
   {
     floor: i18n.t("second_floor"),
     imageURL: SECOND_FLOOR_KZ_IMG,
+    ...elevator.restaurant,
     title: "212",
     marked_position_x: 151,
     marked_position_y: 77,
@@ -90,6 +96,7 @@ export default bso_second_floor_locations = [
   {
     floor: i18n.t("second_floor"),
     imageURL: SECOND_FLOOR_KZ_IMG,
+    ...elevator.restaurant,
     title: "214",
     marked_position_x: 125,
     marked_position_y: 156,
@@ -97,6 +104,7 @@ export default bso_second_floor_locations = [
   {
     floor: i18n.t("second_floor"),
     imageURL: SECOND_FLOOR_KZ_IMG,
+    ...elevator.restaurant,
     title: "215",
     marked_position_x: 149,
     marked_position_y: 99,
@@ -104,6 +112,7 @@ export default bso_second_floor_locations = [
   {
     floor: i18n.t("second_floor"),
     imageURL: SECOND_FLOOR_KZ_IMG,
+    ...elevator.restaurant,
     title: "221Α",
     marked_position_x: 211,
     marked_position_y: 79,
@@ -111,6 +120,7 @@ export default bso_second_floor_locations = [
   {
     floor: i18n.t("second_floor"),
     imageURL: SECOND_FLOOR_KZ_IMG,
+    ...elevator.restaurant,
     title: "222",
     marked_position_x: 245,
     marked_position_y: 66,
@@ -118,6 +128,7 @@ export default bso_second_floor_locations = [
   {
     floor: i18n.t("second_floor"),
     imageURL: SECOND_FLOOR_KZ_IMG,
+    ...elevator.restaurant,
     title: "223",
     marked_position_x: 264,
     marked_position_y: 66,
@@ -125,6 +136,7 @@ export default bso_second_floor_locations = [
   {
     floor: i18n.t("second_floor"),
     imageURL: SECOND_FLOOR_KZ_IMG,
+    ...elevator.restaurant,
     title: "225",
     marked_position_x: 282,
     marked_position_y: 66,
@@ -132,6 +144,7 @@ export default bso_second_floor_locations = [
   {
     floor: i18n.t("second_floor"),
     imageURL: SECOND_FLOOR_KZ_IMG,
+    ...elevator.restaurant,
     title: "226",
     marked_position_x: 304,
     marked_position_y: 66,
@@ -139,6 +152,7 @@ export default bso_second_floor_locations = [
   {
     floor: i18n.t("second_floor"),
     imageURL: SECOND_FLOOR_KZ_IMG,
+    ...elevator.restaurant,
     title: "227",
     marked_position_x: 329,
     marked_position_y: 66,
@@ -146,6 +160,7 @@ export default bso_second_floor_locations = [
   {
     floor: i18n.t("second_floor"),
     imageURL: SECOND_FLOOR_KZ_IMG,
+    ...elevator.restaurant,
     title: "228",
     marked_position_x: 329,
     marked_position_y: 96,
@@ -153,6 +168,7 @@ export default bso_second_floor_locations = [
   {
     floor: i18n.t("second_floor"),
     imageURL: SECOND_FLOOR_KZ_IMG,
+    ...elevator.restaurant,
     title: "230",
     marked_position_x: 320,
     marked_position_y: 114,
@@ -160,6 +176,7 @@ export default bso_second_floor_locations = [
   {
     floor: i18n.t("second_floor"),
     imageURL: SECOND_FLOOR_KZ_IMG,
+    ...elevator.restaurant,
     title: "231",
     marked_position_x: 330,
     marked_position_y: 132,
@@ -167,6 +184,7 @@ export default bso_second_floor_locations = [
   {
     floor: i18n.t("second_floor"),
     imageURL: SECOND_FLOOR_KZ_IMG,
+    ...elevator.restaurant,
     title: "232Β",
     marked_position_x: 324,
     marked_position_y: 170,
@@ -174,6 +192,7 @@ export default bso_second_floor_locations = [
   {
     floor: i18n.t("second_floor"),
     imageURL: SECOND_FLOOR_KZ_IMG,
+    ...elevator.restaurant,
     title: "233",
     marked_position_x: 282,
     marked_position_y: 154,
@@ -188,6 +207,7 @@ export default bso_second_floor_locations = [
   {
     floor: i18n.t("second_floor"),
     imageURL: SECOND_FLOOR_KZ_IMG,
+    ...elevator.restaurant,
     title: "234Β",
     marked_position_x: 247,
     marked_position_y: 151,
@@ -195,6 +215,7 @@ export default bso_second_floor_locations = [
   {
     floor: i18n.t("second_floor"),
     imageURL: SECOND_FLOOR_KZ_IMG,
+    ...elevator.restaurant,
     title: "234Γ",
     marked_position_x: 230,
     marked_position_y: 157,
@@ -202,6 +223,7 @@ export default bso_second_floor_locations = [
   {
     floor: i18n.t("second_floor"),
     imageURL: SECOND_FLOOR_KZ_IMG,
+    ...elevator.restaurant,
     title: "234Δ",
     marked_position_x: 210,
     marked_position_y: 152,
@@ -209,6 +231,7 @@ export default bso_second_floor_locations = [
   {
     floor: i18n.t("second_floor"),
     imageURL: SECOND_FLOOR_KZ_IMG,
+    ...elevator.restaurant,
     title: "235",
     marked_position_x: 198,
     marked_position_y: 150,
