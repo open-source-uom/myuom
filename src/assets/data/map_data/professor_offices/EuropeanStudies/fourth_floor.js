@@ -1,21 +1,32 @@
 import i18n from "../../../../../i18n";
-import { FOURTH_FLOOR_KZ_IMG } from "../../floor_images";
+import {
+  FOURTH_FLOOR_CD_IMG,
+  FOURTH_FLOOR_HT_IMG,
+  FOURTH_FLOOR_KZ_IMG,
+} from "../../floor_images";
 
 let fourth_floor_locations;
 export default fourth_floor_locations = [
   {
     floor: i18n.t("fourth_floor"),
-    imageURL: FOURTH_FLOOR_KZ_IMG,
-    title: "421β",
-    marked_position_x: 200,
-    marked_position_y: 56,
+    imageURL: FOURTH_FLOOR_CD_IMG,
+    title: "401",
+    marked_position_x: 48,
+    marked_position_y: 207,
   },
   {
     floor: i18n.t("fourth_floor"),
     imageURL: FOURTH_FLOOR_KZ_IMG,
-    title: "421α",
+    title: "421Α",
     marked_position_x: 217,
     marked_position_y: 62,
+  },
+  {
+    floor: i18n.t("fourth_floor"),
+    imageURL: FOURTH_FLOOR_KZ_IMG,
+    title: "421Β",
+    marked_position_x: 200,
+    marked_position_y: 56,
   },
   {
     floor: i18n.t("fourth_floor"),
@@ -68,22 +79,22 @@ export default fourth_floor_locations = [
   },
   {
     floor: i18n.t("fourth_floor"),
-    imageURL: FOURTH_FLOOR_KZ_IMG,
-    title: "431",
-    marked_position_x: 304,
-    marked_position_y: 126,
+    imageURL: FOURTH_FLOOR_HT_IMG,
+    title: "430 (ΗΘ)",
+    marked_position_x: 303,
+    marked_position_y: 146,
   },
+  // {
+  //   floor: i18n.t("fourth_floor"),
+  //   imageURL: FOURTH_FLOOR_KZ_IMG,
+  //   title: "432Α",
+  //   marked_position_x: 318,
+  //   marked_position_y: 147,
+  // },
   {
     floor: i18n.t("fourth_floor"),
     imageURL: FOURTH_FLOOR_KZ_IMG,
-    title: "432α",
-    marked_position_x: 318,
-    marked_position_y: 147,
-  },
-  {
-    floor: i18n.t("fourth_floor"),
-    imageURL: FOURTH_FLOOR_KZ_IMG,
-    title: "432β",
+    title: "432Β",
     marked_position_x: 288,
     marked_position_y: 162,
   },
