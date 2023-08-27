@@ -1,5 +1,7 @@
 import { FIRST_FLOOR_IMG_URL, MEZZANINE_FLOOR_IMG_URL } from "./floor_images";
 import i18n from "../../../i18n";
+import elevator from "./elevator_positions";
+
 let locations;
 export default locations = [
   {
@@ -8,8 +10,7 @@ export default locations = [
     title: "01",
     marked_position_x: 138,
     marked_position_y: 138,
-    elevatorx: 90,
-    elevatory: 90,
+    ...elevator.restaurant,
   },
   {
     floor: i18n.t("first_floor"),
@@ -17,8 +18,7 @@ export default locations = [
     title: "02",
     marked_position_x: 103,
     marked_position_y: 135,
-    elevatorx: 90,
-    elevatory: 90,
+    ...elevator.restaurant,
   },
   {
     floor: i18n.t("first_floor"),
@@ -26,8 +26,7 @@ export default locations = [
     title: "03",
     marked_position_x: 58,
     marked_position_y: 130,
-    elevatorx: 90,
-    elevatory: 90,
+    ...elevator.restaurant,
   },
   {
     floor: i18n.t("first_floor"),
@@ -35,8 +34,7 @@ export default locations = [
     title: "04",
     marked_position_x: 19,
     marked_position_y: 122,
-    elevatorx: 90,
-    elevatory: 90,
+    ...elevator.restaurant,
   },
   {
     floor: i18n.t("first_floor"),
@@ -44,8 +42,7 @@ export default locations = [
     title: "05",
     marked_position_x: 56,
     marked_position_y: 44,
-    elevatorx: 115,
-    elevatory: 40,
+    ...elevator.gym,
   },
   {
     floor: i18n.t("first_floor"),
@@ -53,8 +50,7 @@ export default locations = [
     title: "06",
     marked_position_x: 92,
     marked_position_y: 50,
-    elevatorx: 115,
-    elevatory: 40,
+    ...elevator.gym,
   },
   {
     floor: i18n.t("first_floor"),
@@ -62,8 +58,7 @@ export default locations = [
     title: "07",
     marked_position_x: 138,
     marked_position_y: 57,
-    elevatorx: 115,
-    elevatory: 40,
+    ...elevator.gym,
   },
   {
     floor: i18n.t("first_floor"),
@@ -71,8 +66,7 @@ export default locations = [
     title: "08",
     marked_position_x: 173,
     marked_position_y: 64,
-    elevatorx: 115,
-    elevatory: 40,
+    ...elevator.gym,
   },
   {
     floor: i18n.t("first_floor"),
@@ -80,8 +74,7 @@ export default locations = [
     title: "09",
     marked_position_x: 215,
     marked_position_y: 68,
-    elevatorx: 277,
-    elevatory: 63,
+    ...elevator.library,
   },
   {
     floor: i18n.t("first_floor"),
@@ -89,8 +82,7 @@ export default locations = [
     title: "10",
     marked_position_x: 253,
     marked_position_y: 75,
-    elevatorx: 277,
-    elevatory: 63,
+    ...elevator.library,
   },
   {
     floor: i18n.t("mezzanine_floor"),
@@ -98,8 +90,7 @@ export default locations = [
     title: "11",
     marked_position_x: 60,
     marked_position_y: 94,
-    elevatorx: 90,
-    elevatory: 90,
+    ...elevator.restaurant,
   },
   {
     floor: i18n.t("mezzanine_floor"),
@@ -107,8 +98,7 @@ export default locations = [
     title: "12",
     marked_position_x: 43,
     marked_position_y: 90,
-    elevatorx: 90,
-    elevatory: 90,
+    ...elevator.restaurant,
   },
   {
     floor: i18n.t("mezzanine_floor"),
@@ -116,8 +106,7 @@ export default locations = [
     title: "13",
     marked_position_x: 23,
     marked_position_y: 88,
-    elevatorx: 90,
-    elevatory: 90,
+    ...elevator.restaurant,
   },
   {
     floor: i18n.t("mezzanine_floor"),
@@ -125,8 +114,7 @@ export default locations = [
     title: "14",
     marked_position_x: 30,
     marked_position_y: 70,
-    elevatorx: 90,
-    elevatory: 90,
+    ...elevator.restaurant,
   },
   {
     floor: i18n.t("mezzanine_floor"),
@@ -134,8 +122,7 @@ export default locations = [
     title: "15",
     marked_position_x: 50,
     marked_position_y: 72,
-    elevatorx: 90,
-    elevatory: 90,
+    ...elevator.restaurant,
   },
   {
     floor: i18n.t("mezzanine_floor"),
@@ -143,8 +130,7 @@ export default locations = [
     title: "16",
     marked_position_x: 68,
     marked_position_y: 77,
-    elevatorx: 90,
-    elevatory: 90,
+    ...elevator.restaurant,
   },
   {
     floor: i18n.t("first_floor"),
@@ -152,8 +138,7 @@ export default locations = [
     title: i18n.t("conference_room"),
     marked_position_x: 294,
     marked_position_y: 122,
-    elevatorx: 277,
-    elevatory: 63,
+    ...elevator.library,
   },
   {
     floor: i18n.t("first_floor"),
@@ -161,7 +146,6 @@ export default locations = [
     title: i18n.t("remote_education_room"),
     marked_position_x: 255,
     marked_position_y: 117,
-    elevatorx: 277,
-    elevatory: 63,
+    ...elevator.library,
   },
 ];

@@ -1,5 +1,7 @@
 import { GROUND_FLOOR_IMG_URL, FIRST_FLOOR_IMG_URL } from "./floor_images";
 import i18n from "../../../i18n";
+import elevator from "./elevator_positions";
+
 let locations;
 export default locations = [
   {
@@ -8,8 +10,7 @@ export default locations = [
     title: i18n.t("ceremony_hall_for_navigation"),
     marked_position_x: 298,
     marked_position_y: 129,
-    elevatorx: 0,
-    elevatory: 0,
+    ...elevator.none,
   },
   {
     floor: i18n.t("ground_floor"),
@@ -17,8 +18,7 @@ export default locations = [
     title: "02",
     marked_position_x: 168,
     marked_position_y: 52,
-    elevatorx: 0,
-    elevatory: 0,
+    ...elevator.none,
   },
   {
     floor: i18n.t("ground_floor"),
@@ -26,8 +26,7 @@ export default locations = [
     title: "03",
     marked_position_x: 218,
     marked_position_y: 61,
-    elevatorx: 0,
-    elevatory: 0,
+    ...elevator.none,
   },
   {
     floor: i18n.t("first_floor"),
@@ -35,8 +34,7 @@ export default locations = [
     title: "04",
     marked_position_x: 144,
     marked_position_y: 123,
-    elevatorx: 90,
-    elevatory: 90,
+    ...elevator.restaurant,
   },
   {
     floor: i18n.t("first_floor"),
@@ -44,8 +42,7 @@ export default locations = [
     title: "05",
     marked_position_x: 110,
     marked_position_y: 118,
-    elevatorx: 90,
-    elevatory: 90,
+    ...elevator.restaurant,
   },
   {
     floor: i18n.t("first_floor"),
@@ -53,8 +50,7 @@ export default locations = [
     title: "06",
     marked_position_x: 63,
     marked_position_y: 111,
-    elevatorx: 90,
-    elevatory: 90,
+    ...elevator.restaurant,
   },
   {
     floor: i18n.t("first_floor"),
@@ -62,8 +58,7 @@ export default locations = [
     title: "07",
     marked_position_x: 29,
     marked_position_y: 105,
-    elevatorx: 90,
-    elevatory: 90,
+    ...elevator.restaurant,
   },
   {
     floor: i18n.t("first_floor"),
@@ -71,8 +66,7 @@ export default locations = [
     title: "08",
     marked_position_x: 50,
     marked_position_y: 60,
-    elevatorx: 115,
-    elevatory: 40,
+    ...elevator.gym,
   },
   {
     floor: i18n.t("first_floor"),
@@ -80,8 +74,7 @@ export default locations = [
     title: "09",
     marked_position_x: 85,
     marked_position_y: 69,
-    elevatorx: 115,
-    elevatory: 40,
+    ...elevator.gym,
   },
   {
     floor: i18n.t("first_floor"),
@@ -89,8 +82,7 @@ export default locations = [
     title: "10",
     marked_position_x: 130,
     marked_position_y: 76,
-    elevatorx: 115,
-    elevatory: 40,
+    ...elevator.gym,
   },
   {
     floor: i18n.t("first_floor"),
@@ -98,8 +90,7 @@ export default locations = [
     title: "11",
     marked_position_x: 165,
     marked_position_y: 80,
-    elevatorx: 115,
-    elevatory: 40,
+    ...elevator.gym,
   },
   {
     floor: i18n.t("first_floor"),
@@ -107,8 +98,7 @@ export default locations = [
     title: "12",
     marked_position_x: 210,
     marked_position_y: 87,
-    elevatorx: 277,
-    elevatory: 63,
+    ...elevator.library,
   },
   {
     floor: i18n.t("first_floor"),
@@ -116,7 +106,6 @@ export default locations = [
     title: "13",
     marked_position_x: 244,
     marked_position_y: 95,
-    elevatorx: 277,
-    elevatory: 63,
+    ...elevator.library,
   },
 ];
