@@ -5,7 +5,7 @@ export default locations = [
   {
     floor: i18n.t("ground_floor"),
     imageURL: GROUND_FLOOR_IMG_URL,
-    title: "01 (Τελετών)",
+    title: i18n.t("ceremony_hall_for_navigation"),
     marked_position_x: 298,
     marked_position_y: 129,
     elevatorx: 0,

@@ -114,11 +114,11 @@ export const merged_map_data = [
 //department specific categories will be added at runtime
 export const new_merged_map_data = [
   {
-    categoryName: "Γραμματείες",
+    categoryName: i18n.t("secretaries"),
     locations: secretaryData,
   },
   {
-    categoryName: "Αίθουσες",
+    categoryName: i18n.t("rooms"),
     locations: roomsData,
   },
   // {
@@ -126,18 +126,18 @@ export const new_merged_map_data = [
   //     locations: []
   // }
   {
-    categoryName: "Αμφιθέατρα",
+    categoryName: i18n.t("auditoriums"),
     locations: auditoriumData,
   },
   {
-    categoryName: "Φοιτητικές ομάδες",
+    categoryName: i18n.t("student_groups"),
     locations: studentClubsData,
   },
 ];
 
 export const department_specific_map_data = [
   {
-    categoryName: "Γραφεία Καθηγητών",
+    categoryName: i18n.t("professor_offices"),
     locationsPerDepartment: [
       balkanStudiesOffices,
       businessOffices,

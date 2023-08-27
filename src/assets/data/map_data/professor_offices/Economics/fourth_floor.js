@@ -8,7 +8,7 @@ export default fourth_floor_locations = [
     floor: i18n.t("fourth_floor"),
     imageURL: FOURTH_FLOOR_CD_IMG,
     ...elevator.library,
-    title: "401Α",
+    title: "401" + i18n.t("office_letter_a"),
     marked_position_x: 28,
     marked_position_y: 186,
   },

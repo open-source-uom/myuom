@@ -69,7 +69,7 @@ export default function App({ floor, imageURL, marked_position_x, marked_positio
     });
   };
 
-  const shouldOmitFloor = floor === i18n.t("semi_floor");
+  const shouldOmitFloor = floor === i18n.t("mezzanine_floor");
   const shouldDisableFindBuildingBtn = floor === i18n.t("ground_floor");
   return (
     <Box>

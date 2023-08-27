@@ -16,7 +16,7 @@ export default third_floor_locations = [
     floor: i18n.t("third_floor"),
     imageURL: THIRD_FLOOR_KZ_IMG,
     ...elevator.restaurant,
-    title: "301Α",
+    title: "301" + i18n.t("office_letter_a"),
     marked_position_x: 30,
     marked_position_y: 141,
   },

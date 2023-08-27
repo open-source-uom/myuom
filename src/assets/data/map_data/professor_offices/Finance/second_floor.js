@@ -7,14 +7,14 @@ export default fin_second_floor_locations = [
   // {
   //   floor: i18n.t("second_floor"),
   //   imageURL: SECOND_FLOOR_HT_IMG,
-  //   title: "201Α",
+  //   title: "201" + i18n.t("office_letter_a"),
   //   marked_position_x: 42,
   //   marked_position_y: 196,
   // },
   // {
   //   floor: i18n.t("second_floor"),
   //   imageURL: SECOND_FLOOR_HT_IMG,
-  //   title: "201Β",
+  //   title: "201" + i18n.t("office_letter_b"),
   //   marked_position_x: 23,
   //   marked_position_y: 180,
   // },

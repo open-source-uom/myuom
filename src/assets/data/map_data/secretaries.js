@@ -1,4 +1,4 @@
-import { MEZZANINE_FLOOR_IMG_URL } from "./floor_images";
+import { GROUND_FLOOR_IMG_URL, MEZZANINE_FLOOR_IMG_URL } from "./floor_images";
 import i18n from "../../../i18n";
 let locations;
 
@@ -76,8 +76,8 @@ export default locations = [
     elevatory: 95,
   },
   {
-    floor: i18n.t("mezzanine_floor"),
-    imageURL: MEZZANINE_FLOOR_IMG_URL,
+    floor: i18n.t("ground_floor"),
+    imageURL: GROUND_FLOOR_IMG_URL,
     title: i18n.t("diatmimatika_metaptixiaka_secretary"),
     marked_position_x: 150,
     marked_position_y: 39,

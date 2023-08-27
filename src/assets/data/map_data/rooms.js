@@ -93,7 +93,7 @@ export default locations = [
     elevatory: 63,
   },
   {
-    floor: i18n.t("semi_floor"),
+    floor: i18n.t("mezzanine_floor"),
     imageURL: MEZZANINE_FLOOR_IMG_URL,
     title: "11",
     marked_position_x: 60,
@@ -102,7 +102,7 @@ export default locations = [
     elevatory: 90,
   },
   {
-    floor: i18n.t("semi_floor"),
+    floor: i18n.t("mezzanine_floor"),
     imageURL: MEZZANINE_FLOOR_IMG_URL,
     title: "12",
     marked_position_x: 43,
@@ -111,7 +111,7 @@ export default locations = [
     elevatory: 90,
   },
   {
-    floor: i18n.t("semi_floor"),
+    floor: i18n.t("mezzanine_floor"),
     imageURL: MEZZANINE_FLOOR_IMG_URL,
     title: "13",
     marked_position_x: 23,
@@ -120,7 +120,7 @@ export default locations = [
     elevatory: 90,
   },
   {
-    floor: i18n.t("semi_floor"),
+    floor: i18n.t("mezzanine_floor"),
     imageURL: MEZZANINE_FLOOR_IMG_URL,
     title: "14",
     marked_position_x: 30,
@@ -129,7 +129,7 @@ export default locations = [
     elevatory: 90,
   },
   {
-    floor: i18n.t("semi_floor"),
+    floor: i18n.t("mezzanine_floor"),
     imageURL: MEZZANINE_FLOOR_IMG_URL,
     title: "15",
     marked_position_x: 50,
@@ -138,7 +138,7 @@ export default locations = [
     elevatory: 90,
   },
   {
-    floor: i18n.t("semi_floor"),
+    floor: i18n.t("mezzanine_floor"),
     imageURL: MEZZANINE_FLOOR_IMG_URL,
     title: "16",
     marked_position_x: 68,

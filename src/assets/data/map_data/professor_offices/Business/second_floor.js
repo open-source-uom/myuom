@@ -115,7 +115,7 @@ export default ba_second_floor_locations = [
   // {
   //   floor: i18n.t("second_floor"),
   //   imageURL: SECOND_FLOOR_HT_IMG,
-  //   title: "234Α-234Β",
+  //   title: "234" + i18n.t("office_letter_a") + "-234" + i18n.t("office_letter_b"),
   //   marked_position_x: 187,
   //   marked_position_y: 185,
   // },
