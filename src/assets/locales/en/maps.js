@@ -35,6 +35,7 @@ export default {
   conference_room: "Conference Room",
   remote_education_room: "Remote Education Room",
   secretaries: "Secretaries",
+  other: "Other",
   finance_secretary: "Finance and Accounting Secretary",
   european_studies_secretary: "International and European Studies Secretary",
   music_and_art_studies_secretary: "Music and Art Studies Secretary",
@@ -67,13 +68,14 @@ export default {
   depname_msa: "Music Science & Art",
   depname_eco: "Economics",
   depname_ba: "Business Administration",
-  select_building: "Select a building",
+  select_where_to_go: "What are you looking for?",
   //dont like this
-  select_office: "Select an office",
+  select_location: "Select location",
   virtual_tour: "Virtual Tour",
   cant_find_building_prompt: "Don't know where the building is?",
-  cant_see_room_prompt: "In case you can't see the room you can zoom in on the image",
+  cant_see_room_prompt:
+    "In case you can't see the room you can zoom in on the image",
   closest_elevator_prompt: "The closest elevator relative to that room is:",
   enter_elevator_prompt: "Get in the elevator and go to the",
-  see_room_again: "See again where the room is"
+  see_room_again: "See again where the room is",
 };

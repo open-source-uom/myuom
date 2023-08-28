@@ -36,6 +36,7 @@ import first_floor_3 from "./first_floor/elev_93_87";
 
 import roomsData from "./rooms";
 import secretaryData from "./secretaries";
+import otherData from "./other";
 import auditoriumData from "./auditoriums";
 import studentClubsData from "./student_clubs";
 import balkanStudiesOffices from "./professor_offices/BalkanStudies";
@@ -122,17 +123,21 @@ export const new_merged_map_data = [
     locations: roomsData,
   },
   // {
-  //     categoryName: "Εργαστήρια",
-  //     locations: []
-  // }
-  {
-    categoryName: i18n.t("auditoriums"),
-    locations: auditoriumData,
-  },
-  {
-    categoryName: i18n.t("student_groups"),
-    locations: studentClubsData,
-  },
+    //     categoryName: "Εργαστήρια",
+    //     locations: []
+    // }
+    {
+      categoryName: i18n.t("auditoriums"),
+      locations: auditoriumData,
+    },
+    {
+      categoryName: i18n.t("student_groups"),
+      locations: studentClubsData,
+    },
+    {
+      categoryName: i18n.t("other"),
+      locations: otherData,
+    },
 ];
 
 export const department_specific_map_data = [

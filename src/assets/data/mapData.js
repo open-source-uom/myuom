@@ -498,7 +498,7 @@ export const mapData = [
   {
     imageURL: "https://www.uom.gr/site/images/katopseis/esot_imiorofos.jpg",
     floor: i18n.t("semi_floor"),
-    title: i18n.t("liason_office"),
+    title: i18n.t("liaison_office"),
     building: i18n.t("primary_building"),
     groundFloor: "https://www.uom.gr/site/images/katopseis/esot_isogeio.jpg",
     dep: "",

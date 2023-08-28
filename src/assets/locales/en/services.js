@@ -1,7 +1,7 @@
 export default {
   //constants.js --> offices
   offices: "Offices",
-  liason_office: "Liason Office",
+  liaison_office: "Liason Office",
   internship_office: "Internship Office",
   alumni_office: "Alumni Office",
   erasmus_office: "Erasmus Office",

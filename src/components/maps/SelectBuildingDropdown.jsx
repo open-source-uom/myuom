@@ -10,7 +10,7 @@ export default function SelectBuildingDropdown({ handleChange, newOptions }) {
         defaultValue={"default"}
     >
         <option hidden disabled value="default">
-            {i18n.t("select_building")}
+            {i18n.t("select_where_to_go")}
         </option>
         {newOptions.map((option, index) => (
             <option value={option} key={index}>

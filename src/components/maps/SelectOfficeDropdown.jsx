@@ -11,7 +11,7 @@ export default function SelectOfficeDropdown({ locations, handleChange }) {
         id="title"
     >
         <option hidden value="default">
-            {i18n.t("select_office")}
+            {i18n.t("select_location")}
         </option>
         {
             locations.map((option, index) => (

@@ -54,7 +54,7 @@ export default semi_floor_data =
                 marked_position_y: 105,
             },
             {
-                title: 'liason_office',
+                title: 'liaison_office',
                 marked_position_x: 143,
                 marked_position_y: 107,
             },
