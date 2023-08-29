@@ -57,7 +57,7 @@ const secrData = [
     link: "https://www.uom.gr/dai/grammateia",
   },
   {
-    name: i18n.t("bas_department"),
+    name: i18n.t("ba_department"),
     email: "basecr@uom.edu.gr",
     tel: "2310 891.283, 2310 891.213, 2310 891.646, 2310 891.214",
     link: "https://www.uom.gr/ba/grammateia",
@@ -69,7 +69,7 @@ const secrData = [
     link: "https://www.uom.gr/fin/grammateia",
   },
   {
-    name: i18n.t("ess_department"),
+    name: i18n.t("ies_department"),
     email: "essecr@uom.edu.gr",
     tel: "2310 891.285",
     link: "https://www.uom.gr/ies/grammateia",
