@@ -56,7 +56,7 @@ export default {
   //uni_publications:"Εκδόσεις ΠΑΜΑΚ"
   post_office: "Ταχυδρομείο",
   diatmimatika_metaptixiaka_secretary:
-    "Γραμματεία Διατμηματικών Μεταπτυχιακών Προγραμμάτων",
+    "Διατμηματικών Μεταπτυχιακών Προγραμμάτων",
   photocopy_space: "Φωτοτυπείο",
   lab: "Εργαστήριο",
   depname_bso: "Βαλκανικών, Σλαβικών & Ανατολικών Σπουδών",

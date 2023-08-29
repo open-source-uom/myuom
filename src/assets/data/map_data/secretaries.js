@@ -7,7 +7,7 @@ export default locations = [
   {
     floor: i18n.t("mezzanine_floor"),
     imageURL: MEZZANINE_FLOOR_IMG_URL,
-    title: i18n.t("european_studies_secretary"),
+    title: i18n.t("depname_ies"),
     marked_position_x: 89,
     marked_position_y: 70,
     ...elevator.restaurant,
@@ -15,7 +15,7 @@ export default locations = [
   {
     floor: i18n.t("mezzanine_floor"),
     imageURL: MEZZANINE_FLOOR_IMG_URL,
-    title: i18n.t("music_and_art_studies_secretary"),
+    title: i18n.t("depname_msa"),
     marked_position_x: 95,
     marked_position_y: 99,
     ...elevator.restaurant,
@@ -23,7 +23,7 @@ export default locations = [
   {
     floor: i18n.t("mezzanine_floor"),
     imageURL: MEZZANINE_FLOOR_IMG_URL,
-    title: i18n.t("balkan_studies_secretary"),
+    title: i18n.t("depname_bso"),
     marked_position_x: 106,
     marked_position_y: 102,
     ...elevator.restaurant,
@@ -31,7 +31,7 @@ export default locations = [
   {
     floor: i18n.t("mezzanine_floor"),
     imageURL: MEZZANINE_FLOOR_IMG_URL,
-    title: i18n.t("ekp_secretary"),
+    title: i18n.t("depname_esp"),
     marked_position_x: 120,
     marked_position_y: 102,
     ...elevator.restaurant,
@@ -39,7 +39,7 @@ export default locations = [
   {
     floor: i18n.t("mezzanine_floor"),
     imageURL: MEZZANINE_FLOOR_IMG_URL,
-    title: i18n.t("finance_secretary"),
+    title: i18n.t("depname_fin"),
     marked_position_x: 95,
     marked_position_y: 54,
     ...elevator.gym,
@@ -47,7 +47,7 @@ export default locations = [
   {
     floor: i18n.t("mezzanine_floor"),
     imageURL: MEZZANINE_FLOOR_IMG_URL,
-    title: i18n.t("dai_secretary"),
+    title: i18n.t("depname_dai"),
     marked_position_x: 182,
     marked_position_y: 97,
     ...elevator.admin,
@@ -55,7 +55,7 @@ export default locations = [
   {
     floor: i18n.t("mezzanine_floor"),
     imageURL: MEZZANINE_FLOOR_IMG_URL,
-    title: i18n.t("ba_secretary"),
+    title: i18n.t("depname_ba"),
     marked_position_x: 203,
     marked_position_y: 100,
     ...elevator.admin,
@@ -63,7 +63,7 @@ export default locations = [
   {
     floor: i18n.t("mezzanine_floor"),
     imageURL: MEZZANINE_FLOOR_IMG_URL,
-    title: i18n.t("econ_secretary"),
+    title: i18n.t("depname_eco"),
     marked_position_x: 248,
     marked_position_y: 105,
     ...elevator.admin,

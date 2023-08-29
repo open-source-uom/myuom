@@ -57,7 +57,7 @@ export default {
   ceremony_hall_for_navigation: "01 (Ceremony Hall)",
   post_office: "Post Office",
   diatmimatika_metaptixiaka_secretary:
-    "Secretary of Interdepartmental Postgraduate Programmes",
+    "Interdepartmental Postgraduate Programmes",
   photocopy_space: "Photocopier",
   lab: "Lab",
   depname_bso: "Balkan, Slavic & Oriental Studies",
