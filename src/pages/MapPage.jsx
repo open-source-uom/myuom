@@ -35,51 +35,77 @@
     -Fakidis
 
 */
-
+import { useState, useEffect } from "react";
 import {
   Box,
   Button,
-  Select,
   Stack,
+  Text,
+  useBreakpointValue,
   useColorModeValue,
 } from "@chakra-ui/react";
-import { useState } from "react";
-import { mapData } from "../assets/data/mapData.js";
 import MapCords from "../components/maps/MapCords";
-import { useEffect } from "react";
 import i18n from "../i18n";
 import SelectBuildingDropdown from "../components/maps/SelectBuildingDropdown.jsx";
 import SelectOfficeDropdown from "../components/maps/SelectOfficeDropdown.jsx";
+import { useDepName, useMapData } from "../hooks";
 
 function MapPage() {
-  const [office, setOffice] = useState("");
-  const [building, setBuilding] = useState("");
-  const [locationObject, setLocationObject] = useState([]);
-  const handleChange = (e) => {
-    setBuilding(e.target.value);
-    setOffice("");
-    document.getElementById("title").value = "default";
-  };
+  const [depName] = useDepName();
+  const {
+    isSpecificForDepartment,
+    categoryOptions,
+    locations,
+    setSelectedLocation,
+    setSelectedLocationCategory,
+    locationData,
+    selectedLocation,
+    selectedLocationCategory,
+  } = useMapData();
+
+  const departmentHint = useBreakpointValue({
+    base: i18n.t(depName),
+    md: i18n.t("current_department") + i18n.t(depName),
+  });
 
   useEffect(() => {
-    const sampleObject = getSampleObjectByBuilding(building);
-    setLocationObject(sampleObject);
-  }, [building, office]);
+    if (isSpecificForDepartment) {
+      resetSelectedLocation();
+    }
+  }, [depName]);
 
-  const getSampleObjectByBuilding = (value) =>
-    mapData.filter(
-      (data) => data.title === office && data.building + " " + data.dep === value
-    );
+  function resetSelectedLocation() {
+    setSelectedLocation("");
+    setSelectedText(i18n.t("select_location"));
+  }
+
+  const handleLocationCategoryChange = (selection) => {
+    setSelectedLocationCategory(selection);
+    resetSelectedLocation();
+  };
+
+  const [selectedText, setSelectedText] = useState(i18n.t("select_location"));
+
   return (
     <Box align="center" marginTop="1em" fontFamily="Syne">
       <Stack align="center">
-        <SelectBuildingDropdown handleChange={handleChange} />
-        <SelectOfficeDropdown building={building} handleTitle={(e) => setOffice(e.target.value)} />
-
+        <SelectBuildingDropdown
+          handleChange={handleLocationCategoryChange}
+          newOptions={categoryOptions}
+        />
+        {isSpecificForDepartment && depName && (
+          <Text color={"#bcb6c4"} fontSize={"sm"}>
+            {departmentHint}
+          </Text>
+        )}
+        <SelectOfficeDropdown
+          locations={locations}
+          handleChange={(selection) => setSelectedLocation(selection)}
+          selectedText={selectedText}
+          setSelectedText={setSelectedText}
+        />
       </Stack>
-      {locationObject.map((locObject) => (
-        <MapCords sampleObject={locObject} key={locObject.title} />
-      ))}
+      {selectedLocation && <MapCords {...locationData} />}
       <Button
         _hover={false}
         bgColor={useColorModeValue("#0050e0", "#f3f3f3")}

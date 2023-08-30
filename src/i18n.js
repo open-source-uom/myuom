@@ -55,7 +55,7 @@ const resources = {
       faq_subtitle: "You will find answers that might be of interest to you."
       // //constants.js --> offices
       // // offices: "Offices",
-      // // liason_office: "Liason Office",
+      // // liaison_office: "Liason Office",
       // // internship_office: "Internship Office",
       // // alumni_office: "Alumni Office",
       // // erasmus_office: "Erasmus Office",
@@ -107,7 +107,7 @@ const resources = {
       faq_subtitle: "Εδώ θα βρείτε απαντήσεις σε ερωτήσεις που ενδέχεται να σας ενδιαφέρουν."
       //constants.js
       // offices: "Γραφεία",
-      // liason_office: "Γραφείο Διασύνδεσης",
+      // liaison_office: "Γραφείο Διασύνδεσης",
       // internship_office: "Γραφείο Πρακτικής",
       // alumni_office: "Γραφείο Αποφοίτων",
       // erasmus_office: "Γραφείο Erasmus",

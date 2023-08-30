@@ -53,10 +53,10 @@ export const DEPARTMENTS = [
     name: i18n.t("bso_department"),
   }, {
     code: DEPARTMENT_CODES.EUROPEAN_STUDIES,
-    name: i18n.t("ess_department"),
+    name: i18n.t("ies_department"),
   }, {
     code: DEPARTMENT_CODES.BUSINESS_ADMINISTRATION,
-    name: i18n.t("bas_department"),
+    name: i18n.t("ba_department"),
   }, {
     code: DEPARTMENT_CODES.ACCOUNTING_FINANCE,
     name: i18n.t("fin_department"),
@@ -78,11 +78,11 @@ export const DEPARTMENTS = [
 
 // export const DEPARTMENTS = [
 //   i18n.t("bso_department"),
-//   i18n.t("ess_department"),
+//   i18n.t("ies_department"),
 //   i18n.t("esp_department"),
 //   i18n.t("dai_department"),
 //   i18n.t("fin_department"),
 //   i18n.t("msa_department"),
 //   i18n.t("eco_department"),
-//   i18n.t("bas_department")
+//   i18n.t("ba_department")
 // ]

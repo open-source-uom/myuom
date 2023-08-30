@@ -1,7 +1,7 @@
 export default {
   //constants.js --> offices
   offices: "Γραφεία",
-  liason_office: "Γραφείο Διασύνδεσης",
+  liaison_office: "Γραφείο Διασύνδεσης",
   internship_office: "Γραφείο Πρακτικής",
   alumni_office: "Γραφείο Αποφοίτων",
   erasmus_office: "Γραφείο Erasmus",

@@ -1,7 +1,7 @@
 import i18n from "../../../i18n"
 
 export const professors = {
-    department: i18n.t("bas_department"),
+    department: i18n.t("ba_department"),
     professors:
         [
             {

@@ -5,7 +5,7 @@ export const servicesData = [
         index: 1,
         services: [
             {
-                title: i18n.t("liason_office"),
+                title: i18n.t("liaison_office"),
                 url: "https://www.uom.gr/career-office",
                 imgUrl:
                     "https://www.uom.gr/assets/site/public/nodes/11869/13503-GrafeioDiasyndesis-2.jpg",
