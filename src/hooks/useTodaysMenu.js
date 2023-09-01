@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import data from "../assets/data/DailyMenu";
 import { RESTAURANT_HOURS } from "../assets/data/RestaurantSchedule";
 import i18n from "../i18n";
@@ -7,14 +6,14 @@ import i18n from "../i18n";
 const CURRENTLY_LUNCH = "gevma";
 const CURRENTLY_DINNER = "deipno";
 const CURRENTLY_NEXT_LUNCH = "gevma epomenhs";
-
+const CURRENTLY_NEXT_DINNER = "deipno epomenhs";
 
 
 const useDate = () => {
     const [date, setDate] = useState(new Date());
     useEffect(() => {
         //bit lower than minute to avoid missing the exact time
-        var timerID = setInterval(() => tick(), 45 * 1000);
+        const timerID = setInterval(() => tick(), 45 * 1000);
         return () => {
             clearInterval(timerID);
         };
@@ -39,6 +38,11 @@ const getFoodMenuOfNextMeal = (moment) => {
     if (moment === CURRENTLY_NEXT_LUNCH) {
         const temp = getTodaysRestaurantMenu(1, true);
         return { isLunch: true, isTomorrow: true, foodMenu: temp };
+    }
+
+    if (moment === CURRENTLY_NEXT_DINNER) {
+        const temp = getTodaysRestaurantMenu(1, false);
+        return { isLunch: false, isTomorrow: true, foodMenu: temp };
     }
     throw Error("Invalid moment");
 }
@@ -121,10 +125,14 @@ function getNextMeal(curr_date) {
     return CURRENTLY_NEXT_LUNCH;
 }
 
-export const useTodaysMenu = () => {
-    const curr_date = useDate();
-    const momentOfDay = getNextMeal(curr_date);
-    const { foodMenu, isLunch, isTomorrow } = getFoodMenuOfNextMeal(momentOfDay);
+export const useTodaysMenu = (customMoment) => {
+  const curr_date = useDate();
+  let momentOfDay = getNextMeal(curr_date);
+  
+  if (customMoment) {
+    momentOfDay = customMoment;
+  }
 
-    return { foodMenu, isLunch, isTomorrow };
+  const { foodMenu, isLunch, isTomorrow } = getFoodMenuOfNextMeal(momentOfDay);
+  return { foodMenu, isLunch, isTomorrow };
 }
