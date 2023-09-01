@@ -36,42 +36,28 @@
 
 */
 
-import { useEffect } from "react";
 import Menu from "../components/restaurant/RestaurantMenu";
-import data from "../assets/data/DailyMenu";
-import {
-  Accordion,
-  Box,
-  Text,
-  Flex,
-  useColorModeValue,
-} from "@chakra-ui/react";
+import { Accordion, Box, Text, Flex } from "@chakra-ui/react";
 import Schedule from "../components/restaurant/Schedule";
 import TodaysMenu from "../components/restaurant/TodaysRestaurantMenu";
 import i18n from "../../src/i18n";
-import { useWeeklyRestaurantMenu, useScrollToTopOnLoad } from "../hooks"
+import { useWeeklyRestaurantMenu, useScrollToTopOnLoad } from "../hooks";
 export default function RestauranPage() {
   const weeklyRestaurantMenu = useWeeklyRestaurantMenu();
   useScrollToTopOnLoad();
 
   return (
     <Flex direction="column" align="center">
-      <Box
-        bg={useColorModeValue("#0050e0", "#f3f3f3")}
-        w={{ sm: "90%", md: "90%", lg: "80%", "2xl": "60%", "3xl": "50%" }}
-        rounded="0.75rem"
-        px={"1rem"}
-        py={"1rem"}
-      >
+      <Box w={{ sm: "90%", md: "90%", lg: "80%", "2xl": "60%", "3xl": "50%" }}>
+        <Schedule />
+      </Box>
+      <Box w="100%">
         <TodaysMenu />
       </Box>
       <Box
         textAlign={"center"}
         w={{ sm: "90%", md: "90%", lg: "80%", "2xl": "60%", "3xl": "50%" }}
       >
-        <Accordion allowToggle mt="1rem">
-          <Schedule />
-        </Accordion>
         <Box align="center">
           <Text
             mt="2rem"
@@ -89,7 +75,9 @@ export default function RestauranPage() {
         </Box>
         <Accordion allowToggle>
           {weeklyRestaurantMenu.map((dailyFoodMenu) => {
-            return <Menu dailyFoodMenu={dailyFoodMenu} key={dailyFoodMenu.day} />;
+            return (
+              <Menu dailyFoodMenu={dailyFoodMenu} key={dailyFoodMenu.day} />
+            );
           })}
         </Accordion>
       </Box>
