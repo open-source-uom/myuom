@@ -44,7 +44,8 @@ import {
   AccordionIcon,
   Accordion,
   Text,
-  Flex,
+  List,
+  ListItem,
   useColorModeValue,
 } from "@chakra-ui/react";
 
@@ -54,7 +55,7 @@ function Menu({ dailyFoodMenu }) {
   return (
     <Box
       marginBottom="1rem"
-      borderRadius="20"
+      borderRadius="24px"
       overflow="hidden"
       border="2px"
       borderColor={useColorModeValue("#0050e0", "#f3f3f3")}
@@ -92,13 +93,13 @@ function Menu({ dailyFoodMenu }) {
           <AccordionIcon />
         </AccordionButton>
 
-        <AccordionPanel pb={5}>
+        <AccordionPanel px="15px" pb="15px">
           <Accordion allowToggle>
             {/*Accordion gia geuma*/}
             <Box
               w="100%"
               marginBottom="5"
-              borderRadius="20"
+              borderRadius="16px"
               overflow="hidden"
               border="2px"
               borderColor={useColorModeValue("#0050e0", "#f3f3f3")}
@@ -137,34 +138,40 @@ function Menu({ dailyFoodMenu }) {
                   <AccordionIcon />
                 </AccordionButton>
                 <AccordionPanel pb={4}>
-                  <Text
-                    w="100%"
-                    display="flex"
-                    direction="row"
-                    alignItems="flex-start"
-                    justifyContent="center"
-                    fontWeight="bold"
-                    fontFamily="Syne"
-                    fontSize={{ sm: 14, md: 16, lg: 18 }}
-                  >
-                    {dailyFoodMenu.gevmaKirios}
-                    <br></br>
-                    {dailyFoodMenu.gevmaEidiko}
-                    <br></br>
-                    {dailyFoodMenu.gevmaGarnitoura}
-                    <br></br>
-                    {dailyFoodMenu.gevmaSalata}
-                    <br></br>
-                    {dailyFoodMenu.gevmaEpidorpio}
-                  </Text>
+                  <List spacing={2}>
+                    {Object.values([
+                      ...dailyFoodMenu.gevmaKirios,
+                      ...dailyFoodMenu.gevmaEidiko,
+                      ...dailyFoodMenu.gevmaGarnitoura,
+                      ...dailyFoodMenu.gevmaSalata,
+                      ...dailyFoodMenu.gevmaEpidorpio,
+                    ]).map((val, index) => {
+                      if (val === "") return;
+                      return (
+                        <ListItem key={index}>
+                          <Text
+                            w="100%"
+                            display="flex"
+                            direction="row"
+                            alignItems="flex-start"
+                            justifyContent="center"
+                            fontWeight="bold"
+                            fontFamily="Syne"
+                            fontSize={{ sm: 14, md: 16, lg: 18 }}
+                          >
+                            {val}
+                          </Text>
+                        </ListItem>
+                      );
+                    })}
+                  </List>
                 </AccordionPanel>
               </AccordionItem>
             </Box>
             {/*Accordion gia deipno*/}
             <Box
               w="100%"
-              marginBottom="5"
-              borderRadius="20"
+              borderRadius="16px"
               overflow="hidden"
               border="2px"
               borderColor={useColorModeValue("#0050e0", "#f3f3f3")}
@@ -203,26 +210,33 @@ function Menu({ dailyFoodMenu }) {
                   <AccordionIcon />
                 </AccordionButton>
                 <AccordionPanel pb={4}>
-                  <Text
-                    w="100%"
-                    display="flex"
-                    direction="row"
-                    alignItems="flex-start"
-                    justifyContent="center"
-                    fontWeight="bold"
-                    fontFamily="Syne"
-                    fontSize={{ sm: 14, md: 16, lg: 18 }}
-                  >
-                    {dailyFoodMenu.deipnoKirios}
-                    <br></br>
-                    {dailyFoodMenu.deipnoEidiko}
-                    <br></br>
-                    {dailyFoodMenu.deipnoGarnitoura}
-                    <br></br>
-                    {dailyFoodMenu.deipnoSalata}
-                    <br></br>
-                    {dailyFoodMenu.deipnoEpidorpio}
-                  </Text>
+                  <List spacing={2}>
+                    {Object.values([
+                      ...dailyFoodMenu.deipnoKirios,
+                      ...dailyFoodMenu.deipnoEidiko,
+                      ...dailyFoodMenu.deipnoGarnitoura,
+                      ...dailyFoodMenu.deipnoSalata,
+                      ...dailyFoodMenu.deipnoEpidorpio,
+                    ]).map((val, index) => {
+                      if (val === "") return;
+                      return (
+                        <ListItem key={index}>
+                          <Text
+                            w="100%"
+                            display="flex"
+                            direction="row"
+                            alignItems="flex-start"
+                            justifyContent="center"
+                            fontWeight="bold"
+                            fontFamily="Syne"
+                            fontSize={{ sm: 14, md: 16, lg: 18 }}
+                          >
+                            {val}
+                          </Text>
+                        </ListItem>
+                      );
+                    })}
+                  </List>
                 </AccordionPanel>
               </AccordionItem>
             </Box>
