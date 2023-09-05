@@ -64,15 +64,26 @@ export default function TodaysMenu() {
     register();
 
     const params = {
-      slidesPerView: 1.1,
       initialSlide: activeIndex,
       centeredSlides: true,
       breakpoints: {
+        0: {
+          slidesPerView: 1.1,
+        },
         768: {
-          slidesPerView: 1.45,
+          slidesPerView: 2,
+        },
+        960: {
+          slidesPerView: 2.6,
         },
         1200: {
-          slidesPerView: 2,
+          slidesPerView: 3,
+        },
+        1600: {
+          slidesPerView: 4.2,
+        },
+        1920: {
+          slidesPerView: 5,
         },
       },
     };

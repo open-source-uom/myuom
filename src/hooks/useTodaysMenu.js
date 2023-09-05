@@ -63,7 +63,6 @@ function getTodaysRestaurantMenu(offsetDays, forLunch) {
     const dayName = days[(dayNum + offsetDays) % 7];
     const todaysTotalMenu = data
         .filter((dayMenu) => {
-            console.log(dayMenu, dayName)
             return dayMenu.day.toLowerCase() === dayName.toLowerCase();
         })
         .pop();

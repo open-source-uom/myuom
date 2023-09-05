@@ -48,7 +48,7 @@ export default function RestauranPage() {
 
   return (
     <Flex direction="column" align="center">
-      <Box w={{ sm: "90%", md: "90%", lg: "80%", "2xl": "60%", "3xl": "50%" }}>
+      <Box w={{ sm: "90%", md: "70%", lg: "40%", "2xl": "30%", "3xl": "25%" }}>
         <Schedule />
       </Box>
       <Box w="100%">

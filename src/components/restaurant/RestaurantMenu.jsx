@@ -145,25 +145,25 @@ function Menu({ dailyFoodMenu }) {
                       ...dailyFoodMenu.gevmaGarnitoura,
                       ...dailyFoodMenu.gevmaSalata,
                       ...dailyFoodMenu.gevmaEpidorpio,
-                    ]).map((val, index) => {
-                      if (val === "") return;
-                      return (
-                        <ListItem key={index}>
-                          <Text
-                            w="100%"
-                            display="flex"
-                            direction="row"
-                            alignItems="flex-start"
-                            justifyContent="center"
-                            fontWeight="bold"
-                            fontFamily="Syne"
-                            fontSize={{ sm: 14, md: 16, lg: 18 }}
-                          >
-                            {val}
-                          </Text>
-                        </ListItem>
-                      );
-                    })}
+                    ]).map(
+                      (val, index) =>
+                        val && (
+                          <ListItem key={index}>
+                            <Text
+                              w="100%"
+                              display="flex"
+                              direction="row"
+                              alignItems="flex-start"
+                              justifyContent="center"
+                              fontWeight="bold"
+                              fontFamily="Syne"
+                              fontSize={{ sm: 14, md: 16, lg: 18 }}
+                            >
+                              {val}
+                            </Text>
+                          </ListItem>
+                        )
+                    )}
                   </List>
                 </AccordionPanel>
               </AccordionItem>
@@ -217,25 +217,25 @@ function Menu({ dailyFoodMenu }) {
                       ...dailyFoodMenu.deipnoGarnitoura,
                       ...dailyFoodMenu.deipnoSalata,
                       ...dailyFoodMenu.deipnoEpidorpio,
-                    ]).map((val, index) => {
-                      if (val === "") return;
-                      return (
-                        <ListItem key={index}>
-                          <Text
-                            w="100%"
-                            display="flex"
-                            direction="row"
-                            alignItems="flex-start"
-                            justifyContent="center"
-                            fontWeight="bold"
-                            fontFamily="Syne"
-                            fontSize={{ sm: 14, md: 16, lg: 18 }}
-                          >
-                            {val}
-                          </Text>
-                        </ListItem>
-                      );
-                    })}
+                    ]).map(
+                      (val, index) =>
+                        val && (
+                          <ListItem key={index}>
+                            <Text
+                              w="100%"
+                              display="flex"
+                              direction="row"
+                              alignItems="flex-start"
+                              justifyContent="center"
+                              fontWeight="bold"
+                              fontFamily="Syne"
+                              fontSize={{ sm: 14, md: 16, lg: 18 }}
+                            >
+                              {val}
+                            </Text>
+                          </ListItem>
+                        )
+                    )}
                   </List>
                 </AccordionPanel>
               </AccordionItem>

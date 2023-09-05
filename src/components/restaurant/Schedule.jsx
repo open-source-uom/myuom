@@ -152,12 +152,12 @@ function Schedule() {
         borderColor={useColorModeValue("#0050e0", "#f3f3f3")}
       >
         <Flex
-          w={"100%"}
           justifyContent="center"
           alignItems="center"
           fontFamily="Syne"
           fontSize="20px"
           py={1}
+          px={2}
           cursor="pointer"
           onClick={onOpen}
         >
