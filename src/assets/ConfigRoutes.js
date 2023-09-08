@@ -60,6 +60,7 @@ import LibraryPage from "../pages/LibraryPage";
 import FirstYearInfoPage from "../pages/FirstYearInfoPage";
 import SchedulePage from "../pages/SchedulePage";
 import MapPage from "../pages/MapPage";
+import { FaUniversity } from "react-icons/fa";
 import i18n from "../i18n";
 export const Categories = [
   {
@@ -210,11 +211,29 @@ export const Categories = [
     title: i18n.t("announcements"),
     iconSVG: <DepAnnounceIcon />,
     route: "/announcements",
-    span: 2,
+    span: 1,
     isExternal: true,
     requireSelection: true,
     position: 13,
     hide: false,
     pageToDisplay: <AnnouncementsPage />,
+  },
+  {
+    title: i18n.t("masters"),
+    iconSVG: <FaUniversity       width="150%"
+                                 size="150%"
+                                 height="150%"
+                                 version="1.1"
+                                 viewBox="0 0 700 700"
+                                 xmlns="http://www.w3.org/2000/svg"
+                                 xmlnsXlink="http://www.w3.org/1999/xlink"
+                                 fill="#f3f3f3" />,
+    route: "https://www.uom.gr/programmata-metaptyxiakon-spoydon",
+    span: 1,
+    isExternal: true,
+    requireSelection: false,
+    position: 14,
+    hide: false,
+    pageToDisplay: null,
   },
 ];
