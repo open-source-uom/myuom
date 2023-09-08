@@ -52,7 +52,8 @@ const resources = {
       foititiki_merimna: "Student Care",
       freshmen_guides: "Freshmen",
       faq_title: "Frequently Asked",
-      faq_subtitle: "You will find answers that might be of interest to you."
+      faq_subtitle: "You will find answers that might be of interest to you.",
+      masters: "Masters",
       // //constants.js --> offices
       // // offices: "Offices",
       // // liaison_office: "Liason Office",
@@ -104,7 +105,8 @@ const resources = {
       foititiki_merimna: "Φοιτητική Μέριμνα",
       freshmen_guides: "Πρωτοετείς",
       faq_title: "Συχνές Ερωτήσεις",
-      faq_subtitle: "Εδώ θα βρείτε απαντήσεις σε ερωτήσεις που ενδέχεται να σας ενδιαφέρουν."
+      faq_subtitle: "Εδώ θα βρείτε απαντήσεις σε ερωτήσεις που ενδέχεται να σας ενδιαφέρουν.",
+      masters: "Μεταπτυχιακά"
       //constants.js
       // offices: "Γραφεία",
       // liaison_office: "Γραφείο Διασύνδεσης",
