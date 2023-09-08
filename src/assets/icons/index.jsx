@@ -1,6 +1,6 @@
 import GraduationIcon from "./GraduationIcon";
 import ExamsTestIcon from "./ExamsTestIcon";
-import LaptopTextbookIcon from "./LaptopTextbookIcon";
+  import LaptopTextbookIcon from "./LaptopTextbookIcon";
 import LibraryIcon from "./LibraryIcon";
 import LocationIcon from "./LocationIcon";
 import ManyPeopleIcon from "./ManyPeopleIcon";

@@ -17,7 +17,8 @@ import {
     FaFileAlt,
     FaShareAlt,
     FaGitlab,
-    FaBook
+    FaBook,
+    FaRegComment,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { CloseIcon } from "../../assets/icons";
@@ -125,6 +126,13 @@ export function SettingsDrawer({ isOpen, onClose }) {
                                 rel="noopener noreferrer"
                             >
                                 <SettingsOption Icon={FaGitlab} onClick={onClose} text={i18n.t("gitlab_contribute")} />
+                            </a>
+                            <a
+                                href="https://docs.google.com/forms/u/2/d/e/1FAIpQLSduM517c4OtIs-CNv5cjQtYcj6OXRDtCP6x0Q7d4Ymhd3xQMg/viewform"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <SettingsOption Icon={FaRegComment} onClick={onClose} text={i18n.t("form_feedback")} />
                             </a>
                         </Box>
                     </Box>
