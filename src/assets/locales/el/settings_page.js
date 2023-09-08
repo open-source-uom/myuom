@@ -10,4 +10,5 @@ export default {
     settings_close: "Κλείσιμο",
     change_language: "Αλλαγή Γλώσσας",
     choose_department: "Επιλέξτε Τμήμα",
+    form_feedback: "Φόρμα Αξιολόγησης"
 }

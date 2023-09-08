@@ -10,4 +10,5 @@ export default {
     settings_close: "Close",
     change_language: "Change Language",
     choose_department: "Choose Department",
+    form_feedback: "Give us your feedback"
 }
