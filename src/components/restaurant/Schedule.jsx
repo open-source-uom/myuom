@@ -38,156 +38,187 @@
 
 import {
   Box,
-  Grid,
-  AccordionItem,
-  AccordionButton,
-  AccordionPanel,
-  AccordionIcon,
   Text,
   Flex,
   useColorModeValue,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalBody,
+  ModalCloseButton,
+  useDisclosure,
 } from "@chakra-ui/react";
-import { RESTAURANT_HOURS } from "../../assets/data/RestaurantSchedule";
+import { InfoOutlineIcon } from "@chakra-ui/icons";
+import { schedule, holidays } from "../../assets/data/RestaurantSchedule";
+import TimeTable from "./TimeTable";
 import i18n from "../../i18n";
+import { useState, useEffect } from "react";
+
 function Schedule() {
+  const [isRestaurantOpen, setIsRestaurantOpen] = useState(false);
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
+  const [nextTimeInfo, setNextTimeInfo] = useState({
+    nextTime: "00:00",
+    activeMeal: "none",
+    activeCategory: "none",
+  });
+
+  useEffect(() => {
+    const updateNextTime = () => {
+      const now = new Date();
+      const nextTimeInfo = getNextTimeAndMeal(now);
+      setNextTimeInfo(nextTimeInfo);
+    };
+
+    const timeNow = new Date();
+    const delayUntilNextMinute = 60 - timeNow.getSeconds();
+
+    updateNextTime();
+
+    setTimeout(() => {
+      updateNextTime();
+
+      const intervalId = setInterval(updateNextTime, 60000);
+
+      return () => clearInterval(intervalId);
+    }, delayUntilNextMinute * 1000);
+  }, []);
+
+  function isHoliday(today) {
+    const todayString = today.toISOString().split("T")[0];
+    return holidays.includes(todayString);
+  }
+
+  function getDayCategory(offset = 0) {
+    let day = new Date();
+    day.setDate(day.getDate() + offset);
+    const dayOfWeek = day.getDay();
+    const isWeekend = dayOfWeek === 0 || dayOfWeek === 6;
+    const dayCategory =
+      isWeekend || isHoliday(day) ? "weekendsAndHolidays" : "weekdays";
+    return dayCategory;
+  }
+
+  function getNextTimeAndMeal(now) {
+    const todayCategory = getDayCategory();
+    const nowTime = now.toTimeString().substr(0, 5);
+
+    let nextOpeningTime = "24:00";
+    let activeMeal = "none";
+
+    for (const meal in schedule[todayCategory]) {
+      const { start, end } = schedule[todayCategory][meal];
+
+      if (nowTime >= start && nowTime < end) {
+        setIsRestaurantOpen(true);
+        return {
+          nextTime: end,
+          activeMeal: meal,
+          activeCategory: todayCategory,
+        };
+      }
+
+      if (nowTime < start && start < nextOpeningTime) {
+        setIsRestaurantOpen(false);
+        return {
+          nextTime: start,
+          activeMeal: meal,
+          activeCategory: todayCategory,
+        };
+      }
+    }
+
+    setIsRestaurantOpen(false);
+    const tomorrowCategory = getDayCategory(1);
+
+    activeMeal = "breakfast";
+    const { start } = schedule[tomorrowCategory][activeMeal];
+
+    return {
+      nextTime: start,
+      activeMeal,
+      activeCategory: tomorrowCategory,
+    };
+  }
+
   return (
-    <Box
-      marginBottom="1rem"
-      borderRadius="20"
-      overflow="hidden"
-      border="2px"
-      borderColor={useColorModeValue("#0050e0", "#f3f3f3")}
-      bg={useColorModeValue("#0050e0", "#f3f3f3")}
-      color={useColorModeValue("#f3f3f3", "black")}
-    >
-      <AccordionItem border="none">
-        <Text>
-          <AccordionButton
-            display="flex"
-            direction="row"
-            alignItems="center"
-            justifyContent="start"
-            _hover={{ bg: "transparent" }}
-            w="100%"
-            h="100%"
-            outline="none"
-            bgColor="transparent"
-            color={useColorModeValue("#f3f3f3", "black")}
-            fontFamily="Syne"
-            border="none"
-            alt="profPic"
-            overflow="hidden"
-            gap={3}
-          >
-            <Text
-              w="100%"
-              display="flex"
-              direction="row"
-              justifyContent="start"
-              fontWeight="bold"
-              fontFamily="Syne"
-              fontSize={{ sm: 16, md: 18, lg: 20 }}
-              color={useColorModeValue("#f3f3f3", "black")}
-            >
-              {i18n.t("orario")}
-            </Text>
-            <AccordionIcon />
-          </AccordionButton>
-        </Text>
-        <AccordionPanel
-          pb={4}
-          w={"100%"}
-          justifyContent="start"
+    <>
+      <Box
+        borderRadius="20"
+        overflow="hidden"
+        border="2px"
+        borderColor={useColorModeValue("#0050e0", "#f3f3f3")}
+      >
+        <Flex
+          justifyContent="center"
+          alignItems="center"
           fontFamily="Syne"
+          fontSize="20px"
+          py={1}
+          px={2}
+          cursor="pointer"
+          onClick={onOpen}
         >
-          <Grid
-            templateColumns={{ sm: "repeat(1, 1fr)", lg: "repeat(3, 1fr)" }}
-            justifyContent="start"
-            alignItems="start"
+          <Text
+            as="span"
+            px={2}
+            color={isRestaurantOpen ? "#00CA08" : "#CA0000"}
           >
-            <Flex direction="column">
-              <Text fontWeight="bold">{i18n.t("proino")}</Text>
-              <Text>
-                {" "}
-                {RESTAURANT_HOURS.for_breakfast.on_weekdays.start.hours
-                  .toString()
-                  .padStart(2, "0")}
-                :
-                {RESTAURANT_HOURS.for_breakfast.on_weekdays.start.minutes
-                  .toString()
-                  .padStart(2, "0")}
-                -
-                {RESTAURANT_HOURS.for_breakfast.on_weekdays.end.hours
-                  .toString()
-                  .padStart(2, "0")}
-                :
-                {RESTAURANT_HOURS.for_breakfast.on_weekdays.end.minutes
-                  .toString()
-                  .padStart(2, "0")}
-              </Text>
-            </Flex>
-            <Flex direction="column">
-              <Text fontWeight="bold">{i18n.t("mesimeriano")}</Text>
-              <Text align="center">
-                {RESTAURANT_HOURS.for_lunch.on_weekdays.start.hours
-                  .toString()
-                  .padStart(2, "0")}
-                :
-                {RESTAURANT_HOURS.for_lunch.on_weekdays.start.minutes
-                  .toString()
-                  .padStart(2, "0")}
-                -{" "}
-                {RESTAURANT_HOURS.for_lunch.on_weekdays.end.hours
-                  .toString()
-                  .padStart(2, "0")}
-                :
-                {RESTAURANT_HOURS.for_lunch.on_weekdays.end.minutes
-                  .toString()
-                  .padStart(2, "0")}
-                <br></br>
-                {RESTAURANT_HOURS.for_lunch.on_weekend.start.hours
-                  .toString()
-                  .padStart(2, "0")}
-                :
-                {RESTAURANT_HOURS.for_lunch.on_weekend.start.minutes
-                  .toString()
-                  .padStart(2, "0")}
-                -{" "}
-                {RESTAURANT_HOURS.for_lunch.on_weekend.end.hours
-                  .toString()
-                  .padStart(2, "0")}
-                :
-                {RESTAURANT_HOURS.for_lunch.on_weekend.end.minutes
-                  .toString()
-                  .padStart(2, "0")}{" "}
-                ({i18n.t("skKaiArgies")})
-              </Text>
-            </Flex>
-            <Flex direction="column">
-              <Text fontWeight="bold">{i18n.t("vradino")}</Text>
-              <Text>
-                {" "}
-                {RESTAURANT_HOURS.for_dinner.on_weekdays.start.hours
-                  .toString()
-                  .padStart(2, "0")}
-                :
-                {RESTAURANT_HOURS.for_dinner.on_weekdays.start.minutes
-                  .toString()
-                  .padStart(2, "0")}
-                -{" "}
-                {RESTAURANT_HOURS.for_dinner.on_weekdays.end.hours
-                  .toString()
-                  .padStart(2, "0")}
-                :
-                {RESTAURANT_HOURS.for_dinner.on_weekdays.end.minutes
-                  .toString()
-                  .padStart(2, "0")}
-              </Text>
-            </Flex>
-          </Grid>
-        </AccordionPanel>
-      </AccordionItem>
-    </Box>
+            {i18n.t(isRestaurantOpen ? "open" : "closed")}
+          </Text>
+          <Text as="span">⋅</Text>
+          <Text
+            as="span"
+            style={{ fontVariantNumeric: "lining-nums tabular-nums" }}
+            px={2}
+          >
+            {i18n.t(isRestaurantOpen ? "closesAt" : "opensAt")}{" "}
+            {nextTimeInfo.nextTime}
+          </Text>
+          <InfoOutlineIcon />
+        </Flex>
+      </Box>
+      <Modal onClose={onClose} isOpen={isOpen} isCentered>
+        <ModalOverlay backdropFilter="blur(10px)" />
+        <ModalContent
+          w={{ sm: "90%", md: "90%", lg: "80%", "2xl": "60%", "3xl": "50%" }}
+          fontFamily="Syne"
+          borderRadius="24px"
+          bg={useColorModeValue("#f3f3f3", "black")}
+        >
+          <Flex px="15px" justifyContent="space-between" alignItems="center">
+            <ModalHeader py="15px" px="10px" fontWeight="600" fontSize="22px">
+              {i18n.t("orario")}
+            </ModalHeader>
+            <ModalCloseButton position="static" />
+          </Flex>
+
+          <ModalBody
+            display="flex"
+            flexDir="column"
+            px="15px"
+            paddingTop="0"
+            paddingBottom="15px"
+            gap="24px"
+          >
+            <TimeTable
+              title="weekdays"
+              entries={schedule.weekdays}
+              activeCategory={nextTimeInfo.activeCategory}
+              activeMeal={nextTimeInfo.activeMeal}
+            />
+            <TimeTable
+              title="weekendsAndHolidays"
+              entries={schedule.weekendsAndHolidays}
+              activeCategory={nextTimeInfo.activeCategory}
+              activeMeal={nextTimeInfo.activeMeal}
+            />
+          </ModalBody>
+        </ModalContent>
+      </Modal>
+    </>
   );
 }
 
