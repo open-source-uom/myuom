@@ -8,7 +8,7 @@ import i18n from "../../i18n";
 
 function MenuTable({ title, foodMenu, isActive }) {
   return (
-    <>
+    <Flex flexDir="column" alignItems="center">
       <Flex
         flexDir="column"
         borderRadius="16px"
@@ -18,6 +18,7 @@ function MenuTable({ title, foodMenu, isActive }) {
         overflow="hidden"
         mx={1}
         fontFamily="Syne"
+        w={{ sm: "98%", md: "98%", lg: "94%", "2xl": "78%", "3xl": "64%" }}
       >
         {Object.keys(foodMenu).map((key, index) => (
           <Flex
@@ -36,7 +37,7 @@ function MenuTable({ title, foodMenu, isActive }) {
               w="100%"
               bg={isActive ? "#0050E00F" : "#0000000F"}
               _dark={{ bg: "#f3f3f30F" }}
-              fontSize="18px"
+              fontSize={{ sm: 18, md: 20, lg: 22 }}
               fontWeight="semibold"
             >
               {i18n.t(key)}
@@ -47,6 +48,7 @@ function MenuTable({ title, foodMenu, isActive }) {
               py="8px"
               px="10px"
               w="100%"
+              fontSize={{ sm: 16, md: 18, lg: 20 }}
             >
               <UnorderedList spacing={2}>
                 {Object.values(foodMenu[key]).map((dish, index) => (
@@ -67,7 +69,7 @@ function MenuTable({ title, foodMenu, isActive }) {
       >
         {i18n.t(title)}
       </Flex>
-    </>
+    </Flex>
   );
 }
 

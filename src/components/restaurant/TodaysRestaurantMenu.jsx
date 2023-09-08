@@ -71,19 +71,19 @@ export default function TodaysMenu() {
           slidesPerView: 1.1,
         },
         768: {
-          slidesPerView: 2,
+          slidesPerView: 1.1,
         },
         960: {
-          slidesPerView: 2.6,
+          slidesPerView: 1.2,
         },
         1200: {
-          slidesPerView: 3,
+          slidesPerView: 1.2,
         },
         1600: {
-          slidesPerView: 4.2,
+          slidesPerView: 1.3,
         },
         1920: {
-          slidesPerView: 5,
+          slidesPerView: 1.3,
         },
       },
     };
