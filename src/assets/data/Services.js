@@ -51,8 +51,8 @@ export const servicesData = [
         services: [
             {
                 title: i18n.t("erasmus_student_club"),
-                url: "http://afroditi.uom.gr/erasmusp",
-                imgUrl: "https://opensource.uom.gr/myuom_images/esnuom.png",
+                url: "https://uom.esngreece.gr/",
+                imgUrl: "https://accounts.esn.org/sites/default/files/styles/medium/module/esn_accounts_groups/images/logos/GR/GR-THES-ESN.png?itok=fyU5fSlY",
             },
             {
                 title: i18n.t("uom_students_club"),
@@ -64,26 +64,19 @@ export const servicesData = [
                 title: "TedxUniversityofMacedonia",
                 url: "https://tedxuniversityofmacedonia.com/",
                 imgUrl:
-                    "https://p77-sign-va.tiktokcdn.com/tos-maliva-avt-0068/b9772e1f6046e2a400bd049d39e2b30f~c5_100x100.jpeg?x-expires=1662890400&x-signature=RL58sc0MrQ%2Frls37bxGYeUbkaGk%3D",
+                    "https://yt3.googleusercontent.com/ytc/AOPolaSlS3zxQGiE3VqoN39ylXWldVLBujRdFij3z0G8-Q=s900-c-k-c0x00ffffff-no-rj",
             },
             {
                 title: "AIESEC",
                 url: "https://www.uom.gr/aiesec",
                 imgUrl:
-                    "https://upload.wikimedia.org/wikipedia/commons/4/4a/AIESEC-New-Logo1.png",
+                    "https://uploads-ssl.webflow.com/62f0bdedd19c8b20eba9f328/63566cd4cb91f39322013938_OG%20image.png",
             },
             {
                 title: "Finance Club",
                 url: "https://www.financeclubuom.org/",
                 imgUrl:
                     "https://yt3.ggpht.com/ytc/AKedOLQ86pDFLPNZTJulIeWRCJajirV5WYsCiapFivo0=s900-c-k-c0x00ffffff-no-rj",
-            },
-            {
-                title:
-                    "Άλικο ΚΘΒΕ-ΠΑΜΑΚ (πρώην Πολυφωνικά Αναλόγια) & Θεατρικό Εργαστήρι ΚΘΒΕ-ΠΑΜΑΚ",
-                url: "https://www.uom.gr/aliko-kthbe-pamak-prohn-polyfonika-analogia-theatriko-ergasthri-kthbe-pamak",
-                imgUrl:
-                    "https://www.uom.gr/assets/site/public/nodes/6799/4531-aliko-theatrikoergastiri-kthvepamak-4.jpg",
             },
             {
                 title: "Open Source UoM",
@@ -122,13 +115,13 @@ export const servicesData = [
             {
                 title: i18n.t("student_consulting_support_center"),
                 url: "https://www.uom.gr/student-support",
-                imgUrl: "https://opensource.uom.gr/myuom_images/kssf.jpeg",
+                imgUrl: "https://www.uom.gr/site/images/logo.png",
             },
             {
                 title: i18n.t("accessibility_unit"),
                 url: "https://www.uom.gr/accessibility",
                 imgUrl:
-                    "https://scontent.fskg1-2.fna.fbcdn.net/v/t1.6435-9/162199791_193459489248515_2795892316391728468_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=IluJohFv1-8AX9OpJ8G&_nc_ht=scontent.fskg1-2.fna&oh=00_AT8_DZhdnm_-2p642TAReo8lDCKoUQupcujQ0FhiBmKgRg&oe=632D228D",
+                    "https://www.uom.gr/site/images/logo.png",
             },
             {
                 title: i18n.t("uni_publications"),
