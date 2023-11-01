@@ -69,7 +69,7 @@
 ## About The Project
 
 The myUoM app is a project of the Open Source Team of Applied Informatics, University of Macedonia (https://opensource.uom.gr).
-It was designed to facilitate students' daily interactions with the university. This is a project that is part of our effort to establish myUni as a national application for each Greek University. We are open to your ideas regarding the integration and architecture of it to make it easier to be widely accepted and implemented.
+It was designed to facilitate students' daily interactions with the university. This is a project that is part of our effort to establish myUni as a national application for each Greek University. We are open to your ideas regarding the integration and architecture of it to make it easier to be widely accepted and implemented. You can join our [discord server](https://discord.gg/nzMjpRYxp6) and tell us about them and give us feedback(we have a channel dedicated solely to the development of MyUoM).
 
 It has been adopted by the [University of Western Attica](iam.uniwa.gr), the implementation is now being worked by the [Internation Western University of Greece](https://www.ihu.gr).
 
@@ -80,9 +80,10 @@ This app is great both for newcomers and more senior students. For newcomers it 
 
 It does not need more than a few people. 
 Two technical people and someone who will be in charge of communicating with the University is more than enough.
+Data entry might be a bit tedious, with the help of the community and a good CMS it can be made easier.
 Also to make the app official, it needs to be communicated with the Dean of the University(a submission preferrable done by a professor or prominent University Stuff in order to be given attention).
 
-The app is a simple website built with [React-Next.js](https://nextjs.org/), [Chakra-UI](https://chakra-ui.com/) and [Sanity](sanity.io) as a CMS solution.
+The app is a simple website built with [React-Next.js](https://nextjs.org/), [Chakra-UI](https://chakra-ui.com/) and [Sanity](sanity.io) as a CMS solution(the free tier is more than enough for such project).
 
 The customization includes the following things:
 1. Changing the data for the University(optionally, do translations)
@@ -107,7 +108,7 @@ The data used in this app are:
   - For those photos, for each place in the floor x,y positions should be made and associated with that specific place(to draw an indicator).
   - Categories of the places found in the University(e.g. Student Clubs, Sport Facilities etc. etc.)
 - Services offered by the University(e.g Internship Office, Advisory Services,Erasmus Office, Alumni Office)
-- Freshmen Guides(Markdown Files for convenience)
+- Freshmen Guides([Markdown](https://en.wikipedia.org/wiki/Markdown) Files for convenience)
 - FAQ
 - Student Clubs
 
@@ -120,7 +121,7 @@ Changing the colors and fonts is enough to customise it in terms of theming, res
 #### 3. Extra Customisation
 
 To get an idea of how customising would look like someone can see how the [University of Western Attica](iam.uniwa.gr) customised it.
-For example, for Universities with multiple buildings(UoM has only one building with multiple sub-buildings), the Map can be configured to be enabled only when the user has selected his department.
+For example, for Universities with multiple buildings(UoM has only one building with multiple sub-buildings so it was not needed for us), the Map can be configured to be enabled only when the user has selected his department.
 
 If you made it this far, you might be interested in reading the documentation we have carefully crafted for you. You can find it in the /docs folder. Any comments you have regarding the documentation, submit it as an issue, so we can improve it and make it easier for other people to follow along. 
 
