@@ -52,7 +52,7 @@
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
-        <li><a href="#adoption-guide">Bring this App to Your University:</a></li>
+        <li><a href="#Bring-this-App-to-your-University">Bring this App to Your University:</a></li>
       </ul>
       <ul>
         <li><a href="#built-with">Built With</a></li>
@@ -68,14 +68,61 @@
 
 ## About The Project
 
-The myUoM app is a project of the Open Software Team of Applied Informatics, University of Macedonia (https://opensource.uom.gr).
-It was designed to facilitate students' daily interactions with the university.
+The myUoM app is a project of the Open Source Team of Applied Informatics, University of Macedonia (https://opensource.uom.gr).
+It was designed to facilitate students' daily interactions with the university. This is a project that is part of our effort to establish myUni as a national application for each Greek University. We are open to your ideas regarding the integration and architecture of it to make it easier to be widely accepted and implemented.
+
+It has been adopted by the [University of Western Attica](iam.uniwa.gr), the implementation is now being worked by the [Internation Western University of Greece](https://www.ihu.gr).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Bring this App to your University
+This app is great both for newcomers and more senior students. For newcomers it serves as a way to get to know the university and for seniors it is an easy way to be reminded of trivial information such as timetables for various university services.
 
-The app is a simple website built with React-Next.js and Chakra-UI.
+It does not need more than a few people. 
+Two technical people and someone who will be in charge of communicating with the University is more than enough.
+Also to make the app official, it needs to be communicated with the Dean of the University(a submission preferrable done by a professor or prominent University Stuff in order to be given attention).
+
+The app is a simple website built with [React-Next.js](https://nextjs.org/), [Chakra-UI](https://chakra-ui.com/) and [Sanity](sanity.io) as a CMS solution.
+
+The customization includes the following things:
+1. Changing the data for the University(optionally, do translations)
+2. Theming (using the university colors)
+3. Additional Changes-Customization
+
+#### 1. Data Gathering
+For this part it is recommended to get in touch with university stuff(a professor the team is close with is ideal), in order to obtain the data fast and in a structured way. 
+
+Otherwise collecting it from a university website, using a scraping tool or manually is also possible.
+
+The data used in this app are:
+
+- University Stuff Data(Title, Office Phone Number,Email,Building of Office and Office Number)
+- Student Restaurant Schedule
+- The departments of the University
+- Links for the Course Schedules for each department
+- Links for the Exams Schedules for each department
+- Links for External Services(e.g. a Student Portal, the library website)
+- Map data
+  - Photos of the floor Plans(emergency maps can also be used with a little bit of editing)
+  - For those photos, for each place in the floor x,y positions should be made and associated with that specific place(to draw an indicator).
+  - Categories of the places found in the University(e.g. Student Clubs, Sport Facilities etc. etc.)
+- Services offered by the University(e.g Internship Office, Advisory Services,Erasmus Office, Alumni Office)
+- Freshmen Guides(Markdown Files for convenience)
+- FAQ
+- Student Clubs
+
+#### 2. Theming
+
+We are using Chakra-UI as a frontend component framework, and theming works like [this](https://chakra-ui.com/docs/components/accordion/theming#theming) in Chakra-UI.
+
+Changing the colors and fonts is enough to customise it in terms of theming, responsiveness and other properties do not need necessarily change.
+
+#### 3. Extra Customisation
+
+To get an idea of how customising would look like someone can see how the [University of Western Attica](iam.uniwa.gr) customised it.
+For example, for Universities with multiple buildings(UoM has only one building with multiple sub-buildings), the Map can be configured to be enabled only when the user has selected his department.
+
+If you made it this far, you might be interested in reading the documentation we have carefully crafted for you. You can find it in the /docs folder. Any comments you have regarding the documentation, submit it as an issue, so we can improve it and make it easier for other people to follow along. 
 
 ### Built With
 
