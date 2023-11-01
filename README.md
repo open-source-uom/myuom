@@ -98,7 +98,7 @@ Otherwise collecting it from a university website, using a scraping tool or manu
 
 The data used in this app are:
 
-- University Stuff Data(Title, Office Phone Number,Email,Building of Office and Office Number)
+- Teaching Stuff Data(Title, Office Phone Number,Email,Building of Office and Office Number)
 - Student Restaurant Schedule
 - The departments of the University
 - Links for the Course Schedules for each department
