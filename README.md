@@ -52,6 +52,9 @@
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
+        <li><a href="#adoption-guide">Bring this App to Your University:</a></li>
+      </ul>
+      <ul>
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
@@ -69,6 +72,10 @@ The myUoM app is a project of the Open Software Team of Applied Informatics, Un
 It was designed to facilitate students' daily interactions with the university.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### Bring this App to your University
+
+The app is a simple website built with React-Next.js and Chakra-UI.
 
 ### Built With
 
@@ -113,6 +120,7 @@ Project Link: [https://gitlab.com/opensourceuom/myUoM](https://gitlab.com/openso
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
 [contributors-shield]: https://img.shields.io/gitlab/contributors/opensourceuom/myUoM?style=for-the-badge
 [forks-shield]: https://img.shields.io/gitlab/forks/opensourceuom/myUoM?style=for-the-badge
 [stars-shield]: https://img.shields.io/gitlab/stars/opensourceuom/myUoM?style=for-the-badge
