@@ -71,7 +71,7 @@
 The myUoM app is a project of the Open Source Team of Applied Informatics, University of Macedonia (https://opensource.uom.gr).
 It was designed to facilitate students' daily interactions with the university. This is a project that is part of our effort to establish myUni as a national application for each Greek University. We are open to your ideas regarding the integration and architecture of it to make it easier to be widely accepted and implemented. You can join our [discord server](https://discord.gg/nzMjpRYxp6) and tell us about them and give us feedback(we have a channel dedicated solely to the development of MyUoM).
 
-It has been adopted by the [University of Western Attica](iam.uniwa.gr), the implementation is now being worked by the [Internation Western University of Greece](https://www.ihu.gr).
+It has been adopted by the [University of Western Attica](iam.uniwa.gr), and another implementation is now being worked by the [Internation Western University of Greece](https://www.ihu.gr). Also, [University of Crete](https://en.uoc.gr/) has shown interest in adopting it and we are cooperating to begin their journey.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -80,8 +80,9 @@ This app is great both for newcomers and more senior students. For newcomers it 
 
 It does not need more than a few people. 
 Two technical people and someone who will be in charge of communicating with the University is more than enough.
-Data entry might be a bit tedious, with the help of the community and a good CMS it can be made easier.
-Also to make the app official, it needs to be communicated with the Dean of the University(a submission preferrable done by a professor or prominent University Stuff in order to be given attention).
+Data entry might be a bit tedious,but with the help of the community(and also for feedback) and a good CMS it can be made easier.
+
+Also to make the app officially recognised by the University, it needs to be communicated with the Dean of the University(a submission preferrable done by a professor or prominent University Stuff in order to be given attention sooner).
 
 The app is a simple website built with [React-Next.js](https://nextjs.org/), [Chakra-UI](https://chakra-ui.com/) and [Sanity](sanity.io) as a CMS solution(the free tier is more than enough for such project).
 
@@ -135,7 +136,7 @@ If you made it this far, you might be interested in reading the documentation we
 
 ## Contributing
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**. To assist you for your first contribution we will be glad to hear from you and support you. Find us on our [discord server](https://discord.gg/nzMjpRYxp6) and send a message and expect help from the friendly Community of Open Source UoM.
 
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
 Don't forget to give the project a star! Thanks again!
