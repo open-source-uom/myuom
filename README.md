@@ -1,123 +1,40 @@
-<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-<a name="readme-top"></a>
+## Getting Started
 
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
+First, run the development server:
 
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-[![Forks][forks-shield]](https://gitlab.com/opensourceuom/myUoM/-/forks)
-[![Stargazers][stars-shield]](https://gitlab.com/opensourceuom/myUoM/-/starrers)
-[![Issues][issues-shield]](https://gitlab.com/opensourceuom/myUoM/-/issues)
-[![MIT License][license-shield]](https://gitlab.com/opensourceuom/myUoM/-/blob/main/LICENSE)
-[![LinkedIn][linkedin-shield]](https://www.linkedin.com/company/80766091)
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-<!-- PROJECT LOGO -->
-<br />
-<div align="center">
-    <img src="src/assets/myUOMLogo.png" alt="Logo" width="80" height="80">
-  <h3 align="center">myUoM</h3>
+You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
-  <p align="center">
-    The official University of Macedonia Student application
-    <br />
-    <a href="https://gitlab.com/opensourceuom/myUoM"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://my.uom.gr/">View the Project</a>
-    ·
-    <a href="https://gitlab.com/opensourceuom/myUoM/-/issues/new">Report Bug</a>
-    ·
-    <a href="https://gitlab.com/opensourceuom/myUoM/-/issues/82">Request Feature</a>
-  </p>
-</div>
+[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
 
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ol>
-</details>
+The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-<!-- ABOUT THE PROJECT -->
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## About The Project
+## Learn More
 
-The myUoM app is a project of the Open Software Team of Applied Informatics, University of Macedonia (https://opensource.uom.gr).
-It was designed to facilitate students' daily interactions with the university.
+To learn more about Next.js, take a look at the following resources:
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-### Built With
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-- [![React][react.js]][react-url]
+## Deploy on Vercel
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-<!-- CONTRIBUTING -->
-
-## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LICENSE -->
-
-## License
-
-Distributed under the MIT License. See [`LICENSE`](https://gitlab.com/opensourceuom/myUoM/-/blob/main/LICENSE) for more information.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- CONTACT -->
-
-## Contact
-
-Open Source UoM - [@opensource_uom](https://twitter.com/opensource_uom) - linux-team@uom.edu.gr - https://opensource.uom.gr/
-
-Project Link: [https://gitlab.com/opensourceuom/myUoM](https://gitlab.com/opensourceuom/myUoM)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/gitlab/contributors/opensourceuom/myUoM?style=for-the-badge
-[forks-shield]: https://img.shields.io/gitlab/forks/opensourceuom/myUoM?style=for-the-badge
-[stars-shield]: https://img.shields.io/gitlab/stars/opensourceuom/myUoM?style=for-the-badge
-[issues-shield]: https://img.shields.io/gitlab/issues/open/opensourceuom/myUoM?style=for-the-badge
-[license-shield]: https://img.shields.io/gitlab/license/opensourceuom/myUoM?style=for-the-badge
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[react.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[react-url]: https://reactjs.org/
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
