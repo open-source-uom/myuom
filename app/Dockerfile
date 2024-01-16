@@ -22,8 +22,5 @@ COPY .. .
 # Build the app
 RUN npm run build
 
-# Make port 3000 available to the world outside this container
-EXPOSE 3000
-
-# Run the app when the container launches
-CMD ["npm", "start"]
+# Copy build to shared volume
+RUN cp -r build /usr/src/app
