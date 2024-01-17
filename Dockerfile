@@ -16,7 +16,7 @@ RUN npm install
 # Update browserslist-db
 RUN npx update-browserslist-db@latest
 
-# Bundle app source inside Docker image 
+# Bundle app source inside Docker image it excludes files in .dockerignore
 COPY .. .
 
 # Build the app

@@ -19,9 +19,9 @@
 
 (σε ξεχωριστό branch πάντα)
 
-1.  Δημιουργία Component στο app/src/pages
-2.  Δημιουργία καταχώρησης στο app/src/assets/ConfigRoutes.js (πιο αναλυτικά παρακάτω)
-3.  Δημιουργία φακέλου στο app/src/components για τα React Components που αξιοποιεί η σελίδα του
+1.  Δημιουργία Component στο src/pages
+2.  Δημιουργία καταχώρησης στο src/assets/ConfigRoutes.js (πιο αναλυτικά παρακάτω)
+3.  Δημιουργία φακέλου στο src/components για τα React Components που αξιοποιεί η σελίδα του
 4.  Οτιδήποτε κείμενο μπορεί να χρειαστεί αλλαγή καλό είναι να πηγαίνει στον φάκελο **src/assets/data**.
 
 Πριν κάνεις το merge request ένα checklist:
