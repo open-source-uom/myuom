@@ -97,9 +97,9 @@ export const Categories = [
     pageToDisplay: <RestaurantPage />,
   },
   {
-    title: "StudentsWeb",
+    title: "Student Portal",
     iconSVG: <StudentInPCIcon />,
-    route: "https://services.uom.gr/unistudent/login.asp",
+    route: "https://sis-portal.uom.gr",
     span: 1,
     isExternal: true,
     requireSelection: false,
