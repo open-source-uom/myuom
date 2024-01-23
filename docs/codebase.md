@@ -23,11 +23,14 @@
 ### Τρέξε τον κώδικα
 
 Προς το παρόν επειδή είναι create-react-app, οι εντολές που χρειάζονται είναι οι εξής:
+#### Με node
 `git clone https://gitlab.com/opensourceuom/myUoM.git`
-
+`cd app`
 `npm install` (βάζει τις απαραίτητες βιβλιοθήκες εφόσον υπάρχει η node.js και το npm διαφορετικά θα χρειαστούν ξεχωριστά κατέβασμα αυτά)
 
 `npm start` τρέχει την εφαρμογή στο localhost:3000, όταν θα γίνει η αλλαγή σε Vite.js θα είναι npm run dev
+#### Με docker
+`docker-compose up --build` (Για την port 80 στα linux χρειάζεται root)
 
 ### Αρχιτεκτονική Εφαρμογής
 

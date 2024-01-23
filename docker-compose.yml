@@ -1,0 +1,35 @@
+version: "3.8"
+services:
+    nodeserver:
+        restart: no
+        container_name: nodeserver
+        build:
+            context: .
+        # ports:
+        #     - "3000:3000"
+        # enable this only on development
+        volumes:
+            - app-volume:/usr/src/app
+        networks:
+            - app-network
+    nginx:
+        restart: unless-stopped
+        container_name: webserver
+        depends_on:
+            - nodeserver
+        build:
+            context: ./nginx
+        ports:
+            - "80:80"
+        networks:
+            - app-network
+        volumes:
+            - app-volume:/usr/src/app
+
+networks: 
+    app-network:
+        driver: bridge
+
+volumes:
+    app-volume: 
+        driver: local
