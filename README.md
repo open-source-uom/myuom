@@ -19,10 +19,10 @@
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 
-[![Forks][forks-shield]](https://gitlab.com/opensourceuom/myUoM/-/forks)
-[![Stargazers][stars-shield]](https://gitlab.com/opensourceuom/myUoM/-/starrers)
-[![Issues][issues-shield]](https://gitlab.com/opensourceuom/myUoM/-/issues)
-[![MIT License][license-shield]](https://gitlab.com/opensourceuom/myUoM/-/blob/main/LICENSE)
+[![Forks][forks-shield]](https://github.com/Open-Source-UoM/MyUoM/fork)
+[![Stargazers][stars-shield]](https://github.com/Open-Source-UoM/MyUoM/stargazers)
+[![Issues][issues-shield]](https://github.com/Open-Source-UoM/MyUoM/issues)
+[![MIT License][license-shield]](https://github.com/Open-Source-UoM/MyUoM/blob/main/LICENSE)
 [![LinkedIn][linkedin-shield]](https://www.linkedin.com/company/80766091)
 
 <!-- PROJECT LOGO -->
@@ -34,14 +34,14 @@
   <p align="center">
     The official University of Macedonia Student application
     <br />
-    <a href="https://gitlab.com/opensourceuom/myUoM"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/Open-Source-UoM/MyUoM"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://my.uom.gr/">View the Project</a>
     ·
-    <a href="https://gitlab.com/opensourceuom/myUoM/-/issues/new">Report Bug</a>
+    <a href="https://github.com/Open-Source-UoM/MyUoM/issues/new">Report Bug</a>
     ·
-    <a href="https://gitlab.com/opensourceuom/myUoM/-/issues/82">Request Feature</a>
+    <a href="github.com/Open-Source-UoM/MyUoM/issues/82">Request Feature</a>
   </p>
 </div>
 
@@ -97,7 +97,7 @@ Don't forget to give the project a star! Thanks again!
 
 ## License
 
-Distributed under the MIT License. See [`LICENSE`](https://gitlab.com/opensourceuom/myUoM/-/blob/main/LICENSE) for more information.
+Distributed under the MIT License. See [`LICENSE`](https://github.com/Open-Source-UoM/MyUoM/blob/main/LICENSE) for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -107,7 +107,7 @@ Distributed under the MIT License. See [`LICENSE`](https://gitlab.com/opensource
 
 Open Source UoM - [@opensource_uom](https://twitter.com/opensource_uom) - linux-team@uom.edu.gr - https://opensource.uom.gr/
 
-Project Link: [https://gitlab.com/opensourceuom/myUoM](https://gitlab.com/opensourceuom/myUoM)
+Project Link: [https://github.com/Open-Source-UoM/MyUoM](https://github.com/Open-Source-UoM/MyUoM)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
