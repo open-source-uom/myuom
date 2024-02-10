@@ -18,7 +18,7 @@
     "react-icons": "^4.4.0",
     "react-img-mapper": "^1.5.1",
     "react-markdown": "^8.0.7",
-    "react-router-dom": "^6.3.0",
+    "react-router-dom": "^6.22.0",
     "react-scripts": "5.0.1",
     "react-social-icons": "^5.14.0",
     "swiper": "^10.2.0",
@@ -47,5 +47,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "safe-buffer": "^5.2.1"
   }
 }
