@@ -49,6 +49,7 @@
     ]
   },
   "devDependencies": {
-    "safe-buffer": "^5.2.1"
+    "safe-buffer": "^5.2.1",
+    "tsconfig-paths": "^4.2.0"
   }
 }

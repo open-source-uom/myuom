@@ -19,10 +19,10 @@
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 
-[![Forks][forks-shield]](https://gitlab.com/opensourceuom/myUoM/-/forks)
-[![Stargazers][stars-shield]](https://gitlab.com/opensourceuom/myUoM/-/starrers)
-[![Issues][issues-shield]](https://gitlab.com/opensourceuom/myUoM/-/issues)
-[![MIT License][license-shield]](https://gitlab.com/opensourceuom/myUoM/-/blob/main/LICENSE)
+[![Forks][forks-shield]](https://github.com/opensourceuom/myUoM/-/forks)
+[![Stargazers][stars-shield]](https://github.com/opensourceuom/myUoM/-/starrers)
+[![Issues][issues-shield]](https://github.com/opensourceuom/myUoM/-/issues)
+[![MIT License][license-shield]](https://github.com/opensourceuom/myUoM/-/blob/main/LICENSE)
 [![LinkedIn][linkedin-shield]](https://www.linkedin.com/company/80766091)
 
 <!-- PROJECT LOGO -->
@@ -34,14 +34,14 @@
   <p align="center">
     The official University of Macedonia Student application
     <br />
-    <a href="https://gitlab.com/opensourceuom/myUoM"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/opensourceuom/myUoM"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://my.uom.gr/">View the Project</a>
     ·
-    <a href="https://gitlab.com/opensourceuom/myUoM/-/issues/new">Report Bug</a>
+    <a href="https://github.com/opensourceuom/myUoM/-/issues/new">Report Bug</a>
     ·
-    <a href="https://gitlab.com/opensourceuom/myUoM/-/issues/82">Request Feature</a>
+    <a href="https://github.com/opensourceuom/myUoM/-/issues/82">Request Feature</a>
   </p>
 </div>
 
@@ -97,7 +97,7 @@ Don't forget to give the project a star! Thanks again!
 
 ## License
 
-Distributed under the MIT License. See [`LICENSE`](https://gitlab.com/opensourceuom/myUoM/-/blob/main/LICENSE) for more information.
+Distributed under the MIT License. See [`LICENSE`](https://github.com/opensourceuom/myUoM/-/blob/main/LICENSE) for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -107,17 +107,17 @@ Distributed under the MIT License. See [`LICENSE`](https://gitlab.com/opensource
 
 Open Source UoM - [@opensource_uom](https://twitter.com/opensource_uom) - linux-team@uom.edu.gr - https://opensource.uom.gr/
 
-Project Link: [https://gitlab.com/opensourceuom/myUoM](https://gitlab.com/opensourceuom/myUoM)
+Project Link: [https://github.com/opensourceuom/myUoM](https://github.com/opensourceuom/myUoM)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/gitlab/contributors/opensourceuom/myUoM?style=for-the-badge
-[forks-shield]: https://img.shields.io/gitlab/forks/opensourceuom/myUoM?style=for-the-badge
-[stars-shield]: https://img.shields.io/gitlab/stars/opensourceuom/myUoM?style=for-the-badge
-[issues-shield]: https://img.shields.io/gitlab/issues/open/opensourceuom/myUoM?style=for-the-badge
-[license-shield]: https://img.shields.io/gitlab/license/opensourceuom/myUoM?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/opensourceuom/myUoM?style=for-the-badge
+[forks-shield]: https://img.shields.io/github/forks/opensourceuom/myUoM?style=for-the-badge
+[stars-shield]: https://img.shields.io/github/stars/opensourceuom/myUoM?style=for-the-badge
+[issues-shield]: https://img.shields.io/github/issues/open/opensourceuom/myUoM?style=for-the-badge
+[license-shield]: https://img.shields.io/github/license/opensourceuom/myUoM?style=for-the-badge
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [react.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [react-url]: https://reactjs.org/
