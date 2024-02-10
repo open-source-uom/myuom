@@ -116,8 +116,9 @@ Project Link: [https://github.com/Open-Source-UoM/MyUoM](https://github.com/Open
 [contributors-shield]: https://img.shields.io/github/contributors/Open-Source-UoM/myUoM?style=for-the-badge
 [forks-shield]: https://img.shields.io/github/forks/Open-Source-UoM/myUoM?style=for-the-badge
 [stars-shield]: https://img.shields.io/github/stars/Open-Source-UoM/myUoM?style=for-the-badge
-[issues-shield]: https://img.shields.io/github/issues/open/Open-Source-UoM/myUoM?style=for-the-badge
+[issues-shield]: https://img.shields.io/github/Open-Source-UoM/myUoM/issues?style=for-the-badge
 [license-shield]: https://img.shields.io/github/license/Open-Source-UoM/myUoM?style=for-the-badge
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [react.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [react-url]: https://reactjs.org/
+
