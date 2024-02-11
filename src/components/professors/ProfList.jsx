@@ -36,29 +36,31 @@
 
 */
 
-import {
-  VStack,
-  Input,
-  InputLeftElement,
-  InputGroup,
-  useColorModeValue,
-  Text,
-} from "@chakra-ui/react";
 import { SearchIcon } from "@chakra-ui/icons";
+import {
+  Input,
+  InputGroup,
+  InputLeftElement,
+  Text,
+  VStack,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import { useState } from "react";
+import {
+  useDepName,
+  useProfessors,
+  useScrollToTopOnLoad,
+  useSecretary,
+} from "../../hooks";
+import i18n from "../../i18n.js";
 import ProfComponent from "./ProfCard.jsx";
 import SecrCard from "./SecrCard.jsx";
-import { useDepName, useProfessors, useScrollToTopOnLoad, useSecretary } from "../../hooks"
-import i18n from '../../i18n.js';
-
-
 
 const formatString = (string) =>
   string
     .toLowerCase()
     .normalize("NFD")
     .replace(/\p{Diacritic}| /gu, "");
-
 
 function profsFilter(prof, searchTerm) {
   const formattedFirstName = formatString(prof.fname);
@@ -68,9 +70,7 @@ function profsFilter(prof, searchTerm) {
     formattedFirstName
       .concat(formattedLastName)
       .includes(formattedSearchTerm) ||
-    formattedLastName
-      .concat(formattedFirstName)
-      .includes(formattedSearchTerm);
+    formattedLastName.concat(formattedFirstName).includes(formattedSearchTerm);
   if (searchTermCorrespondsToProfName) return true;
   if (prof.email.includes(searchTerm)) return true;
 }
@@ -78,11 +78,10 @@ function profsFilter(prof, searchTerm) {
 function searchProfessorsOfDepartment(searchTerm, profArray) {
   if (!searchTerm) return profArray;
   return profArray.filter((prof) => profsFilter(prof, searchTerm));
-
 }
 export default function ProfList() {
   useScrollToTopOnLoad();
-  const [depName,] = useDepName();
+  const { depName } = useDepName();
   const [searchTerm, setSearchTerm] = useState("");
   const secretary = useSecretary(depName);
   const profArray = useProfessors(depName);

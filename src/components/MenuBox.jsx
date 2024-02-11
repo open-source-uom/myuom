@@ -52,10 +52,11 @@ import { useDepName, useDepartments } from "../hooks";
 export default function MenuBox({ category }) {
   const { title, iconSVG, route, span, isExternal, requireSelection } =
     category;
-  const [depName, depCode] = useDepName();
+  const { depName, depCode } = useDepName();
   const departments = useDepartments();
   const toast = useToast();
-  let condition = requireSelection && !departments.map(dep => dep.code).includes(depCode);
+  const condition =
+    requireSelection && !departments.find((dep) => dep.code === depCode);
 
   const rotateIn = {
     initial: {
