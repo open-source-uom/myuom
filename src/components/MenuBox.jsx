@@ -36,19 +36,18 @@
 
 */
 
-import { useContext } from "react";
 import {
   Box,
-  useColorModeValue,
-  Heading,
-  GridItem,
   Flex,
+  GridItem,
+  Heading,
+  useColorModeValue,
   useToast,
 } from "@chakra-ui/react";
-import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import { DiagonalRightArrowIcon, RightArrowIcon } from "../assets/icons";
-import { useDepartments, useDepName } from "../hooks";
+import { useDepName, useDepartments } from "../hooks";
 
 export default function MenuBox({ category }) {
   const { title, iconSVG, route, span, isExternal, requireSelection } =
@@ -120,22 +119,19 @@ export default function MenuBox({ category }) {
       backgroundColor={useColorModeValue("#0050e0", "transparent")}
       className={`menu-box span-${span} ${condition ? "disabled" : ""}`}
       rounded="0.75rem"
-      p={{ sm: 2, md: 4, lg: 6 }}
-    >
+      p={{ sm: 2, md: 4, lg: 6 }}>
       <Flex
         w="100%"
         flexDirection="row"
         alignItems="center"
-        justifyContent="space-between"
-      >
+        justifyContent="space-between">
         <Box
           minW={{ sm: "24px", md: "48px", lg: "52px" }}
           maxW={{ sm: "24px", md: "48px", lg: "52px" }}
           className={`svg-container ${useColorModeValue(
             "light-mode-svg",
             "dark-mode-svg"
-          )}`}
-        >
+          )}`}>
           {iconSVG}
         </Box>
         <Box
@@ -144,8 +140,7 @@ export default function MenuBox({ category }) {
           className={`svg-container ${useColorModeValue(
             "light-mode-svg",
             "dark-mode-svg"
-          )}`}
-        >
+          )}`}>
           {isExternal ? <DiagonalRightArrowIcon /> : <RightArrowIcon />}
         </Box>
       </Flex>
@@ -154,8 +149,7 @@ export default function MenuBox({ category }) {
         color="#f3f3f3"
         w="100%"
         fontWeight={500}
-        fontFamily="Syne"
-      >
+        fontFamily="Syne">
         {title}
       </Heading>
     </GridItem>
