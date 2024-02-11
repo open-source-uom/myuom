@@ -54,7 +54,7 @@ import i18n from "../i18n";
 export default function MenuBox({ category }) {
   const { title, iconSVG, route, span, isExternal, requireSelection } =
       category;
-  const [depName, depCode] = useDepName();
+  const { depName, depCode } = useDepName();
   const departments = useDepartments();
 
   const toast = useToast();
