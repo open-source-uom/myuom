@@ -72,9 +72,9 @@ export default function GraduationPage() {
     <Box>
       {gradLink ? (
         <Heading textAlign="center" marginTop="50px">
-          {i18n.t("graduation_redirection_message")}
+          Ανακατεύθυνση στο τμήμα
           <a href={gradLink.link} target="_blank" rel="noreferrer">
-            {gradLink.link}
+            {gradLink.code}
           </a>
         </Heading>
       ) : (
