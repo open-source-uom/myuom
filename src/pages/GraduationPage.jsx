@@ -68,8 +68,8 @@ export default function GraduationPage() {
       {gradLink ? (
         <Heading textAlign="center" marginTop="50px">
           Ανακατεύθυνση στο τμήμα
-          <a href={gradLink} target="_blank" rel="noreferrer">
-            {gradLink}
+          <a href={gradLink.link} target="_blank" rel="noreferrer">
+            {gradLink.code}
           </a>
         </Heading>
       ) : (
