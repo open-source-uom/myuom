@@ -58,7 +58,7 @@ export default function MenuBox({ category }) {
 
   const toast = useToast();
   const isDisabled =
-    requireSelection && !departments.find((dep) => dep.code === depCode);
+    requireSelection && (!depCode || !departments.some((dep) => dep.code === depCode));
   const rotateIn = useMemo(
     () => ({
       initial: {
