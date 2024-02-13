@@ -111,6 +111,10 @@ Project Link: [https://gitlab.com/opensourceuom/myUoM](https://gitlab.com/openso
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## Thanks to all the Contributors ❤️
+
+<img src="https://contrib.rocks/image?repo=Open-Source-UoM/MyUoM" />
+
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/gitlab/contributors/opensourceuom/myUoM?style=for-the-badge
