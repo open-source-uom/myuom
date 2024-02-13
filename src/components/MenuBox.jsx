@@ -45,6 +45,7 @@ import {
   useToast,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
+import { useMemo } from "react";
 import { useNavigate } from "react-router-dom";
 import { DiagonalRightArrowIcon, RightArrowIcon } from "../assets/icons";
 import { useDepName, useDepartments } from "../hooks";
@@ -54,23 +55,27 @@ export default function MenuBox({ category }) {
     category;
   const [depName, depCode] = useDepName();
   const departments = useDepartments();
-  const toast = useToast();
-  let condition = requireSelection && !departments.map(dep => dep.code).includes(depCode);
 
-  const rotateIn = {
-    initial: {
-      rotateX: "180deg",
-      opacity: 0,
-    },
-    inView: {
-      rotateX: "0deg",
-      opacity: condition ? 0.6 : 1,
-      transition: {
-        duration: 0.45,
-        ease: "easeIn",
+  const toast = useToast();
+  const isDisabled =
+    requireSelection && !departments.find((dep) => dep.code === depCode);
+  const rotateIn = useMemo(
+    () => ({
+      initial: {
+        rotateX: "180deg",
+        opacity: 0,
       },
-    },
-  };
+      inView: {
+        rotateX: "0deg",
+        opacity: isDisabled ? 0.6 : 1,
+        transition: {
+          duration: 0.45,
+          ease: "easeIn",
+        },
+      },
+    }),
+    [isDisabled]
+  );
 
   const navigate = useNavigate();
 
@@ -104,6 +109,8 @@ export default function MenuBox({ category }) {
   return (
     <GridItem
       as={motion.div}
+      // force remount for isDisabled to take effect (framer motion quirk)
+      key={`${title}-isDisabled-${isDisabled}`}
       variants={rotateIn}
       viewport={{ once: true }}
       cursor="pointer"
@@ -117,7 +124,7 @@ export default function MenuBox({ category }) {
       justifyContent="space-between"
       borderColor={useColorModeValue("#0050e0", "#f3f3f3")}
       backgroundColor={useColorModeValue("#0050e0", "transparent")}
-      className={`menu-box span-${span} ${condition ? "disabled" : ""}`}
+      className={`menu-box span-${span}`}
       rounded="0.75rem"
       p={{ sm: 2, md: 4, lg: 6 }}>
       <Flex
