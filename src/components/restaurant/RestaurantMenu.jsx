@@ -37,15 +37,15 @@
 */
 
 import {
-  Box,
-  AccordionItem,
-  AccordionButton,
-  AccordionPanel,
-  AccordionIcon,
   Accordion,
-  Text,
+  AccordionButton,
+  AccordionIcon,
+  AccordionItem,
+  AccordionPanel,
+  Box,
   List,
   ListItem,
+  Text,
   useColorModeValue,
 } from "@chakra-ui/react";
 
@@ -58,8 +58,7 @@ function Menu({ dailyFoodMenu }) {
       borderRadius="24px"
       overflow="hidden"
       border="2px"
-      borderColor={useColorModeValue("#0050e0", "#f3f3f3")}
-    >
+      borderColor={useColorModeValue("#0050e0", "#f3f3f3")}>
       <AccordionItem border="none" w="100%">
         <AccordionButton
           // display="flex"
@@ -77,8 +76,7 @@ function Menu({ dailyFoodMenu }) {
           border="none"
           alt="profPic"
           overflow="hidden"
-          gap={3}
-        >
+          gap={3}>
           <Text
             w="100%"
             display="flex"
@@ -86,8 +84,7 @@ function Menu({ dailyFoodMenu }) {
             alignItems="center"
             justifyContent="start"
             fontWeight="bold"
-            fontSize={{ sm: 14, md: 16, lg: 18 }}
-          >
+            fontSize={{ sm: 14, md: 16, lg: 18 }}>
             {dailyFoodMenu.day}
           </Text>
           <AccordionIcon />
@@ -102,8 +99,7 @@ function Menu({ dailyFoodMenu }) {
               borderRadius="16px"
               overflow="hidden"
               border="2px"
-              borderColor={useColorModeValue("#0050e0", "#f3f3f3")}
-            >
+              borderColor={useColorModeValue("#0050e0", "#f3f3f3")}>
               <AccordionItem border="none">
                 <AccordionButton
                   display="flex"
@@ -121,8 +117,7 @@ function Menu({ dailyFoodMenu }) {
                   border="none"
                   alt="profPic"
                   overflow="hidden"
-                  gap={3}
-                >
+                  gap={3}>
                   <Text
                     w="100%"
                     display="flex"
@@ -131,8 +126,7 @@ function Menu({ dailyFoodMenu }) {
                     justifyContent="start"
                     fontWeight="bold"
                     fontFamily="Syne"
-                    fontSize={{ sm: 14, md: 16, lg: 18 }}
-                  >
+                    fontSize={{ sm: 14, md: 16, lg: 18 }}>
                     {i18n.t("gevma")}
                   </Text>
                   <AccordionIcon />
@@ -145,24 +139,22 @@ function Menu({ dailyFoodMenu }) {
                       ...dailyFoodMenu.gevmaGarnitoura,
                       ...dailyFoodMenu.gevmaSalata,
                       ...dailyFoodMenu.gevmaEpidorpio,
-                    ]).map(
-                      (val, index) =>
-                        val && (
-                          <ListItem key={index}>
-                            <Text
-                              w="100%"
-                              display="flex"
-                              direction="row"
-                              alignItems="flex-start"
-                              justifyContent="center"
-                              fontWeight="bold"
-                              fontFamily="Syne"
-                              fontSize={{ sm: 14, md: 16, lg: 18 }}
-                            >
-                              {val}
-                            </Text>
-                          </ListItem>
-                        )
+                    ]).map((val, index) =>
+                      val ? (
+                        <ListItem key={index}>
+                          <Text
+                            w="100%"
+                            display="flex"
+                            direction="row"
+                            alignItems="flex-start"
+                            justifyContent="center"
+                            fontWeight="bold"
+                            fontFamily="Syne"
+                            fontSize={{ sm: 14, md: 16, lg: 18 }}>
+                            {val}
+                          </Text>
+                        </ListItem>
+                      ) : null
                     )}
                   </List>
                 </AccordionPanel>
@@ -174,8 +166,7 @@ function Menu({ dailyFoodMenu }) {
               borderRadius="16px"
               overflow="hidden"
               border="2px"
-              borderColor={useColorModeValue("#0050e0", "#f3f3f3")}
-            >
+              borderColor={useColorModeValue("#0050e0", "#f3f3f3")}>
               <AccordionItem border="none">
                 <AccordionButton
                   display="flex"
@@ -193,8 +184,7 @@ function Menu({ dailyFoodMenu }) {
                   border="none"
                   alt="profPic"
                   overflow="hidden"
-                  gap={3}
-                >
+                  gap={3}>
                   <Text
                     w="100%"
                     display="flex"
@@ -203,8 +193,7 @@ function Menu({ dailyFoodMenu }) {
                     justifyContent="start"
                     fontWeight="bold"
                     fontFamily="Syne"
-                    fontSize={{ sm: 14, md: 16, lg: 18 }}
-                  >
+                    fontSize={{ sm: 14, md: 16, lg: 18 }}>
                     {i18n.t("deipno")}
                   </Text>
                   <AccordionIcon />
@@ -217,24 +206,22 @@ function Menu({ dailyFoodMenu }) {
                       ...dailyFoodMenu.deipnoGarnitoura,
                       ...dailyFoodMenu.deipnoSalata,
                       ...dailyFoodMenu.deipnoEpidorpio,
-                    ]).map(
-                      (val, index) =>
-                        val && (
-                          <ListItem key={index}>
-                            <Text
-                              w="100%"
-                              display="flex"
-                              direction="row"
-                              alignItems="flex-start"
-                              justifyContent="center"
-                              fontWeight="bold"
-                              fontFamily="Syne"
-                              fontSize={{ sm: 14, md: 16, lg: 18 }}
-                            >
-                              {val}
-                            </Text>
-                          </ListItem>
-                        )
+                    ]).map((val, index) =>
+                      val ? (
+                        <ListItem key={index}>
+                          <Text
+                            w="100%"
+                            display="flex"
+                            direction="row"
+                            alignItems="flex-start"
+                            justifyContent="center"
+                            fontWeight="bold"
+                            fontFamily="Syne"
+                            fontSize={{ sm: 14, md: 16, lg: 18 }}>
+                            {val}
+                          </Text>
+                        </ListItem>
+                      ) : null
                     )}
                   </List>
                 </AccordionPanel>

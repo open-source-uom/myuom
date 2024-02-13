@@ -35,28 +35,34 @@
     -Fakidis
 
 */
-import React from "react";
 import { Divider, Flex } from "@chakra-ui/react";
-import GuideButton from "../components/freshmen/GuideButton.jsx";
+import React from "react";
 import Guide from "../components/freshmen/Guide.jsx";
-import { useScrollToTopOnLoad } from "../hooks/useScrollToTopOnLoad";
+import GuideButton from "../components/freshmen/GuideButton.jsx";
 import { useGuidesMdData } from "../hooks/useGuidesMdData.js";
+import { useScrollToTopOnLoad } from "../hooks/useScrollToTopOnLoad";
 
 function ButtonListPage() {
   useScrollToTopOnLoad();
-  const { guideMd, firstYearGuidesTranslated, fetchGuideByPath, setGuideMd } = useGuidesMdData();
+  const { guideMd, firstYearGuidesTranslated, fetchGuideByPath, setGuideMd } =
+    useGuidesMdData();
 
   return (
     <>
-      {guideMd && (
+      {guideMd ? (
         <Guide onClick={(e) => setGuideMd("")} guideContent={guideMd} />
-      )}
-      {!guideMd && (
+      ) : null}
+      {!guideMd ? (
         <Flex direction="column" paddingX={4} align="center">
           <Flex
             direction="column"
-            w={{ sm: "100%", md: "90%", lg: "80%", "2xl": "60%", "3xl": "50%" }}
-          >
+            w={{
+              sm: "100%",
+              md: "90%",
+              lg: "80%",
+              "2xl": "60%",
+              "3xl": "50%",
+            }}>
             {firstYearGuidesTranslated.map((item, index) => (
               <React.Fragment key={`guide-${index}`}>
                 <GuideButton
@@ -65,7 +71,7 @@ function ButtonListPage() {
                   onClick={fetchGuideByPath}
                 />
                 {/* Last item should not have a divider on the bottom */}
-                {index !== firstYearGuidesTranslated.length - 1 && (
+                {index !== firstYearGuidesTranslated.length - 1 ? (
                   <Divider
                     borderColor="#0050e0"
                     _dark={{ borderColor: "#f3f3f3" }}
@@ -73,15 +79,14 @@ function ButtonListPage() {
                     borderBottomWidth={2}
                     opacity={1}
                   />
-                )}
+                ) : null}
               </React.Fragment>
             ))}
           </Flex>
         </Flex>
-      )}
-
+      ) : null}
     </>
   );
-};
+}
 
 export default ButtonListPage;

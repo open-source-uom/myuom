@@ -35,7 +35,6 @@
     -Fakidis
 
 */
-import { useState, useEffect } from "react";
 import {
   Box,
   Button,
@@ -44,11 +43,12 @@ import {
   useBreakpointValue,
   useColorModeValue,
 } from "@chakra-ui/react";
+import { useEffect, useState } from "react";
 import MapCords from "../components/maps/MapCords";
-import i18n from "../i18n";
 import SelectBuildingDropdown from "../components/maps/SelectBuildingDropdown.jsx";
 import SelectOfficeDropdown from "../components/maps/SelectOfficeDropdown.jsx";
 import { useDepName, useMapData } from "../hooks";
+import i18n from "../i18n";
 
 function MapPage() {
   const [depName] = useDepName();
@@ -93,11 +93,11 @@ function MapPage() {
           handleChange={handleLocationCategoryChange}
           newOptions={categoryOptions}
         />
-        {isSpecificForDepartment && depName && (
+        {isSpecificForDepartment && depName ? (
           <Text color={"#bcb6c4"} fontSize={"sm"}>
             {departmentHint}
           </Text>
-        )}
+        ) : null}
         <SelectOfficeDropdown
           locations={locations}
           handleChange={(selection) => setSelectedLocation(selection)}
@@ -105,7 +105,7 @@ function MapPage() {
           setSelectedText={setSelectedText}
         />
       </Stack>
-      {selectedLocation && <MapCords {...locationData} />}
+      {selectedLocation ? <MapCords {...locationData} /> : null}
       <Button
         _hover={false}
         bgColor={useColorModeValue("#0050e0", "#f3f3f3")}
@@ -116,8 +116,7 @@ function MapPage() {
           window.open(
             "https://www.uom.gr/about/eikonikh-perihghsh-360-sup-o-sup-sto-panepisthmio-makedonias"
           );
-        }}
-      >
+        }}>
         {i18n.t("virtual_tour")} 360°
       </Button>
     </Box>
