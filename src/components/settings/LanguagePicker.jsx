@@ -66,7 +66,7 @@ function LanguagePicker() {
     // It is needed to fetch the translated assets
     document.location.reload();
   }
-  return (<Flex mb={"0.5rem"} justifyContent={"center"} alignItems={"center"} columnGap={"2rem"}>
+  return (<Flex mb={"1.5rem"} justifyContent={"center"} alignItems={"center"} columnGap={"2rem"}>
     {i18n.t("change_language")}
     <GreekFlag onClick={() => changeLanguage("el")} />
     <UKFlag onClick={() => changeLanguage("en")} />
