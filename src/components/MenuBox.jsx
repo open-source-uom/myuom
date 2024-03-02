@@ -37,7 +37,6 @@
 */
 
 import {
-  useColorMode,
   Box,
   Flex,
   GridItem,
@@ -102,7 +101,6 @@ export default function MenuBox({ category }) {
     }
   };
 
-  const colorMode = useColorMode();
   const bgColor = condition ? "#2e2e2e" : "transparent";
 
   return (
