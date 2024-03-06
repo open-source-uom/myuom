@@ -48,6 +48,7 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { DiagonalRightArrowIcon, RightArrowIcon } from "../assets/icons";
 import { useDepName, useDepartments } from "../hooks";
+import i18n from "../i18n";
 
 export default function MenuBox({ category }) {
   const { title, iconSVG, route, span, isExternal, requireSelection } =
@@ -88,8 +89,8 @@ export default function MenuBox({ category }) {
       if (!toast.isActive(id)) {
         toast({
           id,
-          title: "Δεν έχει επιλεγεί τμήμα",
-          description: "Παρακαλώ επιλέξτε τμήμα από τις ρυθμίσεις",
+          title: i18n.t("error_title"),
+          description: i18n.t("error_description"),
           status: "error",
           duration: 5000,
           isClosable: true,
@@ -118,7 +119,7 @@ export default function MenuBox({ category }) {
       alignItems="center"
       justifyContent="space-between"
       borderColor={useColorModeValue("#0050e0", "#f3f3f3")}
-      backgroundColor={useColorModeValue("#0050e0",bgColor)}
+      backgroundColor={useColorModeValue("#0050e0", bgColor)}
       className={`menu-box span-${span} ${condition ? "disabled" : ""}`}
       rounded="0.75rem"
       p={{ sm: 2, md: 4, lg: 6 }}>
