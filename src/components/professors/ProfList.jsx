@@ -110,8 +110,8 @@ export default function ProfList() {
       </InputGroup>
 
       {filteredArray.length ? (
-        filteredArray.map((prof) => (
-          <ProfComponent prof={prof} key={prof.tel} />
+        filteredArray.map((prof,index) => (
+          <ProfComponent prof={prof} key={index} />
         ))
       ) : (
         <Text as="h1" fontFamily="Syne">
