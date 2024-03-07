@@ -63,7 +63,7 @@ export const AnnouncementsData = [
     code: DEPARTMENT_CODES.ECONOMICS,
     link: "https://www.uom.gr/eco#undefined1",
   }, {
-    code: DEPARTMENT_CODES.FINANCE,
+    code: DEPARTMENT_CODES.ACCOUNTING_FINANCE,
     link: "https://www.uom.gr/fin",
   }, {
     code: DEPARTMENT_CODES.MUSIC,
