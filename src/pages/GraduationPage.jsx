@@ -36,10 +36,11 @@
 
 */
 
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 import { Heading, Box, useToast } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 import { useDepName, useGraduationLink } from '../hooks';
+import i18n from "../i18n";
 
 export default function GraduationPage() {
 
@@ -47,11 +48,13 @@ export default function GraduationPage() {
   const toast = useToast();
   const navigate = useNavigate();
   const gradLink = useGraduationLink(depCode);
+  const hasOpenedLinkRef = useRef(false);
+
   useEffect(() => {
     if (!depCode) {
       toast({
-        title: "Δεν έχει επιλεγεί τμήμα",
-        description: "Παρακαλώ επιλέξτε τμήμα από τις ρυθμίσεις",
+        title: i18n.t("error_title"),
+        description: i18n.t("error_description"),
         status: "error",
         duration: 5000,
         isClosable: true,
@@ -60,23 +63,24 @@ export default function GraduationPage() {
     }
     if (gradLink) {
       window.open(gradLink.link);
-      navigate("/")
+      navigate("/");
+      hasOpenedLinkRef.current = true;
     }
 
-  }, [depCode]);
+  }, [depCode, gradLink, navigate, toast]);
 
   return (
     <Box>
       {gradLink ? (
         <Heading textAlign="center" marginTop="50px">
-          Ανακατεύθυνση στο τμήμα
-          <a href={gradLink} target="_blank" rel="noreferrer">
-            {gradLink}
+          {i18n.t("graduation_redirection_message")}
+          <a href={gradLink.link} target="_blank" rel="noreferrer">
+            {gradLink.link}
           </a>
         </Heading>
       ) : (
         <Heading textAlign="center" marginTop="50px">
-          Παρακαλώ επιλέξτε τμήμα από τις ρυθμίσεις.
+          {i18n.t("graduation_description")}
         </Heading>
       )}
     </Box>
