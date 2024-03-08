@@ -53,19 +53,14 @@ function AboutSettingsPage() {
       fontSize={{ sm: 11.95, md: 16, lg: 26, xl: 32 }}
     >
       <Image src={UoMLogo} width="200px" height="200px" />
-      <Text marginTop="1em" fontSize={{ sm: 26, md: 30, lg: 34, xl: 38 }}>
+      <Text marginTop="1em" marginBottom="2rem" fontSize={{ sm: 26, md: 30, lg: 34, xl: 38 }}>
         {i18n.t("about_title")}
         <br />
         {i18n.t("about_version")}
-        <br />
-        <br />
       </Text>
-      <Text fontSize={{ sm: 17, md: 21, lg: 26, xl: 30 }}>
-        @2023 OpenSourceUoM Team
-        <br />
-        All rights reserved
-        <br />
-        <br />
+      <Text fontSize={{ sm: 17, md: 21, lg: 26, xl: 30 }} mb="1.2rem" >
+        <Text>@2023 OpenSourceUoM Team</Text>
+        <Text>All rights reserved</Text>
       </Text>
       <Text fontSize={{ sm: 17, md: 21, lg: 26, xl: 30 }}>
         {i18n.t("about_find_us_on_socials")}
