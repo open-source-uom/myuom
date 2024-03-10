@@ -40,14 +40,20 @@ import { Flex, Link, Image, Text, useColorModeValue } from "@chakra-ui/react";
 
 export default function ServicesCard({ srv }) {
   return (
-    <Link href={srv.url} isExternal>
+    <Link href={srv.url} isExternal w="100%" display="flex" flexDir="column" alignItems="center">
       <Flex
         display="flex"
         direction="row"
         alignItems="center"
         justifyContent="start"
         _hover={{ bg: "transparent" }}
-        w="100%"
+        w={{
+          sm: "100%",
+          md: "90%",
+          lg: "80%",
+          "2xl": "60%",
+          "3xl": "50%",
+        }}
         h="100%"
         outline="none"
         textAlign="center"
