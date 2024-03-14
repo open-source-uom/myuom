@@ -13,7 +13,7 @@ Below is a list of things a person can do that are always useful for the applica
 
 > If none of this excites you, you can start by contacting members of the team to see if there is a need not listed above.
 
-Now for those who want to add something to the app having knowledge of React and Chakra-UI(it's component library is quickly learned), it would help them to read [codebase.md](https://gitlab.com/opensourceuom/myUoM/-/blob/main/docs/codebase.md) for a start where there is more detail about the code written.
+Now for those who want to add something to the app having knowledge of React and Chakra-UI(it's component library is quickly learned), it would help them to read [codebase.md](https://github.com/Open-Source-UoM/MyUoM/-/blob/main/docs/codebase.md) for a start where there is more detail about the code written.
 
 If one specifically wants to add a tile-feature to the application, the process to follow briefly is as follows:
 
