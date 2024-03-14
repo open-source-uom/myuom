@@ -2,7 +2,7 @@
 
 This document is intended to facilitate reading the codebase of the MyUoM application and for people who would like to help by writing code or (debugging).
 
-Contents:
+### Contents:
 
 - Project Libraries
 - Application Architecture
