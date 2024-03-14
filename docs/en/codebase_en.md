@@ -27,7 +27,7 @@ For now because it's create-react-app, the commands needed are:
 
 `npm install` (puts the necessary libraries if node.js and npm are present otherwise they will need to be downloaded separately)
 
-`npm start` runs the application on localhost:3000, when the change to Vite.js is made it will be npm run dev
+`npm start` runs the application on [localhost:3000](http://localhost:3000), when the change to Vite.js is made it will be `npm run dev`
 
 ### Application Architecture
 
