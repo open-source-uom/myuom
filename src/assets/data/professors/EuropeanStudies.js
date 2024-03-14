@@ -115,7 +115,8 @@ export const professors =
                 office: '421B'
             },
             {
-                imgUrl: 'https://www.uom.gr/assets/site/public/nodes/1731/1190-icons-2.jpg',
+                // imgUrl: 'https://www.uom.gr/assets/site/public/nodes/1731/1190-icons-2.jpg',
+                imgUrl: 'https://www.uom.gr/site/images/personphoto-2.jpg',
                 fname: i18n.t('ioannis'),
                 lname: i18n.t('konstantinidis'),
                 title: i18n.t('anaplirotisKathigitis'),

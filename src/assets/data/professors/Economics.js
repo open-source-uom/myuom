@@ -177,7 +177,8 @@ export const professors =
                 office: '308'
             },
             {
-                imgUrl: 'https://www.uom.gr/assets/site/public/nodes/8623/8100-PHOTO-2.png',
+                // imgUrl: 'https://www.uom.gr/assets/site/public/nodes/8623/8100-PHOTO-2.png',
+                imgUrl: 'https://www.uom.gr/site/images/personphoto-2.jpg',
                 fname: 'katerina',
                 lname: 'litina',
                 title: 'epikouriKathigitria',
