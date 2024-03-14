@@ -23,7 +23,7 @@ For some additional icons the libraries [react-icons](https://react-icons.github
 ### Run the code
 
 For now because it's create-react-app, the commands needed are:
-`git clone https://gitlab.com/opensourceuom/myUoM.git`
+`git clone https://github.com/Open-Source-UoM/MyUoM.git/`
 
 `npm install` (puts the necessary libraries if node.js and npm are present otherwise they will need to be downloaded separately)
 
