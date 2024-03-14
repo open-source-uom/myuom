@@ -15,7 +15,7 @@ This document is intended to facilitate reading the codebase of the MyUoM applic
 
 ### Libraries project
 
-For the frontend we used reactjs along with [Chakra UI](https://chakra-ui.com/) as a library for ready-made components and styling (it also provides various tools and some icons).
+For the frontend we used [React.js](https://react.dev/learn) along with [Chakra UI](https://chakra-ui.com/) as a library for ready-made components and styling (it also provides various tools and some icons).
 For the animations we also used the framer-motion library(dependency of Chakra UI which we needed additionally). For routing the library [react router dom v6](https://reactrouter.com/en/v6.3.0/getting-started/overview) was utilized.
 The application started using [create-react-app](https://create-react-app.dev/) for convenience(but will soon be changed to Vite.js, and typescript).
 For some additional icons the libraries [react-icons](https://react-icons.github.io/react-icons/) and [react-social-icons](https://www.npmjs.com/package/react-social-icons) were also used.
