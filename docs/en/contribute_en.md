@@ -28,6 +28,6 @@ Before you do the merge request a checklist:
 
 - [ ] Is everything you have done mobile responsive, it looks good on mobile.
 - [ ] The themes of the app have been used, light and dark mode have been taken into account.
-- [ ] Everything has been translated into text(probably if help is needed, a reference to team members is enough to translate the contents of the branch,one can consult [translations.md](https://gitlab.com/opensourceuom/myUoM/-/blob/main/docs/translations.md) for more details)
+- [ ] Everything has been translated into text(probably if help is needed, a reference to team members is enough to translate the contents of the branch,one can consult [translations.md](https://github.com/Open-Source-UoM/MyUoM//-/blob/main/docs/translations.md) for more details)
 - [ ] Any code written should be in the right place(e.g. custom icons in src/assets/icons, custom hooks in src/hooks etc.)
 - [ ] The code you deliver should be maintainable and not contain obvious errors (e.g. a component has 1000 lines of code, or is not organized in folders etc.)
