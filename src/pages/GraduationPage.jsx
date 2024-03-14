@@ -36,14 +36,13 @@
 
 */
 
-import { useEffect } from 'react'
-import { Heading, Box, useToast } from "@chakra-ui/react";
+import { Box, Heading, useToast } from "@chakra-ui/react";
+import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { useDepName, useGraduationLink } from '../hooks';
+import { useDepName, useGraduationLink } from "../hooks";
 
 export default function GraduationPage() {
-
-  const [, depCode] = useDepName();
+  const { depCode } = useDepName();
   const toast = useToast();
   const navigate = useNavigate();
   const gradLink = useGraduationLink(depCode);
@@ -60,9 +59,8 @@ export default function GraduationPage() {
     }
     if (gradLink) {
       window.open(gradLink.link);
-      navigate("/")
+      navigate("/");
     }
-
   }, [depCode]);
 
   return (
@@ -70,8 +68,8 @@ export default function GraduationPage() {
       {gradLink ? (
         <Heading textAlign="center" marginTop="50px">
           Ανακατεύθυνση στο τμήμα
-          <a href={gradLink} target="_blank" rel="noreferrer">
-            {gradLink}
+          <a href={gradLink.link} target="_blank" rel="noreferrer">
+            {gradLink.code}
           </a>
         </Heading>
       ) : (
@@ -81,6 +79,4 @@ export default function GraduationPage() {
       )}
     </Box>
   );
-
 }
-

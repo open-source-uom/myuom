@@ -51,7 +51,7 @@ import { useDepName, useMapData } from "../hooks";
 import i18n from "../i18n";
 
 function MapPage() {
-  const [depName] = useDepName();
+  const { depName } = useDepName();
   const {
     isSpecificForDepartment,
     categoryOptions,
