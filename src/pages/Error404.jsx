@@ -38,6 +38,7 @@
 
 import { Box, Text } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
+import i18n from "../i18n";
 
 function Error404() {
     const navigate = useNavigate();
@@ -50,9 +51,9 @@ function Error404() {
       fontSize={{ sm: 11.95, md: 16, lg: 26, xl: 32 }}
     >
       <Text fontSize={{ sm: 26, md: 30, lg: 34, xl: 38 }}>
-        Error 404
+        {i18n.t("error_404")}
         <br />
-        Page Not Found
+        {i18n.t("page_not_found")}
         <br />
         <br />
         
@@ -66,7 +67,7 @@ function Error404() {
             onMouseOver={(e) => e.target.style.color = 'blue'} 
             onMouseOut={(e) => e.target.style.color = 'black'} 
         >
-            Go to Homepage    
+            {i18n.t("go_to_homepage")}   
         </button>
                 
       </Text>
