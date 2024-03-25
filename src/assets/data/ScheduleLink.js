@@ -60,7 +60,7 @@ export const schedulesData = new Map([
   ],
   [
     // Τμήμα Εκπαιδευτικής & Κοινωνικής Πολιτικής
-    DEPARTMENT_CODES.EDUCATIONAL_POLICIES,
+    DEPARTMENT_CODES.EDUCATION,
     {
       semester:
         "https://www.uom.gr/esp/orologio-programma-didaskalias",
@@ -109,8 +109,8 @@ export const schedulesData = new Map([
     DEPARTMENT_CODES.BUSINESS_ADMINISTRATION,
     {
       semester:
-        "https://www.uom.gr/ba/orologio-programma-didaskalias-earinoy-eksamhnoy-akad-etoys-2022-2023",
-      exam: "https://www.uom.gr/ba/programma-eksetaseon-septembrioy-akad-etoys-2022-2023",
+        "https://www.uom.gr/ba/orologio-programma-didaskalias-earinoy-eksamhnoy-akad-etoys-2023-2024",
+      exam: "https://www.uom.gr/ba/programma-eksetastikhs-periodoy-febroyarioy-2024",
     },
   ]
 ]);
