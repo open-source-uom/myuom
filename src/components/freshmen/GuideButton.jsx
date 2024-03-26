@@ -13,11 +13,11 @@ const GuideButton = ({ text, guidePath, onClick }) => {
       paddingX={4}
     >
       <Heading
-        fontSize={{ sm: 16, md: 18, lg: 20 }}
+        fontSize={{ sm: 18, md: 18, lg: 20 }}
         w="100%"
         color={useColorModeValue("black", "#f3f3f3")}
         fontWeight="mormal"
-        fontFamily="Syne"
+        fontFamily="Poppins"
         userSelect="none"
       >
         {text}
