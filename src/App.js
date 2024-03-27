@@ -43,6 +43,7 @@ import FAQSettingsPage from "./pages/FAQSettingsPage";
 import AboutSettingsPage from "./pages/AboutSettingsPage";
 import { Categories } from "./assets/ConfigRoutes";
 import i18n from "./i18n";
+import NotFoundPage from "./pages/NotFoundPage";
 function App() {
   console.log("hello", Categories);
   // Load the preferred language from local storage and set it initially
@@ -70,6 +71,7 @@ function App() {
         })}
         <Route path="/faq" element={<FAQSettingsPage />} />
         <Route path="/about" element={<AboutSettingsPage />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Route>
     </Routes>
   );
