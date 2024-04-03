@@ -305,7 +305,8 @@ export const professors =
                 office: '520'
             },
             {
-                imgUrl: 'https://www.uom.gr/assets/site/public/nodes/1540/1217-spetrido-2.jpg',
+                // imgUrl: 'https://www.uom.gr/assets/site/public/nodes/1540/1217-spetrido-2.jpg',
+                imgUrl: 'https://www.uom.gr/site/images/personphoto-2.jpg',
                 fname: i18n.t('sofia'),
                 lname: i18n.t('petridou'),
                 title: i18n.t('epikouriKathigitria'),
