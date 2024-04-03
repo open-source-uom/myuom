@@ -57,6 +57,10 @@ const resources = {
       faq_title: "Frequently Asked",
       faq_subtitle: "You will find answers that might be of interest to you.",
       masters: "Masters",
+      error_title: "No Department selected",
+      error_description: "Please select Department from Settings",
+      graduation_redirection_message:"Redirecting to section",
+      graduation_description:"Please select Department from Settings"
       // //constants.js --> offices
       // // offices: "Offices",
       // // liaison_office: "Liason Office",
@@ -110,7 +114,11 @@ const resources = {
       freshmen_guides: "Πρωτοετείς",
       faq_title: "Συχνές Ερωτήσεις",
       faq_subtitle: "Εδώ θα βρείτε απαντήσεις σε ερωτήσεις που ενδέχεται να σας ενδιαφέρουν.",
-      masters: "Μεταπτυχιακά"
+      masters: "Μεταπτυχιακά",
+      error_title: "Δεν έχει επιλεγεί τμήμα",
+      error_description: "Παρακαλώ επιλέξτε τμήμα από τις ρυθμίσεις",
+      graduation_redirection_message:"Ανακατεύθυνση στο τμήμα",
+      graduation_description:"Παρακαλώ επιλέξτε τμήμα από τις ρυθμίσεις."
       //constants.js
       // offices: "Γραφεία",
       // liaison_office: "Γραφείο Διασύνδεσης",
