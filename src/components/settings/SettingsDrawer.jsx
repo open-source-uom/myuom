@@ -112,7 +112,7 @@ export function SettingsDrawer({ isOpen, onClose }) {
                                 <SettingsOption Icon={FaFileAlt} onClick={onClose} text={i18n.t("license")} />
                             </a>
                             <a
-                                href="https://drive.google.com/file/d/1SpkIMa7EXiAo-SpGZzbSDk9i8kn4xtkk/view?usp=sharing"
+                                href="https://drive.google.com/drive/folders/1LToRmuLuJDSXsTl99GL80mmP4ifcjw6V?usp=sharing"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
