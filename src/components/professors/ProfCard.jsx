@@ -118,7 +118,7 @@ export default function ProfCard({ prof }) {
             <Text as="span" fontWeight="bold">
               {t("title")}&nbsp;
               <Text fontWeight="normal" as="span">
-                {prof.title}
+                {t(prof.title)}
               </Text>
             </Text>
 
