@@ -106,8 +106,9 @@ export default function ProfCard({ prof }) {
               justifyContent="start"
               fontWeight="bold"
               fontSize={{ sm: 14, md: 16, lg: 18 }}
+              textTransform={"capitalize"}
             >
-              {prof.fname} {prof.lname}
+              {t(prof.fname)} {t(prof.lname)}
             </Text>
             <AccordionIcon />
           </AccordionButton>
