@@ -1,7 +1,7 @@
 /*
   MIT License
 
-  Copyright (c) 2024 Open Source  UOM
+  Copyright (c) 2022 Open Source  UOM
 
   Permission is hereby granted, free of charge, to any person obtaining a copy
   of this software and associated documentation files (the "Software"), to deal
@@ -36,16 +36,43 @@
 
 */
 
-import { useState, useEffect } from "react";
+import { Box, Text } from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
+import i18n from "../i18n";
 
-export const useLocalStorage = (storageKey, fallbackState) => {
-    const [value, setValue] = useState(
-        JSON.parse(localStorage.getItem(storageKey)) ?? fallbackState
-    );
+function Error404() {
+    const navigate = useNavigate();
 
-    useEffect(() => {
-        localStorage.setItem(storageKey, JSON.stringify(value));
-    }, [value, storageKey]);
+  return (
+    <Box
+      align="center"
+      marginTop="1em"
+      fontFamily="Syne"
+      fontSize={{ sm: 11.95, md: 16, lg: 26, xl: 32 }}
+    >
+      <Text fontSize={{ sm: 26, md: 30, lg: 34, xl: 38 }}>
+        {i18n.t("error_404")}
+        <br />
+        {i18n.t("page_not_found")}
+        <br />
+        <br />
+        
+        <button 
+            onClick={()=>{navigate('/')}} 
+            style={{ 
+                backgroundColor: "",
+                color: "black", 
+                transition: "color 0.3s" 
+            }}
+            onMouseOver={(e) => e.target.style.color = 'blue'} 
+            onMouseOut={(e) => e.target.style.color = 'black'} 
+        >
+            {i18n.t("go_to_homepage")}   
+        </button>
+                
+      </Text>
+    </Box>
+  );
+}
 
-    return [value, setValue];
-};
+export default Error404;

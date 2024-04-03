@@ -1,7 +1,7 @@
 /*
   MIT License
 
-  Copyright (c) 2022 Open Source  UOM
+  Copyright (c) 2024 Open Source  UOM
 
   Permission is hereby granted, free of charge, to any person obtaining a copy
   of this software and associated documentation files (the "Software"), to deal
@@ -106,8 +106,9 @@ export default function ProfCard({ prof }) {
               justifyContent="start"
               fontWeight="bold"
               fontSize={{ sm: 14, md: 16, lg: 18 }}
+              textTransform={"capitalize"}
             >
-              {prof.fname} {prof.lname}
+              {t(prof.fname)} {t(prof.lname)}
             </Text>
             <AccordionIcon />
           </AccordionButton>
@@ -117,7 +118,7 @@ export default function ProfCard({ prof }) {
             <Text as="span" fontWeight="bold">
               {t("title")}&nbsp;
               <Text fontWeight="normal" as="span">
-                {prof.title}
+                {t(prof.title)}
               </Text>
             </Text>
 

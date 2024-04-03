@@ -1,7 +1,7 @@
 /*
   MIT License
 
-  Copyright (c) 2022 Open Source  UOM
+  Copyright (c) 2024 Open Source  UOM
 
   Permission is hereby granted, free of charge, to any person obtaining a copy
   of this software and associated documentation files (the "Software"), to deal
@@ -63,7 +63,7 @@ export const AnnouncementsData = [
     code: DEPARTMENT_CODES.ECONOMICS,
     link: "https://www.uom.gr/eco#undefined1",
   }, {
-    code: DEPARTMENT_CODES.FINANCE,
+    code: DEPARTMENT_CODES.ACCOUNTING_FINANCE,
     link: "https://www.uom.gr/fin",
   }, {
     code: DEPARTMENT_CODES.MUSIC,

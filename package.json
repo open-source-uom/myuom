@@ -31,6 +31,11 @@
     "eject": "react-scripts eject",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,md}\""
   },
+
+  "engines": {
+    "node": ">=14.21.3"
+  },
+  
   "eslintConfig": {
     "extends": [
       "react-app",

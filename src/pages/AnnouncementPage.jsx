@@ -1,7 +1,7 @@
 /*
   MIT License
 
-  Copyright (c) 2022 Open Source  UOM
+  Copyright (c) 2024 Open Source  UOM
 
   Permission is hereby granted, free of charge, to any person obtaining a copy
   of this software and associated documentation files (the "Software"), to deal
@@ -40,6 +40,7 @@ import { useEffect } from "react";
 import { Heading, Box, useToast } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 import { useDepName, useAnnouncementLink } from "../hooks";
+import i18n from "../i18n";
 
 export default function AnnouncementsPage() {
   const [, depCode] = useDepName();
@@ -50,8 +51,8 @@ export default function AnnouncementsPage() {
   useEffect(() => {
     if (!depCode) {
       toast({
-        title: "Δεν έχει επιλεγεί τμήμα",
-        description: "Παρακαλώ επιλέξτε τμήμα από τις ρυθμίσεις",
+        title: i18n.t("error_title"),
+        description: i18n.t("error_description"),
         status: "error",
         duration: 5000,
         isClosable: true,

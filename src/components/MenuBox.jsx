@@ -1,7 +1,7 @@
 /*
   MIT License
 
-  Copyright (c) 2022 Open Source  UOM
+  Copyright (c) 2024 Open Source  UOM
 
   Permission is hereby granted, free of charge, to any person obtaining a copy
   of this software and associated documentation files (the "Software"), to deal
@@ -45,41 +45,47 @@ import {
   useToast,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
+import { useMemo } from "react";
 import { useNavigate } from "react-router-dom";
 import { DiagonalRightArrowIcon, RightArrowIcon } from "../assets/icons";
 import { useDepName, useDepartments } from "../hooks";
+import i18n from "../i18n";
 
 export default function MenuBox({ category }) {
   const { title, iconSVG, route, span, isExternal, requireSelection } =
-    category;
+      category;
   const [depName, depCode] = useDepName();
   const departments = useDepartments();
-  const toast = useToast();
-  let condition = requireSelection && !departments.map(dep => dep.code).includes(depCode);
 
-  const rotateIn = {
-    initial: {
-      rotateX: "180deg",
-      opacity: 0,
-    },
-    inView: {
-      rotateX: "0deg",
-      opacity: condition ? 0.6 : 1,
-      transition: {
-        duration: 0.45,
-        ease: "easeIn",
-      },
-    },
-  };
+  const toast = useToast();
+  const isDisabled =
+      requireSelection && (!depCode || !departments.some((dep) => dep.code === depCode));
+  const rotateIn = useMemo(
+      () => ({
+        initial: {
+          rotateX: "180deg",
+          opacity: 0,
+        },
+        inView: {
+          rotateX: "0deg",
+          opacity: isDisabled ? 0.6 : 1,
+          transition: {
+            duration: 0.45,
+            ease: "easeIn",
+          },
+        },
+      }),
+      [isDisabled]
+  );
 
   const navigate = useNavigate();
 
   const handleNavigation = () => {
     isExternal
-      ? requireSelection
-        ? window.location.replace(route, "_blank")
-        : window.open(route, "_blank")
-      : navigate(route);
+        ? requireSelection
+            ? window.location.replace(route, "_blank")
+            : window.open(route, "_blank")
+        : navigate(route);
   };
 
   const handleSelection = () => {
@@ -88,8 +94,8 @@ export default function MenuBox({ category }) {
       if (!toast.isActive(id)) {
         toast({
           id,
-          title: "Δεν έχει επιλεγεί τμήμα",
-          description: "Παρακαλώ επιλέξτε τμήμα από τις ρυθμίσεις",
+          title: i18n.t("error_title"),
+          description: i18n.t("error_description"),
           status: "error",
           duration: 5000,
           isClosable: true,
@@ -101,57 +107,60 @@ export default function MenuBox({ category }) {
     }
   };
 
+
   return (
-    <GridItem
-      as={motion.div}
-      variants={rotateIn}
-      viewport={{ once: true }}
-      cursor="pointer"
-      onClick={handleSelection}
-      colSpan={span}
-      role={"group"}
-      border="2px"
-      display="flex"
-      flexDirection="column"
-      alignItems="center"
-      justifyContent="space-between"
-      borderColor={useColorModeValue("#0050e0", "#f3f3f3")}
-      backgroundColor={useColorModeValue("#0050e0", "transparent")}
-      className={`menu-box span-${span} ${condition ? "disabled" : ""}`}
-      rounded="0.75rem"
-      p={{ sm: 2, md: 4, lg: 6 }}>
-      <Flex
-        w="100%"
-        flexDirection="row"
-        alignItems="center"
-        justifyContent="space-between">
-        <Box
-          minW={{ sm: "24px", md: "48px", lg: "52px" }}
-          maxW={{ sm: "24px", md: "48px", lg: "52px" }}
-          className={`svg-container ${useColorModeValue(
-            "light-mode-svg",
-            "dark-mode-svg"
-          )}`}>
-          {iconSVG}
-        </Box>
-        <Box
-          minW={{ sm: "12px", md: "24px", lg: "28px" }}
-          maxW={{ sm: "12px", md: "24px", lg: "28px" }}
-          className={`svg-container ${useColorModeValue(
-            "light-mode-svg",
-            "dark-mode-svg"
-          )}`}>
-          {isExternal ? <DiagonalRightArrowIcon /> : <RightArrowIcon />}
-        </Box>
-      </Flex>
-      <Heading
-        fontSize={{ sm: 11.95, md: 16, lg: 26, xl: 32 }}
-        color="#f3f3f3"
-        w="100%"
-        fontWeight={500}
-        fontFamily="Syne">
-        {title}
-      </Heading>
-    </GridItem>
+      <GridItem
+          as={motion.div}
+          // force remount for isDisabled to take effect (framer motion quirk)
+          key={`${title}-isDisabled-${isDisabled}`}
+          variants={rotateIn}
+          viewport={{ once: true }}
+          cursor="pointer"
+          onClick={handleSelection}
+          colSpan={span}
+          role={"group"}
+          border="2px"
+          display="flex"
+          flexDirection="column"
+          alignItems="center"
+          justifyContent="space-between"
+          borderColor={useColorModeValue("#0050e0", "#f3f3f3")}
+          backgroundColor={useColorModeValue("#0050e0", "transparent")}
+          className={`menu-box span-${span}`}
+          rounded="0.75rem"
+          p={{ sm: 2, md: 4, lg: 6 }}>
+        <Flex
+            w="100%"
+            flexDirection="row"
+            alignItems="center"
+            justifyContent="space-between">
+          <Box
+              minW={{ sm: "24px", md: "48px", lg: "52px" }}
+              maxW={{ sm: "24px", md: "48px", lg: "52px" }}
+              className={`svg-container ${useColorModeValue(
+                  "light-mode-svg",
+                  "dark-mode-svg"
+              )}`}>
+            {iconSVG}
+          </Box>
+          <Box
+              minW={{ sm: "12px", md: "24px", lg: "28px" }}
+              maxW={{ sm: "12px", md: "24px", lg: "28px" }}
+              className={`svg-container ${useColorModeValue(
+                  "light-mode-svg",
+                  "dark-mode-svg"
+              )}`}>
+            {isExternal ? <DiagonalRightArrowIcon /> : <RightArrowIcon />}
+          </Box>
+        </Flex>
+        <Heading
+            fontSize={{ sm: 11.95, md: 16, lg: 26, xl: 32 }}
+            color="#f3f3f3"
+            w="100%"
+            fontWeight={500}
+            fontFamily="Syne">
+          {title}
+        </Heading>
+      </GridItem>
   );
 }

@@ -1,7 +1,7 @@
 /*
   MIT License
 
-  Copyright (c) 2022 Open Source  UOM
+  Copyright (c) 2024 Open Source  UOM
 
   Permission is hereby granted, free of charge, to any person obtaining a copy
   of this software and associated documentation files (the "Software"), to deal
@@ -43,6 +43,7 @@ import FAQSettingsPage from "./pages/FAQSettingsPage";
 import AboutSettingsPage from "./pages/AboutSettingsPage";
 import { Categories } from "./assets/ConfigRoutes";
 import i18n from "./i18n";
+import Error404 from "./pages/Error404";
 function App() {
   console.log("hello", Categories);
   // Load the preferred language from local storage and set it initially
@@ -70,6 +71,7 @@ function App() {
         })}
         <Route path="/faq" element={<FAQSettingsPage />} />
         <Route path="/about" element={<AboutSettingsPage />} />
+        <Route path="/*" element={<Error404 />} />
       </Route>
     </Routes>
   );
