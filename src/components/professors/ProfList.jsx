@@ -111,7 +111,7 @@ export default function ProfList() {
 
       {filteredArray.length ? (
         filteredArray.map((prof) => (
-          <ProfComponent prof={prof} key={prof.tel} />
+          <ProfComponent prof={prof} key={`${prof.email}-${prof.tel}`} />
         ))
       ) : (
         <Text as="h1" fontFamily="Syne">
