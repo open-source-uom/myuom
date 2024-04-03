@@ -102,6 +102,8 @@ export default function MenuBox({ category }) {
     }
   };
 
+  const bgColor = condition ? "#2e2e2e" : "transparent";
+
   return (
     <GridItem
       as={motion.div}
@@ -117,7 +119,7 @@ export default function MenuBox({ category }) {
       alignItems="center"
       justifyContent="space-between"
       borderColor={useColorModeValue("#0050e0", "#f3f3f3")}
-      backgroundColor={useColorModeValue("#0050e0", "transparent")}
+      backgroundColor={useColorModeValue("#0050e0",bgColor)}
       className={`menu-box span-${span} ${condition ? "disabled" : ""}`}
       rounded="0.75rem"
       p={{ sm: 2, md: 4, lg: 6 }}>
