@@ -2,7 +2,7 @@
 #Run the image using docker run -p 3000:3000 myuom 
 
 # Use an official Node runtime as the base image
-FROM node:lts-slim
+FROM node:20-alpine
 
 # Set the working directory in the container to /app
 WORKDIR /app
