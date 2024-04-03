@@ -57,7 +57,7 @@ const resources = {
       error_title: "No Department selected",
       error_description: "Please select Department from Settings",
       graduation_redirection_message:"Redirecting to section",
-      graduation_description:"Graduation information will be available on selection from settings soon."
+      graduation_description:"Please select Department from Settings"
       // //constants.js --> offices
       // // offices: "Offices",
       // // liaison_office: "Liason Office",
