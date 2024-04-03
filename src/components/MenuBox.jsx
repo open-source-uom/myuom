@@ -1,7 +1,7 @@
 /*
   MIT License
 
-  Copyright (c) 2022 Open Source  UOM
+  Copyright (c) 2024 Open Source  UOM
 
   Permission is hereby granted, free of charge, to any person obtaining a copy
   of this software and associated documentation files (the "Software"), to deal
@@ -49,6 +49,7 @@ import { useMemo } from "react";
 import { useNavigate } from "react-router-dom";
 import { DiagonalRightArrowIcon, RightArrowIcon } from "../assets/icons";
 import { useDepName, useDepartments } from "../hooks";
+import i18n from "../i18n";
 
 export default function MenuBox({ category }) {
   const { title, iconSVG, route, span, isExternal, requireSelection } =
@@ -93,8 +94,8 @@ export default function MenuBox({ category }) {
       if (!toast.isActive(id)) {
         toast({
           id,
-          title: "Δεν έχει επιλεγεί τμήμα",
-          description: "Παρακαλώ επιλέξτε τμήμα από τις ρυθμίσεις",
+          title: i18n.t("error_title"),
+          description: i18n.t("error_description"),
           status: "error",
           duration: 5000,
           isClosable: true,
@@ -105,6 +106,8 @@ export default function MenuBox({ category }) {
       handleNavigation();
     }
   };
+
+  const bgColor = condition ? "#2e2e2e" : "transparent";
 
   return (
     <GridItem

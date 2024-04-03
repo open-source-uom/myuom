@@ -1,7 +1,7 @@
 /*
   MIT License
 
-  Copyright (c) 2022 Open Source  UOM
+  Copyright (c) 2024 Open Source  UOM
 
   Permission is hereby granted, free of charge, to any person obtaining a copy
   of this software and associated documentation files (the "Software"), to deal
@@ -111,7 +111,7 @@ export default function ProfList() {
 
       {filteredArray.length ? (
         filteredArray.map((prof) => (
-          <ProfComponent prof={prof} key={prof.tel} />
+          <ProfComponent prof={prof} key={`${prof.email}-${prof.tel}`} />
         ))
       ) : (
         <Text as="h1" fontFamily="Syne">

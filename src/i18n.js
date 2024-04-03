@@ -10,6 +10,7 @@ import enFaq from "./assets/locales/en/faq.js";
 import enProjectMembers from "./assets/locales/en/project_members.js";
 import enSettingsPage from "./assets/locales/en/settings_page.js";
 import enAboutPage from "./assets/locales/en/about_page.js";
+import enError404 from "./assets/locales/en/error404.js"
 
 import elRestaurant from "./assets/locales/el/restaurant.js";
 import elFreshmen from "./assets/locales/el/freshmen.js";
@@ -21,6 +22,7 @@ import elFaq from "./assets/locales/el/faq.js";
 import elProjectMembers from "./assets/locales/el/project_members.js";
 import elSettingsPage from "./assets/locales/el/settings_page.js";
 import elAboutPage from "./assets/locales/el/about_page.js";
+import elError404 from "./assets/locales/el/error404.js"
 
 const resources = {
   en: {
@@ -35,6 +37,7 @@ const resources = {
       ...enProjectMembers,
       ...enSettingsPage,
       ...enAboutPage,
+      ...enError404,
       //categories.js
       current_department: "Current Department: ",
       close: "Close",
@@ -54,6 +57,10 @@ const resources = {
       faq_title: "Frequently Asked",
       faq_subtitle: "You will find answers that might be of interest to you.",
       masters: "Masters",
+      error_title: "No Department selected",
+      error_description: "Please select Department from Settings",
+      graduation_redirection_message:"Redirecting to section",
+      graduation_description:"Please select Department from Settings"
       // //constants.js --> offices
       // // offices: "Offices",
       // // liaison_office: "Liason Office",
@@ -87,6 +94,7 @@ const resources = {
       ...elProjectMembers,
       ...elSettingsPage,
       ...elAboutPage,
+      ...elError404,
 
       //categories.js
       current_department: "Έχεις επιλέξει: ",
@@ -106,7 +114,11 @@ const resources = {
       freshmen_guides: "Πρωτοετείς",
       faq_title: "Συχνές Ερωτήσεις",
       faq_subtitle: "Εδώ θα βρείτε απαντήσεις σε ερωτήσεις που ενδέχεται να σας ενδιαφέρουν.",
-      masters: "Μεταπτυχιακά"
+      masters: "Μεταπτυχιακά",
+      error_title: "Δεν έχει επιλεγεί τμήμα",
+      error_description: "Παρακαλώ επιλέξτε τμήμα από τις ρυθμίσεις",
+      graduation_redirection_message:"Ανακατεύθυνση στο τμήμα",
+      graduation_description:"Παρακαλώ επιλέξτε τμήμα από τις ρυθμίσεις."
       //constants.js
       // offices: "Γραφεία",
       // liaison_office: "Γραφείο Διασύνδεσης",

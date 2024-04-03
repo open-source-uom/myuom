@@ -1,7 +1,7 @@
 /*
   MIT License
 
-  Copyright (c) 2022 Open Source  UOM
+  Copyright (c) 2024 Open Source  UOM
 
   Permission is hereby granted, free of charge, to any person obtaining a copy
   of this software and associated documentation files (the "Software"), to deal
@@ -61,7 +61,7 @@ function AboutSettingsPage() {
         <br />
       </Text>
       <Text fontSize={{ sm: 17, md: 21, lg: 26, xl: 30 }}>
-        @2023 OpenSourceUoM Team
+        @2024 OpenSourceUoM Team
         <br />
         All rights reserved
         <br />
