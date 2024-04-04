@@ -36,14 +36,14 @@
 
 */
 
+import { Box, Heading, useToast } from "@chakra-ui/react";
 import { useEffect } from "react";
-import { Heading, Box, useToast } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
-import { useDepName, useAnnouncementLink } from "../hooks";
+import { useAnnouncementLink, useDepName } from "../hooks";
 import i18n from "../i18n";
 
 export default function AnnouncementsPage() {
-  const [, depCode] = useDepName();
+  const { depCode } = useDepName();
   const toast = useToast();
   const navigate = useNavigate();
   const announcementLink = useAnnouncementLink(depCode);
@@ -69,11 +69,7 @@ export default function AnnouncementsPage() {
       {announcementLink ? (
         <Heading textAlign="center" marginTop="50px">
           Ανακατεύθυνση στο τμήμα
-          <a
-            href={announcementLink.link}
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a href={announcementLink.link} target="_blank" rel="noreferrer">
             {announcementLink.code}
           </a>
         </Heading>

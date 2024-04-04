@@ -36,24 +36,22 @@
 
 */
 
+import { Box, Heading } from "@chakra-ui/react";
 import { useEffect } from "react";
-import { Heading, Box } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 import { useDepName, useScheduleData } from "../hooks";
 
 export default function SchedulePage({ examsProp, semesterProp }) {
-  const [, depCode] = useDepName();
+  const { depCode } = useDepName();
   const navigate = useNavigate();
-  const scheduleData = useScheduleData(depCode)
-  console.log("scheduleData", scheduleData, "depName: ", depCode)
+  const scheduleData = useScheduleData(depCode);
+  console.log("scheduleData", scheduleData, "depName: ", depCode);
   const redirectTo = (link) => {
     window.open(link);
     navigate("/");
   };
 
   useEffect(() => {
-
-
     if (examsProp) {
       redirectTo(scheduleData.exam);
     }
