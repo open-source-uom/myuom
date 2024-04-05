@@ -7,11 +7,12 @@ FROM node:20-alpine
 # Set the working directory in the container to /app
 WORKDIR /app
 
-# Copy package.json and package-lock.json to the working directory
-COPY package*.json ./
+# Install dependencies first to leverage Docker cache
+COPY package.json package-lock.json ./
 
-# Install any needed packages specified in package.json
-RUN npm install
+# Using cache mount for npm install, so unchanged packages aren’t downloaded every time
+RUN --mount=type=cache,target=/root/.npm \
+    npm install
 
 # Update browserslist-db
 RUN npx update-browserslist-db@latest
