@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import {
   Menu,
   MenuButton,
@@ -10,12 +10,19 @@ import {
 } from "@chakra-ui/react";
 import { ChevronDownIcon } from "@chakra-ui/icons";
 import i18n from "../../i18n";
-export default function SelectBuildingDropdown({ handleChange, newOptions }) {
-  const [selectedText, setSelectedText] = useState(
-    i18n.t("select_where_to_go")
-  );
 
-  const handleMenuItemClick = (option) => {
+interface SelectBuildingDropdownProps {
+  handleChange: (option: string) => void;
+  newOptions: string[];
+}
+
+const SelectBuildingDropdown: React.FC<SelectBuildingDropdownProps> = ({
+  handleChange,
+  newOptions,
+}) => {
+  const [selectedText, setSelectedText] = useState<string|null>(i18n.t("select_where_to_go"));
+
+  const handleMenuItemClick = (option:string) => {
     setSelectedText(option);
     handleChange(option);
   };
@@ -70,3 +77,5 @@ export default function SelectBuildingDropdown({ handleChange, newOptions }) {
     </Menu>
   );
 }
+
+export default SelectBuildingDropdown;

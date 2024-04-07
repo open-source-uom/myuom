@@ -1,3 +1,4 @@
+import React from "react";
 import {
   Menu,
   MenuButton,
@@ -8,13 +9,25 @@ import {
   Box,
 } from "@chakra-ui/react";
 import { ChevronDownIcon } from "@chakra-ui/icons";
-export default function SelectOfficeDropdown({
+
+interface Location {
+  title: string;
+}
+
+interface SelectOfficeDropdownProps {
+  locations: Location[];
+  handleChange: (option: string) => void;
+  selectedText: string;
+  setSelectedText: React.Dispatch<React.SetStateAction<string>>;
+}
+
+const SelectOfficeDropdown: React.FC<SelectOfficeDropdownProps> = ({
   locations,
   handleChange,
   selectedText,
   setSelectedText,
-}) {
-  const handleMenuItemClick = (option) => {
+}) =>{
+  const handleMenuItemClick = (option:string) => {
     setSelectedText(option);
     handleChange(option);
   };
@@ -70,4 +83,7 @@ export default function SelectOfficeDropdown({
       </MenuList>
     </Menu>
   );
-}
+};
+
+
+export default SelectOfficeDropdown;

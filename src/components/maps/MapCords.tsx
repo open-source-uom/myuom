@@ -38,33 +38,41 @@
 
 import { Box, Button, Text, useColorModeValue } from "@chakra-ui/react";
 import React, { useState } from "react";
-import ImageMapper from "react-img-mapper";
+import ImageMapper,{Map} from "react-img-mapper";
 import { GROUND_FLOOR_IMG_URL } from "../../assets/data/map_data/floor_images";
 import i18n from "../../i18n";
-export default function App({
+
+interface AppProps {
+  floor: string;
+  imageURL: string;
+  marked_position_x: number;
+  marked_position_y: number;
+  elevatorx: number;
+  elevatory: number;
+}
+
+const App: React.FC<AppProps> = ({
   floor,
   imageURL,
   marked_position_x,
   marked_position_y,
   elevatorx,
   elevatory,
-}) {
+}) => {
   const [showGroundFloorImg, setShowGroundFloorImg] = useState(false);
-  const [mapAreas, setMapAreas] = useState({
+  const [mapAreas, setMapAreas] = useState<Map>({
     name: "my-map",
-    areas: [
-      { id: 5, shape: "circle", coords: [0, 0, 10], preFillColor: "red" },
-    ],
+    areas: [{ id: '5', shape: "circle", coords: [0, 0, 10], preFillColor: "red" }],
   });
 
   //use Callbacks here are not necessary,might be performance wise
-  const handleUpdateMapArea = (evt) =>
-    updateMapArea(5, [marked_position_x, marked_position_y, 5]);
+  const handleUpdateMapArea = () =>
+    updateMapArea('5', [marked_position_x, marked_position_y, 5]);
 
-  const handleUpdateElevatorMapArea = (evt) =>
-    updateMapArea(5, [elevatorx, elevatory, 5]);
+  const handleUpdateElevatorMapArea = () =>
+    updateMapArea('5', [elevatorx, elevatory, 5]);
 
-  const updateMapArea = (id, coords) => {
+  const updateMapArea = (id: string, coords: number[]) => {
     const areas = mapAreas.areas.map((item) =>
       item.id === id ? { ...item, coords } : item
     );
@@ -86,8 +94,7 @@ export default function App({
           disabled={shouldDisableFindBuildingBtn}
           margin="1rem"
           color={useColorModeValue("#f3f3f3", "black")}
-          bgColor={useColorModeValue("#0050e0", "#f3f3f3")}
-          _hover={false}>
+          bgColor={useColorModeValue("#0050e0", "#f3f3f3")}>
           {!showGroundFloorImg
             ? i18n.t("cant_find_building_prompt")
             : i18n.t("see_room_again")}
@@ -121,3 +128,5 @@ export default function App({
     </Box>
   );
 }
+
+export default App;

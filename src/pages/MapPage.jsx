@@ -45,8 +45,8 @@ import {
 } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import MapCords from "../components/maps/MapCords";
-import SelectBuildingDropdown from "../components/maps/SelectBuildingDropdown.jsx";
-import SelectOfficeDropdown from "../components/maps/SelectOfficeDropdown.jsx";
+import SelectBuildingDropdown from "../components/maps/SelectBuildingDropdown.tsx";
+import SelectOfficeDropdown from "../components/maps/SelectOfficeDropdown.tsx";
 import { useDepName, useMapData } from "../hooks";
 import i18n from "../i18n";
 
