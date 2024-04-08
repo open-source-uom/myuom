@@ -2,7 +2,13 @@ import React from "react";
 import { RightArrowIcon } from "../../assets/icons";
 import { Flex, Spacer, Heading, useColorModeValue } from "@chakra-ui/react";
 
-const GuideButton = ({ text, guidePath, onClick }) => {
+interface GuideButtonProps{
+  text:string,
+  guidePath: string,
+  onClick: (guidePath: string) => void;
+}
+
+const GuideButton: React.FC<GuideButtonProps> = ({ text, guidePath, onClick }) => {
   return (
     <Flex
       align="center"

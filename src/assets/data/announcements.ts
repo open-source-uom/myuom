@@ -38,9 +38,12 @@
 
 import { DEPARTMENT_CODES } from "./DepNames";
 
+export interface Announcement{
+  code:string,
+  link:string
+}
 
-
-export const AnnouncementsData = [
+export const AnnouncementsData:Announcement[] = [
   {
     code: DEPARTMENT_CODES.BALKAN_STUDIES,
     link: "https://www.uom.gr/bso/ta-nea-mas",

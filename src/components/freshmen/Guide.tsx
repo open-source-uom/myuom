@@ -1,10 +1,16 @@
+import React from "react";
 import ReactMarkdown from "react-markdown";
 import { LeftArrowIcon } from "../../assets/icons";
 import { Flex, Divider, Heading, useColorModeValue } from "@chakra-ui/react";
 import i18n from "../../i18n";
 import { useScrollToTopOnLoad } from "../../hooks/useScrollToTopOnLoad";
 
-const Guide = ({ guideContent, onClick }) => {
+interface GuideProps {
+  guideContent: string;
+  onClick: () => void;
+}
+
+const Guide: React.FC<GuideProps> = ({ guideContent, onClick }) => {
   useScrollToTopOnLoad();
   return (
     <Flex direction="column" paddingX={4} align="center">
@@ -31,7 +37,7 @@ const Guide = ({ guideContent, onClick }) => {
           w="100%"
           fontSize={{ sm: 18, md: 22, lg: 26, xl: 32 }}
           color={useColorModeValue("black", "#f3f3f3")}
-          fontWeight="mormal"
+          fontWeight="normal"
           fontFamily="Syne"
           userSelect="none"
         >

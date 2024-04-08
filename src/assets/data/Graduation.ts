@@ -35,41 +35,50 @@
     -Fakidis
 
 */
-import i18n from "../../i18n"
-const data = [
-  {
-    question: i18n.t("qu1"),
-    panel: i18n.t("ans1"),
-  },
-  {
-    question: i18n.t("qu2"),
-    panel: i18n.t("ans2"),
-  },
-  {
-    question: i18n.t("qu3"),
-    panel:
-      i18n.t("ans3"),
-  },
-  {
-    question: i18n.t("qu4"),
-    panel:
-      i18n.t("ans4"),
-  },
-  {
-    question: i18n.t("qu5"),
-    panel:
-      i18n.t("ans5"),
-  },
-  {
-    
-    question: i18n.t("qu6"),
-    panel:
-      i18n.t("ans6"),
-  },
-  {
-    question: i18n.t("qu7"),
-    panel: i18n.t("ans7"),
-  },
-];
 
-export default data;
+
+
+import { DEPARTMENT_CODES } from "./DepNames";
+
+const Balkan_Studies_Link = "https://www.uom.gr/11587-anakoinosh-gia-dia-zoshs-orkomosia-toy-tmhmatos"
+const European_Studies_Link = "https://www.uom.gr/ies/orkomosies-apofoitoi"
+const Education_Link = "https://www.uom.gr/esp/orkomosies"
+const Informatics_Link = "https://www.uom.gr/dai/apofoithsh"
+const Finance_Link = "https://www.uom.gr/fin/enhmerosh?tagid=7435"
+const Business_Link = "https://www.uom.gr/ba/anakoinosh-ypobolhs-aithseon-orkomosias-noembrioy-2019"
+const Economics_Link = "https://www.uom.gr/eco/dieksagogh-neas-orkomosias"
+const Music = "https://www.uom.gr/msa/orkomosia-tmhmatos"
+
+export interface GraduationData {
+  code: string;
+  link: string; 
+}
+
+export const GradData: GraduationData[] = [{
+  code: DEPARTMENT_CODES.BALKAN_STUDIES,
+  link: Balkan_Studies_Link
+}, {
+  code: DEPARTMENT_CODES.EUROPEAN_STUDIES,
+  link: European_Studies_Link
+}, {
+  code: DEPARTMENT_CODES.EDUCATION,
+  link: Education_Link
+}, {
+  code: DEPARTMENT_CODES.INFORMATICS,
+  link: Informatics_Link
+}, {
+  code: DEPARTMENT_CODES.FINANCE,
+  link: Finance_Link
+}, {
+  code: DEPARTMENT_CODES.BUSINESS,
+  link: Business_Link
+}, {
+  code: DEPARTMENT_CODES.ECONOMICS,
+  link: Economics_Link
+}, {
+  code: DEPARTMENT_CODES.MUSIC,
+  link: Music
+}
+
+]
+

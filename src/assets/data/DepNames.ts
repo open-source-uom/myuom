@@ -37,7 +37,7 @@
 */
 import i18n from "../../i18n";
 
-export const DEPARTMENT_CODES = {
+export const DEPARTMENT_CODES: Record<string, string> = {
   INFORMATICS: "dai",
   ECONOMICS: "eco",
   BUSINESS_ADMINISTRATION: "ba",
@@ -46,35 +46,48 @@ export const DEPARTMENT_CODES = {
   BALKAN_STUDIES: "bso",
   MUSIC: "msa",
   EDUCATION: "esp",
+};
+
+export interface Department {
+  code: string;
+  name: string;
 }
-export const DEPARTMENTS = [
+
+export const DEPARTMENTS: Department[] = [
   {
     code: DEPARTMENT_CODES.BALKAN_STUDIES,
     name: i18n.t("bso_department"),
-  }, {
+  },
+  {
     code: DEPARTMENT_CODES.EUROPEAN_STUDIES,
     name: i18n.t("ies_department"),
-  }, {
+  },
+  {
     code: DEPARTMENT_CODES.BUSINESS_ADMINISTRATION,
     name: i18n.t("ba_department"),
-  }, {
+  },
+  {
     code: DEPARTMENT_CODES.ACCOUNTING_FINANCE,
     name: i18n.t("fin_department"),
-  }, {
+  },
+  {
     code: DEPARTMENT_CODES.MUSIC,
     name: i18n.t("msa_department"),
-  }, {
+  },
+  {
     code: DEPARTMENT_CODES.EDUCATION,
     name: i18n.t("esp_department"),
-  }, {
+  },
+  {
     code: DEPARTMENT_CODES.ECONOMICS,
     name: i18n.t("eco_department"),
-  }, {
+  },
+  {
     code: DEPARTMENT_CODES.INFORMATICS,
     name: i18n.t("dai_department"),
   },
-
 ];
+
 
 // export const DEPARTMENTS = [
 //   i18n.t("bso_department"),

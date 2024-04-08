@@ -37,9 +37,9 @@
 */
 import { Divider, Flex } from "@chakra-ui/react";
 import React from "react";
-import Guide from "../components/freshmen/Guide.jsx";
-import GuideButton from "../components/freshmen/GuideButton.jsx";
-import { useGuidesMdData } from "../hooks/useGuidesMdData.js";
+import Guide from "../components/freshmen/Guide.tsx";
+import GuideButton from "../components/freshmen/GuideButton.tsx";
+import { useGuidesMdData } from "../hooks/useGuidesMdData.ts";
 import { useScrollToTopOnLoad } from "../hooks/useScrollToTopOnLoad";
 
 function ButtonListPage() {

@@ -60,8 +60,17 @@ import en_housing from "./guides/en/housing.md";
 import en_healthcare from "./guides/en/healthcare.md";
 import i18n from "../../i18n";
 
+export interface GuideItem {
+  text: string;
+  guidePath: string;
+}
 
-const guides = {
+export interface Guides {
+  el: GuideItem[];
+  en: GuideItem[];
+}
+
+const guides: Guides = {
   el:
     [
       {

@@ -35,26 +35,42 @@
     -Fakidis
 
 */
+import i18n from "../../i18n";
 
-import { createContext } from "react";
-import { useLocalStorage } from "../hooks/useLocalStorage";
+export interface FAQItem {
+  question: string;
+  panel: string;
+}
 
-export const DepartmentContext = createContext({
-  departmentCode: "",
-  changeDepartmentCode: () => { },
-});
+const data: FAQItem[] = [
+  {
+    question: i18n.t("qu1"),
+    panel: i18n.t("ans1"),
+  },
+  {
+    question: i18n.t("qu2"),
+    panel: i18n.t("ans2"),
+  },
+  {
+    question: i18n.t("qu3"),
+    panel: i18n.t("ans3"),
+  },
+  {
+    question: i18n.t("qu4"),
+    panel: i18n.t("ans4"),
+  },
+  {
+    question: i18n.t("qu5"),
+    panel: i18n.t("ans5"),
+  },
+  {
+    question: i18n.t("qu6"),
+    panel: i18n.t("ans6"),
+  },
+  {
+    question: i18n.t("qu7"),
+    panel: i18n.t("ans7"),
+  },
+];
 
-export const DepartmentProvider = ({ children }) => {
-  const [depName, setDepName] = useLocalStorage('depName', null);
-
-  function changeDepartmentCode(departmentToBeSet) {
-    setDepName(departmentToBeSet);
-  }
-
-  const value = { departmentCode: depName, changeDepartmentCode };
-  return (
-    <DepartmentContext.Provider value={value}>
-      {children}
-    </DepartmentContext.Provider>
-  );
-};
+export default data;
