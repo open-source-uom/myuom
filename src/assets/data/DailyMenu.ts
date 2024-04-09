@@ -1,6 +1,20 @@
 import i18n from "../../i18n";
 
-export default [
+export interface Meal {
+  day: string;
+  gevmaKirios: string[];
+  gevmaEidiko: string[];
+  gevmaGarnitoura: string[];
+  gevmaSalata: string[];
+  gevmaEpidorpio: string[];
+  deipnoKirios: string[];
+  deipnoEidiko: string[];
+  deipnoGarnitoura: string[];
+  deipnoSalata: string[];
+  deipnoEpidorpio: string[];
+}
+
+const mealData: Meal[] = [
   {
     day: i18n.t("monday"),
     gevmaKirios: [
@@ -163,3 +177,5 @@ export default [
     deipnoEpidorpio: [i18n.t("choiceOfSeasonalFruits")],
   },
 ];
+
+export default mealData;

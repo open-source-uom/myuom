@@ -1,5 +1,17 @@
 import i18n from "../../i18n";
-export const servicesData = [
+export interface Service {
+    title: string;
+    url: string;
+    imgUrl: string;
+  }
+  
+export interface Tab {
+    tabName: string;
+    index: number;
+    services: Service[];
+}
+
+export const servicesData:Tab[] = [
     {
         tabName: i18n.t("offices"),
         index: 1,

@@ -62,7 +62,7 @@ function MapPage() {
     selectedLocation,
     selectedLocationCategory,
   } = useMapData();
-
+  console.log("loca",locations)
   const departmentHint = useBreakpointValue({
     base: i18n.t(depName),
     md: i18n.t("current_department") + i18n.t(depName),

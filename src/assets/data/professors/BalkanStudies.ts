@@ -1,5 +1,6 @@
 import i18n from "../../../i18n"
-export const professors = {
+import { ProfessorList } from "."
+export const professors:ProfessorList = {
     department: i18n.t("bso_department"),
     professors:
         [

@@ -9,13 +9,16 @@ interface GuideButtonProps{
 }
 
 const GuideButton: React.FC<GuideButtonProps> = ({ text, guidePath, onClick }) => {
+  const handleClick = () => {
+    onClick(guidePath);
+  };
   return (
     <Flex
       align="center"
       color="red"
       paddingY={5}
       cursor="pointer"
-      onClick={() => onClick(guidePath)}
+      onClick={handleClick}
       paddingX={4}
     >
       <Heading

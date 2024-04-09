@@ -36,16 +36,21 @@
 
 */
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, Dispatch, SetStateAction } from "react";
 
-export const useLocalStorage = (storageKey, fallbackState) => {
-    const [value, setValue] = useState(
-        JSON.parse(localStorage.getItem(storageKey)) ?? fallbackState
-    );
+export const useLocalStorage = <T>(
+  storageKey: string,
+  fallbackState: T
+): [T, Dispatch<SetStateAction<T>>] => {
+  const [value, setValue] = useState<T>(() => {
+    const storedValue = localStorage.getItem(storageKey);
+    return storedValue ? JSON.parse(storedValue) : fallbackState;
+  });
 
-    useEffect(() => {
-        localStorage.setItem(storageKey, JSON.stringify(value));
-    }, [value, storageKey]);
+  useEffect(() => {
+    localStorage.setItem(storageKey, JSON.stringify(value));
+  }, [storageKey, value]);
 
-    return [value, setValue];
+  return [value, setValue];
 };
+

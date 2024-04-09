@@ -1,4 +1,27 @@
-export const RESTAURANT_HOURS = {
+interface Time {
+  hours: number;
+  minutes: number;
+}
+
+interface DailySchedule {
+  start: Time;
+  end: Time;
+}
+
+interface RestaurantHours {
+  for_lunch: Schedule;
+  for_dinner: Schedule;
+  for_breakfast: Schedule;
+}
+
+interface Schedule {
+  on_weekdays: DailySchedule;
+  on_weekend: DailySchedule;
+}
+
+type Holidays = string[];
+
+export const RESTAURANT_HOURS:RestaurantHours = {
   for_lunch: {
     on_weekdays: {
       start: {
@@ -66,7 +89,6 @@ export const RESTAURANT_HOURS = {
     },
   },
 };
-
 export const schedule = {
   weekdays: {
     breakfast: { start: "08:00", end: "09:30" },
@@ -80,7 +102,7 @@ export const schedule = {
   },
 };
 
-export const holidays = [
+export const holidays: Holidays = [
   "2023-10-26",
   "2023-10-28",
   "2023-12-25",

@@ -1,4 +1,14 @@
-export const SOCIAL_MEDIA_URLS = {
+export interface SocialMediaUrls {
+    facebook: string;
+    instagram: string;
+    youtube: string;
+    twitter: string;
+    LinkedIn: string;
+    gitlab: string;
+    discord: string;
+  }
+
+export const SOCIAL_MEDIA_URLS:SocialMediaUrls = {
     facebook: "https://www.facebook.com/OpenSourceUoM/",
     instagram: "https://www.instagram.com/opensourceuom/",
     youtube:

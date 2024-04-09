@@ -7,8 +7,23 @@ import { professors as professors6 } from "./Education";
 import { professors as professors7 } from "./Economics";
 import { professors as professors8 } from "./Music";
 
+export interface Professor {
+    imgUrl: string;
+    fname: string;
+    lname: string;
+    title:string;
+    tel: string;
+    email: string;
+    building: string;
+    office: string;
+}
 
-const allProfessors = [
+export interface ProfessorList{
+    department:string;
+    professors:Professor[]
+}
+
+const allProfessors:ProfessorList[] = [
     professors,
     professors2,
     professors3,

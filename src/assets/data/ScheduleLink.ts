@@ -38,79 +38,75 @@
 
 import { DEPARTMENT_CODES } from "./DepNames";
 
-export const schedulesData = new Map([
+type ScheduleData = {
+  semester: string;
+  exam: string;
+};
+export const schedulesData: Record<string, ScheduleData> = {
   [
     // Τμήμα Βαλκανικών, Σλαβικών & Ανατολικών Σπουδών
-    DEPARTMENT_CODES.BALKAN_STUDIES,
+    DEPARTMENT_CODES.BALKAN_STUDIES]:
     {
       semester:
         "https://www.uom.gr/bso/orologio-programma",
       exam: "https://www.uom.gr/bso/programma-eksetaseon",
     },
-  ],
   [
 
     // Τμήμα Διεθνών & Ευρωπαϊκών Σπουδών
-    DEPARTMENT_CODES.EUROPEAN_STUDIES,
+    DEPARTMENT_CODES.EUROPEAN_STUDIES]:
     {
       semester:
         "https://www.uom.gr/ies/orologio-programma",
       exam: " https://www.uom.gr/ies/programma-eksetaseon",
     },
-  ],
   [
     // Τμήμα Εκπαιδευτικής & Κοινωνικής Πολιτικής
-    DEPARTMENT_CODES.EDUCATION,
+    DEPARTMENT_CODES.EDUCATION]:
     {
       semester:
         "https://www.uom.gr/esp/orologio-programma-didaskalias",
       exam: " https://www.uom.gr/esp/programma-eksetastikhs",
     },
-  ],
   [
     // Τμήμα Εφαρμοσμένης πληροφορικής
-    DEPARTMENT_CODES.INFORMATICS,
+    DEPARTMENT_CODES.INFORMATICS]:
     {
       semester:
         "https://www.uom.gr/dai/programmata-didaskalias",
       exam: " https://www.uom.gr/dai/programma-eksetaseon",
     },
-  ],
   [
     // Τμήμα Λογιστικής και Χρηματοοικονομικής
-    DEPARTMENT_CODES.ACCOUNTING_FINANCE,
+    DEPARTMENT_CODES.ACCOUNTING_FINANCE]:
     {
       semester:
         "https://www.uom.gr/fin/orologio-programma",
       exam: " https://www.uom.gr/fin/eksetaseis",
     },
-  ],
   [
     // Τμήμα Μουσικής Επιστήμης & Τέχνης
-    DEPARTMENT_CODES.MUSIC,
+    DEPARTMENT_CODES.MUSIC]:
     {
       semester:
         "https://www.uom.gr/msa/orologio-programma",
       exam: " https://www.uom.gr/msa/programma-eksetaseon",
     },
-  ],
   [
     // Τμήμα Οικονομικών Επιστημών
-    DEPARTMENT_CODES.ECONOMICS,
+    DEPARTMENT_CODES.ECONOMICS]:
     {
       semester:
         "https://www.uom.gr/eco/orologia-programmata-mathhmaton",
       exam: " https://www.uom.gr/eco/programmata-eksetaseon",
     },
-  ],
   [
     // Τμήμα Οργάνωσης & Διοίκησης Επιχειρήσεων
     //Αυτό χρειάζεται αλλαγή σε κάθε εξάμηνο λόγω γραμματείας
-    DEPARTMENT_CODES.BUSINESS_ADMINISTRATION,
+    DEPARTMENT_CODES.BUSINESS_ADMINISTRATION]:
     {
       semester:
         "https://www.uom.gr/ba/orologio-programma-didaskalias-earinoy-eksamhnoy-akad-etoys-2023-2024",
       exam: "https://www.uom.gr/ba/programma-eksetastikhs-periodoy-febroyarioy-2024",
-    },
-  ]
-]);
+    }
+  }

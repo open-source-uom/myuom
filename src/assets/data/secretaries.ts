@@ -37,7 +37,14 @@
 */
 import i18n from "../../i18n";
 
-const secrData = [
+export interface SecretariesData{
+  name:string;
+  email:string;
+  tel:string;
+  link:string;
+}
+
+const secrData:SecretariesData[] = [
   {
     name: i18n.t("eco_department"),
     email: "ecosecr@uom.edu.gr",

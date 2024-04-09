@@ -36,21 +36,22 @@
 
 */
 import { Divider, Flex } from "@chakra-ui/react";
-import React from "react";
-import Guide from "../components/freshmen/Guide.tsx";
-import GuideButton from "../components/freshmen/GuideButton.tsx";
-import { useGuidesMdData } from "../hooks/useGuidesMdData.ts";
+import React, { useCallback } from "react";
+import Guide from "../components/freshmen/Guide";
+import GuideButton from "../components/freshmen/GuideButton";
+import { useGuidesMdData } from "../hooks/useGuidesMdData";
 import { useScrollToTopOnLoad } from "../hooks/useScrollToTopOnLoad";
+import { GuideItem } from "../assets/data/FirstYearInfo";
 
-function ButtonListPage() {
-  useScrollToTopOnLoad();
+function ButtonListPage(): JSX.Element {
   const { guideMd, firstYearGuidesTranslated, fetchGuideByPath, setGuideMd } =
     useGuidesMdData();
 
+  useScrollToTopOnLoad();
   return (
     <>
       {guideMd ? (
-        <Guide onClick={(e) => setGuideMd("")} guideContent={guideMd} />
+        <Guide onClick={() => setGuideMd("")} guideContent={guideMd} />
       ) : null}
       {!guideMd ? (
         <Flex direction="column" paddingX={4} align="center">
@@ -62,13 +63,14 @@ function ButtonListPage() {
               lg: "80%",
               "2xl": "60%",
               "3xl": "50%",
-            }}>
-            {firstYearGuidesTranslated.map((item, index) => (
+            }}
+          >
+            {firstYearGuidesTranslated.map((item:GuideItem, index:number) => (
               <React.Fragment key={`guide-${index}`}>
                 <GuideButton
                   text={item.text}
                   guidePath={item.guidePath}
-                  onClick={fetchGuideByPath}
+                  onClick={fetchGuideByPath} 
                 />
                 {/* Last item should not have a divider on the bottom */}
                 {index !== firstYearGuidesTranslated.length - 1 ? (

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import firstYearGuidesMdData,{ Guides } from "../assets/data/FirstYearInfo";
+import firstYearGuidesMdData,{ GuideItem, Guides } from "../assets/data/FirstYearInfo";
 
 export const useGuidesMdData = () => {
   const { i18n } = useTranslation();
@@ -18,7 +18,7 @@ export const useGuidesMdData = () => {
       });
   };
 
-  const firstYearGuidesTranslated: Guides = firstYearGuidesMdData;
+  const firstYearGuidesTranslated: GuideItem[] = firstYearGuidesMdData['en'];
   if (!(i18n.language in firstYearGuidesTranslated)) {
     console.error(`No translation found for language '${i18n.language}'`);
     return { guideMd, firstYearGuidesTranslated, fetchGuideByPath, setGuideMd };
