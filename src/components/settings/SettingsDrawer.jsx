@@ -105,7 +105,7 @@ export function SettingsDrawer({ isOpen, onClose }) {
                             </Link>
 
                             <a
-                                href="https://gitlab.com/opensourceuom/myUoM/-/blob/main/LICENSE"
+                                href="https://github.com/open-source-uom/myuom/blob/main/LICENSE"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
@@ -121,7 +121,7 @@ export function SettingsDrawer({ isOpen, onClose }) {
                             </a>
                             <SettingsOption Icon={FaShareAlt} onClick={handleShare} text={i18n.t("share_app")} />
                             <a
-                                href="https://gitlab.com/opensourceuom/myUoM"
+                                href="https://github.com/open-source-uom/myuom"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
