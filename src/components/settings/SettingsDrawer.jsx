@@ -17,6 +17,7 @@ import {
     FaFileAlt,
     FaShareAlt,
     FaGitlab,
+    FaGithub,
     FaBook,
     FaRegComment,
 } from "react-icons/fa";
@@ -125,7 +126,7 @@ export function SettingsDrawer({ isOpen, onClose }) {
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                <SettingsOption Icon={FaGitlab} onClick={onClose} text={i18n.t("gitlab_contribute")} />
+                                <SettingsOption Icon={FaGithub} onClick={onClose} text={i18n.t("github_contribute")} />
                             </a>
                             <a
                                 href="https://docs.google.com/forms/u/2/d/e/1FAIpQLSduM517c4OtIs-CNv5cjQtYcj6OXRDtCP6x0Q7d4Ymhd3xQMg/viewform"
