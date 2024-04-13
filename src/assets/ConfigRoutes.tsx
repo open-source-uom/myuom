@@ -35,6 +35,7 @@
     -Fakidis
 
 */
+import React,{ReactNode} from "react";
 import {
   DepAnnounceIcon,
   CalendarTimeIcon,
@@ -62,10 +63,23 @@ import SchedulePage from "../pages/SchedulePage";
 import MapPage from "../pages/MapPage";
 import { FaUniversity } from "react-icons/fa";
 import i18n from "../i18n";
-export const Categories = [
+
+export interface Category {
+  title: string;
+  iconSVG: ReactNode;
+  route: string;
+  span: number;
+  isExternal: boolean;
+  requireSelection: boolean;
+  position: number;
+  hide: boolean;
+  pageToDisplay: ReactNode | null;
+}
+
+export const Categories: Category[] = [
   {
     title: i18n.t("course_schedule"),
-    iconSVG: <CalendarTimeIcon />,
+    iconSVG: <CalendarTimeIcon/>,
     route: "/semesterschedule",
     span: 2,
     isExternal: true,
@@ -118,7 +132,6 @@ export const Categories = [
     requireSelection: false,
     pageToDisplay: <LibraryPage />,
   },
-
   {
     title: i18n.t("eudoxus"),
     iconSVG: <StackedBooksIcon />,
@@ -214,25 +227,29 @@ export const Categories = [
     span: 1,
     isExternal: true,
     requireSelection: true,
-    position: 13,
+    position: 14,
     hide: false,
     pageToDisplay: <AnnouncementsPage />,
   },
   {
     title: i18n.t("masters"),
-    iconSVG: <FaUniversity       width="150%"
-                                 size="150%"
-                                 height="150%"
-                                 version="1.1"
-                                 viewBox="0 0 700 700"
-                                 xmlns="http://www.w3.org/2000/svg"
-                                 xmlnsXlink="http://www.w3.org/1999/xlink"
-                                 fill="#f3f3f3" />,
+    iconSVG: (
+      <FaUniversity
+        width="150%"
+        size="150%"
+        height="150%"
+        version="1.1"
+        viewBox="0 0 700 700"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlnsXlink="http://www.w3.org/1999/xlink"
+        fill="#f3f3f3"
+      />
+    ),
     route: "https://www.uom.gr/programmata-metaptyxiakon-spoydon",
     span: 1,
     isExternal: true,
     requireSelection: false,
-    position: 14,
+    position: 15,
     hide: false,
     pageToDisplay: null,
   },

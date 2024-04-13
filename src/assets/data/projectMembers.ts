@@ -38,7 +38,14 @@
 
 import i18n from "../../i18n"
 
-const projectMembers = [
+export interface ProjectMember {
+  name: string;
+  socialMedia: string;
+  email: string;
+  img: string;
+}
+
+const projectMembers:ProjectMember[] = [
   {
     name: i18n.t("apostolidis"),
     socialMedia: "https://www.linkedin.com/in/geoapos/",

@@ -35,7 +35,7 @@
     -Fakidis
 
 */
-
+import React from "react";
 import {
   AccordionItem,
   AccordionButton,
@@ -44,33 +44,31 @@ import {
   Box,
   Image,
   Text,
-  useColorModeValue,
   Flex,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import { SocialIcon } from "react-social-icons";
+import { ProjectMember } from "../assets/data/projectMembers";
 
-export default function ProjectMembersCard({ data }) {
-  const SelectBorderColor = () => {
-    return useColorModeValue("#0050e0", "#f3f3f3");
-  };
+interface ProjectMembersCardProps {
+  data: ProjectMember;
+}
 
-  const SelectItemColor = () => {
-    return useColorModeValue("black", "white");
-  };
-
+const ProjectMembersCard: React.FC<ProjectMembersCardProps> = ({ data }) => {
+  const borderColor = useColorModeValue("#0050e0", "#f3f3f3");
+  const itemColor = useColorModeValue("black", "white");
   return (
     <Box
       w={{ sm: "95%", md: "75%", lg: "50%" }}
       borderRadius="20"
       overflow="hidden"
       border="2px"
-      borderColor={SelectBorderColor()}
+      borderColor={borderColor}
     >
       <AccordionItem border="none" w="100%">
-        <Flex>
+        <Flex direction="row">
           <AccordionButton
             display="flex"
-            direction="row"
             alignItems="center"
             justifyContent="start"
             _hover={{ bg: "transparent" }}
@@ -79,23 +77,16 @@ export default function ProjectMembersCard({ data }) {
             outline="none"
             textAlign="left"
             bgColor="transparent"
-            color={SelectItemColor()}
+            color={itemColor}
             fontFamily="Syne"
             border="none"
-            alt="profPic"
             overflow="hidden"
             gap={3}
           >
-            <Image
-              src={data.img}
-              width="60px"
-              height="60px"
-              borderRadius="full"
-            />
+            <Image src={data.img} width="60px" height="60px" borderRadius="full" />
             <Text
               w="100%"
               display="flex"
-              direction="row"
               alignItems="center"
               justifyContent="start"
               fontWeight="bold"
@@ -112,13 +103,12 @@ export default function ProjectMembersCard({ data }) {
               url={data.email}
               style={{ marginRight: "0.5rem", marginBottom: "1rem" }}
             />
-            <SocialIcon
-              url={data.socialMedia}
-              style={{ marginRight: "0.5rem" }}
-            />
+            <SocialIcon url={data.socialMedia} style={{ marginRight: "0.5rem" }} />
           </Flex>
         </AccordionPanel>
       </AccordionItem>
     </Box>
   );
-}
+};
+
+export default ProjectMembersCard;

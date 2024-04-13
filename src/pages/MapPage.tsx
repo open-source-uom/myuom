@@ -35,6 +35,7 @@
     -Fakidis
 
 */
+import React, { useEffect, useState } from "react";
 import {
   Box,
   Button,
@@ -43,14 +44,15 @@ import {
   useBreakpointValue,
   useColorModeValue,
 } from "@chakra-ui/react";
-import { useEffect, useState } from "react";
 import MapCords from "../components/maps/MapCords";
-import SelectBuildingDropdown from "../components/maps/SelectBuildingDropdown.tsx";
-import SelectOfficeDropdown from "../components/maps/SelectOfficeDropdown.tsx";
+import SelectBuildingDropdown from "../components/maps/SelectBuildingDropdown";
+import SelectOfficeDropdown from "../components/maps/SelectOfficeDropdown";
 import { useDepName, useMapData } from "../hooks";
 import i18n from "../i18n";
 
-function MapPage() {
+interface MapPageProps {}
+
+const MapPage: React.FC<MapPageProps> = () => {
   const { depName } = useDepName();
   const {
     isSpecificForDepartment,
@@ -62,7 +64,8 @@ function MapPage() {
     selectedLocation,
     selectedLocationCategory,
   } = useMapData();
-  console.log("loca",locations)
+  console.log("loca", locations);
+
   const departmentHint = useBreakpointValue({
     base: i18n.t(depName),
     md: i18n.t("current_department") + i18n.t(depName),
@@ -76,18 +79,18 @@ function MapPage() {
 
   function resetSelectedLocation() {
     setSelectedLocation("");
-    setSelectedText(i18n.t("select_location"));
+    setSelectedText(i18n.t("select_location")||"");
   }
 
-  const handleLocationCategoryChange = (selection) => {
+  const handleLocationCategoryChange = (selection: string) => {
     setSelectedLocationCategory(selection);
     resetSelectedLocation();
   };
 
-  const [selectedText, setSelectedText] = useState(i18n.t("select_location"));
+  const [selectedText, setSelectedText] = useState<string>(i18n.t("select_location")||"");
 
   return (
-    <Box align="center" marginTop="1em" fontFamily="Syne">
+    <Box sx={{"text-align": "-webkit-center"}} marginTop="1em" fontFamily="Syne">
       <Stack align="center">
         <SelectBuildingDropdown
           handleChange={handleLocationCategoryChange}
@@ -100,14 +103,13 @@ function MapPage() {
         ) : null}
         <SelectOfficeDropdown
           locations={locations}
-          handleChange={(selection) => setSelectedLocation(selection)}
+          handleChange={(selection: string) => setSelectedLocation(selection)}
           selectedText={selectedText}
           setSelectedText={setSelectedText}
         />
       </Stack>
       {selectedLocation ? <MapCords {...locationData} /> : null}
       <Button
-        _hover={false}
         bgColor={useColorModeValue("#0050e0", "#f3f3f3")}
         color={useColorModeValue("#f3f3f3", "black")}
         variant="outline"
@@ -116,11 +118,12 @@ function MapPage() {
           window.open(
             "https://www.uom.gr/about/eikonikh-perihghsh-360-sup-o-sup-sto-panepisthmio-makedonias"
           );
-        }}>
+        }}
+      >
         {i18n.t("virtual_tour")} 360°
       </Button>
     </Box>
   );
-}
+};
 
 export default MapPage;

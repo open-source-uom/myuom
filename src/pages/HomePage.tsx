@@ -35,14 +35,16 @@
     -Fakidis
 
 */
-
-import { useState } from "react";
-import { Categories } from "../assets/ConfigRoutes";
+import React, { useState } from "react";
+import { Categories, Category } from "../assets/ConfigRoutes";
 import MenuBox from "../components/MenuBox";
 import { Flex, Grid, Heading } from "@chakra-ui/react";
-
 import { motion } from "framer-motion";
 import { useScrollToTopOnLoad } from "../hooks/useScrollToTopOnLoad";
+
+interface HomePageProps {
+  
+}
 
 const stagger = {
   inView: {
@@ -52,21 +54,25 @@ const stagger = {
   },
 };
 
-function sortToPlaceInDefinedOrder(categories) {
+function sortToPlaceInDefinedOrder(categories: Category[]): Category[] {
   return categories.sort((a, b) => a.position - b.position);
 }
 
-function filterOutHiddenPages(categories) {
+function filterOutHiddenPages(categories: Category[]): Category[] {
   return categories.filter(({ hide }) => hide === false);
 }
 
-export default function HomePage() {
+const HomePage: React.FC<HomePageProps> = () => {
   const [categoriesListForSearch, setCategoriesListForSearch] =
-    useState(Categories);
+    useState<Category[]>(Categories);
+
   const categoriesSorted = sortToPlaceInDefinedOrder(Categories);
-  const categoriesSortedAndWithoutHiddenPages =
-    filterOutHiddenPages(categoriesSorted);
+  const categoriesSortedAndWithoutHiddenPages = filterOutHiddenPages(
+    categoriesSorted
+  );
+
   useScrollToTopOnLoad();
+
   return (
     <Flex
       direction="column"
@@ -105,4 +111,6 @@ export default function HomePage() {
       </Grid>
     </Flex>
   );
-}
+};
+
+export default HomePage;

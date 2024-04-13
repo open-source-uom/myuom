@@ -11,7 +11,7 @@ import {
 import { ChevronDownIcon } from "@chakra-ui/icons";
 
 interface Location {
-  title: string;
+  title?: string;
 }
 
 interface SelectOfficeDropdownProps {
@@ -74,7 +74,7 @@ const SelectOfficeDropdown: React.FC<SelectOfficeDropdownProps> = ({
           <MenuItem
             key={index}
             value={option.title}
-            onClick={() => handleMenuItemClick(option.title)}
+            onClick={() => handleMenuItemClick(option.title||"")}
             _focus={{ bg: "transparent" }}
           >
             {option.title}

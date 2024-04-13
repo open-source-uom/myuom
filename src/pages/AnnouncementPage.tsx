@@ -35,18 +35,23 @@
     -Fakidis
 
 */
-
+import React from "react";
 import { Box, Heading, useToast } from "@chakra-ui/react";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAnnouncementLink, useDepName } from "../hooks";
 import i18n from "../i18n";
 
-export default function AnnouncementsPage() {
+interface AnnouncementLink {
+  link: string;
+  code: string;
+}
+
+const AnnouncementsPage: React.FC = () => {
   const { depCode } = useDepName();
   const toast = useToast();
   const navigate = useNavigate();
-  const announcementLink = useAnnouncementLink(depCode);
+  const announcementLink: AnnouncementLink | null = useAnnouncementLink(depCode);
 
   useEffect(() => {
     if (!depCode) {
@@ -63,12 +68,13 @@ export default function AnnouncementsPage() {
       window.open(announcementLink.link);
       navigate("/");
     }
-  }, [depCode]);
+  }, [depCode, announcementLink, navigate, toast]);
+
   return (
     <Box>
       {announcementLink ? (
         <Heading textAlign="center" marginTop="50px">
-          Ανακατεύθυνση στο τμήμα
+          Ανακατεύθυνση στο τμήμα{" "}
           <a href={announcementLink.link} target="_blank" rel="noreferrer">
             {announcementLink.code}
           </a>
@@ -80,4 +86,6 @@ export default function AnnouncementsPage() {
       )}
     </Box>
   );
-}
+};
+
+export default AnnouncementsPage;

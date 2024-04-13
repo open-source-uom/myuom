@@ -40,18 +40,11 @@ import { Box, Button, Text, useColorModeValue } from "@chakra-ui/react";
 import React, { useState } from "react";
 import ImageMapper,{Map} from "react-img-mapper";
 import { GROUND_FLOOR_IMG_URL } from "../../assets/data/map_data/floor_images";
+import { Location } from "../../hooks/useMapData";
 import i18n from "../../i18n";
 
-interface AppProps {
-  floor: string;
-  imageURL: string;
-  marked_position_x: number;
-  marked_position_y: number;
-  elevatorx: number;
-  elevatory: number;
-}
 
-const App: React.FC<AppProps> = ({
+const App: React.FC<Location> = ({
   floor,
   imageURL,
   marked_position_x,
@@ -65,12 +58,11 @@ const App: React.FC<AppProps> = ({
     areas: [{ id: '5', shape: "circle", coords: [0, 0, 10], preFillColor: "red" }],
   });
 
-  //use Callbacks here are not necessary,might be performance wise
   const handleUpdateMapArea = () =>
-    updateMapArea('5', [marked_position_x, marked_position_y, 5]);
+    updateMapArea('5', [marked_position_x||0, marked_position_y||0, 5]);
 
   const handleUpdateElevatorMapArea = () =>
-    updateMapArea('5', [elevatorx, elevatory, 5]);
+    updateMapArea('5', [elevatorx||0, elevatory||0, 5]);
 
   const updateMapArea = (id: string, coords: number[]) => {
     const areas = mapAreas.areas.map((item) =>
@@ -104,9 +96,8 @@ const App: React.FC<AppProps> = ({
         ) : null}
 
         <ImageMapper
-          //this is needed to make sure it rerenders when the office selected in the floor changes
           key={marked_position_x + " " + marked_position_y}
-          src={showGroundFloorImg ? GROUND_FLOOR_IMG_URL : imageURL}
+          src={showGroundFloorImg ? GROUND_FLOOR_IMG_URL : imageURL||""}
           onLoad={
             showGroundFloorImg
               ? handleUpdateElevatorMapArea
@@ -117,7 +108,7 @@ const App: React.FC<AppProps> = ({
         />
         {showGroundFloorImg ? (
           <Text pt={"0.125rem"} px="1rem">
-            {i18n.t("enter_elevator_prompt")} {floor.toLowerCase()}{" "}
+            {i18n.t("enter_elevator_prompt")} {floor&&floor.toLowerCase()}{" "}
             {!shouldOmitFloor && i18n.t("floor")}
           </Text>
         ) : null}

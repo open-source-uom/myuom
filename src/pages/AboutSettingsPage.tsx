@@ -35,25 +35,31 @@
     -Fakidis
 
 */
-
+import React from "react";
 import { Box, Image, Text, Accordion } from "@chakra-ui/react";
-import membersData from "../assets/data/projectMembers";
+import membersData,{ProjectMember} from "../assets/data/projectMembers";
 import ProjectMembersCard from "../components/ProjectMembersCard";
-import UoMLogo from "../assets/myUOMLogo.png";
 import { SocialIcon } from "react-social-icons";
 import i18n from "../i18n";
 import { useSocialMediaURLs } from "../hooks";
-function AboutSettingsPage() {
+
+const UoMLogo = require("../assets/myUOMLogo.png");
+
+const AboutSettingsPage: React.FC = () => {
   const SOCIAL_MEDIA_URLS = useSocialMediaURLs();
+
   return (
-    <Box
-      align="center"
-      marginTop="1em"
+    <Box 
+      sx={{"text-align": "-webkit-center"}}  
       fontFamily="Syne"
       fontSize={{ sm: 11.95, md: 16, lg: 26, xl: 32 }}
     >
       <Image src={UoMLogo} width="200px" height="200px" />
-      <Text marginTop="1em" marginBottom="2rem" fontSize={{ sm: 26, md: 30, lg: 34, xl: 38 }}>
+      <Text
+        marginTop="1em"
+        marginBottom="2rem"
+        fontSize={{ sm: 26, md: 30, lg: 34, xl: 38 }}
+      >
         {i18n.t("about_title")}
         <br />
         {i18n.t("about_version")}
@@ -107,12 +113,12 @@ function AboutSettingsPage() {
         {i18n.t("about_project_members_title")}
       </Text>
       <Accordion allowToggle mt="1rem">
-        {membersData.map((data) => (
+        {membersData.map((data: ProjectMember) => (
           <ProjectMembersCard data={data} key={data.name} />
         ))}
       </Accordion>
     </Box>
   );
-}
+};
 
 export default AboutSettingsPage;

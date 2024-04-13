@@ -1,6 +1,6 @@
 import React from "react";
 
-function CalendarTimeIcon() {
+const CalendarTimeIcon: React.FC = () => {
   return (
     <svg
       width="150%"

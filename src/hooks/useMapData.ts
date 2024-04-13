@@ -5,19 +5,14 @@ import {
 } from "../assets/data/map_data/merged_map_data";
 import { useDepName } from "./useDepName";
 
-interface Location {
-  title: string;
-  elevatorx:number;
-  elevatory:number;
-  floor:string;
-  imageURL:string; 
-  marked_position_x:number; 
-  marked_position_y:number;
-}
-
-interface LocationCategory {
-  categoryName: string;
-  locations: Location[];
+export interface Location {
+  title?: string;
+  elevatorx?:number;
+  elevatory?:number;
+  floor?:string;
+  imageURL?:string; 
+  marked_position_x?:number; 
+  marked_position_y?:number;
 }
 
 interface MapData {
@@ -50,7 +45,6 @@ export const useMapData = (): MapData => {
   let isSpecificForDepartment: boolean = false;
 
   if (selectedLocationCategory) {
-    // Check if location is general or specific
     if (generalCategoryOptions.includes(selectedLocationCategory)) {
       const generalData = new_merged_map_data.find(
         (data) => data.categoryName === selectedLocationCategory

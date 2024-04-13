@@ -20,5 +20,5 @@ export const useDepName = (): UseDepNameResult => {
 
   const depName: string = foundDepartment?.name || "";
 
-  return { depName, depCode: depCode || "", setDepCode }; // Ensure `depCode` is not `null` in the returned object
+  return { depName, depCode: depCode || "", setDepCode };
 };

@@ -35,17 +35,30 @@
     -Fakidis
 
 */
-
+import React from "react";
 import { Box, Text } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
+import { MouseEvent } from "react";
 import i18n from "../i18n";
 
-function Error404() {
-    const navigate = useNavigate();
+const Error404: React.FC = () => {
+  const navigate = useNavigate();
+
+  const handleButtonClick = (e: MouseEvent<HTMLButtonElement>) => {
+    navigate('/');
+  };
+
+  const handleButtonMouseOver = (e: MouseEvent<HTMLButtonElement>) => {
+    e.currentTarget.style.color = 'blue';
+  };
+
+  const handleButtonMouseOut = (e: MouseEvent<HTMLButtonElement>) => {
+    e.currentTarget.style.color = 'black';
+  };
 
   return (
     <Box
-      align="center"
+      sx={{"text-align": "-webkit-center"}}
       marginTop="1em"
       fontFamily="Syne"
       fontSize={{ sm: 11.95, md: 16, lg: 26, xl: 32 }}
@@ -56,23 +69,22 @@ function Error404() {
         {i18n.t("page_not_found")}
         <br />
         <br />
-        
-        <button 
-            onClick={()=>{navigate('/')}} 
-            style={{ 
-                backgroundColor: "",
-                color: "black", 
-                transition: "color 0.3s" 
-            }}
-            onMouseOver={(e) => e.target.style.color = 'blue'} 
-            onMouseOut={(e) => e.target.style.color = 'black'} 
+        <button
+          onClick={handleButtonClick}
+          style={{
+            backgroundColor: "",
+            color: "black",
+            transition: "color 0.3s",
+          }}
+          onMouseOver={handleButtonMouseOver}
+          onMouseOut={handleButtonMouseOut}
         >
-            {i18n.t("go_to_homepage")}   
+          {i18n.t("go_to_homepage")}
         </button>
-                
       </Text>
     </Box>
   );
-}
+};
 
 export default Error404;
+
