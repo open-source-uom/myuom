@@ -16,7 +16,6 @@ import {
     FaInfoCircle,
     FaFileAlt,
     FaShareAlt,
-    FaGitlab,
     FaGithub,
     FaBook,
     FaRegComment,
