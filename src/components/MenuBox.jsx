@@ -85,15 +85,15 @@ export default function MenuBox({ category }) {
     if(i18n.language === 'en' && englishRoute){
       isExternal
           ? requireSelection
-          ? window.location.replace(englishRoute, "_blank")
-          : window.open(englishRoute, "_blank")
+              ? window.location.replace(englishRoute, "_blank")
+              : window.open(englishRoute, "_blank")
           : navigate(englishRoute);
     }else{
-    isExternal
-        ? requireSelection
-            ? window.location.replace(route, "_blank")
-            : window.open(route, "_blank")
-        : navigate(route);
+      isExternal
+          ? requireSelection
+              ? window.location.replace(route, "_blank")
+              : window.open(route, "_blank")
+          : navigate(route);
     }
   };
 

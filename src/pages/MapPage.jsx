@@ -114,12 +114,12 @@ function MapPage() {
         margin="1rem"
         onClick={(e) => {
           i18n.language === "en" 
-          ? window.open(
-              "https://www.uom.gr/en/about/360-sup-o-sup-virtual-tour-of-the-university-of-macedonia"
-            ) 
-          : window.open(
-              "https://www.uom.gr/about/eikonikh-perihghsh-360-sup-o-sup-sto-panepisthmio-makedonias"
-            );
+            ? window.open(
+                "https://www.uom.gr/en/about/360-sup-o-sup-virtual-tour-of-the-university-of-macedonia"
+              ) 
+            : window.open(
+                "https://www.uom.gr/about/eikonikh-perihghsh-360-sup-o-sup-sto-panepisthmio-makedonias"
+              );
         }}>
         {i18n.t("virtual_tour")} 360°
       </Button>

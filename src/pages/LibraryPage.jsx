@@ -218,8 +218,8 @@ export default function LibraryPage() {
         }
         onClick={(e) => {
           i18n.language === "en" 
-          ? window.open("https://www.lib.uom.gr/index.php/en/") 
-          : window.open("https://www.lib.uom.gr/index.php/el/");
+            ? window.open("https://www.lib.uom.gr/index.php/en/") 
+            : window.open("https://www.lib.uom.gr/index.php/el/");
         }}
         justifyContent="center"
       >
