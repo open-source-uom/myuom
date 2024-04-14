@@ -59,29 +59,24 @@ export const AnnouncementsData = [
   {
     code: DEPARTMENT_CODES.INFORMATICS,
     link: "https://www.uom.gr/dai/ta-nea-toy-tmhmatos",
-    //not exist
 
   }, 
   {
     code: DEPARTMENT_CODES.BUSINESS_ADMINISTRATION,
     link: "https://www.uom.gr/ba",
-    //not updated
   }, 
   {
     code: DEPARTMENT_CODES.ECONOMICS,
     link: "https://www.uom.gr/eco#undefined1",
-    //not exist
   }, 
   {
     code: DEPARTMENT_CODES.ACCOUNTING_FINANCE,
     link: "https://www.uom.gr/fin",
-    //not updated
   }, 
   {
     code: DEPARTMENT_CODES.MUSIC,
     link: "https://www.uom.gr/msa",
     englishLink: "https://www.uom.gr/en/msa"
-    //almost not updated
   }
 
 ]
