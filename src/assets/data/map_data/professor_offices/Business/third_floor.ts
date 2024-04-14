@@ -1,0 +1,131 @@
+import i18n from "../../../../../i18n";
+import { THIRD_FLOOR_HT_IMG } from "../../floor_images";
+import elevator from "../../elevator_positions";
+import { Location } from "../../../../../hooks/useMapData";
+
+const third_floor_locations: Location[] = [
+  {
+    floor: String(i18n.t("third_floor")),
+    imageURL: THIRD_FLOOR_HT_IMG,
+    ...elevator.gym,
+    title: "301",
+    marked_position_x: 53,
+    marked_position_y: 199,
+  },
+  {
+    floor: String(i18n.t("third_floor")),
+    imageURL: THIRD_FLOOR_HT_IMG,
+    ...elevator.gym,
+    title: "301" + i18n.t("office_letter_a"),
+    marked_position_x: 32,
+    marked_position_y: 180,
+  },
+  {
+    floor: String(i18n.t("third_floor")),
+    imageURL: THIRD_FLOOR_HT_IMG,
+    ...elevator.gym,
+    title: "302",
+    marked_position_x: 38,
+    marked_position_y: 162,
+  },
+  {
+    floor: String(i18n.t("third_floor")),
+    imageURL: THIRD_FLOOR_HT_IMG,
+    ...elevator.gym,
+    title: "305",
+    marked_position_x: 38,
+    marked_position_y: 127,
+  },
+  {
+    floor: String(i18n.t("third_floor")),
+    imageURL: THIRD_FLOOR_HT_IMG,
+    ...elevator.gym,
+    title: "306",
+    marked_position_x: 30,
+    marked_position_y: 101,
+  },
+  {
+    floor: String(i18n.t("third_floor")),
+    imageURL: THIRD_FLOOR_HT_IMG,
+    ...elevator.gym,
+    title: "307",
+    marked_position_x: 56,
+    marked_position_y: 94,
+  },
+  {
+    floor: String(i18n.t("third_floor")),
+    imageURL: THIRD_FLOOR_HT_IMG,
+    ...elevator.gym,
+    title: "308",
+    marked_position_x: 76,
+    marked_position_y: 97,
+  },
+  {
+    floor: String(i18n.t("third_floor")),
+    imageURL: THIRD_FLOOR_HT_IMG,
+    ...elevator.gym,
+    title: "310",
+    marked_position_x: 94,
+    marked_position_y: 93,
+  },
+  {
+    floor: String(i18n.t("third_floor")),
+    imageURL: THIRD_FLOOR_HT_IMG,
+    ...elevator.gym,
+    title: "311",
+    marked_position_x: 112,
+    marked_position_y: 94,
+  },
+  {
+    floor: String(i18n.t("third_floor")),
+    imageURL: THIRD_FLOOR_HT_IMG,
+    ...elevator.gym,
+    title: "312",
+    marked_position_x: 145,
+    marked_position_y: 101,
+  },
+  // {
+  //   floor: String(i18n.t("third_floor")),
+  //   imageURL: THIRD_FLOOR_HT_IMG,
+  //   title: "320",
+  //   marked_position_x: 188,
+  //   marked_position_y: 128,
+  // },
+  // {
+  //   floor: String(i18n.t("third_floor")),
+  //   imageURL: THIRD_FLOOR_HT_IMG,
+  //   title: "321",
+  //   marked_position_x: 204,
+  //   marked_position_y: 109,
+  // },
+  // {
+  //   floor: String(i18n.t("third_floor")),
+  //   imageURL: THIRD_FLOOR_HT_IMG,
+  //   title: "327",
+  //   marked_position_x: 317,
+  //   marked_position_y: 99,
+  // },
+  // {
+  //   floor: String(i18n.t("third_floor")),
+  //   imageURL: THIRD_FLOOR_HT_IMG,
+  //   title: "330",
+  //   marked_position_x: 314,
+  //   marked_position_y: 152,
+  // },
+  // {
+  //   floor: String(i18n.t("third_floor")),
+  //   imageURL: THIRD_FLOOR_HT_IMG,
+  //   title: "331-332",
+  //   marked_position_x: 196,
+  //   marked_position_y: 173,
+  // },
+  // {
+  //   floor: String(i18n.t("third_floor")),
+  //   imageURL: THIRD_FLOOR_HT_IMG,
+  //   title: "334-335",
+  //   marked_position_x: 228,
+  //   marked_position_y: 193,
+  // },
+];
+
+export default third_floor_locations;

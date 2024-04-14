@@ -25,7 +25,7 @@ const useDate = (): Date => {
   return date;
 };
 
-interface FoodMenu {
+export interface FoodMenu {
   mainDish: string[];
   specialDish: string[];
   salad: string[];
@@ -108,7 +108,7 @@ const getNextMeal = (currDate: Date): string => {
   return CURRENTLY_NEXT_LUNCH;
 };
 
-interface TodaysMenuResult {
+export interface TodaysMenuResult {
   foodMenu: FoodMenu;
   isLunch: boolean;
   isTomorrow: boolean;

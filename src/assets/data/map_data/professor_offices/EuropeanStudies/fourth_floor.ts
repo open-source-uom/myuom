@@ -1,0 +1,121 @@
+import i18n from "../../../../../i18n";
+import { FOURTH_FLOOR_CD_IMG, FOURTH_FLOOR_HT_IMG, FOURTH_FLOOR_KZ_IMG } from "../../floor_images";
+import elevator from "../../elevator_positions";
+import { Location } from "../../../../../hooks/useMapData";
+
+const fourth_floor_locations: Location[] = [
+  {
+    floor: String(i18n.t("fourth_floor")),
+    imageURL: FOURTH_FLOOR_CD_IMG,
+    ...elevator.library,
+    title: "401",
+    marked_position_x: 48,
+    marked_position_y: 207,
+  },
+  {
+    floor: String(i18n.t("fourth_floor")),
+    imageURL: FOURTH_FLOOR_KZ_IMG,
+    ...elevator.restaurant,
+    title: "421" + String(i18n.t("office_letter_a")),
+    marked_position_x: 217,
+    marked_position_y: 62,
+  },
+  {
+    floor: String(i18n.t("fourth_floor")),
+    imageURL: FOURTH_FLOOR_KZ_IMG,
+    ...elevator.restaurant,
+    title: "421" + String(i18n.t("office_letter_b")),
+    marked_position_x: 200,
+    marked_position_y: 56,
+  },
+  {
+    floor: String(i18n.t("fourth_floor")),
+    imageURL: FOURTH_FLOOR_KZ_IMG,
+    ...elevator.restaurant,
+    title: "422",
+    marked_position_x: 234,
+    marked_position_y: 62,
+  },
+  {
+    floor: String(i18n.t("fourth_floor")),
+    imageURL: FOURTH_FLOOR_KZ_IMG,
+    ...elevator.restaurant,
+    title: "423",
+    marked_position_x: 252,
+    marked_position_y: 62,
+  },
+  {
+    floor: String(i18n.t("fourth_floor")),
+    imageURL: FOURTH_FLOOR_KZ_IMG,
+    ...elevator.restaurant,
+    title: "425",
+    marked_position_x: 269,
+    marked_position_y: 60,
+  },
+  {
+    floor: String(i18n.t("fourth_floor")),
+    imageURL: FOURTH_FLOOR_KZ_IMG,
+    ...elevator.restaurant,
+    title: "426",
+    marked_position_x: 289,
+    marked_position_y: 60,
+  },
+  {
+    floor: String(i18n.t("fourth_floor")),
+    imageURL: FOURTH_FLOOR_KZ_IMG,
+    ...elevator.restaurant,
+    title: "427",
+    marked_position_x: 315,
+    marked_position_y: 60,
+  },
+  {
+    floor: String(i18n.t("fourth_floor")),
+    imageURL: FOURTH_FLOOR_KZ_IMG,
+    ...elevator.restaurant,
+    title: "428",
+    marked_position_x: 301,
+    marked_position_y: 90,
+  },
+  {
+    floor: String(i18n.t("fourth_floor")),
+    imageURL: FOURTH_FLOOR_KZ_IMG,
+    ...elevator.restaurant,
+    title: "430",
+    marked_position_x: 303,
+    marked_position_y: 108,
+  },
+  {
+    floor: String(i18n.t("fourth_floor")),
+    imageURL: FOURTH_FLOOR_HT_IMG,
+    ...elevator.gym,
+    title: "430 (ΗΘ)",
+    marked_position_x: 303,
+    marked_position_y: 146,
+  },
+  {
+    floor: String(i18n.t("fourth_floor")),
+    imageURL: FOURTH_FLOOR_KZ_IMG,
+    ...elevator.restaurant,
+    title: "432" + String(i18n.t("office_letter_b")),
+    marked_position_x: 288,
+    marked_position_y: 162,
+  },
+  {
+    floor: String(i18n.t("fourth_floor")),
+    imageURL: FOURTH_FLOOR_KZ_IMG,
+    ...elevator.restaurant,
+    title: "433",
+    marked_position_x: 268,
+    marked_position_y: 144,
+  },
+  {
+    floor: String(i18n.t("fourth_floor")),
+    imageURL: FOURTH_FLOOR_KZ_IMG,
+    ...elevator.restaurant,
+    title: "434-435",
+    marked_position_x: 218,
+    marked_position_y: 141,
+  },
+];
+
+export default fourth_floor_locations;
