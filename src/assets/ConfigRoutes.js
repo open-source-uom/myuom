@@ -78,6 +78,7 @@ export const Categories = [
     title: "Open eClass",
     iconSVG: <LaptopTextbookIcon />,
     route: "https://openeclass.uom.gr/",
+    englishRoute:"https://openeclass.uom.gr/index.php?localize=en",
     span: 1,
     isExternal: true,
     requireSelection: false,
@@ -167,6 +168,7 @@ export const Categories = [
     title: i18n.t("foititiki_merimna"),
     iconSVG: <ManyPeopleIcon />,
     route: "https://www.uom.gr/student-care",
+    englishRoute: "https://www.uom.gr/en/student-care",
     span: 1,
     isExternal: true,
     requireSelection: false,
@@ -229,6 +231,7 @@ export const Categories = [
                                  xmlnsXlink="http://www.w3.org/1999/xlink"
                                  fill="#f3f3f3" />,
     route: "https://www.uom.gr/programmata-metaptyxiakon-spoydon",
+    englishRoute: "https://www.uom.gr/en/postgraduate",
     span: 1,
     isExternal: true,
     requireSelection: false,
