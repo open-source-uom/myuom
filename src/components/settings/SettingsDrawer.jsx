@@ -16,7 +16,7 @@ import {
     FaInfoCircle,
     FaFileAlt,
     FaShareAlt,
-    FaGitlab,
+    FaGithub,
     FaBook,
     FaRegComment,
 } from "react-icons/fa";
@@ -105,7 +105,7 @@ export function SettingsDrawer({ isOpen, onClose }) {
                             </Link>
 
                             <a
-                                href="https://gitlab.com/opensourceuom/myUoM/-/blob/main/LICENSE"
+                                href="https://github.com/open-source-uom/myuom/blob/main/LICENSE"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
@@ -121,11 +121,11 @@ export function SettingsDrawer({ isOpen, onClose }) {
                             </a>
                             <SettingsOption Icon={FaShareAlt} onClick={handleShare} text={i18n.t("share_app")} />
                             <a
-                                href="https://gitlab.com/opensourceuom/myUoM"
+                                href="https://github.com/open-source-uom/myuom"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                <SettingsOption Icon={FaGitlab} onClick={onClose} text={i18n.t("gitlab_contribute")} />
+                                <SettingsOption Icon={FaGithub} onClick={onClose} text={i18n.t("github_contribute")} />
                             </a>
                             <a
                                 href="https://docs.google.com/forms/u/2/d/e/1FAIpQLSduM517c4OtIs-CNv5cjQtYcj6OXRDtCP6x0Q7d4Ymhd3xQMg/viewform"

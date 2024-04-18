@@ -90,7 +90,7 @@ function AboutSettingsPage() {
           style={{ marginRight: "0.5rem" }}
         />
         <SocialIcon
-          url={SOCIAL_MEDIA_URLS.gitlab}
+          url={SOCIAL_MEDIA_URLS.github}
           style={{ marginRight: "0.5rem" }}
         />
         <SocialIcon
