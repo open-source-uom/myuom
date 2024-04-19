@@ -55,7 +55,7 @@
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
-    <li><a href="#gettingstarted">Getting Started</a></li>
+    <li><a href="#getting-started">Getting Started</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -78,25 +78,25 @@ It was designed to facilitate students' daily interactions with the university.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- Getting Started -->
-### Getting Started
+## Getting Started
 To get a local copy up and running, follow these steps:
 
-## Installation
-Clone the repository: (`git clone https://github.com/yourusername/project-name.git`)
-Navigate to the project directory: (`cd project-name`)
-Install dependencies: (`npm install`)
+### Installation
+Clone the repository: (`git clone https://github.com/yourusername/project-name.git`) <br />
+Navigate to the project directory: (`cd project-name`)<br />
+Install dependencies: (`npm install`)<br />
 
-Development Mode
-To start the development server and run the project locally, use the following command: (`npm start`)
-Open http://localhost:3000 in your browser to view the application.
+### Development Mode
+To start the development server and run the project locally, use the following command: (`npm start`)<br />
+Open http://localhost:3000 in your browser to view the application.<br />
 
-Building for Production
-To build the project for production, use: (`npm run build`)
-This will create an optimized production build in the build folder.
+### Building for Production
+To build the project for production, use: (`npm run build`)<br />
+This will create an optimized production build in the build folder.<br />
 
-TypeScript Watch Mode
-To run the TypeScript compiler in watch mode, which automatically recompiles TypeScript files on change, use: (`npm run tsc:w`)
-This will start the TypeScript compiler in watch mode, monitoring changes to TypeScript files and recompiling them as needed.
+### TypeScript Watch Mode
+To run the TypeScript compiler in watch mode, which automatically recompiles TypeScript files on change, use: (`npm run tsc:w`)<br />
+This will start the TypeScript compiler in watch mode, monitoring changes to TypeScript files and recompiling them as needed.<br />
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
