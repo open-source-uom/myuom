@@ -5,7 +5,7 @@ import { Location } from "../../../../../hooks/useMapData";
 
 const fourth_floor_locations: Location[] = [
   {
-    floor: String(i18n.t("fourth_floor")),
+    floor: i18n.t("fourth_floor")??undefined,
     imageURL: FOURTH_FLOOR_CD_IMG,
     ...elevator.library,
     title: "401" + String(i18n.t("office_letter_a")),
@@ -20,7 +20,7 @@ const fourth_floor_locations: Location[] = [
   //   marked_position_y: 167,
   // },
   {
-    floor: String(i18n.t("fourth_floor")),
+    floor: i18n.t("fourth_floor")??undefined,
     imageURL: FOURTH_FLOOR_CD_IMG,
     ...elevator.library,
     title: "403",
@@ -35,7 +35,7 @@ const fourth_floor_locations: Location[] = [
   //   marked_position_y: 129,
   // },
   {
-    floor: String(i18n.t("fourth_floor")),
+    floor: i18n.t("fourth_floor")??undefined,
     imageURL: FOURTH_FLOOR_CD_IMG,
     ...elevator.library,
     title: "406",
@@ -43,7 +43,7 @@ const fourth_floor_locations: Location[] = [
     marked_position_y: 105,
   },
   {
-    floor: String(i18n.t("fourth_floor")),
+    floor: i18n.t("fourth_floor")??undefined,
     imageURL: FOURTH_FLOOR_CD_IMG,
     ...elevator.library,
     title: "407",
@@ -51,7 +51,7 @@ const fourth_floor_locations: Location[] = [
     marked_position_y: 99,
   },
   {
-    floor: String(i18n.t("fourth_floor")),
+    floor: i18n.t("fourth_floor")??undefined,
     imageURL: FOURTH_FLOOR_CD_IMG,
     ...elevator.library,
     title: "408",
@@ -59,7 +59,7 @@ const fourth_floor_locations: Location[] = [
     marked_position_y: 105,
   },
   {
-    floor: String(i18n.t("fourth_floor")),
+    floor: i18n.t("fourth_floor")??undefined,
     imageURL: FOURTH_FLOOR_CD_IMG,
     ...elevator.library,
     title: "410",
@@ -67,7 +67,7 @@ const fourth_floor_locations: Location[] = [
     marked_position_y: 98,
   },
   {
-    floor: String(i18n.t("fourth_floor")),
+    floor: i18n.t("fourth_floor")??undefined,
     imageURL: FOURTH_FLOOR_CD_IMG,
     ...elevator.library,
     title: "411",
@@ -75,7 +75,7 @@ const fourth_floor_locations: Location[] = [
     marked_position_y: 97,
   },
   {
-    floor: String(i18n.t("fourth_floor")),
+    floor: i18n.t("fourth_floor")??undefined,
     imageURL: FOURTH_FLOOR_CD_IMG,
     ...elevator.library,
     title: "412",

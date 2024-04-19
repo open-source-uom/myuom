@@ -5,7 +5,7 @@ import { Location } from "../../../../../hooks/useMapData";
 
 const fifth_floor_locations: Location[] = [
   {
-    floor: String(i18n.t("fifth_floor")),
+    floor: i18n.t("fifth_floor")??undefined,
     imageURL: FIFTH_FLOOR_CD_IMG,
     ...elevator.library,
     title: "502",
@@ -13,7 +13,7 @@ const fifth_floor_locations: Location[] = [
     marked_position_y: 99,
   },
   {
-    floor: String(i18n.t("fifth_floor")),
+    floor: i18n.t("fifth_floor")??undefined,
     imageURL: FIFTH_FLOOR_CD_IMG,
     ...elevator.library,
     title: "503",
@@ -21,7 +21,7 @@ const fifth_floor_locations: Location[] = [
     marked_position_y: 93,
   },
   {
-    floor: String(i18n.t("fifth_floor")),
+    floor: i18n.t("fifth_floor")??undefined,
     imageURL: FIFTH_FLOOR_CD_IMG,
     ...elevator.library,
     title: "504",
@@ -29,7 +29,7 @@ const fifth_floor_locations: Location[] = [
     marked_position_y: 96,
   },
   {
-    floor: String(i18n.t("fifth_floor")),
+    floor: i18n.t("fifth_floor")??undefined,
     imageURL: FIFTH_FLOOR_CD_IMG,
     ...elevator.library,
     title: "507",
@@ -37,7 +37,7 @@ const fifth_floor_locations: Location[] = [
     marked_position_y: 93,
   },
   {
-    floor: String(i18n.t("fifth_floor")),
+    floor: i18n.t("fifth_floor")??undefined,
     imageURL: FIFTH_FLOOR_CD_IMG,
     ...elevator.library,
     title: "508",

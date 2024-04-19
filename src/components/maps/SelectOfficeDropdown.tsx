@@ -74,7 +74,7 @@ const SelectOfficeDropdown: React.FC<SelectOfficeDropdownProps> = ({
           <MenuItem
             key={index}
             value={option.title}
-            onClick={() => handleMenuItemClick(option.title||"")}
+            onClick={() => handleMenuItemClick(option.title??"")}
             _focus={{ bg: "transparent" }}
           >
             {option.title}

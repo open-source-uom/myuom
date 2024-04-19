@@ -12,7 +12,7 @@ const third_floor_locations: Location[] = [
   //   marked_position_y: 163,
   // },
   {
-    floor: String(i18n.t("third_floor")),
+    floor: i18n.t("third_floor")??undefined,
     imageURL: THIRD_FLOOR_CD_IMG,
     ...elevator.library,
     title: "305",
@@ -20,7 +20,7 @@ const third_floor_locations: Location[] = [
     marked_position_y: 125,
   },
   {
-    floor: String(i18n.t("third_floor")),
+    floor: i18n.t("third_floor")??undefined,
     imageURL: THIRD_FLOOR_CD_IMG,
     ...elevator.library,
     title: "306",
@@ -28,7 +28,7 @@ const third_floor_locations: Location[] = [
     marked_position_y: 94,
   },
   {
-    floor: String(i18n.t("third_floor")),
+    floor: i18n.t("third_floor")??undefined,
     imageURL: THIRD_FLOOR_CD_IMG,
     ...elevator.library,
     title: "307",
@@ -36,7 +36,7 @@ const third_floor_locations: Location[] = [
     marked_position_y: 90,
   },
   {
-    floor: String(i18n.t("third_floor")),
+    floor: i18n.t("third_floor")??undefined,
     imageURL: THIRD_FLOOR_CD_IMG,
     ...elevator.library,
     title: "308",
@@ -44,7 +44,7 @@ const third_floor_locations: Location[] = [
     marked_position_y: 90,
   },
   {
-    floor: String(i18n.t("third_floor")),
+    floor: i18n.t("third_floor")??undefined,
     imageURL: THIRD_FLOOR_CD_IMG,
     ...elevator.library,
     title: "310",
@@ -52,7 +52,7 @@ const third_floor_locations: Location[] = [
     marked_position_y: 98,
   },
   {
-    floor: String(i18n.t("third_floor")),
+    floor: i18n.t("third_floor")??undefined,
     imageURL: THIRD_FLOOR_CD_IMG,
     ...elevator.library,
     title: "311",
@@ -60,7 +60,7 @@ const third_floor_locations: Location[] = [
     marked_position_y: 90,
   },
   {
-    floor: String(i18n.t("third_floor")),
+    floor: i18n.t("third_floor")??undefined,
     imageURL: THIRD_FLOOR_CD_IMG,
     ...elevator.library,
     title: "312",

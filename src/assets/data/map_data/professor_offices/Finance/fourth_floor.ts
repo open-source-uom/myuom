@@ -5,7 +5,7 @@ import { Location } from "../../../../../hooks/useMapData";
 
 const fourth_floor_locations: Location[] = [
   {
-    floor: String(i18n.t("fourth_floor")),
+    floor: i18n.t("fourth_floor")??undefined,
     imageURL: FOURTH_FLOOR_HT_IMG,
     ...elevator.gym,
     title: "421",
@@ -13,7 +13,7 @@ const fourth_floor_locations: Location[] = [
     marked_position_y: 196,
   },
   {
-    floor: String(i18n.t("fourth_floor")),
+    floor: i18n.t("fourth_floor")??undefined,
     imageURL: FOURTH_FLOOR_HT_IMG,
     ...elevator.gym,
     title: "422",
@@ -21,7 +21,7 @@ const fourth_floor_locations: Location[] = [
     marked_position_y: 100,
   },
   {
-    floor: String(i18n.t("fourth_floor")),
+    floor: i18n.t("fourth_floor")??undefined,
     imageURL: FOURTH_FLOOR_HT_IMG,
     ...elevator.gym,
     title: "423",
@@ -29,7 +29,7 @@ const fourth_floor_locations: Location[] = [
     marked_position_y: 98,
   },
   {
-    floor: String(i18n.t("fourth_floor")),
+    floor: i18n.t("fourth_floor")??undefined,
     imageURL: FOURTH_FLOOR_HT_IMG,
     ...elevator.gym,
     title: "425",
@@ -37,7 +37,7 @@ const fourth_floor_locations: Location[] = [
     marked_position_y: 98,
   },
   {
-    floor: String(i18n.t("fourth_floor")),
+    floor: i18n.t("fourth_floor")??undefined,
     imageURL: FOURTH_FLOOR_HT_IMG,
     ...elevator.gym,
     title: "426",
@@ -45,7 +45,7 @@ const fourth_floor_locations: Location[] = [
     marked_position_y: 98,
   },
   {
-    floor: String(i18n.t("fourth_floor")),
+    floor: i18n.t("fourth_floor")??undefined,
     imageURL: FOURTH_FLOOR_HT_IMG,
     ...elevator.gym,
     title: "427",
@@ -53,7 +53,7 @@ const fourth_floor_locations: Location[] = [
     marked_position_y: 98,
   },
   {
-    floor: String(i18n.t("fourth_floor")),
+    floor: i18n.t("fourth_floor")??undefined,
     imageURL: FOURTH_FLOOR_HT_IMG,
     ...elevator.gym,
     title: "428",

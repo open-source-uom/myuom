@@ -65,7 +65,7 @@ const MenuTable: React.FC<MenuTableProps> = ({
               fontSize={{ sm: 16, md: 18, lg: 20 }}
             >
               <UnorderedList spacing={2}>
-                {Object.values(foodMenu[key as FoodMenuKey]).map((dish, index) => (
+                {(Object.keys(foodMenu) as Array<keyof FoodMenu>).map((dish, index) => (
                   <ListItem key={index}>{dish}</ListItem>
                 ))}
               </UnorderedList>

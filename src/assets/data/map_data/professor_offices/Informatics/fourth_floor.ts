@@ -7,7 +7,7 @@ const locations: Location[] = [
   {
     imageURL: FOURTH_FLOOR_CD_IMG,
     ...elevator.library,
-    floor: String(i18n.t('fourth_floor')),
+    floor: i18n.t('fourth_floor')??undefined,
     title: '421',
     marked_position_x: 207,
     marked_position_y: 110,
@@ -22,7 +22,7 @@ const locations: Location[] = [
   {
     imageURL: FOURTH_FLOOR_CD_IMG,
     ...elevator.library,
-    floor: String(i18n.t('fourth_floor')),
+    floor: i18n.t('fourth_floor')??undefined,
     title: '423',
     marked_position_x: 261,
     marked_position_y: 95,
@@ -30,7 +30,7 @@ const locations: Location[] = [
   {
     imageURL: FOURTH_FLOOR_CD_IMG,
     ...elevator.library,
-    floor: String(i18n.t('fourth_floor')),
+    floor: i18n.t('fourth_floor')??undefined,
     title: '425',
     marked_position_x: 277,
     marked_position_y: 100,
@@ -38,7 +38,7 @@ const locations: Location[] = [
   {
     imageURL: FOURTH_FLOOR_CD_IMG,
     ...elevator.library,
-    floor: String(i18n.t('fourth_floor')),
+    floor: i18n.t('fourth_floor')??undefined,
     title: '426',
     marked_position_x: 300,
     marked_position_y: 98,
@@ -46,7 +46,7 @@ const locations: Location[] = [
   {
     imageURL: FOURTH_FLOOR_CD_IMG,
     ...elevator.library,
-    floor: String(i18n.t('fourth_floor')),
+    floor: i18n.t('fourth_floor')??undefined,
     title: '427',
     marked_position_x: 324,
     marked_position_y: 102,
@@ -54,7 +54,7 @@ const locations: Location[] = [
   {
     imageURL: FOURTH_FLOOR_CD_IMG,
     ...elevator.library,
-    floor: String(i18n.t('fourth_floor')),
+    floor: i18n.t('fourth_floor')??undefined,
     title: '428',
     marked_position_x: 320,
     marked_position_y: 131,
@@ -62,7 +62,7 @@ const locations: Location[] = [
   {
     imageURL: FOURTH_FLOOR_CD_IMG,
     ...elevator.library,
-    floor: String(i18n.t('fourth_floor')),
+    floor: i18n.t('fourth_floor')??undefined,
     title: '430',
     marked_position_x: 320,
     marked_position_y: 148,
@@ -77,7 +77,7 @@ const locations: Location[] = [
   {
     imageURL: FOURTH_FLOOR_CD_IMG,
     ...elevator.library,
-    floor: String(i18n.t('fourth_floor')),
+    floor: i18n.t('fourth_floor')??undefined,
     title: '432',
     marked_position_x: 311,
     marked_position_y: 203,

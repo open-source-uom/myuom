@@ -6,13 +6,13 @@ const locations:Location[] = [
   {
     floor: i18n.t("ground_floor") as string,
     imageURL: GROUND_FLOOR_IMG_URL,
-    title: i18n.t("ceremony_hall_for_navigation") as string,
+    title: i18n.t("ceremony_hall_for_navigation")??undefined,
     marked_position_x: 298,
     marked_position_y: 129,
     ...elevator.none,
   },
   {
-    floor: i18n.t("ground_floor") as string,
+    floor: i18n.t("ground_floor")??undefined,
     imageURL: GROUND_FLOOR_IMG_URL,
     title: "02",
     marked_position_x: 168,
@@ -20,7 +20,7 @@ const locations:Location[] = [
     ...elevator.none,
   },
   {
-    floor: i18n.t("ground_floor") as string,
+    floor: i18n.t("ground_floor")??undefined,
     imageURL: GROUND_FLOOR_IMG_URL,
     title: "03",
     marked_position_x: 218,
@@ -28,7 +28,7 @@ const locations:Location[] = [
     ...elevator.none,
   },
   {
-    floor: i18n.t("first_floor") as string,
+    floor: i18n.t("first_floor")??undefined,
     imageURL: FIRST_FLOOR_IMG_URL,
     title: "04",
     marked_position_x: 144,
@@ -36,7 +36,7 @@ const locations:Location[] = [
     ...(elevator.restaurant),
   },
   {
-    floor: i18n.t("first_floor") as string,
+    floor: i18n.t("first_floor")??undefined,
     imageURL: FIRST_FLOOR_IMG_URL,
     title: "05",
     marked_position_x: 110,
@@ -44,7 +44,7 @@ const locations:Location[] = [
     ...elevator.restaurant,
   },
   {
-    floor: i18n.t("first_floor") as string,
+    floor: i18n.t("first_floor")??undefined,
     imageURL: FIRST_FLOOR_IMG_URL,
     title: "06",
     marked_position_x: 63,
@@ -52,7 +52,7 @@ const locations:Location[] = [
     ...elevator.restaurant,
   },
   {
-    floor: i18n.t("first_floor") as string,
+    floor: i18n.t("first_floor")??undefined,
     imageURL: FIRST_FLOOR_IMG_URL,
     title: "07",
     marked_position_x: 29,
@@ -60,7 +60,7 @@ const locations:Location[] = [
     ...elevator.restaurant,
   },
   {
-    floor: i18n.t("first_floor") as string,
+    floor: i18n.t("first_floor")??undefined,
     imageURL: FIRST_FLOOR_IMG_URL,
     title: "08",
     marked_position_x: 50,
@@ -68,7 +68,7 @@ const locations:Location[] = [
     ...elevator.gym,
   },
   {
-    floor: i18n.t("first_floor") as string,
+    floor: i18n.t("first_floor")??undefined,
     imageURL: FIRST_FLOOR_IMG_URL,
     title: "09",
     marked_position_x: 85,
@@ -76,7 +76,7 @@ const locations:Location[] = [
     ...elevator.gym,
   },
   {
-    floor: i18n.t("first_floor") as string,
+    floor: i18n.t("first_floor")??undefined,
     imageURL: FIRST_FLOOR_IMG_URL,
     title: "10",
     marked_position_x: 130,
@@ -84,7 +84,7 @@ const locations:Location[] = [
     ...elevator.gym,
   },
   {
-    floor: i18n.t("first_floor") as string,
+    floor: i18n.t("first_floor")??undefined,
     imageURL: FIRST_FLOOR_IMG_URL,
     title: "11",
     marked_position_x: 165,
@@ -92,7 +92,7 @@ const locations:Location[] = [
     ...elevator.gym,
   },
   {
-    floor: i18n.t("first_floor") as string,
+    floor: i18n.t("first_floor")??undefined,
     imageURL: FIRST_FLOOR_IMG_URL,
     title: "12",
     marked_position_x: 210,
@@ -100,7 +100,7 @@ const locations:Location[] = [
     ...elevator.library,
   },
   {
-    floor: i18n.t("first_floor") as string,
+    floor: i18n.t("first_floor")??undefined,
     imageURL: FIRST_FLOOR_IMG_URL,
     title: "13",
     marked_position_x: 244,

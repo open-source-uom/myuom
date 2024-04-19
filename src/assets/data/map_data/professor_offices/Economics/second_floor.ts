@@ -33,7 +33,7 @@ const econ_second_floor_locations: Location[] = [
   //   marked_position_y: 118,
   // },
   {
-    floor: String(i18n.t("second_floor")),
+    floor: i18n.t("second_floor")??undefined,
     imageURL: SECOND_FLOOR_CD_IMG,
     ...elevator.library,
     title: "206",
@@ -41,7 +41,7 @@ const econ_second_floor_locations: Location[] = [
     marked_position_y: 88,
   },
   {
-    floor: String(i18n.t("second_floor")),
+    floor: i18n.t("second_floor")??undefined,
     imageURL: SECOND_FLOOR_CD_IMG,
     ...elevator.library,
     title: "207",
@@ -49,7 +49,7 @@ const econ_second_floor_locations: Location[] = [
     marked_position_y: 88,
   },
   {
-    floor: String(i18n.t("second_floor")),
+    floor: i18n.t("second_floor")??undefined,
     imageURL: SECOND_FLOOR_CD_IMG,
     ...elevator.library,
     title: "208",
@@ -64,7 +64,7 @@ const econ_second_floor_locations: Location[] = [
   //   marked_position_y: 88,
   // },
   {
-    floor: String(i18n.t("second_floor")),
+    floor: i18n.t("second_floor")??undefined,
     imageURL: SECOND_FLOOR_CD_IMG,
     ...elevator.library,
     title: "212",

@@ -5,7 +5,7 @@ import { FIRST_FLOOR_IMG_URL, MEZZANINE_FLOOR_IMG_URL } from "./floor_images";
 
 const locations: Location[] = [
   {
-    floor: String(i18n.t("first_floor")),
+    floor: i18n.t("first_floor") ?? undefined,
     imageURL: FIRST_FLOOR_IMG_URL,
     title: "01",
     marked_position_x: 138,
@@ -13,7 +13,7 @@ const locations: Location[] = [
     ...elevator.restaurant,
   },
   {
-    floor: String(i18n.t("first_floor")),
+    floor: i18n.t("first_floor") ?? undefined,
     imageURL: FIRST_FLOOR_IMG_URL,
     title: "02",
     marked_position_x: 103,
@@ -21,7 +21,7 @@ const locations: Location[] = [
     ...elevator.restaurant,
   },
   {
-    floor: String(i18n.t("first_floor")),
+    floor: i18n.t("first_floor") ?? undefined,
     imageURL: FIRST_FLOOR_IMG_URL,
     title: "03",
     marked_position_x: 58,
@@ -29,7 +29,7 @@ const locations: Location[] = [
     ...elevator.restaurant,
   },
   {
-    floor: String(i18n.t("first_floor")),
+    floor: i18n.t("first_floor") ?? undefined,
     imageURL: FIRST_FLOOR_IMG_URL,
     title: "04",
     marked_position_x: 19,
@@ -37,7 +37,7 @@ const locations: Location[] = [
     ...elevator.restaurant,
   },
   {
-    floor: String(i18n.t("first_floor")),
+    floor: i18n.t("first_floor") ?? undefined,
     imageURL: FIRST_FLOOR_IMG_URL,
     title: "05",
     marked_position_x: 56,
@@ -45,7 +45,7 @@ const locations: Location[] = [
     ...elevator.gym,
   },
   {
-    floor: String(i18n.t("first_floor")),
+    floor: i18n.t("first_floor") ?? undefined,
     imageURL: FIRST_FLOOR_IMG_URL,
     title: "06",
     marked_position_x: 92,
@@ -53,7 +53,7 @@ const locations: Location[] = [
     ...elevator.gym,
   },
   {
-    floor: String(i18n.t("first_floor")),
+    floor: i18n.t("first_floor") ?? undefined,
     imageURL: FIRST_FLOOR_IMG_URL,
     title: "07",
     marked_position_x: 138,
@@ -61,7 +61,7 @@ const locations: Location[] = [
     ...elevator.gym,
   },
   {
-    floor: String(i18n.t("first_floor")),
+    floor: i18n.t("first_floor") ?? undefined,
     imageURL: FIRST_FLOOR_IMG_URL,
     title: "08",
     marked_position_x: 173,
@@ -69,7 +69,7 @@ const locations: Location[] = [
     ...elevator.gym,
   },
   {
-    floor: String(i18n.t("first_floor")),
+    floor: i18n.t("first_floor") ?? undefined,
     imageURL: FIRST_FLOOR_IMG_URL,
     title: "09",
     marked_position_x: 215,
@@ -77,7 +77,7 @@ const locations: Location[] = [
     ...elevator.library,
   },
   {
-    floor: String(i18n.t("first_floor")),
+    floor: i18n.t("first_floor") ?? undefined,
     imageURL: FIRST_FLOOR_IMG_URL,
     title: "10",
     marked_position_x: 253,
@@ -85,7 +85,7 @@ const locations: Location[] = [
     ...elevator.library,
   },
   {
-    floor: String(i18n.t("mezzanine_floor")),
+    floor: i18n.t("mezzanine_floor") ?? undefined,
     imageURL: MEZZANINE_FLOOR_IMG_URL,
     title: "11",
     marked_position_x: 60,
@@ -93,7 +93,7 @@ const locations: Location[] = [
     ...elevator.restaurant,
   },
   {
-    floor: String(i18n.t("mezzanine_floor")),
+    floor: i18n.t("mezzanine_floor") ?? undefined,
     imageURL: MEZZANINE_FLOOR_IMG_URL,
     title: "12",
     marked_position_x: 43,
@@ -101,7 +101,7 @@ const locations: Location[] = [
     ...elevator.restaurant,
   },
   {
-    floor: String(i18n.t("mezzanine_floor")),
+    floor: i18n.t("mezzanine_floor") ?? undefined,
     imageURL: MEZZANINE_FLOOR_IMG_URL,
     title: "13",
     marked_position_x: 23,
@@ -109,7 +109,7 @@ const locations: Location[] = [
     ...elevator.restaurant,
   },
   {
-    floor: String(i18n.t("mezzanine_floor")),
+    floor: i18n.t("mezzanine_floor") ?? undefined,
     imageURL: MEZZANINE_FLOOR_IMG_URL,
     title: "14",
     marked_position_x: 30,
@@ -117,7 +117,7 @@ const locations: Location[] = [
     ...elevator.restaurant,
   },
   {
-    floor: String(i18n.t("mezzanine_floor")),
+    floor: i18n.t("mezzanine_floor") ?? undefined,
     imageURL: MEZZANINE_FLOOR_IMG_URL,
     title: "15",
     marked_position_x: 50,
@@ -125,7 +125,7 @@ const locations: Location[] = [
     ...elevator.restaurant,
   },
   {
-    floor: String(i18n.t("mezzanine_floor")),
+    floor: i18n.t("mezzanine_floor") ?? undefined,
     imageURL: MEZZANINE_FLOOR_IMG_URL,
     title: "16",
     marked_position_x: 68,
@@ -133,17 +133,17 @@ const locations: Location[] = [
     ...elevator.restaurant,
   },
   {
-    floor: String(i18n.t("first_floor")),
+    floor: i18n.t("first_floor") ?? undefined,
     imageURL: FIRST_FLOOR_IMG_URL,
-    title: String(i18n.t("conference_room")),
+    title: i18n.t("conference_room") ?? undefined,
     marked_position_x: 294,
     marked_position_y: 122,
     ...elevator.library,
   },
   {
-    floor: String(i18n.t("first_floor")),
+    floor: i18n.t("first_floor") ?? undefined,
     imageURL: FIRST_FLOOR_IMG_URL,
-    title: String(i18n.t("remote_education_room")),
+    title: i18n.t("remote_education_room") ?? undefined,
     marked_position_x: 255,
     marked_position_y: 117,
     ...elevator.library,

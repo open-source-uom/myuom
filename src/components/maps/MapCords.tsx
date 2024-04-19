@@ -97,7 +97,7 @@ const App: React.FC<Location> = ({
 
         <ImageMapper
           key={marked_position_x + " " + marked_position_y}
-          src={showGroundFloorImg ? GROUND_FLOOR_IMG_URL : imageURL||""}
+          src={showGroundFloorImg ? GROUND_FLOOR_IMG_URL : imageURL??""}
           onLoad={
             showGroundFloorImg
               ? handleUpdateElevatorMapArea
@@ -108,7 +108,7 @@ const App: React.FC<Location> = ({
         />
         {showGroundFloorImg ? (
           <Text pt={"0.125rem"} px="1rem">
-            {i18n.t("enter_elevator_prompt")} {floor&&floor.toLowerCase()}{" "}
+            {i18n.t("enter_elevator_prompt")} {floor?.toLowerCase()}{" "}
             {!shouldOmitFloor && i18n.t("floor")}
           </Text>
         ) : null}

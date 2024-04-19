@@ -5,7 +5,7 @@ import { Location } from "../../../../../hooks/useMapData";
 
 const third_floor_locations: Location[] = [
   {
-    floor: String(i18n.t("third_floor")),
+    floor: i18n.t("third_floor")??undefined,
     imageURL: THIRD_FLOOR_KZ_IMG,
     ...elevator.restaurant,
     title: "301",
@@ -13,7 +13,7 @@ const third_floor_locations: Location[] = [
     marked_position_y: 155,
   },
   {
-    floor: String(i18n.t("third_floor")),
+    floor: i18n.t("third_floor")??undefined,
     imageURL: THIRD_FLOOR_KZ_IMG,
     ...elevator.restaurant,
     title: "301" + String(i18n.t("office_letter_a")),
@@ -21,7 +21,7 @@ const third_floor_locations: Location[] = [
     marked_position_y: 141,
   },
   {
-    floor: String(i18n.t("third_floor")),
+    floor: i18n.t("third_floor")??undefined,
     imageURL: THIRD_FLOOR_KZ_IMG,
     ...elevator.restaurant,
     title: "302",
@@ -29,7 +29,7 @@ const third_floor_locations: Location[] = [
     marked_position_y: 124,
   },
   {
-    floor: String(i18n.t("third_floor")),
+    floor: i18n.t("third_floor")??undefined,
     imageURL: THIRD_FLOOR_KZ_IMG,
     ...elevator.restaurant,
     title: "303",
@@ -37,7 +37,7 @@ const third_floor_locations: Location[] = [
     marked_position_y: 105,
   },
   {
-    floor: String(i18n.t("third_floor")),
+    floor: i18n.t("third_floor")??undefined,
     imageURL: THIRD_FLOOR_KZ_IMG,
     ...elevator.restaurant,
     title: "305",
@@ -45,7 +45,7 @@ const third_floor_locations: Location[] = [
     marked_position_y: 89,
   },
   {
-    floor: String(i18n.t("third_floor")),
+    floor: i18n.t("third_floor")??undefined,
     imageURL: THIRD_FLOOR_KZ_IMG,
     ...elevator.restaurant,
     title: "306",
@@ -53,7 +53,7 @@ const third_floor_locations: Location[] = [
     marked_position_y: 61,
   },
   {
-    floor: String(i18n.t("third_floor")),
+    floor: i18n.t("third_floor")??undefined,
     imageURL: THIRD_FLOOR_KZ_IMG,
     ...elevator.restaurant,
     title: "307",
@@ -61,7 +61,7 @@ const third_floor_locations: Location[] = [
     marked_position_y: 58,
   },
   {
-    floor: String(i18n.t("third_floor")),
+    floor: i18n.t("third_floor")??undefined,
     imageURL: THIRD_FLOOR_KZ_IMG,
     ...elevator.restaurant,
     title: "308",
@@ -69,7 +69,7 @@ const third_floor_locations: Location[] = [
     marked_position_y: 58,
   },
   {
-    floor: String(i18n.t("third_floor")),
+    floor: i18n.t("third_floor")??undefined,
     imageURL: THIRD_FLOOR_KZ_IMG,
     ...elevator.restaurant,
     title: "310",
@@ -77,7 +77,7 @@ const third_floor_locations: Location[] = [
     marked_position_y: 58,
   },
   {
-    floor: String(i18n.t("third_floor")),
+    floor: i18n.t("third_floor")??undefined,
     imageURL: THIRD_FLOOR_KZ_IMG,
     ...elevator.restaurant,
     title: "311",
@@ -85,7 +85,7 @@ const third_floor_locations: Location[] = [
     marked_position_y: 55,
   },
   {
-    floor: String(i18n.t("third_floor")),
+    floor: i18n.t("third_floor")??undefined,
     imageURL: THIRD_FLOOR_KZ_IMG,
     ...elevator.restaurant,
     title: "313",
@@ -93,7 +93,7 @@ const third_floor_locations: Location[] = [
     marked_position_y: 140,
   },
   {
-    floor: String(i18n.t("third_floor")),
+    floor: i18n.t("third_floor")??undefined,
     imageURL: THIRD_FLOOR_KZ_IMG,
     ...elevator.restaurant,
     title: "314",
@@ -101,7 +101,7 @@ const third_floor_locations: Location[] = [
     marked_position_y: 149,
   },
   {
-    floor: String(i18n.t("third_floor")),
+    floor: i18n.t("third_floor")??undefined,
     imageURL: THIRD_FLOOR_KZ_IMG,
     ...elevator.restaurant,
     title: "315",
@@ -109,7 +109,7 @@ const third_floor_locations: Location[] = [
     marked_position_y: 140,
   },
   {
-    floor: String(i18n.t("third_floor")),
+    floor: i18n.t("third_floor")??undefined,
     imageURL: THIRD_FLOOR_KZ_IMG,
     ...elevator.restaurant,
     title: "316",

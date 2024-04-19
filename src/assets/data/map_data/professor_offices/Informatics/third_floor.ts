@@ -3,13 +3,12 @@ import { THIRD_FLOOR_CD_IMG } from "../../floor_images";
 import elevator from "../../elevator_positions";
 import { Location } from "../../../../../hooks/useMapData";
 
-
 let locations: Location[];
 export default locations = [
   {
     imageURL: THIRD_FLOOR_CD_IMG,
     ...elevator.library,
-    floor: i18n.t("third_floor") as string,
+    floor: i18n.t("third_floor") ?? undefined,
     title: "321",
     marked_position_x: 203,
     marked_position_y: 102,
@@ -17,7 +16,7 @@ export default locations = [
   {
     imageURL: THIRD_FLOOR_CD_IMG,
     ...elevator.library,
-    floor: i18n.t("third_floor") as string,
+    floor: i18n.t("third_floor") ?? undefined,
     title: "322",
     marked_position_x: 239,
     marked_position_y: 94,
@@ -25,7 +24,7 @@ export default locations = [
   {
     imageURL: THIRD_FLOOR_CD_IMG,
     ...elevator.library,
-    floor: i18n.t("third_floor") as string,
+    floor: i18n.t("third_floor") ?? undefined,
     title: "323",
     marked_position_x: 255,
     marked_position_y: 94,
@@ -33,7 +32,7 @@ export default locations = [
   {
     imageURL: THIRD_FLOOR_CD_IMG,
     ...elevator.library,
-    floor: i18n.t("third_floor") as string,
+    floor: i18n.t("third_floor") ?? undefined,
     title: "325",
     marked_position_x: 274,
     marked_position_y: 95,
@@ -41,7 +40,7 @@ export default locations = [
   {
     imageURL: THIRD_FLOOR_CD_IMG,
     ...elevator.library,
-    floor: i18n.t("third_floor") as string,
+    floor: i18n.t("third_floor") ?? undefined,
     title: "326",
     marked_position_x: 295,
     marked_position_y: 96,
@@ -49,7 +48,7 @@ export default locations = [
   {
     imageURL: THIRD_FLOOR_CD_IMG,
     ...elevator.library,
-    floor: i18n.t("third_floor") as string,
+    floor: i18n.t("third_floor") ?? undefined,
     title: "328",
     marked_position_x: 312,
     marked_position_y: 126,
@@ -57,7 +56,7 @@ export default locations = [
   {
     imageURL: THIRD_FLOOR_CD_IMG,
     ...elevator.library,
-    floor: i18n.t("third_floor") as string,
+    floor: i18n.t("third_floor") ?? undefined,
     title: "330",
     marked_position_x: 314,
     marked_position_y: 144,
@@ -65,7 +64,7 @@ export default locations = [
   {
     imageURL: THIRD_FLOOR_CD_IMG,
     ...elevator.library,
-    floor: i18n.t("third_floor") as string,
+    floor: i18n.t("third_floor") ?? undefined,
     title: "331",
     marked_position_x: 312,
     marked_position_y: 166,
@@ -73,9 +72,10 @@ export default locations = [
   {
     imageURL: THIRD_FLOOR_CD_IMG,
     ...elevator.library,
-    floor: i18n.t("third_floor") as string,
+    floor: i18n.t("third_floor") ?? undefined,
     title: "332",
     marked_position_x: 294,
     marked_position_y: 183,
   },
 ];
+

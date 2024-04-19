@@ -8,17 +8,17 @@ import { FIRST_FLOOR_IMG_URL, GROUND_FLOOR_IMG_URL } from "./floor_images";
 
 const locations: Location[] = [
   {
-    floor: String(i18n.t("ground_floor")),
+    floor: i18n.t("ground_floor")??undefined,
     imageURL: GROUND_FLOOR_IMG_URL,
-    title: String(i18n.t("aiesec")),
+    title: i18n.t("aiesec")??undefined,
     marked_position_x: 95,
     marked_position_y: 65,
     ...elevator.none,
   },
   {
-    floor: String(i18n.t("first_floor")),
+    floor: i18n.t("first_floor")??undefined,
     imageURL: FIRST_FLOOR_IMG_URL,
-    title: String(i18n.t("open_source_uom")),
+    title: i18n.t("open_source_uom")??undefined,
     marked_position_x: 238,
     marked_position_y: 118,
     ...elevator.library,

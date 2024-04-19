@@ -55,6 +55,7 @@
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
+    <li><a href="#gettingstarted">Getting Started</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -73,6 +74,29 @@ It was designed to facilitate students' daily interactions with the university.
 ### Built With
 
 - [![React][react.js]][react-url]
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- Getting Started -->
+### Getting Started
+To get a local copy up and running, follow these steps:
+
+## Installation
+Clone the repository: (`git clone https://github.com/yourusername/project-name.git`)
+Navigate to the project directory: (`cd project-name`)
+Install dependencies: (`npm install`)
+
+Development Mode
+To start the development server and run the project locally, use the following command: (`npm start`)
+Open http://localhost:3000 in your browser to view the application.
+
+Building for Production
+To build the project for production, use: (`npm run build`)
+This will create an optimized production build in the build folder.
+
+TypeScript Watch Mode
+To run the TypeScript compiler in watch mode, which automatically recompiles TypeScript files on change, use: (`npm run tsc:w`)
+This will start the TypeScript compiler in watch mode, monitoring changes to TypeScript files and recompiling them as needed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

@@ -26,7 +26,7 @@ const fourth_floor_locations: Location[] = [
   //   marked_position_y: 142,
   // },
   {
-    floor: String(i18n.t("fourth_floor")),
+    floor: i18n.t("fourth_floor")??undefined,
     imageURL: FOURTH_FLOOR_CD_IMG,
     ...elevator.library,
     title: "415",

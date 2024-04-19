@@ -5,7 +5,7 @@ import { Location } from "../../../../../hooks/useMapData";
 
 const second_floor_locations: Location[] = [
   {
-    floor: String(i18n.t("second_floor")),
+    floor: i18n.t("second_floor")??undefined,
     imageURL: SECOND_FLOOR_KZ_IMG,
     ...elevator.restaurant,
     title: "202",
@@ -13,7 +13,7 @@ const second_floor_locations: Location[] = [
     marked_position_y: 131,
   },
   {
-    floor: String(i18n.t("second_floor")),
+    floor: i18n.t("second_floor")??undefined,
     imageURL: SECOND_FLOOR_KZ_IMG,
     ...elevator.restaurant,
     title: "205",
@@ -21,7 +21,7 @@ const second_floor_locations: Location[] = [
     marked_position_y: 95,
   },
   {
-    floor: String(i18n.t("second_floor")),
+    floor: i18n.t("second_floor")??undefined,
     imageURL: SECOND_FLOOR_KZ_IMG,
     ...elevator.restaurant,
     title: "208",

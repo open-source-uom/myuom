@@ -1,30 +1,40 @@
-import i18n from "i18next";
+import i18n,{ InitOptions } from "i18next";
 import { initReactI18next } from "react-i18next";
-import enRestaurant from "./assets/locales/en/restaurant.js";
-import enFreshmen from "./assets/locales/en/freshmen.js";
-import enLibrary from "./assets/locales/en/library.js";
-import enMaps from "./assets/locales/en/maps.js";
-import enServices from "./assets/locales/en/services.js";
-import enAcademicPersonel from "./assets/locales/en/academic_personel.js";
-import enFaq from "./assets/locales/en/faq.js";
-import enProjectMembers from "./assets/locales/en/project_members.js";
-import enSettingsPage from "./assets/locales/en/settings_page.js";
-import enAboutPage from "./assets/locales/en/about_page.js";
-import enError404 from "./assets/locales/en/error404.js"
+import enRestaurant from "./assets/locales/en/restaurant";
+import enFreshmen from "./assets/locales/en/freshmen";
+import enLibrary from "./assets/locales/en/library";
+import enMaps from "./assets/locales/en/maps";
+import enServices from "./assets/locales/en/services";
+import enAcademicPersonel from "./assets/locales/en/academic_personel";
+import enFaq from "./assets/locales/en/faq";
+import enProjectMembers from "./assets/locales/en/project_members";
+import enSettingsPage from "./assets/locales/en/settings_page";
+import enAboutPage from "./assets/locales/en/about_page";
+import enError404 from "./assets/locales/en/error404";
 
-import elRestaurant from "./assets/locales/el/restaurant.js";
-import elFreshmen from "./assets/locales/el/freshmen.js";
-import elLibrary from "./assets/locales/el/library.js";
-import elMaps from "./assets/locales/el/maps.js";
-import elServices from "./assets/locales/el/services.js";
-import elAcademicPersonel from "./assets/locales/el/academic_personel.js";
-import elFaq from "./assets/locales/el/faq.js";
-import elProjectMembers from "./assets/locales/el/project_members.js";
-import elSettingsPage from "./assets/locales/el/settings_page.js";
-import elAboutPage from "./assets/locales/el/about_page.js";
-import elError404 from "./assets/locales/el/error404.js"
+import elRestaurant from "./assets/locales/el/restaurant";
+import elFreshmen from "./assets/locales/el/freshmen";
+import elLibrary from "./assets/locales/el/library";
+import elMaps from "./assets/locales/el/maps";
+import elServices from "./assets/locales/el/services";
+import elAcademicPersonel from "./assets/locales/el/academic_personel";
+import elFaq from "./assets/locales/el/faq";
+import elProjectMembers from "./assets/locales/el/project_members";
+import elSettingsPage from "./assets/locales/el/settings_page";
+import elAboutPage from "./assets/locales/el/about_page";
+import elError404 from "./assets/locales/el/error404";
 
-const resources = {
+interface TranslationObject {
+  [key: string]: string;
+}
+
+interface TranslationResources {
+  [key: string]: {
+    translation: TranslationObject;
+  };
+}
+
+const resources: TranslationResources = {
   en: {
     translation: {
       ...enRestaurant,
@@ -38,7 +48,6 @@ const resources = {
       ...enSettingsPage,
       ...enAboutPage,
       ...enError404,
-      //categories.js
       current_department: "Current Department: ",
       close: "Close",
       eudoxus: "Eudoxus",
@@ -95,8 +104,6 @@ const resources = {
       ...elSettingsPage,
       ...elAboutPage,
       ...elError404,
-
-      //categories.js
       current_department: "Έχεις επιλέξει: ",
       close: "Κλείσιμο",
       eudoxus: "Εύδοξος",
@@ -221,16 +228,27 @@ const resources = {
     },
   },
 };
-const defaultLang = localStorage.getItem("preferred_language")
-i18n.use(initReactI18next).init({
-  // debug: true,
+
+const defaultLang = localStorage.getItem("preferred_language") || "en";
+
+const initOptions: InitOptions = {
   resources,
-  whitelist: ["en", "el"],
+  supportedLngs: ["en", "el"],
   lng: defaultLang,
   fallbackLng: "en",
   interpolation: {
     escapeValue: false,
   },
-});
+};
+
+i18n
+  .use(initReactI18next)
+  .init(initOptions)
+  .then((t) => {
+    // i18n initialized
+  })
+  .catch((error) => {
+    console.error("i18n initialization error:", error);
+  });
 
 export default i18n;

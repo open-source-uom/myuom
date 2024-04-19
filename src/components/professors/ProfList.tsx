@@ -52,7 +52,7 @@ import {
   useScrollToTopOnLoad,
   useSecretary,
 } from "../../hooks";
-import i18n from "../../i18n.js";
+import i18n from "../../i18n.ts";
 import ProfComponent from "./ProfCard";
 import SecrCard from "./SecrCard";
 import { Professor } from "../../assets/data/professors/index.ts";
@@ -95,7 +95,7 @@ const ProfList:React.FC<ProfListProps>=()=> {
   return (
     <VStack>
       {/* <input type="text" onChange={onTextChangeHandler} /> */}
-      {secretary&&<SecrCard data={secretary} key={secretary?.tel||""} />}
+      {secretary?<SecrCard data={secretary} key={secretary.tel} />:null}
       <InputGroup w="100%" mb="1rem">
         <InputLeftElement
           pointerEvents="none"
@@ -106,7 +106,7 @@ const ProfList:React.FC<ProfListProps>=()=> {
         <Input
           fontFamily="Syne"
           type="text"
-          placeholder={i18n.t("searchProf")||""}
+          placeholder={i18n.t("searchProf")??undefined}
           onChange={(e) => setSearchTerm(e.target.value)}
           borderRadius={"2rem"}
           focusBorderColor="initial"

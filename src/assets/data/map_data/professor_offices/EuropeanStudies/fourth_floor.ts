@@ -5,7 +5,7 @@ import { Location } from "../../../../../hooks/useMapData";
 
 const fourth_floor_locations: Location[] = [
   {
-    floor: String(i18n.t("fourth_floor")),
+    floor: i18n.t("fourth_floor")??undefined,
     imageURL: FOURTH_FLOOR_CD_IMG,
     ...elevator.library,
     title: "401",
@@ -13,7 +13,7 @@ const fourth_floor_locations: Location[] = [
     marked_position_y: 207,
   },
   {
-    floor: String(i18n.t("fourth_floor")),
+    floor: i18n.t("fourth_floor")??undefined,
     imageURL: FOURTH_FLOOR_KZ_IMG,
     ...elevator.restaurant,
     title: "421" + String(i18n.t("office_letter_a")),
@@ -21,7 +21,7 @@ const fourth_floor_locations: Location[] = [
     marked_position_y: 62,
   },
   {
-    floor: String(i18n.t("fourth_floor")),
+    floor: i18n.t("fourth_floor")??undefined,
     imageURL: FOURTH_FLOOR_KZ_IMG,
     ...elevator.restaurant,
     title: "421" + String(i18n.t("office_letter_b")),
@@ -29,7 +29,7 @@ const fourth_floor_locations: Location[] = [
     marked_position_y: 56,
   },
   {
-    floor: String(i18n.t("fourth_floor")),
+    floor: i18n.t("fourth_floor")??undefined,
     imageURL: FOURTH_FLOOR_KZ_IMG,
     ...elevator.restaurant,
     title: "422",
@@ -37,7 +37,7 @@ const fourth_floor_locations: Location[] = [
     marked_position_y: 62,
   },
   {
-    floor: String(i18n.t("fourth_floor")),
+    floor: i18n.t("fourth_floor")??undefined,
     imageURL: FOURTH_FLOOR_KZ_IMG,
     ...elevator.restaurant,
     title: "423",
@@ -45,7 +45,7 @@ const fourth_floor_locations: Location[] = [
     marked_position_y: 62,
   },
   {
-    floor: String(i18n.t("fourth_floor")),
+    floor: i18n.t("fourth_floor")??undefined,
     imageURL: FOURTH_FLOOR_KZ_IMG,
     ...elevator.restaurant,
     title: "425",
@@ -53,7 +53,7 @@ const fourth_floor_locations: Location[] = [
     marked_position_y: 60,
   },
   {
-    floor: String(i18n.t("fourth_floor")),
+    floor: i18n.t("fourth_floor")??undefined,
     imageURL: FOURTH_FLOOR_KZ_IMG,
     ...elevator.restaurant,
     title: "426",
@@ -61,7 +61,7 @@ const fourth_floor_locations: Location[] = [
     marked_position_y: 60,
   },
   {
-    floor: String(i18n.t("fourth_floor")),
+    floor: i18n.t("fourth_floor")??undefined,
     imageURL: FOURTH_FLOOR_KZ_IMG,
     ...elevator.restaurant,
     title: "427",
@@ -69,7 +69,7 @@ const fourth_floor_locations: Location[] = [
     marked_position_y: 60,
   },
   {
-    floor: String(i18n.t("fourth_floor")),
+    floor:i18n.t("fourth_floor")??undefined,
     imageURL: FOURTH_FLOOR_KZ_IMG,
     ...elevator.restaurant,
     title: "428",
@@ -77,7 +77,7 @@ const fourth_floor_locations: Location[] = [
     marked_position_y: 90,
   },
   {
-    floor: String(i18n.t("fourth_floor")),
+    floor: i18n.t("fourth_floor")??undefined,
     imageURL: FOURTH_FLOOR_KZ_IMG,
     ...elevator.restaurant,
     title: "430",
@@ -85,7 +85,7 @@ const fourth_floor_locations: Location[] = [
     marked_position_y: 108,
   },
   {
-    floor: String(i18n.t("fourth_floor")),
+    floor: i18n.t("fourth_floor")??undefined,
     imageURL: FOURTH_FLOOR_HT_IMG,
     ...elevator.gym,
     title: "430 (ΗΘ)",
@@ -93,7 +93,7 @@ const fourth_floor_locations: Location[] = [
     marked_position_y: 146,
   },
   {
-    floor: String(i18n.t("fourth_floor")),
+    floor: i18n.t("fourth_floor")??undefined,
     imageURL: FOURTH_FLOOR_KZ_IMG,
     ...elevator.restaurant,
     title: "432" + String(i18n.t("office_letter_b")),
@@ -101,7 +101,7 @@ const fourth_floor_locations: Location[] = [
     marked_position_y: 162,
   },
   {
-    floor: String(i18n.t("fourth_floor")),
+    floor: i18n.t("fourth_floor")??undefined,
     imageURL: FOURTH_FLOOR_KZ_IMG,
     ...elevator.restaurant,
     title: "433",
@@ -109,7 +109,7 @@ const fourth_floor_locations: Location[] = [
     marked_position_y: 144,
   },
   {
-    floor: String(i18n.t("fourth_floor")),
+    floor: i18n.t("fourth_floor")??undefined,
     imageURL: FOURTH_FLOOR_KZ_IMG,
     ...elevator.restaurant,
     title: "434-435",

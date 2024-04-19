@@ -36,19 +36,19 @@
 
 */
 
-import { StrictMode } from "react";
-import { ChakraProvider } from "@chakra-ui/react";
-import ReactDOM from "react-dom/client";
-import "./index.css";
-import theme from "./theme/theme";
-import App from "./App";
-import reportWebVitals from "./reportWebVitals";
+import React from "react";
+import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
+import { ChakraProvider } from "@chakra-ui/react";
+import { StrictMode } from "react";
+import App from "./App";
 import { DepartmentProvider } from "./contexts/departmentContext";
+import theme from "./theme/theme";
+import reportWebVitals from "./reportWebVitals";
+import "./index.css";
 import "./i18n";
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
+ReactDOM.render(
   <StrictMode>
     <BrowserRouter>
       <DepartmentProvider>
@@ -57,7 +57,8 @@ root.render(
         </ChakraProvider>
       </DepartmentProvider>
     </BrowserRouter>
-  </StrictMode>
+  </StrictMode>,
+   document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function

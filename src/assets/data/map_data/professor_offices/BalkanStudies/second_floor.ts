@@ -5,7 +5,7 @@ import { Location } from "../../../../../hooks/useMapData";
 
 const bso_second_floor_locations: Location[] = [
   {
-    floor: String(i18n.t("second_floor")),
+    floor: i18n.t("second_floor")??undefined,
     imageURL: SECOND_FLOOR_KZ_IMG,
     ...elevator.restaurant,
     title: "200",
@@ -27,7 +27,7 @@ const bso_second_floor_locations: Location[] = [
   //   marked_position_y: 110,
   // },
   {
-    floor: String(i18n.t("second_floor")),
+    floor: i18n.t("second_floor")??undefined,
     imageURL: SECOND_FLOOR_CD_IMG,
     ...elevator.library,
     title: "203",
@@ -56,7 +56,7 @@ const bso_second_floor_locations: Location[] = [
   //   marked_position_y: 61,
   // },
   {
-    floor: String(i18n.t("second_floor")),
+    floor: i18n.t("second_floor")??undefined,
     imageURL: SECOND_FLOOR_CD_IMG,
     ...elevator.library,
     title: "210",
@@ -64,7 +64,7 @@ const bso_second_floor_locations: Location[] = [
     marked_position_y: 88,
   },
   {
-    floor: String(i18n.t("second_floor")),
+    floor: i18n.t("second_floor")??undefined,
     imageURL: SECOND_FLOOR_KZ_IMG,
     ...elevator.restaurant,
     title: "211",
@@ -72,7 +72,7 @@ const bso_second_floor_locations: Location[] = [
     marked_position_y: 68,
   },
   {
-    floor: String(i18n.t("second_floor")),
+    floor: i18n.t("second_floor")??undefined,
     imageURL: SECOND_FLOOR_KZ_IMG,
     ...elevator.restaurant,
     title: "212",
@@ -94,7 +94,7 @@ const bso_second_floor_locations: Location[] = [
   //   marked_position_y: 160,
   // },
   {
-    floor: String(i18n.t("second_floor")),
+    floor: i18n.t("second_floor")??undefined,
     imageURL: SECOND_FLOOR_KZ_IMG,
     ...elevator.restaurant,
     title: "214",
@@ -102,7 +102,7 @@ const bso_second_floor_locations: Location[] = [
     marked_position_y: 156,
   },
   {
-    floor: String(i18n.t("second_floor")),
+    floor: i18n.t("second_floor")??undefined,
     imageURL: SECOND_FLOOR_KZ_IMG,
     ...elevator.restaurant,
     title: "215",
@@ -110,7 +110,7 @@ const bso_second_floor_locations: Location[] = [
     marked_position_y: 99,
   },
   {
-    floor: String(i18n.t("second_floor")),
+    floor: i18n.t("second_floor")??undefined,
     imageURL: SECOND_FLOOR_KZ_IMG,
     ...elevator.restaurant,
     title: "221" + i18n.t("office_letter_a"),
@@ -118,7 +118,7 @@ const bso_second_floor_locations: Location[] = [
     marked_position_y: 79,
   },
   {
-    floor: String(i18n.t("second_floor")),
+    floor: i18n.t("second_floor")??undefined,
     imageURL: SECOND_FLOOR_KZ_IMG,
     ...elevator.restaurant,
     title: "222",
@@ -126,7 +126,7 @@ const bso_second_floor_locations: Location[] = [
     marked_position_y: 66,
   },
   {
-    floor: String(i18n.t("second_floor")),
+    floor: i18n.t("second_floor")??undefined,
     imageURL: SECOND_FLOOR_KZ_IMG,
     ...elevator.restaurant,
     title: "223",
@@ -134,7 +134,7 @@ const bso_second_floor_locations: Location[] = [
     marked_position_y: 66,
   },
   {
-    floor: String(i18n.t("second_floor")),
+    floor: i18n.t("second_floor")??undefined,
     imageURL: SECOND_FLOOR_KZ_IMG,
     ...elevator.restaurant,
     title: "225",
@@ -142,7 +142,7 @@ const bso_second_floor_locations: Location[] = [
     marked_position_y: 66,
   },
   {
-    floor: String(i18n.t("second_floor")),
+    floor: i18n.t("second_floor")??undefined,
     imageURL: SECOND_FLOOR_KZ_IMG,
     ...elevator.restaurant,
     title: "226",
@@ -150,7 +150,7 @@ const bso_second_floor_locations: Location[] = [
     marked_position_y: 66,
   },
   {
-    floor: String(i18n.t("second_floor")),
+    floor: i18n.t("second_floor")??undefined,
     imageURL: SECOND_FLOOR_KZ_IMG,
     ...elevator.restaurant,
     title: "227",
@@ -158,7 +158,7 @@ const bso_second_floor_locations: Location[] = [
     marked_position_y: 66,
   },
   {
-    floor: String(i18n.t("second_floor")),
+    floor: i18n.t("second_floor")??undefined,
     imageURL: SECOND_FLOOR_KZ_IMG,
     ...elevator.restaurant,
     title: "228",
@@ -166,7 +166,7 @@ const bso_second_floor_locations: Location[] = [
     marked_position_y: 96,
   },
   {
-    floor: String(i18n.t("second_floor")),
+    floor: i18n.t("second_floor")??undefined,
     imageURL: SECOND_FLOOR_KZ_IMG,
     ...elevator.restaurant,
     title: "230",
@@ -174,7 +174,7 @@ const bso_second_floor_locations: Location[] = [
     marked_position_y: 114,
   },
   {
-    floor: String(i18n.t("second_floor")),
+    floor: i18n.t("second_floor")??undefined,
     imageURL: SECOND_FLOOR_KZ_IMG,
     ...elevator.restaurant,
     title: "231",
@@ -182,7 +182,7 @@ const bso_second_floor_locations: Location[] = [
     marked_position_y: 132,
   },
   {
-    floor: String(i18n.t("second_floor")),
+    floor: i18n.t("second_floor")??undefined,
     imageURL: SECOND_FLOOR_KZ_IMG,
     ...elevator.restaurant,
     title: "232" + i18n.t("office_letter_b"),
@@ -190,7 +190,7 @@ const bso_second_floor_locations: Location[] = [
     marked_position_y: 170,
   },
   {
-    floor: String(i18n.t("second_floor")),
+    floor: i18n.t("second_floor")??undefined,
     imageURL: SECOND_FLOOR_KZ_IMG,
     ...elevator.restaurant,
     title: "233",
@@ -205,7 +205,7 @@ const bso_second_floor_locations: Location[] = [
   //   marked_position_y: 152,
   // },
   {
-    floor: String(i18n.t("second_floor")),
+    floor: i18n.t("second_floor")??undefined,
     imageURL: SECOND_FLOOR_KZ_IMG,
     ...elevator.restaurant,
     title: "234" + i18n.t("office_letter_b"),
@@ -213,7 +213,7 @@ const bso_second_floor_locations: Location[] = [
     marked_position_y: 151,
   },
   {
-    floor: String(i18n.t("second_floor")),
+    floor: i18n.t("second_floor")??undefined,
     imageURL: SECOND_FLOOR_KZ_IMG,
     ...elevator.restaurant,
     title: "234" + i18n.t("office_letter_c"),
@@ -221,7 +221,7 @@ const bso_second_floor_locations: Location[] = [
     marked_position_y: 157,
   },
   {
-    floor: String(i18n.t("second_floor")),
+    floor: i18n.t("second_floor")??undefined,
     imageURL: SECOND_FLOOR_KZ_IMG,
     ...elevator.restaurant,
     title: "234" + i18n.t("office_letter_d"),
@@ -229,7 +229,7 @@ const bso_second_floor_locations: Location[] = [
     marked_position_y: 152,
   },
   {
-    floor: String(i18n.t("second_floor")),
+    floor: i18n.t("second_floor")??undefined,
     imageURL: SECOND_FLOOR_KZ_IMG,
     ...elevator.restaurant,
     title: "235",

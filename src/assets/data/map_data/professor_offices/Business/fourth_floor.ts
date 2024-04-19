@@ -5,7 +5,7 @@ import { Location } from "../../../../../hooks/useMapData";
 
 const fourth_floor_locations: Location[] = [
   {
-    floor: String(i18n.t("fourth_floor")),
+    floor: i18n.t("fourth_floor")??undefined,
     imageURL: FOURTH_FLOOR_HT_IMG,
     ...elevator.gym,
     title: "402",
@@ -13,7 +13,7 @@ const fourth_floor_locations: Location[] = [
     marked_position_y: 165,
   },
   {
-    floor: String(i18n.t("fourth_floor")),
+    floor: i18n.t("fourth_floor")??undefined,
     imageURL: FOURTH_FLOOR_HT_IMG,
     ...elevator.gym,
     title: "403",
@@ -21,7 +21,7 @@ const fourth_floor_locations: Location[] = [
     marked_position_y: 146,
   },
   {
-    floor: String(i18n.t("fourth_floor")),
+    floor: i18n.t("fourth_floor")??undefined,
     imageURL: FOURTH_FLOOR_HT_IMG,
     ...elevator.gym,
     title: "405",
@@ -29,7 +29,7 @@ const fourth_floor_locations: Location[] = [
     marked_position_y: 130,
   },
   {
-    floor: String(i18n.t("fourth_floor")),
+    floor: i18n.t("fourth_floor")??undefined,
     imageURL: FOURTH_FLOOR_HT_IMG,
     ...elevator.gym,
     title: "406",
@@ -37,7 +37,7 @@ const fourth_floor_locations: Location[] = [
     marked_position_y: 102,
   },
   {
-    floor: String(i18n.t("fourth_floor")),
+    floor: i18n.t("fourth_floor")??undefined,
     imageURL: FOURTH_FLOOR_HT_IMG,
     ...elevator.gym,
     title: "407",
@@ -45,7 +45,7 @@ const fourth_floor_locations: Location[] = [
     marked_position_y: 99,
   },
   {
-    floor: String(i18n.t("fourth_floor")),
+    floor: i18n.t("fourth_floor")??undefined,
     imageURL: FOURTH_FLOOR_HT_IMG,
     ...elevator.gym,
     title: "408",
@@ -53,7 +53,7 @@ const fourth_floor_locations: Location[] = [
     marked_position_y: 98,
   },
   {
-    floor: String(i18n.t("fourth_floor")),
+    floor: i18n.t("fourth_floor")??undefined,
     imageURL: FOURTH_FLOOR_HT_IMG,
     ...elevator.gym,
     title: "410",
@@ -61,7 +61,7 @@ const fourth_floor_locations: Location[] = [
     marked_position_y: 96,
   },
   {
-    floor: String(i18n.t("fourth_floor")),
+    floor: i18n.t("fourth_floor")??undefined,
     imageURL: FOURTH_FLOOR_HT_IMG,
     ...elevator.gym,
     title: "411",
@@ -69,7 +69,7 @@ const fourth_floor_locations: Location[] = [
     marked_position_y: 102,
   },
   {
-    floor: String(i18n.t("fourth_floor")),
+    floor: i18n.t("fourth_floor")??undefined,
     imageURL: FOURTH_FLOOR_HT_IMG,
     ...elevator.gym,
     title: "412",
