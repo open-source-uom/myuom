@@ -52,10 +52,10 @@ import {
   useScrollToTopOnLoad,
   useSecretary,
 } from "../../hooks";
-import i18n from "../../i18n.ts";
+import i18n from "../../i18n";
 import ProfComponent from "./ProfCard";
 import SecrCard from "./SecrCard";
-import { Professor } from "../../assets/data/professors/index.ts";
+import { Professor } from "../../assets/data/professors/index";
 import { SecretariesData } from "../../assets/data/secretaries.js";
 
 const formatString = (string:string) =>

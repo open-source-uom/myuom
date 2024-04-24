@@ -1,4 +1,4 @@
-import secrData,{SecretariesData} from "../assets/data/secretaries.ts";
+import secrData,{SecretariesData} from "../assets/data/secretaries";
 
 const getSecretaryFromDepartment = (depName:string):SecretariesData|undefined =>
     secrData.find((data) => data.name === depName);
