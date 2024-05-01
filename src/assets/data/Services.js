@@ -71,6 +71,7 @@ export const servicesData = [
             {
                 title: "AIESEC",
                 url: "https://www.uom.gr/aiesec",
+                englishUrl: "https://www.uom.gr/en/aiesec-10426",
                 imgUrl:
                     "https://uploads-ssl.webflow.com/62f0bdedd19c8b20eba9f328/63566cd4cb91f39322013938_OG%20image.png",
             },
@@ -112,6 +113,7 @@ export const servicesData = [
             {
                 title: i18n.t("gender_eq_committee"),
                 url: "https://www.uom.gr/eif",
+                englishUrl: "https://www.uom.gr/en/eif",
                 imgUrl:
                     "https://www.uom.gr/assets/site/public/nodes/8310/9033-EIFLOGO.jpg",
             },
