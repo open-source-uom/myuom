@@ -40,12 +40,12 @@
 
 import { DEPARTMENT_CODES } from "./DepNames";
 
-const Balkan_Studies_Link = "https://www.uom.gr/11587-anakoinosh-gia-dia-zoshs-orkomosia-toy-tmhmatos"
+const Balkan_Studies_Link = "https://www.uom.gr/bso/ta-nea-mas?tagid=7435"
 const European_Studies_Link = "https://www.uom.gr/ies/orkomosies-apofoitoi"
 const Education_Link = "https://www.uom.gr/esp/orkomosies"
 const Informatics_Link = "https://www.uom.gr/dai/apofoithsh"
 const Finance_Link = "https://www.uom.gr/fin/enhmerosh?tagid=7435"
-const Business_Link = "https://www.uom.gr/ba/anakoinosh-ypobolhs-aithseon-orkomosias-noembrioy-2019"
+const Business_Link = "https://www.uom.gr/ba/enhmerosh?tagid=7435"
 const Economics_Link = "https://www.uom.gr/eco/dieksagogh-neas-orkomosias"
 const Music = "https://www.uom.gr/msa/orkomosia-tmhmatos"
 

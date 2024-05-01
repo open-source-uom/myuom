@@ -52,7 +52,7 @@ import { useDepName, useDepartments } from "../hooks";
 import i18n from "../i18n";
 
 export default function MenuBox({ category }) {
-  const { title, iconSVG, route, span, isExternal, requireSelection } =
+  const { title, iconSVG, route, span, isExternal, requireSelection,englishRoute } =
       category;
   const { depName, depCode } = useDepName();
   const departments = useDepartments();
@@ -81,11 +81,20 @@ export default function MenuBox({ category }) {
   const navigate = useNavigate();
 
   const handleNavigation = () => {
-    isExternal
-        ? requireSelection
-            ? window.location.replace(route, "_blank")
-            : window.open(route, "_blank")
-        : navigate(route);
+
+    if(i18n.language === 'en' && englishRoute){
+      isExternal
+          ? requireSelection
+              ? window.location.replace(englishRoute, "_blank")
+              : window.open(englishRoute, "_blank")
+          : navigate(englishRoute);
+    }else{
+      isExternal
+          ? requireSelection
+              ? window.location.replace(route, "_blank")
+              : window.open(route, "_blank")
+          : navigate(route);
+    }
   };
 
   const handleSelection = () => {

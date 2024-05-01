@@ -60,7 +60,9 @@ export default function AnnouncementsPage() {
       });
     }
     if (announcementLink) {
-      window.open(announcementLink.link);
+      i18n.language === "en" && announcementLink.englishLink
+          ? window.open(announcementLink.englishLink) 
+          : window.open(announcementLink.link);
       navigate("/");
     }
   }, [depCode]);

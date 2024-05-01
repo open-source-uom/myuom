@@ -217,7 +217,9 @@ export default function LibraryPage() {
           </Box>
         }
         onClick={(e) => {
-          window.open("https://www.lib.uom.gr/index.php/el/");
+          i18n.language === "en" 
+            ? window.open("https://www.lib.uom.gr/index.php/en/") 
+            : window.open("https://www.lib.uom.gr/index.php/el/");
         }}
         justifyContent="center"
       >

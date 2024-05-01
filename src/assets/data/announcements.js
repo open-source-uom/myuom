@@ -44,30 +44,39 @@ export const AnnouncementsData = [
   {
     code: DEPARTMENT_CODES.BALKAN_STUDIES,
     link: "https://www.uom.gr/bso/ta-nea-mas",
-
+    englishLink: "https://www.uom.gr/en/bso"
   },
   {
     code: DEPARTMENT_CODES.EUROPEAN_STUDIES,
     link: "https://www.uom.gr/ies#undefined1",
+    englishLink: "https://www.uom.gr/en/ies"
   },
   {
     code: DEPARTMENT_CODES.EDUCATION,
     link: "https://www.uom.gr/esp",
-  }, {
+    englishLink: "https://www.uom.gr/en/esp"
+  }, 
+  {
     code: DEPARTMENT_CODES.INFORMATICS,
     link: "https://www.uom.gr/dai/ta-nea-toy-tmhmatos",
-  }, {
+
+  }, 
+  {
     code: DEPARTMENT_CODES.BUSINESS_ADMINISTRATION,
     link: "https://www.uom.gr/ba",
-  }, {
+  }, 
+  {
     code: DEPARTMENT_CODES.ECONOMICS,
     link: "https://www.uom.gr/eco#undefined1",
-  }, {
+  }, 
+  {
     code: DEPARTMENT_CODES.ACCOUNTING_FINANCE,
     link: "https://www.uom.gr/fin",
-  }, {
+  }, 
+  {
     code: DEPARTMENT_CODES.MUSIC,
     link: "https://www.uom.gr/msa",
+    englishLink: "https://www.uom.gr/en/msa"
   }
 
 ]
