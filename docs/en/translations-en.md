@@ -22,8 +22,8 @@ The following steps must be taken:
 
 To start with we need to find where this text is that needs correction. Based on its location within the application it will depend on where it will be in the translations. For example, if there is an error in the teachers the translation will most likely be in src/assets/locales/en/academic_personel.js, but it will need to be changed in all languages.
 
-> If this is not possible, it is sufficient to report the error either to a gitlab issue or even to discord.
-If finding it turns out to be harder than expected it will take more effort by looking at the code(detailed documentation in [codebase.md]()).
+> If this is not possible, it is sufficient to report the error either to a github issue or even to our [discord](https://discord.gg/nzMJpRYxp6).
+If finding it turns out to be harder than expected it will take more effort by looking at the code(detailed documentation in [codebase.md](codebase.md)).
 
 ### Adding terms that have not yet been translated
 
