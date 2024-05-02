@@ -1,13 +1,13 @@
 # Maintenance of the MyUoM Application
 
-Due to the absence of automated ways to update the information it contains
+Due to the temporary absence(we are working on this) of automated ways to update the information contained in
 the application, some data needs to be refreshed at certain intervals.
 
-If you find anything that does not correspond to reality, either follow the
-the instructions below or let us know by making an issue in the repository where
+If you find anything that does not correspond to the actual information, either follow the
+the instructions below or let us know by making an issue in the repository where you
 describe what needs to be changed.
 
-Any data that the application utilizes (such as the club schedule, links to exam and course schedules) is located in the src/assets/data folder. To pass the changes make a different branch called update-{whatever is involved}(e.g.
+Any data that the application utilizes (such as the club schedule, links to exam and course schedules) is located in the src/assets/data folder and ideally should be accessed through hooks(to allow us in the future to easily implement a backend). To pass the changes make a different branch called update-{whatever is involved}(e.g.
 update-exam-links)
 
 > Update anything that is text-related because translations are being done, probably written in the format
@@ -23,5 +23,5 @@ Below is a list of what **occasionally** needs to be changed (i.e. whenever it c
   translated so they must be changed in that file based on the
   **src/assets/locales/el/academic_personel.js**.)
 - Schedules(Library,Club,Registries) --> **src/assets/data/Library.js,RestaurantSchedule.js**
-- Graduations(links) --> **src/assets/data/Graduation.js** (Based on departments as they appear in **src/assets/data/DepNames.js** (bso--> BSAU, ess--> European Studies
-  , esp --> Educational&Social Policits, dai --> Applied, fin --> Accounting, msa --> Music, eco --> Economics, bas --> Business Administration)
+- Graduations(links) --> **src/assets/data/Graduation.js** (Based on departments as they appear in **src/assets/data/DepNames.js** (bso--> Balkan and Slavic Studies, ess--> European Studies
+  , esp --> Educational&Social Policy, dai --> Applied Informatics, fin --> Accounting and Finance, msa --> Music, eco --> Economics, bas --> Business Administration)
