@@ -39,12 +39,30 @@
 import { Box, Image, Text, Accordion } from "@chakra-ui/react";
 import membersData from "../assets/data/projectMembers";
 import ProjectMembersCard from "../components/ProjectMembersCard";
+import ContributorsCard from "../components/ContributorsCard";
 import UoMLogo from "../assets/myUOMLogo.png";
 import { SocialIcon } from "react-social-icons";
 import i18n from "../i18n";
+import { useEffect, useState } from "react";
 import { useSocialMediaURLs } from "../hooks";
 function AboutSettingsPage() {
   const SOCIAL_MEDIA_URLS = useSocialMediaURLs();
+  const [contributors, setContributors] = useState([]);
+
+    useEffect(() => {
+        fetch('https://api.github.com/repos/open-source-uom/myuom/contributors')
+            .then(response => response.json())
+            .then(data => {
+                const contributorsData = data.map(contributor => ({
+                    name: contributor.login,
+                    github: contributor.html_url,
+                    img: contributor.avatar_url,
+                    contributions: contributor.contributions
+                }));
+                setContributors(contributorsData);
+            })
+            .catch(console.error);
+    }, []);
   return (
     <Box
       align="center"
@@ -109,6 +127,19 @@ function AboutSettingsPage() {
       <Accordion allowToggle mt="1rem">
         {membersData.map((data) => (
           <ProjectMembersCard data={data} key={data.name} />
+        ))}
+      </Accordion>
+      <Text
+        fontSize={{ sm: 15, md: 18, lg: 23, xl: 27 }}
+        textAlign="center"
+        mt="2rem"
+        mx="2rem"
+      >
+        {i18n.t("about_project_contributor_title")}
+      </Text>
+      <Accordion allowToggle mt="1rem">
+        {contributors.map((data) => (
+          <ContributorsCard data={data} key={data.name} />
         ))}
       </Accordion>
     </Box>
