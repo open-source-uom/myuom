@@ -65,7 +65,9 @@ const AnnouncementsPage: React.FC = () => {
       });
     }
     if (announcementLink) {
-      window.open(announcementLink.link);
+      i18n.language === "en" && announcementLink.englishLink
+          ? window.open(announcementLink.englishLink) 
+          : window.open(announcementLink.link);
       navigate("/");
     }
   }, [depCode, announcementLink, navigate, toast]);

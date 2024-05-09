@@ -42,10 +42,11 @@ import {Service} from "../assets/data/Services"
 interface ServicesCardProps {
   srv: Service;
 }
+import i18n from "../i18n";
 
 const ServicesCard: React.FC<ServicesCardProps> = ({ srv }) => {
   return (
-    <Link href={srv.url} isExternal w="100%" display="flex" flexDir="column" alignItems="center">
+    <Link href={i18n.language ==='en' && srv.englishUrl ? srv.englishUrl : srv.url} isExternal w="100%" display="flex" flexDir="column" alignItems="center">
       <Flex
         display="flex"
         direction="row"
