@@ -67,6 +67,5 @@ export const customTheme = extendTheme({
   },
 });
 
-const theme = extendTheme({ customTheme });
 
 export default customTheme;

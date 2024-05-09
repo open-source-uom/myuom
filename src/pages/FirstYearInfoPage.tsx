@@ -36,7 +36,7 @@
 
 */
 import { Divider, Flex } from "@chakra-ui/react";
-import React, { useCallback } from "react";
+import React from "react";
 import Guide from "../components/freshmen/Guide";
 import GuideButton from "../components/freshmen/GuideButton";
 import { useGuidesMdData } from "../hooks/useGuidesMdData";

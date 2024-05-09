@@ -38,7 +38,7 @@
 import React, { useEffect } from "react";
 import { useDisclosure, Box, BoxProps } from "@chakra-ui/react";
 import { SettingsIcon } from "../../assets/icons";
-import SettingsDrawer from "./SettingsDrawer";
+import SettingsDrawer from "./SettingsDrawer.tsx";
 
 interface MenuButtonProps extends BoxProps {}
 

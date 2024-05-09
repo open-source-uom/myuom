@@ -39,7 +39,6 @@ import React, { useEffect, useRef } from "react";
 import { Box, Heading, useToast } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 import { useDepName, useGraduationLink } from "../hooks";
-import { GraduationData } from "../assets/data/Graduation";
 import i18n from "../i18n";
 
 const GraduationPage: React.FC = () => {

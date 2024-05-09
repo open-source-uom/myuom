@@ -62,7 +62,6 @@ const MapPage: React.FC<MapPageProps> = () => {
     setSelectedLocationCategory,
     locationData,
     selectedLocation,
-    selectedLocationCategory,
   } = useMapData();
   console.log("loca", locations);
 
@@ -75,7 +74,7 @@ const MapPage: React.FC<MapPageProps> = () => {
     if (isSpecificForDepartment) {
       resetSelectedLocation();
     }
-  }, [depName]);
+  }, [depName,isSpecificForDepartment]);
 
   function resetSelectedLocation() {
     setSelectedLocation("");

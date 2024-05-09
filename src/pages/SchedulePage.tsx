@@ -72,7 +72,7 @@ const SchedulePage: React.FC<SchedulePageProps> = ({
         redirectTo(scheduleData.semester);
       }
     }
-  }, [depCode, examsProp, semesterProp, scheduleData, navigate]);
+}, [depCode, examsProp, semesterProp, scheduleData, redirectTo]);
 
   return (
     <Box>
