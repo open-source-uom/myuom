@@ -5,7 +5,7 @@ import { Location } from "../../../../../hooks/useMapData";
 
 const fourth_floor_locations : Location[] = [
   {
-    floor: i18n.t("fourth_floor") as string,
+    floor: i18n.t("fourth_floor") ?? undefined,
     imageURL: FOURTH_FLOOR_KZ_IMG,
     ...elevator.restaurant,
     title: "401",
@@ -13,7 +13,7 @@ const fourth_floor_locations : Location[] = [
     marked_position_y: 157,
   },
   {
-    floor: i18n.t("fourth_floor") as string,
+    floor: i18n.t("fourth_floor") ?? undefined,
     imageURL: FOURTH_FLOOR_KZ_IMG,
     ...elevator.restaurant,
     title: "402",
@@ -21,7 +21,7 @@ const fourth_floor_locations : Location[] = [
     marked_position_y: 125,
   },
   {
-    floor: i18n.t("fourth_floor") as string,
+    floor: i18n.t("fourth_floor") ?? undefined,
     imageURL: FOURTH_FLOOR_KZ_IMG,
     ...elevator.restaurant,
     title: "403",
@@ -29,7 +29,7 @@ const fourth_floor_locations : Location[] = [
     marked_position_y: 107,
   },
   {
-    floor: i18n.t("fourth_floor") as string,
+    floor: i18n.t("fourth_floor") ?? undefined,
     imageURL: FOURTH_FLOOR_KZ_IMG,
     ...elevator.restaurant,
     title: "405",
@@ -37,7 +37,7 @@ const fourth_floor_locations : Location[] = [
     marked_position_y: 90,
   },
   {
-    floor: i18n.t("fourth_floor") as string,
+    floor: i18n.t("fourth_floor") ?? undefined,
     imageURL: FOURTH_FLOOR_KZ_IMG,
     ...elevator.restaurant,
     title: "406",
@@ -45,7 +45,7 @@ const fourth_floor_locations : Location[] = [
     marked_position_y: 62,
   },
   {
-    floor: i18n.t("fourth_floor") as string,
+    floor: i18n.t("fourth_floor")?? undefined,
     imageURL: FOURTH_FLOOR_KZ_IMG,
     ...elevator.restaurant,
     title: "407",
@@ -53,7 +53,7 @@ const fourth_floor_locations : Location[] = [
     marked_position_y: 59,
   },
   {
-    floor: i18n.t("fourth_floor") as string,
+    floor: i18n.t("fourth_floor") ?? undefined,
     imageURL: FOURTH_FLOOR_KZ_IMG,
     ...elevator.restaurant,
     title: "408",
@@ -61,7 +61,7 @@ const fourth_floor_locations : Location[] = [
     marked_position_y: 59,
   },
   {
-    floor: i18n.t("fourth_floor") as string,
+    floor: i18n.t("fourth_floor") ?? undefined,
     imageURL: FOURTH_FLOOR_KZ_IMG,
     ...elevator.restaurant,
     title: "409",
@@ -69,7 +69,7 @@ const fourth_floor_locations : Location[] = [
     marked_position_y: 62,
   },
   {
-    floor: i18n.t("fourth_floor") as string,
+    floor: i18n.t("fourth_floor")?? undefined,
     imageURL: FOURTH_FLOOR_KZ_IMG,
     ...elevator.restaurant,
     title: "410",
@@ -77,7 +77,7 @@ const fourth_floor_locations : Location[] = [
     marked_position_y: 64,
   },
   {
-    floor: i18n.t("fourth_floor") as string,
+    floor: i18n.t("fourth_floor") ?? undefined,
     imageURL: FOURTH_FLOOR_KZ_IMG,
     ...elevator.restaurant,
     title: "411",
@@ -85,7 +85,7 @@ const fourth_floor_locations : Location[] = [
     marked_position_y: 66,
   },
   {
-    floor: i18n.t("fourth_floor") as string,
+    floor: i18n.t("fourth_floor") ?? undefined,
     imageURL: FOURTH_FLOOR_KZ_IMG,
     ...elevator.restaurant,
     title: "412",
@@ -93,7 +93,7 @@ const fourth_floor_locations : Location[] = [
     marked_position_y: 91,
   },
   {
-    floor: i18n.t("fourth_floor") as string,
+    floor: i18n.t("fourth_floor") ?? undefined,
     imageURL: FOURTH_FLOOR_KZ_IMG,
     ...elevator.restaurant,
     title: "431",

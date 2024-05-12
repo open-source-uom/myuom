@@ -36,13 +36,13 @@
 
 */
 import React from "react";
+import i18n from "../i18n";
 import { Flex, Link, Image, Text, useColorModeValue } from "@chakra-ui/react";
 import {Service} from "../assets/data/Services"
 
 interface ServicesCardProps {
   srv: Service;
 }
-import i18n from "../i18n";
 
 const ServicesCard: React.FC<ServicesCardProps> = ({ srv }) => {
   return (

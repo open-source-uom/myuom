@@ -4,7 +4,7 @@ import elevator from "./elevator_positions";
 import { Location } from "../../../hooks/useMapData";
 const locations:Location[] = [
   {
-    floor: i18n.t("ground_floor") as string,
+    floor: i18n.t("ground_floor") ?? undefined,
     imageURL: GROUND_FLOOR_IMG_URL,
     title: i18n.t("ceremony_hall_for_navigation")??undefined,
     marked_position_x: 298,

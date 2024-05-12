@@ -9,7 +9,7 @@ interface DepartmentPickerProps {
 
 const DepartmentPicker: React.FC<DepartmentPickerProps> = ({ onClose }) => {
   const departments = useDepartments();
-  const { depName, depCode, setDepCode } = useDepName();
+  const { depName, setDepCode } = useDepName();
 
   const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     e.preventDefault();

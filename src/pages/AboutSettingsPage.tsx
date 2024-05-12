@@ -46,8 +46,6 @@ import i18n from "../i18n";
 import { useEffect, useState } from "react";
 import { useSocialMediaURLs } from "../hooks";
 
-const UoMLogo = require("../assets/myUOMLogo.png");
-
 const AboutSettingsPage: React.FC = () => {
   const SOCIAL_MEDIA_URLS = useSocialMediaURLs();
   const [contributors, setContributors] = useState([]);

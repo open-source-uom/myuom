@@ -5,7 +5,7 @@ import { Location } from "../../../../../hooks/useMapData";
 
 const third_floor_locations:Location[] = [
   {
-    floor: i18n.t("third_floor") as string,
+    floor: i18n.t("third_floor") ?? undefined,
     imageURL: THIRD_FLOOR_CD_IMG,
     ...elevator.library,
     title: "303",

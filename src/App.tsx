@@ -44,7 +44,6 @@ import AboutSettingsPage from "./pages/AboutSettingsPage";
 import { Categories } from "./assets/ConfigRoutes";
 import i18n from "./i18n";
 import Error404 from "./pages/Error404";
-import { RouteProps } from "react-router";
 
 interface Category {
   route: string;

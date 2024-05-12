@@ -9,6 +9,7 @@ import {
   Flex,
   Box,
   useColorModeValue,
+  FormControl,
   Button,
 } from "@chakra-ui/react";
 import {
@@ -50,7 +51,7 @@ const SettingsDrawer: React.FC<SettingsDrawerProps> = ({ isOpen, onClose }) => {
   };
 
   return (
-    <Drawer styleConfig={{"fontFamily":"Syne"}}
+    <Drawer 
       placement="right"
       onClose={onClose}
       isOpen={isOpen}
@@ -82,6 +83,15 @@ const SettingsDrawer: React.FC<SettingsDrawerProps> = ({ isOpen, onClose }) => {
             <DepartmentPicker onClose={onClose} />
           </Flex>
           <Box>
+            <FormControl
+              display="flex"
+              alignItems="flex-start"
+              justifyContent={"space-between"}
+              color={useColorModeValue("#0050e0", "#f3f3f3")}
+              my={"2rem"}
+            >
+              <ThemeToggle />
+            </FormControl>
             <Box
               color={useColorModeValue("#0050e0", "#f3f3f3")}
               alignItems="flex-start"
