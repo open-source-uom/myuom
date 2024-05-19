@@ -22,7 +22,7 @@
     "react-scripts": "5.0.1",
     "react-social-icons": "^6.16.0",
     "swiper": "^11.1.1",
-    "web-vitals": "^3.5.2"
+    "web-vitals": "^4.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
