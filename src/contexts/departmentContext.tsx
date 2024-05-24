@@ -54,7 +54,7 @@ interface DepartmentProviderProps {
 }
 
 export const DepartmentProvider: React.FC<DepartmentProviderProps> = ({ children }) => {
-  const [depName, setDepName] = useLocalStorage('depName', null  | null);
+  const [depName, setDepName] = useLocalStorage<string | null>('depName', null);
 
   const changeDepartmentCode = (departmentToBeSet: string | null) => {
     setDepName(departmentToBeSet);
