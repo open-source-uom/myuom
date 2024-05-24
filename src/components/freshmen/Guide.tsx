@@ -58,7 +58,7 @@ const Guide: React.FC<GuideProps> = ({ guideContent, onClick }) => {
         w={{ sm: "100%", md: "90%", lg: "80%", "2xl": "60%", "3xl": "50%" }}
       >
         <div className="markdown-body">
-          <ReactMarkdown linkTarget="_blank">{guideContent}</ReactMarkdown>
+          <ReactMarkdown>{guideContent}</ReactMarkdown>
         </div>
       </Flex>
     </Flex>
