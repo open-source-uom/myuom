@@ -31,7 +31,10 @@
     "eject": "react-scripts eject",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,md}\""
   },
-
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/open-source-uom/myuom.git"
+  },
   "engines": {
     "node": ">=14.21.3"
   },
