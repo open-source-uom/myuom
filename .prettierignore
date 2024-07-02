@@ -4,10 +4,6 @@ coverage
 
 # Ignore all HTML files:
 **/*.html
-**/*.md
-**/.md
-**/*.mdx
-**/*.json
 
 **/.git
 **/.svn
