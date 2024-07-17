@@ -4,6 +4,8 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+      ignore:
+        - dependency-name: "react-markdown"
       day: "sunday"
       time: "03:00"
       timezone: "Europe/Athens"
