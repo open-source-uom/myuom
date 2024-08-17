@@ -31,7 +31,7 @@ jobs:
         with:
           local-dir: build/static/
           server-dir: public_html/
-          server: ftp.my.uom.gr
+          server: my.uom.gr
           username: ${{ secrets.FTP_USERNAME_PROD }}
           password: ${{ secrets.FTP_PASSWORD_PROD }}
           port: ${{ secrets.FTP_PORT }}  # Add this line if supported
