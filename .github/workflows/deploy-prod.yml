@@ -1,0 +1,38 @@
+name: Deploy to Production with FTP
+
+on:
+  push:
+    branches:
+      - test
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'  # Use the Node.js version you need
+
+      - name: Install dependencies
+        run: |
+          cd app
+          npm install --legacy-peer-deps  # Added option to handle peer dependency issues
+
+      - name: Build
+        run: |
+          cd app
+          npm run build
+
+      - name: Upload to FTP server
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          local-dir: app/dist/  # Adjust this if your build output is in a different directory
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME_PROD }}
+          password: ${{ secrets.FTP_PASSWORD_PROD }}
+          port: ${{ secrets.FTP_PORT }}  # Add this line if supported
