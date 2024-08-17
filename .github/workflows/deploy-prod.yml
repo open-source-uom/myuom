@@ -3,7 +3,7 @@ name: Deploy to Production with FTP
 on:
   push:
     branches:
-      - test
+      - test1
 
 jobs:
   build:
@@ -16,7 +16,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18'  # Use the Node.js version you need
+          node-version: '20'  # Use the Node.js version you need
 
       - name: Install dependencies
         run: |
@@ -29,7 +29,8 @@ jobs:
       - name: Upload to FTP server
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          local-dir: app/dist/  # Adjust this if your build output is in a different directory
+          local-dir: public/
+          server-dir: public_html/
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME_PROD }}
           password: ${{ secrets.FTP_PASSWORD_PROD }}
