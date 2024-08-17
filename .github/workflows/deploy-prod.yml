@@ -20,12 +20,10 @@ jobs:
 
       - name: Install dependencies
         run: |
-          cd app
           npm install --legacy-peer-deps  # Added option to handle peer dependency issues
 
       - name: Build
         run: |
-          cd app
           npm run build
 
       - name: Upload to FTP server
