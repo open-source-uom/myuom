@@ -26,15 +26,19 @@ jobs:
         run: |
           CI=false npm run build
 
-      - name: List Remote Directories
+      - name: Deploy to FTP server
+        id: deploy
         run: |
-          curl -u ${{ secrets.FTP_USERNAME_PROD }}:${{ secrets.FTP_PASSWORD_PROD }} ftp://${{ secrets.FTP_SERVER }} -l
+          set -e
+          # First attempt to deploy
+          curl -u ${{ secrets.FTP_USERNAME_PROD }}:${{ secrets.FTP_PASSWORD_PROD }} ftp://${{ secrets.FTP_SERVER }} -e "mirror --reverse --delete --verbose build/ /static" || true
 
-      - name: Upload to FTP server
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          local-dir: build/
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME_PROD }}
-          password: ${{ secrets.FTP_PASSWORD_PROD }}
-          port: ${{ secrets.FTP_PORT }}  # Add this line if supported
+          # Check for .ftp-deploy-sync-state.json
+          if curl -u ${{ secrets.FTP_USERNAME_PROD }}:${{ secrets.FTP_PASSWORD_PROD }} ftp://${{ secrets.FTP_SERVER }}/ -e "ls .ftp-deploy-sync-state.json" | grep -q '.ftp-deploy-sync-state.json'; then
+            echo "Sync state file found. Deleting..."
+            curl -u ${{ secrets.FTP_USERNAME_PROD }}:${{ secrets.FTP_PASSWORD_PROD }} ftp://${{ secrets.FTP_SERVER }}/ -e "delete .ftp-deploy-sync-state.json"
+          fi
+
+          # Retry deployment
+          curl -u ${{ secrets.FTP_USERNAME_PROD }}:${{ secrets.FTP_PASSWORD_PROD }} ftp://${{ secrets.FTP_SERVER }} -e "mirror --reverse --delete --verbose build/ /static" || exit 1
+
