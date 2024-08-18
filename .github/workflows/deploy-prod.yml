@@ -35,6 +35,6 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD_PROD }}
           port: ${{ secrets.FTP_PORT }}  
           exclude: |
-            **/docs**
-            **/nginx**
-            **/.github**
+            **/docs/**
+            **/nginx/**
+            **/.github/**
