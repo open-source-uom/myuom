@@ -79,7 +79,7 @@ function AboutSettingsPage() {
       <Text fontSize={{ sm: 17, md: 21, lg: 26, xl: 30 }}>
         @2024 OpenSourceUoM Team
         <br />
-        All rights reserved
+        All rights reserved.
         <br />
         <br />
       </Text>
