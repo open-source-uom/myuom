@@ -30,15 +30,26 @@ jobs:
         id: deploy
         run: |
           set -e
-          # First attempt to deploy
-          curl -u ${{ secrets.FTP_USERNAME_PROD }}:${{ secrets.FTP_PASSWORD_PROD }} ftp://${{ secrets.FTP_SERVER }} -e "mirror --reverse --delete --verbose build/ /static" || true
 
-          # Check for .ftp-deploy-sync-state.json
-          if curl -u ${{ secrets.FTP_USERNAME_PROD }}:${{ secrets.FTP_PASSWORD_PROD }} ftp://${{ secrets.FTP_SERVER }}/ -e "ls .ftp-deploy-sync-state.json" | grep -q '.ftp-deploy-sync-state.json'; then
-            echo "Sync state file found. Deleting..."
-            curl -u ${{ secrets.FTP_USERNAME_PROD }}:${{ secrets.FTP_PASSWORD_PROD }} ftp://${{ secrets.FTP_SERVER }}/ -e "delete .ftp-deploy-sync-state.json"
+          echo "First Attempt to Deploy..."
+          # Attempt to deploy and suppress verbose output
+          curl -s -u ${{ secrets.FTP_USERNAME_PROD }}:${{ secrets.FTP_PASSWORD_PROD }} ftp://${{ secrets.FTP_SERVER }} -e "mirror --reverse --delete --verbose build/ /static" || true
+
+          # Check for .ftp-deploy-sync-state.json presence
+          echo "Checking for .ftp-deploy-sync-state.json..."
+          if curl -s -u ${{ secrets.FTP_USERNAME_PROD }}:${{ secrets.FTP_PASSWORD_PROD }} ftp://${{ secrets.FTP_SERVER }}/ -e "ls .ftp-deploy-sync-state.json" | grep -q '.ftp-deploy-sync-state.json'; then
+            echo ".ftp-deploy-sync-state.json found. Deleting..."
+            curl -s -u ${{ secrets.FTP_USERNAME_PROD }}:${{ secrets.FTP_PASSWORD_PROD }} ftp://${{ secrets.FTP_SERVER }}/ -e "delete .ftp-deploy-sync-state.json"
+          else
+            echo ".ftp-deploy-sync-state.json not found. No need to delete."
           fi
 
           # Retry deployment
-          curl -u ${{ secrets.FTP_USERNAME_PROD }}:${{ secrets.FTP_PASSWORD_PROD }} ftp://${{ secrets.FTP_SERVER }} -e "mirror --reverse --delete --verbose build/ /static" || exit 1
+          echo "Retrying Deployment..."
+          curl -s -u ${{ secrets.FTP_USERNAME_PROD }}:${{ secrets.FTP_PASSWORD_PROD }} ftp://${{ secrets.FTP_SERVER }} -e "mirror --reverse --delete --verbose build/ /static" || {
+            echo "Deployment failed again. Exiting with error."
+            exit 1
+          }
+          
+          echo "Deployment successful."
 
