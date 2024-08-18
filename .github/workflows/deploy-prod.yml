@@ -3,69 +3,53 @@ name: Deploy to Production with FTP
 on:
   push:
     branches:
-      - test  # This workflow will trigger on pushes to the 'test' branch
+      - test
 
 jobs:
   build:
-    runs-on: ubuntu-latest  # Specifies the runner environment for the job
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3  # Checks out the repository code to the runner
+        uses: actions/checkout@v3
 
       - name: Set up Node.js
-        uses: actions/setup-node@v3  # Sets up a Node.js environment
+        uses: actions/setup-node@v3
         with:
-          node-version: '20'  # Specifies the Node.js version to use
+          node-version: '20'
 
       - name: Install dependencies
         run: |
-          npm install --legacy-peer-deps  # Installs project dependencies, ignoring peer dependency conflicts
+          npm install --legacy-peer-deps
 
       - name: Build
         run: |
-          CI=false npm run build  # Builds the project, setting CI to false to avoid certain build checks
+          CI=false npm run build
 
       - name: Deploy to FTP server
         id: deploy
         run: |
-          set -e  # Exit immediately if a command exits with a non-zero status
+          set -e
 
           echo "First Attempt to Deploy..."
-          # Use curl to deploy files to the FTP server, with the following options:
-          # -s: Silent mode to suppress output
-          # -u: User credentials for FTP authentication
-          # -e: Command to execute
-          # The 'mirror --reverse --delete' command uploads the 'build/' directory to '/static' on the FTP server
+          # Attempt to deploy and suppress verbose output
           curl -s -u ${{ secrets.FTP_USERNAME_PROD }}:${{ secrets.FTP_PASSWORD_PROD }} ftp://${{ secrets.FTP_SERVER }} -e "mirror --reverse --delete build/ /static" > /dev/null 2>&1 || true
 
           echo "Checking for .ftp-deploy-sync-state.json..."
-          # Check if the '.ftp-deploy-sync-state.json' file exists on the FTP server
-          # -s: Silent mode to suppress output
-          # -e: Command to execute
-          # 'ls .ftp-deploy-sync-state.json' lists the file if it exists
-          # The result is then piped to grep to check if the file is present.
+          # Check for the .ftp-deploy-sync-state.json file, suppress output
           if curl -s -u ${{ secrets.FTP_USERNAME_PROD }}:${{ secrets.FTP_PASSWORD_PROD }} ftp://${{ secrets.FTP_SERVER }}/ -e "ls .ftp-deploy-sync-state.json" | grep -q '.ftp-deploy-sync-state.json'; then
             echo ".ftp-deploy-sync-state.json found. Deleting..."
-            # If the file exists, delete it
-            # -s: Silent mode to suppress output
-            # -e: Command to execute
-            # The 'delete' command removes the file from the FTP server
+            # Delete the .ftp-deploy-sync-state.json file, suppress output
             curl -s -u ${{ secrets.FTP_USERNAME_PROD }}:${{ secrets.FTP_PASSWORD_PROD }} ftp://${{ secrets.FTP_SERVER }}/ -e "delete .ftp-deploy-sync-state.json" > /dev/null 2>&1
           else
             echo ".ftp-deploy-sync-state.json not found. No need to delete."
           fi
 
           echo "Retrying Deployment..."
-          # Retry the deployment after handling the sync state file
-          # This step is crucial if the initial deployment attempt fails
-          # -s: Silent mode to suppress output
-          # -e: Command to execute
-          # The 'mirror --reverse --delete' command is used again to ensure the latest files are deployed
+          # Retry deployment and suppress verbose output
           curl -s -u ${{ secrets.FTP_USERNAME_PROD }}:${{ secrets.FTP_PASSWORD_PROD }} ftp://${{ secrets.FTP_SERVER }} -e "mirror --reverse --delete build/ /static" > /dev/null 2>&1 || {
             echo "Deployment failed again. Exiting with error."
-            # Exit the script with an error status if the deployment fails again
             exit 1
           }
           
-          echo "Deployment successful."  # Indicate that the deployment was successful
+          echo "Deployment successful."
