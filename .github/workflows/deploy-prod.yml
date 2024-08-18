@@ -31,8 +31,7 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           local-dir: build/static/
-          server-dir: public_html/
-          server: my.uom.gr
+          server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME_PROD }}
           password: ${{ secrets.FTP_PASSWORD_PROD }}
           port: ${{ secrets.FTP_PORT }}  # Add this line if supported
