@@ -44,7 +44,7 @@ jobs:
           # -s: Silent mode to suppress output
           # -e: Command to execute
           # 'ls .ftp-deploy-sync-state.json' lists the file if it exists
-          # The result is then piped to grep to check if the file is present
+          # The result is then piped to grep to check if the file is present.
           if curl -s -u ${{ secrets.FTP_USERNAME_PROD }}:${{ secrets.FTP_PASSWORD_PROD }} ftp://${{ secrets.FTP_SERVER }}/ -e "ls .ftp-deploy-sync-state.json" | grep -q '.ftp-deploy-sync-state.json'; then
             echo ".ftp-deploy-sync-state.json found. Deleting..."
             # If the file exists, delete it
