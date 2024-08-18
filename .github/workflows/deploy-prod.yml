@@ -16,40 +16,21 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '20'
+          node-version: '20'  # Use the Node.js version you need
 
       - name: Install dependencies
         run: |
-          npm install --legacy-peer-deps
+          npm install --legacy-peer-deps  # Added option to handle peer dependency issues
 
       - name: Build
         run: |
           CI=false npm run build
 
-      - name: Deploy to FTP server
-        id: deploy
-        run: |
-          set -e
-
-          echo "First Attempt to Deploy..."
-          # Attempt to deploy and suppress verbose output
-          curl -s -u ${{ secrets.FTP_USERNAME_PROD }}:${{ secrets.FTP_PASSWORD_PROD }} ftp://${{ secrets.FTP_SERVER }} -e "mirror --reverse --delete build/ /static" > /dev/null 2>&1 || true
-
-          echo "Checking for .ftp-deploy-sync-state.json..."
-          # Check for the .ftp-deploy-sync-state.json file, suppress output
-          if curl -s -u ${{ secrets.FTP_USERNAME_PROD }}:${{ secrets.FTP_PASSWORD_PROD }} ftp://${{ secrets.FTP_SERVER }}/ -e "ls .ftp-deploy-sync-state.json" | grep -q '.ftp-deploy-sync-state.json'; then
-            echo ".ftp-deploy-sync-state.json found. Deleting..."
-            # Delete the .ftp-deploy-sync-state.json file, suppress output
-            curl -s -u ${{ secrets.FTP_USERNAME_PROD }}:${{ secrets.FTP_PASSWORD_PROD }} ftp://${{ secrets.FTP_SERVER }}/ -e "delete .ftp-deploy-sync-state.json" > /dev/null 2>&1
-          else
-            echo ".ftp-deploy-sync-state.json not found. No need to delete."
-          fi
-
-          echo "Retrying Deployment..."
-          # Retry deployment and suppress verbose output
-          curl -s -u ${{ secrets.FTP_USERNAME_PROD }}:${{ secrets.FTP_PASSWORD_PROD }} ftp://${{ secrets.FTP_SERVER }} -e "mirror --reverse --delete build/ /static" > /dev/null 2>&1 || {
-            echo "Deployment failed again. Exiting with error."
-            exit 1
-          }
-          
-          echo "Deployment successful."
+      - name: Upload to FTP server
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          local-dir: build/
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME_PROD }}
+          password: ${{ secrets.FTP_PASSWORD_PROD }}
+          port: ${{ secrets.FTP_PORT }}  # Add this line if supported
