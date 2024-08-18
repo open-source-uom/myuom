@@ -33,4 +33,8 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME_PROD }}
           password: ${{ secrets.FTP_PASSWORD_PROD }}
-          port: ${{ secrets.FTP_PORT }}  # Add this line if supported
+          port: ${{ secrets.FTP_PORT }}  
+          exclude: |
+            docs/
+            nginx/
+            .github/
