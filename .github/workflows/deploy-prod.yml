@@ -33,20 +33,21 @@ jobs:
 
           echo "First Attempt to Deploy..."
           # Attempt to deploy and suppress verbose output
-          curl -s -u ${{ secrets.FTP_USERNAME_PROD }}:${{ secrets.FTP_PASSWORD_PROD }} ftp://${{ secrets.FTP_SERVER }} -e "mirror --reverse --delete --verbose build/ /static" || true
+          curl -s -u ${{ secrets.FTP_USERNAME_PROD }}:${{ secrets.FTP_PASSWORD_PROD }} ftp://${{ secrets.FTP_SERVER }} -e "mirror --reverse --delete build/ /static" > /dev/null 2>&1 || true
 
-          # Check for .ftp-deploy-sync-state.json presence
           echo "Checking for .ftp-deploy-sync-state.json..."
+          # Check for the .ftp-deploy-sync-state.json file, suppress output
           if curl -s -u ${{ secrets.FTP_USERNAME_PROD }}:${{ secrets.FTP_PASSWORD_PROD }} ftp://${{ secrets.FTP_SERVER }}/ -e "ls .ftp-deploy-sync-state.json" | grep -q '.ftp-deploy-sync-state.json'; then
             echo ".ftp-deploy-sync-state.json found. Deleting..."
-            curl -s -u ${{ secrets.FTP_USERNAME_PROD }}:${{ secrets.FTP_PASSWORD_PROD }} ftp://${{ secrets.FTP_SERVER }}/ -e "delete .ftp-deploy-sync-state.json"
+            # Delete the .ftp-deploy-sync-state.json file, suppress output
+            curl -s -u ${{ secrets.FTP_USERNAME_PROD }}:${{ secrets.FTP_PASSWORD_PROD }} ftp://${{ secrets.FTP_SERVER }}/ -e "delete .ftp-deploy-sync-state.json" > /dev/null 2>&1
           else
             echo ".ftp-deploy-sync-state.json not found. No need to delete."
           fi
 
-          # Retry deployment
           echo "Retrying Deployment..."
-          curl -s -u ${{ secrets.FTP_USERNAME_PROD }}:${{ secrets.FTP_PASSWORD_PROD }} ftp://${{ secrets.FTP_SERVER }} -e "mirror --reverse --delete --verbose build/ /static" || {
+          # Retry deployment and suppress verbose output
+          curl -s -u ${{ secrets.FTP_USERNAME_PROD }}:${{ secrets.FTP_PASSWORD_PROD }} ftp://${{ secrets.FTP_SERVER }} -e "mirror --reverse --delete build/ /static" > /dev/null 2>&1 || {
             echo "Deployment failed again. Exiting with error."
             exit 1
           }
