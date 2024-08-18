@@ -30,7 +30,7 @@ jobs:
       - name: Upload to FTP server
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          local-dir: build/static/
+          local-dir: build/
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME_PROD }}
           password: ${{ secrets.FTP_PASSWORD_PROD }}
