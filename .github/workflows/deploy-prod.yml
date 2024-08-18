@@ -3,7 +3,7 @@ name: Deploy to Production with FTP
 on:
   push:
     branches:
-      - test
+      - main
 
 jobs:
   build:
