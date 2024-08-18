@@ -16,15 +16,19 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '20'  # Use the Node.js version you need
+          node-version: '20'
 
       - name: Install dependencies
         run: |
-          npm install --legacy-peer-deps  # Added option to handle peer dependency issues
+          npm install --legacy-peer-deps
 
       - name: Build
         run: |
           CI=false npm run build
+
+      - name: List Remote Directories
+        run: |
+          curl -u ${{ secrets.FTP_USERNAME_PROD }}:${{ secrets.FTP_PASSWORD_PROD }} ftp://${{ secrets.FTP_SERVER }} -l
 
       - name: Upload to FTP server
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
