@@ -139,7 +139,6 @@ function AboutSettingsPage() {
       </Text>
       <Accordion allowToggle mt="1rem">
         {contributors.map((data) => (
-            // Do not render if the name is "dependabot[bot]"
             data.name === "dependabot[bot]" ? null : <ContributorsCard data={data} key={data.name} />
         ))}
       </Accordion>
