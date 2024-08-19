@@ -110,7 +110,7 @@ import {
             <Flex direction="row" alignItems="start" fontFamily="Syne">
               <SocialIcon
                 url={data.github}
-                style={{ marginRight: "0.5rem" }}
+                style={{ marginRight: "0.5rem", marginBottom: "0.5rem" }}
               />
             </Flex>
           </AccordionPanel>
