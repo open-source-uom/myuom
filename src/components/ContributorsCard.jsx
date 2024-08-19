@@ -107,11 +107,11 @@ import {RiGitRepositoryCommitsLine} from "react-icons/ri";
               </Text>
 
                 <Stat>
-                    <StatNumber style={{display: "flex", flexDirection: "row", alignItems: "center", gap: "0.5rem"}}>
+                    <StatNumber fontSize={{ base: "xs", sm: "sm", md: "md" }} style={{display: "flex", flexDirection: "row", alignItems: "center", gap: "0.5rem"}}>
                         <RiGitRepositoryCommitsLine />
                         {data.contributions}
                     </StatNumber>
-                    <StatHelpText>Contributions</StatHelpText>
+                    <StatHelpText fontSize={{ base: "xs", sm: "sm", md: "md" }}>Commits</StatHelpText>
                 </Stat>
               <AccordionIcon />
             </AccordionButton>
