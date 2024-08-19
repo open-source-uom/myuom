@@ -45,10 +45,13 @@ import {
     Image,
     Text,
     useColorModeValue,
-    Flex, Stat, StatLabel, StatNumber, StatHelpText,
+    Flex, Stat, StatLabel, StatNumber, StatHelpText, Link,
 } from "@chakra-ui/react";
   import { SocialIcon } from "react-social-icons";
+import {FaGithub} from "react-icons/fa";
 import {RiGitRepositoryCommitsLine} from "react-icons/ri";
+
+import {ExternalLinkIcon} from "@chakra-ui/icons";
   
   export default function ContributorsCard ({ data }) {
     const SelectBorderColor = () => {
@@ -88,23 +91,26 @@ import {RiGitRepositoryCommitsLine} from "react-icons/ri";
               overflow="hidden"
               gap={3}
             >
-              <Image
-                src={data.img}
-                width="60px"
-                height="60px"
-                borderRadius="full"
-              />
-              <Text
-                w="100%"
-                display="flex"
-                direction="row"
-                alignItems="center"
-                justifyContent="start"
-                fontWeight="bold"
-                fontSize={{ sm: 14, md: 16, lg: 18 }}
-              >
-                {data.name}
-              </Text>
+                <Image
+                  src={data.img}
+                  width="60px"
+                  height="60px"
+                  borderRadius="full"
+                />
+                <Text
+                    w="100%"
+                    display="flex"
+                    direction="row"
+                    alignItems="center"
+                    justifyContent="start"
+                    fontWeight="bold"
+                    fontSize={{ sm: 14, md: 16, lg: 18 }}
+                >
+                    <Link href={data.github} isExternal>
+                        <ExternalLinkIcon mx='2px' as={FaGithub} /> {data.name}
+                    </Link>
+                </Text>
+
 
                 <Stat>
                     <StatNumber fontSize={{ base: "xs", sm: "sm", md: "md" }} style={{display: "flex", flexDirection: "row", alignItems: "center", gap: "0.5rem"}}>
@@ -113,17 +119,16 @@ import {RiGitRepositoryCommitsLine} from "react-icons/ri";
                     </StatNumber>
                     <StatHelpText fontSize={{ base: "xs", sm: "sm", md: "md" }}>Commits</StatHelpText>
                 </Stat>
-              <AccordionIcon />
             </AccordionButton>
           </Flex>
-          <AccordionPanel bgColor="transparent" pb={0}>
-            <Flex direction="row" alignItems="start" fontFamily="Syne">
-              <SocialIcon
-                url={data.github}
-                style={{ marginRight: "0.5rem", marginBottom: "0.5rem" }}
-              />
-            </Flex>
-          </AccordionPanel>
+          {/*<AccordionPanel bgColor="transparent" pb={0}>*/}
+          {/*  <Flex direction="row" alignItems="start" fontFamily="Syne">*/}
+          {/*    <SocialIcon*/}
+          {/*      url={data.github}*/}
+          {/*      style={{ marginRight: "0.5rem", marginBottom: "0.5rem" }}*/}
+          {/*    />*/}
+          {/*  </Flex>*/}
+          {/*</AccordionPanel>*/}
         </AccordionItem>
       </Box>
     );
