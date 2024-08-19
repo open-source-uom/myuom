@@ -45,9 +45,10 @@ import {
     Image,
     Text,
     useColorModeValue,
-    Flex,
-  } from "@chakra-ui/react";
+    Flex, Stat, StatLabel, StatNumber, StatHelpText,
+} from "@chakra-ui/react";
   import { SocialIcon } from "react-social-icons";
+import {RiGitRepositoryCommitsLine} from "react-icons/ri";
   
   export default function ContributorsCard ({ data }) {
     const SelectBorderColor = () => {
@@ -61,6 +62,7 @@ import {
     return (
       <Box
         w={{ sm: "95%", md: "75%", lg: "50%" }}
+        style={{ marginBottom: "1rem" }}
         borderRadius="20"
         overflow="hidden"
         border="2px"
@@ -103,6 +105,14 @@ import {
               >
                 {data.name}
               </Text>
+
+                <Stat>
+                    <StatNumber style={{display: "flex", flexDirection: "row", alignItems: "center", gap: "0.5rem"}}>
+                        <RiGitRepositoryCommitsLine />
+                        {data.contributions}
+                    </StatNumber>
+                    <StatHelpText>Contributions</StatHelpText>
+                </Stat>
               <AccordionIcon />
             </AccordionButton>
           </Flex>
