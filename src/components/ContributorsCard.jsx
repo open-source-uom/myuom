@@ -110,8 +110,6 @@ import {ExternalLinkIcon} from "@chakra-ui/icons";
                         <ExternalLinkIcon mx='2px' as={FaGithub} /> {data.name}
                     </Link>
                 </Text>
-
-
                 <Stat>
                     <StatNumber fontSize={{ base: "xs", sm: "sm", md: "md" }} style={{display: "flex", flexDirection: "row", alignItems: "center", gap: "0.5rem"}}>
                         <RiGitRepositoryCommitsLine />
@@ -121,14 +119,6 @@ import {ExternalLinkIcon} from "@chakra-ui/icons";
                 </Stat>
             </AccordionButton>
           </Flex>
-          {/*<AccordionPanel bgColor="transparent" pb={0}>*/}
-          {/*  <Flex direction="row" alignItems="start" fontFamily="Syne">*/}
-          {/*    <SocialIcon*/}
-          {/*      url={data.github}*/}
-          {/*      style={{ marginRight: "0.5rem", marginBottom: "0.5rem" }}*/}
-          {/*    />*/}
-          {/*  </Flex>*/}
-          {/*</AccordionPanel>*/}
         </AccordionItem>
       </Box>
     );
