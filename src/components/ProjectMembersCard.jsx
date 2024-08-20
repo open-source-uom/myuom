@@ -61,6 +61,7 @@ export default function ProjectMembersCard({ data }) {
   return (
     <Box
       w={{ sm: "95%", md: "75%", lg: "50%" }}
+      style={{ marginBottom: "1rem" }}
       borderRadius="20"
       overflow="hidden"
       border="2px"
