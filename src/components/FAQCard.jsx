@@ -47,34 +47,60 @@ import {
 } from "@chakra-ui/react";
 
 export default function FAQCard({ data }) {
+  // Call useColorModeValue at the top level
+  const borderColor = useColorModeValue("#0050e0", "#f3f3f3");
+  const textColor = useColorModeValue("white", "black");
+  const panelBgColor = useColorModeValue("white", "#2D3748");
+  const hoverBgColor = useColorModeValue("#276ff8", "#d0d0d0");
+
   return (
-    <Box mx={"0.5rem"} mb={"1rem"}>
-      <AccordionItem border="none">
-        <AccordionButton
-          _hover={{ bgColor: "transparent" }}
-          margin="0 auto"
-          width="80vw"
-          textAlign="center"
-          marginBottom="0.3em"
-          color={useColorModeValue("black", "white")}
-          border={"solid 2px"}
-          borderRadius="1rem"
-          borderColor={useColorModeValue("#0050e0", "#f3f3f3")}
-          bgColor="transparent"
-        >
-          <Box flex="1" textAlign="center">
-            <Text fontFamily="Syne" as={"span"}>
-              {data.question}
-            </Text>
-          </Box>
-          <AccordionIcon />
-        </AccordionButton>
-        <AccordionPanel>
-          <Box margin="0 auto" width="80vw" fontFamily="Syne" border="none">
-            {data.panel}
-          </Box>
-        </AccordionPanel>
-      </AccordionItem>
-    </Box>
+      <Box
+          mx={{ base: "0.5rem", md: "1rem" }}
+          mb="1rem"
+          borderRadius="lg"
+          overflow="hidden"
+          boxShadow="md"
+      >
+        <AccordionItem border="none">
+          {({ isExpanded }) => (
+              <>
+                <AccordionButton
+                    _hover={{ bgColor: hoverBgColor }}
+                    bgColor={borderColor}
+                    color={textColor}
+                    border={`0px solid ${borderColor}`}
+                    borderRadius="md"
+                    p={4}
+                    textAlign="left"
+                    _focus={{ boxShadow: "outline" }}
+                    _expanded={{ borderColor }}
+                >
+                  <Box flex="1" textAlign="left">
+                    <Text
+                        fontFamily="Syne"
+                        fontSize={{ base: "md", md: "lg" }}
+                        fontWeight="bold"
+                        noOfLines={isExpanded ? 1 : 2}
+                    >
+                      {data.question}
+                    </Text>
+                  </Box>
+                  <AccordionIcon />
+                </AccordionButton>
+                <AccordionPanel
+                    bgColor={panelBgColor}
+                    p={4}
+                    fontFamily="Syne"
+                    fontSize={{ base: "sm", md: "md" }}
+                    borderTop={`0px solid ${borderColor}`} // Border at the top of the panel
+                    textAlign={"left"}
+                >
+                  {data.panel}
+                </AccordionPanel>
+              </>
+          )}
+        </AccordionItem>
+      </Box>
   );
 }
+

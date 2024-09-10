@@ -79,7 +79,7 @@ function AboutSettingsPage() {
       <Text fontSize={{ sm: 17, md: 21, lg: 26, xl: 30 }}>
         @2024 OpenSourceUoM Team
         <br />
-        All rights reserved
+        All rights reserved.
         <br />
         <br />
       </Text>
@@ -139,7 +139,7 @@ function AboutSettingsPage() {
       </Text>
       <Accordion allowToggle mt="1rem">
         {contributors.map((data) => (
-          <ContributorsCard data={data} key={data.name} />
+            data.name === "dependabot[bot]" ? null : <ContributorsCard data={data} key={data.name} />
         ))}
       </Accordion>
     </Box>
