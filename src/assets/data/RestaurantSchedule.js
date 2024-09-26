@@ -24,22 +24,22 @@ export const RESTAURANT_HOURS = {
   for_dinner: {
     on_weekdays: {
       start: {
-        hours: 18,
-        minutes: 0,
+        hours: 17,
+        minutes: 30,
       },
       end: {
-        hours: 20,
-        minutes: 0,
+        hours: 19,
+        minutes: 30,
       },
     },
     on_weekend: {
       start: {
-        hours: 18,
-        minutes: 0,
+        hours: 17,
+        minutes: 30,
       },
       end: {
-        hours: 20,
-        minutes: 0,
+        hours: 19,
+        minutes: 30,
       },
     },
   },
@@ -71,12 +71,12 @@ export const schedule = {
   weekdays: {
     breakfast: { start: "08:00", end: "09:30" },
     lunch: { start: "12:30", end: "15:30" },
-    dinner: { start: "18:00", end: "20:00" },
+    dinner: { start: "17:30", end: "19:30" },
   },
   weekendsAndHolidays: {
     breakfast: { start: "08:00", end: "09:30" },
     lunch: { start: "13:00", end: "15:30" },
-    dinner: { start: "18:00", end: "20:00" },
+    dinner: { start: "17:30", end: "19:30" },
   },
 };
 
