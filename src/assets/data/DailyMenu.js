@@ -148,10 +148,10 @@ export default [
       i18n.t("soublakiXoirTzatzFeta"),
       i18n.t("filetoMpoutiKotSxaras"),
     ],
-    gevmaEidiko: [i18n.t("Lahanorizo")],
+    gevmaEidiko: [i18n.t("lahanorizo")],
     gevmaGarnitoura: [i18n.t("riziIpatatesTiganites")],
     gevmaSalata: [i18n.t("choiceOfSeasonalSalads")],
-    gevmaEpidorpio: [i18n.t("glyko")],
+    gevmaEpidorpio: [i18n.t("gliko")],
     deipnoKirios: [
       i18n.t("loukanikoXor"),
       i18n.t("loukanikoVrasto"),
