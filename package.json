@@ -19,14 +19,14 @@
     "react-img-mapper": "^1.5.1",
     "react-markdown": "^9.0.1",
     "react-router-dom": "^7.0.1",
-    "react-scripts": "5.0.1",
     "react-social-icons": "^6.18.0",
     "swiper": "^11.1.15",
     "web-vitals": "^4.2.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,md}\""
@@ -38,7 +38,6 @@
   "engines": {
     "node": ">=14.21.3"
   },
-  
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -58,6 +57,8 @@
     ]
   },
   "devDependencies": {
-    "prettier": "3.3.3"
+    "@vitejs/plugin-react": "^4.3.4",
+    "prettier": "3.3.3",
+    "vite": "^6.2.1"
   }
 }
