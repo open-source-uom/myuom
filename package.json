@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@chakra-ui/icons": "^2.2.4",
-    "@chakra-ui/react": "^3.0.0",
+    "@chakra-ui/react": "^2.2.4",
     "@emotion/react": "^11.13.5",
     "@emotion/styled": "^11.13.0",
     "@testing-library/jest-dom": "^6.6.3",
@@ -19,18 +19,17 @@
     "react-img-mapper": "^1.5.1",
     "react-markdown": "^9.0.1",
     "react-router-dom": "^7.0.1",
-    "react-scripts": "5.0.1",
     "react-social-icons": "^6.18.0",
     "swiper": "^11.1.15",
     "web-vitals": "^4.2.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,md}\""
   },
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "https://github.com/open-source-uom/myuom.git"
@@ -38,7 +37,6 @@
   "engines": {
     "node": ">=14.21.3"
   },
-  
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -58,6 +56,8 @@
     ]
   },
   "devDependencies": {
-    "prettier": "3.3.3"
+    "@vitejs/plugin-react": "^4.3.4",
+    "prettier": "3.3.3",
+    "vite": "^6.2.1"
   }
 }
