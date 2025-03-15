@@ -27,21 +27,25 @@ For some additional icons the libraries [react-icons](https://react-icons.github
 
 ### Run the code
 
-For now because it's create-react-app, the commands needed are:
+For now, since the project uses Create React App, the commands needed are:
 ```
 git clone https://github.com/Open-Source-UoM/MyUoM.git/
 ```
-
+cd MyUoM
 ```
 npm install
 ``` 
 
 (puts the necessary libraries if node.js and npm are present otherwise they will need to be downloaded separately,make sure you are inside the correct folder when running this command)
 
+Install additional dependencies (Chakra UI, Emotion, and Framer Motion):
+```
+npm install @chakra-ui/react@2.8.2 @chakra-ui/icons@2.1.1 @emotion/react@11.11.3 @emotion/styled@11.11.0 framer-motion@10.18.0
 ```
 npm start
 ``` 
-Runs the application on [localhost:3000](http://localhost:3000), when the change to Vite.js is made it will be `npm run dev`
+Runs the application on [localhost:3000](http://localhost:3000).
+When the project migrates to Vite.js, the command to start the application will change to: npm run dev
 
 ### Application Architecture
 
