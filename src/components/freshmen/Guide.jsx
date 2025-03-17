@@ -1,8 +1,8 @@
-import ReactMarkdown from "react-markdown";
 import { LeftArrowIcon } from "../../assets/icons";
 import { Flex, Divider, Heading, useColorModeValue } from "@chakra-ui/react";
 import i18n from "../../i18n";
 import { useScrollToTopOnLoad } from "../../hooks/useScrollToTopOnLoad";
+import MarkdownRenderer from "../MarkdownRenderer";
 
 const Guide = ({ guideContent, onClick }) => {
   useScrollToTopOnLoad();
@@ -52,7 +52,7 @@ const Guide = ({ guideContent, onClick }) => {
         w={{ sm: "100%", md: "90%", lg: "80%", "2xl": "60%", "3xl": "50%" }}
       >
         <div className="markdown-body">
-          <ReactMarkdown linkTarget="_blank">{guideContent}</ReactMarkdown>
+          <MarkdownRenderer content={guideContent}/>
         </div>
       </Flex>
     </Flex>
