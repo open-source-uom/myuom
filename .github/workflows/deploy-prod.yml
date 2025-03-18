@@ -11,12 +11,14 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: '20'  # Use the Node.js version you need
+          cache: 'npm'
+          cache-dependency-path: 'package-lock.json'
 
       - name: Install dependencies
         run: |
@@ -29,7 +31,7 @@ jobs:
       - name: Upload to FTP server
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          local-dir: build/
+          local-dir: dist/
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME_PROD }}
           password: ${{ secrets.FTP_PASSWORD_PROD }}
