@@ -10,8 +10,11 @@ export const useGuidesMdData = () => {
     const firstYearGuidesTranslated = firstYearGuidesMdData[i18n.language];
     //markdown data for some reason are handled as fetchable links that explains
     //the code below, to see for yourself, import an md file and console.log it
+
+    
     const fetchGuideByPath = (guidePath) => {
-        console.log(guidePath)
+        const absolutePath= `${window.location.origin}${guidePath}`
+        console.log("Fetching Markdown from:", absolutePath);
         fetch(guidePath)
             .then((res) => res.text())
             .then((md) => {
