@@ -137,7 +137,13 @@ export default function MenuBox({ category }) {
           backgroundColor={useColorModeValue("#0050e0", "transparent")}
           className={`menu-box span-${span}`}
           rounded="0.75rem"
-          p={{ sm: 2, md: 4, lg: 6 }}>
+          p={{ sm: 2, md: 4, lg: 6 }}
+          whileHover={{ 
+            scale: 1.05, 
+            boxShadow: "0px 0px 8px rgba(0, 0, 0, 0.3)",
+            opacity:0.6,
+  
+          }}>
         <Flex
             w="100%"
             flexDirection="row"
