@@ -19,6 +19,7 @@ i18next.init({
             choiceOfSeasonalSalads: "Επιλογή από σαλάτες εποχής",
             gratedCheese: "Τυρί τριμμένο",
             rizoto:"Ριζότο",
+            burger: "Μπέργκερ με μπιφτέκι κοτόπουλο και σως",
             vegetarian: "Χορτοφαγικό (ιατρικοί λόγοι)",
             porkBitesWithPeppersAndMushrooms: "Χοιρινές μπουκιές με πιπεριές & μανιτάρια,",
             porkSteakWithMustard: "Χοιρινή μπριζόλα με σως μουστάρδας,",
@@ -47,8 +48,8 @@ i18next.init({
             kolokithokeftedes:"Κολοκυθοκεφτέδες",
             gliko:"Γλυκό",
             makaroniaKarbonara:"Πέννες με κρέμα γάλακτος & μπέικον,",
-            makaroniaMeSaltsa:"Πέννες με σάλτσα μπολονέζ,",
-            makaroniaTrikolore:" Πέννες τρικολόρε με σάλτσα λαχανικών με κοτόπουλο",
+            makaroniaMeKima:"Πέννες με σάλτσα μπολονέζ,",
+            makaroniaMeSaltsa:"Πέννες με κόκκινη σάλτσα,",
             makaronosalata:"Μακαρονοσαλάτα", 
             pastitsio:"Παστίτσιο,",
             mpiftekiBeefMeKaseri:"Μπιφτέκι μόσχου με κασέρι,",
@@ -86,6 +87,7 @@ i18next.init({
             choiceOfSeasonalSalads: "Selection of seasonal salads",
             gratedCheese: "Grated cheese",
             rizoto: "Risotto",
+            burger:"Burger with chicken patty and sauce",
             vegetarian: "Vegetarian (for medical reasons)",
             porkBitesWithPeppersAndMushrooms: "Pork bites with peppers and mushrooms,",
             porkSteakWithMustard: "Pork steak with mustard,",
@@ -114,8 +116,8 @@ i18next.init({
             kolokithokeftedes:"Pumpkin meatballs",
             gliko:"Dessert",
             makaroniaKarbonara:"Penne pasta with cream and bacon,",
-            makaroniaMeSaltsa:"Penne pasta with Bolognese sauce,",
-            makaroniaTrikolore:"Tricolore pasta with vegetable sauce and chicken",
+            makaroniaMeKima:"Penne pasta with Bolognese sauce,",
+            makaroniaMeSaltsa:"Penne pasta with tomato sauce",
             makaronosalata:"Pasta based salad",
             pastitsio:"Pastitsio,",
             mpiftekiBeefMeKaseri:"Beef burger with cheese,",
@@ -126,7 +128,7 @@ i18next.init({
             frenchFries:"French fries with rice",
             arakas:"Peas with potatoes and carrots,",
             patatesGiahni:"Yahni potatoes,",
-            
+            pitsaMeKotopoulo: "Pizza with chicken & gouda cheese",
       }
     }
   }
