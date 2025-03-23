@@ -36,7 +36,8 @@
 
 */
 
-import { Flex, Text } from "@chakra-ui/react";
+import { Flex, Text, IconButton } from "@chakra-ui/react";
+import { ArrowBackIcon, ArrowForwardIcon } from "@chakra-ui/icons";
 import i18n from "../../i18n";
 import MenuTable from "./MenuTable";
 import { useTodaysMenu } from "../../hooks/useTodaysMenu";
@@ -133,6 +134,21 @@ export default function TodaysMenu() {
           )
         )}
       </swiper-container>
+      <Flex justify="center" mt={4}>
+        <IconButton
+          icon={<ArrowBackIcon />}
+          aria-label="Previous Slide"
+          onClick={() => swiperRef.current.swiper.slidePrev()}
+          mr={2}
+          variant="outline"
+        />
+        <IconButton
+          icon={<ArrowForwardIcon />}
+          aria-label="Next Slide"
+          onClick={() => swiperRef.current.swiper.slideNext()}
+          variant="outline"
+        />
+      </Flex>
     </>
   );
 }
