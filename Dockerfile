@@ -24,4 +24,4 @@ COPY .. .
 RUN npm run build
 
 # Copy build to shared volume
-RUN cp -r build /usr/src/app
+RUN mkdir -p /usr/src/app && cp -r dist/* /usr/src/app/
