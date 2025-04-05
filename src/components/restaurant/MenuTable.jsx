@@ -1,15 +1,39 @@
+import { useState } from "react";
 import {
   Flex,
   ListItem,
   UnorderedList,
   useColorModeValue,
+  Button,
 } from "@chakra-ui/react";
 import i18n from "../../i18n";
 
-function MenuTable({ title, foodMenu, isActive }) {
+function MenuTable({ title, fullMenu, isActive }) {
+console.log(isActive);
+
+  const [activeMeal, setActiveMeal] = useState("Lunch");
+
+  const[foodMenu,setFoodMenu]=useState(fullMenu.gevma.foodMenu);
+  
   return (
     <Flex flexDir="column" alignItems="center">
-      <Flex
+    <Flex mb={4} gap={4}>
+        <Button
+          onClick={() => {setFoodMenu(fullMenu.gevma.foodMenu);setActiveMeal("Lunch")}}
+          colorScheme={activeMeal === "Lunch" ? "blue" : "gray"}
+          variant={activeMeal === "Lunch" ? "solid" : "outline"}
+        >
+          Lunch
+        </Button>
+        <Button
+          onClick={() =>{ setFoodMenu(fullMenu.deipno.foodMenu);setActiveMeal("Dinner")}}
+          colorScheme={activeMeal === "Dinner" ? "blue" : "gray"}
+          variant={activeMeal === "Dinner" ? "solid" : "outline"}
+        >
+          Dinner
+        </Button>
+      </Flex>
+      { <><Flex
         flexDir="column"
         borderRadius="16px"
         borderColor={isActive ? "#0050E0" : "black"}
@@ -18,7 +42,7 @@ function MenuTable({ title, foodMenu, isActive }) {
         overflow="hidden"
         mx={1}
         fontFamily="Syne"
-        w={{ sm: "98%", md: "98%", lg: "94%", "2xl": "78%", "3xl": "64%" }}
+        w="lg"
       >
         {Object.keys(foodMenu).map((key, index) => (
           <Flex
@@ -67,8 +91,8 @@ function MenuTable({ title, foodMenu, isActive }) {
         fontWeight="semibold"
         fontSize="22px"
       >
-        {i18n.t(title)}
-      </Flex>
+        {i18n.t(activeMeal)}
+      </Flex></>}
     </Flex>
   );
 }
