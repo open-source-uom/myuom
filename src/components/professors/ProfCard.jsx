@@ -142,7 +142,7 @@ export default function ProfCard({ prof }) {
               _hover={{ cursor: "pointer" }}
               as="span"
             >
-              <u>{t("ktirio")}</u>:&nbsp;
+              {t("ktirio")}:&nbsp;
               <Text fontWeight="normal" as="span">
                 {prof.building}
               </Text>
