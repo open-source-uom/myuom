@@ -15,10 +15,12 @@ export default [
     gevmaSalata: [i18n.t("choiceOfSeasonalSalads")],
     gevmaEpidorpio: [i18n.t("choiceOfSeasonalFruits")],
     deipnoKirios: [
-      i18n.t("fasoliaLadera"),
-      i18n.t("mpriam"),
-      i18n.t("lahanorizo"),
+      i18n.t("cheesepie"),
+      i18n.t("spinachpie"),
+      i18n.t("mushroompieWithFyllo"),
+      i18n.t("scrammbledEggs"),
     ],
+
     deipnoEidiko: [i18n.t("vegetarian")],
     deipnoGarnitoura: [i18n.t("gratedCheese")],
     deipnoSalata: [i18n.t("choiceOfSeasonalSalads")],
@@ -38,11 +40,12 @@ export default [
     gevmaSalata: [i18n.t("choiceOfSeasonalSalads")],
     gevmaEpidorpio: [i18n.t("choiceOfSeasonalFruits")],
     deipnoKirios: [
-      i18n.t("cheesepie"),
-      i18n.t("spinachpie"),
-      i18n.t("mushroompieWithFyllo"),
-      i18n.t("scrammbledEggs"),
+      i18n.t("fasoliaLadera"),
+      i18n.t("arakas"),
+      i18n.t("patatesGiahni"),
+      i18n.t("lahanorizo"),
     ],
+    
     deipnoEidiko: [i18n.t("vegetarian")],
     deipnoGarnitoura: [i18n.t("fetaCheese")],
     deipnoSalata: [i18n.t("choiceOfSeasonalSalads")],
@@ -62,8 +65,8 @@ export default [
     gevmaEpidorpio: [i18n.t("gliko")],
     deipnoKirios: [
       i18n.t("makaroniaKarbonara"),
+      i18n.t("makaroniaMeKima"),
       i18n.t("makaroniaMeSaltsa"),
-      i18n.t("makaroniaTrikolore"),
     ],
     deipnoEidiko: [i18n.t("vegetarian")],
     deipnoGarnitoura: [i18n.t("makaronosalata")],
@@ -96,10 +99,11 @@ export default [
   {
     day: i18n.t("friday"),
     gevmaKirios: [
+      i18n.t("soutzoukakiaNtomata"),
+      i18n.t("pastitsio"),
       i18n.t("gigantes"),
       i18n.t("galeos"),
       i18n.t("soupies"),
-      i18n.t("makaroniaKarbonara"),
     ],
     gevmaEidiko: [i18n.t("kritharotoThalassinon")],
     gevmaGarnitoura: [i18n.t("riziKaiPatatesFournou")],
@@ -143,6 +147,7 @@ export default [
   {
     day: i18n.t("sunday"),
     gevmaKirios: [
+      i18n.t("burger"),
       i18n.t("xoiriniPansetaSxaras"),
       i18n.t("mprizolesXoirLemonates"),
       i18n.t("soublakiXoirTzatzFeta"),

@@ -61,11 +61,11 @@ function Error404() {
             onClick={()=>{navigate('/')}} 
             style={{ 
                 backgroundColor: "",
-                color: "black", 
+                color: "", 
                 transition: "color 0.3s" 
             }}
             onMouseOver={(e) => e.target.style.color = 'blue'} 
-            onMouseOut={(e) => e.target.style.color = 'black'} 
+            onMouseOut={(e) => e.target.style.color = ''} 
         >
             {i18n.t("go_to_homepage")}   
         </button>
