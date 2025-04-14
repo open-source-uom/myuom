@@ -72,7 +72,7 @@ export const schedulesData = new Map([
     DEPARTMENT_CODES.INFORMATICS,
     {
       semester:
-        "https://www.uom.gr/dai/programmata-didaskalias",
+        "https://www.uom.gr/dai/programma-didaskalias-13140",
       exam: " https://www.uom.gr/dai/programma-eksetaseon",
     },
   ],

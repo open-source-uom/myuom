@@ -39,11 +39,13 @@
 import Menu from "../components/restaurant/RestaurantMenu";
 import { Accordion, Box, Text, Flex } from "@chakra-ui/react";
 import Schedule from "../components/restaurant/Schedule";
+import ClosedDueToHoliday from "../components/restaurant/ClosedDueToHoliday";
 import TodaysMenu from "../components/restaurant/TodaysRestaurantMenu";
 import i18n from "../../src/i18n";
 import { useWeeklyRestaurantMenu, useScrollToTopOnLoad } from "../hooks";
 export default function RestauranPage() {
   const weeklyRestaurantMenu = useWeeklyRestaurantMenu();
+  const { isClosedforBreak, reason,nextOpenDate } = ClosedDueToHoliday();
   useScrollToTopOnLoad();
 
   return (
@@ -51,9 +53,11 @@ export default function RestauranPage() {
       <Box w={{ sm: "90%", md: "70%", lg: "40%", "2xl": "30%", "3xl": "25%" }}>
         <Schedule />
       </Box>
+      {!isClosedforBreak &&(
       <Box w="100%">
         <TodaysMenu />
       </Box>
+      )}
       <Box
         textAlign={"center"}
         w={{ sm: "90%", md: "90%", lg: "80%", "2xl": "60%", "3xl": "50%" }}
