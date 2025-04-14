@@ -9,31 +9,50 @@ import {
 import i18n from "../../i18n";
 
 function MenuTable({ title, fullMenu, isActive }) {
-console.log(isActive);
 
   const [activeMeal, setActiveMeal] = useState("Lunch");
 
   const[foodMenu,setFoodMenu]=useState(fullMenu.gevma.foodMenu);
   
   return (
-    <Flex flexDir="column" alignItems="center">
+    <Flex flexDir="column" alignItems="center"  w={{sm: "98%", md: "98%", lg: "94%", "2xl": "78%", "3xl": "64%"}}>
     <Flex mb={4} gap={4}>
         <Button
-          onClick={() => {setFoodMenu(fullMenu.gevma.foodMenu);setActiveMeal("Lunch")}}
-          colorScheme={activeMeal === "Lunch" ? "blue" : "gray"}
-          variant={activeMeal === "Lunch" ? "solid" : "outline"}
+          onClick={() => {
+            setFoodMenu(fullMenu.gevma.foodMenu);
+            setActiveMeal("Lunch");
+          }}
+          bg={activeMeal === "Lunch" ? "#0050E0" : "transparent"}
+          color={activeMeal === "Lunch" ? "white" : "inherit"}
+          border="2px solid"
+          borderColor={activeMeal === "Lunch" ? "#0050E0" : "gray.300"}
+          _hover={{
+            bg: activeMeal === "Lunch" ? "#003bb8" : "gray.100",
+          }}
+          transition="all 0.3s ease-in-out"
         >
-          Lunch
-        </Button>
-        <Button
-          onClick={() =>{ setFoodMenu(fullMenu.deipno.foodMenu);setActiveMeal("Dinner")}}
-          colorScheme={activeMeal === "Dinner" ? "blue" : "gray"}
-          variant={activeMeal === "Dinner" ? "solid" : "outline"}
+        Lunch
+      </Button>
+
+      <Button
+          onClick={() => {
+            setFoodMenu(fullMenu.deipno.foodMenu);
+            setActiveMeal("Dinner");
+          }}
+          bg={activeMeal === "Dinner" ? "#0050E0" : "transparent"}
+          color={activeMeal === "Dinner" ? "white" : "inherit"}
+          border="2px solid"
+          borderColor={activeMeal === "Dinner" ? "#0050E0" : "gray.300"}
+          _hover={{
+            bg: activeMeal === "Dinner" ? "#003bb8" : "gray.100",
+          }}
+          transition="all 0.3s ease-in-out"
         >
-          Dinner
-        </Button>
+        Dinner
+      </Button>
+
       </Flex>
-      { <><Flex
+      <Flex
         flexDir="column"
         borderRadius="16px"
         borderColor={isActive ? "#0050E0" : "black"}
@@ -42,7 +61,7 @@ console.log(isActive);
         overflow="hidden"
         mx={1}
         fontFamily="Syne"
-        w="lg"
+        w={{sm: "98%", md: "98%", lg: "94%", "2xl": "78%", "3xl": "64%"}}
       >
         {Object.keys(foodMenu).map((key, index) => (
           <Flex
@@ -92,7 +111,7 @@ console.log(isActive);
         fontSize="22px"
       >
         {i18n.t(activeMeal)}
-      </Flex></>}
+      </Flex>
     </Flex>
   );
 }

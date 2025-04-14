@@ -88,15 +88,7 @@ export default function TodaysMenu() {
       },
     };
 
-    // Object.assign(swiperRef.current, params);
-
-    // swiperRef.current.initialize();
   }, []);
-
-  useEffect(() => {
-    setActiveIndex(updateActiveIndex());
-    // swiperRef.current.swiper.slideTo(activeIndex);
-  }, [isLunch, isTomorrow]);
 
   return (
     <>
@@ -117,12 +109,17 @@ export default function TodaysMenu() {
           </Text>
         </Flex>
       </Flex>
-      <Flex w="100%" justifyContent="center">
+      <Flex w="100%" justifyContent="center" >
+      <Flex
+    w={{sm: "98%", md: "98%", lg: "94%", "2xl": "78%", "3xl": "64%"}}
+    justifyContent="center"
+  >
   <MenuTable
     title={isTomorrow ? i18n.t("avriano") : i18n.t("simerino")}
     fullMenu={aggregatedMenu[isTomorrow ? "tomorrow" : "today"]}
     isActive={(isTomorrow ? i18n.t("avriano") : i18n.t("simerino"))==="Today's"}
   />
+  </Flex>
 </Flex>
     </>
   );
