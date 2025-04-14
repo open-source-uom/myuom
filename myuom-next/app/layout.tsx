@@ -1,6 +1,6 @@
 import type React from 'react'
 import type { Metadata } from 'next'
-import { Poppins, Roboto } from 'next/font/google'
+import { Poppins, Lexend } from 'next/font/google'
 import './globals.css'
 import { ThemeProvider } from '@/providers/theme-providers'
 
@@ -10,10 +10,10 @@ const poppins = Poppins({
     variable: '--font-poppins',
 })
 
-const roboto = Roboto({
+const lexend = Lexend({
     subsets: ['latin'],
     weight: ['400', '500', '700'],
-    variable: '--font-roboto',
+    variable: '--font-lexend',
 })
 
 export const metadata: Metadata = {
@@ -29,7 +29,7 @@ export default function RootLayout({
     return (
         <html lang="en" suppressHydrationWarning>
             <body
-                className={`${poppins.variable} ${roboto.variable} font-sans`}
+                className={`${poppins.variable} ${lexend.variable} font-sans`}
             >
                 <ThemeProvider
                     attribute="class"

@@ -1,35 +1,48 @@
-version: '3.8'
 services:
-    nodeserver:
-        restart: no
-        container_name: nodeserver
+    prodserver:
+        container_name: prodserver
         build:
             context: .
-        # ports:
-        #     - "3000:3000"
-        # enable this only on development
-        volumes:
-            - app-volume:/usr/src/app
+        ports:
+            - '3000:3000'
+        environment:
+            - NODE_ENV=production
+        command: >
+            sh -c "echo '✅ Production instance running on http://localhost:3000' &&
+                   pnpm run start"
         networks:
             - app-network
-    nginx:
-        restart: unless-stopped
+
+    devserver:
+        container_name: devserver
+        build:
+            context: .
+        ports:
+            - '3001:3000'
+        environment:
+            - NODE_ENV=development
+        command: >
+            sh -c "echo '🛠 Development instance running on http://localhost:3001' &&
+                   pnpm run dev"
+        volumes:
+            - .:/app
+            - /app/node_modules
+        networks:
+            - app-network
+
+    webserver:
         container_name: webserver
-        depends_on:
-            - nodeserver
         build:
             context: ./nginx
+        depends_on:
+            - prodserver
         ports:
-            - '80:80'
+            - '8080:80'
+        command: sh -c "echo '🌐 Hosted Nginx instance is running on http://localhost:8080' && nginx -g 'daemon off;'"
         networks:
             - app-network
-        volumes:
-            - app-volume:/usr/src/app
+        restart: unless-stopped
 
 networks:
     app-network:
         driver: bridge
-
-volumes:
-    app-volume:
-        driver: local

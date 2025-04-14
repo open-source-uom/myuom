@@ -1,27 +1,32 @@
-#build the image using docker buildx build . -t myuom
-#Run the image using docker run -p 3000:3000 myuom 
-
 # Use an official Node runtime as the base image
 FROM node:20-alpine
 
-# Set the working directory in the container to /app
+# Set the working directory
 WORKDIR /app
 
-# Install dependencies first to leverage Docker cache
-COPY package.json package-lock.json ./
+# Install pnpm
+RUN npm install -g pnpm
 
-# Using cache mount for npm install, so unchanged packages aren’t downloaded every time
-RUN --mount=type=cache,target=/root/.npm \
-    npm install
+# Copy only the dependency files first
+COPY package.json pnpm-lock.yaml ./
+
+# Install dependencies
+RUN pnpm install
 
 # Update browserslist-db
 RUN npx update-browserslist-db@latest
 
-# Bundle app source inside Docker image it excludes files in .dockerignore
-COPY .. .
+# Copy the rest of the application source code
+COPY . .
 
 # Build the app
-RUN npm run build
+RUN pnpm run build
 
-# Copy build to shared volume
-RUN cp -r build /usr/src/app
+# Optionally copy build elsewhere (if needed)
+# RUN cp -r build /usr/src/app
+
+# Expose port (make sure this matches your Next.js config)
+EXPOSE 3000
+
+# Start the app
+CMD ["pnpm", "start"]
