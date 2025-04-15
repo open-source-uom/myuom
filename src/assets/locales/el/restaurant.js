@@ -1,6 +1,12 @@
 export default {
   open: "Ανοιχτά",
   closed: "Κλειστά",
+  "reason": {
+    "closedForHoliday": "Κλειστό λόγω αργίας",
+    "easterBreak": "Κλειστά λόγω Πάσχα",
+    "christmasBreak": "Κλειστά λόγω Χριστουγέννων",
+    "summerBreak": "Κλειστά λόγω Καλοκαιριού"
+  },
   opensAt: "Ανοίγει στις",
   closesAt: "Κλείνει στις",
   breakfast: "Πρωινό",
@@ -36,6 +42,7 @@ export default {
   choiceOfSeasonalSalads: "Επιλογή από σαλάτες εποχής",
   gratedCheese: "Τυρί τριμμένο",
   rizoto: "Ριζότο",
+  burger: "Μπέργκερ με μπιφτέκι κοτόπουλο και σως",
   vegetarian: "Χορτοφαγικό (ιατρικοί λόγοι)",
   porkBitesWithPeppersAndMushrooms: "Χοιρινές μπουκιές με πιπεριές & μανιτάρια",
   porkSteakWithMustard: "Χοιρινή μπριζόλα με σως μουστάρδας",
@@ -65,8 +72,8 @@ export default {
   kolokithokeftedes: "Κολοκυθοκεφτέδες",
   gliko: "Γλυκό",
   makaroniaKarbonara: "Πέννες με κρέμα γάλακτος & μπέικον",
-  makaroniaMeSaltsa: "Πέννες με σάλτσα μπολονέζ",
-  makaroniaTrikolore: "Πέννες τρικολόρε με σάλτσα λαχανικών με κοτόπουλο",
+  makaroniaMeKima:"Πέννες με σάλτσα μπολονέζ",
+  makaroniaMeSaltsa:"Πέννες με κόκκινη σάλτσα",
   makaronosalata: "Μακαρονοσαλάτα",
   pastitsio: "Παστίτσιο",
   mpiftekiBeefMeKaseri: "Μπιφτέκι μόσχου με κασέρι",

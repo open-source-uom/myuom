@@ -36,7 +36,8 @@
 
 */
 
-import { Flex, Text } from "@chakra-ui/react";
+import { Flex, Text, IconButton } from "@chakra-ui/react";
+import { ArrowBackIcon, ArrowForwardIcon } from "@chakra-ui/icons";
 import i18n from "../../i18n";
 import MenuTable from "./MenuTable";
 import { useTodaysMenu } from "../../hooks/useTodaysMenu";
@@ -109,6 +110,7 @@ export default function TodaysMenu() {
           </Text>
         </Flex>
       </Flex>
+
       <Flex w="100%" justifyContent="center" >
       <Flex
     w={{sm: "98%", md: "98%", lg: "94%", "2xl": "78%", "3xl": "64%"}}
