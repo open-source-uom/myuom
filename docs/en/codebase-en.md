@@ -27,21 +27,20 @@ For some additional icons the libraries [react-icons](https://react-icons.github
 
 ### Run the code
 
-For now because it's create-react-app, the commands needed are:
+For now, since the project uses Create React App, the commands needed are:
 ```
 git clone https://github.com/Open-Source-UoM/MyUoM.git/
 ```
-
+cd MyUoM
 ```
 npm install
 ``` 
 
-(puts the necessary libraries if node.js and npm are present otherwise they will need to be downloaded separately,make sure you are inside the correct folder when running this command)
-
+(Installs dependencies. Requires Node.js and npm. Run inside the project folder.)
 ```
-npm start
+npm run dev
 ``` 
-Runs the application on [localhost:3000](http://localhost:3000), when the change to Vite.js is made it will be `npm run dev`
+Runs the application on [localhost:3000](http://localhost:3000).
 
 ### Application Architecture
 
