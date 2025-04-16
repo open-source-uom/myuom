@@ -42,7 +42,7 @@ import MenuBox from "../components/MenuBox";
 import { Flex, Grid, Heading } from "@chakra-ui/react";
 
 import { motion } from "framer-motion";
-import { useScrollToTopOnLoad } from "../hooks/useScrollToTopOnLoad";
+import { useScrollToTopOnLoad } from "@/hooks/useScrollToTopOnLoad";
 
 const stagger = {
   inView: {
