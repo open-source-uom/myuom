@@ -89,15 +89,7 @@ export default function TodaysMenu() {
       },
     };
 
-    Object.assign(swiperRef.current, params);
-
-    swiperRef.current.initialize();
   }, []);
-
-  useEffect(() => {
-    setActiveIndex(updateActiveIndex());
-    swiperRef.current.swiper.slideTo(activeIndex);
-  }, [isLunch, isTomorrow]);
 
   return (
     <>
@@ -118,37 +110,19 @@ export default function TodaysMenu() {
           </Text>
         </Flex>
       </Flex>
-      <swiper-container init="false" ref={swiperRef}>
-        {Object.keys(aggregatedMenu[isTomorrow ? "tomorrow" : "today"]).map(
-          (key, index) => (
-            <swiper-slide key={key}>
-              <MenuTable
-                title={key}
-                foodMenu={
-                  aggregatedMenu[isTomorrow ? "tomorrow" : "today"][key]
-                    .foodMenu
-                }
-                isActive={activeIndex === index && !isTomorrow}
-              />
-            </swiper-slide>
-          )
-        )}
-      </swiper-container>
-      <Flex justify="center" mt={4}>
-        <IconButton
-          icon={<ArrowBackIcon />}
-          aria-label="Previous Slide"
-          onClick={() => swiperRef.current.swiper.slidePrev()}
-          mr={2}
-          variant="outline"
-        />
-        <IconButton
-          icon={<ArrowForwardIcon />}
-          aria-label="Next Slide"
-          onClick={() => swiperRef.current.swiper.slideNext()}
-          variant="outline"
-        />
-      </Flex>
+
+      <Flex w="100%" justifyContent="center" >
+      <Flex
+    w={{sm: "98%", md: "98%", lg: "94%", "2xl": "78%", "3xl": "64%"}}
+    justifyContent="center"
+  >
+  <MenuTable
+    title={isTomorrow ? i18n.t("avriano") : i18n.t("simerino")}
+    fullMenu={aggregatedMenu[isTomorrow ? "tomorrow" : "today"]}
+    isActive={(isTomorrow ? i18n.t("avriano") : i18n.t("simerino"))==="Today's"}
+  />
+  </Flex>
+</Flex>
     </>
   );
 }
