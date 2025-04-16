@@ -37,7 +37,7 @@
 */
 
 import { createContext } from "react";
-import { useLocalStorage } from "../hooks/useLocalStorage";
+import { useLocalStorage } from "@/hooks/useLocalStorage";
 
 export const DepartmentContext = createContext({
   departmentCode: "",

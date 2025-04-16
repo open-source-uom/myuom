@@ -36,42 +36,43 @@
 
 */
 
-import { Box, Heading } from "@chakra-ui/react";
-import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import { useDepName, useScheduleData } from "../hooks";
+import { Box, Heading } from '@chakra-ui/react'
+import { useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { useDepName } from '@/hooks/useDepName'
+import { useScheduleData } from '@/hooks/useScheduleData'
 
 export default function SchedulePage({ examsProp, semesterProp }) {
-  const { depCode } = useDepName();
-  const navigate = useNavigate();
-  const scheduleData = useScheduleData(depCode);
-  console.log("scheduleData", scheduleData, "depName: ", depCode);
-  const redirectTo = (link) => {
-    window.open(link);
-    navigate("/");
-  };
-
-  useEffect(() => {
-    if (examsProp) {
-      redirectTo(scheduleData.exam);
+    const { depCode } = useDepName()
+    const navigate = useNavigate()
+    const scheduleData = useScheduleData(depCode)
+    console.log('scheduleData', scheduleData, 'depName: ', depCode)
+    const redirectTo = (link) => {
+        window.open(link)
+        navigate('/')
     }
 
-    if (semesterProp) {
-      redirectTo(scheduleData.semester);
-    }
-  }, [depCode]);
+    useEffect(() => {
+        if (examsProp) {
+            redirectTo(scheduleData.exam)
+        }
 
-  return (
-    <Box>
-      {scheduleData ? (
-        <Heading textAlign="center" marginTop="50px">
-          Γίνεται ανακατεύθυνση...
-        </Heading>
-      ) : (
-        <Heading textAlign="center" marginTop="50px">
-          Παρακαλώ επιλέξτε τμήμα από τις ρυθμίσεις.
-        </Heading>
-      )}
-    </Box>
-  );
+        if (semesterProp) {
+            redirectTo(scheduleData.semester)
+        }
+    }, [depCode])
+
+    return (
+        <Box>
+            {scheduleData ? (
+                <Heading textAlign="center" marginTop="50px">
+                    Γίνεται ανακατεύθυνση...
+                </Heading>
+            ) : (
+                <Heading textAlign="center" marginTop="50px">
+                    Παρακαλώ επιλέξτε τμήμα από τις ρυθμίσεις.
+                </Heading>
+            )}
+        </Box>
+    )
 }

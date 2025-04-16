@@ -36,95 +36,97 @@
 
 */
 import {
-  Box,
-  Button,
-  Stack,
-  Text,
-  useBreakpointValue,
-  useColorModeValue,
-} from "@chakra-ui/react";
-import { useEffect, useState } from "react";
-import MapCords from "../components/maps/MapCords";
-import SelectBuildingDropdown from "../components/maps/SelectBuildingDropdown.jsx";
-import SelectOfficeDropdown from "../components/maps/SelectOfficeDropdown.jsx";
-import { useDepName, useMapData } from "../hooks";
-import i18n from "../i18n";
+    Box,
+    Button,
+    Stack,
+    Text,
+    useBreakpointValue,
+    useColorModeValue,
+} from '@chakra-ui/react'
+import { useEffect, useState } from 'react'
+import MapCords from '../components/maps/MapCords'
+import SelectBuildingDropdown from '../components/maps/SelectBuildingDropdown.jsx'
+import SelectOfficeDropdown from '../components/maps/SelectOfficeDropdown.jsx'
+import { useDepName } from '@/hooks/useDepName'
+import { useMapData } from '@/hooks/useMapData'
+import i18n from '../i18n'
 
 function MapPage() {
-  const { depName } = useDepName();
-  const {
-    isSpecificForDepartment,
-    categoryOptions,
-    locations,
-    setSelectedLocation,
-    setSelectedLocationCategory,
-    locationData,
-    selectedLocation,
-    selectedLocationCategory,
-  } = useMapData();
+    const { depName } = useDepName()
+    const {
+        isSpecificForDepartment,
+        categoryOptions,
+        locations,
+        setSelectedLocation,
+        setSelectedLocationCategory,
+        locationData,
+        selectedLocation,
+        selectedLocationCategory,
+    } = useMapData()
 
-  const departmentHint = useBreakpointValue({
-    base: i18n.t(depName),
-    md: i18n.t("current_department") + i18n.t(depName),
-  });
+    const departmentHint = useBreakpointValue({
+        base: i18n.t(depName),
+        md: i18n.t('current_department') + i18n.t(depName),
+    })
 
-  useEffect(() => {
-    if (isSpecificForDepartment) {
-      resetSelectedLocation();
+    useEffect(() => {
+        if (isSpecificForDepartment) {
+            resetSelectedLocation()
+        }
+    }, [depName])
+
+    function resetSelectedLocation() {
+        setSelectedLocation('')
+        setSelectedText(i18n.t('select_location'))
     }
-  }, [depName]);
 
-  function resetSelectedLocation() {
-    setSelectedLocation("");
-    setSelectedText(i18n.t("select_location"));
-  }
+    const handleLocationCategoryChange = (selection) => {
+        setSelectedLocationCategory(selection)
+        resetSelectedLocation()
+    }
 
-  const handleLocationCategoryChange = (selection) => {
-    setSelectedLocationCategory(selection);
-    resetSelectedLocation();
-  };
+    const [selectedText, setSelectedText] = useState(i18n.t('select_location'))
 
-  const [selectedText, setSelectedText] = useState(i18n.t("select_location"));
-
-  return (
-    <Box align="center" marginTop="1em" fontFamily="Syne">
-      <Stack align="center">
-        <SelectBuildingDropdown
-          handleChange={handleLocationCategoryChange}
-          newOptions={categoryOptions}
-        />
-        {isSpecificForDepartment && depName ? (
-          <Text color={"#bcb6c4"} fontSize={"sm"}>
-            {departmentHint}
-          </Text>
-        ) : null}
-        <SelectOfficeDropdown
-          locations={locations}
-          handleChange={(selection) => setSelectedLocation(selection)}
-          selectedText={selectedText}
-          setSelectedText={setSelectedText}
-        />
-      </Stack>
-      {selectedLocation ? <MapCords {...locationData} /> : null}
-      <Button
-        _hover={false}
-        bgColor={useColorModeValue("#0050e0", "#f3f3f3")}
-        color={useColorModeValue("#f3f3f3", "black")}
-        variant="outline"
-        margin="1rem"
-        onClick={(e) => {
-          i18n.language === "en" 
-            ? window.open(
-                "https://www.uom.gr/en/about/360-sup-o-sup-virtual-tour-of-the-university-of-macedonia"
-              ) 
-            : window.open(
-                "https://www.uom.gr/about/eikonikh-perihghsh-360-sup-o-sup-sto-panepisthmio-makedonias"
-              );
-        }}>
-        {i18n.t("virtual_tour")} 360°
-      </Button>
-    </Box>
-  );
+    return (
+        <Box align="center" marginTop="1em" fontFamily="Syne">
+            <Stack align="center">
+                <SelectBuildingDropdown
+                    handleChange={handleLocationCategoryChange}
+                    newOptions={categoryOptions}
+                />
+                {isSpecificForDepartment && depName ? (
+                    <Text color={'#bcb6c4'} fontSize={'sm'}>
+                        {departmentHint}
+                    </Text>
+                ) : null}
+                <SelectOfficeDropdown
+                    locations={locations}
+                    handleChange={(selection) => setSelectedLocation(selection)}
+                    selectedText={selectedText}
+                    setSelectedText={setSelectedText}
+                />
+            </Stack>
+            {selectedLocation ? <MapCords {...locationData} /> : null}
+            <Button
+                _hover={false}
+                bgColor={useColorModeValue('#0050e0', '#f3f3f3')}
+                color={useColorModeValue('#f3f3f3', 'black')}
+                variant="outline"
+                margin="1rem"
+                onClick={(e) => {
+                    i18n.language === 'en'
+                        ? window.open(
+                              'https://www.uom.gr/en/about/360-sup-o-sup-virtual-tour-of-the-university-of-macedonia'
+                          )
+                        : window.open(
+                              'https://www.uom.gr/about/eikonikh-perihghsh-360-sup-o-sup-sto-panepisthmio-makedonias'
+                          )
+                }}
+            >
+                {i18n.t('virtual_tour')} 360°
+            </Button>
+        </Box>
+    )
 }
 
-export default MapPage;
+export default MapPage

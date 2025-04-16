@@ -36,35 +36,40 @@
 
 */
 
-import { Accordion, Box, Text } from "@chakra-ui/react";
-import FAQCard from "../components/FAQCard";
-import { useFAQData } from "../hooks";
-import i18n from "../i18n";
+import { Accordion, Box, Text } from '@chakra-ui/react'
+import FAQCard from '../components/FAQCard'
+import { useFAQData } from '@/hooks/useFAQData'
+import i18n from '../i18n'
 
 export default function FAQSettingsPage() {
-  const questionsAndAnswers = useFAQData();
-  return (
-    <Box textAlign={"center"}>
-      <Box textAlign="center" marginBottom="1em">
-        <Text
-          as="h1"
-          fontSize="3.5ch"
-          fontWeight="bold"
-          marginBottom="1em"
-          paddingTop="10px"
-          fontFamily="Syne"
-        >
-          {i18n.t("faq_title")}
-        </Text>
-        <Text padding="15px" fontFamily="Syne">
-          {i18n.t("faq_subtitle")}
-        </Text>
-      </Box>
-      <Accordion allowToggle>
-        {questionsAndAnswers.map((questionsAndAnswers) => {
-          return <FAQCard data={questionsAndAnswers} key={questionsAndAnswers.question} />;
-        })}
-      </Accordion>
-    </Box>
-  );
+    const questionsAndAnswers = useFAQData()
+    return (
+        <Box textAlign={'center'}>
+            <Box textAlign="center" marginBottom="1em">
+                <Text
+                    as="h1"
+                    fontSize="3.5ch"
+                    fontWeight="bold"
+                    marginBottom="1em"
+                    paddingTop="10px"
+                    fontFamily="Syne"
+                >
+                    {i18n.t('faq_title')}
+                </Text>
+                <Text padding="15px" fontFamily="Syne">
+                    {i18n.t('faq_subtitle')}
+                </Text>
+            </Box>
+            <Accordion allowToggle>
+                {questionsAndAnswers.map((questionsAndAnswers) => {
+                    return (
+                        <FAQCard
+                            data={questionsAndAnswers}
+                            key={questionsAndAnswers.question}
+                        />
+                    )
+                })}
+            </Accordion>
+        </Box>
+    )
 }
