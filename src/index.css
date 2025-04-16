@@ -1,25 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
-
-
 @font-face {
   font-family: "Syne";
   font-weight: 400;
-  src: local("Syne"), url('./assets/fonts/Syne-Regular.woff2') format("woff2");
+  src: local("Syne"), url(./assets/fonts/Syne-Regular.woff2) format("woff2");
 }
 @font-face {
   font-family: "Syne";
   font-weight: 500;
-  src: local("Syne"), url('./assets/fonts/Syne-Medium.woff2') format("woff2");
+  src: local("Syne"), url(./assets/fonts/Syne-Medium.woff2) format("woff2");
 }
 @font-face {
   font-family: "Syne";
   font-weight: 600;
-  src: local("Syne"), url('./assets/fonts/Syne-SemiBold.woff2') format("woff2");
+  src: local("Syne"), url(./assets/fonts/Syne-SemiBold.woff2) format("woff2");
 }
 @font-face {
   font-family: "Syne";
   font-weight: 700;
-  src: local("Syne"), url('./assets/fonts/Syne-Bold.woff2') format("woff2");
+  src: local("Syne"), url(./assets/fonts/Syne-Bold.woff2) format("woff2");
 }
 
 body {
