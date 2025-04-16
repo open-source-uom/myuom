@@ -96,7 +96,7 @@ export default function HomePage() {
             fontWeight={500}
             fontFamily="Syne"
           >
-            Η αναζήτηση δεν επέστρεψε αποτελέσματα.
+            H αναζήτηση δεν επέστρεψε αποτελέσματα.
           </Heading>
         ) : null}
         {categoriesSortedAndWithoutHiddenPages.map((category) => (
