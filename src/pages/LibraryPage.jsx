@@ -36,15 +36,19 @@
 
 */
 
-import { Flex, Box, Text, Button, useColorModeValue } from "@chakra-ui/react";
+import { Flex, Box, Text, Button, useColorModeValue,Switch } from "@chakra-ui/react";
 import i18n from "../i18n";
 import { TimeIcon, PhoneIcon } from "@chakra-ui/icons";
+import { useState } from "react";
 import { LIBRARY_OPENING_HOURS, LIBRARY_PHONE_LIST } from "../assets/data/Library";
 export default function LibraryPage() {
+  const [isExamPeriod, setisExamPeriod] = useState(false);
+  const currentPeriod = isExamPeriod ? "InExams" : "InSemester";
+
   return (
     <Flex
       w="100vw"
-      overflowX="hidden"
+      overflowX="none"
       flexDirection="column"
       alignItems="center"
     >
@@ -52,12 +56,12 @@ export default function LibraryPage() {
       <Flex
         textAlign="center"
         flexDirection={{ base: "column", lg: "row" }}
-        columnGap={"3rem"}
+        columnGap="3"
         alignItems="center"
-        justifyContent={"center"}
-        width={{ sm: "100%", lg: "fit-content" }}
+        justifyContent="center"
+        width="100%"
         height={{ lg: "75vh" }}
-        paddingX="16px"
+        paddingX={{ sm: "2", base: "4", md: "8" }}
       >
         {/* Ωράριο */}
         <Box
@@ -65,15 +69,16 @@ export default function LibraryPage() {
           borderRadius="1rem"
           bg={useColorModeValue("#0050e0", "#f3f3f3")}
           borderColor={useColorModeValue("#0050e0", "#f3f3f3")}
-          marginBottom={{ base: "1rem", lg: "0" }}
-          marginTop="1rem"
-          px="1.5rem"
-          py="1.5rem"
+          marginBottom={{ base: "2", lg: "0" }}
+          marginTop={{ lg: "fit-content" }}
+          px="4"
+          py="4"
           width="100%"
           display={"flex"}
+          textAlign={"center"}
           justifyContent={"center"}
           alignItems={"center"}
-          height={{ lg: "30%" }}
+          height={{ lg: "fit-content" }}
         >
           <Flex
             flexDirection={"column"}
@@ -85,45 +90,61 @@ export default function LibraryPage() {
             color={useColorModeValue("#f3f3f3", "black")}
           >
             <Flex flexDirection={"row"} alignItems="center">
-              <TimeIcon w={30} h={30} />
+              <TimeIcon w={6} h={6} />
               <Text
-                fontSize={{ base: "lg", lg: "2xl" }}
-                ml="1rem"
+                fontSize={{base: "lg",lg: "2xl"}}
+                ml="2"
                 as="span"
                 fontWeight={"bold"}
               >
-                {i18n.t("orario")}
-              </Text>
+                {i18n.t("orario")}{" "}
+                ({isExamPeriod ?  i18n.t("exams_period") : i18n.t("semester_period") })
+                 </Text>                 
             </Flex>
-            <Flex mt="1rem" flexDirection={"row"} alignItems="center">
-              <Box mx="0.5rem">
+            <Flex mt="1rem" flexDirection={"row"} alignItems="center" gap={{base: "1px", lg: 2}} >
+              <Box mx="2" fontSize={{ base: "sm",  lg: "xl", }}>
                 <Text as="span" fontWeight={"bold"}>
                   {i18n.t("defPar")}
                 </Text>{" "}
                 <br />
-                {LIBRARY_OPENING_HOURS.on_weekdays.start}-
-                {LIBRARY_OPENING_HOURS.on_weekdays.end}
+                {LIBRARY_OPENING_HOURS[currentPeriod].on_weekdays.start}-
+                {LIBRARY_OPENING_HOURS[currentPeriod].on_weekdays.end}
               </Box>
-              <Box mx="1rem">
+             
+              <Box mx="2" fontSize={{ base: "sm",  lg: "xl", }}>
                 <Text as="span" fontWeight={"bold"}>
                   {i18n.t("savvato")}
                 </Text>{" "}
                 <br />
-                {LIBRARY_OPENING_HOURS.on_saturday.start
-                  ? `${LIBRARY_OPENING_HOURS.on_saturday.start}-${LIBRARY_OPENING_HOURS.on_saturday.end}`
+               
+                {LIBRARY_OPENING_HOURS[currentPeriod].on_saturday.start
+                  ? `${LIBRARY_OPENING_HOURS[currentPeriod].on_saturday.start}-${LIBRARY_OPENING_HOURS[currentPeriod].on_saturday.end}`
                   : i18n.t("kleista")}
               </Box>
-              <Box mx="1rem">
+              <Box mx="2" fontSize={{ base: "sm",  lg: "xl", }}>
                 <Text as="span" fontWeight={"bold"}>
                   {i18n.t("kyriaki")}
                 </Text>{" "}
                 <br />
-                {LIBRARY_OPENING_HOURS.on_sunday.start
-                  ? `${LIBRARY_OPENING_HOURS.on_sunday.start}-${LIBRARY_OPENING_HOURS.on_sunday.end}`
+                {LIBRARY_OPENING_HOURS[currentPeriod].on_sunday.start
+                  ? `${LIBRARY_OPENING_HOURS[currentPeriod].on_sunday.start}-${LIBRARY_OPENING_HOURS[currentPeriod].on_sunday.end}`
                   : i18n.t("kleista")}
               </Box>
             </Flex>
+            <br/>
+            <Button
+  onClick={() => setisExamPeriod((prev) => !prev)}
+  leftIcon={<TimeIcon />}
+  variant="outline"
+  mt="1.4"
+  size="sm"
+  bg={useColorModeValue("#f3f3f3", "black")}
+  _hover={{ bg: isExamPeriod ? useColorModeValue("#f3f3f3", "black") : useColorModeValue("#f3f3f3", "black") }}
+>
+  {i18n.t(!isExamPeriod ? "exams_period": "semester_period") }
+</Button>
           </Flex>
+          
         </Box>
         {/* Επικοινωνία  */}
         <Box
@@ -131,33 +152,34 @@ export default function LibraryPage() {
           borderRadius="1rem"
           borderColor={useColorModeValue("#0050e0", "#f3f3f3")}
           bg={useColorModeValue("#0050e0", "#f3f3f3")}
-          marginBottom={{ base: "1rem", lg: "0" }}
-          marginTop="1rem"
+          marginBottom={{ base: "2", lg: "0" }}
+          marginTop="2"
           display={"flex"}
           justifyContent={"center"}
           alignItems={"center"}
-          py="1rem"
-          px="0.75rem"
+          py="4"
+          px="3"
           width="100%"
           height={{ lg: "30%" }}
+          paddingX={{ sm: "2", base: "4",md: "8"}}
         >
           <Flex
-            mx="1rem"
+            mx="2"
             flexDirection={"column"}
             alignItems="flex-start"
-            rowGap={"0.75rem"}
+            rowGap={3}
             justifyContent={"flex-start"}
-            columnGap={"1rem"}
+            columnGap={3}
             color={useColorModeValue("#f3f3f3", "black")}
             fontFamily="Syne"
             w="100%"
             fontSize={{ base: "md", lg: "2xl" }}
           >
             <Flex flexDirection={"row"} alignItems="center">
-              <PhoneIcon w={27} h={27} />
+              <PhoneIcon w={6} h={5} />
               <Text
                 fontSize={{ base: "lg", lg: "2xl" }}
-                ml="1rem"
+                ml="2"
                 as="span"
                 fontWeight={"bold"}
               >
@@ -170,7 +192,8 @@ export default function LibraryPage() {
               alignItems="center"
               justifyContent="space-between"
               w="100%"
-              gap="2rem"
+              gap="3"
+              fontSize={{ base: "sm",  lg: "xl", }}
             >
               <Text>
                 {LIBRARY_PHONE_LIST[0]} <br />
@@ -192,7 +215,7 @@ export default function LibraryPage() {
         fontFamily="Syne"
         fontSize={{ base: "lg", lg: "2xl" }}
         rightIcon={
-          <Box ml="0.5rem">
+          <Box ml="2">
             <svg
               width="15px"
               viewBox="0 0 10 10"
