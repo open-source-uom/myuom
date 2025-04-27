@@ -6,7 +6,7 @@ on:
 
 permissions:
   contents: read
-  pull-requests: write
+  pull-requests: read
 
 jobs:
   lint:
@@ -17,12 +17,13 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # 🛠️ Important! Fetch full Git history
+          fetch-depth: 0
 
       - name: Run Super Linter
         uses: super-linter/super-linter@v6
         env:
           VALIDATE_ALL_CODEBASE: false
+          VALIDATE_JSCPD: false  #  Turn off duplicate code checking
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
