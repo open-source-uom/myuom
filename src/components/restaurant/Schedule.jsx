@@ -55,7 +55,6 @@ import TimeTable from "./TimeTable";
 import i18n from "../../i18n";
 import { useState, useEffect } from "react";
 import ClosedDueToHoliday from "./ClosedDueToHoliday";
-
 function Schedule() {
 const [isRestaurantOpen, setIsRestaurantOpen] = useState(false);
 const { isOpen, onOpen, onClose } = useDisclosure();
@@ -66,6 +65,7 @@ const [nextTimeInfo, setNextTimeInfo] = useState({
   activeMeal: "none",
   activeCategory: "none",
 });
+
 
 useEffect(() => {
   const updateNextTime = () => {
@@ -170,7 +170,7 @@ return (
       border="2px"
       borderColor={useColorModeValue("#0050e0", "#f3f3f3")}
     >
-      <Flex
+     <Flex
         justifyContent="center"
         alignItems="center"
         fontFamily="Syne"
@@ -179,25 +179,55 @@ return (
         px={2}
         cursor="pointer"
         onClick={onOpen}
+        textAlign="center"
       >
+          {!isClosedforBreak ? (
+           // Not Holiday break
+           <Text
+           as="span"
+           px={2}
+           color={isRestaurantOpen ? "#00CA08" : "#CA0000"}
+         >
+          {i18n.t(isRestaurantOpen ? "open" : "closed")}
+         </Text>
+      ):  
+        // Holiday break
         <Text
-          as="span"
-          px={2}
-          color={isRestaurantOpen ? "#00CA08" : "#CA0000"}
+        as="span"
+        px={2}
+        fontSize={{base: "sm",sm: "md",md: "md",lg: "lg"}}
+        color={isRestaurantOpen ? "#00CA08" : "#CA0000"}
         >
-         {isClosedforBreak ? i18n.t(`reason.${reason}`) :
-        i18n.t(isRestaurantOpen ? "open" : "closed")}
+        {i18n.t(`reason.${reason}`)}
         </Text>
+        }
+
         <Text as="span">⋅</Text>
+
+        {!isClosedforBreak ? (
+           // Not Holiday break
         <Text
           as="span"
           style={{ fontVariantNumeric: "lining-nums tabular-nums" }}
           px={2}
         >
           {i18n.t(isRestaurantOpen ? "closesAt" : "opensAt")}{" "}
-          {isClosedforBreak ?  nextOpenDate : nextTimeInfo.nextTime}
-        </Text>
-        <InfoOutlineIcon />
+          {nextTimeInfo.nextTime}
+        </Text>)
+        : 
+         // Holiday break
+        <Text
+          as="span"
+          style={{ fontVariantNumeric: "lining-nums tabular-nums" }}
+          px={2}
+          fontSize={{base: "sm",sm: "md",md: "md",lg: "lg"}}
+        >
+          {i18n.t(isRestaurantOpen ? "closesAt" : "opensOn")}{" "}
+          <Text whiteSpace={"nowrap"} as="span">{nextOpenDate}</Text>
+        </Text>}
+        <Box px={1}> 
+    <InfoOutlineIcon />
+  </Box>
       </Flex>
     </Box>
     <Modal onClose={onClose} isOpen={isOpen} isCentered>

@@ -2,11 +2,12 @@ export default {
   open: "Open",
   closed: "Closed",
   "reason": {
-    "closedForHoliday": "Closed for holiday break",
+    "closedForHoliday": "Official holiday, may be closed",
     "easterBreak": "Closed for Easter break",
     "christmasBreak": "Closed for Christmas break",
     "summerBreak": "Closed for summer break", 
   },
+  opensOn: "Opens on",
   opensAt: "Opens at",
   closesAt: "Closes at",
   breakfast: "Breakfast",

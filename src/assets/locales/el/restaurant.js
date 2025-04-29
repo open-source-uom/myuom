@@ -2,11 +2,12 @@ export default {
   open: "Ανοιχτά",
   closed: "Κλειστά",
   "reason": {
-    "closedForHoliday": "Κλειστό λόγω αργίας",
+    "closedForHoliday": "Επίσημη αργία, ενδεχομένως κλειστά",
     "easterBreak": "Κλειστά λόγω Πάσχα",
     "christmasBreak": "Κλειστά λόγω Χριστουγέννων",
-    "summerBreak": "Κλειστά λόγω Καλοκαιριού"
+    "summerBreak": "Κλειστά λόγω καλοκαιριού"
   },
+  opensOn: "Ανοίγει στις",
   opensAt: "Ανοίγει στις",
   closesAt: "Κλείνει στις",
   breakfast: "Πρωινό",
