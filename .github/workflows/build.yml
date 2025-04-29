@@ -16,7 +16,8 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
-      pull-requests: read
+      # Only add write permissions if actually needed:
+      pull-requests: write  # Remove if not required
     steps:
       - name: Check out code
         uses: actions/checkout@v4
