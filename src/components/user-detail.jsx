@@ -36,40 +36,48 @@
 
 */
 
-import { StrictMode } from 'react'
-import { ChakraProvider } from '@chakra-ui/react'
-import ReactDOM from 'react-dom/client'
-import './index.css'
-import theme from './theme/theme'
-import App from './App'
-import reportWebVitals from './reportWebVitals'
-import { BrowserRouter } from 'react-router-dom'
-import { Auth0Provider } from '@auth0/auth0-react'
-import { DepartmentProvider } from './contexts/departmentContext'
-import './i18n'
+import React from 'react'
 
-const root = ReactDOM.createRoot(document.getElementById('root'))
-root.render(
-    <StrictMode>
-        <Auth0Provider
-            domain="dev-djhn62s4gf7wjbcl.us.auth0.com"
-            clientId="k8HyE6Y2QDl1IKrLGAd0hy8hUrT8MIeJ"
-            authorizationParams={{
-                redirect_uri: window.location.origin,
+const UserDetail = ({ user, logout }) => {
+    return (
+        <div
+            style={{
+                border: '1px solid',
+                position: 'absolute',
+                top: '5rem',
+                right: '7%',
+                padding: '10px',
+                textAlign: 'left',
+                display: 'flex',
+                flexDirection: 'column',
+                rowGap: '6px',
+                background: '#578ef3',
+                borderRadius: '8px',
+                zIndex: 1000,
             }}
         >
-            <BrowserRouter>
-                <DepartmentProvider>
-                    <ChakraProvider theme={theme}>
-                        <App />
-                    </ChakraProvider>
-                </DepartmentProvider>
-            </BrowserRouter>
-        </Auth0Provider>
-    </StrictMode>
-)
+            <h2>{user?.name}</h2>
+            <p>{user?.email}</p>
+            <button
+                style={{
+                    padding: '10px',
+                    border: '1px solid #ff0000',
+                    borderRadius: '10px',
+                    color: '#ff0000',
+                    backgroundColor: 'white',
+                }}
+                onClick={() =>
+                    logout({
+                        logoutParams: {
+                            returnTo: window.location.origin,
+                        },
+                    })
+                }
+            >
+                Log Out
+            </button>
+        </div>
+    )
+}
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals()
+export default UserDetail
