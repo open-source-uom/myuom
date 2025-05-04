@@ -38,7 +38,7 @@
 
 import { Box, Heading, useToast } from "@chakra-ui/react";
 import { useEffect, useRef } from 'react';
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router";
 import { useDepName, useGraduationLink } from '../hooks';
 import i18n from "../i18n";
 

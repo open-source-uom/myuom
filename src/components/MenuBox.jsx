@@ -46,7 +46,7 @@ import {
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useMemo } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router";
 import { DiagonalRightArrowIcon, RightArrowIcon } from "../assets/icons";
 import { useDepName, useDepartments } from "../hooks";
 import i18n from "../i18n";
