@@ -17,8 +17,8 @@ export default {
   ethics_research_committee: "Committee on Research Ethics and Integrity",
   student_advocate: "Student Advocate",
   gender_eq_committee: "Gender Equality Committee",
-  student_consulting_support_center: "Student Consulting and Support Center",
-  accessibility_unit: "UoM Accessibility Committee",
+  student_consulting_support_center: "Student Counseling and Support Center",
+  accessibility_unit: "Committee for Equal Access of Persons with Disabilities and Persons with Special Educational Needs",
   theater_workshop: "",
   uni_publications: "University of Macedonia Publications",
 };
