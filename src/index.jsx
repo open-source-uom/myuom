@@ -36,31 +36,40 @@
 
 */
 
-import { StrictMode } from "react";
-import { ChakraProvider } from "@chakra-ui/react";
-import ReactDOM from "react-dom/client";
-import "./index.css";
-import theme from "./theme/theme";
-import App from "./App";
-import reportWebVitals from "./reportWebVitals";
-import { BrowserRouter } from "react-router-dom";
-import { DepartmentProvider } from "./contexts/departmentContext";
-import "./i18n";
+import { StrictMode } from 'react'
+import { ChakraProvider } from '@chakra-ui/react'
+import ReactDOM from 'react-dom/client'
+import './index.css'
+import theme from './theme/theme'
+import App from './App'
+import reportWebVitals from './reportWebVitals'
+import { BrowserRouter } from 'react-router-dom'
+import { Auth0Provider } from '@auth0/auth0-react'
+import { DepartmentProvider } from './contexts/departmentContext'
+import './i18n'
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
-  <StrictMode>
-    <BrowserRouter>
-      <DepartmentProvider>
-        <ChakraProvider theme={theme}>
-          <App />
-        </ChakraProvider>
-      </DepartmentProvider>
-    </BrowserRouter>
-  </StrictMode>
-);
+    <StrictMode>
+        <Auth0Provider
+            domain="dev-djhn62s4gf7wjbcl.us.auth0.com"
+            clientId="k8HyE6Y2QDl1IKrLGAd0hy8hUrT8MIeJ"
+            authorizationParams={{
+                redirect_uri: window.location.origin,
+            }}
+        >
+            <BrowserRouter>
+                <DepartmentProvider>
+                    <ChakraProvider theme={theme}>
+                        <App />
+                    </ChakraProvider>
+                </DepartmentProvider>
+            </BrowserRouter>
+        </Auth0Provider>
+    </StrictMode>
+)
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+reportWebVitals()

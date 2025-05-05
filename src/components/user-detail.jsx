@@ -36,40 +36,48 @@
 
 */
 
-import { Accordion, Box, Text } from '@chakra-ui/react'
-import FAQCard from '../components/FAQCard'
-import { useFAQData } from '@/hooks/useFAQData'
-import i18n from '../i18n'
+import React from 'react'
 
-export default function FAQSettingsPage() {
-    const questionsAndAnswers = useFAQData()
+const UserDetail = ({ user, logout }) => {
     return (
-        <Box textAlign={'center'}>
-            <Box textAlign="center" marginBottom="1em">
-                <Text
-                    as="h1"
-                    fontSize="3.5ch"
-                    fontWeight="bold"
-                    marginBottom="1em"
-                    paddingTop="10px"
-                    fontFamily="Syne"
-                >
-                    {i18n.t('faq_title')}
-                </Text>
-                <Text padding="15px" fontFamily="Syne">
-                    {i18n.t('faq_subtitle')}
-                </Text>
-            </Box>
-            <Accordion allowToggle>
-                {questionsAndAnswers.map((questionsAndAnswers) => {
-                    return (
-                        <FAQCard
-                            data={questionsAndAnswers}
-                            key={questionsAndAnswers.question}
-                        />
-                    )
-                })}
-            </Accordion>
-        </Box>
+        <div
+            style={{
+                border: '1px solid',
+                position: 'absolute',
+                top: '5rem',
+                right: '7%',
+                padding: '10px',
+                textAlign: 'left',
+                display: 'flex',
+                flexDirection: 'column',
+                rowGap: '6px',
+                background: '#578ef3',
+                borderRadius: '8px',
+                zIndex: 1000,
+            }}
+        >
+            <h2>{user?.name}</h2>
+            <p>{user?.email}</p>
+            <button
+                style={{
+                    padding: '10px',
+                    border: '1px solid #ff0000',
+                    borderRadius: '10px',
+                    color: '#ff0000',
+                    backgroundColor: 'white',
+                }}
+                onClick={() =>
+                    logout({
+                        logoutParams: {
+                            returnTo: window.location.origin,
+                        },
+                    })
+                }
+            >
+                Log Out
+            </button>
+        </div>
     )
 }
+
+export default UserDetail
