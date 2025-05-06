@@ -59,10 +59,26 @@ export default function ServicesPage() {
                 fontFamily="Syne"
                 variant="enclosed"
                 colorScheme={useColorModeValue('#0050e0', '#f3f3f3')}
+                style={{ paddingLeft: '5px ' }}
             >
                 <TabList flex="1">
                     {services.map((service) => {
-                        return <Tab>{service.tabName}</Tab>
+                        return (
+                            <Tab
+                                key={service}
+                                _selected={{
+                                    color: 'white',
+                                    bg: useColorModeValue('#0050e0', '#1a202c'),
+                                    fontWeight: 'bold',
+                                    borderColor: useColorModeValue(
+                                        '#0050e0',
+                                        '#1a202c'
+                                    ),
+                                }}
+                            >
+                                {service.tabName}
+                            </Tab>
+                        )
                     })}
                 </TabList>
                 <TabPanels>
