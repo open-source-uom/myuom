@@ -19,8 +19,8 @@ export default {
   student_advocate: "Συνήγορος του Φοιτητή",
   gender_eq_committee: "Επιτροπή Ισότητας Φύλων",
   student_consulting_support_center:
-    "Κέντρο Συμβουλευτικής και Στήριξης Φοιτητών",
-  accessibility_unit: "Μονάδα Προσβασιμότητας ΠΑΜΑΚ",
+    "Κέντρο Ψυχολογικής και Συμβουλευτικής Υποστήριξης",
+  accessibility_unit: "Επιτροπή Ισότιμης Πρόσβασης Ατόμων με Αναπηρία και ατόμων με ειδικές εκπαιδευτικές ανάγκες",
   theater_workshop: "",
   uni_publications: "Εκδόσεις Πανεπιστημίου Μακεδονίας",
 };

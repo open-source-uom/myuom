@@ -1,14 +1,57 @@
+import { useState } from "react";
 import {
   Flex,
   ListItem,
   UnorderedList,
   useColorModeValue,
+  Button,
 } from "@chakra-ui/react";
 import i18n from "../../i18n";
 
-function MenuTable({ title, foodMenu, isActive }) {
+function MenuTable({ title, fullMenu, isActive }) {
+
+  const [activeMeal, setActiveMeal] = useState("Lunch");
+
+  const[foodMenu,setFoodMenu]=useState(fullMenu.gevma.foodMenu);
+  
   return (
-    <Flex flexDir="column" alignItems="center">
+    <Flex flexDir="column" alignItems="center"  w={{sm: "98%", md: "98%", lg: "94%", "2xl": "78%", "3xl": "64%"}}>
+    <Flex mb={4} gap={4}>
+        <Button
+          onClick={() => {
+            setFoodMenu(fullMenu.gevma.foodMenu);
+            setActiveMeal("Lunch");
+          }}
+          bg={activeMeal === "Lunch" ? "#0050E0" : "transparent"}
+          color={activeMeal === "Lunch" ? "white" : "inherit"}
+          border="2px solid"
+          borderColor={activeMeal === "Lunch" ? "#0050E0" : "gray.300"}
+          _hover={{
+            bg: activeMeal === "Lunch" ? "#003bb8" : "gray.100",
+          }}
+          transition="all 0.3s ease-in-out"
+        >
+        Lunch
+      </Button>
+
+      <Button
+          onClick={() => {
+            setFoodMenu(fullMenu.deipno.foodMenu);
+            setActiveMeal("Dinner");
+          }}
+          bg={activeMeal === "Dinner" ? "#0050E0" : "transparent"}
+          color={activeMeal === "Dinner" ? "white" : "inherit"}
+          border="2px solid"
+          borderColor={activeMeal === "Dinner" ? "#0050E0" : "gray.300"}
+          _hover={{
+            bg: activeMeal === "Dinner" ? "#003bb8" : "gray.100",
+          }}
+          transition="all 0.3s ease-in-out"
+        >
+        Dinner
+      </Button>
+
+      </Flex>
       <Flex
         flexDir="column"
         borderRadius="16px"
@@ -18,7 +61,7 @@ function MenuTable({ title, foodMenu, isActive }) {
         overflow="hidden"
         mx={1}
         fontFamily="Syne"
-        w={{ sm: "98%", md: "98%", lg: "94%", "2xl": "78%", "3xl": "64%" }}
+        w={{sm: "98%", md: "98%", lg: "94%", "2xl": "78%", "3xl": "64%"}}
       >
         {Object.keys(foodMenu).map((key, index) => (
           <Flex
@@ -67,7 +110,7 @@ function MenuTable({ title, foodMenu, isActive }) {
         fontWeight="semibold"
         fontSize="22px"
       >
-        {i18n.t(title)}
+        {i18n.t(activeMeal)}
       </Flex>
     </Flex>
   );
