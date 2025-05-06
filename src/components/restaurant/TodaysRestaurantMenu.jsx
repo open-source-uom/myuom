@@ -40,7 +40,7 @@ import { Flex, Text, IconButton } from "@chakra-ui/react";
 import { ArrowBackIcon, ArrowForwardIcon } from "@chakra-ui/icons";
 import i18n from "../../i18n";
 import MenuTable from "./MenuTable";
-import { useTodaysMenu } from "../../hooks/useTodaysMenu";
+import { useTodaysMenu } from "@/hooks/useTodaysMenu";
 import { useEffect, useState, useRef } from "react";
 import { register } from "swiper/element/bundle";
 

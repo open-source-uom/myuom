@@ -1,7 +1,7 @@
 import { LeftArrowIcon } from "../../assets/icons";
 import { Flex, Divider, Heading, useColorModeValue } from "@chakra-ui/react";
 import i18n from "../../i18n";
-import { useScrollToTopOnLoad } from "../../hooks/useScrollToTopOnLoad";
+import { useScrollToTopOnLoad } from "@/hooks/useScrollToTopOnLoad";
 import MarkdownRenderer from "../MarkdownRenderer";
 
 const Guide = ({ guideContent, onClick }) => {
