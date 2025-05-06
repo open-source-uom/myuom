@@ -36,50 +36,55 @@
 
 */
 
-import { Box, Heading, useToast } from "@chakra-ui/react";
-import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import { useAnnouncementLink, useDepName } from "../hooks";
-import i18n from "../i18n";
+import { Box, Heading, useToast } from '@chakra-ui/react'
+import { useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { useDepName } from '@/hooks/useDepName'
+import { useAnnouncementLink } from '@/hooks/useAnnouncementLink'
+import i18n from '../i18n'
 
 export default function AnnouncementsPage() {
-  const { depCode } = useDepName();
-  const toast = useToast();
-  const navigate = useNavigate();
-  const announcementLink = useAnnouncementLink(depCode);
+    const { depCode } = useDepName()
+    const toast = useToast()
+    const navigate = useNavigate()
+    const announcementLink = useAnnouncementLink(depCode)
 
-  useEffect(() => {
-    if (!depCode) {
-      toast({
-        title: i18n.t("error_title"),
-        description: i18n.t("error_description"),
-        status: "error",
-        duration: 5000,
-        isClosable: true,
-        position: "bottom",
-      });
-    }
-    if (announcementLink) {
-      i18n.language === "en" && announcementLink.englishLink
-          ? window.open(announcementLink.englishLink) 
-          : window.open(announcementLink.link);
-      navigate("/");
-    }
-  }, [depCode]);
-  return (
-    <Box>
-      {announcementLink ? (
-        <Heading textAlign="center" marginTop="50px">
-          Ανακατεύθυνση στο τμήμα
-          <a href={announcementLink.link} target="_blank" rel="noreferrer">
-            {announcementLink.code}
-          </a>
-        </Heading>
-      ) : (
-        <Heading textAlign="center" marginTop="50px">
-          Παρακαλώ επιλέξτε τμήμα από τις ρυθμίσεις.
-        </Heading>
-      )}
-    </Box>
-  );
+    useEffect(() => {
+        if (!depCode) {
+            toast({
+                title: i18n.t('error_title'),
+                description: i18n.t('error_description'),
+                status: 'error',
+                duration: 5000,
+                isClosable: true,
+                position: 'bottom',
+            })
+        }
+        if (announcementLink) {
+            i18n.language === 'en' && announcementLink.englishLink
+                ? window.open(announcementLink.englishLink)
+                : window.open(announcementLink.link)
+            navigate('/')
+        }
+    }, [depCode])
+    return (
+        <Box>
+            {announcementLink ? (
+                <Heading textAlign="center" marginTop="50px">
+                    Ανακατεύθυνση στο τμήμα
+                    <a
+                        href={announcementLink.link}
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        {announcementLink.code}
+                    </a>
+                </Heading>
+            ) : (
+                <Heading textAlign="center" marginTop="50px">
+                    Παρακαλώ επιλέξτε τμήμα από τις ρυθμίσεις.
+                </Heading>
+            )}
+        </Box>
+    )
 }

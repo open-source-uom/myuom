@@ -44,7 +44,7 @@ import UoMLogo from "../assets/myUOMLogo.png";
 import { SocialIcon } from "react-social-icons";
 import i18n from "../i18n";
 import { useEffect, useState } from "react";
-import { useSocialMediaURLs } from "../hooks";
+import { useSocialMediaURLs } from "@/hooks/useSocialMediaURLs";
 function AboutSettingsPage() {
   const SOCIAL_MEDIA_URLS = useSocialMediaURLs();
   const [contributors, setContributors] = useState([]);
