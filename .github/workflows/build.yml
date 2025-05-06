@@ -1,31 +1,37 @@
 name: Build
 
 on:
-   push:
+  push:
     branches: [ main ]
     paths-ignore:
-    - 'docs/**'
-   pull_request:
+      - 'docs/**'
+  pull_request:
     branches: [ main ]
     paths-ignore:
-    - 'docs/**'
-
-   workflow_dispatch:
+      - 'docs/**'
+  workflow_dispatch:
 
 jobs:
   build-linux:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      # Only add write permissions if actually needed:
+      pull-requests: write  # Remove if not required
     steps:
-      - uses: actions/checkout@v4
-        name: Set up Node.js
-      - uses: actions/setup-node@v4
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: 20.x
           cache: 'npm'
           cache-dependency-path: 'package-lock.json'
-          
-        name: Install dependencies
-      - run: npm install
 
-        name: Build
-      - run: npm run build 
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build
+        run: npm run build
+
