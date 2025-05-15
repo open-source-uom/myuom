@@ -10,7 +10,7 @@ import i18n from "../../i18n";
 
 function MenuTable({ title, fullMenu, isActive }) {
 
-  const [activeMeal, setActiveMeal] = useState("Lunch");
+  const [activeMeal, setActiveMeal] = useState(i18n.t('lunch'));
 
   const[foodMenu,setFoodMenu]=useState(fullMenu.gevma.foodMenu);
   
@@ -20,35 +20,35 @@ function MenuTable({ title, fullMenu, isActive }) {
         <Button
           onClick={() => {
             setFoodMenu(fullMenu.gevma.foodMenu);
-            setActiveMeal("Lunch");
+            setActiveMeal(i18n.t('lunch'));
           }}
-          bg={activeMeal === "Lunch" ? "#0050E0" : "transparent"}
-          color={activeMeal === "Lunch" ? "white" : "inherit"}
+          bg={activeMeal === i18n.t('lunch') ? "#0050E0" : "transparent"}
+          color={activeMeal === i18n.t('lunch') ? "white" : "inherit"}
           border="2px solid"
-          borderColor={activeMeal === "Lunch" ? "#0050E0" : "gray.300"}
+          borderColor={activeMeal === i18n.t('lunch') ? "#0050E0" : "gray.300"}
           _hover={{
-            bg: activeMeal === "Lunch" ? "#003bb8" : "gray.100",
+            bg: activeMeal === i18n.t('lunch') ? "#003bb8" : "gray.100",
           }}
           transition="all 0.3s ease-in-out"
         >
-        Lunch
+        {i18n.t('lunch')}
       </Button>
 
       <Button
           onClick={() => {
             setFoodMenu(fullMenu.deipno.foodMenu);
-            setActiveMeal("Dinner");
+            setActiveMeal(i18n.t('dinner'));
           }}
-          bg={activeMeal === "Dinner" ? "#0050E0" : "transparent"}
-          color={activeMeal === "Dinner" ? "white" : "inherit"}
+          bg={activeMeal === i18n.t('dinner') ? "#0050E0" : "transparent"}
+          color={activeMeal === i18n.t('dinner') ? "white" : "inherit"}
           border="2px solid"
-          borderColor={activeMeal === "Dinner" ? "#0050E0" : "gray.300"}
+          borderColor={activeMeal === i18n.t('dinner') ? "#0050E0" : "gray.300"}
           _hover={{
-            bg: activeMeal === "Dinner" ? "#003bb8" : "gray.100",
+            bg: activeMeal === i18n.t('dinner') ? "#003bb8" : "gray.100",
           }}
           transition="all 0.3s ease-in-out"
         >
-        Dinner
+        {i18n.t('dinner')}
       </Button>
 
       </Flex>
