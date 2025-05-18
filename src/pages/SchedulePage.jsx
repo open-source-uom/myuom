@@ -42,6 +42,7 @@ import { useNavigate } from 'react-router-dom'
 import { useDepName } from '@/hooks/useDepName'
 import { useScheduleData } from '@/hooks/useScheduleData'
 
+
 export default function SchedulePage({ examsProp, semesterProp }) {
     const { depCode } = useDepName()
     const navigate = useNavigate()

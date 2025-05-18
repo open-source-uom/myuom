@@ -43,6 +43,7 @@ import { useDepName } from '@/hooks/useDepName'
 import { useGraduationLink } from '@/hooks/useGraduationLink'
 import i18n from '../i18n'
 
+
 export default function GraduationPage() {
     const { depCode } = useDepName()
     const toast = useToast()

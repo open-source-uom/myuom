@@ -43,6 +43,7 @@ import { useDepName } from '@/hooks/useDepName'
 import { useAnnouncementLink } from '@/hooks/useAnnouncementLink'
 import i18n from '../i18n'
 
+
 export default function AnnouncementsPage() {
     const { depCode } = useDepName()
     const toast = useToast()

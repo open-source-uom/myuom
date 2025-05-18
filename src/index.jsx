@@ -43,7 +43,7 @@ import "./index.css";
 import theme from "./theme/theme";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter } from "react-router";
 import { DepartmentProvider } from "./contexts/departmentContext";
 import "./i18n";
 
