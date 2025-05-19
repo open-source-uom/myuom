@@ -37,140 +37,160 @@
 */
 
 import {
-  Box,
-  Flex,
-  GridItem,
-  Heading,
-  useColorModeValue,
-  useToast,
-} from "@chakra-ui/react";
-import { motion } from "framer-motion";
-import { useMemo } from "react";
-import { useNavigate } from "react-router";
-import { DiagonalRightArrowIcon, RightArrowIcon } from "../assets/icons";
-import { useDepName, useDepartments } from "../hooks";
-import i18n from "../i18n";
+    Box,
+    Flex,
+    GridItem,
+    Heading,
+    useColorModeValue,
+    useToast,
+} from '@chakra-ui/react'
+import { motion } from 'framer-motion'
+import { useMemo } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { DiagonalRightArrowIcon, RightArrowIcon } from '../assets/icons'
+import { useDepName } from '@/hooks/useDepName'
+import { useDepartments } from '@/hooks/useDepartments'
+import i18n from '../i18n'
+
 
 export default function MenuBox({ category }) {
-  const { title, iconSVG, route, span, isExternal, requireSelection,englishRoute } =
-      category;
-  const { depName, depCode } = useDepName();
-  const departments = useDepartments();
+    const {
+        title,
+        iconSVG,
+        route,
+        span,
+        isExternal,
+        requireSelection,
+        englishRoute,
+    } = category
+    const { depName, depCode } = useDepName()
+    const departments = useDepartments()
 
-  const toast = useToast();
-  const isDisabled =
-      requireSelection && (!depCode || !departments.some((dep) => dep.code === depCode));
-  const rotateIn = useMemo(
-      () => ({
-        initial: {
-          rotateX: "180deg",
-          opacity: 0,
-        },
-        inView: {
-          rotateX: "0deg",
-          opacity: isDisabled ? 0.6 : 1,
-          transition: {
-            duration: 0.45,
-            ease: "easeIn",
-          },
-        },
-      }),
-      [isDisabled]
-  );
+    const toast = useToast()
+    const isDisabled =
+        requireSelection &&
+        (!depCode || !departments.some((dep) => dep.code === depCode))
+    const rotateIn = useMemo(
+        () => ({
+            initial: {
+                rotateX: '180deg',
+                opacity: 0,
+            },
+            inView: {
+                rotateX: '0deg',
+                opacity: isDisabled ? 0.6 : 1,
+                transition: {
+                    duration: 0.45,
+                    ease: 'easeIn',
+                },
+            },
+        }),
+        [isDisabled]
+    )
 
-  const navigate = useNavigate();
+    const navigate = useNavigate()
 
-  const handleNavigation = () => {
-
-    if(i18n.language === 'en' && englishRoute){
-      isExternal
-          ? requireSelection
-              ? window.location.replace(englishRoute, "_blank")
-              : window.open(englishRoute, "_blank")
-          : navigate(englishRoute);
-    }else{
-      isExternal
-          ? requireSelection
-              ? window.location.replace(route, "_blank")
-              : window.open(route, "_blank")
-          : navigate(route);
+    const handleNavigation = () => {
+        if (i18n.language === 'en' && englishRoute) {
+            isExternal
+                ? requireSelection
+                    ? window.location.replace(englishRoute, '_blank')
+                    : window.open(englishRoute, '_blank')
+                : navigate(englishRoute)
+        } else {
+            isExternal
+                ? requireSelection
+                    ? window.location.replace(route, '_blank')
+                    : window.open(route, '_blank')
+                : navigate(route)
+        }
     }
-  };
 
-  const handleSelection = () => {
-    const id = "1";
-    if (requireSelection && !depName) {
-      if (!toast.isActive(id)) {
-        toast({
-          id,
-          title: i18n.t("error_title"),
-          description: i18n.t("error_description"),
-          status: "error",
-          duration: 5000,
-          isClosable: true,
-          position: "bottom",
-        });
-      }
-    } else {
-      handleNavigation();
+    const handleSelection = () => {
+        const id = '1'
+        if (requireSelection && !depName) {
+            if (!toast.isActive(id)) {
+                toast({
+                    id,
+                    title: i18n.t('error_title'),
+                    description: i18n.t('error_description'),
+                    status: 'error',
+                    duration: 5000,
+                    isClosable: true,
+                    position: 'bottom',
+                })
+            }
+        } else {
+            handleNavigation()
+        }
     }
-  };
 
-
-  return (
-      <GridItem
-          as={motion.div}
-          // force remount for isDisabled to take effect (framer motion quirk)
-          key={`${title}-isDisabled-${isDisabled}`}
-          variants={rotateIn}
-          viewport={{ once: true }}
-          cursor="pointer"
-          onClick={handleSelection}
-          colSpan={span}
-          role={"group"}
-          border="2px"
-          display="flex"
-          flexDirection="column"
-          alignItems="center"
-          justifyContent="space-between"
-          borderColor={useColorModeValue("#0050e0", "#f3f3f3")}
-          backgroundColor={useColorModeValue("#0050e0", "transparent")}
-          className={`menu-box span-${span}`}
-          rounded="0.75rem"
-          p={{ sm: 2, md: 4, lg: 6 }}
-          whileHover={{ scale: 1.05, boxShadow: "0px 0px 8px rgba(0, 0, 0, 0.3)" }}>
-        <Flex
-            w="100%"
-            flexDirection="row"
+    return (
+        <GridItem
+            as={motion.div}
+            // force remount for isDisabled to take effect (framer motion quirk)
+            key={`${title}-isDisabled-${isDisabled}`}
+            variants={rotateIn}
+            viewport={{ once: true }}
+            cursor="pointer"
+            onClick={handleSelection}
+            colSpan={span}
+            role={'group'}
+            border="2px"
+            display="flex"
+            flexDirection="column"
             alignItems="center"
-            justifyContent="space-between">
-          <Box
-              minW={{ sm: "24px", md: "48px", lg: "52px" }}
-              maxW={{ sm: "24px", md: "48px", lg: "52px" }}
-              className={`svg-container ${useColorModeValue(
-                  "light-mode-svg",
-                  "dark-mode-svg"
-              )}`}>
-            {iconSVG}
-          </Box>
-          <Box
-              minW={{ sm: "12px", md: "24px", lg: "28px" }}
-              maxW={{ sm: "12px", md: "24px", lg: "28px" }}
-              className={`svg-container ${useColorModeValue(
-                  "light-mode-svg",
-                  "dark-mode-svg"
-              )}`}>
-            {isExternal ? <DiagonalRightArrowIcon /> : <RightArrowIcon />}
-          </Box>
-        </Flex>
-        <Heading
-            fontSize={{ sm: 11.95, md: 16, lg: 26, xl: 32 }}
-            color="#f3f3f3"
-            w="100%"
-            fontWeight={500}
-            fontFamily="Syne">
-          {title}
-        </Heading>
-      </GridItem>
-  );
+            justifyContent="space-between"
+            borderColor={useColorModeValue('#0050e0', '#f3f3f3')}
+            backgroundColor={useColorModeValue('#0050e0', 'transparent')}
+            className={`menu-box span-${span}`}
+            rounded="0.75rem"
+            p={{ sm: 2, md: 4, lg: 6 }}
+            whileHover={{
+                scale: 1.05,
+                boxShadow: '0px 0px 8px rgba(0, 0, 0, 0.3)',
+            }}
+        >
+            <Flex
+                w="100%"
+                flexDirection="row"
+                alignItems="center"
+                justifyContent="space-between"
+            >
+                <Box
+                    minW={{ sm: '24px', md: '48px', lg: '52px' }}
+                    maxW={{ sm: '24px', md: '48px', lg: '52px' }}
+                    className={`svg-container ${useColorModeValue(
+                        'light-mode-svg',
+                        'dark-mode-svg'
+                    )}`}
+                >
+                    {iconSVG}
+                </Box>
+                <Box
+                    minW={{ sm: '12px', md: '24px', lg: '28px' }}
+                    maxW={{ sm: '12px', md: '24px', lg: '28px' }}
+                    className={`svg-container ${useColorModeValue(
+                        'light-mode-svg',
+                        'dark-mode-svg'
+                    )}`}
+                >
+                    {isExternal ? (
+                        <DiagonalRightArrowIcon />
+                    ) : (
+                        <RightArrowIcon />
+                    )}
+                </Box>
+            </Flex>
+            <Heading
+                fontSize={{ sm: 11.95, md: 16, lg: 26, xl: 32 }}
+                color="#f3f3f3"
+                w="100%"
+                fontWeight={500}
+                fontFamily="Syne"
+            >
+                {title}
+            </Heading>
+        </GridItem>
+    )
 }
