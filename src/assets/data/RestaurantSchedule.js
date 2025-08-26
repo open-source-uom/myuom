@@ -142,13 +142,13 @@ export const holidaysClosed = {
     ],
 
 summerBreak: [
-  ...generateDates("2025-07-05", "2025-08-26"),
-  ...generateDates("2026-07-05", "2026-08-26"),
-  ...generateDates("2027-07-05", "2027-08-26"),
-  ...generateDates("2028-07-05", "2028-08-26"),
-  ...generateDates("2029-07-05", "2029-08-26"),
-  ...generateDates("2030-07-05", "2030-08-26"),
-  ...generateDates("2031-07-05", "2031-08-26"),
+  ...generateDates("2025-07-05", "2025-08-31"),
+  ...generateDates("2026-07-04", "2026-08-31"),
+  ...generateDates("2027-07-05", "2027-08-31"),
+  ...generateDates("2028-07-05", "2028-08-31"),
+  ...generateDates("2029-07-05", "2029-08-31"),
+  ...generateDates("2030-07-05", "2030-08-31"),
+  ...generateDates("2031-07-05", "2031-08-31"),
 ],
   christmasBreak: [
   ...generateDates("2025-12-24", "2026-01-06"),
