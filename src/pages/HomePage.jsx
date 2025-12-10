@@ -86,6 +86,7 @@ export default function HomePage() {
         className="home-grid"
         w={{ sm: "100%", md: "80%", lg: "60%", "2xl": "60%", "3xl": "50%" }}
         gap={{ sm: 4, md: 6, lg: 8 }}
+        userSelect='none'
       >
         {categoriesListForSearch.length === 0 ? (
           <Heading
@@ -95,6 +96,7 @@ export default function HomePage() {
             w="100%"
             fontWeight={500}
             fontFamily="Syne"
+            
           >
             H αναζήτηση δεν επέστρεψε αποτελέσματα.
           </Heading>
