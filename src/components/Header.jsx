@@ -91,12 +91,18 @@ export default function Header() {
             justifyContent="space-between"
             w={{ sm: "100%", lg: "fit-content" }}
           >
-            <Image
-              src={myUOMLogo}
+            <Box
+              as="button"
               onClick={goToHomePage}
               cursor="pointer"
-              w={{ sm: "40px", xl: "60px" }}
-            />
+              aria-label={i18n.t("home_page") || "Home Page"}
+            >
+              <Image
+                src={myUOMLogo}
+                alt="University of Macedonia Logo"
+                w={{ sm: "40px", xl: "60px" }}
+              />
+            </Box>
             <Box
               display={{ sm: "block", lg: "none" }}
               className={useColorModeValue("light-mode-svg", "dark-mode-svg")}
