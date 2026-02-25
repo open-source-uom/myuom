@@ -36,14 +36,82 @@
 
 */
 
-import { Flex, Box, Text, Button, useColorModeValue,Switch } from "@chakra-ui/react";
+import { Flex, Box, Text, Button, useColorModeValue, Switch, VStack, HStack, Icon, Badge } from "@chakra-ui/react";
 import i18n from "../i18n";
-import { TimeIcon, PhoneIcon } from "@chakra-ui/icons";
+import { TimeIcon, PhoneIcon, CalendarIcon } from "@chakra-ui/icons";
 import { useState } from "react";
 import { LIBRARY_OPENING_HOURS, LIBRARY_PHONE_LIST } from "../assets/data/Library";
+
 export default function LibraryPage() {
   const [isExamPeriod, setisExamPeriod] = useState(false);
   const currentPeriod = isExamPeriod ? "InExams" : "InSemester";
+
+  // Theme colors
+  const cardBg = useColorModeValue("#0050e0", "#f3f3f3");
+  const cardBorder = useColorModeValue("#0050e0", "#f3f3f3");
+  const textColor = useColorModeValue("#f3f3f3", "black");
+  const highlightBg = useColorModeValue("whiteAlpha.200", "blackAlpha.100");
+  const iconColor = useColorModeValue("#f3f3f3", "black");
+
+  // Get current day index
+  const currentDayIndex = new Date().getDay();
+
+  const isToday = (dayType) => {
+    if (dayType === 'weekdays' && currentDayIndex >= 1 && currentDayIndex <= 5) return true;
+    if (dayType === 'saturday' && currentDayIndex === 6) return true;
+    if (dayType === 'sunday' && currentDayIndex === 0) return true;
+    return false;
+  };
+
+  const ScheduleRow = ({ label, time, dayType }) => {
+    const active = isToday(dayType);
+    const isOpen = time && time.start;
+
+    return (
+      <HStack
+        w="100%"
+        justify="space-between"
+        p={2}
+        bg={active ? highlightBg : "transparent"}
+        borderRadius="md"
+        borderLeft={active ? "4px solid" : "none"}
+        borderColor={useColorModeValue("white", "black")}
+      >
+        <HStack spacing={3}>
+          <Icon as={allowedDaysIcons[dayType]} color={iconColor} boxSize={5} />
+          <Text fontWeight={active ? "bold" : "medium"} fontSize={{ base: "md", lg: "lg" }}>{label}</Text>
+        </HStack>
+        {isOpen ? (
+          <Badge
+            bg={useColorModeValue("white", "black")}
+            color={useColorModeValue("#0050e0", "#f3f3f3")}
+            variant="solid"
+            px={2}
+            borderRadius="full"
+            fontSize="sm"
+          >
+            {time.start} - {time.end}
+          </Badge>
+        ) : (
+          <Badge
+            colorScheme="red"
+            variant="solid"
+            px={2}
+            borderRadius="full"
+            fontSize="sm"
+          >
+            {i18n.t("kleista")}
+          </Badge>
+        )}
+      </HStack>
+    );
+  };
+
+  const allowedDaysIcons = {
+    weekdays: CalendarIcon,
+    saturday: TimeIcon,
+    sunday: TimeIcon
+  };
 
   return (
     <Flex
@@ -51,164 +119,107 @@ export default function LibraryPage() {
       overflowX="none"
       flexDirection="column"
       alignItems="center"
+      fontFamily="Syne"
+      color={textColor}
     >
       {/* Wrapper container */}
       <Flex
         textAlign="center"
         flexDirection={{ base: "column", lg: "row" }}
-        columnGap="3"
-        alignItems="center"
+        columnGap="6"
+        alignItems="stretch"
         justifyContent="center"
         width="100%"
-        height={{ lg: "75vh" }}
+        maxWidth="1200px"
         paddingX={{ sm: "2", base: "4", md: "8" }}
+        py={8}
       >
-        {/* Ωράριο */}
+        {/* Ωράριο Card */}
         <Box
+          flex={1}
           border="2px"
           borderRadius="1rem"
-          bg={useColorModeValue("#0050e0", "#f3f3f3")}
-          borderColor={useColorModeValue("#0050e0", "#f3f3f3")}
-          marginBottom={{ base: "2", lg: "0" }}
-          marginTop={{ lg: "fit-content" }}
-          px="4"
-          py="4"
-          width="100%"
-          display={"flex"}
-          textAlign={"center"}
-          justifyContent={"center"}
-          alignItems={"center"}
-          height={{ lg: "fit-content" }}
+          bg={cardBg}
+          borderColor={cardBorder}
+          p={6}
+          display="flex"
+          flexDirection="column"
         >
-          <Flex
-            flexDirection={"column"}
-            alignItems="flex-start"
-            h="fit-content"
-            fontFamily="Syne"
-            w="100%"
-            fontSize={{ base: "md", lg: "xl" }}
-            color={useColorModeValue("#f3f3f3", "black")}
-          >
-            <Flex flexDirection={"row"} alignItems="center">
-              <TimeIcon w={6} h={6} />
-              <Text
-                fontSize={{base: "lg",lg: "2xl"}}
-                ml="2"
-                as="span"
-                fontWeight={"bold"}
-              >
-                {i18n.t("orario")}{" "}
-                ({isExamPeriod ?  i18n.t("exams_period") : i18n.t("semester_period") })
-                 </Text>                 
-            </Flex>
-            <Flex mt="1rem" flexDirection={"row"} alignItems="center" gap={{base: "1px", lg: 2}} >
-              <Box mx="2" fontSize={{ base: "sm",  lg: "xl", }}>
-                <Text as="span" fontWeight={"bold"}>
-                  {i18n.t("defPar")}
-                </Text>{" "}
-                <br />
-                {LIBRARY_OPENING_HOURS[currentPeriod].on_weekdays.start}-
-                {LIBRARY_OPENING_HOURS[currentPeriod].on_weekdays.end}
-              </Box>
-             
-              <Box mx="2" fontSize={{ base: "sm",  lg: "xl", }}>
-                <Text as="span" fontWeight={"bold"}>
-                  {i18n.t("savvato")}
-                </Text>{" "}
-                <br />
-               
-                {LIBRARY_OPENING_HOURS[currentPeriod].on_saturday.start
-                  ? `${LIBRARY_OPENING_HOURS[currentPeriod].on_saturday.start}-${LIBRARY_OPENING_HOURS[currentPeriod].on_saturday.end}`
-                  : i18n.t("kleista")}
-              </Box>
-              <Box mx="2" fontSize={{ base: "sm",  lg: "xl", }}>
-                <Text as="span" fontWeight={"bold"}>
-                  {i18n.t("kyriaki")}
-                </Text>{" "}
-                <br />
-                {LIBRARY_OPENING_HOURS[currentPeriod].on_sunday.start
-                  ? `${LIBRARY_OPENING_HOURS[currentPeriod].on_sunday.start}-${LIBRARY_OPENING_HOURS[currentPeriod].on_sunday.end}`
-                  : i18n.t("kleista")}
-              </Box>
-            </Flex>
-            <br/>
-            <Button
-  onClick={() => setisExamPeriod((prev) => !prev)}
-  leftIcon={<TimeIcon />}
-  variant="outline"
-  mt="1.4"
-  size="sm"
-  bg={useColorModeValue("#f3f3f3", "black")}
-  _hover={{ bg: isExamPeriod ? useColorModeValue("#f3f3f3", "black") : useColorModeValue("#f3f3f3", "black") }}
->
-  {i18n.t(!isExamPeriod ? "exams_period": "semester_period") }
-</Button>
-          </Flex>
-          
-        </Box>
-        {/* Επικοινωνία  */}
-        <Box
-          border="2px"
-          borderRadius="1rem"
-          borderColor={useColorModeValue("#0050e0", "#f3f3f3")}
-          bg={useColorModeValue("#0050e0", "#f3f3f3")}
-          marginBottom={{ base: "2", lg: "0" }}
-          marginTop="2"
-          display={"flex"}
-          justifyContent={"center"}
-          alignItems={"center"}
-          py="4"
-          px="3"
-          width="100%"
-          height={{ lg: "30%" }}
-          paddingX={{ sm: "2", base: "4",md: "8"}}
-        >
-          <Flex
-            mx="2"
-            flexDirection={"column"}
-            alignItems="flex-start"
-            rowGap={3}
-            justifyContent={"flex-start"}
-            columnGap={3}
-            color={useColorModeValue("#f3f3f3", "black")}
-            fontFamily="Syne"
-            w="100%"
-            fontSize={{ base: "md", lg: "2xl" }}
-          >
-            <Flex flexDirection={"row"} alignItems="center">
-              <PhoneIcon w={6} h={5} />
-              <Text
-                fontSize={{ base: "lg", lg: "2xl" }}
-                ml="2"
-                as="span"
-                fontWeight={"bold"}
-              >
-                {i18n.t("epikoinonia")}
+          <Flex justify="space-between" align="center" mb={6} flexWrap="wrap" gap={2}>
+            <HeadingWithIcon icon={TimeIcon} title={i18n.t("orario")} color={textColor} />
+            <Flex align="center" gap={2}>
+              <Text fontSize="sm" fontWeight="bold">
+                {isExamPeriod ? i18n.t("exams_period") : i18n.t("semester_period")}
               </Text>
+              <Switch
+                isChecked={isExamPeriod}
+                onChange={(e) => setisExamPeriod(e.target.checked)}
+                colorScheme="whiteAlpha"
+                size="lg"
+                sx={{
+                  'span.chakra-switch__track': {
+                    bg: useColorModeValue('whiteAlpha.400', 'blackAlpha.300'),
+                  },
+                  'span.chakra-switch__track[data-checked]': {
+                    bg: useColorModeValue('white', 'black'),
+                  },
+                  'span.chakra-switch__thumb': {
+                    bg: useColorModeValue('#0050e0', '#f3f3f3'),
+                  }
+                }}
+              />
             </Flex>
+          </Flex>
 
-            <Flex
-              flexDirection={"row"}
-              alignItems="center"
-              justifyContent="space-between"
-              w="100%"
-              gap="3"
-              fontSize={{ base: "sm",  lg: "xl", }}
-            >
-              <Text>
-                {LIBRARY_PHONE_LIST[0]} <br />
-                {LIBRARY_PHONE_LIST[1]}
-              </Text>
-              <Text>
-                {" "}
-                {LIBRARY_PHONE_LIST[2]} <br /> {LIBRARY_PHONE_LIST[3]}{" "}
-              </Text>
-              <Text fontWeight="bold"> {i18n.t("imiorofos")} </Text>
-            </Flex>
-          </Flex>
+          <VStack spacing={3} align="stretch">
+            <ScheduleRow
+              label={i18n.t("defPar")}
+              time={LIBRARY_OPENING_HOURS[currentPeriod].on_weekdays}
+              dayType="weekdays"
+            />
+            <ScheduleRow
+              label={i18n.t("savvato")}
+              time={LIBRARY_OPENING_HOURS[currentPeriod].on_saturday}
+              dayType="saturday"
+            />
+            <ScheduleRow
+              label={i18n.t("kyriaki")}
+              time={LIBRARY_OPENING_HOURS[currentPeriod].on_sunday}
+              dayType="sunday"
+            />
+          </VStack>
+        </Box>
+
+        {/* Επικοινωνία Card */}
+        <Box
+          flex={1}
+          border="2px"
+          borderRadius="1rem"
+          bg={cardBg}
+          borderColor={cardBorder}
+          p={6}
+          mt={{ base: 4, lg: 0 }}
+          display="flex"
+          flexDirection="column"
+          justifyContent="center"
+        >
+          <HeadingWithIcon icon={PhoneIcon} title={i18n.t("epikoinonia")} mb={6} color={textColor} />
+
+          <VStack align="start" spacing={6} pl={2} w="100%">
+            <HStack align="start" w="100%">
+              <Text fontWeight="bold" minW="100px" fontSize="lg">{i18n.t("imiorofos")}:</Text>
+              <VStack align="start" spacing={1}>
+                {LIBRARY_PHONE_LIST.map((phone, index) => (
+                  <Text key={index} fontSize="lg" fontWeight="medium">{phone}</Text>
+                ))}
+              </VStack>
+            </HStack>
+          </VStack>
         </Box>
       </Flex>
+
       <Button
+        mt={6}
         color={useColorModeValue("#0050e0", "#f3f3f3")}
         variant="ghost"
         fontWeight="bold"
@@ -239,15 +250,23 @@ export default function LibraryPage() {
             </svg>
           </Box>
         }
-        onClick={(e) => {
-          i18n.language === "en" 
-            ? window.open("https://www.lib.uom.gr/index.php/en/") 
+        onClick={() => {
+          i18n.language === "en"
+            ? window.open("https://www.lib.uom.gr/index.php/en/")
             : window.open("https://www.lib.uom.gr/index.php/el/");
         }}
-        justifyContent="center"
       >
         {i18n.t("istoselidaVivliothikis")}
       </Button>
     </Flex>
   );
 }
+
+const HeadingWithIcon = ({ icon, title, mb, color }) => (
+  <HStack mb={mb} spacing={3}>
+    <Icon as={icon} boxSize={6} color={color} />
+    <Text fontSize={{ base: "xl", lg: "2xl" }} fontWeight="bold" color={color}>
+      {title}
+    </Text>
+  </HStack>
+);
