@@ -36,42 +36,98 @@
 
 */
 
-import { Box, Text } from "@chakra-ui/react";
+import { Box, Text, Button, Flex, VStack, Image, Heading, useColorModeValue } from "@chakra-ui/react";
 import { useNavigate } from "react-router";
+import { motion } from "framer-motion";
 import i18n from "../i18n";
+import ErrorIllustration from "../components/ErrorIllustration";
+import myUOMLogo from "../assets/myUOMLogo.png";
+import { ArrowForwardIcon, ExternalLinkIcon } from "@chakra-ui/icons";
+
+const MotionFlex = motion(Flex);
 
 function Error404() {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
+  const bgColor = useColorModeValue("gray.50", "gray.900");
+  const textColor = useColorModeValue("gray.700", "gray.200");
+  const secondaryTextColor = useColorModeValue("gray.500", "gray.400");
 
   return (
-    <Box
+    <MotionFlex
+      direction="column"
       align="center"
-      marginTop="1em"
-      fontFamily="Syne"
-      fontSize={{ sm: 11.95, md: 16, lg: 26, xl: 32 }}
+      justify="center"
+      minH="80vh"
+      bg={bgColor}
+      p={4}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
     >
-      <Text fontSize={{ sm: 26, md: 30, lg: 34, xl: 38 }}>
-        {i18n.t("error_404")}
-        <br />
-        {i18n.t("page_not_found")}
-        <br />
-        <br />
-        
-        <button 
-            onClick={()=>{navigate('/')}} 
-            style={{ 
-                backgroundColor: "",
-                color: "", 
-                transition: "color 0.3s" 
-            }}
-            onMouseOver={(e) => e.target.style.color = 'blue'} 
-            onMouseOut={(e) => e.target.style.color = ''} 
-        >
-            {i18n.t("go_to_homepage")}   
-        </button>
-                
-      </Text>
-    </Box>
+      <VStack spacing={6} textAlign="center" maxW="600px">
+        {/* Logo */}
+        <Image src={myUOMLogo} alt="myUOM Logo" boxSize="60px" mb={2} />
+
+        {/* Illustration */}
+        <ErrorIllustration />
+
+        {/* Main Text */}
+        <Box>
+          <Heading
+            as="h1"
+            size="2xl"
+            fontFamily="Syne"
+            color={useColorModeValue("#0050e0", "#63b3ed")}
+            mb={2}
+          >
+            {i18n.t("error_404")}
+          </Heading>
+          <Text
+            fontSize={{ base: "xl", md: "2xl" }}
+            fontFamily="Syne"
+            color={textColor}
+            fontWeight="bold"
+          >
+            {i18n.t("page_not_found")}
+          </Text>
+          <Text color={secondaryTextColor} fontSize="md" mt={2} maxW="400px" mx="auto">
+            Oops! The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.
+          </Text>
+        </Box>
+
+        {/* Actions */}
+        <VStack spacing={4} w="100%" pt={4}>
+          <Button
+            onClick={() => { navigate('/') }}
+            bg="#0050e0"
+            color="white"
+            size="lg"
+            px={8}
+            borderRadius="full"
+            rightIcon={<ArrowForwardIcon />}
+            _hover={{ bg: "#003bb8", transform: "translateY(-2px)", boxShadow: "lg" }}
+            _active={{ bg: "#002a8a" }}
+            transition="all 0.3s"
+          >
+            {i18n.t("go_to_homepage")}
+          </Button>
+
+          <Flex gap={4} fontSize="sm" color={secondaryTextColor}>
+            <Button variant="link" color={secondaryTextColor} onClick={() => navigate('/library')}>
+              Library
+            </Button>
+            <Text>•</Text>
+            <Button variant="link" color={secondaryTextColor} onClick={() => navigate('/restaurant')}>
+              Restaurant
+            </Button>
+            <Text>•</Text>
+            <Button variant="link" color={secondaryTextColor} onClick={() => window.location.href = 'https://www.uom.gr/'}>
+              UoM Website <ExternalLinkIcon mx="2px" />
+            </Button>
+          </Flex>
+        </VStack>
+      </VStack>
+    </MotionFlex>
   );
 }
 
