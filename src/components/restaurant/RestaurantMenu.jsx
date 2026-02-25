@@ -47,191 +47,139 @@ import {
   ListItem,
   Text,
   useColorModeValue,
+  Flex,
+  Circle,
+  VStack
 } from "@chakra-ui/react";
-
+import { ChevronDownIcon } from "@chakra-ui/icons";
 import i18n from "../../i18n";
 
 function Menu({ dailyFoodMenu }) {
-  return (
-    <Box
-      marginBottom="1rem"
-      borderRadius="24px"
-      overflow="hidden"
-      border="2px"
-      borderColor={useColorModeValue("#0050e0", "#f3f3f3")}>
-      <AccordionItem border="none" w="100%">
-        <AccordionButton
-          // display="flex"
-          direction="row"
-          alignItems="center"
-          justifyContent="start"
-          _hover={{ bg: "transparent" }}
-          w="100%"
-          h="100%"
-          outline="none"
-          textAlign="center"
-          bgColor="transparent"
-          color={useColorModeValue("black", "white")}
-          fontFamily="Syne"
-          border="none"
-          alt="profPic"
-          overflow="hidden"
-          gap={3}>
-          <Text
-            w="100%"
-            display="flex"
-            direction="row"
-            alignItems="center"
-            justifyContent="start"
-            fontWeight="bold"
-            fontSize={{ sm: 14, md: 16, lg: 18 }}>
-            {dailyFoodMenu.day}
-          </Text>
-          <AccordionIcon />
-        </AccordionButton>
+  const lineColor = useColorModeValue("gray.200", "gray.600");
+  const dotColor = useColorModeValue("blue.500", "blue.300");
+  const cardBg = useColorModeValue("white", "gray.800");
 
-        <AccordionPanel px="15px" pb="15px">
-          <Accordion allowToggle>
-            {/*Accordion gia geuma*/}
-            <Box
-              w="100%"
-              marginBottom="5"
-              borderRadius="16px"
-              overflow="hidden"
-              border="2px"
-              borderColor={useColorModeValue("#0050e0", "#f3f3f3")}>
-              <AccordionItem border="none">
+  return (
+    <Flex w="100%" position="relative" pb={8}>
+      {/* Timeline Line */}
+      <Box
+        position="absolute"
+        left="19px"
+        top="40px"
+        bottom="0"
+        width="2px"
+        bg={lineColor}
+        zIndex={0}
+      />
+
+      <Box w="100%">
+        <AccordionItem border="none" w="100%">
+          {({ isExpanded }) => (
+            <>
+              <h2>
                 <AccordionButton
-                  display="flex"
-                  direction="row"
-                  alignItems="center"
-                  justifyContent="start"
+                  p={0}
                   _hover={{ bg: "transparent" }}
-                  w="100%"
-                  h="100%"
-                  outline="none"
-                  textAlign="center"
-                  bgColor="transparent"
-                  color={useColorModeValue("black", "white")}
-                  fontFamily="Syne"
-                  border="none"
-                  alt="profPic"
-                  overflow="hidden"
-                  gap={3}>
-                  <Text
-                    w="100%"
-                    display="flex"
-                    direction="row"
-                    alignItems="center"
-                    justifyContent="start"
-                    fontWeight="bold"
-                    fontFamily="Syne"
-                    fontSize={{ sm: 14, md: 16, lg: 18 }}>
-                    {i18n.t("gevma")}
-                  </Text>
-                  <AccordionIcon />
+                  _focus={{ boxShadow: "none" }}
+                  mb={isExpanded ? 4 : 0}
+                >
+                  <Flex w="100%" align="center">
+                    {/* Timeline Dot */}
+                    <Circle
+                      size="40px"
+                      bg={isExpanded ? dotColor : useColorModeValue("white", "gray.900")}
+                      border="2px solid"
+                      borderColor={dotColor}
+                      color={isExpanded ? "white" : dotColor}
+                      zIndex={1}
+                      mr={4}
+                      fontWeight="bold"
+                      fontSize="lg"
+                      boxShadow="sm"
+                    >
+                      {dailyFoodMenu.day.substring(0, 1)}
+                    </Circle>
+
+                    {/* Day Card Header */}
+                    <Box
+                      flex={1}
+                      p={4}
+                      bg={cardBg}
+                      borderRadius="xl"
+                      boxShadow="sm"
+                      border="1px"
+                      borderColor={useColorModeValue("gray.200", "gray.700")}
+                      transition="all 0.2s"
+                      _hover={{ boxShadow: "md", borderColor: "blue.400" }}
+                      textAlign="left"
+                    >
+                      <Flex justify="space-between" align="center">
+                        <Text fontWeight="bold" fontSize="lg" fontFamily="Syne">
+                          {dailyFoodMenu.day}
+                        </Text>
+                        <AccordionIcon as={ChevronDownIcon} boxSize={6} />
+                      </Flex>
+                    </Box>
+                  </Flex>
                 </AccordionButton>
-                <AccordionPanel pb={4}>
-                  <List spacing={2}>
-                    {Object.values([
+              </h2>
+
+              <AccordionPanel pb={4} pl="60px">
+                <VStack spacing={4} align="stretch">
+                  {/* Lunch Section */}
+                  <MealSection
+                    title={i18n.t("gevma")}
+                    items={[
                       ...dailyFoodMenu.gevmaKirios,
                       ...dailyFoodMenu.gevmaEidiko,
                       ...dailyFoodMenu.gevmaGarnitoura,
                       ...dailyFoodMenu.gevmaSalata,
                       ...dailyFoodMenu.gevmaEpidorpio,
-                    ]).map((val, index) =>
-                      val ? (
-                        <ListItem key={index}>
-                          <Text
-                            w="100%"
-                            display="flex"
-                            direction="row"
-                            alignItems="flex-start"
-                            justifyContent="center"
-                            fontWeight="bold"
-                            fontFamily="Syne"
-                            fontSize={{ sm: 14, md: 16, lg: 18 }}>
-                            {val}
-                          </Text>
-                        </ListItem>
-                      ) : null
-                    )}
-                  </List>
-                </AccordionPanel>
-              </AccordionItem>
-            </Box>
-            {/*Accordion gia deipno*/}
-            <Box
-              w="100%"
-              borderRadius="16px"
-              overflow="hidden"
-              border="2px"
-              borderColor={useColorModeValue("#0050e0", "#f3f3f3")}>
-              <AccordionItem border="none">
-                <AccordionButton
-                  display="flex"
-                  direction="row"
-                  alignItems="center"
-                  justifyContent="100start"
-                  _hover={{ bg: "transparent" }}
-                  w="100%"
-                  h="100%"
-                  outline="none"
-                  textAlign="center"
-                  bgColor="transparent"
-                  color={useColorModeValue("black", "white")}
-                  fontFamily="Syne"
-                  border="none"
-                  alt="profPic"
-                  overflow="hidden"
-                  gap={3}>
-                  <Text
-                    w="100%"
-                    display="flex"
-                    direction="row"
-                    alignItems="center"
-                    justifyContent="start"
-                    fontWeight="bold"
-                    fontFamily="Syne"
-                    fontSize={{ sm: 14, md: 16, lg: 18 }}>
-                    {i18n.t("deipno")}
-                  </Text>
-                  <AccordionIcon />
-                </AccordionButton>
-                <AccordionPanel pb={4}>
-                  <List spacing={2}>
-                    {Object.values([
+                    ]}
+                  />
+
+                  {/* Dinner Section */}
+                  <MealSection
+                    title={i18n.t("deipno")}
+                    items={[
                       ...dailyFoodMenu.deipnoKirios,
                       ...dailyFoodMenu.deipnoEidiko,
                       ...dailyFoodMenu.deipnoGarnitoura,
                       ...dailyFoodMenu.deipnoSalata,
                       ...dailyFoodMenu.deipnoEpidorpio,
-                    ]).map((val, index) =>
-                      val ? (
-                        <ListItem key={index}>
-                          <Text
-                            w="100%"
-                            display="flex"
-                            direction="row"
-                            alignItems="flex-start"
-                            justifyContent="center"
-                            fontWeight="bold"
-                            fontFamily="Syne"
-                            fontSize={{ sm: 14, md: 16, lg: 18 }}>
-                            {val}
-                          </Text>
-                        </ListItem>
-                      ) : null
-                    )}
-                  </List>
-                </AccordionPanel>
-              </AccordionItem>
-            </Box>
-          </Accordion>
-        </AccordionPanel>
-      </AccordionItem>
-    </Box>
+                    ]}
+                  />
+                </VStack>
+              </AccordionPanel>
+            </>
+          )}
+        </AccordionItem>
+      </Box>
+    </Flex>
   );
 }
+
+const MealSection = ({ title, items }) => (
+  <Box
+    bg={useColorModeValue("gray.50", "whiteAlpha.50")}
+    p={4}
+    borderRadius="lg"
+    borderLeft="4px solid"
+    borderColor={title === i18n.t("gevma") ? "orange.400" : "purple.400"}
+  >
+    <Text fontWeight="bold" mb={2} color={useColorModeValue("gray.700", "gray.200")}>
+      {title}
+    </Text>
+    <List spacing={1}>
+      {items.map((val, index) =>
+        val ? (
+          <ListItem key={index} fontSize="md" color={useColorModeValue("gray.600", "gray.400")}>
+            • {val}
+          </ListItem>
+        ) : null
+      )}
+    </List>
+  </Box>
+);
 
 export default Menu;

@@ -5,112 +5,142 @@ import {
   UnorderedList,
   useColorModeValue,
   Button,
+  Box,
+  Text,
+  Icon,
+  Collapse
 } from "@chakra-ui/react";
+import { SunIcon, MoonIcon, InfoIcon, CheckCircleIcon } from "@chakra-ui/icons";
 import i18n from "../../i18n";
 
 function MenuTable({ title, fullMenu, isActive }) {
-
   const [activeMeal, setActiveMeal] = useState(i18n.t('lunch'));
+  const [foodMenu, setFoodMenu] = useState(fullMenu.gevma.foodMenu);
 
-  const[foodMenu,setFoodMenu]=useState(fullMenu.gevma.foodMenu);
-  
+  const mealIcons = {
+    [i18n.t('lunch')]: SunIcon,
+    [i18n.t('dinner')]: MoonIcon
+  };
+
+  const categoryAccents = [
+    "orange.400", // Main
+    "purple.400", // Special
+    "green.400",  // Salad
+    "pink.400",   // Dessert
+    "cyan.400"    // Other
+  ];
+
   return (
-    <Flex flexDir="column" alignItems="center"  w={{sm: "98%", md: "98%", lg: "94%", "2xl": "78%", "3xl": "64%"}}>
-    <Flex mb={4} gap={4}>
+    <Flex flexDir="column" alignItems="center" w={{ sm: "98%", md: "98%", lg: "94%", "2xl": "78%", "3xl": "64%" }}>
+      {/* Meal Selection Cards */}
+      <Flex mb={6} gap={4} w="100%" justify="center">
         <Button
           onClick={() => {
             setFoodMenu(fullMenu.gevma.foodMenu);
             setActiveMeal(i18n.t('lunch'));
           }}
-          bg={activeMeal === i18n.t('lunch') ? "#0050E0" : "transparent"}
-          color={activeMeal === i18n.t('lunch') ? "white" : "inherit"}
+          h="auto"
+          py={4}
+          flex={1}
+          maxW="200px"
+          flexDir="column"
+          gap={2}
+          bg={activeMeal === i18n.t('lunch') ? useColorModeValue("white", "gray.700") : "transparent"}
+          color={activeMeal === i18n.t('lunch') ? useColorModeValue("#0050E0", "#f3f3f3") : "gray.500"}
           border="2px solid"
           borderColor={activeMeal === i18n.t('lunch') ? "#0050E0" : "gray.300"}
           _hover={{
-            bg: activeMeal === i18n.t('lunch') ? "#003bb8" : "gray.100",
+            borderColor: "#0050E0",
+            bg: useColorModeValue("blue.50", "whiteAlpha.100")
           }}
+          boxShadow={activeMeal === i18n.t('lunch') ? "lg" : "none"}
+          borderRadius="xl"
           transition="all 0.3s ease-in-out"
         >
-        {i18n.t('lunch')}
-      </Button>
+          <Icon as={SunIcon} boxSize={6} />
+          <Text fontSize="lg" fontWeight="bold">{i18n.t('lunch')}</Text>
+        </Button>
 
-      <Button
+        <Button
           onClick={() => {
             setFoodMenu(fullMenu.deipno.foodMenu);
             setActiveMeal(i18n.t('dinner'));
           }}
-          bg={activeMeal === i18n.t('dinner') ? "#0050E0" : "transparent"}
-          color={activeMeal === i18n.t('dinner') ? "white" : "inherit"}
+          h="auto"
+          py={4}
+          flex={1}
+          maxW="200px"
+          flexDir="column"
+          gap={2}
+          bg={activeMeal === i18n.t('dinner') ? useColorModeValue("white", "gray.700") : "transparent"}
+          color={activeMeal === i18n.t('dinner') ? useColorModeValue("#0050E0", "#f3f3f3") : "gray.500"}
           border="2px solid"
           borderColor={activeMeal === i18n.t('dinner') ? "#0050E0" : "gray.300"}
           _hover={{
-            bg: activeMeal === i18n.t('dinner') ? "#003bb8" : "gray.100",
+            borderColor: "#0050E0",
+            bg: useColorModeValue("blue.50", "whiteAlpha.100")
           }}
+          boxShadow={activeMeal === i18n.t('dinner') ? "lg" : "none"}
+          borderRadius="xl"
           transition="all 0.3s ease-in-out"
         >
-        {i18n.t('dinner')}
-      </Button>
-
+          <Icon as={MoonIcon} boxSize={6} />
+          <Text fontSize="lg" fontWeight="bold">{i18n.t('dinner')}</Text>
+        </Button>
       </Flex>
+
+      {/* Menu Content */}
       <Flex
         flexDir="column"
-        borderRadius="16px"
-        borderColor={isActive ? "#0050E0" : "black"}
-        _dark={{ borderColor: "#f3f3f3" }}
-        borderWidth="2px"
+        borderRadius="xl"
+        boxShadow="md"
+        bg={useColorModeValue("white", "gray.800")}
+        border="1px"
+        borderColor={useColorModeValue("gray.200", "gray.700")}
         overflow="hidden"
-        mx={1}
+        w="100%"
         fontFamily="Syne"
-        w={{sm: "98%", md: "98%", lg: "94%", "2xl": "78%", "3xl": "64%"}}
       >
         {Object.keys(foodMenu).map((key, index) => (
           <Flex
             key={key}
             flexDir="column"
-            alignItems="center"
-            borderTop={index === 0 ? "" : "2px"}
-            borderColor={isActive ? "#0050E0" : "black"}
-            _dark={{
-              borderColor: "#f3f3f3",
-            }}
+            borderLeftWidth="6px"
+            borderLeftColor={categoryAccents[index % categoryAccents.length]}
+            borderBottomWidth={index !== Object.keys(foodMenu).length - 1 ? "1px" : "0"}
+            borderBottomColor={useColorModeValue("gray.100", "gray.700")}
           >
             <Flex
-              py="8px"
-              px="10px"
-              w="100%"
-              bg={isActive ? "#0050E00F" : "#0000000F"}
-              _dark={{ bg: "#f3f3f30F" }}
-              fontSize={{ sm: 18, md: 20, lg: 22 }}
-              fontWeight="semibold"
+              py={3}
+              px={4}
+              bg={useColorModeValue("gray.50", "whiteAlpha.50")}
+              justify="space-between"
+              align="center"
             >
-              {i18n.t(key)}
+              <Text
+                fontSize={{ sm: 18, md: 20 }}
+                fontWeight="bold"
+                color={useColorModeValue("gray.700", "gray.200")}
+              >
+                {i18n.t(key)}
+              </Text>
             </Flex>
-            <Flex
-              flexDir="column"
-              style={{ fontVariantNumeric: "lining-nums tabular-nums" }}
-              py="8px"
-              px="10px"
-              w="100%"
-              fontSize={{ sm: 16, md: 18, lg: 20 }}
-            >
-              <UnorderedList spacing={2}>
-                {Object.values(foodMenu[key]).map((dish, index) => (
-                  <ListItem key={index}>{dish}</ListItem>
+
+            <Box px={4} py={3}>
+              <UnorderedList spacing={2} m={0} ml={4}>
+                {Object.values(foodMenu[key]).map((dish, i) => (
+                  <ListItem
+                    key={i}
+                    fontSize={{ sm: 16, md: 18 }}
+                    color={useColorModeValue("gray.600", "gray.300")}
+                  >
+                    {dish}
+                  </ListItem>
                 ))}
               </UnorderedList>
-            </Flex>
+            </Box>
           </Flex>
         ))}
-      </Flex>
-      <Flex
-        fontFamily="Syne"
-        justifyContent="center"
-        color={useColorModeValue(isActive ? "#0050E0" : "black", "#f3f3f3")}
-        py={2}
-        fontWeight="semibold"
-        fontSize="22px"
-      >
-        {i18n.t(activeMeal)}
       </Flex>
     </Flex>
   );
