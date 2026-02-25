@@ -1,0 +1,28 @@
+version: "3.8"
+
+services:
+  db:
+    image: postgres:15
+    container_name: umami-db
+    restart: always
+    environment:
+      POSTGRES_DB: umami
+      POSTGRES_USER: umami_user
+      POSTGRES_PASSWORD: umami_password
+    volumes:
+      - umami-db-data:/var/lib/postgresql/data
+
+  umami:
+    image: umamisoftware/umami:postgresql-latest
+    container_name: umami
+    depends_on:
+      - db
+    ports:
+      - "3000:3000"
+    environment:
+      DATABASE_URL: postgresql://umami_user:umami_password@db:5432/umami
+      APP_SECRET: replace_with_secure_secret
+    restart: always
+
+volumes:
+  umami-db-data:
