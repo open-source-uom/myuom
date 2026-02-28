@@ -39,6 +39,7 @@
 import { useState } from "react";
 import { Categories } from "../assets/ConfigRoutes";
 import MenuBox from "../components/MenuBox";
+import Search from "../components/Search"; // Added import
 import { Flex, Grid, Heading } from "@chakra-ui/react";
 
 import { motion } from "framer-motion";
@@ -78,6 +79,8 @@ export default function HomePage() {
       gap="3rem"
       px={{ sm: "1rem", md: "0px" }}
     >
+      <Search setCategoriesList={setCategoriesListForSearch} categoriesList={Categories} />
+
       <Grid
         as={motion.section}
         initial="initial"
@@ -99,7 +102,9 @@ export default function HomePage() {
             H αναζήτηση δεν επέστρεψε αποτελέσματα.
           </Heading>
         ) : null}
-        {categoriesSortedAndWithoutHiddenPages.map((category) => (
+
+        {/* WE MUST USE THE FILTERED LIST HERE */}
+        {filterOutHiddenPages(sortToPlaceInDefinedOrder(categoriesListForSearch)).map((category) => (
           <MenuBox category={category} key={category.title} />
         ))}
       </Grid>
