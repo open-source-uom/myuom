@@ -51,15 +51,6 @@ import {
   StackedBooksIcon,
   StudentInPCIcon,
 } from "./icons";
-import AnnouncementsPage from "../pages/AnnouncementPage";
-import ProfInfoPage from "../pages/ProfInfoPage";
-import RestaurantPage from "../pages/RestaurantPage";
-import ServicesPage from "../pages/ServicesPage";
-import GraduationPage from "../pages/GraduationPage";
-import LibraryPage from "../pages/LibraryPage";
-import FirstYearInfoPage from "../pages/FirstYearInfoPage";
-import SchedulePage from "../pages/SchedulePage";
-import MapPage from "../pages/MapPage";
 import { FaUniversity } from "react-icons/fa";
 import i18n from "../i18n";
 export const Categories = [
@@ -72,7 +63,8 @@ export const Categories = [
     requireSelection: true,
     position: 1,
     hide: false,
-    pageToDisplay: <SchedulePage semesterProp />,
+    page: "SchedulePage",
+    pageProps: { semesterProp: true },
   },
   {
     title: "Open eClass",
@@ -84,7 +76,7 @@ export const Categories = [
     requireSelection: false,
     position: 2,
     hide: false,
-    pageToDisplay: null,
+    page: null,
   },
   {
     title: i18n.t("restaurant"),
@@ -95,7 +87,7 @@ export const Categories = [
     requireSelection: false,
     position: 3,
     hide: false,
-    pageToDisplay: <RestaurantPage />,
+    page: "RestaurantPage",
   },
   {
     title: "Student Portal",
@@ -106,7 +98,7 @@ export const Categories = [
     requireSelection: false,
     position: 4,
     hide: false,
-    pageToDisplay: null,
+    page: null,
   },
   {
     title: i18n.t("library"),
@@ -117,7 +109,7 @@ export const Categories = [
     span: 1,
     isExternal: false,
     requireSelection: false,
-    pageToDisplay: <LibraryPage />,
+    page: "LibraryPage",
   },
 
   {
@@ -129,7 +121,7 @@ export const Categories = [
     requireSelection: false,
     position: 6,
     hide: false,
-    pageToDisplay: null,
+    page: null,
   },
   {
     title: i18n.t("exams_schedule"),
@@ -140,7 +132,8 @@ export const Categories = [
     requireSelection: true,
     position: 7,
     hide: false,
-    pageToDisplay: <SchedulePage examsProp />,
+    page: "SchedulePage",
+    pageProps: { examsProp: true },
   },
   {
     title: i18n.t("academic_personnel"),
@@ -151,7 +144,7 @@ export const Categories = [
     requireSelection: true,
     position: 8,
     hide: false,
-    pageToDisplay: <ProfInfoPage />,
+    page: "ProfInfoPage",
   },
   {
     title: i18n.t("map"),
@@ -162,7 +155,7 @@ export const Categories = [
     requireSelection: false,
     position: 9,
     hide: false,
-    pageToDisplay: <MapPage />,
+    page: "MapPage",
   },
   {
     title: i18n.t("foititiki_merimna"),
@@ -174,7 +167,7 @@ export const Categories = [
     requireSelection: false,
     position: 10,
     hide: false,
-    pageToDisplay: null,
+    page: null,
   },
   {
     title: i18n.t("freshmen_guides"),
@@ -185,7 +178,7 @@ export const Categories = [
     requireSelection: false,
     position: 11,
     hide: false,
-    pageToDisplay: <FirstYearInfoPage />,
+    page: "FirstYearInfoPage",
   },
   {
     title: i18n.t("orkomosies"),
@@ -196,7 +189,7 @@ export const Categories = [
     requireSelection: true,
     position: 12,
     hide: false,
-    pageToDisplay: <GraduationPage />,
+    page: "GraduationPage",
   },
   {
     title: i18n.t("other_services"),
@@ -207,7 +200,7 @@ export const Categories = [
     requireSelection: false,
     position: 13,
     hide: false,
-    pageToDisplay: <ServicesPage />,
+    page: "ServicesPage",
   },
   {
     title: i18n.t("announcements"),
@@ -218,7 +211,7 @@ export const Categories = [
     requireSelection: true,
     position: 13,
     hide: false,
-    pageToDisplay: <AnnouncementsPage />,
+    page: "AnnouncementPage",
   },
   {
     title: i18n.t("masters"),
@@ -237,6 +230,6 @@ export const Categories = [
     requireSelection: false,
     position: 14,
     hide: false,
-    pageToDisplay: null,
+    page: null,
   },
 ];

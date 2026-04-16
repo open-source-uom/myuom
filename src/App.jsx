@@ -36,16 +36,25 @@
 
 */
 import { Routes, Route } from "react-router";
-import HomePage from "./pages/HomePage";
+import { lazy, Suspense, useEffect } from "react";
 import Header from "./components/Header";
-import { useEffect } from "react";
-import FAQSettingsPage from "./pages/FAQSettingsPage";
-import AboutSettingsPage from "./pages/AboutSettingsPage";
 import { Categories } from "./assets/ConfigRoutes";
 import i18n from "./i18n";
-import Error404 from "./pages/Error404";
+
+// Dynamic loading, no static jsx imports for pages
+const pageComponents = Object.fromEntries(
+  Object.entries(import.meta.glob("./pages/*.{jsx,tsx}")).map(([path, loader]) => {
+    const name = path.replace(/^\.\/pages\//, "").replace(/\.(jsx|tsx)$/, "");
+    return [name, lazy(loader)];
+  })
+);
+
+const wrap = (Component, props = {}) => (
+  <Suspense fallback={null}><Component {...props} /></Suspense>
+);
+
 function App() {
-  console.log("hello", Categories);
+  console.log("hello", Categories);  
   // Load the preferred language from local storage and set it initially
   useEffect(() => {
     const storedLanguage = localStorage.getItem('preferred_language');
@@ -53,25 +62,25 @@ function App() {
       i18n.changeLanguage(storedLanguage);
     }
   }, []);
-  const categoriesToDisplay = Categories.filter(
-    ({ hide }) => hide === false
-  )
+  const categoriesToDisplay = Categories.filter(({ hide }) => hide === false);
   return (
     <Routes>
       <Route path="/" element={<Header />}>
-        <Route index element={<HomePage />} />
+        <Route index element={wrap(pageComponents.HomePage)} />
         {categoriesToDisplay.map((category) => {
+          const PageComponent = pageComponents[category.page];
+          if (!PageComponent) return null;
           return (
             <Route
               path={`/${category.route}`}
-              element={category.pageToDisplay}
+              element={wrap(PageComponent, category.pageProps)}
               key={category.route}
             />
           );
         })}
-        <Route path="/faq" element={<FAQSettingsPage />} />
-        <Route path="/about" element={<AboutSettingsPage />} />
-        <Route path="/*" element={<Error404 />} />
+        <Route path="/faq"  element={wrap(pageComponents.FAQSettingsPage)} />
+        <Route path="/about" element={wrap(pageComponents.AboutSettingsPage)} />
+        <Route path="/*" element={wrap(pageComponents.Error404)} />
       </Route>
     </Routes>
   );
